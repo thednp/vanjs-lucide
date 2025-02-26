@@ -1,25 +1,14 @@
 import van from "vanjs-core";
 import * as vanX from "vanjs-ext";
 import copyToClipboard from "../util/copyToClipboard";
-import * as VanJSLucide from "../../../src/index";
+import { SVGTag } from "../../../src/types";
 import Tooltip from "./tooltip";
 import Tags from "./tags.json";
 
-import { Activity } from "../../../src/index";
-// console.log(Tags)
+const TagsEntries = Object.entries(Tags);
+const TagNames = () => TagsEntries.map(([name]) => name);
 
-type TagsJSON = Record<string, string[]>;
-
-const Icons = Object.entries(VanJSLucide).map(([name, icon]) => {
-  const lowerName = name.toLowerCase() as keyof typeof Tags;
-  const tags = [lowerName, ...(((Tags as TagsJSON)[name]) || [])];
-  return {
-    name,
-    lowerName,
-    icon,
-    tags,
-  };
-});
+import { Activity, ArrowRight, Info } from "../../../src/index";
 
 type ChangeEvent<T extends EventTarget & Element = HTMLInputElement> =
   & InputEvent
@@ -29,15 +18,35 @@ export default function Main() {
   const { circle, path, svg } = van.tags("http://www.w3.org/2000/svg");
   const { main, div, button, span, h2, img, p, pre, a, label, input } =
     van.tags;
-  const size = van.state(24);
-  const sWidth = van.state(1);
-  const count = van.state(64);
+  const List = vanX.reactive<{ icons: Record<string, typeof SVGTag>[] }>({
+    icons: [],
+  });
+  const size = van.state(64);
+  const sWidth = van.state(2);
+  const count = van.state(0);
   const query = van.state("");
+  const fetching = van.state(false);
+  const fetchIcons = async (items: string[]) => {
+    // const isFetching = fetching.oldVal;
+    const len = items.length;
+    return await import(`../../../src/index.ts`).then((module) => {
+      // return await import(`vanjs-lucide`).then((module) => {
+      const newIcons: Record<string, typeof SVGTag>[] = [];
+      let icon;
+      for (let i = 0; i < len; i += 1) {
+        icon = module[items[i] as string & keyof typeof module];
+        newIcons.push({ [items[i]]: icon });
+      }
+      // fetching.val = false;
+      return newIcons;
+    });
+  };
 
   const loader = div(
     {
+      "data-fetching": fetching,
       class:
-        "w-full flex flex-col items-center mt-4 py-8 xl:py-12 rounded-[5px] bg-stone-50 dark:bg-stone-950 opacity-0",
+        "w-full flex flex-col items-center mt-4 py-4 rounded-lg bg-stone-50 dark:bg-stone-950 opacity-0 data-[fetching=true]:opacity-100",
     },
     svg(
       {
@@ -64,52 +73,65 @@ export default function Main() {
   );
   const startObserver = () => {
     if (typeof window === "undefined") return;
-    const observer = new IntersectionObserver(([entry], currentObserver) => {
-      if (entry.isIntersecting && count.oldVal < Icons.length) {
-        const remaining = Icons.length - count.oldVal;
+    const observer = new IntersectionObserver(([entry] /*currentObserver*/) => {
+      if (entry.isIntersecting && count.oldVal < TagsEntries.length) {
+        const remaining = TagsEntries.length - count.oldVal;
         count.val = count.oldVal + (remaining < 64 ? remaining : 64);
       }
-      if (count.val >= Icons.length) {
-        currentObserver.disconnect();
-        // loader.remove();
-      }
+      // if (count.val >= TagsEntries.length) {
+      //   currentObserver.disconnect();
+      //   // loader.remove();
+      // }
     }, { rootMargin: "100px" });
     observer.observe(loader);
   };
 
   startObserver();
 
-  const List = vanX.reactive({ icons: Icons });
-
   van.derive(() => {
-    const currentQuery = query.val.split(" ");
+    const currentQuery = query.val;
+    const currentQueryMulti = currentQuery.split(/\s|\-/);
     const currentCount = count.val;
-    if (query.val.length && currentQuery.length) {
-      const searchResults = Icons.filter(({ lowerName, tags }) =>
-        currentQuery.some((q) => lowerName === q) || currentQuery.some((q) =>
-          lowerName.includes(q)
-        ) ||
-        tags.some((t) => currentQuery.some((q) => q === t || t.includes(q)))
-      );
+    if (currentQuery.length && currentQuery.length) {
+      const searchResults = TagsEntries.filter(([name, tags]) => {
+        const lowerName = name.toLowerCase();
+        return currentQueryMulti.some((q) => lowerName === q) ||
+          currentQueryMulti.some((q) => lowerName.includes(q)) ||
+          tags.some((t) =>
+            currentQueryMulti.some((q) => q === t || t.includes(q))
+          );
+      });
       if (searchResults.length) {
-        vanX.replace(List.icons, searchResults);
+        const iconsList = searchResults.map(([val]) => val);
+        // console.log(iconsList)
+        fetching.val === true;
+
+        fetchIcons(iconsList).then((results) => {
+          vanX.replace(List.icons, results);
+          fetching.val === false;
+        });
+
+        // vanX.replace(List.icons, searchResults);
       } else {
         vanX.replace(List.icons, [{
-          name: "No icon found...",
-          icon: (Icons.find(({ name }) =>
-            name === "Info"
-          ) as typeof Icons[0]).icon,
-          lowerName: "not-found" as "Activity",
-          tags: [],
+          "not-found": Info,
         }]);
       }
 
       // loader.remove();
-      count.val = Icons.length;
-    } else if (currentCount < Icons.length) {
-      vanX.replace(List.icons, Icons.slice(0, currentCount));
-    } else {
-      vanX.replace(List.icons, Icons);
+      // count.val = Icons.length;
+      count.val = 64;
+    } else if (currentCount < TagsEntries.length) {
+      const newList = TagNames().slice(0, currentCount);
+      fetching.val === true;
+
+      fetchIcons(newList).then((results) => {
+        vanX.replace(List.icons, results);
+        fetching.val === false;
+      });
+      // vanX.replace(List.icons, Icons.slice(0, currentCount));
+      // } else {
+      // vanX.replace(List.icons, Icons);
     }
   });
 
@@ -268,7 +290,7 @@ export default function Main() {
                   title: "Get more guides on Github page",
                 },
                 "More guides",
-                VanJSLucide.ArrowRight({ class: "w-6 h-auto" }),
+                ArrowRight({ class: "w-6 h-auto" }),
               ),
               a(
                 {
@@ -277,7 +299,7 @@ export default function Main() {
                   title: "Click to preview the icons",
                 },
                 "Preview Icons",
-                VanJSLucide.ArrowRight({ class: "w-6 h-auto" }),
+                ArrowRight({ class: "w-6 h-auto" }),
               ),
             ),
           ),
@@ -316,7 +338,10 @@ export default function Main() {
         }),
         List.icons,
         (item) => {
-          const { name, icon, lowerName } = item.val;
+          const [name, icon] = Object.entries(item.val)[0];
+          const lowerName = name.toLowerCase();
+          const realName = lowerName === "not-found" ? "No icon found" : name;
+          // console.log({ name, icon, lowerName })
 
           return Tooltip(
             {
@@ -345,7 +370,7 @@ export default function Main() {
                   class:
                     "text-[12px] font-semibold font-stretch-90% text-black dark:text-white",
                 },
-                name,
+                realName,
               ),
             ),
           );

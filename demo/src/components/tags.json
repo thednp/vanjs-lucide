@@ -486,7 +486,7 @@
     "direction",
     "north"
   ],
-  "ArrowDown0-1": [
+  "ArrowDown01": [
     "filter",
     "sort",
     "ascending",
@@ -497,7 +497,7 @@
     "falling",
     "numerical"
   ],
-  "ArrowDown1-0": [
+  "ArrowDown10": [
     "filter",
     "sort",
     "ascending",
@@ -696,7 +696,7 @@
     "east",
     "->"
   ],
-  "ArrowUp0-1": [
+  "ArrowUp01": [
     "filter",
     "sort",
     "ascending",
@@ -707,7 +707,7 @@
     "falling",
     "numerical"
   ],
-  "ArrowUp1-0": [
+  "ArrowUp10": [
     "filter",
     "sort",
     "ascending",

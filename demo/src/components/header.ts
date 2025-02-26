@@ -27,7 +27,7 @@ export default function Header() {
             class:
               "text-neutral-600 hover:text-neutral-950 dark:text-neutral-400 dark:hover:text-neutral-100 font-semibold font-stretch-125% flex items-center gap-2",
             href:
-              "https://github.com/thednp/vanjs-lucide/archive/refs/heads/main.zip",
+              "https://github.com/thednp/vanjs-lucide/archive/refs/heads/master.zip",
           },
           CloudDownload({ class: "h-6" }),
           span(
