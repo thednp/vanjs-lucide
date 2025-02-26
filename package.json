@@ -1,7 +1,7 @@
 {
   "name": "vanjs-lucide",
   "version": "0.0.1",
-  "description": "🫦 Lucide icons for VanJS",
+  "description": "🌀 Lucide icons for VanJS",
   "files": [
     "dist/index.js",
     "dist/index.js.map",
