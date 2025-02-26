@@ -1,0 +1,110 @@
+.tooltip {
+  @apply relative inline-block;
+  --tooltip-offset: calc(100% + 1px + var(--tooltip-tail, 0px));
+}
+
+.tooltip:before {
+  @apply absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.tooltip:before {
+  content: var(--tw-content);
+  --tw-content: attr(data-tip);
+}
+
+.tooltip:before,
+.tooltip-top:before {
+  transform: translateX(-50%);
+  top: auto;
+  left: 50%;
+  right: auto;
+  bottom: var(--tooltip-offset);
+}
+
+.tooltip-bottom:before {
+  transform: translateX(-50%);
+  top: var(--tooltip-offset);
+  left: 50%;
+  right: auto;
+  bottom: auto;
+}
+
+.tooltip {
+  @apply relative inline-block text-center;
+  --tooltip-tail: 0.1875rem;
+  --tooltip-color: theme(colors.gray.950);
+  --tooltip-text-color: theme(colors.white);
+  --tooltip-tail-offset: calc(100% + 0.0625rem - var(--tooltip-tail));
+}
+
+@media (prefers-color-scheme: dark) {
+  .tooltip {
+    --tooltip-color: theme(colors.gray.50);
+    --tooltip-text-color: theme(colors.black);
+  }
+}
+
+.tooltip:before,
+.tooltip:after {
+  @apply opacity-0 transition delay-100 duration-200 ease-in-out;
+}
+
+.tooltip:after {
+  @apply absolute;
+}
+
+.tooltip:before {
+  @apply max-w-xs rounded px-2 py-1 text-sm whitespace-normal;
+  background-color: var(--tooltip-color);
+  color: var(--tooltip-text-color);
+  width: max-content;
+}
+
+.tooltip.tooltip-open:before {
+  @apply opacity-100 delay-75;
+}
+
+.tooltip.tooltip-open:after {
+  @apply opacity-100 delay-75;
+}
+
+.tooltip:hover:before {
+  @apply opacity-100 delay-75;
+}
+
+.tooltip:hover:after {
+  @apply opacity-100 delay-75;
+}
+
+.tooltip:has(:focus-visible):after,
+.tooltip:has(:focus-visible):before {
+  @apply opacity-100 delay-75;
+}
+
+.tooltip:not([data-tip]):hover:before,
+.tooltip:not([data-tip]):hover:after {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.tooltip:after {
+  content: "";
+  border-style: solid;
+  border-width: var(--tooltip-tail, 0);
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+}
+
+.tooltip::after,
+.tooltip-top:after {
+  transform: translateX(-50%);
+  border-color: var(--tooltip-color) transparent transparent transparent;
+  top: auto;
+  left: 50%;
+  right: auto;
+  bottom: var(--tooltip-tail-offset);
+}

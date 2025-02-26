@@ -1,0 +1,17 @@
+// VanJS Lucide - FileSliders
+import van from "vanjs-core";
+import { LucideIcon, svgNamespace } from "../LucideIcon";
+import { type SVGProps } from "../types";
+
+export const FileSliders = (props: Partial<SVGProps> = {}) => {
+  const { path } = van.tags(svgNamespace);
+  return LucideIcon(
+    props,
+    path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
+    path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }),
+    path({ "d": "M8 12h8" }),
+    path({ "d": "M10 11v2" }),
+    path({ "d": "M8 17h8" }),
+    path({ "d": "M14 16v2" }),
+  );
+};

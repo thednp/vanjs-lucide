@@ -1,0 +1,92 @@
+{
+  "name": "vanjs-lucide",
+  "version": "0.0.1",
+  "description": "🫦 Lucide icons for VanJS",
+  "files": [
+    "dist/index.js",
+    "dist/index.js.map",
+    "dist/index.cjs",
+    "dist/index.cjs.map",
+    "dist/index.mjs",
+    "dist/index.mjs.map",
+    "dist/index.d.ts"
+  ],
+  "main": "dist/index.mjs",
+  "browser": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "keywords": [
+    "vanjs",
+    "vanjs-component",
+    "lucide",
+    "lucide-icons"
+  ],
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://thednp.github.io/vanjs-lucide",
+  "bugs": {
+    "url": "https://github.com/thednp/vanjs-lucide/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thednp/vanjs-lucide.git"
+  },
+  "scripts": {
+    "dev": "cd demo && node server --port 3000",
+    "preview": "cd demo && pnpm preview",
+    "test": "vitest --config demo/vitest.config.ts",
+    "format": "deno fmt src demo",
+    "build": "tsup && pnpm build:iife",
+    "build:iife": "vite build --config vite.config.ts",
+    "build:docs": "cd demo && pnpm generate && pnpm copy:docs",
+    "build:all": "pnpm build && pnpm build:docs",
+    "prepublishOnly": "pnpm upd && pnpm format && pnpm lint && pnpm build:all",
+    "upd": "pnpm run --parallel /^up:/",
+    "up:root": "pnpm up",
+    "up:demo": "cd demo && pnpm up",
+    "lint": "pnpm lint:types && pnpm lint:code",
+    "lint:code": "deno lint src",
+    "lint:types": "tsc --noEmit",
+    "fix:ts": "deno lint src --fix",
+    "serve": "vite serve docs --port 3000"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/node": "^20.17.19",
+    "@vitest/browser": "^3.0.7",
+    "@vitest/coverage-istanbul": "^3.0.7",
+    "autoprefixer": "^10.4.20",
+    "express": "^5.0.1",
+    "happy-dom": "^14.12.3",
+    "postcss": "^8.5.3",
+    "postcss-import": "^16.1.0",
+    "postcss-nesting": "^13.0.1",
+    "tailwindcss": "^3.4.17",
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.2.0",
+    "vite-vanjs-svg": "^0.0.3",
+    "vitest": "^3.0.7"
+  },
+  "peerDependencies": {
+    "vanjs-core": "^1.5.3"
+  },
+  "dependencies": {
+    "vanjs-core": "^1.5.3",
+    "vite-plugin-vanjs": "^0.0.5"
+  },
+  "packageManager": "pnpm@8.6.12"
+}

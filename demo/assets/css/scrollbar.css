@@ -1,0 +1,17 @@
+.scrollbar {
+  &::-webkit-scrollbar {
+    @apply w-3 h-3;
+  }
+
+  &::-webkit-scrollbar-track {
+    @apply bg-stone-100/50 dark:bg-stone-700/50;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-stone-300 dark:bg-stone-600;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    @apply bg-stone-500;
+  }
+}

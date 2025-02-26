@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "types": [
+      "vite/client",
+      "node",
+    ],
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "./",
+    "paths": {
+      "~/*": ["./src/*",],
+      "@/*": ["demo/assets"],
+    }
+  },
+  "include": ["src", "src/icons", "demo", "env.d.ts"],
+  "exclude": [
+    "node_modules",
+    "demo",
+    "coverage",
+    "dist",
+    "docs",
+  ]
+}

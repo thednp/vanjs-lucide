@@ -1,0 +1,10 @@
+@layer base {
+  html,
+  :host {
+    @apply font-sans text-base text-stone-700 dark:text-stone-200 bg-stone-100
+      dark:bg-stone-900 scroll-smooth;
+  }
+  .heading {
+    @apply text-black dark:text-white;
+  }
+}
