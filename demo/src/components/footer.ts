@@ -50,10 +50,10 @@ export default function Footer() {
     a(
       {
         class: "py-3 flex items-center",
-        href: "https://github.com/thednp/vanjs-feather",
+        href: "https://github.com/thednp/vanjs-lucide",
         target: "_blank",
       },
-      span({ class: "sr-only" }, "VanJS Feather on Github"),
+      span({ class: "sr-only" }, "VanJS Lucide on Github"),
       Github({ class: "w-6 h-auto" }),
     ),
     span(

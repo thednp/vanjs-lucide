@@ -8,10 +8,10 @@ export default defineConfig(
     format: ['esm', 'cjs'],
     dts: true,
     clean: true,
-    splitting: false,
+    splitting: true,
     outDir: 'dist',
     target: 'es2020',
-    globalName: 'VanJSFeather',
+    globalName: 'VanJSLucide',
     pure: "strict",
     outExtension: ({ format }) => ({
       js: {

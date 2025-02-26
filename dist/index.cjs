@@ -1,1603 +1,14 @@
-"use strict";
-var __create = Object.create;
-var __defProp = Object.defineProperty;
-var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-var __getOwnPropNames = Object.getOwnPropertyNames;
-var __getProtoOf = Object.getPrototypeOf;
-var __hasOwnProp = Object.prototype.hasOwnProperty;
+"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
-var __export = (target, all) => {
-  for (var name in all)
-    __defProp(target, name, { get: all[name], enumerable: true });
-};
-var __copyProps = (to, from, except, desc) => {
-  if (from && typeof from === "object" || typeof from === "function") {
-    for (let key of __getOwnPropNames(from))
-      if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
-  }
-  return to;
-};
-var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
-  // If the importer is in node compatibility mode or this is not an ESM
-  // file that has been converted to a CommonJS file using a Babel-
-  // compatible transform (i.e. "__esModule" has not been set), then set
-  // "default" to the CommonJS "module.exports" for node compatibility.
-  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
-  mod
-));
-var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
-
-// src/index.ts
-var index_exports = {};
-__export(index_exports, {
-  AArrowDown: () => AArrowDown,
-  AArrowUp: () => AArrowUp,
-  ALargeSmall: () => ALargeSmall,
-  Accessibility: () => Accessibility,
-  Activity: () => Activity,
-  AirVent: () => AirVent,
-  Airplay: () => Airplay,
-  AlarmClock: () => AlarmClock,
-  AlarmClockCheck: () => AlarmClockCheck,
-  AlarmClockMinus: () => AlarmClockMinus,
-  AlarmClockOff: () => AlarmClockOff,
-  AlarmClockPlus: () => AlarmClockPlus,
-  AlarmSmoke: () => AlarmSmoke,
-  Album: () => Album,
-  AlignCenter: () => AlignCenter,
-  AlignCenterHorizontal: () => AlignCenterHorizontal,
-  AlignCenterVertical: () => AlignCenterVertical,
-  AlignEndHorizontal: () => AlignEndHorizontal,
-  AlignEndVertical: () => AlignEndVertical,
-  AlignHorizontalDistributeCenter: () => AlignHorizontalDistributeCenter,
-  AlignHorizontalDistributeEnd: () => AlignHorizontalDistributeEnd,
-  AlignHorizontalDistributeStart: () => AlignHorizontalDistributeStart,
-  AlignHorizontalJustifyCenter: () => AlignHorizontalJustifyCenter,
-  AlignHorizontalJustifyEnd: () => AlignHorizontalJustifyEnd,
-  AlignHorizontalJustifyStart: () => AlignHorizontalJustifyStart,
-  AlignHorizontalSpaceAround: () => AlignHorizontalSpaceAround,
-  AlignHorizontalSpaceBetween: () => AlignHorizontalSpaceBetween,
-  AlignJustify: () => AlignJustify,
-  AlignLeft: () => AlignLeft,
-  AlignRight: () => AlignRight,
-  AlignStartHorizontal: () => AlignStartHorizontal,
-  AlignStartVertical: () => AlignStartVertical,
-  AlignVerticalDistributeCenter: () => AlignVerticalDistributeCenter,
-  AlignVerticalDistributeEnd: () => AlignVerticalDistributeEnd,
-  AlignVerticalDistributeStart: () => AlignVerticalDistributeStart,
-  AlignVerticalJustifyCenter: () => AlignVerticalJustifyCenter,
-  AlignVerticalJustifyEnd: () => AlignVerticalJustifyEnd,
-  AlignVerticalJustifyStart: () => AlignVerticalJustifyStart,
-  AlignVerticalSpaceAround: () => AlignVerticalSpaceAround,
-  AlignVerticalSpaceBetween: () => AlignVerticalSpaceBetween,
-  Ambulance: () => Ambulance,
-  Ampersand: () => Ampersand,
-  Ampersands: () => Ampersands,
-  Amphora: () => Amphora,
-  Anchor: () => Anchor,
-  Angry: () => Angry,
-  Annoyed: () => Annoyed,
-  Antenna: () => Antenna,
-  Anvil: () => Anvil,
-  Aperture: () => Aperture,
-  AppWindow: () => AppWindow,
-  AppWindowMac: () => AppWindowMac,
-  Apple: () => Apple,
-  Archive: () => Archive,
-  ArchiveRestore: () => ArchiveRestore,
-  ArchiveX: () => ArchiveX,
-  Armchair: () => Armchair,
-  ArrowBigDown: () => ArrowBigDown,
-  ArrowBigDownDash: () => ArrowBigDownDash,
-  ArrowBigLeft: () => ArrowBigLeft,
-  ArrowBigLeftDash: () => ArrowBigLeftDash,
-  ArrowBigRight: () => ArrowBigRight,
-  ArrowBigRightDash: () => ArrowBigRightDash,
-  ArrowBigUp: () => ArrowBigUp,
-  ArrowBigUpDash: () => ArrowBigUpDash,
-  ArrowDown: () => ArrowDown,
-  ArrowDown01: () => ArrowDown01,
-  ArrowDown10: () => ArrowDown10,
-  ArrowDownAZ: () => ArrowDownAZ,
-  ArrowDownFromLine: () => ArrowDownFromLine,
-  ArrowDownLeft: () => ArrowDownLeft,
-  ArrowDownNarrowWide: () => ArrowDownNarrowWide,
-  ArrowDownRight: () => ArrowDownRight,
-  ArrowDownToDot: () => ArrowDownToDot,
-  ArrowDownToLine: () => ArrowDownToLine,
-  ArrowDownUp: () => ArrowDownUp,
-  ArrowDownWideNarrow: () => ArrowDownWideNarrow,
-  ArrowDownZA: () => ArrowDownZA,
-  ArrowLeft: () => ArrowLeft,
-  ArrowLeftFromLine: () => ArrowLeftFromLine,
-  ArrowLeftRight: () => ArrowLeftRight,
-  ArrowLeftToLine: () => ArrowLeftToLine,
-  ArrowRight: () => ArrowRight,
-  ArrowRightFromLine: () => ArrowRightFromLine,
-  ArrowRightLeft: () => ArrowRightLeft,
-  ArrowRightToLine: () => ArrowRightToLine,
-  ArrowUp: () => ArrowUp,
-  ArrowUp01: () => ArrowUp01,
-  ArrowUp10: () => ArrowUp10,
-  ArrowUpAZ: () => ArrowUpAZ,
-  ArrowUpDown: () => ArrowUpDown,
-  ArrowUpFromDot: () => ArrowUpFromDot,
-  ArrowUpFromLine: () => ArrowUpFromLine,
-  ArrowUpLeft: () => ArrowUpLeft,
-  ArrowUpNarrowWide: () => ArrowUpNarrowWide,
-  ArrowUpRight: () => ArrowUpRight,
-  ArrowUpToLine: () => ArrowUpToLine,
-  ArrowUpWideNarrow: () => ArrowUpWideNarrow,
-  ArrowUpZA: () => ArrowUpZA,
-  ArrowsUpFromLine: () => ArrowsUpFromLine,
-  Asterisk: () => Asterisk,
-  AtSign: () => AtSign,
-  Atom: () => Atom,
-  AudioLines: () => AudioLines,
-  AudioWaveform: () => AudioWaveform,
-  Award: () => Award,
-  Axe: () => Axe,
-  Axis3d: () => Axis3d,
-  Baby: () => Baby,
-  Backpack: () => Backpack,
-  Badge: () => Badge,
-  BadgeAlert: () => BadgeAlert,
-  BadgeCent: () => BadgeCent,
-  BadgeCheck: () => BadgeCheck,
-  BadgeDollarSign: () => BadgeDollarSign,
-  BadgeEuro: () => BadgeEuro,
-  BadgeHelp: () => BadgeHelp,
-  BadgeIndianRupee: () => BadgeIndianRupee,
-  BadgeInfo: () => BadgeInfo,
-  BadgeJapaneseYen: () => BadgeJapaneseYen,
-  BadgeMinus: () => BadgeMinus,
-  BadgePercent: () => BadgePercent,
-  BadgePlus: () => BadgePlus,
-  BadgePoundSterling: () => BadgePoundSterling,
-  BadgeRussianRuble: () => BadgeRussianRuble,
-  BadgeSwissFranc: () => BadgeSwissFranc,
-  BadgeX: () => BadgeX,
-  BaggageClaim: () => BaggageClaim,
-  Ban: () => Ban,
-  Banana: () => Banana,
-  Bandage: () => Bandage,
-  Banknote: () => Banknote,
-  Barcode: () => Barcode,
-  Baseline: () => Baseline,
-  Bath: () => Bath,
-  Battery: () => Battery,
-  BatteryCharging: () => BatteryCharging,
-  BatteryFull: () => BatteryFull,
-  BatteryLow: () => BatteryLow,
-  BatteryMedium: () => BatteryMedium,
-  BatteryPlus: () => BatteryPlus,
-  BatteryWarning: () => BatteryWarning,
-  Beaker: () => Beaker,
-  Bean: () => Bean,
-  BeanOff: () => BeanOff,
-  Bed: () => Bed,
-  BedDouble: () => BedDouble,
-  BedSingle: () => BedSingle,
-  Beef: () => Beef,
-  Beer: () => Beer,
-  BeerOff: () => BeerOff,
-  Bell: () => Bell,
-  BellDot: () => BellDot,
-  BellElectric: () => BellElectric,
-  BellMinus: () => BellMinus,
-  BellOff: () => BellOff,
-  BellPlus: () => BellPlus,
-  BellRing: () => BellRing,
-  BetweenHorizontalEnd: () => BetweenHorizontalEnd,
-  BetweenHorizontalStart: () => BetweenHorizontalStart,
-  BetweenVerticalEnd: () => BetweenVerticalEnd,
-  BetweenVerticalStart: () => BetweenVerticalStart,
-  BicepsFlexed: () => BicepsFlexed,
-  Bike: () => Bike,
-  Binary: () => Binary,
-  Binoculars: () => Binoculars,
-  Biohazard: () => Biohazard,
-  Bird: () => Bird,
-  Bitcoin: () => Bitcoin,
-  Blend: () => Blend,
-  Blinds: () => Blinds,
-  Blocks: () => Blocks,
-  Bluetooth: () => Bluetooth,
-  BluetoothConnected: () => BluetoothConnected,
-  BluetoothOff: () => BluetoothOff,
-  BluetoothSearching: () => BluetoothSearching,
-  Bold: () => Bold,
-  Bolt: () => Bolt,
-  Bomb: () => Bomb,
-  Bone: () => Bone,
-  Book: () => Book,
-  BookA: () => BookA,
-  BookAudio: () => BookAudio,
-  BookCheck: () => BookCheck,
-  BookCopy: () => BookCopy,
-  BookDashed: () => BookDashed,
-  BookDown: () => BookDown,
-  BookHeadphones: () => BookHeadphones,
-  BookHeart: () => BookHeart,
-  BookImage: () => BookImage,
-  BookKey: () => BookKey,
-  BookLock: () => BookLock,
-  BookMarked: () => BookMarked,
-  BookMinus: () => BookMinus,
-  BookOpen: () => BookOpen,
-  BookOpenCheck: () => BookOpenCheck,
-  BookOpenText: () => BookOpenText,
-  BookPlus: () => BookPlus,
-  BookText: () => BookText,
-  BookType: () => BookType,
-  BookUp: () => BookUp,
-  BookUp2: () => BookUp2,
-  BookUser: () => BookUser,
-  BookX: () => BookX,
-  Bookmark: () => Bookmark,
-  BookmarkCheck: () => BookmarkCheck,
-  BookmarkMinus: () => BookmarkMinus,
-  BookmarkPlus: () => BookmarkPlus,
-  BookmarkX: () => BookmarkX,
-  BoomBox: () => BoomBox,
-  Bot: () => Bot,
-  BotMessageSquare: () => BotMessageSquare,
-  BotOff: () => BotOff,
-  Box: () => Box,
-  Boxes: () => Boxes,
-  Braces: () => Braces,
-  Brackets: () => Brackets,
-  Brain: () => Brain,
-  BrainCircuit: () => BrainCircuit,
-  BrainCog: () => BrainCog,
-  BrickWall: () => BrickWall,
-  Briefcase: () => Briefcase,
-  BriefcaseBusiness: () => BriefcaseBusiness,
-  BriefcaseConveyorBelt: () => BriefcaseConveyorBelt,
-  BriefcaseMedical: () => BriefcaseMedical,
-  BringToFront: () => BringToFront,
-  Brush: () => Brush,
-  Bug: () => Bug,
-  BugOff: () => BugOff,
-  BugPlay: () => BugPlay,
-  Building: () => Building,
-  Building2: () => Building2,
-  Bus: () => Bus,
-  BusFront: () => BusFront,
-  Cable: () => Cable,
-  CableCar: () => CableCar,
-  Cake: () => Cake,
-  CakeSlice: () => CakeSlice,
-  Calculator: () => Calculator,
-  Calendar: () => Calendar,
-  Calendar1: () => Calendar1,
-  CalendarArrowDown: () => CalendarArrowDown,
-  CalendarArrowUp: () => CalendarArrowUp,
-  CalendarCheck: () => CalendarCheck,
-  CalendarCheck2: () => CalendarCheck2,
-  CalendarClock: () => CalendarClock,
-  CalendarCog: () => CalendarCog,
-  CalendarDays: () => CalendarDays,
-  CalendarFold: () => CalendarFold,
-  CalendarHeart: () => CalendarHeart,
-  CalendarMinus: () => CalendarMinus,
-  CalendarMinus2: () => CalendarMinus2,
-  CalendarOff: () => CalendarOff,
-  CalendarPlus: () => CalendarPlus,
-  CalendarPlus2: () => CalendarPlus2,
-  CalendarRange: () => CalendarRange,
-  CalendarSearch: () => CalendarSearch,
-  CalendarSync: () => CalendarSync,
-  CalendarX: () => CalendarX,
-  CalendarX2: () => CalendarX2,
-  Camera: () => Camera,
-  CameraOff: () => CameraOff,
-  Candy: () => Candy,
-  CandyCane: () => CandyCane,
-  CandyOff: () => CandyOff,
-  Cannabis: () => Cannabis,
-  Captions: () => Captions,
-  CaptionsOff: () => CaptionsOff,
-  Car: () => Car,
-  CarFront: () => CarFront,
-  CarTaxiFront: () => CarTaxiFront,
-  Caravan: () => Caravan,
-  Carrot: () => Carrot,
-  CaseLower: () => CaseLower,
-  CaseSensitive: () => CaseSensitive,
-  CaseUpper: () => CaseUpper,
-  CassetteTape: () => CassetteTape,
-  Cast: () => Cast,
-  Castle: () => Castle,
-  Cat: () => Cat,
-  Cctv: () => Cctv,
-  ChartArea: () => ChartArea,
-  ChartBar: () => ChartBar,
-  ChartBarBig: () => ChartBarBig,
-  ChartBarDecreasing: () => ChartBarDecreasing,
-  ChartBarIncreasing: () => ChartBarIncreasing,
-  ChartBarStacked: () => ChartBarStacked,
-  ChartCandlestick: () => ChartCandlestick,
-  ChartColumn: () => ChartColumn,
-  ChartColumnBig: () => ChartColumnBig,
-  ChartColumnDecreasing: () => ChartColumnDecreasing,
-  ChartColumnIncreasing: () => ChartColumnIncreasing,
-  ChartColumnStacked: () => ChartColumnStacked,
-  ChartGantt: () => ChartGantt,
-  ChartLine: () => ChartLine,
-  ChartNetwork: () => ChartNetwork,
-  ChartNoAxesColumn: () => ChartNoAxesColumn,
-  ChartNoAxesColumnDecreasing: () => ChartNoAxesColumnDecreasing,
-  ChartNoAxesColumnIncreasing: () => ChartNoAxesColumnIncreasing,
-  ChartNoAxesCombined: () => ChartNoAxesCombined,
-  ChartNoAxesGantt: () => ChartNoAxesGantt,
-  ChartPie: () => ChartPie,
-  ChartScatter: () => ChartScatter,
-  ChartSpline: () => ChartSpline,
-  Check: () => Check,
-  CheckCheck: () => CheckCheck,
-  ChefHat: () => ChefHat,
-  Cherry: () => Cherry,
-  ChevronDown: () => ChevronDown,
-  ChevronFirst: () => ChevronFirst,
-  ChevronLast: () => ChevronLast,
-  ChevronLeft: () => ChevronLeft,
-  ChevronRight: () => ChevronRight,
-  ChevronUp: () => ChevronUp,
-  ChevronsDown: () => ChevronsDown,
-  ChevronsDownUp: () => ChevronsDownUp,
-  ChevronsLeft: () => ChevronsLeft,
-  ChevronsLeftRight: () => ChevronsLeftRight,
-  ChevronsLeftRightEllipsis: () => ChevronsLeftRightEllipsis,
-  ChevronsRight: () => ChevronsRight,
-  ChevronsRightLeft: () => ChevronsRightLeft,
-  ChevronsUp: () => ChevronsUp,
-  ChevronsUpDown: () => ChevronsUpDown,
-  Chrome: () => Chrome,
-  Church: () => Church,
-  Cigarette: () => Cigarette,
-  CigaretteOff: () => CigaretteOff,
-  Circle: () => Circle,
-  CircleAlert: () => CircleAlert,
-  CircleArrowDown: () => CircleArrowDown,
-  CircleArrowLeft: () => CircleArrowLeft,
-  CircleArrowOutDownLeft: () => CircleArrowOutDownLeft,
-  CircleArrowOutDownRight: () => CircleArrowOutDownRight,
-  CircleArrowOutUpLeft: () => CircleArrowOutUpLeft,
-  CircleArrowOutUpRight: () => CircleArrowOutUpRight,
-  CircleArrowRight: () => CircleArrowRight,
-  CircleArrowUp: () => CircleArrowUp,
-  CircleCheck: () => CircleCheck,
-  CircleCheckBig: () => CircleCheckBig,
-  CircleChevronDown: () => CircleChevronDown,
-  CircleChevronLeft: () => CircleChevronLeft,
-  CircleChevronRight: () => CircleChevronRight,
-  CircleChevronUp: () => CircleChevronUp,
-  CircleDashed: () => CircleDashed,
-  CircleDivide: () => CircleDivide,
-  CircleDollarSign: () => CircleDollarSign,
-  CircleDot: () => CircleDot,
-  CircleDotDashed: () => CircleDotDashed,
-  CircleEllipsis: () => CircleEllipsis,
-  CircleEqual: () => CircleEqual,
-  CircleFadingArrowUp: () => CircleFadingArrowUp,
-  CircleFadingPlus: () => CircleFadingPlus,
-  CircleGauge: () => CircleGauge,
-  CircleHelp: () => CircleHelp,
-  CircleMinus: () => CircleMinus,
-  CircleOff: () => CircleOff,
-  CircleParking: () => CircleParking,
-  CircleParkingOff: () => CircleParkingOff,
-  CirclePause: () => CirclePause,
-  CirclePercent: () => CirclePercent,
-  CirclePlay: () => CirclePlay,
-  CirclePlus: () => CirclePlus,
-  CirclePower: () => CirclePower,
-  CircleSlash: () => CircleSlash,
-  CircleSlash2: () => CircleSlash2,
-  CircleSmall: () => CircleSmall,
-  CircleStop: () => CircleStop,
-  CircleUser: () => CircleUser,
-  CircleUserRound: () => CircleUserRound,
-  CircleX: () => CircleX,
-  CircuitBoard: () => CircuitBoard,
-  Citrus: () => Citrus,
-  Clapperboard: () => Clapperboard,
-  Clipboard: () => Clipboard,
-  ClipboardCheck: () => ClipboardCheck,
-  ClipboardCopy: () => ClipboardCopy,
-  ClipboardList: () => ClipboardList,
-  ClipboardMinus: () => ClipboardMinus,
-  ClipboardPaste: () => ClipboardPaste,
-  ClipboardPen: () => ClipboardPen,
-  ClipboardPenLine: () => ClipboardPenLine,
-  ClipboardPlus: () => ClipboardPlus,
-  ClipboardType: () => ClipboardType,
-  ClipboardX: () => ClipboardX,
-  Clock: () => Clock,
-  Clock1: () => Clock1,
-  Clock10: () => Clock10,
-  Clock11: () => Clock11,
-  Clock12: () => Clock12,
-  Clock2: () => Clock2,
-  Clock3: () => Clock3,
-  Clock4: () => Clock4,
-  Clock5: () => Clock5,
-  Clock6: () => Clock6,
-  Clock7: () => Clock7,
-  Clock8: () => Clock8,
-  Clock9: () => Clock9,
-  ClockAlert: () => ClockAlert,
-  ClockArrowDown: () => ClockArrowDown,
-  ClockArrowUp: () => ClockArrowUp,
-  Cloud: () => Cloud,
-  CloudAlert: () => CloudAlert,
-  CloudCog: () => CloudCog,
-  CloudDownload: () => CloudDownload,
-  CloudDrizzle: () => CloudDrizzle,
-  CloudFog: () => CloudFog,
-  CloudHail: () => CloudHail,
-  CloudLightning: () => CloudLightning,
-  CloudMoon: () => CloudMoon,
-  CloudMoonRain: () => CloudMoonRain,
-  CloudOff: () => CloudOff,
-  CloudRain: () => CloudRain,
-  CloudRainWind: () => CloudRainWind,
-  CloudSnow: () => CloudSnow,
-  CloudSun: () => CloudSun,
-  CloudSunRain: () => CloudSunRain,
-  CloudUpload: () => CloudUpload,
-  Cloudy: () => Cloudy,
-  Clover: () => Clover,
-  Club: () => Club,
-  Code: () => Code,
-  CodeXml: () => CodeXml,
-  Codepen: () => Codepen,
-  Codesandbox: () => Codesandbox,
-  Coffee: () => Coffee,
-  Cog: () => Cog,
-  Coins: () => Coins,
-  Columns2: () => Columns2,
-  Columns3: () => Columns3,
-  Columns4: () => Columns4,
-  Combine: () => Combine,
-  Command: () => Command,
-  Compass: () => Compass,
-  Component: () => Component,
-  Computer: () => Computer,
-  ConciergeBell: () => ConciergeBell,
-  Cone: () => Cone,
-  Construction: () => Construction,
-  Contact: () => Contact,
-  ContactRound: () => ContactRound,
-  Container: () => Container,
-  Contrast: () => Contrast,
-  Cookie: () => Cookie,
-  CookingPot: () => CookingPot,
-  Copy: () => Copy,
-  CopyCheck: () => CopyCheck,
-  CopyMinus: () => CopyMinus,
-  CopyPlus: () => CopyPlus,
-  CopySlash: () => CopySlash,
-  CopyX: () => CopyX,
-  Copyleft: () => Copyleft,
-  Copyright: () => Copyright,
-  CornerDownLeft: () => CornerDownLeft,
-  CornerDownRight: () => CornerDownRight,
-  CornerLeftDown: () => CornerLeftDown,
-  CornerLeftUp: () => CornerLeftUp,
-  CornerRightDown: () => CornerRightDown,
-  CornerRightUp: () => CornerRightUp,
-  CornerUpLeft: () => CornerUpLeft,
-  CornerUpRight: () => CornerUpRight,
-  Cpu: () => Cpu,
-  CreativeCommons: () => CreativeCommons,
-  CreditCard: () => CreditCard,
-  Croissant: () => Croissant,
-  Crop: () => Crop,
-  Cross: () => Cross,
-  Crosshair: () => Crosshair,
-  Crown: () => Crown,
-  Cuboid: () => Cuboid,
-  CupSoda: () => CupSoda,
-  Currency: () => Currency,
-  Cylinder: () => Cylinder,
-  Dam: () => Dam,
-  Database: () => Database,
-  DatabaseBackup: () => DatabaseBackup,
-  DatabaseZap: () => DatabaseZap,
-  Delete: () => Delete,
-  Dessert: () => Dessert,
-  Diameter: () => Diameter,
-  Diamond: () => Diamond,
-  DiamondMinus: () => DiamondMinus,
-  DiamondPercent: () => DiamondPercent,
-  DiamondPlus: () => DiamondPlus,
-  Dice1: () => Dice1,
-  Dice2: () => Dice2,
-  Dice3: () => Dice3,
-  Dice4: () => Dice4,
-  Dice5: () => Dice5,
-  Dice6: () => Dice6,
-  Dices: () => Dices,
-  Diff: () => Diff,
-  Disc: () => Disc,
-  Disc2: () => Disc2,
-  Disc3: () => Disc3,
-  DiscAlbum: () => DiscAlbum,
-  Divide: () => Divide,
-  Dna: () => Dna,
-  DnaOff: () => DnaOff,
-  Dock: () => Dock,
-  Dog: () => Dog,
-  DollarSign: () => DollarSign,
-  Donut: () => Donut,
-  DoorClosed: () => DoorClosed,
-  DoorOpen: () => DoorOpen,
-  Dot: () => Dot,
-  Download: () => Download,
-  DraftingCompass: () => DraftingCompass,
-  Drama: () => Drama,
-  Dribbble: () => Dribbble,
-  Drill: () => Drill,
-  Droplet: () => Droplet,
-  DropletOff: () => DropletOff,
-  Droplets: () => Droplets,
-  Drum: () => Drum,
-  Drumstick: () => Drumstick,
-  Dumbbell: () => Dumbbell,
-  Ear: () => Ear,
-  EarOff: () => EarOff,
-  Earth: () => Earth,
-  EarthLock: () => EarthLock,
-  Eclipse: () => Eclipse,
-  Egg: () => Egg,
-  EggFried: () => EggFried,
-  EggOff: () => EggOff,
-  Ellipsis: () => Ellipsis,
-  EllipsisVertical: () => EllipsisVertical,
-  Equal: () => Equal,
-  EqualApproximately: () => EqualApproximately,
-  EqualNot: () => EqualNot,
-  Eraser: () => Eraser,
-  EthernetPort: () => EthernetPort,
-  Euro: () => Euro,
-  Expand: () => Expand,
-  ExternalLink: () => ExternalLink,
-  Eye: () => Eye,
-  EyeClosed: () => EyeClosed,
-  EyeOff: () => EyeOff,
-  Facebook: () => Facebook,
-  Factory: () => Factory,
-  Fan: () => Fan,
-  FastForward: () => FastForward,
-  Feather: () => Feather,
-  Fence: () => Fence,
-  FerrisWheel: () => FerrisWheel,
-  Figma: () => Figma,
-  File: () => File,
-  FileArchive: () => FileArchive,
-  FileAudio: () => FileAudio,
-  FileAudio2: () => FileAudio2,
-  FileAxis3d: () => FileAxis3d,
-  FileBadge: () => FileBadge,
-  FileBadge2: () => FileBadge2,
-  FileBox: () => FileBox,
-  FileChartColumn: () => FileChartColumn,
-  FileChartColumnIncreasing: () => FileChartColumnIncreasing,
-  FileChartLine: () => FileChartLine,
-  FileChartPie: () => FileChartPie,
-  FileCheck: () => FileCheck,
-  FileCheck2: () => FileCheck2,
-  FileClock: () => FileClock,
-  FileCode: () => FileCode,
-  FileCode2: () => FileCode2,
-  FileCog: () => FileCog,
-  FileDiff: () => FileDiff,
-  FileDigit: () => FileDigit,
-  FileDown: () => FileDown,
-  FileHeart: () => FileHeart,
-  FileImage: () => FileImage,
-  FileInput: () => FileInput,
-  FileJson: () => FileJson,
-  FileJson2: () => FileJson2,
-  FileKey: () => FileKey,
-  FileKey2: () => FileKey2,
-  FileLock: () => FileLock,
-  FileLock2: () => FileLock2,
-  FileMinus: () => FileMinus,
-  FileMinus2: () => FileMinus2,
-  FileMusic: () => FileMusic,
-  FileOutput: () => FileOutput,
-  FilePen: () => FilePen,
-  FilePenLine: () => FilePenLine,
-  FilePlus: () => FilePlus,
-  FilePlus2: () => FilePlus2,
-  FileQuestion: () => FileQuestion,
-  FileScan: () => FileScan,
-  FileSearch: () => FileSearch,
-  FileSearch2: () => FileSearch2,
-  FileSliders: () => FileSliders,
-  FileSpreadsheet: () => FileSpreadsheet,
-  FileStack: () => FileStack,
-  FileSymlink: () => FileSymlink,
-  FileTerminal: () => FileTerminal,
-  FileText: () => FileText,
-  FileType: () => FileType,
-  FileType2: () => FileType2,
-  FileUp: () => FileUp,
-  FileUser: () => FileUser,
-  FileVideo: () => FileVideo,
-  FileVideo2: () => FileVideo2,
-  FileVolume: () => FileVolume,
-  FileVolume2: () => FileVolume2,
-  FileWarning: () => FileWarning,
-  FileX: () => FileX,
-  FileX2: () => FileX2,
-  Files: () => Files,
-  Film: () => Film,
-  Filter: () => Filter,
-  FilterX: () => FilterX,
-  Fingerprint: () => Fingerprint,
-  FireExtinguisher: () => FireExtinguisher,
-  Fish: () => Fish,
-  FishOff: () => FishOff,
-  FishSymbol: () => FishSymbol,
-  Flag: () => Flag,
-  FlagOff: () => FlagOff,
-  FlagTriangleLeft: () => FlagTriangleLeft,
-  FlagTriangleRight: () => FlagTriangleRight,
-  Flame: () => Flame,
-  FlameKindling: () => FlameKindling,
-  Flashlight: () => Flashlight,
-  FlashlightOff: () => FlashlightOff,
-  FlaskConical: () => FlaskConical,
-  FlaskConicalOff: () => FlaskConicalOff,
-  FlaskRound: () => FlaskRound,
-  FlipHorizontal: () => FlipHorizontal,
-  FlipHorizontal2: () => FlipHorizontal2,
-  FlipVertical: () => FlipVertical,
-  FlipVertical2: () => FlipVertical2,
-  Flower: () => Flower,
-  Flower2: () => Flower2,
-  Focus: () => Focus,
-  FoldHorizontal: () => FoldHorizontal,
-  FoldVertical: () => FoldVertical,
-  Folder: () => Folder,
-  FolderArchive: () => FolderArchive,
-  FolderCheck: () => FolderCheck,
-  FolderClock: () => FolderClock,
-  FolderClosed: () => FolderClosed,
-  FolderCode: () => FolderCode,
-  FolderCog: () => FolderCog,
-  FolderDot: () => FolderDot,
-  FolderDown: () => FolderDown,
-  FolderGit: () => FolderGit,
-  FolderGit2: () => FolderGit2,
-  FolderHeart: () => FolderHeart,
-  FolderInput: () => FolderInput,
-  FolderKanban: () => FolderKanban,
-  FolderKey: () => FolderKey,
-  FolderLock: () => FolderLock,
-  FolderMinus: () => FolderMinus,
-  FolderOpen: () => FolderOpen,
-  FolderOpenDot: () => FolderOpenDot,
-  FolderOutput: () => FolderOutput,
-  FolderPen: () => FolderPen,
-  FolderPlus: () => FolderPlus,
-  FolderRoot: () => FolderRoot,
-  FolderSearch: () => FolderSearch,
-  FolderSearch2: () => FolderSearch2,
-  FolderSymlink: () => FolderSymlink,
-  FolderSync: () => FolderSync,
-  FolderTree: () => FolderTree,
-  FolderUp: () => FolderUp,
-  FolderX: () => FolderX,
-  Folders: () => Folders,
-  Footprints: () => Footprints,
-  Forklift: () => Forklift,
-  Forward: () => Forward,
-  Frame: () => Frame,
-  Framer: () => Framer,
-  Frown: () => Frown,
-  Fuel: () => Fuel,
-  Fullscreen: () => Fullscreen,
-  GalleryHorizontal: () => GalleryHorizontal,
-  GalleryHorizontalEnd: () => GalleryHorizontalEnd,
-  GalleryThumbnails: () => GalleryThumbnails,
-  GalleryVertical: () => GalleryVertical,
-  GalleryVerticalEnd: () => GalleryVerticalEnd,
-  Gamepad: () => Gamepad,
-  Gamepad2: () => Gamepad2,
-  Gauge: () => Gauge,
-  Gavel: () => Gavel,
-  Gem: () => Gem,
-  Ghost: () => Ghost,
-  Gift: () => Gift,
-  GitBranch: () => GitBranch,
-  GitBranchPlus: () => GitBranchPlus,
-  GitCommitHorizontal: () => GitCommitHorizontal,
-  GitCommitVertical: () => GitCommitVertical,
-  GitCompare: () => GitCompare,
-  GitCompareArrows: () => GitCompareArrows,
-  GitFork: () => GitFork,
-  GitGraph: () => GitGraph,
-  GitMerge: () => GitMerge,
-  GitPullRequest: () => GitPullRequest,
-  GitPullRequestArrow: () => GitPullRequestArrow,
-  GitPullRequestClosed: () => GitPullRequestClosed,
-  GitPullRequestCreate: () => GitPullRequestCreate,
-  GitPullRequestCreateArrow: () => GitPullRequestCreateArrow,
-  GitPullRequestDraft: () => GitPullRequestDraft,
-  Github: () => Github,
-  Gitlab: () => Gitlab,
-  GlassWater: () => GlassWater,
-  Glasses: () => Glasses,
-  Globe: () => Globe,
-  GlobeLock: () => GlobeLock,
-  Goal: () => Goal,
-  Grab: () => Grab,
-  GraduationCap: () => GraduationCap,
-  Grape: () => Grape,
-  Grid2x2: () => Grid2x2,
-  Grid2x2Check: () => Grid2x2Check,
-  Grid2x2Plus: () => Grid2x2Plus,
-  Grid2x2X: () => Grid2x2X,
-  Grid3x3: () => Grid3x3,
-  Grip: () => Grip,
-  GripHorizontal: () => GripHorizontal,
-  GripVertical: () => GripVertical,
-  Group: () => Group,
-  Guitar: () => Guitar,
-  Ham: () => Ham,
-  Hammer: () => Hammer,
-  Hand: () => Hand,
-  HandCoins: () => HandCoins,
-  HandHeart: () => HandHeart,
-  HandHelping: () => HandHelping,
-  HandMetal: () => HandMetal,
-  HandPlatter: () => HandPlatter,
-  Handshake: () => Handshake,
-  HardDrive: () => HardDrive,
-  HardDriveDownload: () => HardDriveDownload,
-  HardDriveUpload: () => HardDriveUpload,
-  HardHat: () => HardHat,
-  Hash: () => Hash,
-  Haze: () => Haze,
-  HdmiPort: () => HdmiPort,
-  Heading: () => Heading,
-  Heading1: () => Heading1,
-  Heading2: () => Heading2,
-  Heading3: () => Heading3,
-  Heading4: () => Heading4,
-  Heading5: () => Heading5,
-  Heading6: () => Heading6,
-  HeadphoneOff: () => HeadphoneOff,
-  Headphones: () => Headphones,
-  Headset: () => Headset,
-  Heart: () => Heart,
-  HeartCrack: () => HeartCrack,
-  HeartHandshake: () => HeartHandshake,
-  HeartOff: () => HeartOff,
-  HeartPulse: () => HeartPulse,
-  Heater: () => Heater,
-  Hexagon: () => Hexagon,
-  Highlighter: () => Highlighter,
-  History: () => History,
-  Hop: () => Hop,
-  HopOff: () => HopOff,
-  Hospital: () => Hospital,
-  Hotel: () => Hotel,
-  Hourglass: () => Hourglass,
-  House: () => House,
-  HousePlug: () => HousePlug,
-  HousePlus: () => HousePlus,
-  HouseWifi: () => HouseWifi,
-  IceCreamBowl: () => IceCreamBowl,
-  IceCreamCone: () => IceCreamCone,
-  IdCard: () => IdCard,
-  Image: () => Image,
-  ImageDown: () => ImageDown,
-  ImageMinus: () => ImageMinus,
-  ImageOff: () => ImageOff,
-  ImagePlay: () => ImagePlay,
-  ImagePlus: () => ImagePlus,
-  ImageUp: () => ImageUp,
-  ImageUpscale: () => ImageUpscale,
-  Images: () => Images,
-  Import: () => Import,
-  Inbox: () => Inbox,
-  IndentDecrease: () => IndentDecrease,
-  IndentIncrease: () => IndentIncrease,
-  IndianRupee: () => IndianRupee,
-  InfinityIcon: () => InfinityIcon,
-  Info: () => Info,
-  InspectionPanel: () => InspectionPanel,
-  Instagram: () => Instagram,
-  Italic: () => Italic,
-  IterationCcw: () => IterationCcw,
-  IterationCw: () => IterationCw,
-  JapaneseYen: () => JapaneseYen,
-  Joystick: () => Joystick,
-  Kanban: () => Kanban,
-  Key: () => Key,
-  KeyRound: () => KeyRound,
-  KeySquare: () => KeySquare,
-  Keyboard: () => Keyboard,
-  KeyboardMusic: () => KeyboardMusic,
-  KeyboardOff: () => KeyboardOff,
-  Lamp: () => Lamp,
-  LampCeiling: () => LampCeiling,
-  LampDesk: () => LampDesk,
-  LampFloor: () => LampFloor,
-  LampWallDown: () => LampWallDown,
-  LampWallUp: () => LampWallUp,
-  LandPlot: () => LandPlot,
-  Landmark: () => Landmark,
-  Languages: () => Languages,
-  Laptop: () => Laptop,
-  LaptopMinimal: () => LaptopMinimal,
-  LaptopMinimalCheck: () => LaptopMinimalCheck,
-  Lasso: () => Lasso,
-  LassoSelect: () => LassoSelect,
-  Laugh: () => Laugh,
-  Layers: () => Layers,
-  Layers2: () => Layers2,
-  LayoutDashboard: () => LayoutDashboard,
-  LayoutGrid: () => LayoutGrid,
-  LayoutList: () => LayoutList,
-  LayoutPanelLeft: () => LayoutPanelLeft,
-  LayoutPanelTop: () => LayoutPanelTop,
-  LayoutTemplate: () => LayoutTemplate,
-  Leaf: () => Leaf,
-  LeafyGreen: () => LeafyGreen,
-  Lectern: () => Lectern,
-  LetterText: () => LetterText,
-  Library: () => Library,
-  LibraryBig: () => LibraryBig,
-  LifeBuoy: () => LifeBuoy,
-  Ligature: () => Ligature,
-  Lightbulb: () => Lightbulb,
-  LightbulbOff: () => LightbulbOff,
-  Link: () => Link,
-  Link2: () => Link2,
-  Link2Off: () => Link2Off,
-  Linkedin: () => Linkedin,
-  List: () => List,
-  ListCheck: () => ListCheck,
-  ListChecks: () => ListChecks,
-  ListCollapse: () => ListCollapse,
-  ListEnd: () => ListEnd,
-  ListFilter: () => ListFilter,
-  ListFilterPlus: () => ListFilterPlus,
-  ListMinus: () => ListMinus,
-  ListMusic: () => ListMusic,
-  ListOrdered: () => ListOrdered,
-  ListPlus: () => ListPlus,
-  ListRestart: () => ListRestart,
-  ListStart: () => ListStart,
-  ListTodo: () => ListTodo,
-  ListTree: () => ListTree,
-  ListVideo: () => ListVideo,
-  ListX: () => ListX,
-  Loader: () => Loader,
-  LoaderCircle: () => LoaderCircle,
-  LoaderPinwheel: () => LoaderPinwheel,
-  Locate: () => Locate,
-  LocateFixed: () => LocateFixed,
-  LocateOff: () => LocateOff,
-  Lock: () => Lock,
-  LockKeyhole: () => LockKeyhole,
-  LockKeyholeOpen: () => LockKeyholeOpen,
-  LockOpen: () => LockOpen,
-  LogIn: () => LogIn,
-  LogOut: () => LogOut,
-  Logs: () => Logs,
-  Lollipop: () => Lollipop,
-  Luggage: () => Luggage,
-  Magnet: () => Magnet,
-  Mail: () => Mail,
-  MailCheck: () => MailCheck,
-  MailMinus: () => MailMinus,
-  MailOpen: () => MailOpen,
-  MailPlus: () => MailPlus,
-  MailQuestion: () => MailQuestion,
-  MailSearch: () => MailSearch,
-  MailWarning: () => MailWarning,
-  MailX: () => MailX,
-  Mailbox: () => Mailbox,
-  Mails: () => Mails,
-  Map: () => Map,
-  MapPin: () => MapPin,
-  MapPinCheck: () => MapPinCheck,
-  MapPinCheckInside: () => MapPinCheckInside,
-  MapPinHouse: () => MapPinHouse,
-  MapPinMinus: () => MapPinMinus,
-  MapPinMinusInside: () => MapPinMinusInside,
-  MapPinOff: () => MapPinOff,
-  MapPinPlus: () => MapPinPlus,
-  MapPinPlusInside: () => MapPinPlusInside,
-  MapPinX: () => MapPinX,
-  MapPinXInside: () => MapPinXInside,
-  MapPinned: () => MapPinned,
-  MapPlus: () => MapPlus,
-  Mars: () => Mars,
-  MarsStroke: () => MarsStroke,
-  Martini: () => Martini,
-  Maximize: () => Maximize,
-  Maximize2: () => Maximize2,
-  Medal: () => Medal,
-  Megaphone: () => Megaphone,
-  MegaphoneOff: () => MegaphoneOff,
-  Meh: () => Meh,
-  MemoryStick: () => MemoryStick,
-  Menu: () => Menu,
-  Merge: () => Merge,
-  MessageCircle: () => MessageCircle,
-  MessageCircleCode: () => MessageCircleCode,
-  MessageCircleDashed: () => MessageCircleDashed,
-  MessageCircleHeart: () => MessageCircleHeart,
-  MessageCircleMore: () => MessageCircleMore,
-  MessageCircleOff: () => MessageCircleOff,
-  MessageCirclePlus: () => MessageCirclePlus,
-  MessageCircleQuestion: () => MessageCircleQuestion,
-  MessageCircleReply: () => MessageCircleReply,
-  MessageCircleWarning: () => MessageCircleWarning,
-  MessageCircleX: () => MessageCircleX,
-  MessageSquare: () => MessageSquare,
-  MessageSquareCode: () => MessageSquareCode,
-  MessageSquareDashed: () => MessageSquareDashed,
-  MessageSquareDiff: () => MessageSquareDiff,
-  MessageSquareDot: () => MessageSquareDot,
-  MessageSquareHeart: () => MessageSquareHeart,
-  MessageSquareLock: () => MessageSquareLock,
-  MessageSquareMore: () => MessageSquareMore,
-  MessageSquareOff: () => MessageSquareOff,
-  MessageSquarePlus: () => MessageSquarePlus,
-  MessageSquareQuote: () => MessageSquareQuote,
-  MessageSquareReply: () => MessageSquareReply,
-  MessageSquareShare: () => MessageSquareShare,
-  MessageSquareText: () => MessageSquareText,
-  MessageSquareWarning: () => MessageSquareWarning,
-  MessageSquareX: () => MessageSquareX,
-  MessagesSquare: () => MessagesSquare,
-  Mic: () => Mic,
-  MicOff: () => MicOff,
-  MicVocal: () => MicVocal,
-  Microchip: () => Microchip,
-  Microscope: () => Microscope,
-  Microwave: () => Microwave,
-  Milestone: () => Milestone,
-  Milk: () => Milk,
-  MilkOff: () => MilkOff,
-  Minimize: () => Minimize,
-  Minimize2: () => Minimize2,
-  Minus: () => Minus,
-  Monitor: () => Monitor,
-  MonitorCheck: () => MonitorCheck,
-  MonitorCog: () => MonitorCog,
-  MonitorDot: () => MonitorDot,
-  MonitorDown: () => MonitorDown,
-  MonitorOff: () => MonitorOff,
-  MonitorPause: () => MonitorPause,
-  MonitorPlay: () => MonitorPlay,
-  MonitorSmartphone: () => MonitorSmartphone,
-  MonitorSpeaker: () => MonitorSpeaker,
-  MonitorStop: () => MonitorStop,
-  MonitorUp: () => MonitorUp,
-  MonitorX: () => MonitorX,
-  Moon: () => Moon,
-  MoonStar: () => MoonStar,
-  Mountain: () => Mountain,
-  MountainSnow: () => MountainSnow,
-  Mouse: () => Mouse,
-  MouseOff: () => MouseOff,
-  MousePointer: () => MousePointer,
-  MousePointer2: () => MousePointer2,
-  MousePointerBan: () => MousePointerBan,
-  MousePointerClick: () => MousePointerClick,
-  Move: () => Move,
-  Move3d: () => Move3d,
-  MoveDiagonal: () => MoveDiagonal,
-  MoveDiagonal2: () => MoveDiagonal2,
-  MoveDown: () => MoveDown,
-  MoveDownLeft: () => MoveDownLeft,
-  MoveDownRight: () => MoveDownRight,
-  MoveHorizontal: () => MoveHorizontal,
-  MoveLeft: () => MoveLeft,
-  MoveRight: () => MoveRight,
-  MoveUp: () => MoveUp,
-  MoveUpLeft: () => MoveUpLeft,
-  MoveUpRight: () => MoveUpRight,
-  MoveVertical: () => MoveVertical,
-  Music: () => Music,
-  Music2: () => Music2,
-  Music3: () => Music3,
-  Music4: () => Music4,
-  Navigation: () => Navigation,
-  Navigation2: () => Navigation2,
-  Navigation2Off: () => Navigation2Off,
-  NavigationOff: () => NavigationOff,
-  Network: () => Network,
-  Newspaper: () => Newspaper,
-  Nfc: () => Nfc,
-  NonBinary: () => NonBinary,
-  Notebook: () => Notebook,
-  NotebookPen: () => NotebookPen,
-  NotebookTabs: () => NotebookTabs,
-  NotebookText: () => NotebookText,
-  NotepadText: () => NotepadText,
-  NotepadTextDashed: () => NotepadTextDashed,
-  Nut: () => Nut,
-  NutOff: () => NutOff,
-  Octagon: () => Octagon,
-  OctagonAlert: () => OctagonAlert,
-  OctagonMinus: () => OctagonMinus,
-  OctagonPause: () => OctagonPause,
-  OctagonX: () => OctagonX,
-  Omega: () => Omega,
-  Option: () => Option,
-  Orbit: () => Orbit,
-  Origami: () => Origami,
-  Package: () => Package,
-  Package2: () => Package2,
-  PackageCheck: () => PackageCheck,
-  PackageMinus: () => PackageMinus,
-  PackageOpen: () => PackageOpen,
-  PackagePlus: () => PackagePlus,
-  PackageSearch: () => PackageSearch,
-  PackageX: () => PackageX,
-  PaintBucket: () => PaintBucket,
-  PaintRoller: () => PaintRoller,
-  Paintbrush: () => Paintbrush,
-  PaintbrushVertical: () => PaintbrushVertical,
-  Palette: () => Palette,
-  PanelBottom: () => PanelBottom,
-  PanelBottomClose: () => PanelBottomClose,
-  PanelBottomDashed: () => PanelBottomDashed,
-  PanelBottomOpen: () => PanelBottomOpen,
-  PanelLeft: () => PanelLeft,
-  PanelLeftClose: () => PanelLeftClose,
-  PanelLeftDashed: () => PanelLeftDashed,
-  PanelLeftOpen: () => PanelLeftOpen,
-  PanelRight: () => PanelRight,
-  PanelRightClose: () => PanelRightClose,
-  PanelRightDashed: () => PanelRightDashed,
-  PanelRightOpen: () => PanelRightOpen,
-  PanelTop: () => PanelTop,
-  PanelTopClose: () => PanelTopClose,
-  PanelTopDashed: () => PanelTopDashed,
-  PanelTopOpen: () => PanelTopOpen,
-  PanelsLeftBottom: () => PanelsLeftBottom,
-  PanelsRightBottom: () => PanelsRightBottom,
-  PanelsTopLeft: () => PanelsTopLeft,
-  Paperclip: () => Paperclip,
-  Parentheses: () => Parentheses,
-  ParkingMeter: () => ParkingMeter,
-  PartyPopper: () => PartyPopper,
-  Pause: () => Pause,
-  PawPrint: () => PawPrint,
-  PcCase: () => PcCase,
-  Pen: () => Pen,
-  PenLine: () => PenLine,
-  PenOff: () => PenOff,
-  PenTool: () => PenTool,
-  Pencil: () => Pencil,
-  PencilLine: () => PencilLine,
-  PencilOff: () => PencilOff,
-  PencilRuler: () => PencilRuler,
-  Pentagon: () => Pentagon,
-  Percent: () => Percent,
-  PersonStanding: () => PersonStanding,
-  PhilippinePeso: () => PhilippinePeso,
-  Phone: () => Phone,
-  PhoneCall: () => PhoneCall,
-  PhoneForwarded: () => PhoneForwarded,
-  PhoneIncoming: () => PhoneIncoming,
-  PhoneMissed: () => PhoneMissed,
-  PhoneOff: () => PhoneOff,
-  PhoneOutgoing: () => PhoneOutgoing,
-  Pi: () => Pi,
-  Piano: () => Piano,
-  Pickaxe: () => Pickaxe,
-  PictureInPicture: () => PictureInPicture,
-  PictureInPicture2: () => PictureInPicture2,
-  PiggyBank: () => PiggyBank,
-  Pilcrow: () => Pilcrow,
-  PilcrowLeft: () => PilcrowLeft,
-  PilcrowRight: () => PilcrowRight,
-  Pill: () => Pill,
-  PillBottle: () => PillBottle,
-  Pin: () => Pin,
-  PinOff: () => PinOff,
-  Pipette: () => Pipette,
-  Pizza: () => Pizza,
-  Plane: () => Plane,
-  PlaneLanding: () => PlaneLanding,
-  PlaneTakeoff: () => PlaneTakeoff,
-  Play: () => Play,
-  Plug: () => Plug,
-  Plug2: () => Plug2,
-  PlugZap: () => PlugZap,
-  Plus: () => Plus,
-  Pocket: () => Pocket,
-  PocketKnife: () => PocketKnife,
-  Podcast: () => Podcast,
-  Pointer: () => Pointer,
-  PointerOff: () => PointerOff,
-  Popcorn: () => Popcorn,
-  Popsicle: () => Popsicle,
-  PoundSterling: () => PoundSterling,
-  Power: () => Power,
-  PowerOff: () => PowerOff,
-  Presentation: () => Presentation,
-  Printer: () => Printer,
-  PrinterCheck: () => PrinterCheck,
-  Projector: () => Projector,
-  Proportions: () => Proportions,
-  Puzzle: () => Puzzle,
-  Pyramid: () => Pyramid,
-  QrCode: () => QrCode,
-  Quote: () => Quote,
-  Rabbit: () => Rabbit,
-  Radar: () => Radar,
-  Radiation: () => Radiation,
-  Radical: () => Radical,
-  Radio: () => Radio,
-  RadioReceiver: () => RadioReceiver,
-  RadioTower: () => RadioTower,
-  Radius: () => Radius,
-  RailSymbol: () => RailSymbol,
-  Rainbow: () => Rainbow,
-  Rat: () => Rat,
-  Ratio: () => Ratio,
-  Receipt: () => Receipt,
-  ReceiptCent: () => ReceiptCent,
-  ReceiptEuro: () => ReceiptEuro,
-  ReceiptIndianRupee: () => ReceiptIndianRupee,
-  ReceiptJapaneseYen: () => ReceiptJapaneseYen,
-  ReceiptPoundSterling: () => ReceiptPoundSterling,
-  ReceiptRussianRuble: () => ReceiptRussianRuble,
-  ReceiptSwissFranc: () => ReceiptSwissFranc,
-  ReceiptText: () => ReceiptText,
-  RectangleEllipsis: () => RectangleEllipsis,
-  RectangleHorizontal: () => RectangleHorizontal,
-  RectangleVertical: () => RectangleVertical,
-  Recycle: () => Recycle,
-  Redo: () => Redo,
-  Redo2: () => Redo2,
-  RedoDot: () => RedoDot,
-  RefreshCcw: () => RefreshCcw,
-  RefreshCcwDot: () => RefreshCcwDot,
-  RefreshCw: () => RefreshCw,
-  RefreshCwOff: () => RefreshCwOff,
-  Refrigerator: () => Refrigerator,
-  Regex: () => Regex,
-  RemoveFormatting: () => RemoveFormatting,
-  Repeat: () => Repeat,
-  Repeat1: () => Repeat1,
-  Repeat2: () => Repeat2,
-  Replace: () => Replace,
-  ReplaceAll: () => ReplaceAll,
-  Reply: () => Reply,
-  ReplyAll: () => ReplyAll,
-  Rewind: () => Rewind,
-  Ribbon: () => Ribbon,
-  Rocket: () => Rocket,
-  RockingChair: () => RockingChair,
-  RollerCoaster: () => RollerCoaster,
-  Rotate3d: () => Rotate3d,
-  RotateCcw: () => RotateCcw,
-  RotateCcwSquare: () => RotateCcwSquare,
-  RotateCw: () => RotateCw,
-  RotateCwSquare: () => RotateCwSquare,
-  Route: () => Route,
-  RouteOff: () => RouteOff,
-  Router: () => Router,
-  Rows2: () => Rows2,
-  Rows3: () => Rows3,
-  Rows4: () => Rows4,
-  Rss: () => Rss,
-  Ruler: () => Ruler,
-  RussianRuble: () => RussianRuble,
-  Sailboat: () => Sailboat,
-  Salad: () => Salad,
-  Sandwich: () => Sandwich,
-  Satellite: () => Satellite,
-  SatelliteDish: () => SatelliteDish,
-  Save: () => Save,
-  SaveAll: () => SaveAll,
-  SaveOff: () => SaveOff,
-  Scale: () => Scale,
-  Scale3d: () => Scale3d,
-  Scaling: () => Scaling,
-  Scan: () => Scan,
-  ScanBarcode: () => ScanBarcode,
-  ScanEye: () => ScanEye,
-  ScanFace: () => ScanFace,
-  ScanHeart: () => ScanHeart,
-  ScanLine: () => ScanLine,
-  ScanQrCode: () => ScanQrCode,
-  ScanSearch: () => ScanSearch,
-  ScanText: () => ScanText,
-  School: () => School,
-  Scissors: () => Scissors,
-  ScissorsLineDashed: () => ScissorsLineDashed,
-  ScreenShare: () => ScreenShare,
-  ScreenShareOff: () => ScreenShareOff,
-  Scroll: () => Scroll,
-  ScrollText: () => ScrollText,
-  Search: () => Search,
-  SearchCheck: () => SearchCheck,
-  SearchCode: () => SearchCode,
-  SearchSlash: () => SearchSlash,
-  SearchX: () => SearchX,
-  Section: () => Section,
-  Send: () => Send,
-  SendHorizontal: () => SendHorizontal,
-  SendToBack: () => SendToBack,
-  SeparatorHorizontal: () => SeparatorHorizontal,
-  SeparatorVertical: () => SeparatorVertical,
-  Server: () => Server,
-  ServerCog: () => ServerCog,
-  ServerCrash: () => ServerCrash,
-  ServerOff: () => ServerOff,
-  Settings: () => Settings,
-  Settings2: () => Settings2,
-  Shapes: () => Shapes,
-  Share: () => Share,
-  Share2: () => Share2,
-  Sheet: () => Sheet,
-  Shell: () => Shell,
-  Shield: () => Shield,
-  ShieldAlert: () => ShieldAlert,
-  ShieldBan: () => ShieldBan,
-  ShieldCheck: () => ShieldCheck,
-  ShieldEllipsis: () => ShieldEllipsis,
-  ShieldHalf: () => ShieldHalf,
-  ShieldMinus: () => ShieldMinus,
-  ShieldOff: () => ShieldOff,
-  ShieldPlus: () => ShieldPlus,
-  ShieldQuestion: () => ShieldQuestion,
-  ShieldUser: () => ShieldUser,
-  ShieldX: () => ShieldX,
-  Ship: () => Ship,
-  ShipWheel: () => ShipWheel,
-  Shirt: () => Shirt,
-  ShoppingBag: () => ShoppingBag,
-  ShoppingBasket: () => ShoppingBasket,
-  ShoppingCart: () => ShoppingCart,
-  Shovel: () => Shovel,
-  ShowerHead: () => ShowerHead,
-  Shrink: () => Shrink,
-  Shrub: () => Shrub,
-  Shuffle: () => Shuffle,
-  Sigma: () => Sigma,
-  Signal: () => Signal,
-  SignalHigh: () => SignalHigh,
-  SignalLow: () => SignalLow,
-  SignalMedium: () => SignalMedium,
-  SignalZero: () => SignalZero,
-  Signature: () => Signature,
-  Signpost: () => Signpost,
-  SignpostBig: () => SignpostBig,
-  Siren: () => Siren,
-  SkipBack: () => SkipBack,
-  SkipForward: () => SkipForward,
-  Skull: () => Skull,
-  Slack: () => Slack,
-  Slash: () => Slash,
-  Slice: () => Slice,
-  SlidersHorizontal: () => SlidersHorizontal,
-  SlidersVertical: () => SlidersVertical,
-  Smartphone: () => Smartphone,
-  SmartphoneCharging: () => SmartphoneCharging,
-  SmartphoneNfc: () => SmartphoneNfc,
-  Smile: () => Smile,
-  SmilePlus: () => SmilePlus,
-  Snail: () => Snail,
-  Snowflake: () => Snowflake,
-  Sofa: () => Sofa,
-  Soup: () => Soup,
-  Space: () => Space,
-  Spade: () => Spade,
-  Sparkle: () => Sparkle,
-  Sparkles: () => Sparkles,
-  Speaker: () => Speaker,
-  Speech: () => Speech,
-  SpellCheck: () => SpellCheck,
-  SpellCheck2: () => SpellCheck2,
-  Spline: () => Spline,
-  Split: () => Split,
-  SprayCan: () => SprayCan,
-  Sprout: () => Sprout,
-  Square: () => Square,
-  SquareActivity: () => SquareActivity,
-  SquareArrowDown: () => SquareArrowDown,
-  SquareArrowDownLeft: () => SquareArrowDownLeft,
-  SquareArrowDownRight: () => SquareArrowDownRight,
-  SquareArrowLeft: () => SquareArrowLeft,
-  SquareArrowOutDownLeft: () => SquareArrowOutDownLeft,
-  SquareArrowOutDownRight: () => SquareArrowOutDownRight,
-  SquareArrowOutUpLeft: () => SquareArrowOutUpLeft,
-  SquareArrowOutUpRight: () => SquareArrowOutUpRight,
-  SquareArrowRight: () => SquareArrowRight,
-  SquareArrowUp: () => SquareArrowUp,
-  SquareArrowUpLeft: () => SquareArrowUpLeft,
-  SquareArrowUpRight: () => SquareArrowUpRight,
-  SquareAsterisk: () => SquareAsterisk,
-  SquareBottomDashedScissors: () => SquareBottomDashedScissors,
-  SquareChartGantt: () => SquareChartGantt,
-  SquareCheck: () => SquareCheck,
-  SquareCheckBig: () => SquareCheckBig,
-  SquareChevronDown: () => SquareChevronDown,
-  SquareChevronLeft: () => SquareChevronLeft,
-  SquareChevronRight: () => SquareChevronRight,
-  SquareChevronUp: () => SquareChevronUp,
-  SquareCode: () => SquareCode,
-  SquareDashed: () => SquareDashed,
-  SquareDashedBottom: () => SquareDashedBottom,
-  SquareDashedBottomCode: () => SquareDashedBottomCode,
-  SquareDashedKanban: () => SquareDashedKanban,
-  SquareDashedMousePointer: () => SquareDashedMousePointer,
-  SquareDivide: () => SquareDivide,
-  SquareDot: () => SquareDot,
-  SquareEqual: () => SquareEqual,
-  SquareFunction: () => SquareFunction,
-  SquareKanban: () => SquareKanban,
-  SquareLibrary: () => SquareLibrary,
-  SquareM: () => SquareM,
-  SquareMenu: () => SquareMenu,
-  SquareMinus: () => SquareMinus,
-  SquareMousePointer: () => SquareMousePointer,
-  SquareParking: () => SquareParking,
-  SquareParkingOff: () => SquareParkingOff,
-  SquarePen: () => SquarePen,
-  SquarePercent: () => SquarePercent,
-  SquarePi: () => SquarePi,
-  SquarePilcrow: () => SquarePilcrow,
-  SquarePlay: () => SquarePlay,
-  SquarePlus: () => SquarePlus,
-  SquarePower: () => SquarePower,
-  SquareRadical: () => SquareRadical,
-  SquareScissors: () => SquareScissors,
-  SquareSigma: () => SquareSigma,
-  SquareSlash: () => SquareSlash,
-  SquareSplitHorizontal: () => SquareSplitHorizontal,
-  SquareSplitVertical: () => SquareSplitVertical,
-  SquareSquare: () => SquareSquare,
-  SquareStack: () => SquareStack,
-  SquareTerminal: () => SquareTerminal,
-  SquareUser: () => SquareUser,
-  SquareUserRound: () => SquareUserRound,
-  SquareX: () => SquareX,
-  Squircle: () => Squircle,
-  Squirrel: () => Squirrel,
-  Stamp: () => Stamp,
-  Star: () => Star,
-  StarHalf: () => StarHalf,
-  StarOff: () => StarOff,
-  StepBack: () => StepBack,
-  StepForward: () => StepForward,
-  Stethoscope: () => Stethoscope,
-  Sticker: () => Sticker,
-  StickyNote: () => StickyNote,
-  Store: () => Store,
-  StretchHorizontal: () => StretchHorizontal,
-  StretchVertical: () => StretchVertical,
-  Strikethrough: () => Strikethrough,
-  Subscript: () => Subscript,
-  Sun: () => Sun,
-  SunDim: () => SunDim,
-  SunMedium: () => SunMedium,
-  SunMoon: () => SunMoon,
-  SunSnow: () => SunSnow,
-  Sunrise: () => Sunrise,
-  Sunset: () => Sunset,
-  Superscript: () => Superscript,
-  SwatchBook: () => SwatchBook,
-  SwissFranc: () => SwissFranc,
-  SwitchCamera: () => SwitchCamera,
-  Sword: () => Sword,
-  Swords: () => Swords,
-  Syringe: () => Syringe,
-  Table: () => Table,
-  Table2: () => Table2,
-  TableCellsMerge: () => TableCellsMerge,
-  TableCellsSplit: () => TableCellsSplit,
-  TableColumnsSplit: () => TableColumnsSplit,
-  TableOfContents: () => TableOfContents,
-  TableProperties: () => TableProperties,
-  TableRowsSplit: () => TableRowsSplit,
-  Tablet: () => Tablet,
-  TabletSmartphone: () => TabletSmartphone,
-  Tablets: () => Tablets,
-  Tag: () => Tag,
-  Tags: () => Tags,
-  Tally1: () => Tally1,
-  Tally2: () => Tally2,
-  Tally3: () => Tally3,
-  Tally4: () => Tally4,
-  Tally5: () => Tally5,
-  Tangent: () => Tangent,
-  Target: () => Target,
-  Telescope: () => Telescope,
-  Tent: () => Tent,
-  TentTree: () => TentTree,
-  Terminal: () => Terminal,
-  TestTube: () => TestTube,
-  TestTubeDiagonal: () => TestTubeDiagonal,
-  TestTubes: () => TestTubes,
-  Text: () => Text,
-  TextCursor: () => TextCursor,
-  TextCursorInput: () => TextCursorInput,
-  TextQuote: () => TextQuote,
-  TextSearch: () => TextSearch,
-  TextSelect: () => TextSelect,
-  Theater: () => Theater,
-  Thermometer: () => Thermometer,
-  ThermometerSnowflake: () => ThermometerSnowflake,
-  ThermometerSun: () => ThermometerSun,
-  ThumbsDown: () => ThumbsDown,
-  ThumbsUp: () => ThumbsUp,
-  Ticket: () => Ticket,
-  TicketCheck: () => TicketCheck,
-  TicketMinus: () => TicketMinus,
-  TicketPercent: () => TicketPercent,
-  TicketPlus: () => TicketPlus,
-  TicketSlash: () => TicketSlash,
-  TicketX: () => TicketX,
-  Tickets: () => Tickets,
-  TicketsPlane: () => TicketsPlane,
-  Timer: () => Timer,
-  TimerOff: () => TimerOff,
-  TimerReset: () => TimerReset,
-  ToggleLeft: () => ToggleLeft,
-  ToggleRight: () => ToggleRight,
-  Toilet: () => Toilet,
-  Tornado: () => Tornado,
-  Torus: () => Torus,
-  Touchpad: () => Touchpad,
-  TouchpadOff: () => TouchpadOff,
-  TowerControl: () => TowerControl,
-  ToyBrick: () => ToyBrick,
-  Tractor: () => Tractor,
-  TrafficCone: () => TrafficCone,
-  TrainFront: () => TrainFront,
-  TrainFrontTunnel: () => TrainFrontTunnel,
-  TrainTrack: () => TrainTrack,
-  TramFront: () => TramFront,
-  Transgender: () => Transgender,
-  Trash: () => Trash,
-  Trash2: () => Trash2,
-  TreeDeciduous: () => TreeDeciduous,
-  TreePalm: () => TreePalm,
-  TreePine: () => TreePine,
-  Trees: () => Trees,
-  Trello: () => Trello,
-  TrendingDown: () => TrendingDown,
-  TrendingUp: () => TrendingUp,
-  TrendingUpDown: () => TrendingUpDown,
-  Triangle: () => Triangle,
-  TriangleAlert: () => TriangleAlert,
-  TriangleDashed: () => TriangleDashed,
-  TriangleRight: () => TriangleRight,
-  Trophy: () => Trophy,
-  Truck: () => Truck,
-  Turtle: () => Turtle,
-  Tv: () => Tv,
-  TvMinimal: () => TvMinimal,
-  TvMinimalPlay: () => TvMinimalPlay,
-  Twitch: () => Twitch,
-  Twitter: () => Twitter,
-  Type: () => Type,
-  TypeOutline: () => TypeOutline,
-  Umbrella: () => Umbrella,
-  UmbrellaOff: () => UmbrellaOff,
-  Underline: () => Underline,
-  Undo: () => Undo,
-  Undo2: () => Undo2,
-  UndoDot: () => UndoDot,
-  UnfoldHorizontal: () => UnfoldHorizontal,
-  UnfoldVertical: () => UnfoldVertical,
-  Ungroup: () => Ungroup,
-  University: () => University,
-  Unlink: () => Unlink,
-  Unlink2: () => Unlink2,
-  Unplug: () => Unplug,
-  Upload: () => Upload,
-  Usb: () => Usb,
-  User: () => User,
-  UserCheck: () => UserCheck,
-  UserCog: () => UserCog,
-  UserMinus: () => UserMinus,
-  UserPen: () => UserPen,
-  UserPlus: () => UserPlus,
-  UserRound: () => UserRound,
-  UserRoundCheck: () => UserRoundCheck,
-  UserRoundCog: () => UserRoundCog,
-  UserRoundMinus: () => UserRoundMinus,
-  UserRoundPen: () => UserRoundPen,
-  UserRoundPlus: () => UserRoundPlus,
-  UserRoundSearch: () => UserRoundSearch,
-  UserRoundX: () => UserRoundX,
-  UserSearch: () => UserSearch,
-  UserX: () => UserX,
-  Users: () => Users,
-  UsersRound: () => UsersRound,
-  Utensils: () => Utensils,
-  UtensilsCrossed: () => UtensilsCrossed,
-  UtilityPole: () => UtilityPole,
-  Variable: () => Variable,
-  Vault: () => Vault,
-  Vegan: () => Vegan,
-  VenetianMask: () => VenetianMask,
-  Venus: () => Venus,
-  VenusAndMars: () => VenusAndMars,
-  Vibrate: () => Vibrate,
-  VibrateOff: () => VibrateOff,
-  Video: () => Video,
-  VideoOff: () => VideoOff,
-  Videotape: () => Videotape,
-  View: () => View,
-  Voicemail: () => Voicemail,
-  Volleyball: () => Volleyball,
-  Volume: () => Volume,
-  Volume1: () => Volume1,
-  Volume2: () => Volume2,
-  VolumeOff: () => VolumeOff,
-  VolumeX: () => VolumeX,
-  Vote: () => Vote,
-  Wallet: () => Wallet,
-  WalletCards: () => WalletCards,
-  WalletMinimal: () => WalletMinimal,
-  Wallpaper: () => Wallpaper,
-  Wand: () => Wand,
-  WandSparkles: () => WandSparkles,
-  Warehouse: () => Warehouse,
-  WashingMachine: () => WashingMachine,
-  Watch: () => Watch,
-  Waves: () => Waves,
-  WavesLadder: () => WavesLadder,
-  Waypoints: () => Waypoints,
-  Webcam: () => Webcam,
-  Webhook: () => Webhook,
-  WebhookOff: () => WebhookOff,
-  Weight: () => Weight,
-  Wheat: () => Wheat,
-  WheatOff: () => WheatOff,
-  WholeWord: () => WholeWord,
-  Wifi: () => Wifi,
-  WifiHigh: () => WifiHigh,
-  WifiLow: () => WifiLow,
-  WifiOff: () => WifiOff,
-  WifiZero: () => WifiZero,
-  Wind: () => Wind,
-  WindArrowDown: () => WindArrowDown,
-  Wine: () => Wine,
-  WineOff: () => WineOff,
-  Workflow: () => Workflow,
-  Worm: () => Worm,
-  WrapText: () => WrapText,
-  Wrench: () => Wrench,
-  X: () => X,
-  Youtube: () => Youtube,
-  Zap: () => Zap,
-  ZapOff: () => ZapOff,
-  ZoomIn: () => ZoomIn,
-  ZoomOut: () => ZoomOut
-});
-module.exports = __toCommonJS(index_exports);
 
 // src/icons/AArrowDown.ts
-var import_vanjs_core2 = __toESM(require("vanjs-core"), 1);
+var _vanjscore = require('vanjs-core'); var _vanjscore2 = _interopRequireDefault(_vanjscore);
 
 // src/LucideIcon.ts
-var import_vanjs_core = __toESM(require("vanjs-core"), 1);
+
 var svgNamespace = "http://www.w3.org/2000/svg";
 var LucideIcon = /* @__PURE__ */ __name((props = {}, ...children) => {
-  const { svg } = import_vanjs_core.default.tags(svgNamespace);
+  const { svg } = _vanjscore2.default.tags(svgNamespace);
   const defaultProps = {
     xmlns: svgNamespace,
     viewBox: "0 0 24 24",
@@ -1620,7 +31,7 @@ var LucideIcon = /* @__PURE__ */ __name((props = {}, ...children) => {
 
 // src/icons/AArrowDown.ts
 var AArrowDown = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core2.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3.5 13h6" }),
@@ -1631,9 +42,9 @@ var AArrowDown = /* @__PURE__ */ __name((props = {}) => {
 }, "AArrowDown");
 
 // src/icons/AArrowUp.ts
-var import_vanjs_core3 = __toESM(require("vanjs-core"), 1);
+
 var AArrowUp = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core3.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3.5 13h6" }),
@@ -1644,9 +55,9 @@ var AArrowUp = /* @__PURE__ */ __name((props = {}) => {
 }, "AArrowUp");
 
 // src/icons/ALargeSmall.ts
-var import_vanjs_core4 = __toESM(require("vanjs-core"), 1);
+
 var ALargeSmall = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core4.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 14h-5" }),
@@ -1657,9 +68,9 @@ var ALargeSmall = /* @__PURE__ */ __name((props = {}) => {
 }, "ALargeSmall");
 
 // src/icons/Accessibility.ts
-var import_vanjs_core5 = __toESM(require("vanjs-core"), 1);
+
 var Accessibility = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core5.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "16", cy: "4", "r": "1" }),
@@ -1671,9 +82,9 @@ var Accessibility = /* @__PURE__ */ __name((props = {}) => {
 }, "Accessibility");
 
 // src/icons/Activity.ts
-var import_vanjs_core6 = __toESM(require("vanjs-core"), 1);
+
 var Activity = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core6.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -1683,9 +94,9 @@ var Activity = /* @__PURE__ */ __name((props = {}) => {
 }, "Activity");
 
 // src/icons/AirVent.ts
-var import_vanjs_core7 = __toESM(require("vanjs-core"), 1);
+
 var AirVent = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core7.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -1700,9 +111,9 @@ var AirVent = /* @__PURE__ */ __name((props = {}) => {
 }, "AirVent");
 
 // src/icons/Airplay.ts
-var import_vanjs_core8 = __toESM(require("vanjs-core"), 1);
+
 var Airplay = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core8.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -1713,9 +124,9 @@ var Airplay = /* @__PURE__ */ __name((props = {}) => {
 }, "Airplay");
 
 // src/icons/AlarmClockCheck.ts
-var import_vanjs_core9 = __toESM(require("vanjs-core"), 1);
+
 var AlarmClockCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core9.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "13", "r": "8" }),
@@ -1728,9 +139,9 @@ var AlarmClockCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "AlarmClockCheck");
 
 // src/icons/AlarmClockMinus.ts
-var import_vanjs_core10 = __toESM(require("vanjs-core"), 1);
+
 var AlarmClockMinus = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core10.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "13", "r": "8" }),
@@ -1743,9 +154,9 @@ var AlarmClockMinus = /* @__PURE__ */ __name((props = {}) => {
 }, "AlarmClockMinus");
 
 // src/icons/AlarmClockOff.ts
-var import_vanjs_core11 = __toESM(require("vanjs-core"), 1);
+
 var AlarmClockOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core11.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M6.87 6.87a8 8 0 1 0 11.26 11.26" }),
@@ -1758,9 +169,9 @@ var AlarmClockOff = /* @__PURE__ */ __name((props = {}) => {
 }, "AlarmClockOff");
 
 // src/icons/AlarmClockPlus.ts
-var import_vanjs_core12 = __toESM(require("vanjs-core"), 1);
+
 var AlarmClockPlus = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core12.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "13", "r": "8" }),
@@ -1774,9 +185,9 @@ var AlarmClockPlus = /* @__PURE__ */ __name((props = {}) => {
 }, "AlarmClockPlus");
 
 // src/icons/AlarmClock.ts
-var import_vanjs_core13 = __toESM(require("vanjs-core"), 1);
+
 var AlarmClock = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core13.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "13", "r": "8" }),
@@ -1789,9 +200,9 @@ var AlarmClock = /* @__PURE__ */ __name((props = {}) => {
 }, "AlarmClock");
 
 // src/icons/AlarmSmoke.ts
-var import_vanjs_core14 = __toESM(require("vanjs-core"), 1);
+
 var AlarmSmoke = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core14.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11 21c0-2.5 2-2.5 2-5" }),
@@ -1807,9 +218,9 @@ var AlarmSmoke = /* @__PURE__ */ __name((props = {}) => {
 }, "AlarmSmoke");
 
 // src/icons/Album.ts
-var import_vanjs_core15 = __toESM(require("vanjs-core"), 1);
+
 var Album = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, polyline } = import_vanjs_core15.default.tags(svgNamespace);
+  const { rect, polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2", ry: "2" }),
@@ -1818,9 +229,9 @@ var Album = /* @__PURE__ */ __name((props = {}) => {
 }, "Album");
 
 // src/icons/AlignCenterHorizontal.ts
-var import_vanjs_core16 = __toESM(require("vanjs-core"), 1);
+
 var AlignCenterHorizontal = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core16.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 12h20" }),
@@ -1832,9 +243,9 @@ var AlignCenterHorizontal = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignCenterHorizontal");
 
 // src/icons/AlignCenterVertical.ts
-var import_vanjs_core17 = __toESM(require("vanjs-core"), 1);
+
 var AlignCenterVertical = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core17.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 2v20" }),
@@ -1846,9 +257,9 @@ var AlignCenterVertical = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignCenterVertical");
 
 // src/icons/AlignCenter.ts
-var import_vanjs_core18 = __toESM(require("vanjs-core"), 1);
+
 var AlignCenter = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core18.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M17 12H7" }),
@@ -1858,9 +269,9 @@ var AlignCenter = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignCenter");
 
 // src/icons/AlignEndHorizontal.ts
-var import_vanjs_core19 = __toESM(require("vanjs-core"), 1);
+
 var AlignEndHorizontal = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core19.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "6", height: "16", "x": "4", "y": "2", rx: "2" }),
@@ -1870,9 +281,9 @@ var AlignEndHorizontal = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignEndHorizontal");
 
 // src/icons/AlignEndVertical.ts
-var import_vanjs_core20 = __toESM(require("vanjs-core"), 1);
+
 var AlignEndVertical = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core20.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "16", height: "6", "x": "2", "y": "4", rx: "2" }),
@@ -1882,9 +293,9 @@ var AlignEndVertical = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignEndVertical");
 
 // src/icons/AlignHorizontalDistributeCenter.ts
-var import_vanjs_core21 = __toESM(require("vanjs-core"), 1);
+
 var AlignHorizontalDistributeCenter = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core21.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "6", height: "14", "x": "4", "y": "5", rx: "2" }),
@@ -1897,9 +308,9 @@ var AlignHorizontalDistributeCenter = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignHorizontalDistributeCenter");
 
 // src/icons/AlignHorizontalDistributeEnd.ts
-var import_vanjs_core22 = __toESM(require("vanjs-core"), 1);
+
 var AlignHorizontalDistributeEnd = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core22.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "6", height: "14", "x": "4", "y": "5", rx: "2" }),
@@ -1910,9 +321,9 @@ var AlignHorizontalDistributeEnd = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignHorizontalDistributeEnd");
 
 // src/icons/AlignHorizontalDistributeStart.ts
-var import_vanjs_core23 = __toESM(require("vanjs-core"), 1);
+
 var AlignHorizontalDistributeStart = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core23.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "6", height: "14", "x": "4", "y": "5", rx: "2" }),
@@ -1923,9 +334,9 @@ var AlignHorizontalDistributeStart = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignHorizontalDistributeStart");
 
 // src/icons/AlignHorizontalJustifyCenter.ts
-var import_vanjs_core24 = __toESM(require("vanjs-core"), 1);
+
 var AlignHorizontalJustifyCenter = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core24.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "6", height: "14", "x": "2", "y": "5", rx: "2" }),
@@ -1935,9 +346,9 @@ var AlignHorizontalJustifyCenter = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignHorizontalJustifyCenter");
 
 // src/icons/AlignHorizontalJustifyEnd.ts
-var import_vanjs_core25 = __toESM(require("vanjs-core"), 1);
+
 var AlignHorizontalJustifyEnd = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core25.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "6", height: "14", "x": "2", "y": "5", rx: "2" }),
@@ -1947,9 +358,9 @@ var AlignHorizontalJustifyEnd = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignHorizontalJustifyEnd");
 
 // src/icons/AlignHorizontalJustifyStart.ts
-var import_vanjs_core26 = __toESM(require("vanjs-core"), 1);
+
 var AlignHorizontalJustifyStart = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core26.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "6", height: "14", "x": "6", "y": "5", rx: "2" }),
@@ -1959,9 +370,9 @@ var AlignHorizontalJustifyStart = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignHorizontalJustifyStart");
 
 // src/icons/AlignHorizontalSpaceAround.ts
-var import_vanjs_core27 = __toESM(require("vanjs-core"), 1);
+
 var AlignHorizontalSpaceAround = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core27.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "6", height: "10", "x": "9", "y": "7", rx: "2" }),
@@ -1971,9 +382,9 @@ var AlignHorizontalSpaceAround = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignHorizontalSpaceAround");
 
 // src/icons/AlignHorizontalSpaceBetween.ts
-var import_vanjs_core28 = __toESM(require("vanjs-core"), 1);
+
 var AlignHorizontalSpaceBetween = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core28.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "6", height: "14", "x": "3", "y": "5", rx: "2" }),
@@ -1984,9 +395,9 @@ var AlignHorizontalSpaceBetween = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignHorizontalSpaceBetween");
 
 // src/icons/AlignJustify.ts
-var import_vanjs_core29 = __toESM(require("vanjs-core"), 1);
+
 var AlignJustify = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core29.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 12h18" }),
@@ -1996,9 +407,9 @@ var AlignJustify = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignJustify");
 
 // src/icons/AlignLeft.ts
-var import_vanjs_core30 = __toESM(require("vanjs-core"), 1);
+
 var AlignLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core30.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 12H3" }),
@@ -2008,9 +419,9 @@ var AlignLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignLeft");
 
 // src/icons/AlignRight.ts
-var import_vanjs_core31 = __toESM(require("vanjs-core"), 1);
+
 var AlignRight = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core31.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 12H9" }),
@@ -2020,9 +431,9 @@ var AlignRight = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignRight");
 
 // src/icons/AlignStartHorizontal.ts
-var import_vanjs_core32 = __toESM(require("vanjs-core"), 1);
+
 var AlignStartHorizontal = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core32.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "6", height: "16", "x": "4", "y": "6", rx: "2" }),
@@ -2032,9 +443,9 @@ var AlignStartHorizontal = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignStartHorizontal");
 
 // src/icons/AlignStartVertical.ts
-var import_vanjs_core33 = __toESM(require("vanjs-core"), 1);
+
 var AlignStartVertical = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core33.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "9", height: "6", "x": "6", "y": "14", rx: "2" }),
@@ -2044,9 +455,9 @@ var AlignStartVertical = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignStartVertical");
 
 // src/icons/AlignVerticalDistributeCenter.ts
-var import_vanjs_core34 = __toESM(require("vanjs-core"), 1);
+
 var AlignVerticalDistributeCenter = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core34.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M22 17h-3" }),
@@ -2059,9 +470,9 @@ var AlignVerticalDistributeCenter = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignVerticalDistributeCenter");
 
 // src/icons/AlignVerticalDistributeEnd.ts
-var import_vanjs_core35 = __toESM(require("vanjs-core"), 1);
+
 var AlignVerticalDistributeEnd = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core35.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "14", height: "6", "x": "5", "y": "14", rx: "2" }),
@@ -2072,9 +483,9 @@ var AlignVerticalDistributeEnd = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignVerticalDistributeEnd");
 
 // src/icons/AlignVerticalDistributeStart.ts
-var import_vanjs_core36 = __toESM(require("vanjs-core"), 1);
+
 var AlignVerticalDistributeStart = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core36.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "14", height: "6", "x": "5", "y": "14", rx: "2" }),
@@ -2085,9 +496,9 @@ var AlignVerticalDistributeStart = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignVerticalDistributeStart");
 
 // src/icons/AlignVerticalJustifyCenter.ts
-var import_vanjs_core37 = __toESM(require("vanjs-core"), 1);
+
 var AlignVerticalJustifyCenter = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core37.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "14", height: "6", "x": "5", "y": "16", rx: "2" }),
@@ -2097,9 +508,9 @@ var AlignVerticalJustifyCenter = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignVerticalJustifyCenter");
 
 // src/icons/AlignVerticalJustifyEnd.ts
-var import_vanjs_core38 = __toESM(require("vanjs-core"), 1);
+
 var AlignVerticalJustifyEnd = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core38.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "14", height: "6", "x": "5", "y": "12", rx: "2" }),
@@ -2109,9 +520,9 @@ var AlignVerticalJustifyEnd = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignVerticalJustifyEnd");
 
 // src/icons/AlignVerticalJustifyStart.ts
-var import_vanjs_core39 = __toESM(require("vanjs-core"), 1);
+
 var AlignVerticalJustifyStart = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core39.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "14", height: "6", "x": "5", "y": "16", rx: "2" }),
@@ -2121,9 +532,9 @@ var AlignVerticalJustifyStart = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignVerticalJustifyStart");
 
 // src/icons/AlignVerticalSpaceAround.ts
-var import_vanjs_core40 = __toESM(require("vanjs-core"), 1);
+
 var AlignVerticalSpaceAround = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core40.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "10", height: "6", "x": "7", "y": "9", rx: "2" }),
@@ -2133,9 +544,9 @@ var AlignVerticalSpaceAround = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignVerticalSpaceAround");
 
 // src/icons/AlignVerticalSpaceBetween.ts
-var import_vanjs_core41 = __toESM(require("vanjs-core"), 1);
+
 var AlignVerticalSpaceBetween = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core41.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "14", height: "6", "x": "5", "y": "15", rx: "2" }),
@@ -2146,9 +557,9 @@ var AlignVerticalSpaceBetween = /* @__PURE__ */ __name((props = {}) => {
 }, "AlignVerticalSpaceBetween");
 
 // src/icons/Ambulance.ts
-var import_vanjs_core42 = __toESM(require("vanjs-core"), 1);
+
 var Ambulance = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core42.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 10H6" }),
@@ -2164,9 +575,9 @@ var Ambulance = /* @__PURE__ */ __name((props = {}) => {
 }, "Ambulance");
 
 // src/icons/Ampersand.ts
-var import_vanjs_core43 = __toESM(require("vanjs-core"), 1);
+
 var Ampersand = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core43.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -2177,9 +588,9 @@ var Ampersand = /* @__PURE__ */ __name((props = {}) => {
 }, "Ampersand");
 
 // src/icons/Ampersands.ts
-var import_vanjs_core44 = __toESM(require("vanjs-core"), 1);
+
 var Ampersands = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core44.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -2192,9 +603,9 @@ var Ampersands = /* @__PURE__ */ __name((props = {}) => {
 }, "Ampersands");
 
 // src/icons/Amphora.ts
-var import_vanjs_core45 = __toESM(require("vanjs-core"), 1);
+
 var Amphora = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core45.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -2211,9 +622,9 @@ var Amphora = /* @__PURE__ */ __name((props = {}) => {
 }, "Amphora");
 
 // src/icons/Anchor.ts
-var import_vanjs_core46 = __toESM(require("vanjs-core"), 1);
+
 var Anchor = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core46.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 22V8" }),
@@ -2223,9 +634,9 @@ var Anchor = /* @__PURE__ */ __name((props = {}) => {
 }, "Anchor");
 
 // src/icons/Angry.ts
-var import_vanjs_core47 = __toESM(require("vanjs-core"), 1);
+
 var Angry = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core47.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -2238,9 +649,9 @@ var Angry = /* @__PURE__ */ __name((props = {}) => {
 }, "Angry");
 
 // src/icons/Annoyed.ts
-var import_vanjs_core48 = __toESM(require("vanjs-core"), 1);
+
 var Annoyed = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core48.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -2251,9 +662,9 @@ var Annoyed = /* @__PURE__ */ __name((props = {}) => {
 }, "Annoyed");
 
 // src/icons/Antenna.ts
-var import_vanjs_core49 = __toESM(require("vanjs-core"), 1);
+
 var Antenna = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core49.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 12 7 2" }),
@@ -2266,9 +677,9 @@ var Antenna = /* @__PURE__ */ __name((props = {}) => {
 }, "Antenna");
 
 // src/icons/Anvil.ts
-var import_vanjs_core50 = __toESM(require("vanjs-core"), 1);
+
 var Anvil = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core50.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M7 10H6a4 4 0 0 1-4-4 1 1 0 0 1 1-1h4" }),
@@ -2284,9 +695,9 @@ var Anvil = /* @__PURE__ */ __name((props = {}) => {
 }, "Anvil");
 
 // src/icons/Aperture.ts
-var import_vanjs_core51 = __toESM(require("vanjs-core"), 1);
+
 var Aperture = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core51.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -2300,9 +711,9 @@ var Aperture = /* @__PURE__ */ __name((props = {}) => {
 }, "Aperture");
 
 // src/icons/AppWindowMac.ts
-var import_vanjs_core52 = __toESM(require("vanjs-core"), 1);
+
 var AppWindowMac = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core52.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "20", height: "16", "x": "2", "y": "4", rx: "2" }),
@@ -2313,9 +724,9 @@ var AppWindowMac = /* @__PURE__ */ __name((props = {}) => {
 }, "AppWindowMac");
 
 // src/icons/AppWindow.ts
-var import_vanjs_core53 = __toESM(require("vanjs-core"), 1);
+
 var AppWindow = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core53.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ "x": "2", "y": "4", width: "20", height: "16", rx: "2" }),
@@ -2326,9 +737,9 @@ var AppWindow = /* @__PURE__ */ __name((props = {}) => {
 }, "AppWindow");
 
 // src/icons/Apple.ts
-var import_vanjs_core54 = __toESM(require("vanjs-core"), 1);
+
 var Apple = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core54.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -2339,9 +750,9 @@ var Apple = /* @__PURE__ */ __name((props = {}) => {
 }, "Apple");
 
 // src/icons/ArchiveRestore.ts
-var import_vanjs_core55 = __toESM(require("vanjs-core"), 1);
+
 var ArchiveRestore = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core55.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "20", height: "5", "x": "2", "y": "3", rx: "1" }),
@@ -2353,9 +764,9 @@ var ArchiveRestore = /* @__PURE__ */ __name((props = {}) => {
 }, "ArchiveRestore");
 
 // src/icons/ArchiveX.ts
-var import_vanjs_core56 = __toESM(require("vanjs-core"), 1);
+
 var ArchiveX = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core56.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "20", height: "5", "x": "2", "y": "3", rx: "1" }),
@@ -2366,9 +777,9 @@ var ArchiveX = /* @__PURE__ */ __name((props = {}) => {
 }, "ArchiveX");
 
 // src/icons/Archive.ts
-var import_vanjs_core57 = __toESM(require("vanjs-core"), 1);
+
 var Archive = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core57.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "20", height: "5", "x": "2", "y": "3", rx: "1" }),
@@ -2378,9 +789,9 @@ var Archive = /* @__PURE__ */ __name((props = {}) => {
 }, "Archive");
 
 // src/icons/Armchair.ts
-var import_vanjs_core58 = __toESM(require("vanjs-core"), 1);
+
 var Armchair = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core58.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3" }),
@@ -2393,9 +804,9 @@ var Armchair = /* @__PURE__ */ __name((props = {}) => {
 }, "Armchair");
 
 // src/icons/ArrowBigDownDash.ts
-var import_vanjs_core59 = __toESM(require("vanjs-core"), 1);
+
 var ArrowBigDownDash = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core59.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 5H9" }),
@@ -2404,9 +815,9 @@ var ArrowBigDownDash = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowBigDownDash");
 
 // src/icons/ArrowBigDown.ts
-var import_vanjs_core60 = __toESM(require("vanjs-core"), 1);
+
 var ArrowBigDown = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core60.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 6v6h4l-7 7-7-7h4V6h6z" })
@@ -2414,9 +825,9 @@ var ArrowBigDown = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowBigDown");
 
 // src/icons/ArrowBigLeftDash.ts
-var import_vanjs_core61 = __toESM(require("vanjs-core"), 1);
+
 var ArrowBigLeftDash = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core61.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M19 15V9" }),
@@ -2425,9 +836,9 @@ var ArrowBigLeftDash = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowBigLeftDash");
 
 // src/icons/ArrowBigLeft.ts
-var import_vanjs_core62 = __toESM(require("vanjs-core"), 1);
+
 var ArrowBigLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core62.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M18 15h-6v4l-7-7 7-7v4h6v6z" })
@@ -2435,9 +846,9 @@ var ArrowBigLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowBigLeft");
 
 // src/icons/ArrowBigRightDash.ts
-var import_vanjs_core63 = __toESM(require("vanjs-core"), 1);
+
 var ArrowBigRightDash = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core63.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M5 9v6" }),
@@ -2446,9 +857,9 @@ var ArrowBigRightDash = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowBigRightDash");
 
 // src/icons/ArrowBigRight.ts
-var import_vanjs_core64 = __toESM(require("vanjs-core"), 1);
+
 var ArrowBigRight = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core64.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M6 9h6V5l7 7-7 7v-4H6V9z" })
@@ -2456,9 +867,9 @@ var ArrowBigRight = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowBigRight");
 
 // src/icons/ArrowBigUpDash.ts
-var import_vanjs_core65 = __toESM(require("vanjs-core"), 1);
+
 var ArrowBigUpDash = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core65.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M9 19h6" }),
@@ -2467,9 +878,9 @@ var ArrowBigUpDash = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowBigUpDash");
 
 // src/icons/ArrowBigUp.ts
-var import_vanjs_core66 = __toESM(require("vanjs-core"), 1);
+
 var ArrowBigUp = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core66.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M9 18v-6H5l7-7 7 7h-4v6H9z" })
@@ -2477,9 +888,9 @@ var ArrowBigUp = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowBigUp");
 
 // src/icons/ArrowDown01.ts
-var import_vanjs_core67 = __toESM(require("vanjs-core"), 1);
+
 var ArrowDown01 = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core67.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m3 16 4 4 4-4" }),
@@ -2491,9 +902,9 @@ var ArrowDown01 = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowDown01");
 
 // src/icons/ArrowDown10.ts
-var import_vanjs_core68 = __toESM(require("vanjs-core"), 1);
+
 var ArrowDown10 = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core68.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m3 16 4 4 4-4" }),
@@ -2505,9 +916,9 @@ var ArrowDown10 = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowDown10");
 
 // src/icons/ArrowDownAZ.ts
-var import_vanjs_core69 = __toESM(require("vanjs-core"), 1);
+
 var ArrowDownAZ = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core69.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m3 16 4 4 4-4" }),
@@ -2519,9 +930,9 @@ var ArrowDownAZ = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowDownAZ");
 
 // src/icons/ArrowDownFromLine.ts
-var import_vanjs_core70 = __toESM(require("vanjs-core"), 1);
+
 var ArrowDownFromLine = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core70.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M19 3H5" }),
@@ -2531,9 +942,9 @@ var ArrowDownFromLine = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowDownFromLine");
 
 // src/icons/ArrowDownLeft.ts
-var import_vanjs_core71 = __toESM(require("vanjs-core"), 1);
+
 var ArrowDownLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core71.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M17 7 7 17" }),
@@ -2542,9 +953,9 @@ var ArrowDownLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowDownLeft");
 
 // src/icons/ArrowDownNarrowWide.ts
-var import_vanjs_core72 = __toESM(require("vanjs-core"), 1);
+
 var ArrowDownNarrowWide = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core72.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m3 16 4 4 4-4" }),
@@ -2556,9 +967,9 @@ var ArrowDownNarrowWide = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowDownNarrowWide");
 
 // src/icons/ArrowDownRight.ts
-var import_vanjs_core73 = __toESM(require("vanjs-core"), 1);
+
 var ArrowDownRight = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core73.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m7 7 10 10" }),
@@ -2567,9 +978,9 @@ var ArrowDownRight = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowDownRight");
 
 // src/icons/ArrowDownToDot.ts
-var import_vanjs_core74 = __toESM(require("vanjs-core"), 1);
+
 var ArrowDownToDot = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core74.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 2v14" }),
@@ -2579,9 +990,9 @@ var ArrowDownToDot = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowDownToDot");
 
 // src/icons/ArrowDownToLine.ts
-var import_vanjs_core75 = __toESM(require("vanjs-core"), 1);
+
 var ArrowDownToLine = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core75.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 17V3" }),
@@ -2591,9 +1002,9 @@ var ArrowDownToLine = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowDownToLine");
 
 // src/icons/ArrowDownUp.ts
-var import_vanjs_core76 = __toESM(require("vanjs-core"), 1);
+
 var ArrowDownUp = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core76.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m3 16 4 4 4-4" }),
@@ -2604,9 +1015,9 @@ var ArrowDownUp = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowDownUp");
 
 // src/icons/ArrowDownWideNarrow.ts
-var import_vanjs_core77 = __toESM(require("vanjs-core"), 1);
+
 var ArrowDownWideNarrow = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core77.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m3 16 4 4 4-4" }),
@@ -2618,9 +1029,9 @@ var ArrowDownWideNarrow = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowDownWideNarrow");
 
 // src/icons/ArrowDownZA.ts
-var import_vanjs_core78 = __toESM(require("vanjs-core"), 1);
+
 var ArrowDownZA = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core78.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m3 16 4 4 4-4" }),
@@ -2632,9 +1043,9 @@ var ArrowDownZA = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowDownZA");
 
 // src/icons/ArrowDown.ts
-var import_vanjs_core79 = __toESM(require("vanjs-core"), 1);
+
 var ArrowDown = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core79.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 5v14" }),
@@ -2643,9 +1054,9 @@ var ArrowDown = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowDown");
 
 // src/icons/ArrowLeftFromLine.ts
-var import_vanjs_core80 = __toESM(require("vanjs-core"), 1);
+
 var ArrowLeftFromLine = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core80.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m9 6-6 6 6 6" }),
@@ -2655,9 +1066,9 @@ var ArrowLeftFromLine = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowLeftFromLine");
 
 // src/icons/ArrowLeftRight.ts
-var import_vanjs_core81 = __toESM(require("vanjs-core"), 1);
+
 var ArrowLeftRight = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core81.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 3 4 7l4 4" }),
@@ -2668,9 +1079,9 @@ var ArrowLeftRight = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowLeftRight");
 
 // src/icons/ArrowLeftToLine.ts
-var import_vanjs_core82 = __toESM(require("vanjs-core"), 1);
+
 var ArrowLeftToLine = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core82.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 19V5" }),
@@ -2680,9 +1091,9 @@ var ArrowLeftToLine = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowLeftToLine");
 
 // src/icons/ArrowLeft.ts
-var import_vanjs_core83 = __toESM(require("vanjs-core"), 1);
+
 var ArrowLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core83.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m12 19-7-7 7-7" }),
@@ -2691,9 +1102,9 @@ var ArrowLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowLeft");
 
 // src/icons/ArrowRightFromLine.ts
-var import_vanjs_core84 = __toESM(require("vanjs-core"), 1);
+
 var ArrowRightFromLine = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core84.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 5v14" }),
@@ -2703,9 +1114,9 @@ var ArrowRightFromLine = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowRightFromLine");
 
 // src/icons/ArrowRightLeft.ts
-var import_vanjs_core85 = __toESM(require("vanjs-core"), 1);
+
 var ArrowRightLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core85.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m16 3 4 4-4 4" }),
@@ -2716,9 +1127,9 @@ var ArrowRightLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowRightLeft");
 
 // src/icons/ArrowRightToLine.ts
-var import_vanjs_core86 = __toESM(require("vanjs-core"), 1);
+
 var ArrowRightToLine = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core86.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M17 12H3" }),
@@ -2728,9 +1139,9 @@ var ArrowRightToLine = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowRightToLine");
 
 // src/icons/ArrowRight.ts
-var import_vanjs_core87 = __toESM(require("vanjs-core"), 1);
+
 var ArrowRight = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core87.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M5 12h14" }),
@@ -2739,9 +1150,9 @@ var ArrowRight = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowRight");
 
 // src/icons/ArrowUp01.ts
-var import_vanjs_core88 = __toESM(require("vanjs-core"), 1);
+
 var ArrowUp01 = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core88.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m3 8 4-4 4 4" }),
@@ -2753,9 +1164,9 @@ var ArrowUp01 = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowUp01");
 
 // src/icons/ArrowUp10.ts
-var import_vanjs_core89 = __toESM(require("vanjs-core"), 1);
+
 var ArrowUp10 = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core89.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m3 8 4-4 4 4" }),
@@ -2767,9 +1178,9 @@ var ArrowUp10 = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowUp10");
 
 // src/icons/ArrowUpAZ.ts
-var import_vanjs_core90 = __toESM(require("vanjs-core"), 1);
+
 var ArrowUpAZ = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core90.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m3 8 4-4 4 4" }),
@@ -2781,9 +1192,9 @@ var ArrowUpAZ = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowUpAZ");
 
 // src/icons/ArrowUpDown.ts
-var import_vanjs_core91 = __toESM(require("vanjs-core"), 1);
+
 var ArrowUpDown = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core91.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m21 16-4 4-4-4" }),
@@ -2794,9 +1205,9 @@ var ArrowUpDown = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowUpDown");
 
 // src/icons/ArrowUpFromDot.ts
-var import_vanjs_core92 = __toESM(require("vanjs-core"), 1);
+
 var ArrowUpFromDot = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core92.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m5 9 7-7 7 7" }),
@@ -2806,9 +1217,9 @@ var ArrowUpFromDot = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowUpFromDot");
 
 // src/icons/ArrowUpFromLine.ts
-var import_vanjs_core93 = __toESM(require("vanjs-core"), 1);
+
 var ArrowUpFromLine = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core93.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m18 9-6-6-6 6" }),
@@ -2818,9 +1229,9 @@ var ArrowUpFromLine = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowUpFromLine");
 
 // src/icons/ArrowUpLeft.ts
-var import_vanjs_core94 = __toESM(require("vanjs-core"), 1);
+
 var ArrowUpLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core94.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M7 17V7h10" }),
@@ -2829,9 +1240,9 @@ var ArrowUpLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowUpLeft");
 
 // src/icons/ArrowUpNarrowWide.ts
-var import_vanjs_core95 = __toESM(require("vanjs-core"), 1);
+
 var ArrowUpNarrowWide = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core95.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m3 8 4-4 4 4" }),
@@ -2843,9 +1254,9 @@ var ArrowUpNarrowWide = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowUpNarrowWide");
 
 // src/icons/ArrowUpRight.ts
-var import_vanjs_core96 = __toESM(require("vanjs-core"), 1);
+
 var ArrowUpRight = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core96.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M7 7h10v10" }),
@@ -2854,9 +1265,9 @@ var ArrowUpRight = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowUpRight");
 
 // src/icons/ArrowUpToLine.ts
-var import_vanjs_core97 = __toESM(require("vanjs-core"), 1);
+
 var ArrowUpToLine = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core97.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M5 3h14" }),
@@ -2866,9 +1277,9 @@ var ArrowUpToLine = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowUpToLine");
 
 // src/icons/ArrowUpWideNarrow.ts
-var import_vanjs_core98 = __toESM(require("vanjs-core"), 1);
+
 var ArrowUpWideNarrow = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core98.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m3 8 4-4 4 4" }),
@@ -2880,9 +1291,9 @@ var ArrowUpWideNarrow = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowUpWideNarrow");
 
 // src/icons/ArrowUpZA.ts
-var import_vanjs_core99 = __toESM(require("vanjs-core"), 1);
+
 var ArrowUpZA = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core99.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m3 8 4-4 4 4" }),
@@ -2894,9 +1305,9 @@ var ArrowUpZA = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowUpZA");
 
 // src/icons/ArrowUp.ts
-var import_vanjs_core100 = __toESM(require("vanjs-core"), 1);
+
 var ArrowUp = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core100.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m5 12 7-7 7 7" }),
@@ -2905,9 +1316,9 @@ var ArrowUp = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowUp");
 
 // src/icons/ArrowsUpFromLine.ts
-var import_vanjs_core101 = __toESM(require("vanjs-core"), 1);
+
 var ArrowsUpFromLine = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core101.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m4 6 3-3 3 3" }),
@@ -2919,9 +1330,9 @@ var ArrowsUpFromLine = /* @__PURE__ */ __name((props = {}) => {
 }, "ArrowsUpFromLine");
 
 // src/icons/Asterisk.ts
-var import_vanjs_core102 = __toESM(require("vanjs-core"), 1);
+
 var Asterisk = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core102.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 6v12" }),
@@ -2931,9 +1342,9 @@ var Asterisk = /* @__PURE__ */ __name((props = {}) => {
 }, "Asterisk");
 
 // src/icons/AtSign.ts
-var import_vanjs_core103 = __toESM(require("vanjs-core"), 1);
+
 var AtSign = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core103.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "4" }),
@@ -2942,9 +1353,9 @@ var AtSign = /* @__PURE__ */ __name((props = {}) => {
 }, "AtSign");
 
 // src/icons/Atom.ts
-var import_vanjs_core104 = __toESM(require("vanjs-core"), 1);
+
 var Atom = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core104.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "1" }),
@@ -2958,9 +1369,9 @@ var Atom = /* @__PURE__ */ __name((props = {}) => {
 }, "Atom");
 
 // src/icons/AudioLines.ts
-var import_vanjs_core105 = __toESM(require("vanjs-core"), 1);
+
 var AudioLines = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core105.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 10v3" }),
@@ -2973,9 +1384,9 @@ var AudioLines = /* @__PURE__ */ __name((props = {}) => {
 }, "AudioLines");
 
 // src/icons/AudioWaveform.ts
-var import_vanjs_core106 = __toESM(require("vanjs-core"), 1);
+
 var AudioWaveform = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core106.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -2985,9 +1396,9 @@ var AudioWaveform = /* @__PURE__ */ __name((props = {}) => {
 }, "AudioWaveform");
 
 // src/icons/Award.ts
-var import_vanjs_core107 = __toESM(require("vanjs-core"), 1);
+
 var Award = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core107.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -2998,9 +1409,9 @@ var Award = /* @__PURE__ */ __name((props = {}) => {
 }, "Award");
 
 // src/icons/Axe.ts
-var import_vanjs_core108 = __toESM(require("vanjs-core"), 1);
+
 var Axe = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core108.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m14 12-8.5 8.5a2.12 2.12 0 1 1-3-3L11 9" }),
@@ -3009,9 +1420,9 @@ var Axe = /* @__PURE__ */ __name((props = {}) => {
 }, "Axe");
 
 // src/icons/Axis3d.ts
-var import_vanjs_core109 = __toESM(require("vanjs-core"), 1);
+
 var Axis3d = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core109.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 4v16h16" }),
@@ -3020,9 +1431,9 @@ var Axis3d = /* @__PURE__ */ __name((props = {}) => {
 }, "Axis3d");
 
 // src/icons/Baby.ts
-var import_vanjs_core110 = __toESM(require("vanjs-core"), 1);
+
 var Baby = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core110.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M9 12h.01" }),
@@ -3035,9 +1446,9 @@ var Baby = /* @__PURE__ */ __name((props = {}) => {
 }, "Baby");
 
 // src/icons/Backpack.ts
-var import_vanjs_core111 = __toESM(require("vanjs-core"), 1);
+
 var Backpack = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core111.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -3051,9 +1462,9 @@ var Backpack = /* @__PURE__ */ __name((props = {}) => {
 }, "Backpack");
 
 // src/icons/BadgeAlert.ts
-var import_vanjs_core112 = __toESM(require("vanjs-core"), 1);
+
 var BadgeAlert = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core112.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -3065,9 +1476,9 @@ var BadgeAlert = /* @__PURE__ */ __name((props = {}) => {
 }, "BadgeAlert");
 
 // src/icons/BadgeCent.ts
-var import_vanjs_core113 = __toESM(require("vanjs-core"), 1);
+
 var BadgeCent = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core113.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -3079,9 +1490,9 @@ var BadgeCent = /* @__PURE__ */ __name((props = {}) => {
 }, "BadgeCent");
 
 // src/icons/BadgeCheck.ts
-var import_vanjs_core114 = __toESM(require("vanjs-core"), 1);
+
 var BadgeCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core114.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -3092,9 +1503,9 @@ var BadgeCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "BadgeCheck");
 
 // src/icons/BadgeDollarSign.ts
-var import_vanjs_core115 = __toESM(require("vanjs-core"), 1);
+
 var BadgeDollarSign = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core115.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -3106,9 +1517,9 @@ var BadgeDollarSign = /* @__PURE__ */ __name((props = {}) => {
 }, "BadgeDollarSign");
 
 // src/icons/BadgeEuro.ts
-var import_vanjs_core116 = __toESM(require("vanjs-core"), 1);
+
 var BadgeEuro = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core116.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -3120,9 +1531,9 @@ var BadgeEuro = /* @__PURE__ */ __name((props = {}) => {
 }, "BadgeEuro");
 
 // src/icons/BadgeHelp.ts
-var import_vanjs_core117 = __toESM(require("vanjs-core"), 1);
+
 var BadgeHelp = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core117.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -3134,9 +1545,9 @@ var BadgeHelp = /* @__PURE__ */ __name((props = {}) => {
 }, "BadgeHelp");
 
 // src/icons/BadgeIndianRupee.ts
-var import_vanjs_core118 = __toESM(require("vanjs-core"), 1);
+
 var BadgeIndianRupee = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core118.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -3149,9 +1560,9 @@ var BadgeIndianRupee = /* @__PURE__ */ __name((props = {}) => {
 }, "BadgeIndianRupee");
 
 // src/icons/BadgeInfo.ts
-var import_vanjs_core119 = __toESM(require("vanjs-core"), 1);
+
 var BadgeInfo = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core119.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -3163,9 +1574,9 @@ var BadgeInfo = /* @__PURE__ */ __name((props = {}) => {
 }, "BadgeInfo");
 
 // src/icons/BadgeJapaneseYen.ts
-var import_vanjs_core120 = __toESM(require("vanjs-core"), 1);
+
 var BadgeJapaneseYen = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core120.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -3179,9 +1590,9 @@ var BadgeJapaneseYen = /* @__PURE__ */ __name((props = {}) => {
 }, "BadgeJapaneseYen");
 
 // src/icons/BadgeMinus.ts
-var import_vanjs_core121 = __toESM(require("vanjs-core"), 1);
+
 var BadgeMinus = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core121.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -3192,9 +1603,9 @@ var BadgeMinus = /* @__PURE__ */ __name((props = {}) => {
 }, "BadgeMinus");
 
 // src/icons/BadgePercent.ts
-var import_vanjs_core122 = __toESM(require("vanjs-core"), 1);
+
 var BadgePercent = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core122.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -3207,9 +1618,9 @@ var BadgePercent = /* @__PURE__ */ __name((props = {}) => {
 }, "BadgePercent");
 
 // src/icons/BadgePlus.ts
-var import_vanjs_core123 = __toESM(require("vanjs-core"), 1);
+
 var BadgePlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core123.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -3221,9 +1632,9 @@ var BadgePlus = /* @__PURE__ */ __name((props = {}) => {
 }, "BadgePlus");
 
 // src/icons/BadgePoundSterling.ts
-var import_vanjs_core124 = __toESM(require("vanjs-core"), 1);
+
 var BadgePoundSterling = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core124.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -3236,9 +1647,9 @@ var BadgePoundSterling = /* @__PURE__ */ __name((props = {}) => {
 }, "BadgePoundSterling");
 
 // src/icons/BadgeRussianRuble.ts
-var import_vanjs_core125 = __toESM(require("vanjs-core"), 1);
+
 var BadgeRussianRuble = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core125.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -3250,9 +1661,9 @@ var BadgeRussianRuble = /* @__PURE__ */ __name((props = {}) => {
 }, "BadgeRussianRuble");
 
 // src/icons/BadgeSwissFranc.ts
-var import_vanjs_core126 = __toESM(require("vanjs-core"), 1);
+
 var BadgeSwissFranc = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core126.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -3265,9 +1676,9 @@ var BadgeSwissFranc = /* @__PURE__ */ __name((props = {}) => {
 }, "BadgeSwissFranc");
 
 // src/icons/BadgeX.ts
-var import_vanjs_core127 = __toESM(require("vanjs-core"), 1);
+
 var BadgeX = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core127.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -3279,9 +1690,9 @@ var BadgeX = /* @__PURE__ */ __name((props = {}) => {
 }, "BadgeX");
 
 // src/icons/Badge.ts
-var import_vanjs_core128 = __toESM(require("vanjs-core"), 1);
+
 var Badge = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core128.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -3291,9 +1702,9 @@ var Badge = /* @__PURE__ */ __name((props = {}) => {
 }, "Badge");
 
 // src/icons/BaggageClaim.ts
-var import_vanjs_core129 = __toESM(require("vanjs-core"), 1);
+
 var BaggageClaim = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect, circle } = import_vanjs_core129.default.tags(svgNamespace);
+  const { path, rect, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M22 18H6a2 2 0 0 1-2-2V7a2 2 0 0 0-2-2" }),
@@ -3305,9 +1716,9 @@ var BaggageClaim = /* @__PURE__ */ __name((props = {}) => {
 }, "BaggageClaim");
 
 // src/icons/Ban.ts
-var import_vanjs_core130 = __toESM(require("vanjs-core"), 1);
+
 var Ban = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core130.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -3316,9 +1727,9 @@ var Ban = /* @__PURE__ */ __name((props = {}) => {
 }, "Ban");
 
 // src/icons/Banana.ts
-var import_vanjs_core131 = __toESM(require("vanjs-core"), 1);
+
 var Banana = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core131.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 13c3.5-2 8-2 10 2a5.5 5.5 0 0 1 8 5" }),
@@ -3329,9 +1740,9 @@ var Banana = /* @__PURE__ */ __name((props = {}) => {
 }, "Banana");
 
 // src/icons/Bandage.ts
-var import_vanjs_core132 = __toESM(require("vanjs-core"), 1);
+
 var Bandage = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core132.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 10.01h.01" }),
@@ -3345,9 +1756,9 @@ var Bandage = /* @__PURE__ */ __name((props = {}) => {
 }, "Bandage");
 
 // src/icons/Banknote.ts
-var import_vanjs_core133 = __toESM(require("vanjs-core"), 1);
+
 var Banknote = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, circle, path } = import_vanjs_core133.default.tags(svgNamespace);
+  const { rect, circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "20", height: "12", "x": "2", "y": "6", rx: "2" }),
@@ -3357,9 +1768,9 @@ var Banknote = /* @__PURE__ */ __name((props = {}) => {
 }, "Banknote");
 
 // src/icons/Barcode.ts
-var import_vanjs_core134 = __toESM(require("vanjs-core"), 1);
+
 var Barcode = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core134.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 5v14" }),
@@ -3371,9 +1782,9 @@ var Barcode = /* @__PURE__ */ __name((props = {}) => {
 }, "Barcode");
 
 // src/icons/Baseline.ts
-var import_vanjs_core135 = __toESM(require("vanjs-core"), 1);
+
 var Baseline = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core135.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 20h16" }),
@@ -3383,9 +1794,9 @@ var Baseline = /* @__PURE__ */ __name((props = {}) => {
 }, "Baseline");
 
 // src/icons/Bath.ts
-var import_vanjs_core136 = __toESM(require("vanjs-core"), 1);
+
 var Bath = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core136.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 4 8 6" }),
@@ -3399,9 +1810,9 @@ var Bath = /* @__PURE__ */ __name((props = {}) => {
 }, "Bath");
 
 // src/icons/BatteryCharging.ts
-var import_vanjs_core137 = __toESM(require("vanjs-core"), 1);
+
 var BatteryCharging = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core137.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 7h1a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2" }),
@@ -3412,9 +1823,9 @@ var BatteryCharging = /* @__PURE__ */ __name((props = {}) => {
 }, "BatteryCharging");
 
 // src/icons/BatteryFull.ts
-var import_vanjs_core138 = __toESM(require("vanjs-core"), 1);
+
 var BatteryFull = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, line } = import_vanjs_core138.default.tags(svgNamespace);
+  const { rect, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "16", height: "10", "x": "2", "y": "7", rx: "2", ry: "2" }),
@@ -3426,9 +1837,9 @@ var BatteryFull = /* @__PURE__ */ __name((props = {}) => {
 }, "BatteryFull");
 
 // src/icons/BatteryLow.ts
-var import_vanjs_core139 = __toESM(require("vanjs-core"), 1);
+
 var BatteryLow = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, line } = import_vanjs_core139.default.tags(svgNamespace);
+  const { rect, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "16", height: "10", "x": "2", "y": "7", rx: "2", ry: "2" }),
@@ -3438,9 +1849,9 @@ var BatteryLow = /* @__PURE__ */ __name((props = {}) => {
 }, "BatteryLow");
 
 // src/icons/BatteryMedium.ts
-var import_vanjs_core140 = __toESM(require("vanjs-core"), 1);
+
 var BatteryMedium = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, line } = import_vanjs_core140.default.tags(svgNamespace);
+  const { rect, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "16", height: "10", "x": "2", "y": "7", rx: "2", ry: "2" }),
@@ -3451,9 +1862,9 @@ var BatteryMedium = /* @__PURE__ */ __name((props = {}) => {
 }, "BatteryMedium");
 
 // src/icons/BatteryPlus.ts
-var import_vanjs_core141 = __toESM(require("vanjs-core"), 1);
+
 var BatteryPlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core141.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 9v6" }),
@@ -3465,9 +1876,9 @@ var BatteryPlus = /* @__PURE__ */ __name((props = {}) => {
 }, "BatteryPlus");
 
 // src/icons/BatteryWarning.ts
-var import_vanjs_core142 = __toESM(require("vanjs-core"), 1);
+
 var BatteryWarning = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core142.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 17h.01" }),
@@ -3479,9 +1890,9 @@ var BatteryWarning = /* @__PURE__ */ __name((props = {}) => {
 }, "BatteryWarning");
 
 // src/icons/Battery.ts
-var import_vanjs_core143 = __toESM(require("vanjs-core"), 1);
+
 var Battery = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, line } = import_vanjs_core143.default.tags(svgNamespace);
+  const { rect, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "16", height: "10", "x": "2", "y": "7", rx: "2", ry: "2" }),
@@ -3490,9 +1901,9 @@ var Battery = /* @__PURE__ */ __name((props = {}) => {
 }, "Battery");
 
 // src/icons/Beaker.ts
-var import_vanjs_core144 = __toESM(require("vanjs-core"), 1);
+
 var Beaker = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core144.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4.5 3h15" }),
@@ -3502,9 +1913,9 @@ var Beaker = /* @__PURE__ */ __name((props = {}) => {
 }, "Beaker");
 
 // src/icons/BeanOff.ts
-var import_vanjs_core145 = __toESM(require("vanjs-core"), 1);
+
 var BeanOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core145.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -3519,9 +1930,9 @@ var BeanOff = /* @__PURE__ */ __name((props = {}) => {
 }, "BeanOff");
 
 // src/icons/Bean.ts
-var import_vanjs_core146 = __toESM(require("vanjs-core"), 1);
+
 var Bean = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core146.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -3532,9 +1943,9 @@ var Bean = /* @__PURE__ */ __name((props = {}) => {
 }, "Bean");
 
 // src/icons/BedDouble.ts
-var import_vanjs_core147 = __toESM(require("vanjs-core"), 1);
+
 var BedDouble = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core147.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" }),
@@ -3545,9 +1956,9 @@ var BedDouble = /* @__PURE__ */ __name((props = {}) => {
 }, "BedDouble");
 
 // src/icons/BedSingle.ts
-var import_vanjs_core148 = __toESM(require("vanjs-core"), 1);
+
 var BedSingle = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core148.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 20v-8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8" }),
@@ -3557,9 +1968,9 @@ var BedSingle = /* @__PURE__ */ __name((props = {}) => {
 }, "BedSingle");
 
 // src/icons/Bed.ts
-var import_vanjs_core149 = __toESM(require("vanjs-core"), 1);
+
 var Bed = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core149.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 4v16" }),
@@ -3570,9 +1981,9 @@ var Bed = /* @__PURE__ */ __name((props = {}) => {
 }, "Bed");
 
 // src/icons/Beef.ts
-var import_vanjs_core150 = __toESM(require("vanjs-core"), 1);
+
 var Beef = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core150.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -3586,9 +1997,9 @@ var Beef = /* @__PURE__ */ __name((props = {}) => {
 }, "Beef");
 
 // src/icons/BeerOff.ts
-var import_vanjs_core151 = __toESM(require("vanjs-core"), 1);
+
 var BeerOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core151.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M13 13v5" }),
@@ -3607,9 +2018,9 @@ var BeerOff = /* @__PURE__ */ __name((props = {}) => {
 }, "BeerOff");
 
 // src/icons/Beer.ts
-var import_vanjs_core152 = __toESM(require("vanjs-core"), 1);
+
 var Beer = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core152.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M17 11h1a3 3 0 0 1 0 6h-1" }),
@@ -3623,9 +2034,9 @@ var Beer = /* @__PURE__ */ __name((props = {}) => {
 }, "Beer");
 
 // src/icons/BellDot.ts
-var import_vanjs_core153 = __toESM(require("vanjs-core"), 1);
+
 var BellDot = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core153.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10.268 21a2 2 0 0 0 3.464 0" }),
@@ -3637,9 +2048,9 @@ var BellDot = /* @__PURE__ */ __name((props = {}) => {
 }, "BellDot");
 
 // src/icons/BellElectric.ts
-var import_vanjs_core154 = __toESM(require("vanjs-core"), 1);
+
 var BellElectric = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle, rect } = import_vanjs_core154.default.tags(svgNamespace);
+  const { path, circle, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M18.8 4A6.3 8.7 0 0 1 20 9" }),
@@ -3652,9 +2063,9 @@ var BellElectric = /* @__PURE__ */ __name((props = {}) => {
 }, "BellElectric");
 
 // src/icons/BellMinus.ts
-var import_vanjs_core155 = __toESM(require("vanjs-core"), 1);
+
 var BellMinus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core155.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10.268 21a2 2 0 0 0 3.464 0" }),
@@ -3666,9 +2077,9 @@ var BellMinus = /* @__PURE__ */ __name((props = {}) => {
 }, "BellMinus");
 
 // src/icons/BellOff.ts
-var import_vanjs_core156 = __toESM(require("vanjs-core"), 1);
+
 var BellOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core156.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10.268 21a2 2 0 0 0 3.464 0" }),
@@ -3681,9 +2092,9 @@ var BellOff = /* @__PURE__ */ __name((props = {}) => {
 }, "BellOff");
 
 // src/icons/BellPlus.ts
-var import_vanjs_core157 = __toESM(require("vanjs-core"), 1);
+
 var BellPlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core157.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10.268 21a2 2 0 0 0 3.464 0" }),
@@ -3696,9 +2107,9 @@ var BellPlus = /* @__PURE__ */ __name((props = {}) => {
 }, "BellPlus");
 
 // src/icons/BellRing.ts
-var import_vanjs_core158 = __toESM(require("vanjs-core"), 1);
+
 var BellRing = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core158.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10.268 21a2 2 0 0 0 3.464 0" }),
@@ -3711,9 +2122,9 @@ var BellRing = /* @__PURE__ */ __name((props = {}) => {
 }, "BellRing");
 
 // src/icons/Bell.ts
-var import_vanjs_core159 = __toESM(require("vanjs-core"), 1);
+
 var Bell = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core159.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10.268 21a2 2 0 0 0 3.464 0" }),
@@ -3724,9 +2135,9 @@ var Bell = /* @__PURE__ */ __name((props = {}) => {
 }, "Bell");
 
 // src/icons/BetweenHorizontalEnd.ts
-var import_vanjs_core160 = __toESM(require("vanjs-core"), 1);
+
 var BetweenHorizontalEnd = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core160.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "13", height: "7", "x": "3", "y": "3", rx: "1" }),
@@ -3736,9 +2147,9 @@ var BetweenHorizontalEnd = /* @__PURE__ */ __name((props = {}) => {
 }, "BetweenHorizontalEnd");
 
 // src/icons/BetweenHorizontalStart.ts
-var import_vanjs_core161 = __toESM(require("vanjs-core"), 1);
+
 var BetweenHorizontalStart = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core161.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "13", height: "7", "x": "8", "y": "3", rx: "1" }),
@@ -3748,9 +2159,9 @@ var BetweenHorizontalStart = /* @__PURE__ */ __name((props = {}) => {
 }, "BetweenHorizontalStart");
 
 // src/icons/BetweenVerticalEnd.ts
-var import_vanjs_core162 = __toESM(require("vanjs-core"), 1);
+
 var BetweenVerticalEnd = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core162.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "7", height: "13", "x": "3", "y": "3", rx: "1" }),
@@ -3760,9 +2171,9 @@ var BetweenVerticalEnd = /* @__PURE__ */ __name((props = {}) => {
 }, "BetweenVerticalEnd");
 
 // src/icons/BetweenVerticalStart.ts
-var import_vanjs_core163 = __toESM(require("vanjs-core"), 1);
+
 var BetweenVerticalStart = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core163.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "7", height: "13", "x": "3", "y": "8", rx: "1" }),
@@ -3772,9 +2183,9 @@ var BetweenVerticalStart = /* @__PURE__ */ __name((props = {}) => {
 }, "BetweenVerticalStart");
 
 // src/icons/BicepsFlexed.ts
-var import_vanjs_core164 = __toESM(require("vanjs-core"), 1);
+
 var BicepsFlexed = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core164.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -3786,9 +2197,9 @@ var BicepsFlexed = /* @__PURE__ */ __name((props = {}) => {
 }, "BicepsFlexed");
 
 // src/icons/Bike.ts
-var import_vanjs_core165 = __toESM(require("vanjs-core"), 1);
+
 var Bike = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core165.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "18.5", cy: "17.5", "r": "3.5" }),
@@ -3799,9 +2210,9 @@ var Bike = /* @__PURE__ */ __name((props = {}) => {
 }, "Bike");
 
 // src/icons/Binary.ts
-var import_vanjs_core166 = __toESM(require("vanjs-core"), 1);
+
 var Binary = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core166.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ "x": "14", "y": "14", width: "4", height: "6", rx: "2" }),
@@ -3814,9 +2225,9 @@ var Binary = /* @__PURE__ */ __name((props = {}) => {
 }, "Binary");
 
 // src/icons/Binoculars.ts
-var import_vanjs_core167 = __toESM(require("vanjs-core"), 1);
+
 var Binoculars = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core167.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 10h4" }),
@@ -3833,9 +2244,9 @@ var Binoculars = /* @__PURE__ */ __name((props = {}) => {
 }, "Binoculars");
 
 // src/icons/Biohazard.ts
-var import_vanjs_core168 = __toESM(require("vanjs-core"), 1);
+
 var Biohazard = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core168.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "11.9", "r": "2" }),
@@ -3852,9 +2263,9 @@ var Biohazard = /* @__PURE__ */ __name((props = {}) => {
 }, "Biohazard");
 
 // src/icons/Bird.ts
-var import_vanjs_core169 = __toESM(require("vanjs-core"), 1);
+
 var Bird = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core169.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 7h.01" }),
@@ -3867,9 +2278,9 @@ var Bird = /* @__PURE__ */ __name((props = {}) => {
 }, "Bird");
 
 // src/icons/Bitcoin.ts
-var import_vanjs_core170 = __toESM(require("vanjs-core"), 1);
+
 var Bitcoin = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core170.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -3879,9 +2290,9 @@ var Bitcoin = /* @__PURE__ */ __name((props = {}) => {
 }, "Bitcoin");
 
 // src/icons/Blend.ts
-var import_vanjs_core171 = __toESM(require("vanjs-core"), 1);
+
 var Blend = /* @__PURE__ */ __name((props = {}) => {
-  const { circle } = import_vanjs_core171.default.tags(svgNamespace);
+  const { circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "9", cy: "9", "r": "7" }),
@@ -3890,9 +2301,9 @@ var Blend = /* @__PURE__ */ __name((props = {}) => {
 }, "Blend");
 
 // src/icons/Blinds.ts
-var import_vanjs_core172 = __toESM(require("vanjs-core"), 1);
+
 var Blinds = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core172.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 3h18" }),
@@ -3906,9 +2317,9 @@ var Blinds = /* @__PURE__ */ __name((props = {}) => {
 }, "Blinds");
 
 // src/icons/Blocks.ts
-var import_vanjs_core173 = __toESM(require("vanjs-core"), 1);
+
 var Blocks = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core173.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "7", height: "7", "x": "14", "y": "3", rx: "1" }),
@@ -3919,9 +2330,9 @@ var Blocks = /* @__PURE__ */ __name((props = {}) => {
 }, "Blocks");
 
 // src/icons/BluetoothConnected.ts
-var import_vanjs_core174 = __toESM(require("vanjs-core"), 1);
+
 var BluetoothConnected = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core174.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m7 7 10 10-5 5V2l5 5L7 17" }),
@@ -3931,9 +2342,9 @@ var BluetoothConnected = /* @__PURE__ */ __name((props = {}) => {
 }, "BluetoothConnected");
 
 // src/icons/BluetoothOff.ts
-var import_vanjs_core175 = __toESM(require("vanjs-core"), 1);
+
 var BluetoothOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core175.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m17 17-5 5V12l-5 5" }),
@@ -3943,9 +2354,9 @@ var BluetoothOff = /* @__PURE__ */ __name((props = {}) => {
 }, "BluetoothOff");
 
 // src/icons/BluetoothSearching.ts
-var import_vanjs_core176 = __toESM(require("vanjs-core"), 1);
+
 var BluetoothSearching = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core176.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m7 7 10 10-5 5V2l5 5L7 17" }),
@@ -3955,9 +2366,9 @@ var BluetoothSearching = /* @__PURE__ */ __name((props = {}) => {
 }, "BluetoothSearching");
 
 // src/icons/Bluetooth.ts
-var import_vanjs_core177 = __toESM(require("vanjs-core"), 1);
+
 var Bluetooth = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core177.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m7 7 10 10-5 5V2l5 5L7 17" })
@@ -3965,9 +2376,9 @@ var Bluetooth = /* @__PURE__ */ __name((props = {}) => {
 }, "Bluetooth");
 
 // src/icons/Bold.ts
-var import_vanjs_core178 = __toESM(require("vanjs-core"), 1);
+
 var Bold = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core178.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -3977,9 +2388,9 @@ var Bold = /* @__PURE__ */ __name((props = {}) => {
 }, "Bold");
 
 // src/icons/Bolt.ts
-var import_vanjs_core179 = __toESM(require("vanjs-core"), 1);
+
 var Bolt = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core179.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -3990,9 +2401,9 @@ var Bolt = /* @__PURE__ */ __name((props = {}) => {
 }, "Bolt");
 
 // src/icons/Bomb.ts
-var import_vanjs_core180 = __toESM(require("vanjs-core"), 1);
+
 var Bomb = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core180.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "11", cy: "13", "r": "9" }),
@@ -4004,9 +2415,9 @@ var Bomb = /* @__PURE__ */ __name((props = {}) => {
 }, "Bomb");
 
 // src/icons/Bone.ts
-var import_vanjs_core181 = __toESM(require("vanjs-core"), 1);
+
 var Bone = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core181.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -4016,9 +2427,9 @@ var Bone = /* @__PURE__ */ __name((props = {}) => {
 }, "Bone");
 
 // src/icons/BookA.ts
-var import_vanjs_core182 = __toESM(require("vanjs-core"), 1);
+
 var BookA = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core182.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -4030,9 +2441,9 @@ var BookA = /* @__PURE__ */ __name((props = {}) => {
 }, "BookA");
 
 // src/icons/BookAudio.ts
-var import_vanjs_core183 = __toESM(require("vanjs-core"), 1);
+
 var BookAudio = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core183.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 6v7" }),
@@ -4045,9 +2456,9 @@ var BookAudio = /* @__PURE__ */ __name((props = {}) => {
 }, "BookAudio");
 
 // src/icons/BookCheck.ts
-var import_vanjs_core184 = __toESM(require("vanjs-core"), 1);
+
 var BookCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core184.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -4058,9 +2469,9 @@ var BookCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "BookCheck");
 
 // src/icons/BookCopy.ts
-var import_vanjs_core185 = __toESM(require("vanjs-core"), 1);
+
 var BookCopy = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core185.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 16V4a2 2 0 0 1 2-2h11" }),
@@ -4072,9 +2483,9 @@ var BookCopy = /* @__PURE__ */ __name((props = {}) => {
 }, "BookCopy");
 
 // src/icons/BookDashed.ts
-var import_vanjs_core186 = __toESM(require("vanjs-core"), 1);
+
 var BookDashed = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core186.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 17h1.5" }),
@@ -4092,9 +2503,9 @@ var BookDashed = /* @__PURE__ */ __name((props = {}) => {
 }, "BookDashed");
 
 // src/icons/BookDown.ts
-var import_vanjs_core187 = __toESM(require("vanjs-core"), 1);
+
 var BookDown = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core187.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 13V7" }),
@@ -4106,9 +2517,9 @@ var BookDown = /* @__PURE__ */ __name((props = {}) => {
 }, "BookDown");
 
 // src/icons/BookHeadphones.ts
-var import_vanjs_core188 = __toESM(require("vanjs-core"), 1);
+
 var BookHeadphones = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core188.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -4121,9 +2532,9 @@ var BookHeadphones = /* @__PURE__ */ __name((props = {}) => {
 }, "BookHeadphones");
 
 // src/icons/BookHeart.ts
-var import_vanjs_core189 = __toESM(require("vanjs-core"), 1);
+
 var BookHeart = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core189.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -4136,9 +2547,9 @@ var BookHeart = /* @__PURE__ */ __name((props = {}) => {
 }, "BookHeart");
 
 // src/icons/BookImage.ts
-var import_vanjs_core190 = __toESM(require("vanjs-core"), 1);
+
 var BookImage = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core190.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m20 13.7-2.1-2.1a2 2 0 0 0-2.8 0L9.7 17" }),
@@ -4150,9 +2561,9 @@ var BookImage = /* @__PURE__ */ __name((props = {}) => {
 }, "BookImage");
 
 // src/icons/BookKey.ts
-var import_vanjs_core191 = __toESM(require("vanjs-core"), 1);
+
 var BookKey = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core191.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m19 3 1 1" }),
@@ -4164,9 +2575,9 @@ var BookKey = /* @__PURE__ */ __name((props = {}) => {
 }, "BookKey");
 
 // src/icons/BookLock.ts
-var import_vanjs_core192 = __toESM(require("vanjs-core"), 1);
+
 var BookLock = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core192.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M18 6V4a2 2 0 1 0-4 0v2" }),
@@ -4177,9 +2588,9 @@ var BookLock = /* @__PURE__ */ __name((props = {}) => {
 }, "BookLock");
 
 // src/icons/BookMarked.ts
-var import_vanjs_core193 = __toESM(require("vanjs-core"), 1);
+
 var BookMarked = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core193.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 2v8l3-3 3 3V2" }),
@@ -4190,9 +2601,9 @@ var BookMarked = /* @__PURE__ */ __name((props = {}) => {
 }, "BookMarked");
 
 // src/icons/BookMinus.ts
-var import_vanjs_core194 = __toESM(require("vanjs-core"), 1);
+
 var BookMinus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core194.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -4203,9 +2614,9 @@ var BookMinus = /* @__PURE__ */ __name((props = {}) => {
 }, "BookMinus");
 
 // src/icons/BookOpenCheck.ts
-var import_vanjs_core195 = __toESM(require("vanjs-core"), 1);
+
 var BookOpenCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core195.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 21V7" }),
@@ -4217,9 +2628,9 @@ var BookOpenCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "BookOpenCheck");
 
 // src/icons/BookOpenText.ts
-var import_vanjs_core196 = __toESM(require("vanjs-core"), 1);
+
 var BookOpenText = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core196.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 7v14" }),
@@ -4234,9 +2645,9 @@ var BookOpenText = /* @__PURE__ */ __name((props = {}) => {
 }, "BookOpenText");
 
 // src/icons/BookOpen.ts
-var import_vanjs_core197 = __toESM(require("vanjs-core"), 1);
+
 var BookOpen = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core197.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 7v14" }),
@@ -4247,9 +2658,9 @@ var BookOpen = /* @__PURE__ */ __name((props = {}) => {
 }, "BookOpen");
 
 // src/icons/BookPlus.ts
-var import_vanjs_core198 = __toESM(require("vanjs-core"), 1);
+
 var BookPlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core198.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 7v6" }),
@@ -4261,9 +2672,9 @@ var BookPlus = /* @__PURE__ */ __name((props = {}) => {
 }, "BookPlus");
 
 // src/icons/BookText.ts
-var import_vanjs_core199 = __toESM(require("vanjs-core"), 1);
+
 var BookText = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core199.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -4275,9 +2686,9 @@ var BookText = /* @__PURE__ */ __name((props = {}) => {
 }, "BookText");
 
 // src/icons/BookType.ts
-var import_vanjs_core200 = __toESM(require("vanjs-core"), 1);
+
 var BookType = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core200.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 13h4" }),
@@ -4290,9 +2701,9 @@ var BookType = /* @__PURE__ */ __name((props = {}) => {
 }, "BookType");
 
 // src/icons/BookUp2.ts
-var import_vanjs_core201 = __toESM(require("vanjs-core"), 1);
+
 var BookUp2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core201.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 13V7" }),
@@ -4306,9 +2717,9 @@ var BookUp2 = /* @__PURE__ */ __name((props = {}) => {
 }, "BookUp2");
 
 // src/icons/BookUp.ts
-var import_vanjs_core202 = __toESM(require("vanjs-core"), 1);
+
 var BookUp = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core202.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 13V7" }),
@@ -4320,9 +2731,9 @@ var BookUp = /* @__PURE__ */ __name((props = {}) => {
 }, "BookUp");
 
 // src/icons/BookUser.ts
-var import_vanjs_core203 = __toESM(require("vanjs-core"), 1);
+
 var BookUser = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core203.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 13a3 3 0 1 0-6 0" }),
@@ -4334,9 +2745,9 @@ var BookUser = /* @__PURE__ */ __name((props = {}) => {
 }, "BookUser");
 
 // src/icons/BookX.ts
-var import_vanjs_core204 = __toESM(require("vanjs-core"), 1);
+
 var BookX = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core204.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m14.5 7-5 5" }),
@@ -4348,9 +2759,9 @@ var BookX = /* @__PURE__ */ __name((props = {}) => {
 }, "BookX");
 
 // src/icons/Book.ts
-var import_vanjs_core205 = __toESM(require("vanjs-core"), 1);
+
 var Book = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core205.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -4360,9 +2771,9 @@ var Book = /* @__PURE__ */ __name((props = {}) => {
 }, "Book");
 
 // src/icons/BookmarkCheck.ts
-var import_vanjs_core206 = __toESM(require("vanjs-core"), 1);
+
 var BookmarkCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core206.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2Z" }),
@@ -4371,9 +2782,9 @@ var BookmarkCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "BookmarkCheck");
 
 // src/icons/BookmarkMinus.ts
-var import_vanjs_core207 = __toESM(require("vanjs-core"), 1);
+
 var BookmarkMinus = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core207.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" }),
@@ -4382,9 +2793,9 @@ var BookmarkMinus = /* @__PURE__ */ __name((props = {}) => {
 }, "BookmarkMinus");
 
 // src/icons/BookmarkPlus.ts
-var import_vanjs_core208 = __toESM(require("vanjs-core"), 1);
+
 var BookmarkPlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core208.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" }),
@@ -4394,9 +2805,9 @@ var BookmarkPlus = /* @__PURE__ */ __name((props = {}) => {
 }, "BookmarkPlus");
 
 // src/icons/BookmarkX.ts
-var import_vanjs_core209 = __toESM(require("vanjs-core"), 1);
+
 var BookmarkX = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core209.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2Z" }),
@@ -4406,9 +2817,9 @@ var BookmarkX = /* @__PURE__ */ __name((props = {}) => {
 }, "BookmarkX");
 
 // src/icons/Bookmark.ts
-var import_vanjs_core210 = __toESM(require("vanjs-core"), 1);
+
 var Bookmark = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core210.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" })
@@ -4416,9 +2827,9 @@ var Bookmark = /* @__PURE__ */ __name((props = {}) => {
 }, "Bookmark");
 
 // src/icons/BoomBox.ts
-var import_vanjs_core211 = __toESM(require("vanjs-core"), 1);
+
 var BoomBox = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect, circle } = import_vanjs_core211.default.tags(svgNamespace);
+  const { path, rect, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 9V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" }),
@@ -4432,9 +2843,9 @@ var BoomBox = /* @__PURE__ */ __name((props = {}) => {
 }, "BoomBox");
 
 // src/icons/BotMessageSquare.ts
-var import_vanjs_core212 = __toESM(require("vanjs-core"), 1);
+
 var BotMessageSquare = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core212.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 6V2H8" }),
@@ -4449,9 +2860,9 @@ var BotMessageSquare = /* @__PURE__ */ __name((props = {}) => {
 }, "BotMessageSquare");
 
 // src/icons/BotOff.ts
-var import_vanjs_core213 = __toESM(require("vanjs-core"), 1);
+
 var BotOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core213.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M13.67 8H18a2 2 0 0 1 2 2v4.33" }),
@@ -4467,9 +2878,9 @@ var BotOff = /* @__PURE__ */ __name((props = {}) => {
 }, "BotOff");
 
 // src/icons/Bot.ts
-var import_vanjs_core214 = __toESM(require("vanjs-core"), 1);
+
 var Bot = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core214.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 8V4H8" }),
@@ -4482,9 +2893,9 @@ var Bot = /* @__PURE__ */ __name((props = {}) => {
 }, "Bot");
 
 // src/icons/Box.ts
-var import_vanjs_core215 = __toESM(require("vanjs-core"), 1);
+
 var Box = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core215.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -4496,9 +2907,9 @@ var Box = /* @__PURE__ */ __name((props = {}) => {
 }, "Box");
 
 // src/icons/Boxes.ts
-var import_vanjs_core216 = __toESM(require("vanjs-core"), 1);
+
 var Boxes = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core216.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -4523,9 +2934,9 @@ var Boxes = /* @__PURE__ */ __name((props = {}) => {
 }, "Boxes");
 
 // src/icons/Braces.ts
-var import_vanjs_core217 = __toESM(require("vanjs-core"), 1);
+
 var Braces = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core217.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -4538,9 +2949,9 @@ var Braces = /* @__PURE__ */ __name((props = {}) => {
 }, "Braces");
 
 // src/icons/Brackets.ts
-var import_vanjs_core218 = __toESM(require("vanjs-core"), 1);
+
 var Brackets = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core218.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 3h3v18h-3" }),
@@ -4549,9 +2960,9 @@ var Brackets = /* @__PURE__ */ __name((props = {}) => {
 }, "Brackets");
 
 // src/icons/BrainCircuit.ts
-var import_vanjs_core219 = __toESM(require("vanjs-core"), 1);
+
 var BrainCircuit = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core219.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -4573,9 +2984,9 @@ var BrainCircuit = /* @__PURE__ */ __name((props = {}) => {
 }, "BrainCircuit");
 
 // src/icons/BrainCog.ts
-var import_vanjs_core220 = __toESM(require("vanjs-core"), 1);
+
 var BrainCog = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core220.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -4600,9 +3011,9 @@ var BrainCog = /* @__PURE__ */ __name((props = {}) => {
 }, "BrainCog");
 
 // src/icons/Brain.ts
-var import_vanjs_core221 = __toESM(require("vanjs-core"), 1);
+
 var Brain = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core221.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -4622,9 +3033,9 @@ var Brain = /* @__PURE__ */ __name((props = {}) => {
 }, "Brain");
 
 // src/icons/BrickWall.ts
-var import_vanjs_core222 = __toESM(require("vanjs-core"), 1);
+
 var BrickWall = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core222.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -4639,9 +3050,9 @@ var BrickWall = /* @__PURE__ */ __name((props = {}) => {
 }, "BrickWall");
 
 // src/icons/BriefcaseBusiness.ts
-var import_vanjs_core223 = __toESM(require("vanjs-core"), 1);
+
 var BriefcaseBusiness = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core223.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 12h.01" }),
@@ -4652,9 +3063,9 @@ var BriefcaseBusiness = /* @__PURE__ */ __name((props = {}) => {
 }, "BriefcaseBusiness");
 
 // src/icons/BriefcaseConveyorBelt.ts
-var import_vanjs_core224 = __toESM(require("vanjs-core"), 1);
+
 var BriefcaseConveyorBelt = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core224.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 20v2" }),
@@ -4668,9 +3079,9 @@ var BriefcaseConveyorBelt = /* @__PURE__ */ __name((props = {}) => {
 }, "BriefcaseConveyorBelt");
 
 // src/icons/BriefcaseMedical.ts
-var import_vanjs_core225 = __toESM(require("vanjs-core"), 1);
+
 var BriefcaseMedical = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core225.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 11v4" }),
@@ -4683,9 +3094,9 @@ var BriefcaseMedical = /* @__PURE__ */ __name((props = {}) => {
 }, "BriefcaseMedical");
 
 // src/icons/Briefcase.ts
-var import_vanjs_core226 = __toESM(require("vanjs-core"), 1);
+
 var Briefcase = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core226.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" }),
@@ -4694,9 +3105,9 @@ var Briefcase = /* @__PURE__ */ __name((props = {}) => {
 }, "Briefcase");
 
 // src/icons/BringToFront.ts
-var import_vanjs_core227 = __toESM(require("vanjs-core"), 1);
+
 var BringToFront = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core227.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ "x": "8", "y": "8", width: "8", height: "8", rx: "2" }),
@@ -4706,9 +3117,9 @@ var BringToFront = /* @__PURE__ */ __name((props = {}) => {
 }, "BringToFront");
 
 // src/icons/Brush.ts
-var import_vanjs_core228 = __toESM(require("vanjs-core"), 1);
+
 var Brush = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core228.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08" }),
@@ -4719,9 +3130,9 @@ var Brush = /* @__PURE__ */ __name((props = {}) => {
 }, "Brush");
 
 // src/icons/BugOff.ts
-var import_vanjs_core229 = __toESM(require("vanjs-core"), 1);
+
 var BugOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core229.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 7.13V6a3 3 0 0 0-5.14-2.1L8 2" }),
@@ -4737,9 +3148,9 @@ var BugOff = /* @__PURE__ */ __name((props = {}) => {
 }, "BugOff");
 
 // src/icons/BugPlay.ts
-var import_vanjs_core230 = __toESM(require("vanjs-core"), 1);
+
 var BugPlay = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core230.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -4759,9 +3170,9 @@ var BugPlay = /* @__PURE__ */ __name((props = {}) => {
 }, "BugPlay");
 
 // src/icons/Bug.ts
-var import_vanjs_core231 = __toESM(require("vanjs-core"), 1);
+
 var Bug = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core231.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m8 2 1.88 1.88" }),
@@ -4781,9 +3192,9 @@ var Bug = /* @__PURE__ */ __name((props = {}) => {
 }, "Bug");
 
 // src/icons/Building2.ts
-var import_vanjs_core232 = __toESM(require("vanjs-core"), 1);
+
 var Building2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core232.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" }),
@@ -4797,9 +3208,9 @@ var Building2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Building2");
 
 // src/icons/Building.ts
-var import_vanjs_core233 = __toESM(require("vanjs-core"), 1);
+
 var Building = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core233.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "16", height: "20", "x": "4", "y": "2", rx: "2", ry: "2" }),
@@ -4817,9 +3228,9 @@ var Building = /* @__PURE__ */ __name((props = {}) => {
 }, "Building");
 
 // src/icons/BusFront.ts
-var import_vanjs_core234 = __toESM(require("vanjs-core"), 1);
+
 var BusFront = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core234.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 6 2 7" }),
@@ -4835,9 +3246,9 @@ var BusFront = /* @__PURE__ */ __name((props = {}) => {
 }, "BusFront");
 
 // src/icons/Bus.ts
-var import_vanjs_core235 = __toESM(require("vanjs-core"), 1);
+
 var Bus = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core235.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 6v6" }),
@@ -4853,9 +3264,9 @@ var Bus = /* @__PURE__ */ __name((props = {}) => {
 }, "Bus");
 
 // src/icons/CableCar.ts
-var import_vanjs_core236 = __toESM(require("vanjs-core"), 1);
+
 var CableCar = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core236.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 3h.01" }),
@@ -4870,9 +3281,9 @@ var CableCar = /* @__PURE__ */ __name((props = {}) => {
 }, "CableCar");
 
 // src/icons/Cable.ts
-var import_vanjs_core237 = __toESM(require("vanjs-core"), 1);
+
 var Cable = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core237.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -4888,9 +3299,9 @@ var Cable = /* @__PURE__ */ __name((props = {}) => {
 }, "Cable");
 
 // src/icons/CakeSlice.ts
-var import_vanjs_core238 = __toESM(require("vanjs-core"), 1);
+
 var CakeSlice = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core238.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "9", cy: "7", "r": "2" }),
@@ -4903,9 +3314,9 @@ var CakeSlice = /* @__PURE__ */ __name((props = {}) => {
 }, "CakeSlice");
 
 // src/icons/Cake.ts
-var import_vanjs_core239 = __toESM(require("vanjs-core"), 1);
+
 var Cake = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core239.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8" }),
@@ -4921,9 +3332,9 @@ var Cake = /* @__PURE__ */ __name((props = {}) => {
 }, "Cake");
 
 // src/icons/Calculator.ts
-var import_vanjs_core240 = __toESM(require("vanjs-core"), 1);
+
 var Calculator = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, line, path } = import_vanjs_core240.default.tags(svgNamespace);
+  const { rect, line, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "16", height: "20", "x": "4", "y": "2", rx: "2" }),
@@ -4940,9 +3351,9 @@ var Calculator = /* @__PURE__ */ __name((props = {}) => {
 }, "Calculator");
 
 // src/icons/Calendar1.ts
-var import_vanjs_core241 = __toESM(require("vanjs-core"), 1);
+
 var Calendar1 = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core241.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11 14h1v4" }),
@@ -4954,9 +3365,9 @@ var Calendar1 = /* @__PURE__ */ __name((props = {}) => {
 }, "Calendar1");
 
 // src/icons/CalendarArrowDown.ts
-var import_vanjs_core242 = __toESM(require("vanjs-core"), 1);
+
 var CalendarArrowDown = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core242.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m14 18 4 4 4-4" }),
@@ -4971,9 +3382,9 @@ var CalendarArrowDown = /* @__PURE__ */ __name((props = {}) => {
 }, "CalendarArrowDown");
 
 // src/icons/CalendarArrowUp.ts
-var import_vanjs_core243 = __toESM(require("vanjs-core"), 1);
+
 var CalendarArrowUp = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core243.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m14 18 4-4 4 4" }),
@@ -4988,9 +3399,9 @@ var CalendarArrowUp = /* @__PURE__ */ __name((props = {}) => {
 }, "CalendarArrowUp");
 
 // src/icons/CalendarCheck2.ts
-var import_vanjs_core244 = __toESM(require("vanjs-core"), 1);
+
 var CalendarCheck2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core244.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 2v4" }),
@@ -5002,9 +3413,9 @@ var CalendarCheck2 = /* @__PURE__ */ __name((props = {}) => {
 }, "CalendarCheck2");
 
 // src/icons/CalendarCheck.ts
-var import_vanjs_core245 = __toESM(require("vanjs-core"), 1);
+
 var CalendarCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core245.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 2v4" }),
@@ -5016,9 +3427,9 @@ var CalendarCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "CalendarCheck");
 
 // src/icons/CalendarClock.ts
-var import_vanjs_core246 = __toESM(require("vanjs-core"), 1);
+
 var CalendarClock = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core246.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -5033,9 +3444,9 @@ var CalendarClock = /* @__PURE__ */ __name((props = {}) => {
 }, "CalendarClock");
 
 // src/icons/CalendarCog.ts
-var import_vanjs_core247 = __toESM(require("vanjs-core"), 1);
+
 var CalendarCog = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core247.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m15.2 16.9-.9-.4" }),
@@ -5057,9 +3468,9 @@ var CalendarCog = /* @__PURE__ */ __name((props = {}) => {
 }, "CalendarCog");
 
 // src/icons/CalendarDays.ts
-var import_vanjs_core248 = __toESM(require("vanjs-core"), 1);
+
 var CalendarDays = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core248.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 2v4" }),
@@ -5076,9 +3487,9 @@ var CalendarDays = /* @__PURE__ */ __name((props = {}) => {
 }, "CalendarDays");
 
 // src/icons/CalendarFold.ts
-var import_vanjs_core249 = __toESM(require("vanjs-core"), 1);
+
 var CalendarFold = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core249.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 2v4" }),
@@ -5092,9 +3503,9 @@ var CalendarFold = /* @__PURE__ */ __name((props = {}) => {
 }, "CalendarFold");
 
 // src/icons/CalendarHeart.ts
-var import_vanjs_core250 = __toESM(require("vanjs-core"), 1);
+
 var CalendarHeart = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core250.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -5109,9 +3520,9 @@ var CalendarHeart = /* @__PURE__ */ __name((props = {}) => {
 }, "CalendarHeart");
 
 // src/icons/CalendarMinus2.ts
-var import_vanjs_core251 = __toESM(require("vanjs-core"), 1);
+
 var CalendarMinus2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core251.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 2v4" }),
@@ -5123,9 +3534,9 @@ var CalendarMinus2 = /* @__PURE__ */ __name((props = {}) => {
 }, "CalendarMinus2");
 
 // src/icons/CalendarMinus.ts
-var import_vanjs_core252 = __toESM(require("vanjs-core"), 1);
+
 var CalendarMinus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core252.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 19h6" }),
@@ -5139,9 +3550,9 @@ var CalendarMinus = /* @__PURE__ */ __name((props = {}) => {
 }, "CalendarMinus");
 
 // src/icons/CalendarOff.ts
-var import_vanjs_core253 = __toESM(require("vanjs-core"), 1);
+
 var CalendarOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core253.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -5156,9 +3567,9 @@ var CalendarOff = /* @__PURE__ */ __name((props = {}) => {
 }, "CalendarOff");
 
 // src/icons/CalendarPlus2.ts
-var import_vanjs_core254 = __toESM(require("vanjs-core"), 1);
+
 var CalendarPlus2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core254.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 2v4" }),
@@ -5171,9 +3582,9 @@ var CalendarPlus2 = /* @__PURE__ */ __name((props = {}) => {
 }, "CalendarPlus2");
 
 // src/icons/CalendarPlus.ts
-var import_vanjs_core255 = __toESM(require("vanjs-core"), 1);
+
 var CalendarPlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core255.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 2v4" }),
@@ -5186,9 +3597,9 @@ var CalendarPlus = /* @__PURE__ */ __name((props = {}) => {
 }, "CalendarPlus");
 
 // src/icons/CalendarRange.ts
-var import_vanjs_core256 = __toESM(require("vanjs-core"), 1);
+
 var CalendarRange = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core256.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "4", rx: "2" }),
@@ -5203,9 +3614,9 @@ var CalendarRange = /* @__PURE__ */ __name((props = {}) => {
 }, "CalendarRange");
 
 // src/icons/CalendarSearch.ts
-var import_vanjs_core257 = __toESM(require("vanjs-core"), 1);
+
 var CalendarSearch = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core257.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 2v4" }),
@@ -5220,9 +3631,9 @@ var CalendarSearch = /* @__PURE__ */ __name((props = {}) => {
 }, "CalendarSearch");
 
 // src/icons/CalendarSync.ts
-var import_vanjs_core258 = __toESM(require("vanjs-core"), 1);
+
 var CalendarSync = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core258.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11 10v4h4" }),
@@ -5239,9 +3650,9 @@ var CalendarSync = /* @__PURE__ */ __name((props = {}) => {
 }, "CalendarSync");
 
 // src/icons/CalendarX2.ts
-var import_vanjs_core259 = __toESM(require("vanjs-core"), 1);
+
 var CalendarX2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core259.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 2v4" }),
@@ -5254,9 +3665,9 @@ var CalendarX2 = /* @__PURE__ */ __name((props = {}) => {
 }, "CalendarX2");
 
 // src/icons/CalendarX.ts
-var import_vanjs_core260 = __toESM(require("vanjs-core"), 1);
+
 var CalendarX = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core260.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 2v4" }),
@@ -5269,9 +3680,9 @@ var CalendarX = /* @__PURE__ */ __name((props = {}) => {
 }, "CalendarX");
 
 // src/icons/Calendar.ts
-var import_vanjs_core261 = __toESM(require("vanjs-core"), 1);
+
 var Calendar = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core261.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 2v4" }),
@@ -5282,9 +3693,9 @@ var Calendar = /* @__PURE__ */ __name((props = {}) => {
 }, "Calendar");
 
 // src/icons/CameraOff.ts
-var import_vanjs_core262 = __toESM(require("vanjs-core"), 1);
+
 var CameraOff = /* @__PURE__ */ __name((props = {}) => {
-  const { line, path } = import_vanjs_core262.default.tags(svgNamespace);
+  const { line, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "2", x2: "22", y1: "2", y2: "22" }),
@@ -5295,9 +3706,9 @@ var CameraOff = /* @__PURE__ */ __name((props = {}) => {
 }, "CameraOff");
 
 // src/icons/Camera.ts
-var import_vanjs_core263 = __toESM(require("vanjs-core"), 1);
+
 var Camera = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core263.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -5308,9 +3719,9 @@ var Camera = /* @__PURE__ */ __name((props = {}) => {
 }, "Camera");
 
 // src/icons/CandyCane.ts
-var import_vanjs_core264 = __toESM(require("vanjs-core"), 1);
+
 var CandyCane = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core264.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -5324,9 +3735,9 @@ var CandyCane = /* @__PURE__ */ __name((props = {}) => {
 }, "CandyCane");
 
 // src/icons/CandyOff.ts
-var import_vanjs_core265 = __toESM(require("vanjs-core"), 1);
+
 var CandyOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core265.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m8.5 8.5-1 1a4.95 4.95 0 0 0 7 7l1-1" }),
@@ -5347,9 +3758,9 @@ var CandyOff = /* @__PURE__ */ __name((props = {}) => {
 }, "CandyOff");
 
 // src/icons/Candy.ts
-var import_vanjs_core266 = __toESM(require("vanjs-core"), 1);
+
 var Candy = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core266.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m9.5 7.5-2 2a4.95 4.95 0 1 0 7 7l2-2a4.95 4.95 0 1 0-7-7Z" }),
@@ -5365,9 +3776,9 @@ var Candy = /* @__PURE__ */ __name((props = {}) => {
 }, "Candy");
 
 // src/icons/Cannabis.ts
-var import_vanjs_core267 = __toESM(require("vanjs-core"), 1);
+
 var Cannabis = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core267.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 22v-4" }),
@@ -5378,9 +3789,9 @@ var Cannabis = /* @__PURE__ */ __name((props = {}) => {
 }, "Cannabis");
 
 // src/icons/CaptionsOff.ts
-var import_vanjs_core268 = __toESM(require("vanjs-core"), 1);
+
 var CaptionsOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core268.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10.5 5H19a2 2 0 0 1 2 2v8.5" }),
@@ -5393,9 +3804,9 @@ var CaptionsOff = /* @__PURE__ */ __name((props = {}) => {
 }, "CaptionsOff");
 
 // src/icons/Captions.ts
-var import_vanjs_core269 = __toESM(require("vanjs-core"), 1);
+
 var Captions = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core269.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "14", "x": "3", "y": "5", rx: "2", ry: "2" }),
@@ -5404,9 +3815,9 @@ var Captions = /* @__PURE__ */ __name((props = {}) => {
 }, "Captions");
 
 // src/icons/CarFront.ts
-var import_vanjs_core270 = __toESM(require("vanjs-core"), 1);
+
 var CarFront = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core270.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -5421,9 +3832,9 @@ var CarFront = /* @__PURE__ */ __name((props = {}) => {
 }, "CarFront");
 
 // src/icons/CarTaxiFront.ts
-var import_vanjs_core271 = __toESM(require("vanjs-core"), 1);
+
 var CarTaxiFront = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core271.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 2h4" }),
@@ -5439,9 +3850,9 @@ var CarTaxiFront = /* @__PURE__ */ __name((props = {}) => {
 }, "CarTaxiFront");
 
 // src/icons/Car.ts
-var import_vanjs_core272 = __toESM(require("vanjs-core"), 1);
+
 var Car = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core272.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -5454,9 +3865,9 @@ var Car = /* @__PURE__ */ __name((props = {}) => {
 }, "Car");
 
 // src/icons/Caravan.ts
-var import_vanjs_core273 = __toESM(require("vanjs-core"), 1);
+
 var Caravan = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core273.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M18 19V9a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v8a2 2 0 0 0 2 2h2" }),
@@ -5469,9 +3880,9 @@ var Caravan = /* @__PURE__ */ __name((props = {}) => {
 }, "Caravan");
 
 // src/icons/Carrot.ts
-var import_vanjs_core274 = __toESM(require("vanjs-core"), 1);
+
 var Carrot = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core274.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -5487,9 +3898,9 @@ var Carrot = /* @__PURE__ */ __name((props = {}) => {
 }, "Carrot");
 
 // src/icons/CaseLower.ts
-var import_vanjs_core275 = __toESM(require("vanjs-core"), 1);
+
 var CaseLower = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core275.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "7", cy: "12", "r": "3" }),
@@ -5500,9 +3911,9 @@ var CaseLower = /* @__PURE__ */ __name((props = {}) => {
 }, "CaseLower");
 
 // src/icons/CaseSensitive.ts
-var import_vanjs_core276 = __toESM(require("vanjs-core"), 1);
+
 var CaseSensitive = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core276.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m3 15 4-8 4 8" }),
@@ -5513,9 +3924,9 @@ var CaseSensitive = /* @__PURE__ */ __name((props = {}) => {
 }, "CaseSensitive");
 
 // src/icons/CaseUpper.ts
-var import_vanjs_core277 = __toESM(require("vanjs-core"), 1);
+
 var CaseUpper = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core277.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m3 15 4-8 4 8" }),
@@ -5525,9 +3936,9 @@ var CaseUpper = /* @__PURE__ */ __name((props = {}) => {
 }, "CaseUpper");
 
 // src/icons/CassetteTape.ts
-var import_vanjs_core278 = __toESM(require("vanjs-core"), 1);
+
 var CassetteTape = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, circle, path } = import_vanjs_core278.default.tags(svgNamespace);
+  const { rect, circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "20", height: "16", "x": "2", "y": "4", rx: "2" }),
@@ -5541,9 +3952,9 @@ var CassetteTape = /* @__PURE__ */ __name((props = {}) => {
 }, "CassetteTape");
 
 // src/icons/Cast.ts
-var import_vanjs_core279 = __toESM(require("vanjs-core"), 1);
+
 var Cast = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core279.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6" }),
@@ -5554,9 +3965,9 @@ var Cast = /* @__PURE__ */ __name((props = {}) => {
 }, "Cast");
 
 // src/icons/Castle.ts
-var import_vanjs_core280 = __toESM(require("vanjs-core"), 1);
+
 var Castle = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core280.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M22 20v-9H2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2Z" }),
@@ -5572,9 +3983,9 @@ var Castle = /* @__PURE__ */ __name((props = {}) => {
 }, "Castle");
 
 // src/icons/Cat.ts
-var import_vanjs_core281 = __toESM(require("vanjs-core"), 1);
+
 var Cat = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core281.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -5587,9 +3998,9 @@ var Cat = /* @__PURE__ */ __name((props = {}) => {
 }, "Cat");
 
 // src/icons/Cctv.ts
-var import_vanjs_core282 = __toESM(require("vanjs-core"), 1);
+
 var Cctv = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core282.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -5605,9 +4016,9 @@ var Cctv = /* @__PURE__ */ __name((props = {}) => {
 }, "Cctv");
 
 // src/icons/ChartArea.ts
-var import_vanjs_core283 = __toESM(require("vanjs-core"), 1);
+
 var ChartArea = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core283.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 3v16a2 2 0 0 0 2 2h16" }),
@@ -5618,9 +4029,9 @@ var ChartArea = /* @__PURE__ */ __name((props = {}) => {
 }, "ChartArea");
 
 // src/icons/ChartBarBig.ts
-var import_vanjs_core284 = __toESM(require("vanjs-core"), 1);
+
 var ChartBarBig = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core284.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 3v16a2 2 0 0 0 2 2h16" }),
@@ -5630,9 +4041,9 @@ var ChartBarBig = /* @__PURE__ */ __name((props = {}) => {
 }, "ChartBarBig");
 
 // src/icons/ChartBarDecreasing.ts
-var import_vanjs_core285 = __toESM(require("vanjs-core"), 1);
+
 var ChartBarDecreasing = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core285.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 3v16a2 2 0 0 0 2 2h16" }),
@@ -5643,9 +4054,9 @@ var ChartBarDecreasing = /* @__PURE__ */ __name((props = {}) => {
 }, "ChartBarDecreasing");
 
 // src/icons/ChartBarIncreasing.ts
-var import_vanjs_core286 = __toESM(require("vanjs-core"), 1);
+
 var ChartBarIncreasing = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core286.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 3v16a2 2 0 0 0 2 2h16" }),
@@ -5656,9 +4067,9 @@ var ChartBarIncreasing = /* @__PURE__ */ __name((props = {}) => {
 }, "ChartBarIncreasing");
 
 // src/icons/ChartBarStacked.ts
-var import_vanjs_core287 = __toESM(require("vanjs-core"), 1);
+
 var ChartBarStacked = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core287.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11 13v4" }),
@@ -5670,9 +4081,9 @@ var ChartBarStacked = /* @__PURE__ */ __name((props = {}) => {
 }, "ChartBarStacked");
 
 // src/icons/ChartBar.ts
-var import_vanjs_core288 = __toESM(require("vanjs-core"), 1);
+
 var ChartBar = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core288.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 3v16a2 2 0 0 0 2 2h16" }),
@@ -5683,9 +4094,9 @@ var ChartBar = /* @__PURE__ */ __name((props = {}) => {
 }, "ChartBar");
 
 // src/icons/ChartCandlestick.ts
-var import_vanjs_core289 = __toESM(require("vanjs-core"), 1);
+
 var ChartCandlestick = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core289.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M9 5v4" }),
@@ -5699,9 +4110,9 @@ var ChartCandlestick = /* @__PURE__ */ __name((props = {}) => {
 }, "ChartCandlestick");
 
 // src/icons/ChartColumnBig.ts
-var import_vanjs_core290 = __toESM(require("vanjs-core"), 1);
+
 var ChartColumnBig = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core290.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 3v16a2 2 0 0 0 2 2h16" }),
@@ -5711,9 +4122,9 @@ var ChartColumnBig = /* @__PURE__ */ __name((props = {}) => {
 }, "ChartColumnBig");
 
 // src/icons/ChartColumnDecreasing.ts
-var import_vanjs_core291 = __toESM(require("vanjs-core"), 1);
+
 var ChartColumnDecreasing = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core291.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M13 17V9" }),
@@ -5724,9 +4135,9 @@ var ChartColumnDecreasing = /* @__PURE__ */ __name((props = {}) => {
 }, "ChartColumnDecreasing");
 
 // src/icons/ChartColumnIncreasing.ts
-var import_vanjs_core292 = __toESM(require("vanjs-core"), 1);
+
 var ChartColumnIncreasing = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core292.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M13 17V9" }),
@@ -5737,9 +4148,9 @@ var ChartColumnIncreasing = /* @__PURE__ */ __name((props = {}) => {
 }, "ChartColumnIncreasing");
 
 // src/icons/ChartColumnStacked.ts
-var import_vanjs_core293 = __toESM(require("vanjs-core"), 1);
+
 var ChartColumnStacked = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core293.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11 13H7" }),
@@ -5751,9 +4162,9 @@ var ChartColumnStacked = /* @__PURE__ */ __name((props = {}) => {
 }, "ChartColumnStacked");
 
 // src/icons/ChartColumn.ts
-var import_vanjs_core294 = __toESM(require("vanjs-core"), 1);
+
 var ChartColumn = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core294.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 3v16a2 2 0 0 0 2 2h16" }),
@@ -5764,9 +4175,9 @@ var ChartColumn = /* @__PURE__ */ __name((props = {}) => {
 }, "ChartColumn");
 
 // src/icons/ChartGantt.ts
-var import_vanjs_core295 = __toESM(require("vanjs-core"), 1);
+
 var ChartGantt = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core295.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 6h8" }),
@@ -5777,9 +4188,9 @@ var ChartGantt = /* @__PURE__ */ __name((props = {}) => {
 }, "ChartGantt");
 
 // src/icons/ChartLine.ts
-var import_vanjs_core296 = __toESM(require("vanjs-core"), 1);
+
 var ChartLine = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core296.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 3v16a2 2 0 0 0 2 2h16" }),
@@ -5788,9 +4199,9 @@ var ChartLine = /* @__PURE__ */ __name((props = {}) => {
 }, "ChartLine");
 
 // src/icons/ChartNetwork.ts
-var import_vanjs_core297 = __toESM(require("vanjs-core"), 1);
+
 var ChartNetwork = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core297.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m13.11 7.664 1.78 2.672" }),
@@ -5804,9 +4215,9 @@ var ChartNetwork = /* @__PURE__ */ __name((props = {}) => {
 }, "ChartNetwork");
 
 // src/icons/ChartNoAxesColumnDecreasing.ts
-var import_vanjs_core298 = __toESM(require("vanjs-core"), 1);
+
 var ChartNoAxesColumnDecreasing = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core298.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 20V10" }),
@@ -5816,9 +4227,9 @@ var ChartNoAxesColumnDecreasing = /* @__PURE__ */ __name((props = {}) => {
 }, "ChartNoAxesColumnDecreasing");
 
 // src/icons/ChartNoAxesColumnIncreasing.ts
-var import_vanjs_core299 = __toESM(require("vanjs-core"), 1);
+
 var ChartNoAxesColumnIncreasing = /* @__PURE__ */ __name((props = {}) => {
-  const { line } = import_vanjs_core299.default.tags(svgNamespace);
+  const { line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "12", x2: "12", y1: "20", y2: "10" }),
@@ -5828,9 +4239,9 @@ var ChartNoAxesColumnIncreasing = /* @__PURE__ */ __name((props = {}) => {
 }, "ChartNoAxesColumnIncreasing");
 
 // src/icons/ChartNoAxesColumn.ts
-var import_vanjs_core300 = __toESM(require("vanjs-core"), 1);
+
 var ChartNoAxesColumn = /* @__PURE__ */ __name((props = {}) => {
-  const { line } = import_vanjs_core300.default.tags(svgNamespace);
+  const { line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "18", x2: "18", y1: "20", y2: "10" }),
@@ -5840,9 +4251,9 @@ var ChartNoAxesColumn = /* @__PURE__ */ __name((props = {}) => {
 }, "ChartNoAxesColumn");
 
 // src/icons/ChartNoAxesCombined.ts
-var import_vanjs_core301 = __toESM(require("vanjs-core"), 1);
+
 var ChartNoAxesCombined = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core301.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 16v5" }),
@@ -5857,9 +4268,9 @@ var ChartNoAxesCombined = /* @__PURE__ */ __name((props = {}) => {
 }, "ChartNoAxesCombined");
 
 // src/icons/ChartNoAxesGantt.ts
-var import_vanjs_core302 = __toESM(require("vanjs-core"), 1);
+
 var ChartNoAxesGantt = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core302.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 6h10" }),
@@ -5869,9 +4280,9 @@ var ChartNoAxesGantt = /* @__PURE__ */ __name((props = {}) => {
 }, "ChartNoAxesGantt");
 
 // src/icons/ChartPie.ts
-var import_vanjs_core303 = __toESM(require("vanjs-core"), 1);
+
 var ChartPie = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core303.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -5882,9 +4293,9 @@ var ChartPie = /* @__PURE__ */ __name((props = {}) => {
 }, "ChartPie");
 
 // src/icons/ChartScatter.ts
-var import_vanjs_core304 = __toESM(require("vanjs-core"), 1);
+
 var ChartScatter = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core304.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "7.5", cy: "7.5", "r": ".5", fill: "currentColor" }),
@@ -5897,9 +4308,9 @@ var ChartScatter = /* @__PURE__ */ __name((props = {}) => {
 }, "ChartScatter");
 
 // src/icons/ChartSpline.ts
-var import_vanjs_core305 = __toESM(require("vanjs-core"), 1);
+
 var ChartSpline = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core305.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 3v16a2 2 0 0 0 2 2h16" }),
@@ -5908,9 +4319,9 @@ var ChartSpline = /* @__PURE__ */ __name((props = {}) => {
 }, "ChartSpline");
 
 // src/icons/CheckCheck.ts
-var import_vanjs_core306 = __toESM(require("vanjs-core"), 1);
+
 var CheckCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core306.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M18 6 7 17l-5-5" }),
@@ -5919,9 +4330,9 @@ var CheckCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "CheckCheck");
 
 // src/icons/Check.ts
-var import_vanjs_core307 = __toESM(require("vanjs-core"), 1);
+
 var Check = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core307.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M20 6 9 17l-5-5" })
@@ -5929,9 +4340,9 @@ var Check = /* @__PURE__ */ __name((props = {}) => {
 }, "Check");
 
 // src/icons/ChefHat.ts
-var import_vanjs_core308 = __toESM(require("vanjs-core"), 1);
+
 var ChefHat = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core308.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -5942,9 +4353,9 @@ var ChefHat = /* @__PURE__ */ __name((props = {}) => {
 }, "ChefHat");
 
 // src/icons/Cherry.ts
-var import_vanjs_core309 = __toESM(require("vanjs-core"), 1);
+
 var Cherry = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core309.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 17a5 5 0 0 0 10 0c0-2.76-2.5-5-5-3-2.5-2-5 .24-5 3Z" }),
@@ -5955,9 +4366,9 @@ var Cherry = /* @__PURE__ */ __name((props = {}) => {
 }, "Cherry");
 
 // src/icons/ChevronDown.ts
-var import_vanjs_core310 = __toESM(require("vanjs-core"), 1);
+
 var ChevronDown = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core310.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m6 9 6 6 6-6" })
@@ -5965,9 +4376,9 @@ var ChevronDown = /* @__PURE__ */ __name((props = {}) => {
 }, "ChevronDown");
 
 // src/icons/ChevronFirst.ts
-var import_vanjs_core311 = __toESM(require("vanjs-core"), 1);
+
 var ChevronFirst = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core311.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m17 18-6-6 6-6" }),
@@ -5976,9 +4387,9 @@ var ChevronFirst = /* @__PURE__ */ __name((props = {}) => {
 }, "ChevronFirst");
 
 // src/icons/ChevronLast.ts
-var import_vanjs_core312 = __toESM(require("vanjs-core"), 1);
+
 var ChevronLast = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core312.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m7 18 6-6-6-6" }),
@@ -5987,9 +4398,9 @@ var ChevronLast = /* @__PURE__ */ __name((props = {}) => {
 }, "ChevronLast");
 
 // src/icons/ChevronLeft.ts
-var import_vanjs_core313 = __toESM(require("vanjs-core"), 1);
+
 var ChevronLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core313.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m15 18-6-6 6-6" })
@@ -5997,9 +4408,9 @@ var ChevronLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "ChevronLeft");
 
 // src/icons/ChevronRight.ts
-var import_vanjs_core314 = __toESM(require("vanjs-core"), 1);
+
 var ChevronRight = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core314.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m9 18 6-6-6-6" })
@@ -6007,9 +4418,9 @@ var ChevronRight = /* @__PURE__ */ __name((props = {}) => {
 }, "ChevronRight");
 
 // src/icons/ChevronUp.ts
-var import_vanjs_core315 = __toESM(require("vanjs-core"), 1);
+
 var ChevronUp = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core315.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m18 15-6-6-6 6" })
@@ -6017,9 +4428,9 @@ var ChevronUp = /* @__PURE__ */ __name((props = {}) => {
 }, "ChevronUp");
 
 // src/icons/ChevronsDownUp.ts
-var import_vanjs_core316 = __toESM(require("vanjs-core"), 1);
+
 var ChevronsDownUp = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core316.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m7 20 5-5 5 5" }),
@@ -6028,9 +4439,9 @@ var ChevronsDownUp = /* @__PURE__ */ __name((props = {}) => {
 }, "ChevronsDownUp");
 
 // src/icons/ChevronsDown.ts
-var import_vanjs_core317 = __toESM(require("vanjs-core"), 1);
+
 var ChevronsDown = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core317.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m7 6 5 5 5-5" }),
@@ -6039,9 +4450,9 @@ var ChevronsDown = /* @__PURE__ */ __name((props = {}) => {
 }, "ChevronsDown");
 
 // src/icons/ChevronsLeftRightEllipsis.ts
-var import_vanjs_core318 = __toESM(require("vanjs-core"), 1);
+
 var ChevronsLeftRightEllipsis = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core318.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m18 8 4 4-4 4" }),
@@ -6053,9 +4464,9 @@ var ChevronsLeftRightEllipsis = /* @__PURE__ */ __name((props = {}) => {
 }, "ChevronsLeftRightEllipsis");
 
 // src/icons/ChevronsLeftRight.ts
-var import_vanjs_core319 = __toESM(require("vanjs-core"), 1);
+
 var ChevronsLeftRight = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core319.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m9 7-5 5 5 5" }),
@@ -6064,9 +4475,9 @@ var ChevronsLeftRight = /* @__PURE__ */ __name((props = {}) => {
 }, "ChevronsLeftRight");
 
 // src/icons/ChevronsLeft.ts
-var import_vanjs_core320 = __toESM(require("vanjs-core"), 1);
+
 var ChevronsLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core320.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m11 17-5-5 5-5" }),
@@ -6075,9 +4486,9 @@ var ChevronsLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "ChevronsLeft");
 
 // src/icons/ChevronsRightLeft.ts
-var import_vanjs_core321 = __toESM(require("vanjs-core"), 1);
+
 var ChevronsRightLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core321.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m20 17-5-5 5-5" }),
@@ -6086,9 +4497,9 @@ var ChevronsRightLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "ChevronsRightLeft");
 
 // src/icons/ChevronsRight.ts
-var import_vanjs_core322 = __toESM(require("vanjs-core"), 1);
+
 var ChevronsRight = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core322.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m6 17 5-5-5-5" }),
@@ -6097,9 +4508,9 @@ var ChevronsRight = /* @__PURE__ */ __name((props = {}) => {
 }, "ChevronsRight");
 
 // src/icons/ChevronsUpDown.ts
-var import_vanjs_core323 = __toESM(require("vanjs-core"), 1);
+
 var ChevronsUpDown = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core323.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m7 15 5 5 5-5" }),
@@ -6108,9 +4519,9 @@ var ChevronsUpDown = /* @__PURE__ */ __name((props = {}) => {
 }, "ChevronsUpDown");
 
 // src/icons/ChevronsUp.ts
-var import_vanjs_core324 = __toESM(require("vanjs-core"), 1);
+
 var ChevronsUp = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core324.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m17 11-5-5-5 5" }),
@@ -6119,9 +4530,9 @@ var ChevronsUp = /* @__PURE__ */ __name((props = {}) => {
 }, "ChevronsUp");
 
 // src/icons/Chrome.ts
-var import_vanjs_core325 = __toESM(require("vanjs-core"), 1);
+
 var Chrome = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, line } = import_vanjs_core325.default.tags(svgNamespace);
+  const { circle, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6133,9 +4544,9 @@ var Chrome = /* @__PURE__ */ __name((props = {}) => {
 }, "Chrome");
 
 // src/icons/Church.ts
-var import_vanjs_core326 = __toESM(require("vanjs-core"), 1);
+
 var Church = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core326.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 9h4" }),
@@ -6151,9 +4562,9 @@ var Church = /* @__PURE__ */ __name((props = {}) => {
 }, "Church");
 
 // src/icons/CigaretteOff.ts
-var import_vanjs_core327 = __toESM(require("vanjs-core"), 1);
+
 var CigaretteOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core327.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 12H3a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h13" }),
@@ -6166,9 +4577,9 @@ var CigaretteOff = /* @__PURE__ */ __name((props = {}) => {
 }, "CigaretteOff");
 
 // src/icons/Cigarette.ts
-var import_vanjs_core328 = __toESM(require("vanjs-core"), 1);
+
 var Cigarette = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core328.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M17 12H3a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h14" }),
@@ -6180,9 +4591,9 @@ var Cigarette = /* @__PURE__ */ __name((props = {}) => {
 }, "Cigarette");
 
 // src/icons/CircleAlert.ts
-var import_vanjs_core329 = __toESM(require("vanjs-core"), 1);
+
 var CircleAlert = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, line } = import_vanjs_core329.default.tags(svgNamespace);
+  const { circle, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6192,9 +4603,9 @@ var CircleAlert = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleAlert");
 
 // src/icons/CircleArrowDown.ts
-var import_vanjs_core330 = __toESM(require("vanjs-core"), 1);
+
 var CircleArrowDown = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core330.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6204,9 +4615,9 @@ var CircleArrowDown = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleArrowDown");
 
 // src/icons/CircleArrowLeft.ts
-var import_vanjs_core331 = __toESM(require("vanjs-core"), 1);
+
 var CircleArrowLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core331.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6216,9 +4627,9 @@ var CircleArrowLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleArrowLeft");
 
 // src/icons/CircleArrowOutDownLeft.ts
-var import_vanjs_core332 = __toESM(require("vanjs-core"), 1);
+
 var CircleArrowOutDownLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core332.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 12a10 10 0 1 1 10 10" }),
@@ -6228,9 +4639,9 @@ var CircleArrowOutDownLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleArrowOutDownLeft");
 
 // src/icons/CircleArrowOutDownRight.ts
-var import_vanjs_core333 = __toESM(require("vanjs-core"), 1);
+
 var CircleArrowOutDownRight = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core333.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 22a10 10 0 1 1 10-10" }),
@@ -6240,9 +4651,9 @@ var CircleArrowOutDownRight = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleArrowOutDownRight");
 
 // src/icons/CircleArrowOutUpLeft.ts
-var import_vanjs_core334 = __toESM(require("vanjs-core"), 1);
+
 var CircleArrowOutUpLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core334.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 8V2h6" }),
@@ -6252,9 +4663,9 @@ var CircleArrowOutUpLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleArrowOutUpLeft");
 
 // src/icons/CircleArrowOutUpRight.ts
-var import_vanjs_core335 = __toESM(require("vanjs-core"), 1);
+
 var CircleArrowOutUpRight = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core335.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M22 12A10 10 0 1 1 12 2" }),
@@ -6264,9 +4675,9 @@ var CircleArrowOutUpRight = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleArrowOutUpRight");
 
 // src/icons/CircleArrowRight.ts
-var import_vanjs_core336 = __toESM(require("vanjs-core"), 1);
+
 var CircleArrowRight = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core336.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6276,9 +4687,9 @@ var CircleArrowRight = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleArrowRight");
 
 // src/icons/CircleArrowUp.ts
-var import_vanjs_core337 = __toESM(require("vanjs-core"), 1);
+
 var CircleArrowUp = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core337.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6288,9 +4699,9 @@ var CircleArrowUp = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleArrowUp");
 
 // src/icons/CircleCheckBig.ts
-var import_vanjs_core338 = __toESM(require("vanjs-core"), 1);
+
 var CircleCheckBig = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core338.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21.801 10A10 10 0 1 1 17 3.335" }),
@@ -6299,9 +4710,9 @@ var CircleCheckBig = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleCheckBig");
 
 // src/icons/CircleCheck.ts
-var import_vanjs_core339 = __toESM(require("vanjs-core"), 1);
+
 var CircleCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core339.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6310,9 +4721,9 @@ var CircleCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleCheck");
 
 // src/icons/CircleChevronDown.ts
-var import_vanjs_core340 = __toESM(require("vanjs-core"), 1);
+
 var CircleChevronDown = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core340.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6321,9 +4732,9 @@ var CircleChevronDown = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleChevronDown");
 
 // src/icons/CircleChevronLeft.ts
-var import_vanjs_core341 = __toESM(require("vanjs-core"), 1);
+
 var CircleChevronLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core341.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6332,9 +4743,9 @@ var CircleChevronLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleChevronLeft");
 
 // src/icons/CircleChevronRight.ts
-var import_vanjs_core342 = __toESM(require("vanjs-core"), 1);
+
 var CircleChevronRight = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core342.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6343,9 +4754,9 @@ var CircleChevronRight = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleChevronRight");
 
 // src/icons/CircleChevronUp.ts
-var import_vanjs_core343 = __toESM(require("vanjs-core"), 1);
+
 var CircleChevronUp = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core343.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6354,9 +4765,9 @@ var CircleChevronUp = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleChevronUp");
 
 // src/icons/CircleDashed.ts
-var import_vanjs_core344 = __toESM(require("vanjs-core"), 1);
+
 var CircleDashed = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core344.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10.1 2.182a10 10 0 0 1 3.8 0" }),
@@ -6371,9 +4782,9 @@ var CircleDashed = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleDashed");
 
 // src/icons/CircleDivide.ts
-var import_vanjs_core345 = __toESM(require("vanjs-core"), 1);
+
 var CircleDivide = /* @__PURE__ */ __name((props = {}) => {
-  const { line, circle } = import_vanjs_core345.default.tags(svgNamespace);
+  const { line, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "8", x2: "16", y1: "12", y2: "12" }),
@@ -6384,9 +4795,9 @@ var CircleDivide = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleDivide");
 
 // src/icons/CircleDollarSign.ts
-var import_vanjs_core346 = __toESM(require("vanjs-core"), 1);
+
 var CircleDollarSign = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core346.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6396,9 +4807,9 @@ var CircleDollarSign = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleDollarSign");
 
 // src/icons/CircleDotDashed.ts
-var import_vanjs_core347 = __toESM(require("vanjs-core"), 1);
+
 var CircleDotDashed = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core347.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10.1 2.18a9.93 9.93 0 0 1 3.8 0" }),
@@ -6414,9 +4825,9 @@ var CircleDotDashed = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleDotDashed");
 
 // src/icons/CircleDot.ts
-var import_vanjs_core348 = __toESM(require("vanjs-core"), 1);
+
 var CircleDot = /* @__PURE__ */ __name((props = {}) => {
-  const { circle } = import_vanjs_core348.default.tags(svgNamespace);
+  const { circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6425,9 +4836,9 @@ var CircleDot = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleDot");
 
 // src/icons/CircleEllipsis.ts
-var import_vanjs_core349 = __toESM(require("vanjs-core"), 1);
+
 var CircleEllipsis = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core349.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6438,9 +4849,9 @@ var CircleEllipsis = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleEllipsis");
 
 // src/icons/CircleEqual.ts
-var import_vanjs_core350 = __toESM(require("vanjs-core"), 1);
+
 var CircleEqual = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core350.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M7 10h10" }),
@@ -6450,9 +4861,9 @@ var CircleEqual = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleEqual");
 
 // src/icons/CircleFadingArrowUp.ts
-var import_vanjs_core351 = __toESM(require("vanjs-core"), 1);
+
 var CircleFadingArrowUp = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core351.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 2a10 10 0 0 1 7.38 16.75" }),
@@ -6466,9 +4877,9 @@ var CircleFadingArrowUp = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleFadingArrowUp");
 
 // src/icons/CircleFadingPlus.ts
-var import_vanjs_core352 = __toESM(require("vanjs-core"), 1);
+
 var CircleFadingPlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core352.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 2a10 10 0 0 1 7.38 16.75" }),
@@ -6482,9 +4893,9 @@ var CircleFadingPlus = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleFadingPlus");
 
 // src/icons/CircleGauge.ts
-var import_vanjs_core353 = __toESM(require("vanjs-core"), 1);
+
 var CircleGauge = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core353.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15.6 2.7a10 10 0 1 0 5.7 5.7" }),
@@ -6494,9 +4905,9 @@ var CircleGauge = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleGauge");
 
 // src/icons/CircleHelp.ts
-var import_vanjs_core354 = __toESM(require("vanjs-core"), 1);
+
 var CircleHelp = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core354.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6506,9 +4917,9 @@ var CircleHelp = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleHelp");
 
 // src/icons/CircleMinus.ts
-var import_vanjs_core355 = __toESM(require("vanjs-core"), 1);
+
 var CircleMinus = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core355.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6517,9 +4928,9 @@ var CircleMinus = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleMinus");
 
 // src/icons/CircleOff.ts
-var import_vanjs_core356 = __toESM(require("vanjs-core"), 1);
+
 var CircleOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core356.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m2 2 20 20" }),
@@ -6529,9 +4940,9 @@ var CircleOff = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleOff");
 
 // src/icons/CircleParkingOff.ts
-var import_vanjs_core357 = __toESM(require("vanjs-core"), 1);
+
 var CircleParkingOff = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core357.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6542,9 +4953,9 @@ var CircleParkingOff = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleParkingOff");
 
 // src/icons/CircleParking.ts
-var import_vanjs_core358 = __toESM(require("vanjs-core"), 1);
+
 var CircleParking = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core358.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6553,9 +4964,9 @@ var CircleParking = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleParking");
 
 // src/icons/CirclePause.ts
-var import_vanjs_core359 = __toESM(require("vanjs-core"), 1);
+
 var CirclePause = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, line } = import_vanjs_core359.default.tags(svgNamespace);
+  const { circle, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6565,9 +4976,9 @@ var CirclePause = /* @__PURE__ */ __name((props = {}) => {
 }, "CirclePause");
 
 // src/icons/CirclePercent.ts
-var import_vanjs_core360 = __toESM(require("vanjs-core"), 1);
+
 var CirclePercent = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core360.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6578,9 +4989,9 @@ var CirclePercent = /* @__PURE__ */ __name((props = {}) => {
 }, "CirclePercent");
 
 // src/icons/CirclePlay.ts
-var import_vanjs_core361 = __toESM(require("vanjs-core"), 1);
+
 var CirclePlay = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, polygon } = import_vanjs_core361.default.tags(svgNamespace);
+  const { circle, polygon } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6589,9 +5000,9 @@ var CirclePlay = /* @__PURE__ */ __name((props = {}) => {
 }, "CirclePlay");
 
 // src/icons/CirclePlus.ts
-var import_vanjs_core362 = __toESM(require("vanjs-core"), 1);
+
 var CirclePlus = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core362.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6601,9 +5012,9 @@ var CirclePlus = /* @__PURE__ */ __name((props = {}) => {
 }, "CirclePlus");
 
 // src/icons/CirclePower.ts
-var import_vanjs_core363 = __toESM(require("vanjs-core"), 1);
+
 var CirclePower = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core363.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 7v4" }),
@@ -6613,9 +5024,9 @@ var CirclePower = /* @__PURE__ */ __name((props = {}) => {
 }, "CirclePower");
 
 // src/icons/CircleSlash2.ts
-var import_vanjs_core364 = __toESM(require("vanjs-core"), 1);
+
 var CircleSlash2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core364.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M22 2 2 22" }),
@@ -6624,9 +5035,9 @@ var CircleSlash2 = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleSlash2");
 
 // src/icons/CircleSlash.ts
-var import_vanjs_core365 = __toESM(require("vanjs-core"), 1);
+
 var CircleSlash = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, line } = import_vanjs_core365.default.tags(svgNamespace);
+  const { circle, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6635,9 +5046,9 @@ var CircleSlash = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleSlash");
 
 // src/icons/CircleSmall.ts
-var import_vanjs_core366 = __toESM(require("vanjs-core"), 1);
+
 var CircleSmall = /* @__PURE__ */ __name((props = {}) => {
-  const { circle } = import_vanjs_core366.default.tags(svgNamespace);
+  const { circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "6" })
@@ -6645,9 +5056,9 @@ var CircleSmall = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleSmall");
 
 // src/icons/CircleStop.ts
-var import_vanjs_core367 = __toESM(require("vanjs-core"), 1);
+
 var CircleStop = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, rect } = import_vanjs_core367.default.tags(svgNamespace);
+  const { circle, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6656,9 +5067,9 @@ var CircleStop = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleStop");
 
 // src/icons/CircleUserRound.ts
-var import_vanjs_core368 = __toESM(require("vanjs-core"), 1);
+
 var CircleUserRound = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core368.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M18 20a6 6 0 0 0-12 0" }),
@@ -6668,9 +5079,9 @@ var CircleUserRound = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleUserRound");
 
 // src/icons/CircleUser.ts
-var import_vanjs_core369 = __toESM(require("vanjs-core"), 1);
+
 var CircleUser = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core369.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6680,9 +5091,9 @@ var CircleUser = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleUser");
 
 // src/icons/CircleX.ts
-var import_vanjs_core370 = __toESM(require("vanjs-core"), 1);
+
 var CircleX = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core370.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6692,9 +5103,9 @@ var CircleX = /* @__PURE__ */ __name((props = {}) => {
 }, "CircleX");
 
 // src/icons/Circle.ts
-var import_vanjs_core371 = __toESM(require("vanjs-core"), 1);
+
 var Circle = /* @__PURE__ */ __name((props = {}) => {
-  const { circle } = import_vanjs_core371.default.tags(svgNamespace);
+  const { circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" })
@@ -6702,9 +5113,9 @@ var Circle = /* @__PURE__ */ __name((props = {}) => {
 }, "Circle");
 
 // src/icons/CircuitBoard.ts
-var import_vanjs_core372 = __toESM(require("vanjs-core"), 1);
+
 var CircuitBoard = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path, circle } = import_vanjs_core372.default.tags(svgNamespace);
+  const { rect, path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -6716,9 +5127,9 @@ var CircuitBoard = /* @__PURE__ */ __name((props = {}) => {
 }, "CircuitBoard");
 
 // src/icons/Citrus.ts
-var import_vanjs_core373 = __toESM(require("vanjs-core"), 1);
+
 var Citrus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core373.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -6731,9 +5142,9 @@ var Citrus = /* @__PURE__ */ __name((props = {}) => {
 }, "Citrus");
 
 // src/icons/Clapperboard.ts
-var import_vanjs_core374 = __toESM(require("vanjs-core"), 1);
+
 var Clapperboard = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core374.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -6746,9 +5157,9 @@ var Clapperboard = /* @__PURE__ */ __name((props = {}) => {
 }, "Clapperboard");
 
 // src/icons/ClipboardCheck.ts
-var import_vanjs_core375 = __toESM(require("vanjs-core"), 1);
+
 var ClipboardCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core375.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "8", height: "4", "x": "8", "y": "2", rx: "1", ry: "1" }),
@@ -6760,9 +5171,9 @@ var ClipboardCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "ClipboardCheck");
 
 // src/icons/ClipboardCopy.ts
-var import_vanjs_core376 = __toESM(require("vanjs-core"), 1);
+
 var ClipboardCopy = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core376.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "8", height: "4", "x": "8", "y": "2", rx: "1", ry: "1" }),
@@ -6774,9 +5185,9 @@ var ClipboardCopy = /* @__PURE__ */ __name((props = {}) => {
 }, "ClipboardCopy");
 
 // src/icons/ClipboardList.ts
-var import_vanjs_core377 = __toESM(require("vanjs-core"), 1);
+
 var ClipboardList = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core377.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "8", height: "4", "x": "8", "y": "2", rx: "1", ry: "1" }),
@@ -6791,9 +5202,9 @@ var ClipboardList = /* @__PURE__ */ __name((props = {}) => {
 }, "ClipboardList");
 
 // src/icons/ClipboardMinus.ts
-var import_vanjs_core378 = __toESM(require("vanjs-core"), 1);
+
 var ClipboardMinus = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core378.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "8", height: "4", "x": "8", "y": "2", rx: "1", ry: "1" }),
@@ -6805,9 +5216,9 @@ var ClipboardMinus = /* @__PURE__ */ __name((props = {}) => {
 }, "ClipboardMinus");
 
 // src/icons/ClipboardPaste.ts
-var import_vanjs_core379 = __toESM(require("vanjs-core"), 1);
+
 var ClipboardPaste = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core379.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -6821,9 +5232,9 @@ var ClipboardPaste = /* @__PURE__ */ __name((props = {}) => {
 }, "ClipboardPaste");
 
 // src/icons/ClipboardPenLine.ts
-var import_vanjs_core380 = __toESM(require("vanjs-core"), 1);
+
 var ClipboardPenLine = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core380.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "8", height: "4", "x": "8", "y": "2", rx: "1" }),
@@ -6837,9 +5248,9 @@ var ClipboardPenLine = /* @__PURE__ */ __name((props = {}) => {
 }, "ClipboardPenLine");
 
 // src/icons/ClipboardPen.ts
-var import_vanjs_core381 = __toESM(require("vanjs-core"), 1);
+
 var ClipboardPen = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core381.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "8", height: "4", "x": "8", "y": "2", rx: "1" }),
@@ -6852,9 +5263,9 @@ var ClipboardPen = /* @__PURE__ */ __name((props = {}) => {
 }, "ClipboardPen");
 
 // src/icons/ClipboardPlus.ts
-var import_vanjs_core382 = __toESM(require("vanjs-core"), 1);
+
 var ClipboardPlus = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core382.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "8", height: "4", "x": "8", "y": "2", rx: "1", ry: "1" }),
@@ -6867,9 +5278,9 @@ var ClipboardPlus = /* @__PURE__ */ __name((props = {}) => {
 }, "ClipboardPlus");
 
 // src/icons/ClipboardType.ts
-var import_vanjs_core383 = __toESM(require("vanjs-core"), 1);
+
 var ClipboardType = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core383.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "8", height: "4", "x": "8", "y": "2", rx: "1", ry: "1" }),
@@ -6883,9 +5294,9 @@ var ClipboardType = /* @__PURE__ */ __name((props = {}) => {
 }, "ClipboardType");
 
 // src/icons/ClipboardX.ts
-var import_vanjs_core384 = __toESM(require("vanjs-core"), 1);
+
 var ClipboardX = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core384.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "8", height: "4", "x": "8", "y": "2", rx: "1", ry: "1" }),
@@ -6898,9 +5309,9 @@ var ClipboardX = /* @__PURE__ */ __name((props = {}) => {
 }, "ClipboardX");
 
 // src/icons/Clipboard.ts
-var import_vanjs_core385 = __toESM(require("vanjs-core"), 1);
+
 var Clipboard = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core385.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "8", height: "4", "x": "8", "y": "2", rx: "1", ry: "1" }),
@@ -6911,9 +5322,9 @@ var Clipboard = /* @__PURE__ */ __name((props = {}) => {
 }, "Clipboard");
 
 // src/icons/Clock1.ts
-var import_vanjs_core386 = __toESM(require("vanjs-core"), 1);
+
 var Clock1 = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, polyline } = import_vanjs_core386.default.tags(svgNamespace);
+  const { circle, polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6922,9 +5333,9 @@ var Clock1 = /* @__PURE__ */ __name((props = {}) => {
 }, "Clock1");
 
 // src/icons/Clock10.ts
-var import_vanjs_core387 = __toESM(require("vanjs-core"), 1);
+
 var Clock10 = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, polyline } = import_vanjs_core387.default.tags(svgNamespace);
+  const { circle, polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6933,9 +5344,9 @@ var Clock10 = /* @__PURE__ */ __name((props = {}) => {
 }, "Clock10");
 
 // src/icons/Clock11.ts
-var import_vanjs_core388 = __toESM(require("vanjs-core"), 1);
+
 var Clock11 = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, polyline } = import_vanjs_core388.default.tags(svgNamespace);
+  const { circle, polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6944,9 +5355,9 @@ var Clock11 = /* @__PURE__ */ __name((props = {}) => {
 }, "Clock11");
 
 // src/icons/Clock12.ts
-var import_vanjs_core389 = __toESM(require("vanjs-core"), 1);
+
 var Clock12 = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, polyline } = import_vanjs_core389.default.tags(svgNamespace);
+  const { circle, polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6955,9 +5366,9 @@ var Clock12 = /* @__PURE__ */ __name((props = {}) => {
 }, "Clock12");
 
 // src/icons/Clock2.ts
-var import_vanjs_core390 = __toESM(require("vanjs-core"), 1);
+
 var Clock2 = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, polyline } = import_vanjs_core390.default.tags(svgNamespace);
+  const { circle, polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6966,9 +5377,9 @@ var Clock2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Clock2");
 
 // src/icons/Clock3.ts
-var import_vanjs_core391 = __toESM(require("vanjs-core"), 1);
+
 var Clock3 = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, polyline } = import_vanjs_core391.default.tags(svgNamespace);
+  const { circle, polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6977,9 +5388,9 @@ var Clock3 = /* @__PURE__ */ __name((props = {}) => {
 }, "Clock3");
 
 // src/icons/Clock4.ts
-var import_vanjs_core392 = __toESM(require("vanjs-core"), 1);
+
 var Clock4 = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, polyline } = import_vanjs_core392.default.tags(svgNamespace);
+  const { circle, polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6988,9 +5399,9 @@ var Clock4 = /* @__PURE__ */ __name((props = {}) => {
 }, "Clock4");
 
 // src/icons/Clock5.ts
-var import_vanjs_core393 = __toESM(require("vanjs-core"), 1);
+
 var Clock5 = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, polyline } = import_vanjs_core393.default.tags(svgNamespace);
+  const { circle, polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -6999,9 +5410,9 @@ var Clock5 = /* @__PURE__ */ __name((props = {}) => {
 }, "Clock5");
 
 // src/icons/Clock6.ts
-var import_vanjs_core394 = __toESM(require("vanjs-core"), 1);
+
 var Clock6 = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, polyline } = import_vanjs_core394.default.tags(svgNamespace);
+  const { circle, polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -7010,9 +5421,9 @@ var Clock6 = /* @__PURE__ */ __name((props = {}) => {
 }, "Clock6");
 
 // src/icons/Clock7.ts
-var import_vanjs_core395 = __toESM(require("vanjs-core"), 1);
+
 var Clock7 = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, polyline } = import_vanjs_core395.default.tags(svgNamespace);
+  const { circle, polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -7021,9 +5432,9 @@ var Clock7 = /* @__PURE__ */ __name((props = {}) => {
 }, "Clock7");
 
 // src/icons/Clock8.ts
-var import_vanjs_core396 = __toESM(require("vanjs-core"), 1);
+
 var Clock8 = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, polyline } = import_vanjs_core396.default.tags(svgNamespace);
+  const { circle, polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -7032,9 +5443,9 @@ var Clock8 = /* @__PURE__ */ __name((props = {}) => {
 }, "Clock8");
 
 // src/icons/Clock9.ts
-var import_vanjs_core397 = __toESM(require("vanjs-core"), 1);
+
 var Clock9 = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, polyline } = import_vanjs_core397.default.tags(svgNamespace);
+  const { circle, polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -7043,9 +5454,9 @@ var Clock9 = /* @__PURE__ */ __name((props = {}) => {
 }, "Clock9");
 
 // src/icons/ClockAlert.ts
-var import_vanjs_core398 = __toESM(require("vanjs-core"), 1);
+
 var ClockAlert = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core398.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 6v6l4 2" }),
@@ -7056,9 +5467,9 @@ var ClockAlert = /* @__PURE__ */ __name((props = {}) => {
 }, "ClockAlert");
 
 // src/icons/ClockArrowDown.ts
-var import_vanjs_core399 = __toESM(require("vanjs-core"), 1);
+
 var ClockArrowDown = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core399.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12.338 21.994A10 10 0 1 1 21.925 13.227" }),
@@ -7069,9 +5480,9 @@ var ClockArrowDown = /* @__PURE__ */ __name((props = {}) => {
 }, "ClockArrowDown");
 
 // src/icons/ClockArrowUp.ts
-var import_vanjs_core400 = __toESM(require("vanjs-core"), 1);
+
 var ClockArrowUp = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core400.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M13.228 21.925A10 10 0 1 1 21.994 12.338" }),
@@ -7082,9 +5493,9 @@ var ClockArrowUp = /* @__PURE__ */ __name((props = {}) => {
 }, "ClockArrowUp");
 
 // src/icons/Clock.ts
-var import_vanjs_core401 = __toESM(require("vanjs-core"), 1);
+
 var Clock = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, polyline } = import_vanjs_core401.default.tags(svgNamespace);
+  const { circle, polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -7093,9 +5504,9 @@ var Clock = /* @__PURE__ */ __name((props = {}) => {
 }, "Clock");
 
 // src/icons/CloudAlert.ts
-var import_vanjs_core402 = __toESM(require("vanjs-core"), 1);
+
 var CloudAlert = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core402.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 12v4" }),
@@ -7105,9 +5516,9 @@ var CloudAlert = /* @__PURE__ */ __name((props = {}) => {
 }, "CloudAlert");
 
 // src/icons/CloudCog.ts
-var import_vanjs_core403 = __toESM(require("vanjs-core"), 1);
+
 var CloudCog = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core403.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "17", "r": "3" }),
@@ -7124,9 +5535,9 @@ var CloudCog = /* @__PURE__ */ __name((props = {}) => {
 }, "CloudCog");
 
 // src/icons/CloudDownload.ts
-var import_vanjs_core404 = __toESM(require("vanjs-core"), 1);
+
 var CloudDownload = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core404.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 13v8l-4-4" }),
@@ -7138,9 +5549,9 @@ var CloudDownload = /* @__PURE__ */ __name((props = {}) => {
 }, "CloudDownload");
 
 // src/icons/CloudDrizzle.ts
-var import_vanjs_core405 = __toESM(require("vanjs-core"), 1);
+
 var CloudDrizzle = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core405.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" }),
@@ -7154,9 +5565,9 @@ var CloudDrizzle = /* @__PURE__ */ __name((props = {}) => {
 }, "CloudDrizzle");
 
 // src/icons/CloudFog.ts
-var import_vanjs_core406 = __toESM(require("vanjs-core"), 1);
+
 var CloudFog = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core406.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" }),
@@ -7166,9 +5577,9 @@ var CloudFog = /* @__PURE__ */ __name((props = {}) => {
 }, "CloudFog");
 
 // src/icons/CloudHail.ts
-var import_vanjs_core407 = __toESM(require("vanjs-core"), 1);
+
 var CloudHail = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core407.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" }),
@@ -7182,9 +5593,9 @@ var CloudHail = /* @__PURE__ */ __name((props = {}) => {
 }, "CloudHail");
 
 // src/icons/CloudLightning.ts
-var import_vanjs_core408 = __toESM(require("vanjs-core"), 1);
+
 var CloudLightning = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core408.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M6 16.326A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 .5 8.973" }),
@@ -7193,9 +5604,9 @@ var CloudLightning = /* @__PURE__ */ __name((props = {}) => {
 }, "CloudLightning");
 
 // src/icons/CloudMoonRain.ts
-var import_vanjs_core409 = __toESM(require("vanjs-core"), 1);
+
 var CloudMoonRain = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core409.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10.188 8.5A6 6 0 0 1 16 4a1 1 0 0 0 6 6 6 6 0 0 1-3 5.197" }),
@@ -7206,9 +5617,9 @@ var CloudMoonRain = /* @__PURE__ */ __name((props = {}) => {
 }, "CloudMoonRain");
 
 // src/icons/CloudMoon.ts
-var import_vanjs_core410 = __toESM(require("vanjs-core"), 1);
+
 var CloudMoon = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core410.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10.188 8.5A6 6 0 0 1 16 4a1 1 0 0 0 6 6 6 6 0 0 1-3 5.197" }),
@@ -7217,9 +5628,9 @@ var CloudMoon = /* @__PURE__ */ __name((props = {}) => {
 }, "CloudMoon");
 
 // src/icons/CloudOff.ts
-var import_vanjs_core411 = __toESM(require("vanjs-core"), 1);
+
 var CloudOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core411.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m2 2 20 20" }),
@@ -7231,9 +5642,9 @@ var CloudOff = /* @__PURE__ */ __name((props = {}) => {
 }, "CloudOff");
 
 // src/icons/CloudRainWind.ts
-var import_vanjs_core412 = __toESM(require("vanjs-core"), 1);
+
 var CloudRainWind = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core412.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" }),
@@ -7244,9 +5655,9 @@ var CloudRainWind = /* @__PURE__ */ __name((props = {}) => {
 }, "CloudRainWind");
 
 // src/icons/CloudRain.ts
-var import_vanjs_core413 = __toESM(require("vanjs-core"), 1);
+
 var CloudRain = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core413.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" }),
@@ -7257,9 +5668,9 @@ var CloudRain = /* @__PURE__ */ __name((props = {}) => {
 }, "CloudRain");
 
 // src/icons/CloudSnow.ts
-var import_vanjs_core414 = __toESM(require("vanjs-core"), 1);
+
 var CloudSnow = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core414.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" }),
@@ -7273,9 +5684,9 @@ var CloudSnow = /* @__PURE__ */ __name((props = {}) => {
 }, "CloudSnow");
 
 // src/icons/CloudSunRain.ts
-var import_vanjs_core415 = __toESM(require("vanjs-core"), 1);
+
 var CloudSunRain = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core415.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 2v2" }),
@@ -7290,9 +5701,9 @@ var CloudSunRain = /* @__PURE__ */ __name((props = {}) => {
 }, "CloudSunRain");
 
 // src/icons/CloudSun.ts
-var import_vanjs_core416 = __toESM(require("vanjs-core"), 1);
+
 var CloudSun = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core416.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 2v2" }),
@@ -7305,9 +5716,9 @@ var CloudSun = /* @__PURE__ */ __name((props = {}) => {
 }, "CloudSun");
 
 // src/icons/CloudUpload.ts
-var import_vanjs_core417 = __toESM(require("vanjs-core"), 1);
+
 var CloudUpload = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core417.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 13v8" }),
@@ -7317,9 +5728,9 @@ var CloudUpload = /* @__PURE__ */ __name((props = {}) => {
 }, "CloudUpload");
 
 // src/icons/Cloud.ts
-var import_vanjs_core418 = __toESM(require("vanjs-core"), 1);
+
 var Cloud = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core418.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" })
@@ -7327,9 +5738,9 @@ var Cloud = /* @__PURE__ */ __name((props = {}) => {
 }, "Cloud");
 
 // src/icons/Cloudy.ts
-var import_vanjs_core419 = __toESM(require("vanjs-core"), 1);
+
 var Cloudy = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core419.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M17.5 21H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" }),
@@ -7338,9 +5749,9 @@ var Cloudy = /* @__PURE__ */ __name((props = {}) => {
 }, "Cloudy");
 
 // src/icons/Clover.ts
-var import_vanjs_core420 = __toESM(require("vanjs-core"), 1);
+
 var Clover = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core420.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16.17 7.83 2 22" }),
@@ -7352,9 +5763,9 @@ var Clover = /* @__PURE__ */ __name((props = {}) => {
 }, "Clover");
 
 // src/icons/Club.ts
-var import_vanjs_core421 = __toESM(require("vanjs-core"), 1);
+
 var Club = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core421.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -7365,9 +5776,9 @@ var Club = /* @__PURE__ */ __name((props = {}) => {
 }, "Club");
 
 // src/icons/CodeXml.ts
-var import_vanjs_core422 = __toESM(require("vanjs-core"), 1);
+
 var CodeXml = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core422.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m18 16 4-4-4-4" }),
@@ -7377,9 +5788,9 @@ var CodeXml = /* @__PURE__ */ __name((props = {}) => {
 }, "CodeXml");
 
 // src/icons/Code.ts
-var import_vanjs_core423 = __toESM(require("vanjs-core"), 1);
+
 var Code = /* @__PURE__ */ __name((props = {}) => {
-  const { polyline } = import_vanjs_core423.default.tags(svgNamespace);
+  const { polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polyline({ points: "16 18 22 12 16 6" }),
@@ -7388,9 +5799,9 @@ var Code = /* @__PURE__ */ __name((props = {}) => {
 }, "Code");
 
 // src/icons/Codepen.ts
-var import_vanjs_core424 = __toESM(require("vanjs-core"), 1);
+
 var Codepen = /* @__PURE__ */ __name((props = {}) => {
-  const { polygon, line, polyline } = import_vanjs_core424.default.tags(svgNamespace);
+  const { polygon, line, polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polygon({ points: "12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2" }),
@@ -7402,9 +5813,9 @@ var Codepen = /* @__PURE__ */ __name((props = {}) => {
 }, "Codepen");
 
 // src/icons/Codesandbox.ts
-var import_vanjs_core425 = __toESM(require("vanjs-core"), 1);
+
 var Codesandbox = /* @__PURE__ */ __name((props = {}) => {
-  const { path, polyline, line } = import_vanjs_core425.default.tags(svgNamespace);
+  const { path, polyline, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -7419,9 +5830,9 @@ var Codesandbox = /* @__PURE__ */ __name((props = {}) => {
 }, "Codesandbox");
 
 // src/icons/Coffee.ts
-var import_vanjs_core426 = __toESM(require("vanjs-core"), 1);
+
 var Coffee = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core426.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 2v2" }),
@@ -7434,9 +5845,9 @@ var Coffee = /* @__PURE__ */ __name((props = {}) => {
 }, "Coffee");
 
 // src/icons/Cog.ts
-var import_vanjs_core427 = __toESM(require("vanjs-core"), 1);
+
 var Cog = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core427.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z" }),
@@ -7457,9 +5868,9 @@ var Cog = /* @__PURE__ */ __name((props = {}) => {
 }, "Cog");
 
 // src/icons/Coins.ts
-var import_vanjs_core428 = __toESM(require("vanjs-core"), 1);
+
 var Coins = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core428.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "8", cy: "8", "r": "6" }),
@@ -7470,9 +5881,9 @@ var Coins = /* @__PURE__ */ __name((props = {}) => {
 }, "Coins");
 
 // src/icons/Columns2.ts
-var import_vanjs_core429 = __toESM(require("vanjs-core"), 1);
+
 var Columns2 = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core429.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -7481,9 +5892,9 @@ var Columns2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Columns2");
 
 // src/icons/Columns3.ts
-var import_vanjs_core430 = __toESM(require("vanjs-core"), 1);
+
 var Columns3 = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core430.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -7493,9 +5904,9 @@ var Columns3 = /* @__PURE__ */ __name((props = {}) => {
 }, "Columns3");
 
 // src/icons/Columns4.ts
-var import_vanjs_core431 = __toESM(require("vanjs-core"), 1);
+
 var Columns4 = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core431.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -7506,9 +5917,9 @@ var Columns4 = /* @__PURE__ */ __name((props = {}) => {
 }, "Columns4");
 
 // src/icons/Combine.ts
-var import_vanjs_core432 = __toESM(require("vanjs-core"), 1);
+
 var Combine = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core432.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 18H5a3 3 0 0 1-3-3v-1" }),
@@ -7521,9 +5932,9 @@ var Combine = /* @__PURE__ */ __name((props = {}) => {
 }, "Combine");
 
 // src/icons/Command.ts
-var import_vanjs_core433 = __toESM(require("vanjs-core"), 1);
+
 var Command = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core433.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -7533,9 +5944,9 @@ var Command = /* @__PURE__ */ __name((props = {}) => {
 }, "Command");
 
 // src/icons/Compass.ts
-var import_vanjs_core434 = __toESM(require("vanjs-core"), 1);
+
 var Compass = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core434.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -7546,9 +5957,9 @@ var Compass = /* @__PURE__ */ __name((props = {}) => {
 }, "Compass");
 
 // src/icons/Component.ts
-var import_vanjs_core435 = __toESM(require("vanjs-core"), 1);
+
 var Component = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core435.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -7567,9 +5978,9 @@ var Component = /* @__PURE__ */ __name((props = {}) => {
 }, "Component");
 
 // src/icons/Computer.ts
-var import_vanjs_core436 = __toESM(require("vanjs-core"), 1);
+
 var Computer = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core436.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "14", height: "8", "x": "5", "y": "2", rx: "2" }),
@@ -7580,9 +5991,9 @@ var Computer = /* @__PURE__ */ __name((props = {}) => {
 }, "Computer");
 
 // src/icons/ConciergeBell.ts
-var import_vanjs_core437 = __toESM(require("vanjs-core"), 1);
+
 var ConciergeBell = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core437.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -7595,9 +6006,9 @@ var ConciergeBell = /* @__PURE__ */ __name((props = {}) => {
 }, "ConciergeBell");
 
 // src/icons/Cone.ts
-var import_vanjs_core438 = __toESM(require("vanjs-core"), 1);
+
 var Cone = /* @__PURE__ */ __name((props = {}) => {
-  const { path, ellipse } = import_vanjs_core438.default.tags(svgNamespace);
+  const { path, ellipse } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m20.9 18.55-8-15.98a1 1 0 0 0-1.8 0l-8 15.98" }),
@@ -7606,9 +6017,9 @@ var Cone = /* @__PURE__ */ __name((props = {}) => {
 }, "Cone");
 
 // src/icons/Construction.ts
-var import_vanjs_core439 = __toESM(require("vanjs-core"), 1);
+
 var Construction = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core439.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ "x": "2", "y": "6", width: "20", height: "8", rx: "1" }),
@@ -7623,9 +6034,9 @@ var Construction = /* @__PURE__ */ __name((props = {}) => {
 }, "Construction");
 
 // src/icons/ContactRound.ts
-var import_vanjs_core440 = __toESM(require("vanjs-core"), 1);
+
 var ContactRound = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle, rect } = import_vanjs_core440.default.tags(svgNamespace);
+  const { path, circle, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 2v2" }),
@@ -7637,9 +6048,9 @@ var ContactRound = /* @__PURE__ */ __name((props = {}) => {
 }, "ContactRound");
 
 // src/icons/Contact.ts
-var import_vanjs_core441 = __toESM(require("vanjs-core"), 1);
+
 var Contact = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle, rect } = import_vanjs_core441.default.tags(svgNamespace);
+  const { path, circle, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 2v2" }),
@@ -7651,9 +6062,9 @@ var Contact = /* @__PURE__ */ __name((props = {}) => {
 }, "Contact");
 
 // src/icons/Container.ts
-var import_vanjs_core442 = __toESM(require("vanjs-core"), 1);
+
 var Container = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core442.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -7667,9 +6078,9 @@ var Container = /* @__PURE__ */ __name((props = {}) => {
 }, "Container");
 
 // src/icons/Contrast.ts
-var import_vanjs_core443 = __toESM(require("vanjs-core"), 1);
+
 var Contrast = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core443.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -7678,9 +6089,9 @@ var Contrast = /* @__PURE__ */ __name((props = {}) => {
 }, "Contrast");
 
 // src/icons/Cookie.ts
-var import_vanjs_core444 = __toESM(require("vanjs-core"), 1);
+
 var Cookie = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core444.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5" }),
@@ -7693,9 +6104,9 @@ var Cookie = /* @__PURE__ */ __name((props = {}) => {
 }, "Cookie");
 
 // src/icons/CookingPot.ts
-var import_vanjs_core445 = __toESM(require("vanjs-core"), 1);
+
 var CookingPot = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core445.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 12h20" }),
@@ -7708,9 +6119,9 @@ var CookingPot = /* @__PURE__ */ __name((props = {}) => {
 }, "CookingPot");
 
 // src/icons/CopyCheck.ts
-var import_vanjs_core446 = __toESM(require("vanjs-core"), 1);
+
 var CopyCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core446.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m12 15 2 2 4-4" }),
@@ -7720,9 +6131,9 @@ var CopyCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "CopyCheck");
 
 // src/icons/CopyMinus.ts
-var import_vanjs_core447 = __toESM(require("vanjs-core"), 1);
+
 var CopyMinus = /* @__PURE__ */ __name((props = {}) => {
-  const { line, rect, path } = import_vanjs_core447.default.tags(svgNamespace);
+  const { line, rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "12", x2: "18", y1: "15", y2: "15" }),
@@ -7732,9 +6143,9 @@ var CopyMinus = /* @__PURE__ */ __name((props = {}) => {
 }, "CopyMinus");
 
 // src/icons/CopyPlus.ts
-var import_vanjs_core448 = __toESM(require("vanjs-core"), 1);
+
 var CopyPlus = /* @__PURE__ */ __name((props = {}) => {
-  const { line, rect, path } = import_vanjs_core448.default.tags(svgNamespace);
+  const { line, rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "15", x2: "15", y1: "12", y2: "18" }),
@@ -7745,9 +6156,9 @@ var CopyPlus = /* @__PURE__ */ __name((props = {}) => {
 }, "CopyPlus");
 
 // src/icons/CopySlash.ts
-var import_vanjs_core449 = __toESM(require("vanjs-core"), 1);
+
 var CopySlash = /* @__PURE__ */ __name((props = {}) => {
-  const { line, rect, path } = import_vanjs_core449.default.tags(svgNamespace);
+  const { line, rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "12", x2: "18", y1: "18", y2: "12" }),
@@ -7757,9 +6168,9 @@ var CopySlash = /* @__PURE__ */ __name((props = {}) => {
 }, "CopySlash");
 
 // src/icons/CopyX.ts
-var import_vanjs_core450 = __toESM(require("vanjs-core"), 1);
+
 var CopyX = /* @__PURE__ */ __name((props = {}) => {
-  const { line, rect, path } = import_vanjs_core450.default.tags(svgNamespace);
+  const { line, rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "12", x2: "18", y1: "12", y2: "18" }),
@@ -7770,9 +6181,9 @@ var CopyX = /* @__PURE__ */ __name((props = {}) => {
 }, "CopyX");
 
 // src/icons/Copy.ts
-var import_vanjs_core451 = __toESM(require("vanjs-core"), 1);
+
 var Copy = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core451.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "14", height: "14", "x": "8", "y": "8", rx: "2", ry: "2" }),
@@ -7781,9 +6192,9 @@ var Copy = /* @__PURE__ */ __name((props = {}) => {
 }, "Copy");
 
 // src/icons/Copyleft.ts
-var import_vanjs_core452 = __toESM(require("vanjs-core"), 1);
+
 var Copyleft = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core452.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -7792,9 +6203,9 @@ var Copyleft = /* @__PURE__ */ __name((props = {}) => {
 }, "Copyleft");
 
 // src/icons/Copyright.ts
-var import_vanjs_core453 = __toESM(require("vanjs-core"), 1);
+
 var Copyright = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core453.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -7803,9 +6214,9 @@ var Copyright = /* @__PURE__ */ __name((props = {}) => {
 }, "Copyright");
 
 // src/icons/CornerDownLeft.ts
-var import_vanjs_core454 = __toESM(require("vanjs-core"), 1);
+
 var CornerDownLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { polyline, path } = import_vanjs_core454.default.tags(svgNamespace);
+  const { polyline, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polyline({ points: "9 10 4 15 9 20" }),
@@ -7814,9 +6225,9 @@ var CornerDownLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "CornerDownLeft");
 
 // src/icons/CornerDownRight.ts
-var import_vanjs_core455 = __toESM(require("vanjs-core"), 1);
+
 var CornerDownRight = /* @__PURE__ */ __name((props = {}) => {
-  const { polyline, path } = import_vanjs_core455.default.tags(svgNamespace);
+  const { polyline, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polyline({ points: "15 10 20 15 15 20" }),
@@ -7825,9 +6236,9 @@ var CornerDownRight = /* @__PURE__ */ __name((props = {}) => {
 }, "CornerDownRight");
 
 // src/icons/CornerLeftDown.ts
-var import_vanjs_core456 = __toESM(require("vanjs-core"), 1);
+
 var CornerLeftDown = /* @__PURE__ */ __name((props = {}) => {
-  const { polyline, path } = import_vanjs_core456.default.tags(svgNamespace);
+  const { polyline, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polyline({ points: "14 15 9 20 4 15" }),
@@ -7836,9 +6247,9 @@ var CornerLeftDown = /* @__PURE__ */ __name((props = {}) => {
 }, "CornerLeftDown");
 
 // src/icons/CornerLeftUp.ts
-var import_vanjs_core457 = __toESM(require("vanjs-core"), 1);
+
 var CornerLeftUp = /* @__PURE__ */ __name((props = {}) => {
-  const { polyline, path } = import_vanjs_core457.default.tags(svgNamespace);
+  const { polyline, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polyline({ points: "14 9 9 4 4 9" }),
@@ -7847,9 +6258,9 @@ var CornerLeftUp = /* @__PURE__ */ __name((props = {}) => {
 }, "CornerLeftUp");
 
 // src/icons/CornerRightDown.ts
-var import_vanjs_core458 = __toESM(require("vanjs-core"), 1);
+
 var CornerRightDown = /* @__PURE__ */ __name((props = {}) => {
-  const { polyline, path } = import_vanjs_core458.default.tags(svgNamespace);
+  const { polyline, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polyline({ points: "10 15 15 20 20 15" }),
@@ -7858,9 +6269,9 @@ var CornerRightDown = /* @__PURE__ */ __name((props = {}) => {
 }, "CornerRightDown");
 
 // src/icons/CornerRightUp.ts
-var import_vanjs_core459 = __toESM(require("vanjs-core"), 1);
+
 var CornerRightUp = /* @__PURE__ */ __name((props = {}) => {
-  const { polyline, path } = import_vanjs_core459.default.tags(svgNamespace);
+  const { polyline, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polyline({ points: "10 9 15 4 20 9" }),
@@ -7869,9 +6280,9 @@ var CornerRightUp = /* @__PURE__ */ __name((props = {}) => {
 }, "CornerRightUp");
 
 // src/icons/CornerUpLeft.ts
-var import_vanjs_core460 = __toESM(require("vanjs-core"), 1);
+
 var CornerUpLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { polyline, path } = import_vanjs_core460.default.tags(svgNamespace);
+  const { polyline, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polyline({ points: "9 14 4 9 9 4" }),
@@ -7880,9 +6291,9 @@ var CornerUpLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "CornerUpLeft");
 
 // src/icons/CornerUpRight.ts
-var import_vanjs_core461 = __toESM(require("vanjs-core"), 1);
+
 var CornerUpRight = /* @__PURE__ */ __name((props = {}) => {
-  const { polyline, path } = import_vanjs_core461.default.tags(svgNamespace);
+  const { polyline, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polyline({ points: "15 14 20 9 15 4" }),
@@ -7891,9 +6302,9 @@ var CornerUpRight = /* @__PURE__ */ __name((props = {}) => {
 }, "CornerUpRight");
 
 // src/icons/Cpu.ts
-var import_vanjs_core462 = __toESM(require("vanjs-core"), 1);
+
 var Cpu = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core462.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "16", height: "16", "x": "4", "y": "4", rx: "2" }),
@@ -7910,9 +6321,9 @@ var Cpu = /* @__PURE__ */ __name((props = {}) => {
 }, "Cpu");
 
 // src/icons/CreativeCommons.ts
-var import_vanjs_core463 = __toESM(require("vanjs-core"), 1);
+
 var CreativeCommons = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core463.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -7926,9 +6337,9 @@ var CreativeCommons = /* @__PURE__ */ __name((props = {}) => {
 }, "CreativeCommons");
 
 // src/icons/CreditCard.ts
-var import_vanjs_core464 = __toESM(require("vanjs-core"), 1);
+
 var CreditCard = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, line } = import_vanjs_core464.default.tags(svgNamespace);
+  const { rect, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "20", height: "14", "x": "2", "y": "5", rx: "2" }),
@@ -7937,9 +6348,9 @@ var CreditCard = /* @__PURE__ */ __name((props = {}) => {
 }, "CreditCard");
 
 // src/icons/Croissant.ts
-var import_vanjs_core465 = __toESM(require("vanjs-core"), 1);
+
 var Croissant = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core465.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -7957,9 +6368,9 @@ var Croissant = /* @__PURE__ */ __name((props = {}) => {
 }, "Croissant");
 
 // src/icons/Crop.ts
-var import_vanjs_core466 = __toESM(require("vanjs-core"), 1);
+
 var Crop = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core466.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M6 2v14a2 2 0 0 0 2 2h14" }),
@@ -7968,9 +6379,9 @@ var Crop = /* @__PURE__ */ __name((props = {}) => {
 }, "Crop");
 
 // src/icons/Cross.ts
-var import_vanjs_core467 = __toESM(require("vanjs-core"), 1);
+
 var Cross = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core467.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -7980,9 +6391,9 @@ var Cross = /* @__PURE__ */ __name((props = {}) => {
 }, "Cross");
 
 // src/icons/Crosshair.ts
-var import_vanjs_core468 = __toESM(require("vanjs-core"), 1);
+
 var Crosshair = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, line } = import_vanjs_core468.default.tags(svgNamespace);
+  const { circle, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -7994,9 +6405,9 @@ var Crosshair = /* @__PURE__ */ __name((props = {}) => {
 }, "Crosshair");
 
 // src/icons/Crown.ts
-var import_vanjs_core469 = __toESM(require("vanjs-core"), 1);
+
 var Crown = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core469.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -8007,9 +6418,9 @@ var Crown = /* @__PURE__ */ __name((props = {}) => {
 }, "Crown");
 
 // src/icons/Cuboid.ts
-var import_vanjs_core470 = __toESM(require("vanjs-core"), 1);
+
 var Cuboid = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core470.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -8021,9 +6432,9 @@ var Cuboid = /* @__PURE__ */ __name((props = {}) => {
 }, "Cuboid");
 
 // src/icons/CupSoda.ts
-var import_vanjs_core471 = __toESM(require("vanjs-core"), 1);
+
 var CupSoda = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core471.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -8036,9 +6447,9 @@ var CupSoda = /* @__PURE__ */ __name((props = {}) => {
 }, "CupSoda");
 
 // src/icons/Currency.ts
-var import_vanjs_core472 = __toESM(require("vanjs-core"), 1);
+
 var Currency = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, line } = import_vanjs_core472.default.tags(svgNamespace);
+  const { circle, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "8" }),
@@ -8050,9 +6461,9 @@ var Currency = /* @__PURE__ */ __name((props = {}) => {
 }, "Currency");
 
 // src/icons/Cylinder.ts
-var import_vanjs_core473 = __toESM(require("vanjs-core"), 1);
+
 var Cylinder = /* @__PURE__ */ __name((props = {}) => {
-  const { ellipse, path } = import_vanjs_core473.default.tags(svgNamespace);
+  const { ellipse, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     ellipse({ cx: "12", cy: "5", rx: "9", ry: "3" }),
@@ -8061,9 +6472,9 @@ var Cylinder = /* @__PURE__ */ __name((props = {}) => {
 }, "Cylinder");
 
 // src/icons/Dam.ts
-var import_vanjs_core474 = __toESM(require("vanjs-core"), 1);
+
 var Dam = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core474.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -8083,9 +6494,9 @@ var Dam = /* @__PURE__ */ __name((props = {}) => {
 }, "Dam");
 
 // src/icons/DatabaseBackup.ts
-var import_vanjs_core475 = __toESM(require("vanjs-core"), 1);
+
 var DatabaseBackup = /* @__PURE__ */ __name((props = {}) => {
-  const { ellipse, path } = import_vanjs_core475.default.tags(svgNamespace);
+  const { ellipse, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     ellipse({ cx: "12", cy: "5", rx: "9", ry: "3" }),
@@ -8100,9 +6511,9 @@ var DatabaseBackup = /* @__PURE__ */ __name((props = {}) => {
 }, "DatabaseBackup");
 
 // src/icons/DatabaseZap.ts
-var import_vanjs_core476 = __toESM(require("vanjs-core"), 1);
+
 var DatabaseZap = /* @__PURE__ */ __name((props = {}) => {
-  const { ellipse, path } = import_vanjs_core476.default.tags(svgNamespace);
+  const { ellipse, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     ellipse({ cx: "12", cy: "5", rx: "9", ry: "3" }),
@@ -8114,9 +6525,9 @@ var DatabaseZap = /* @__PURE__ */ __name((props = {}) => {
 }, "DatabaseZap");
 
 // src/icons/Database.ts
-var import_vanjs_core477 = __toESM(require("vanjs-core"), 1);
+
 var Database = /* @__PURE__ */ __name((props = {}) => {
-  const { ellipse, path } = import_vanjs_core477.default.tags(svgNamespace);
+  const { ellipse, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     ellipse({ cx: "12", cy: "5", rx: "9", ry: "3" }),
@@ -8126,9 +6537,9 @@ var Database = /* @__PURE__ */ __name((props = {}) => {
 }, "Database");
 
 // src/icons/Delete.ts
-var import_vanjs_core478 = __toESM(require("vanjs-core"), 1);
+
 var Delete = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core478.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -8140,9 +6551,9 @@ var Delete = /* @__PURE__ */ __name((props = {}) => {
 }, "Delete");
 
 // src/icons/Dessert.ts
-var import_vanjs_core479 = __toESM(require("vanjs-core"), 1);
+
 var Dessert = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core479.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "4", "r": "2" }),
@@ -8154,9 +6565,9 @@ var Dessert = /* @__PURE__ */ __name((props = {}) => {
 }, "Dessert");
 
 // src/icons/Diameter.ts
-var import_vanjs_core480 = __toESM(require("vanjs-core"), 1);
+
 var Diameter = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core480.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "19", cy: "19", "r": "2" }),
@@ -8168,9 +6579,9 @@ var Diameter = /* @__PURE__ */ __name((props = {}) => {
 }, "Diameter");
 
 // src/icons/DiamondMinus.ts
-var import_vanjs_core481 = __toESM(require("vanjs-core"), 1);
+
 var DiamondMinus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core481.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -8181,9 +6592,9 @@ var DiamondMinus = /* @__PURE__ */ __name((props = {}) => {
 }, "DiamondMinus");
 
 // src/icons/DiamondPercent.ts
-var import_vanjs_core482 = __toESM(require("vanjs-core"), 1);
+
 var DiamondPercent = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core482.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -8196,9 +6607,9 @@ var DiamondPercent = /* @__PURE__ */ __name((props = {}) => {
 }, "DiamondPercent");
 
 // src/icons/DiamondPlus.ts
-var import_vanjs_core483 = __toESM(require("vanjs-core"), 1);
+
 var DiamondPlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core483.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 8v8" }),
@@ -8210,9 +6621,9 @@ var DiamondPlus = /* @__PURE__ */ __name((props = {}) => {
 }, "DiamondPlus");
 
 // src/icons/Diamond.ts
-var import_vanjs_core484 = __toESM(require("vanjs-core"), 1);
+
 var Diamond = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core484.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -8222,9 +6633,9 @@ var Diamond = /* @__PURE__ */ __name((props = {}) => {
 }, "Diamond");
 
 // src/icons/Dice1.ts
-var import_vanjs_core485 = __toESM(require("vanjs-core"), 1);
+
 var Dice1 = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core485.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2", ry: "2" }),
@@ -8233,9 +6644,9 @@ var Dice1 = /* @__PURE__ */ __name((props = {}) => {
 }, "Dice1");
 
 // src/icons/Dice2.ts
-var import_vanjs_core486 = __toESM(require("vanjs-core"), 1);
+
 var Dice2 = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core486.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2", ry: "2" }),
@@ -8245,9 +6656,9 @@ var Dice2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Dice2");
 
 // src/icons/Dice3.ts
-var import_vanjs_core487 = __toESM(require("vanjs-core"), 1);
+
 var Dice3 = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core487.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2", ry: "2" }),
@@ -8258,9 +6669,9 @@ var Dice3 = /* @__PURE__ */ __name((props = {}) => {
 }, "Dice3");
 
 // src/icons/Dice4.ts
-var import_vanjs_core488 = __toESM(require("vanjs-core"), 1);
+
 var Dice4 = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core488.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2", ry: "2" }),
@@ -8272,9 +6683,9 @@ var Dice4 = /* @__PURE__ */ __name((props = {}) => {
 }, "Dice4");
 
 // src/icons/Dice5.ts
-var import_vanjs_core489 = __toESM(require("vanjs-core"), 1);
+
 var Dice5 = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core489.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2", ry: "2" }),
@@ -8287,9 +6698,9 @@ var Dice5 = /* @__PURE__ */ __name((props = {}) => {
 }, "Dice5");
 
 // src/icons/Dice6.ts
-var import_vanjs_core490 = __toESM(require("vanjs-core"), 1);
+
 var Dice6 = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core490.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2", ry: "2" }),
@@ -8303,9 +6714,9 @@ var Dice6 = /* @__PURE__ */ __name((props = {}) => {
 }, "Dice6");
 
 // src/icons/Dices.ts
-var import_vanjs_core491 = __toESM(require("vanjs-core"), 1);
+
 var Dices = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core491.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "12", height: "12", "x": "2", "y": "10", rx: "2", ry: "2" }),
@@ -8320,9 +6731,9 @@ var Dices = /* @__PURE__ */ __name((props = {}) => {
 }, "Dices");
 
 // src/icons/Diff.ts
-var import_vanjs_core492 = __toESM(require("vanjs-core"), 1);
+
 var Diff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core492.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 3v14" }),
@@ -8332,9 +6743,9 @@ var Diff = /* @__PURE__ */ __name((props = {}) => {
 }, "Diff");
 
 // src/icons/Disc2.ts
-var import_vanjs_core493 = __toESM(require("vanjs-core"), 1);
+
 var Disc2 = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core493.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -8344,9 +6755,9 @@ var Disc2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Disc2");
 
 // src/icons/Disc3.ts
-var import_vanjs_core494 = __toESM(require("vanjs-core"), 1);
+
 var Disc3 = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core494.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -8357,9 +6768,9 @@ var Disc3 = /* @__PURE__ */ __name((props = {}) => {
 }, "Disc3");
 
 // src/icons/DiscAlbum.ts
-var import_vanjs_core495 = __toESM(require("vanjs-core"), 1);
+
 var DiscAlbum = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, circle, path } = import_vanjs_core495.default.tags(svgNamespace);
+  const { rect, circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -8369,9 +6780,9 @@ var DiscAlbum = /* @__PURE__ */ __name((props = {}) => {
 }, "DiscAlbum");
 
 // src/icons/Disc.ts
-var import_vanjs_core496 = __toESM(require("vanjs-core"), 1);
+
 var Disc = /* @__PURE__ */ __name((props = {}) => {
-  const { circle } = import_vanjs_core496.default.tags(svgNamespace);
+  const { circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -8380,9 +6791,9 @@ var Disc = /* @__PURE__ */ __name((props = {}) => {
 }, "Disc");
 
 // src/icons/Divide.ts
-var import_vanjs_core497 = __toESM(require("vanjs-core"), 1);
+
 var Divide = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, line } = import_vanjs_core497.default.tags(svgNamespace);
+  const { circle, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "6", "r": "1" }),
@@ -8392,9 +6803,9 @@ var Divide = /* @__PURE__ */ __name((props = {}) => {
 }, "Divide");
 
 // src/icons/DnaOff.ts
-var import_vanjs_core498 = __toESM(require("vanjs-core"), 1);
+
 var DnaOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core498.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2c-1.35 1.5-2.092 3-2.5 4.5L14 8" }),
@@ -8411,9 +6822,9 @@ var DnaOff = /* @__PURE__ */ __name((props = {}) => {
 }, "DnaOff");
 
 // src/icons/Dna.ts
-var import_vanjs_core499 = __toESM(require("vanjs-core"), 1);
+
 var Dna = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core499.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m10 16 1.5 1.5" }),
@@ -8431,9 +6842,9 @@ var Dna = /* @__PURE__ */ __name((props = {}) => {
 }, "Dna");
 
 // src/icons/Dock.ts
-var import_vanjs_core500 = __toESM(require("vanjs-core"), 1);
+
 var Dock = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core500.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 8h20" }),
@@ -8443,9 +6854,9 @@ var Dock = /* @__PURE__ */ __name((props = {}) => {
 }, "Dock");
 
 // src/icons/Dog.ts
-var import_vanjs_core501 = __toESM(require("vanjs-core"), 1);
+
 var Dog = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core501.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11.25 16.25h1.5L12 17z" }),
@@ -8461,9 +6872,9 @@ var Dog = /* @__PURE__ */ __name((props = {}) => {
 }, "Dog");
 
 // src/icons/DollarSign.ts
-var import_vanjs_core502 = __toESM(require("vanjs-core"), 1);
+
 var DollarSign = /* @__PURE__ */ __name((props = {}) => {
-  const { line, path } = import_vanjs_core502.default.tags(svgNamespace);
+  const { line, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "12", x2: "12", y1: "2", y2: "22" }),
@@ -8472,9 +6883,9 @@ var DollarSign = /* @__PURE__ */ __name((props = {}) => {
 }, "DollarSign");
 
 // src/icons/Donut.ts
-var import_vanjs_core503 = __toESM(require("vanjs-core"), 1);
+
 var Donut = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core503.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -8485,9 +6896,9 @@ var Donut = /* @__PURE__ */ __name((props = {}) => {
 }, "Donut");
 
 // src/icons/DoorClosed.ts
-var import_vanjs_core504 = __toESM(require("vanjs-core"), 1);
+
 var DoorClosed = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core504.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M18 20V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14" }),
@@ -8497,9 +6908,9 @@ var DoorClosed = /* @__PURE__ */ __name((props = {}) => {
 }, "DoorClosed");
 
 // src/icons/DoorOpen.ts
-var import_vanjs_core505 = __toESM(require("vanjs-core"), 1);
+
 var DoorOpen = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core505.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M13 4h3a2 2 0 0 1 2 2v14" }),
@@ -8513,9 +6924,9 @@ var DoorOpen = /* @__PURE__ */ __name((props = {}) => {
 }, "DoorOpen");
 
 // src/icons/Dot.ts
-var import_vanjs_core506 = __toESM(require("vanjs-core"), 1);
+
 var Dot = /* @__PURE__ */ __name((props = {}) => {
-  const { circle } = import_vanjs_core506.default.tags(svgNamespace);
+  const { circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12.1", cy: "12.1", "r": "1" })
@@ -8523,9 +6934,9 @@ var Dot = /* @__PURE__ */ __name((props = {}) => {
 }, "Dot");
 
 // src/icons/Download.ts
-var import_vanjs_core507 = __toESM(require("vanjs-core"), 1);
+
 var Download = /* @__PURE__ */ __name((props = {}) => {
-  const { path, polyline, line } = import_vanjs_core507.default.tags(svgNamespace);
+  const { path, polyline, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" }),
@@ -8535,9 +6946,9 @@ var Download = /* @__PURE__ */ __name((props = {}) => {
 }, "Download");
 
 // src/icons/DraftingCompass.ts
-var import_vanjs_core508 = __toESM(require("vanjs-core"), 1);
+
 var DraftingCompass = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core508.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m12.99 6.74 1.93 3.44" }),
@@ -8549,9 +6960,9 @@ var DraftingCompass = /* @__PURE__ */ __name((props = {}) => {
 }, "DraftingCompass");
 
 // src/icons/Drama.ts
-var import_vanjs_core509 = __toESM(require("vanjs-core"), 1);
+
 var Drama = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core509.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 11h.01" }),
@@ -8568,9 +6979,9 @@ var Drama = /* @__PURE__ */ __name((props = {}) => {
 }, "Drama");
 
 // src/icons/Dribbble.ts
-var import_vanjs_core510 = __toESM(require("vanjs-core"), 1);
+
 var Dribbble = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core510.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -8581,9 +6992,9 @@ var Dribbble = /* @__PURE__ */ __name((props = {}) => {
 }, "Dribbble");
 
 // src/icons/Drill.ts
-var import_vanjs_core511 = __toESM(require("vanjs-core"), 1);
+
 var Drill = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core511.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -8600,9 +7011,9 @@ var Drill = /* @__PURE__ */ __name((props = {}) => {
 }, "Drill");
 
 // src/icons/DropletOff.ts
-var import_vanjs_core512 = __toESM(require("vanjs-core"), 1);
+
 var DropletOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core512.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -8616,9 +7027,9 @@ var DropletOff = /* @__PURE__ */ __name((props = {}) => {
 }, "DropletOff");
 
 // src/icons/Droplet.ts
-var import_vanjs_core513 = __toESM(require("vanjs-core"), 1);
+
 var Droplet = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core513.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -8628,9 +7039,9 @@ var Droplet = /* @__PURE__ */ __name((props = {}) => {
 }, "Droplet");
 
 // src/icons/Droplets.ts
-var import_vanjs_core514 = __toESM(require("vanjs-core"), 1);
+
 var Droplets = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core514.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -8643,9 +7054,9 @@ var Droplets = /* @__PURE__ */ __name((props = {}) => {
 }, "Droplets");
 
 // src/icons/Drum.ts
-var import_vanjs_core515 = __toESM(require("vanjs-core"), 1);
+
 var Drum = /* @__PURE__ */ __name((props = {}) => {
-  const { path, ellipse } = import_vanjs_core515.default.tags(svgNamespace);
+  const { path, ellipse } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m2 2 8 8" }),
@@ -8659,9 +7070,9 @@ var Drum = /* @__PURE__ */ __name((props = {}) => {
 }, "Drum");
 
 // src/icons/Drumstick.ts
-var import_vanjs_core516 = __toESM(require("vanjs-core"), 1);
+
 var Drumstick = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core516.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -8674,9 +7085,9 @@ var Drumstick = /* @__PURE__ */ __name((props = {}) => {
 }, "Drumstick");
 
 // src/icons/Dumbbell.ts
-var import_vanjs_core517 = __toESM(require("vanjs-core"), 1);
+
 var Dumbbell = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core517.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M14.4 14.4 9.6 9.6" }),
@@ -8692,9 +7103,9 @@ var Dumbbell = /* @__PURE__ */ __name((props = {}) => {
 }, "Dumbbell");
 
 // src/icons/EarOff.ts
-var import_vanjs_core518 = __toESM(require("vanjs-core"), 1);
+
 var EarOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core518.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M6 18.5a3.5 3.5 0 1 0 7 0c0-1.57.92-2.52 2.04-3.46" }),
@@ -8706,9 +7117,9 @@ var EarOff = /* @__PURE__ */ __name((props = {}) => {
 }, "EarOff");
 
 // src/icons/Ear.ts
-var import_vanjs_core519 = __toESM(require("vanjs-core"), 1);
+
 var Ear = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core519.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0" }),
@@ -8717,9 +7128,9 @@ var Ear = /* @__PURE__ */ __name((props = {}) => {
 }, "Ear");
 
 // src/icons/EarthLock.ts
-var import_vanjs_core520 = __toESM(require("vanjs-core"), 1);
+
 var EarthLock = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core520.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M7 3.34V5a3 3 0 0 0 3 3" }),
@@ -8734,9 +7145,9 @@ var EarthLock = /* @__PURE__ */ __name((props = {}) => {
 }, "EarthLock");
 
 // src/icons/Earth.ts
-var import_vanjs_core521 = __toESM(require("vanjs-core"), 1);
+
 var Earth = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core521.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21.54 15H17a2 2 0 0 0-2 2v4.54" }),
@@ -8751,9 +7162,9 @@ var Earth = /* @__PURE__ */ __name((props = {}) => {
 }, "Earth");
 
 // src/icons/Eclipse.ts
-var import_vanjs_core522 = __toESM(require("vanjs-core"), 1);
+
 var Eclipse = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core522.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -8762,9 +7173,9 @@ var Eclipse = /* @__PURE__ */ __name((props = {}) => {
 }, "Eclipse");
 
 // src/icons/EggFried.ts
-var import_vanjs_core523 = __toESM(require("vanjs-core"), 1);
+
 var EggFried = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core523.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "11.5", cy: "12.5", "r": "3.5" }),
@@ -8775,9 +7186,9 @@ var EggFried = /* @__PURE__ */ __name((props = {}) => {
 }, "EggFried");
 
 // src/icons/EggOff.ts
-var import_vanjs_core524 = __toESM(require("vanjs-core"), 1);
+
 var EggOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core524.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -8791,9 +7202,9 @@ var EggOff = /* @__PURE__ */ __name((props = {}) => {
 }, "EggOff");
 
 // src/icons/Egg.ts
-var import_vanjs_core525 = __toESM(require("vanjs-core"), 1);
+
 var Egg = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core525.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -8803,9 +7214,9 @@ var Egg = /* @__PURE__ */ __name((props = {}) => {
 }, "Egg");
 
 // src/icons/EllipsisVertical.ts
-var import_vanjs_core526 = __toESM(require("vanjs-core"), 1);
+
 var EllipsisVertical = /* @__PURE__ */ __name((props = {}) => {
-  const { circle } = import_vanjs_core526.default.tags(svgNamespace);
+  const { circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "1" }),
@@ -8815,9 +7226,9 @@ var EllipsisVertical = /* @__PURE__ */ __name((props = {}) => {
 }, "EllipsisVertical");
 
 // src/icons/Ellipsis.ts
-var import_vanjs_core527 = __toESM(require("vanjs-core"), 1);
+
 var Ellipsis = /* @__PURE__ */ __name((props = {}) => {
-  const { circle } = import_vanjs_core527.default.tags(svgNamespace);
+  const { circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "1" }),
@@ -8827,9 +7238,9 @@ var Ellipsis = /* @__PURE__ */ __name((props = {}) => {
 }, "Ellipsis");
 
 // src/icons/EqualApproximately.ts
-var import_vanjs_core528 = __toESM(require("vanjs-core"), 1);
+
 var EqualApproximately = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core528.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M5 15a6.5 6.5 0 0 1 7 0 6.5 6.5 0 0 0 7 0" }),
@@ -8838,9 +7249,9 @@ var EqualApproximately = /* @__PURE__ */ __name((props = {}) => {
 }, "EqualApproximately");
 
 // src/icons/EqualNot.ts
-var import_vanjs_core529 = __toESM(require("vanjs-core"), 1);
+
 var EqualNot = /* @__PURE__ */ __name((props = {}) => {
-  const { line } = import_vanjs_core529.default.tags(svgNamespace);
+  const { line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "5", x2: "19", y1: "9", y2: "9" }),
@@ -8850,9 +7261,9 @@ var EqualNot = /* @__PURE__ */ __name((props = {}) => {
 }, "EqualNot");
 
 // src/icons/Equal.ts
-var import_vanjs_core530 = __toESM(require("vanjs-core"), 1);
+
 var Equal = /* @__PURE__ */ __name((props = {}) => {
-  const { line } = import_vanjs_core530.default.tags(svgNamespace);
+  const { line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "5", x2: "19", y1: "9", y2: "9" }),
@@ -8861,9 +7272,9 @@ var Equal = /* @__PURE__ */ __name((props = {}) => {
 }, "Equal");
 
 // src/icons/Eraser.ts
-var import_vanjs_core531 = __toESM(require("vanjs-core"), 1);
+
 var Eraser = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core531.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -8875,9 +7286,9 @@ var Eraser = /* @__PURE__ */ __name((props = {}) => {
 }, "Eraser");
 
 // src/icons/EthernetPort.ts
-var import_vanjs_core532 = __toESM(require("vanjs-core"), 1);
+
 var EthernetPort = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core532.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -8891,9 +7302,9 @@ var EthernetPort = /* @__PURE__ */ __name((props = {}) => {
 }, "EthernetPort");
 
 // src/icons/Euro.ts
-var import_vanjs_core533 = __toESM(require("vanjs-core"), 1);
+
 var Euro = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core533.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 10h12" }),
@@ -8905,9 +7316,9 @@ var Euro = /* @__PURE__ */ __name((props = {}) => {
 }, "Euro");
 
 // src/icons/Expand.ts
-var import_vanjs_core534 = __toESM(require("vanjs-core"), 1);
+
 var Expand = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core534.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m15 15 6 6" }),
@@ -8922,9 +7333,9 @@ var Expand = /* @__PURE__ */ __name((props = {}) => {
 }, "Expand");
 
 // src/icons/ExternalLink.ts
-var import_vanjs_core535 = __toESM(require("vanjs-core"), 1);
+
 var ExternalLink = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core535.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 3h6v6" }),
@@ -8934,9 +7345,9 @@ var ExternalLink = /* @__PURE__ */ __name((props = {}) => {
 }, "ExternalLink");
 
 // src/icons/EyeClosed.ts
-var import_vanjs_core536 = __toESM(require("vanjs-core"), 1);
+
 var EyeClosed = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core536.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m15 18-.722-3.25" }),
@@ -8948,9 +7359,9 @@ var EyeClosed = /* @__PURE__ */ __name((props = {}) => {
 }, "EyeClosed");
 
 // src/icons/EyeOff.ts
-var import_vanjs_core537 = __toESM(require("vanjs-core"), 1);
+
 var EyeOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core537.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -8965,9 +7376,9 @@ var EyeOff = /* @__PURE__ */ __name((props = {}) => {
 }, "EyeOff");
 
 // src/icons/Eye.ts
-var import_vanjs_core538 = __toESM(require("vanjs-core"), 1);
+
 var Eye = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core538.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -8978,9 +7389,9 @@ var Eye = /* @__PURE__ */ __name((props = {}) => {
 }, "Eye");
 
 // src/icons/Facebook.ts
-var import_vanjs_core539 = __toESM(require("vanjs-core"), 1);
+
 var Facebook = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core539.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -8990,9 +7401,9 @@ var Facebook = /* @__PURE__ */ __name((props = {}) => {
 }, "Facebook");
 
 // src/icons/Factory.ts
-var import_vanjs_core540 = __toESM(require("vanjs-core"), 1);
+
 var Factory = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core540.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -9005,9 +7416,9 @@ var Factory = /* @__PURE__ */ __name((props = {}) => {
 }, "Factory");
 
 // src/icons/Fan.ts
-var import_vanjs_core541 = __toESM(require("vanjs-core"), 1);
+
 var Fan = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core541.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -9018,9 +7429,9 @@ var Fan = /* @__PURE__ */ __name((props = {}) => {
 }, "Fan");
 
 // src/icons/FastForward.ts
-var import_vanjs_core542 = __toESM(require("vanjs-core"), 1);
+
 var FastForward = /* @__PURE__ */ __name((props = {}) => {
-  const { polygon } = import_vanjs_core542.default.tags(svgNamespace);
+  const { polygon } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polygon({ points: "13 19 22 12 13 5 13 19" }),
@@ -9029,9 +7440,9 @@ var FastForward = /* @__PURE__ */ __name((props = {}) => {
 }, "FastForward");
 
 // src/icons/Feather.ts
-var import_vanjs_core543 = __toESM(require("vanjs-core"), 1);
+
 var Feather = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core543.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -9043,9 +7454,9 @@ var Feather = /* @__PURE__ */ __name((props = {}) => {
 }, "Feather");
 
 // src/icons/Fence.ts
-var import_vanjs_core544 = __toESM(require("vanjs-core"), 1);
+
 var Fence = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core544.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 3 2 5v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z" }),
@@ -9059,9 +7470,9 @@ var Fence = /* @__PURE__ */ __name((props = {}) => {
 }, "Fence");
 
 // src/icons/FerrisWheel.ts
-var import_vanjs_core545 = __toESM(require("vanjs-core"), 1);
+
 var FerrisWheel = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core545.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "2" }),
@@ -9077,9 +7488,9 @@ var FerrisWheel = /* @__PURE__ */ __name((props = {}) => {
 }, "FerrisWheel");
 
 // src/icons/Figma.ts
-var import_vanjs_core546 = __toESM(require("vanjs-core"), 1);
+
 var Figma = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core546.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" }),
@@ -9091,9 +7502,9 @@ var Figma = /* @__PURE__ */ __name((props = {}) => {
 }, "Figma");
 
 // src/icons/FileArchive.ts
-var import_vanjs_core547 = __toESM(require("vanjs-core"), 1);
+
 var FileArchive = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core547.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 12v-1" }),
@@ -9108,9 +7519,9 @@ var FileArchive = /* @__PURE__ */ __name((props = {}) => {
 }, "FileArchive");
 
 // src/icons/FileAudio2.ts
-var import_vanjs_core548 = __toESM(require("vanjs-core"), 1);
+
 var FileAudio2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core548.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v2" }),
@@ -9122,9 +7533,9 @@ var FileAudio2 = /* @__PURE__ */ __name((props = {}) => {
 }, "FileAudio2");
 
 // src/icons/FileAudio.ts
-var import_vanjs_core549 = __toESM(require("vanjs-core"), 1);
+
 var FileAudio = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core549.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M17.5 22h.5a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3" }),
@@ -9136,9 +7547,9 @@ var FileAudio = /* @__PURE__ */ __name((props = {}) => {
 }, "FileAudio");
 
 // src/icons/FileAxis3d.ts
-var import_vanjs_core550 = __toESM(require("vanjs-core"), 1);
+
 var FileAxis3d = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core550.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9149,9 +7560,9 @@ var FileAxis3d = /* @__PURE__ */ __name((props = {}) => {
 }, "FileAxis3d");
 
 // src/icons/FileBadge2.ts
-var import_vanjs_core551 = __toESM(require("vanjs-core"), 1);
+
 var FileBadge2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core551.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9162,9 +7573,9 @@ var FileBadge2 = /* @__PURE__ */ __name((props = {}) => {
 }, "FileBadge2");
 
 // src/icons/FileBadge.ts
-var import_vanjs_core552 = __toESM(require("vanjs-core"), 1);
+
 var FileBadge = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core552.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 22h6a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3" }),
@@ -9175,9 +7586,9 @@ var FileBadge = /* @__PURE__ */ __name((props = {}) => {
 }, "FileBadge");
 
 // src/icons/FileBox.ts
-var import_vanjs_core553 = __toESM(require("vanjs-core"), 1);
+
 var FileBox = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core553.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M14.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" }),
@@ -9191,9 +7602,9 @@ var FileBox = /* @__PURE__ */ __name((props = {}) => {
 }, "FileBox");
 
 // src/icons/FileChartColumnIncreasing.ts
-var import_vanjs_core554 = __toESM(require("vanjs-core"), 1);
+
 var FileChartColumnIncreasing = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core554.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9205,9 +7616,9 @@ var FileChartColumnIncreasing = /* @__PURE__ */ __name((props = {}) => {
 }, "FileChartColumnIncreasing");
 
 // src/icons/FileChartColumn.ts
-var import_vanjs_core555 = __toESM(require("vanjs-core"), 1);
+
 var FileChartColumn = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core555.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9219,9 +7630,9 @@ var FileChartColumn = /* @__PURE__ */ __name((props = {}) => {
 }, "FileChartColumn");
 
 // src/icons/FileChartLine.ts
-var import_vanjs_core556 = __toESM(require("vanjs-core"), 1);
+
 var FileChartLine = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core556.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9231,9 +7642,9 @@ var FileChartLine = /* @__PURE__ */ __name((props = {}) => {
 }, "FileChartLine");
 
 // src/icons/FileChartPie.ts
-var import_vanjs_core557 = __toESM(require("vanjs-core"), 1);
+
 var FileChartPie = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core557.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }),
@@ -9246,9 +7657,9 @@ var FileChartPie = /* @__PURE__ */ __name((props = {}) => {
 }, "FileChartPie");
 
 // src/icons/FileCheck2.ts
-var import_vanjs_core558 = __toESM(require("vanjs-core"), 1);
+
 var FileCheck2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core558.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" }),
@@ -9258,9 +7669,9 @@ var FileCheck2 = /* @__PURE__ */ __name((props = {}) => {
 }, "FileCheck2");
 
 // src/icons/FileCheck.ts
-var import_vanjs_core559 = __toESM(require("vanjs-core"), 1);
+
 var FileCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core559.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9270,9 +7681,9 @@ var FileCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "FileCheck");
 
 // src/icons/FileClock.ts
-var import_vanjs_core560 = __toESM(require("vanjs-core"), 1);
+
 var FileClock = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core560.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 22h2a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3" }),
@@ -9283,9 +7694,9 @@ var FileClock = /* @__PURE__ */ __name((props = {}) => {
 }, "FileClock");
 
 // src/icons/FileCode2.ts
-var import_vanjs_core561 = __toESM(require("vanjs-core"), 1);
+
 var FileCode2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core561.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" }),
@@ -9296,9 +7707,9 @@ var FileCode2 = /* @__PURE__ */ __name((props = {}) => {
 }, "FileCode2");
 
 // src/icons/FileCode.ts
-var import_vanjs_core562 = __toESM(require("vanjs-core"), 1);
+
 var FileCode = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core562.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 12.5 8 15l2 2.5" }),
@@ -9309,9 +7720,9 @@ var FileCode = /* @__PURE__ */ __name((props = {}) => {
 }, "FileCode");
 
 // src/icons/FileCog.ts
-var import_vanjs_core563 = __toESM(require("vanjs-core"), 1);
+
 var FileCog = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core563.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }),
@@ -9331,9 +7742,9 @@ var FileCog = /* @__PURE__ */ __name((props = {}) => {
 }, "FileCog");
 
 // src/icons/FileDiff.ts
-var import_vanjs_core564 = __toESM(require("vanjs-core"), 1);
+
 var FileDiff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core564.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9344,9 +7755,9 @@ var FileDiff = /* @__PURE__ */ __name((props = {}) => {
 }, "FileDiff");
 
 // src/icons/FileDigit.ts
-var import_vanjs_core565 = __toESM(require("vanjs-core"), 1);
+
 var FileDigit = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core565.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" }),
@@ -9358,9 +7769,9 @@ var FileDigit = /* @__PURE__ */ __name((props = {}) => {
 }, "FileDigit");
 
 // src/icons/FileDown.ts
-var import_vanjs_core566 = __toESM(require("vanjs-core"), 1);
+
 var FileDown = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core566.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9371,9 +7782,9 @@ var FileDown = /* @__PURE__ */ __name((props = {}) => {
 }, "FileDown");
 
 // src/icons/FileHeart.ts
-var import_vanjs_core567 = __toESM(require("vanjs-core"), 1);
+
 var FileHeart = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core567.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v2" }),
@@ -9385,9 +7796,9 @@ var FileHeart = /* @__PURE__ */ __name((props = {}) => {
 }, "FileHeart");
 
 // src/icons/FileImage.ts
-var import_vanjs_core568 = __toESM(require("vanjs-core"), 1);
+
 var FileImage = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core568.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9398,9 +7809,9 @@ var FileImage = /* @__PURE__ */ __name((props = {}) => {
 }, "FileImage");
 
 // src/icons/FileInput.ts
-var import_vanjs_core569 = __toESM(require("vanjs-core"), 1);
+
 var FileInput = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core569.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" }),
@@ -9411,9 +7822,9 @@ var FileInput = /* @__PURE__ */ __name((props = {}) => {
 }, "FileInput");
 
 // src/icons/FileJson2.ts
-var import_vanjs_core570 = __toESM(require("vanjs-core"), 1);
+
 var FileJson2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core570.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" }),
@@ -9428,9 +7839,9 @@ var FileJson2 = /* @__PURE__ */ __name((props = {}) => {
 }, "FileJson2");
 
 // src/icons/FileJson.ts
-var import_vanjs_core571 = __toESM(require("vanjs-core"), 1);
+
 var FileJson = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core571.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9445,9 +7856,9 @@ var FileJson = /* @__PURE__ */ __name((props = {}) => {
 }, "FileJson");
 
 // src/icons/FileKey2.ts
-var import_vanjs_core572 = __toESM(require("vanjs-core"), 1);
+
 var FileKey2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core572.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v6" }),
@@ -9459,9 +7870,9 @@ var FileKey2 = /* @__PURE__ */ __name((props = {}) => {
 }, "FileKey2");
 
 // src/icons/FileKey.ts
-var import_vanjs_core573 = __toESM(require("vanjs-core"), 1);
+
 var FileKey = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core573.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9472,9 +7883,9 @@ var FileKey = /* @__PURE__ */ __name((props = {}) => {
 }, "FileKey");
 
 // src/icons/FileLock2.ts
-var import_vanjs_core574 = __toESM(require("vanjs-core"), 1);
+
 var FileLock2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core574.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v1" }),
@@ -9485,9 +7896,9 @@ var FileLock2 = /* @__PURE__ */ __name((props = {}) => {
 }, "FileLock2");
 
 // src/icons/FileLock.ts
-var import_vanjs_core575 = __toESM(require("vanjs-core"), 1);
+
 var FileLock = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core575.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9497,9 +7908,9 @@ var FileLock = /* @__PURE__ */ __name((props = {}) => {
 }, "FileLock");
 
 // src/icons/FileMinus2.ts
-var import_vanjs_core576 = __toESM(require("vanjs-core"), 1);
+
 var FileMinus2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core576.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" }),
@@ -9509,9 +7920,9 @@ var FileMinus2 = /* @__PURE__ */ __name((props = {}) => {
 }, "FileMinus2");
 
 // src/icons/FileMinus.ts
-var import_vanjs_core577 = __toESM(require("vanjs-core"), 1);
+
 var FileMinus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core577.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9521,9 +7932,9 @@ var FileMinus = /* @__PURE__ */ __name((props = {}) => {
 }, "FileMinus");
 
 // src/icons/FileMusic.ts
-var import_vanjs_core578 = __toESM(require("vanjs-core"), 1);
+
 var FileMusic = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core578.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v8.4" }),
@@ -9534,9 +7945,9 @@ var FileMusic = /* @__PURE__ */ __name((props = {}) => {
 }, "FileMusic");
 
 // src/icons/FileOutput.ts
-var import_vanjs_core579 = __toESM(require("vanjs-core"), 1);
+
 var FileOutput = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core579.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }),
@@ -9548,9 +7959,9 @@ var FileOutput = /* @__PURE__ */ __name((props = {}) => {
 }, "FileOutput");
 
 // src/icons/FilePenLine.ts
-var import_vanjs_core580 = __toESM(require("vanjs-core"), 1);
+
 var FilePenLine = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core580.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -9564,9 +7975,9 @@ var FilePenLine = /* @__PURE__ */ __name((props = {}) => {
 }, "FilePenLine");
 
 // src/icons/FilePen.ts
-var import_vanjs_core581 = __toESM(require("vanjs-core"), 1);
+
 var FilePen = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core581.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5" }),
@@ -9578,9 +7989,9 @@ var FilePen = /* @__PURE__ */ __name((props = {}) => {
 }, "FilePen");
 
 // src/icons/FilePlus2.ts
-var import_vanjs_core582 = __toESM(require("vanjs-core"), 1);
+
 var FilePlus2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core582.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" }),
@@ -9591,9 +8002,9 @@ var FilePlus2 = /* @__PURE__ */ __name((props = {}) => {
 }, "FilePlus2");
 
 // src/icons/FilePlus.ts
-var import_vanjs_core583 = __toESM(require("vanjs-core"), 1);
+
 var FilePlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core583.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9604,9 +8015,9 @@ var FilePlus = /* @__PURE__ */ __name((props = {}) => {
 }, "FilePlus");
 
 // src/icons/FileQuestion.ts
-var import_vanjs_core584 = __toESM(require("vanjs-core"), 1);
+
 var FileQuestion = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core584.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 17h.01" }),
@@ -9616,9 +8027,9 @@ var FileQuestion = /* @__PURE__ */ __name((props = {}) => {
 }, "FileQuestion");
 
 // src/icons/FileScan.ts
-var import_vanjs_core585 = __toESM(require("vanjs-core"), 1);
+
 var FileScan = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core585.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M20 10V7l-5-5H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4" }),
@@ -9631,9 +8042,9 @@ var FileScan = /* @__PURE__ */ __name((props = {}) => {
 }, "FileScan");
 
 // src/icons/FileSearch2.ts
-var import_vanjs_core586 = __toESM(require("vanjs-core"), 1);
+
 var FileSearch2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core586.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9644,9 +8055,9 @@ var FileSearch2 = /* @__PURE__ */ __name((props = {}) => {
 }, "FileSearch2");
 
 // src/icons/FileSearch.ts
-var import_vanjs_core587 = __toESM(require("vanjs-core"), 1);
+
 var FileSearch = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core587.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }),
@@ -9659,9 +8070,9 @@ var FileSearch = /* @__PURE__ */ __name((props = {}) => {
 }, "FileSearch");
 
 // src/icons/FileSliders.ts
-var import_vanjs_core588 = __toESM(require("vanjs-core"), 1);
+
 var FileSliders = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core588.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9674,9 +8085,9 @@ var FileSliders = /* @__PURE__ */ __name((props = {}) => {
 }, "FileSliders");
 
 // src/icons/FileSpreadsheet.ts
-var import_vanjs_core589 = __toESM(require("vanjs-core"), 1);
+
 var FileSpreadsheet = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core589.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9689,9 +8100,9 @@ var FileSpreadsheet = /* @__PURE__ */ __name((props = {}) => {
 }, "FileSpreadsheet");
 
 // src/icons/FileStack.ts
-var import_vanjs_core590 = __toESM(require("vanjs-core"), 1);
+
 var FileStack = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core590.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 7h-3a2 2 0 0 1-2-2V2" }),
@@ -9704,9 +8115,9 @@ var FileStack = /* @__PURE__ */ __name((props = {}) => {
 }, "FileStack");
 
 // src/icons/FileSymlink.ts
-var import_vanjs_core591 = __toESM(require("vanjs-core"), 1);
+
 var FileSymlink = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core591.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m10 18 3-3-3-3" }),
@@ -9718,9 +8129,9 @@ var FileSymlink = /* @__PURE__ */ __name((props = {}) => {
 }, "FileSymlink");
 
 // src/icons/FileTerminal.ts
-var import_vanjs_core592 = __toESM(require("vanjs-core"), 1);
+
 var FileTerminal = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core592.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9731,9 +8142,9 @@ var FileTerminal = /* @__PURE__ */ __name((props = {}) => {
 }, "FileTerminal");
 
 // src/icons/FileText.ts
-var import_vanjs_core593 = __toESM(require("vanjs-core"), 1);
+
 var FileText = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core593.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9745,9 +8156,9 @@ var FileText = /* @__PURE__ */ __name((props = {}) => {
 }, "FileText");
 
 // src/icons/FileType2.ts
-var import_vanjs_core594 = __toESM(require("vanjs-core"), 1);
+
 var FileType2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core594.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" }),
@@ -9759,9 +8170,9 @@ var FileType2 = /* @__PURE__ */ __name((props = {}) => {
 }, "FileType2");
 
 // src/icons/FileType.ts
-var import_vanjs_core595 = __toESM(require("vanjs-core"), 1);
+
 var FileType = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core595.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9773,9 +8184,9 @@ var FileType = /* @__PURE__ */ __name((props = {}) => {
 }, "FileType");
 
 // src/icons/FileUp.ts
-var import_vanjs_core596 = __toESM(require("vanjs-core"), 1);
+
 var FileUp = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core596.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9786,9 +8197,9 @@ var FileUp = /* @__PURE__ */ __name((props = {}) => {
 }, "FileUp");
 
 // src/icons/FileUser.ts
-var import_vanjs_core597 = __toESM(require("vanjs-core"), 1);
+
 var FileUser = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core597.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }),
@@ -9799,9 +8210,9 @@ var FileUser = /* @__PURE__ */ __name((props = {}) => {
 }, "FileUser");
 
 // src/icons/FileVideo2.ts
-var import_vanjs_core598 = __toESM(require("vanjs-core"), 1);
+
 var FileVideo2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core598.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" }),
@@ -9812,9 +8223,9 @@ var FileVideo2 = /* @__PURE__ */ __name((props = {}) => {
 }, "FileVideo2");
 
 // src/icons/FileVideo.ts
-var import_vanjs_core599 = __toESM(require("vanjs-core"), 1);
+
 var FileVideo = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core599.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9824,9 +8235,9 @@ var FileVideo = /* @__PURE__ */ __name((props = {}) => {
 }, "FileVideo");
 
 // src/icons/FileVolume2.ts
-var import_vanjs_core600 = __toESM(require("vanjs-core"), 1);
+
 var FileVolume2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core600.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9838,9 +8249,9 @@ var FileVolume2 = /* @__PURE__ */ __name((props = {}) => {
 }, "FileVolume2");
 
 // src/icons/FileVolume.ts
-var import_vanjs_core601 = __toESM(require("vanjs-core"), 1);
+
 var FileVolume = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core601.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11 11a5 5 0 0 1 0 6" }),
@@ -9855,9 +8266,9 @@ var FileVolume = /* @__PURE__ */ __name((props = {}) => {
 }, "FileVolume");
 
 // src/icons/FileWarning.ts
-var import_vanjs_core602 = __toESM(require("vanjs-core"), 1);
+
 var FileWarning = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core602.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9867,9 +8278,9 @@ var FileWarning = /* @__PURE__ */ __name((props = {}) => {
 }, "FileWarning");
 
 // src/icons/FileX2.ts
-var import_vanjs_core603 = __toESM(require("vanjs-core"), 1);
+
 var FileX2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core603.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" }),
@@ -9880,9 +8291,9 @@ var FileX2 = /* @__PURE__ */ __name((props = {}) => {
 }, "FileX2");
 
 // src/icons/FileX.ts
-var import_vanjs_core604 = __toESM(require("vanjs-core"), 1);
+
 var FileX = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core604.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9893,9 +8304,9 @@ var FileX = /* @__PURE__ */ __name((props = {}) => {
 }, "FileX");
 
 // src/icons/File.ts
-var import_vanjs_core605 = __toESM(require("vanjs-core"), 1);
+
 var File = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core605.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }),
@@ -9904,9 +8315,9 @@ var File = /* @__PURE__ */ __name((props = {}) => {
 }, "File");
 
 // src/icons/Files.ts
-var import_vanjs_core606 = __toESM(require("vanjs-core"), 1);
+
 var Files = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core606.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M20 7h-3a2 2 0 0 1-2-2V2" }),
@@ -9918,9 +8329,9 @@ var Files = /* @__PURE__ */ __name((props = {}) => {
 }, "Files");
 
 // src/icons/Film.ts
-var import_vanjs_core607 = __toESM(require("vanjs-core"), 1);
+
 var Film = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core607.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -9935,9 +8346,9 @@ var Film = /* @__PURE__ */ __name((props = {}) => {
 }, "Film");
 
 // src/icons/FilterX.ts
-var import_vanjs_core608 = __toESM(require("vanjs-core"), 1);
+
 var FilterX = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core608.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M13.013 3H2l8 9.46V19l4 2v-8.54l.9-1.055" }),
@@ -9947,9 +8358,9 @@ var FilterX = /* @__PURE__ */ __name((props = {}) => {
 }, "FilterX");
 
 // src/icons/Filter.ts
-var import_vanjs_core609 = __toESM(require("vanjs-core"), 1);
+
 var Filter = /* @__PURE__ */ __name((props = {}) => {
-  const { polygon } = import_vanjs_core609.default.tags(svgNamespace);
+  const { polygon } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polygon({ points: "22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" })
@@ -9957,9 +8368,9 @@ var Filter = /* @__PURE__ */ __name((props = {}) => {
 }, "Filter");
 
 // src/icons/Fingerprint.ts
-var import_vanjs_core610 = __toESM(require("vanjs-core"), 1);
+
 var Fingerprint = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core610.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4" }),
@@ -9975,9 +8386,9 @@ var Fingerprint = /* @__PURE__ */ __name((props = {}) => {
 }, "Fingerprint");
 
 // src/icons/FireExtinguisher.ts
-var import_vanjs_core611 = __toESM(require("vanjs-core"), 1);
+
 var FireExtinguisher = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core611.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 6.5V3a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3.5" }),
@@ -9990,9 +8401,9 @@ var FireExtinguisher = /* @__PURE__ */ __name((props = {}) => {
 }, "FireExtinguisher");
 
 // src/icons/FishOff.ts
-var import_vanjs_core612 = __toESM(require("vanjs-core"), 1);
+
 var FishOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core612.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10008,9 +8419,9 @@ var FishOff = /* @__PURE__ */ __name((props = {}) => {
 }, "FishOff");
 
 // src/icons/FishSymbol.ts
-var import_vanjs_core613 = __toESM(require("vanjs-core"), 1);
+
 var FishSymbol = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core613.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 16s9-15 20-4C11 23 2 8 2 8" })
@@ -10018,9 +8429,9 @@ var FishSymbol = /* @__PURE__ */ __name((props = {}) => {
 }, "FishSymbol");
 
 // src/icons/Fish.ts
-var import_vanjs_core614 = __toESM(require("vanjs-core"), 1);
+
 var Fish = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core614.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10041,9 +8452,9 @@ var Fish = /* @__PURE__ */ __name((props = {}) => {
 }, "Fish");
 
 // src/icons/FlagOff.ts
-var import_vanjs_core615 = __toESM(require("vanjs-core"), 1);
+
 var FlagOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core615.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 2c3 0 5 2 8 2s4-1 4-1v11" }),
@@ -10054,9 +8465,9 @@ var FlagOff = /* @__PURE__ */ __name((props = {}) => {
 }, "FlagOff");
 
 // src/icons/FlagTriangleLeft.ts
-var import_vanjs_core616 = __toESM(require("vanjs-core"), 1);
+
 var FlagTriangleLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core616.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M17 22V2L7 7l10 5" })
@@ -10064,9 +8475,9 @@ var FlagTriangleLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "FlagTriangleLeft");
 
 // src/icons/FlagTriangleRight.ts
-var import_vanjs_core617 = __toESM(require("vanjs-core"), 1);
+
 var FlagTriangleRight = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core617.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M7 22V2l10 5-10 5" })
@@ -10074,9 +8485,9 @@ var FlagTriangleRight = /* @__PURE__ */ __name((props = {}) => {
 }, "FlagTriangleRight");
 
 // src/icons/Flag.ts
-var import_vanjs_core618 = __toESM(require("vanjs-core"), 1);
+
 var Flag = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core618.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" }),
@@ -10085,9 +8496,9 @@ var Flag = /* @__PURE__ */ __name((props = {}) => {
 }, "Flag");
 
 // src/icons/FlameKindling.ts
-var import_vanjs_core619 = __toESM(require("vanjs-core"), 1);
+
 var FlameKindling = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core619.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10099,9 +8510,9 @@ var FlameKindling = /* @__PURE__ */ __name((props = {}) => {
 }, "FlameKindling");
 
 // src/icons/Flame.ts
-var import_vanjs_core620 = __toESM(require("vanjs-core"), 1);
+
 var Flame = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core620.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10111,9 +8522,9 @@ var Flame = /* @__PURE__ */ __name((props = {}) => {
 }, "Flame");
 
 // src/icons/FlashlightOff.ts
-var import_vanjs_core621 = __toESM(require("vanjs-core"), 1);
+
 var FlashlightOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core621.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 16v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V10c0-2-2-2-2-4" }),
@@ -10124,9 +8535,9 @@ var FlashlightOff = /* @__PURE__ */ __name((props = {}) => {
 }, "FlashlightOff");
 
 // src/icons/Flashlight.ts
-var import_vanjs_core622 = __toESM(require("vanjs-core"), 1);
+
 var Flashlight = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core622.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10138,9 +8549,9 @@ var Flashlight = /* @__PURE__ */ __name((props = {}) => {
 }, "Flashlight");
 
 // src/icons/FlaskConicalOff.ts
-var import_vanjs_core623 = __toESM(require("vanjs-core"), 1);
+
 var FlaskConicalOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core623.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 2v2.343" }),
@@ -10153,9 +8564,9 @@ var FlaskConicalOff = /* @__PURE__ */ __name((props = {}) => {
 }, "FlaskConicalOff");
 
 // src/icons/FlaskConical.ts
-var import_vanjs_core624 = __toESM(require("vanjs-core"), 1);
+
 var FlaskConical = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core624.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10167,9 +8578,9 @@ var FlaskConical = /* @__PURE__ */ __name((props = {}) => {
 }, "FlaskConical");
 
 // src/icons/FlaskRound.ts
-var import_vanjs_core625 = __toESM(require("vanjs-core"), 1);
+
 var FlaskRound = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core625.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 2v6.292a7 7 0 1 0 4 0V2" }),
@@ -10179,9 +8590,9 @@ var FlaskRound = /* @__PURE__ */ __name((props = {}) => {
 }, "FlaskRound");
 
 // src/icons/FlipHorizontal2.ts
-var import_vanjs_core626 = __toESM(require("vanjs-core"), 1);
+
 var FlipHorizontal2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core626.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m3 7 5 5-5 5V7" }),
@@ -10194,9 +8605,9 @@ var FlipHorizontal2 = /* @__PURE__ */ __name((props = {}) => {
 }, "FlipHorizontal2");
 
 // src/icons/FlipHorizontal.ts
-var import_vanjs_core627 = __toESM(require("vanjs-core"), 1);
+
 var FlipHorizontal = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core627.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 3H5a2 2 0 0 0-2 2v14c0 1.1.9 2 2 2h3" }),
@@ -10209,9 +8620,9 @@ var FlipHorizontal = /* @__PURE__ */ __name((props = {}) => {
 }, "FlipHorizontal");
 
 // src/icons/FlipVertical2.ts
-var import_vanjs_core628 = __toESM(require("vanjs-core"), 1);
+
 var FlipVertical2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core628.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m17 3-5 5-5-5h10" }),
@@ -10224,9 +8635,9 @@ var FlipVertical2 = /* @__PURE__ */ __name((props = {}) => {
 }, "FlipVertical2");
 
 // src/icons/FlipVertical.ts
-var import_vanjs_core629 = __toESM(require("vanjs-core"), 1);
+
 var FlipVertical = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core629.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v3" }),
@@ -10239,9 +8650,9 @@ var FlipVertical = /* @__PURE__ */ __name((props = {}) => {
 }, "FlipVertical");
 
 // src/icons/Flower2.ts
-var import_vanjs_core630 = __toESM(require("vanjs-core"), 1);
+
 var Flower2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core630.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10255,9 +8666,9 @@ var Flower2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Flower2");
 
 // src/icons/Flower.ts
-var import_vanjs_core631 = __toESM(require("vanjs-core"), 1);
+
 var Flower = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core631.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "3" }),
@@ -10276,9 +8687,9 @@ var Flower = /* @__PURE__ */ __name((props = {}) => {
 }, "Flower");
 
 // src/icons/Focus.ts
-var import_vanjs_core632 = __toESM(require("vanjs-core"), 1);
+
 var Focus = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core632.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "3" }),
@@ -10290,9 +8701,9 @@ var Focus = /* @__PURE__ */ __name((props = {}) => {
 }, "Focus");
 
 // src/icons/FoldHorizontal.ts
-var import_vanjs_core633 = __toESM(require("vanjs-core"), 1);
+
 var FoldHorizontal = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core633.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 12h6" }),
@@ -10307,9 +8718,9 @@ var FoldHorizontal = /* @__PURE__ */ __name((props = {}) => {
 }, "FoldHorizontal");
 
 // src/icons/FoldVertical.ts
-var import_vanjs_core634 = __toESM(require("vanjs-core"), 1);
+
 var FoldVertical = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core634.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 22v-6" }),
@@ -10324,9 +8735,9 @@ var FoldVertical = /* @__PURE__ */ __name((props = {}) => {
 }, "FoldVertical");
 
 // src/icons/FolderArchive.ts
-var import_vanjs_core635 = __toESM(require("vanjs-core"), 1);
+
 var FolderArchive = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core635.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "15", cy: "19", "r": "2" }),
@@ -10339,9 +8750,9 @@ var FolderArchive = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderArchive");
 
 // src/icons/FolderCheck.ts
-var import_vanjs_core636 = __toESM(require("vanjs-core"), 1);
+
 var FolderCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core636.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10352,9 +8763,9 @@ var FolderCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderCheck");
 
 // src/icons/FolderClock.ts
-var import_vanjs_core637 = __toESM(require("vanjs-core"), 1);
+
 var FolderClock = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core637.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "16", cy: "16", "r": "6" }),
@@ -10366,9 +8777,9 @@ var FolderClock = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderClock");
 
 // src/icons/FolderClosed.ts
-var import_vanjs_core638 = __toESM(require("vanjs-core"), 1);
+
 var FolderClosed = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core638.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10379,9 +8790,9 @@ var FolderClosed = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderClosed");
 
 // src/icons/FolderCode.ts
-var import_vanjs_core639 = __toESM(require("vanjs-core"), 1);
+
 var FolderCode = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core639.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 10.5 8 13l2 2.5" }),
@@ -10393,9 +8804,9 @@ var FolderCode = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderCode");
 
 // src/icons/FolderCog.ts
-var import_vanjs_core640 = __toESM(require("vanjs-core"), 1);
+
 var FolderCog = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core640.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "18", cy: "18", "r": "3" }),
@@ -10414,9 +8825,9 @@ var FolderCog = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderCog");
 
 // src/icons/FolderDot.ts
-var import_vanjs_core641 = __toESM(require("vanjs-core"), 1);
+
 var FolderDot = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core641.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10427,9 +8838,9 @@ var FolderDot = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderDot");
 
 // src/icons/FolderDown.ts
-var import_vanjs_core642 = __toESM(require("vanjs-core"), 1);
+
 var FolderDown = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core642.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10441,9 +8852,9 @@ var FolderDown = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderDown");
 
 // src/icons/FolderGit2.ts
-var import_vanjs_core643 = __toESM(require("vanjs-core"), 1);
+
 var FolderGit2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core643.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10456,9 +8867,9 @@ var FolderGit2 = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderGit2");
 
 // src/icons/FolderGit.ts
-var import_vanjs_core644 = __toESM(require("vanjs-core"), 1);
+
 var FolderGit = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core644.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "13", "r": "2" }),
@@ -10471,9 +8882,9 @@ var FolderGit = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderGit");
 
 // src/icons/FolderHeart.ts
-var import_vanjs_core645 = __toESM(require("vanjs-core"), 1);
+
 var FolderHeart = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core645.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10486,9 +8897,9 @@ var FolderHeart = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderHeart");
 
 // src/icons/FolderInput.ts
-var import_vanjs_core646 = __toESM(require("vanjs-core"), 1);
+
 var FolderInput = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core646.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10500,9 +8911,9 @@ var FolderInput = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderInput");
 
 // src/icons/FolderKanban.ts
-var import_vanjs_core647 = __toESM(require("vanjs-core"), 1);
+
 var FolderKanban = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core647.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10515,9 +8926,9 @@ var FolderKanban = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderKanban");
 
 // src/icons/FolderKey.ts
-var import_vanjs_core648 = __toESM(require("vanjs-core"), 1);
+
 var FolderKey = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core648.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "16", cy: "20", "r": "2" }),
@@ -10530,9 +8941,9 @@ var FolderKey = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderKey");
 
 // src/icons/FolderLock.ts
-var import_vanjs_core649 = __toESM(require("vanjs-core"), 1);
+
 var FolderLock = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core649.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "8", height: "5", "x": "14", "y": "17", rx: "1" }),
@@ -10544,9 +8955,9 @@ var FolderLock = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderLock");
 
 // src/icons/FolderMinus.ts
-var import_vanjs_core650 = __toESM(require("vanjs-core"), 1);
+
 var FolderMinus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core650.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M9 13h6" }),
@@ -10557,9 +8968,9 @@ var FolderMinus = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderMinus");
 
 // src/icons/FolderOpenDot.ts
-var import_vanjs_core651 = __toESM(require("vanjs-core"), 1);
+
 var FolderOpenDot = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core651.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10570,9 +8981,9 @@ var FolderOpenDot = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderOpenDot");
 
 // src/icons/FolderOpen.ts
-var import_vanjs_core652 = __toESM(require("vanjs-core"), 1);
+
 var FolderOpen = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core652.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10582,9 +8993,9 @@ var FolderOpen = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderOpen");
 
 // src/icons/FolderOutput.ts
-var import_vanjs_core653 = __toESM(require("vanjs-core"), 1);
+
 var FolderOutput = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core653.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10596,9 +9007,9 @@ var FolderOutput = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderOutput");
 
 // src/icons/FolderPen.ts
-var import_vanjs_core654 = __toESM(require("vanjs-core"), 1);
+
 var FolderPen = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core654.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10611,9 +9022,9 @@ var FolderPen = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderPen");
 
 // src/icons/FolderPlus.ts
-var import_vanjs_core655 = __toESM(require("vanjs-core"), 1);
+
 var FolderPlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core655.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 10v6" }),
@@ -10625,9 +9036,9 @@ var FolderPlus = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderPlus");
 
 // src/icons/FolderRoot.ts
-var import_vanjs_core656 = __toESM(require("vanjs-core"), 1);
+
 var FolderRoot = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core656.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10639,9 +9050,9 @@ var FolderRoot = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderRoot");
 
 // src/icons/FolderSearch2.ts
-var import_vanjs_core657 = __toESM(require("vanjs-core"), 1);
+
 var FolderSearch2 = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core657.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "11.5", cy: "12.5", "r": "2.5" }),
@@ -10653,9 +9064,9 @@ var FolderSearch2 = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderSearch2");
 
 // src/icons/FolderSearch.ts
-var import_vanjs_core658 = __toESM(require("vanjs-core"), 1);
+
 var FolderSearch = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core658.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10667,9 +9078,9 @@ var FolderSearch = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderSearch");
 
 // src/icons/FolderSymlink.ts
-var import_vanjs_core659 = __toESM(require("vanjs-core"), 1);
+
 var FolderSymlink = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core659.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10680,9 +9091,9 @@ var FolderSymlink = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderSymlink");
 
 // src/icons/FolderSync.ts
-var import_vanjs_core660 = __toESM(require("vanjs-core"), 1);
+
 var FolderSync = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core660.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10696,9 +9107,9 @@ var FolderSync = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderSync");
 
 // src/icons/FolderTree.ts
-var import_vanjs_core661 = __toESM(require("vanjs-core"), 1);
+
 var FolderTree = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core661.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10713,9 +9124,9 @@ var FolderTree = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderTree");
 
 // src/icons/FolderUp.ts
-var import_vanjs_core662 = __toESM(require("vanjs-core"), 1);
+
 var FolderUp = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core662.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10727,9 +9138,9 @@ var FolderUp = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderUp");
 
 // src/icons/FolderX.ts
-var import_vanjs_core663 = __toESM(require("vanjs-core"), 1);
+
 var FolderX = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core663.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10741,9 +9152,9 @@ var FolderX = /* @__PURE__ */ __name((props = {}) => {
 }, "FolderX");
 
 // src/icons/Folder.ts
-var import_vanjs_core664 = __toESM(require("vanjs-core"), 1);
+
 var Folder = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core664.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10753,9 +9164,9 @@ var Folder = /* @__PURE__ */ __name((props = {}) => {
 }, "Folder");
 
 // src/icons/Folders.ts
-var import_vanjs_core665 = __toESM(require("vanjs-core"), 1);
+
 var Folders = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core665.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10766,9 +9177,9 @@ var Folders = /* @__PURE__ */ __name((props = {}) => {
 }, "Folders");
 
 // src/icons/Footprints.ts
-var import_vanjs_core666 = __toESM(require("vanjs-core"), 1);
+
 var Footprints = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core666.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -10783,9 +9194,9 @@ var Footprints = /* @__PURE__ */ __name((props = {}) => {
 }, "Footprints");
 
 // src/icons/Forklift.ts
-var import_vanjs_core667 = __toESM(require("vanjs-core"), 1);
+
 var Forklift = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core667.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 12H5a2 2 0 0 0-2 2v5" }),
@@ -10796,9 +9207,9 @@ var Forklift = /* @__PURE__ */ __name((props = {}) => {
 }, "Forklift");
 
 // src/icons/Forward.ts
-var import_vanjs_core668 = __toESM(require("vanjs-core"), 1);
+
 var Forward = /* @__PURE__ */ __name((props = {}) => {
-  const { polyline, path } = import_vanjs_core668.default.tags(svgNamespace);
+  const { polyline, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polyline({ points: "15 17 20 12 15 7" }),
@@ -10807,9 +9218,9 @@ var Forward = /* @__PURE__ */ __name((props = {}) => {
 }, "Forward");
 
 // src/icons/Frame.ts
-var import_vanjs_core669 = __toESM(require("vanjs-core"), 1);
+
 var Frame = /* @__PURE__ */ __name((props = {}) => {
-  const { line } = import_vanjs_core669.default.tags(svgNamespace);
+  const { line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "22", x2: "2", y1: "6", y2: "6" }),
@@ -10820,9 +9231,9 @@ var Frame = /* @__PURE__ */ __name((props = {}) => {
 }, "Frame");
 
 // src/icons/Framer.ts
-var import_vanjs_core670 = __toESM(require("vanjs-core"), 1);
+
 var Framer = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core670.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M5 16V9h14V2H5l14 14h-7m-7 0 7 7v-7m-7 0h7" })
@@ -10830,9 +9241,9 @@ var Framer = /* @__PURE__ */ __name((props = {}) => {
 }, "Framer");
 
 // src/icons/Frown.ts
-var import_vanjs_core671 = __toESM(require("vanjs-core"), 1);
+
 var Frown = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path, line } = import_vanjs_core671.default.tags(svgNamespace);
+  const { circle, path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -10843,9 +9254,9 @@ var Frown = /* @__PURE__ */ __name((props = {}) => {
 }, "Frown");
 
 // src/icons/Fuel.ts
-var import_vanjs_core672 = __toESM(require("vanjs-core"), 1);
+
 var Fuel = /* @__PURE__ */ __name((props = {}) => {
-  const { line, path } = import_vanjs_core672.default.tags(svgNamespace);
+  const { line, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "3", x2: "15", y1: "22", y2: "22" }),
@@ -10858,9 +9269,9 @@ var Fuel = /* @__PURE__ */ __name((props = {}) => {
 }, "Fuel");
 
 // src/icons/Fullscreen.ts
-var import_vanjs_core673 = __toESM(require("vanjs-core"), 1);
+
 var Fullscreen = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core673.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 7V5a2 2 0 0 1 2-2h2" }),
@@ -10872,9 +9283,9 @@ var Fullscreen = /* @__PURE__ */ __name((props = {}) => {
 }, "Fullscreen");
 
 // src/icons/GalleryHorizontalEnd.ts
-var import_vanjs_core674 = __toESM(require("vanjs-core"), 1);
+
 var GalleryHorizontalEnd = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core674.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 7v10" }),
@@ -10884,9 +9295,9 @@ var GalleryHorizontalEnd = /* @__PURE__ */ __name((props = {}) => {
 }, "GalleryHorizontalEnd");
 
 // src/icons/GalleryHorizontal.ts
-var import_vanjs_core675 = __toESM(require("vanjs-core"), 1);
+
 var GalleryHorizontal = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core675.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 3v18" }),
@@ -10896,9 +9307,9 @@ var GalleryHorizontal = /* @__PURE__ */ __name((props = {}) => {
 }, "GalleryHorizontal");
 
 // src/icons/GalleryThumbnails.ts
-var import_vanjs_core676 = __toESM(require("vanjs-core"), 1);
+
 var GalleryThumbnails = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core676.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "14", "x": "3", "y": "3", rx: "2" }),
@@ -10910,9 +9321,9 @@ var GalleryThumbnails = /* @__PURE__ */ __name((props = {}) => {
 }, "GalleryThumbnails");
 
 // src/icons/GalleryVerticalEnd.ts
-var import_vanjs_core677 = __toESM(require("vanjs-core"), 1);
+
 var GalleryVerticalEnd = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core677.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M7 2h10" }),
@@ -10922,9 +9333,9 @@ var GalleryVerticalEnd = /* @__PURE__ */ __name((props = {}) => {
 }, "GalleryVerticalEnd");
 
 // src/icons/GalleryVertical.ts
-var import_vanjs_core678 = __toESM(require("vanjs-core"), 1);
+
 var GalleryVertical = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core678.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 2h18" }),
@@ -10934,9 +9345,9 @@ var GalleryVertical = /* @__PURE__ */ __name((props = {}) => {
 }, "GalleryVertical");
 
 // src/icons/Gamepad2.ts
-var import_vanjs_core679 = __toESM(require("vanjs-core"), 1);
+
 var Gamepad2 = /* @__PURE__ */ __name((props = {}) => {
-  const { line, path } = import_vanjs_core679.default.tags(svgNamespace);
+  const { line, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "6", x2: "10", y1: "11", y2: "11" }),
@@ -10950,9 +9361,9 @@ var Gamepad2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Gamepad2");
 
 // src/icons/Gamepad.ts
-var import_vanjs_core680 = __toESM(require("vanjs-core"), 1);
+
 var Gamepad = /* @__PURE__ */ __name((props = {}) => {
-  const { line, rect } = import_vanjs_core680.default.tags(svgNamespace);
+  const { line, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "6", x2: "10", y1: "12", y2: "12" }),
@@ -10964,9 +9375,9 @@ var Gamepad = /* @__PURE__ */ __name((props = {}) => {
 }, "Gamepad");
 
 // src/icons/Gauge.ts
-var import_vanjs_core681 = __toESM(require("vanjs-core"), 1);
+
 var Gauge = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core681.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m12 14 4-4" }),
@@ -10975,9 +9386,9 @@ var Gauge = /* @__PURE__ */ __name((props = {}) => {
 }, "Gauge");
 
 // src/icons/Gavel.ts
-var import_vanjs_core682 = __toESM(require("vanjs-core"), 1);
+
 var Gavel = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core682.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m14.5 12.5-8 8a2.119 2.119 0 1 1-3-3l8-8" }),
@@ -10989,9 +9400,9 @@ var Gavel = /* @__PURE__ */ __name((props = {}) => {
 }, "Gavel");
 
 // src/icons/Gem.ts
-var import_vanjs_core683 = __toESM(require("vanjs-core"), 1);
+
 var Gem = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core683.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M6 3h12l4 6-10 13L2 9Z" }),
@@ -11001,9 +9412,9 @@ var Gem = /* @__PURE__ */ __name((props = {}) => {
 }, "Gem");
 
 // src/icons/Ghost.ts
-var import_vanjs_core684 = __toESM(require("vanjs-core"), 1);
+
 var Ghost = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core684.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M9 10h.01" }),
@@ -11015,9 +9426,9 @@ var Ghost = /* @__PURE__ */ __name((props = {}) => {
 }, "Ghost");
 
 // src/icons/Gift.ts
-var import_vanjs_core685 = __toESM(require("vanjs-core"), 1);
+
 var Gift = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core685.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ "x": "3", "y": "8", width: "18", height: "4", rx: "1" }),
@@ -11030,9 +9441,9 @@ var Gift = /* @__PURE__ */ __name((props = {}) => {
 }, "Gift");
 
 // src/icons/GitBranchPlus.ts
-var import_vanjs_core686 = __toESM(require("vanjs-core"), 1);
+
 var GitBranchPlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core686.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M6 3v12" }),
@@ -11045,9 +9456,9 @@ var GitBranchPlus = /* @__PURE__ */ __name((props = {}) => {
 }, "GitBranchPlus");
 
 // src/icons/GitBranch.ts
-var import_vanjs_core687 = __toESM(require("vanjs-core"), 1);
+
 var GitBranch = /* @__PURE__ */ __name((props = {}) => {
-  const { line, circle, path } = import_vanjs_core687.default.tags(svgNamespace);
+  const { line, circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "6", x2: "6", y1: "3", y2: "15" }),
@@ -11058,9 +9469,9 @@ var GitBranch = /* @__PURE__ */ __name((props = {}) => {
 }, "GitBranch");
 
 // src/icons/GitCommitHorizontal.ts
-var import_vanjs_core688 = __toESM(require("vanjs-core"), 1);
+
 var GitCommitHorizontal = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, line } = import_vanjs_core688.default.tags(svgNamespace);
+  const { circle, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "3" }),
@@ -11070,9 +9481,9 @@ var GitCommitHorizontal = /* @__PURE__ */ __name((props = {}) => {
 }, "GitCommitHorizontal");
 
 // src/icons/GitCommitVertical.ts
-var import_vanjs_core689 = __toESM(require("vanjs-core"), 1);
+
 var GitCommitVertical = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core689.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 3v6" }),
@@ -11082,9 +9493,9 @@ var GitCommitVertical = /* @__PURE__ */ __name((props = {}) => {
 }, "GitCommitVertical");
 
 // src/icons/GitCompareArrows.ts
-var import_vanjs_core690 = __toESM(require("vanjs-core"), 1);
+
 var GitCompareArrows = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core690.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "5", cy: "6", "r": "3" }),
@@ -11097,9 +9508,9 @@ var GitCompareArrows = /* @__PURE__ */ __name((props = {}) => {
 }, "GitCompareArrows");
 
 // src/icons/GitCompare.ts
-var import_vanjs_core691 = __toESM(require("vanjs-core"), 1);
+
 var GitCompare = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core691.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "18", cy: "18", "r": "3" }),
@@ -11110,9 +9521,9 @@ var GitCompare = /* @__PURE__ */ __name((props = {}) => {
 }, "GitCompare");
 
 // src/icons/GitFork.ts
-var import_vanjs_core692 = __toESM(require("vanjs-core"), 1);
+
 var GitFork = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core692.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "18", "r": "3" }),
@@ -11124,9 +9535,9 @@ var GitFork = /* @__PURE__ */ __name((props = {}) => {
 }, "GitFork");
 
 // src/icons/GitGraph.ts
-var import_vanjs_core693 = __toESM(require("vanjs-core"), 1);
+
 var GitGraph = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core693.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "5", cy: "6", "r": "3" }),
@@ -11139,9 +9550,9 @@ var GitGraph = /* @__PURE__ */ __name((props = {}) => {
 }, "GitGraph");
 
 // src/icons/GitMerge.ts
-var import_vanjs_core694 = __toESM(require("vanjs-core"), 1);
+
 var GitMerge = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core694.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "18", cy: "18", "r": "3" }),
@@ -11151,9 +9562,9 @@ var GitMerge = /* @__PURE__ */ __name((props = {}) => {
 }, "GitMerge");
 
 // src/icons/GitPullRequestArrow.ts
-var import_vanjs_core695 = __toESM(require("vanjs-core"), 1);
+
 var GitPullRequestArrow = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core695.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "5", cy: "6", "r": "3" }),
@@ -11165,9 +9576,9 @@ var GitPullRequestArrow = /* @__PURE__ */ __name((props = {}) => {
 }, "GitPullRequestArrow");
 
 // src/icons/GitPullRequestClosed.ts
-var import_vanjs_core696 = __toESM(require("vanjs-core"), 1);
+
 var GitPullRequestClosed = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core696.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "6", cy: "6", "r": "3" }),
@@ -11180,9 +9591,9 @@ var GitPullRequestClosed = /* @__PURE__ */ __name((props = {}) => {
 }, "GitPullRequestClosed");
 
 // src/icons/GitPullRequestCreateArrow.ts
-var import_vanjs_core697 = __toESM(require("vanjs-core"), 1);
+
 var GitPullRequestCreateArrow = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core697.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "5", cy: "6", "r": "3" }),
@@ -11195,9 +9606,9 @@ var GitPullRequestCreateArrow = /* @__PURE__ */ __name((props = {}) => {
 }, "GitPullRequestCreateArrow");
 
 // src/icons/GitPullRequestCreate.ts
-var import_vanjs_core698 = __toESM(require("vanjs-core"), 1);
+
 var GitPullRequestCreate = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core698.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "6", cy: "6", "r": "3" }),
@@ -11209,9 +9620,9 @@ var GitPullRequestCreate = /* @__PURE__ */ __name((props = {}) => {
 }, "GitPullRequestCreate");
 
 // src/icons/GitPullRequestDraft.ts
-var import_vanjs_core699 = __toESM(require("vanjs-core"), 1);
+
 var GitPullRequestDraft = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path, line } = import_vanjs_core699.default.tags(svgNamespace);
+  const { circle, path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "18", cy: "18", "r": "3" }),
@@ -11223,9 +9634,9 @@ var GitPullRequestDraft = /* @__PURE__ */ __name((props = {}) => {
 }, "GitPullRequestDraft");
 
 // src/icons/GitPullRequest.ts
-var import_vanjs_core700 = __toESM(require("vanjs-core"), 1);
+
 var GitPullRequest = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path, line } = import_vanjs_core700.default.tags(svgNamespace);
+  const { circle, path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "18", cy: "18", "r": "3" }),
@@ -11236,9 +9647,9 @@ var GitPullRequest = /* @__PURE__ */ __name((props = {}) => {
 }, "GitPullRequest");
 
 // src/icons/Github.ts
-var import_vanjs_core701 = __toESM(require("vanjs-core"), 1);
+
 var Github = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core701.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -11249,9 +9660,9 @@ var Github = /* @__PURE__ */ __name((props = {}) => {
 }, "Github");
 
 // src/icons/Gitlab.ts
-var import_vanjs_core702 = __toESM(require("vanjs-core"), 1);
+
 var Gitlab = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core702.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -11261,9 +9672,9 @@ var Gitlab = /* @__PURE__ */ __name((props = {}) => {
 }, "Gitlab");
 
 // src/icons/GlassWater.ts
-var import_vanjs_core703 = __toESM(require("vanjs-core"), 1);
+
 var GlassWater = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core703.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -11274,9 +9685,9 @@ var GlassWater = /* @__PURE__ */ __name((props = {}) => {
 }, "GlassWater");
 
 // src/icons/Glasses.ts
-var import_vanjs_core704 = __toESM(require("vanjs-core"), 1);
+
 var Glasses = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core704.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "6", cy: "15", "r": "4" }),
@@ -11288,9 +9699,9 @@ var Glasses = /* @__PURE__ */ __name((props = {}) => {
 }, "Glasses");
 
 // src/icons/GlobeLock.ts
-var import_vanjs_core705 = __toESM(require("vanjs-core"), 1);
+
 var GlobeLock = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core705.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -11303,9 +9714,9 @@ var GlobeLock = /* @__PURE__ */ __name((props = {}) => {
 }, "GlobeLock");
 
 // src/icons/Globe.ts
-var import_vanjs_core706 = __toESM(require("vanjs-core"), 1);
+
 var Globe = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core706.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -11315,9 +9726,9 @@ var Globe = /* @__PURE__ */ __name((props = {}) => {
 }, "Globe");
 
 // src/icons/Goal.ts
-var import_vanjs_core707 = __toESM(require("vanjs-core"), 1);
+
 var Goal = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core707.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 13V2l8 4-8 4" }),
@@ -11327,9 +9738,9 @@ var Goal = /* @__PURE__ */ __name((props = {}) => {
 }, "Goal");
 
 // src/icons/Grab.ts
-var import_vanjs_core708 = __toESM(require("vanjs-core"), 1);
+
 var Grab = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core708.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M18 11.5V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1.4" }),
@@ -11343,9 +9754,9 @@ var Grab = /* @__PURE__ */ __name((props = {}) => {
 }, "Grab");
 
 // src/icons/GraduationCap.ts
-var import_vanjs_core709 = __toESM(require("vanjs-core"), 1);
+
 var GraduationCap = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core709.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -11357,9 +9768,9 @@ var GraduationCap = /* @__PURE__ */ __name((props = {}) => {
 }, "GraduationCap");
 
 // src/icons/Grape.ts
-var import_vanjs_core710 = __toESM(require("vanjs-core"), 1);
+
 var Grape = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core710.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M22 5V2l-5.89 5.89" }),
@@ -11375,9 +9786,9 @@ var Grape = /* @__PURE__ */ __name((props = {}) => {
 }, "Grape");
 
 // src/icons/Grid2x2Check.ts
-var import_vanjs_core711 = __toESM(require("vanjs-core"), 1);
+
 var Grid2x2Check = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core711.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -11388,9 +9799,9 @@ var Grid2x2Check = /* @__PURE__ */ __name((props = {}) => {
 }, "Grid2x2Check");
 
 // src/icons/Grid2x2Plus.ts
-var import_vanjs_core712 = __toESM(require("vanjs-core"), 1);
+
 var Grid2x2Plus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core712.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -11402,9 +9813,9 @@ var Grid2x2Plus = /* @__PURE__ */ __name((props = {}) => {
 }, "Grid2x2Plus");
 
 // src/icons/Grid2x2X.ts
-var import_vanjs_core713 = __toESM(require("vanjs-core"), 1);
+
 var Grid2x2X = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core713.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -11416,9 +9827,9 @@ var Grid2x2X = /* @__PURE__ */ __name((props = {}) => {
 }, "Grid2x2X");
 
 // src/icons/Grid2x2.ts
-var import_vanjs_core714 = __toESM(require("vanjs-core"), 1);
+
 var Grid2x2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core714.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 3v18" }),
@@ -11428,9 +9839,9 @@ var Grid2x2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Grid2x2");
 
 // src/icons/Grid3x3.ts
-var import_vanjs_core715 = __toESM(require("vanjs-core"), 1);
+
 var Grid3x3 = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core715.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -11442,9 +9853,9 @@ var Grid3x3 = /* @__PURE__ */ __name((props = {}) => {
 }, "Grid3x3");
 
 // src/icons/GripHorizontal.ts
-var import_vanjs_core716 = __toESM(require("vanjs-core"), 1);
+
 var GripHorizontal = /* @__PURE__ */ __name((props = {}) => {
-  const { circle } = import_vanjs_core716.default.tags(svgNamespace);
+  const { circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "9", "r": "1" }),
@@ -11457,9 +9868,9 @@ var GripHorizontal = /* @__PURE__ */ __name((props = {}) => {
 }, "GripHorizontal");
 
 // src/icons/GripVertical.ts
-var import_vanjs_core717 = __toESM(require("vanjs-core"), 1);
+
 var GripVertical = /* @__PURE__ */ __name((props = {}) => {
-  const { circle } = import_vanjs_core717.default.tags(svgNamespace);
+  const { circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "9", cy: "12", "r": "1" }),
@@ -11472,9 +9883,9 @@ var GripVertical = /* @__PURE__ */ __name((props = {}) => {
 }, "GripVertical");
 
 // src/icons/Grip.ts
-var import_vanjs_core718 = __toESM(require("vanjs-core"), 1);
+
 var Grip = /* @__PURE__ */ __name((props = {}) => {
-  const { circle } = import_vanjs_core718.default.tags(svgNamespace);
+  const { circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "5", "r": "1" }),
@@ -11490,9 +9901,9 @@ var Grip = /* @__PURE__ */ __name((props = {}) => {
 }, "Grip");
 
 // src/icons/Group.ts
-var import_vanjs_core719 = __toESM(require("vanjs-core"), 1);
+
 var Group = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core719.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 7V5c0-1.1.9-2 2-2h2" }),
@@ -11505,9 +9916,9 @@ var Group = /* @__PURE__ */ __name((props = {}) => {
 }, "Group");
 
 // src/icons/Guitar.ts
-var import_vanjs_core720 = __toESM(require("vanjs-core"), 1);
+
 var Guitar = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core720.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m11.9 12.1 4.514-4.514" }),
@@ -11523,9 +9934,9 @@ var Guitar = /* @__PURE__ */ __name((props = {}) => {
 }, "Guitar");
 
 // src/icons/Ham.ts
-var import_vanjs_core721 = __toESM(require("vanjs-core"), 1);
+
 var Ham = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core721.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M13.144 21.144A7.274 10.445 45 1 0 2.856 10.856" }),
@@ -11540,9 +9951,9 @@ var Ham = /* @__PURE__ */ __name((props = {}) => {
 }, "Ham");
 
 // src/icons/Hammer.ts
-var import_vanjs_core722 = __toESM(require("vanjs-core"), 1);
+
 var Hammer = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core722.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9" }),
@@ -11554,9 +9965,9 @@ var Hammer = /* @__PURE__ */ __name((props = {}) => {
 }, "Hammer");
 
 // src/icons/HandCoins.ts
-var import_vanjs_core723 = __toESM(require("vanjs-core"), 1);
+
 var HandCoins = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core723.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17" }),
@@ -11570,9 +9981,9 @@ var HandCoins = /* @__PURE__ */ __name((props = {}) => {
 }, "HandCoins");
 
 // src/icons/HandHeart.ts
-var import_vanjs_core724 = __toESM(require("vanjs-core"), 1);
+
 var HandHeart = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core724.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16" }),
@@ -11587,9 +9998,9 @@ var HandHeart = /* @__PURE__ */ __name((props = {}) => {
 }, "HandHeart");
 
 // src/icons/HandHelping.ts
-var import_vanjs_core725 = __toESM(require("vanjs-core"), 1);
+
 var HandHelping = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core725.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11 12h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 14" }),
@@ -11601,9 +10012,9 @@ var HandHelping = /* @__PURE__ */ __name((props = {}) => {
 }, "HandHelping");
 
 // src/icons/HandMetal.ts
-var import_vanjs_core726 = __toESM(require("vanjs-core"), 1);
+
 var HandMetal = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core726.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M18 12.5V10a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1.4" }),
@@ -11616,9 +10027,9 @@ var HandMetal = /* @__PURE__ */ __name((props = {}) => {
 }, "HandMetal");
 
 // src/icons/HandPlatter.ts
-var import_vanjs_core727 = __toESM(require("vanjs-core"), 1);
+
 var HandPlatter = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core727.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 3V2" }),
@@ -11633,9 +10044,9 @@ var HandPlatter = /* @__PURE__ */ __name((props = {}) => {
 }, "HandPlatter");
 
 // src/icons/Hand.ts
-var import_vanjs_core728 = __toESM(require("vanjs-core"), 1);
+
 var Hand = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core728.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" }),
@@ -11648,9 +10059,9 @@ var Hand = /* @__PURE__ */ __name((props = {}) => {
 }, "Hand");
 
 // src/icons/Handshake.ts
-var import_vanjs_core729 = __toESM(require("vanjs-core"), 1);
+
 var Handshake = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core729.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m11 17 2 2a1 1 0 1 0 3-3" }),
@@ -11664,9 +10075,9 @@ var Handshake = /* @__PURE__ */ __name((props = {}) => {
 }, "Handshake");
 
 // src/icons/HardDriveDownload.ts
-var import_vanjs_core730 = __toESM(require("vanjs-core"), 1);
+
 var HardDriveDownload = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core730.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 2v8" }),
@@ -11678,9 +10089,9 @@ var HardDriveDownload = /* @__PURE__ */ __name((props = {}) => {
 }, "HardDriveDownload");
 
 // src/icons/HardDriveUpload.ts
-var import_vanjs_core731 = __toESM(require("vanjs-core"), 1);
+
 var HardDriveUpload = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core731.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m16 6-4-4-4 4" }),
@@ -11692,9 +10103,9 @@ var HardDriveUpload = /* @__PURE__ */ __name((props = {}) => {
 }, "HardDriveUpload");
 
 // src/icons/HardDrive.ts
-var import_vanjs_core732 = __toESM(require("vanjs-core"), 1);
+
 var HardDrive = /* @__PURE__ */ __name((props = {}) => {
-  const { line, path } = import_vanjs_core732.default.tags(svgNamespace);
+  const { line, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "22", x2: "2", y1: "12", y2: "12" }),
@@ -11707,9 +10118,9 @@ var HardDrive = /* @__PURE__ */ __name((props = {}) => {
 }, "HardDrive");
 
 // src/icons/HardHat.ts
-var import_vanjs_core733 = __toESM(require("vanjs-core"), 1);
+
 var HardHat = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core733.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5" }),
@@ -11720,9 +10131,9 @@ var HardHat = /* @__PURE__ */ __name((props = {}) => {
 }, "HardHat");
 
 // src/icons/Hash.ts
-var import_vanjs_core734 = __toESM(require("vanjs-core"), 1);
+
 var Hash = /* @__PURE__ */ __name((props = {}) => {
-  const { line } = import_vanjs_core734.default.tags(svgNamespace);
+  const { line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "4", x2: "20", y1: "9", y2: "9" }),
@@ -11733,9 +10144,9 @@ var Hash = /* @__PURE__ */ __name((props = {}) => {
 }, "Hash");
 
 // src/icons/Haze.ts
-var import_vanjs_core735 = __toESM(require("vanjs-core"), 1);
+
 var Haze = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core735.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m5.2 6.2 1.4 1.4" }),
@@ -11750,9 +10161,9 @@ var Haze = /* @__PURE__ */ __name((props = {}) => {
 }, "Haze");
 
 // src/icons/HdmiPort.ts
-var import_vanjs_core736 = __toESM(require("vanjs-core"), 1);
+
 var HdmiPort = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core736.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -11763,9 +10174,9 @@ var HdmiPort = /* @__PURE__ */ __name((props = {}) => {
 }, "HdmiPort");
 
 // src/icons/Heading1.ts
-var import_vanjs_core737 = __toESM(require("vanjs-core"), 1);
+
 var Heading1 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core737.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 12h8" }),
@@ -11776,9 +10187,9 @@ var Heading1 = /* @__PURE__ */ __name((props = {}) => {
 }, "Heading1");
 
 // src/icons/Heading2.ts
-var import_vanjs_core738 = __toESM(require("vanjs-core"), 1);
+
 var Heading2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core738.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 12h8" }),
@@ -11789,9 +10200,9 @@ var Heading2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Heading2");
 
 // src/icons/Heading3.ts
-var import_vanjs_core739 = __toESM(require("vanjs-core"), 1);
+
 var Heading3 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core739.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 12h8" }),
@@ -11803,9 +10214,9 @@ var Heading3 = /* @__PURE__ */ __name((props = {}) => {
 }, "Heading3");
 
 // src/icons/Heading4.ts
-var import_vanjs_core740 = __toESM(require("vanjs-core"), 1);
+
 var Heading4 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core740.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 18V6" }),
@@ -11817,9 +10228,9 @@ var Heading4 = /* @__PURE__ */ __name((props = {}) => {
 }, "Heading4");
 
 // src/icons/Heading5.ts
-var import_vanjs_core741 = __toESM(require("vanjs-core"), 1);
+
 var Heading5 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core741.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 12h8" }),
@@ -11833,9 +10244,9 @@ var Heading5 = /* @__PURE__ */ __name((props = {}) => {
 }, "Heading5");
 
 // src/icons/Heading6.ts
-var import_vanjs_core742 = __toESM(require("vanjs-core"), 1);
+
 var Heading6 = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core742.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 12h8" }),
@@ -11847,9 +10258,9 @@ var Heading6 = /* @__PURE__ */ __name((props = {}) => {
 }, "Heading6");
 
 // src/icons/Heading.ts
-var import_vanjs_core743 = __toESM(require("vanjs-core"), 1);
+
 var Heading = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core743.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M6 12h12" }),
@@ -11859,9 +10270,9 @@ var Heading = /* @__PURE__ */ __name((props = {}) => {
 }, "Heading");
 
 // src/icons/HeadphoneOff.ts
-var import_vanjs_core744 = __toESM(require("vanjs-core"), 1);
+
 var HeadphoneOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core744.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 14h-1.343" }),
@@ -11875,9 +10286,9 @@ var HeadphoneOff = /* @__PURE__ */ __name((props = {}) => {
 }, "HeadphoneOff");
 
 // src/icons/Headphones.ts
-var import_vanjs_core745 = __toESM(require("vanjs-core"), 1);
+
 var Headphones = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core745.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -11887,9 +10298,9 @@ var Headphones = /* @__PURE__ */ __name((props = {}) => {
 }, "Headphones");
 
 // src/icons/Headset.ts
-var import_vanjs_core746 = __toESM(require("vanjs-core"), 1);
+
 var Headset = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core746.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -11900,9 +10311,9 @@ var Headset = /* @__PURE__ */ __name((props = {}) => {
 }, "Headset");
 
 // src/icons/HeartCrack.ts
-var import_vanjs_core747 = __toESM(require("vanjs-core"), 1);
+
 var HeartCrack = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core747.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -11913,9 +10324,9 @@ var HeartCrack = /* @__PURE__ */ __name((props = {}) => {
 }, "HeartCrack");
 
 // src/icons/HeartHandshake.ts
-var import_vanjs_core748 = __toESM(require("vanjs-core"), 1);
+
 var HeartHandshake = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core748.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -11930,9 +10341,9 @@ var HeartHandshake = /* @__PURE__ */ __name((props = {}) => {
 }, "HeartHandshake");
 
 // src/icons/HeartOff.ts
-var import_vanjs_core749 = __toESM(require("vanjs-core"), 1);
+
 var HeartOff = /* @__PURE__ */ __name((props = {}) => {
-  const { line, path } = import_vanjs_core749.default.tags(svgNamespace);
+  const { line, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "2", y1: "2", x2: "22", y2: "22" }),
@@ -11946,9 +10357,9 @@ var HeartOff = /* @__PURE__ */ __name((props = {}) => {
 }, "HeartOff");
 
 // src/icons/HeartPulse.ts
-var import_vanjs_core750 = __toESM(require("vanjs-core"), 1);
+
 var HeartPulse = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core750.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -11959,9 +10370,9 @@ var HeartPulse = /* @__PURE__ */ __name((props = {}) => {
 }, "HeartPulse");
 
 // src/icons/Heart.ts
-var import_vanjs_core751 = __toESM(require("vanjs-core"), 1);
+
 var Heart = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core751.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -11971,9 +10382,9 @@ var Heart = /* @__PURE__ */ __name((props = {}) => {
 }, "Heart");
 
 // src/icons/Heater.ts
-var import_vanjs_core752 = __toESM(require("vanjs-core"), 1);
+
 var Heater = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core752.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11 8c2-3-2-3 0-6" }),
@@ -11992,9 +10403,9 @@ var Heater = /* @__PURE__ */ __name((props = {}) => {
 }, "Heater");
 
 // src/icons/Hexagon.ts
-var import_vanjs_core753 = __toESM(require("vanjs-core"), 1);
+
 var Hexagon = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core753.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -12004,9 +10415,9 @@ var Hexagon = /* @__PURE__ */ __name((props = {}) => {
 }, "Hexagon");
 
 // src/icons/Highlighter.ts
-var import_vanjs_core754 = __toESM(require("vanjs-core"), 1);
+
 var Highlighter = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core754.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m9 11-6 6v3h9l3-3" }),
@@ -12017,9 +10428,9 @@ var Highlighter = /* @__PURE__ */ __name((props = {}) => {
 }, "Highlighter");
 
 // src/icons/History.ts
-var import_vanjs_core755 = __toESM(require("vanjs-core"), 1);
+
 var History = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core755.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" }),
@@ -12029,9 +10440,9 @@ var History = /* @__PURE__ */ __name((props = {}) => {
 }, "History");
 
 // src/icons/HopOff.ts
-var import_vanjs_core756 = __toESM(require("vanjs-core"), 1);
+
 var HopOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core756.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10.82 16.12c1.69.6 3.91.79 5.18.85.28.01.53-.09.7-.27" }),
@@ -12057,9 +10468,9 @@ var HopOff = /* @__PURE__ */ __name((props = {}) => {
 }, "HopOff");
 
 // src/icons/Hop.ts
-var import_vanjs_core757 = __toESM(require("vanjs-core"), 1);
+
 var Hop = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core757.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -12088,9 +10499,9 @@ var Hop = /* @__PURE__ */ __name((props = {}) => {
 }, "Hop");
 
 // src/icons/Hospital.ts
-var import_vanjs_core758 = __toESM(require("vanjs-core"), 1);
+
 var Hospital = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core758.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 6v4" }),
@@ -12105,9 +10516,9 @@ var Hospital = /* @__PURE__ */ __name((props = {}) => {
 }, "Hospital");
 
 // src/icons/Hotel.ts
-var import_vanjs_core759 = __toESM(require("vanjs-core"), 1);
+
 var Hotel = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core759.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 22v-6.57" }),
@@ -12124,9 +10535,9 @@ var Hotel = /* @__PURE__ */ __name((props = {}) => {
 }, "Hotel");
 
 // src/icons/Hourglass.ts
-var import_vanjs_core760 = __toESM(require("vanjs-core"), 1);
+
 var Hourglass = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core760.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M5 22h14" }),
@@ -12141,9 +10552,9 @@ var Hourglass = /* @__PURE__ */ __name((props = {}) => {
 }, "Hourglass");
 
 // src/icons/HousePlug.ts
-var import_vanjs_core761 = __toESM(require("vanjs-core"), 1);
+
 var HousePlug = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core761.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 12V8.964" }),
@@ -12158,9 +10569,9 @@ var HousePlug = /* @__PURE__ */ __name((props = {}) => {
 }, "HousePlug");
 
 // src/icons/HousePlus.ts
-var import_vanjs_core762 = __toESM(require("vanjs-core"), 1);
+
 var HousePlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core762.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -12173,9 +10584,9 @@ var HousePlus = /* @__PURE__ */ __name((props = {}) => {
 }, "HousePlus");
 
 // src/icons/HouseWifi.ts
-var import_vanjs_core763 = __toESM(require("vanjs-core"), 1);
+
 var HouseWifi = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core763.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M9.5 13.866a4 4 0 0 1 5 .01" }),
@@ -12188,9 +10599,9 @@ var HouseWifi = /* @__PURE__ */ __name((props = {}) => {
 }, "HouseWifi");
 
 // src/icons/House.ts
-var import_vanjs_core764 = __toESM(require("vanjs-core"), 1);
+
 var House = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core764.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" }),
@@ -12201,9 +10612,9 @@ var House = /* @__PURE__ */ __name((props = {}) => {
 }, "House");
 
 // src/icons/IceCreamBowl.ts
-var import_vanjs_core765 = __toESM(require("vanjs-core"), 1);
+
 var IceCreamBowl = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core765.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -12215,9 +10626,9 @@ var IceCreamBowl = /* @__PURE__ */ __name((props = {}) => {
 }, "IceCreamBowl");
 
 // src/icons/IceCreamCone.ts
-var import_vanjs_core766 = __toESM(require("vanjs-core"), 1);
+
 var IceCreamCone = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core766.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m7 11 4.08 10.35a1 1 0 0 0 1.84 0L17 11" }),
@@ -12227,9 +10638,9 @@ var IceCreamCone = /* @__PURE__ */ __name((props = {}) => {
 }, "IceCreamCone");
 
 // src/icons/IdCard.ts
-var import_vanjs_core767 = __toESM(require("vanjs-core"), 1);
+
 var IdCard = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle, rect } = import_vanjs_core767.default.tags(svgNamespace);
+  const { path, circle, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 10h2" }),
@@ -12241,9 +10652,9 @@ var IdCard = /* @__PURE__ */ __name((props = {}) => {
 }, "IdCard");
 
 // src/icons/ImageDown.ts
-var import_vanjs_core768 = __toESM(require("vanjs-core"), 1);
+
 var ImageDown = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core768.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -12256,9 +10667,9 @@ var ImageDown = /* @__PURE__ */ __name((props = {}) => {
 }, "ImageDown");
 
 // src/icons/ImageMinus.ts
-var import_vanjs_core769 = __toESM(require("vanjs-core"), 1);
+
 var ImageMinus = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line, circle } = import_vanjs_core769.default.tags(svgNamespace);
+  const { path, line, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 9v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7" }),
@@ -12269,9 +10680,9 @@ var ImageMinus = /* @__PURE__ */ __name((props = {}) => {
 }, "ImageMinus");
 
 // src/icons/ImageOff.ts
-var import_vanjs_core770 = __toESM(require("vanjs-core"), 1);
+
 var ImageOff = /* @__PURE__ */ __name((props = {}) => {
-  const { line, path } = import_vanjs_core770.default.tags(svgNamespace);
+  const { line, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "2", x2: "22", y1: "2", y2: "22" }),
@@ -12286,9 +10697,9 @@ var ImageOff = /* @__PURE__ */ __name((props = {}) => {
 }, "ImageOff");
 
 // src/icons/ImagePlay.ts
-var import_vanjs_core771 = __toESM(require("vanjs-core"), 1);
+
 var ImagePlay = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core771.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m11 16-5 5" }),
@@ -12303,9 +10714,9 @@ var ImagePlay = /* @__PURE__ */ __name((props = {}) => {
 }, "ImagePlay");
 
 // src/icons/ImagePlus.ts
-var import_vanjs_core772 = __toESM(require("vanjs-core"), 1);
+
 var ImagePlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core772.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 5h6" }),
@@ -12319,9 +10730,9 @@ var ImagePlus = /* @__PURE__ */ __name((props = {}) => {
 }, "ImagePlus");
 
 // src/icons/ImageUp.ts
-var import_vanjs_core773 = __toESM(require("vanjs-core"), 1);
+
 var ImageUp = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core773.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -12334,9 +10745,9 @@ var ImageUp = /* @__PURE__ */ __name((props = {}) => {
 }, "ImageUp");
 
 // src/icons/ImageUpscale.ts
-var import_vanjs_core774 = __toESM(require("vanjs-core"), 1);
+
 var ImageUpscale = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core774.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 3h5v5" }),
@@ -12351,9 +10762,9 @@ var ImageUpscale = /* @__PURE__ */ __name((props = {}) => {
 }, "ImageUpscale");
 
 // src/icons/Image.ts
-var import_vanjs_core775 = __toESM(require("vanjs-core"), 1);
+
 var Image = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, circle, path } = import_vanjs_core775.default.tags(svgNamespace);
+  const { rect, circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2", ry: "2" }),
@@ -12363,9 +10774,9 @@ var Image = /* @__PURE__ */ __name((props = {}) => {
 }, "Image");
 
 // src/icons/Images.ts
-var import_vanjs_core776 = __toESM(require("vanjs-core"), 1);
+
 var Images = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle, rect } = import_vanjs_core776.default.tags(svgNamespace);
+  const { path, circle, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M18 22H4a2 2 0 0 1-2-2V6" }),
@@ -12376,9 +10787,9 @@ var Images = /* @__PURE__ */ __name((props = {}) => {
 }, "Images");
 
 // src/icons/Import.ts
-var import_vanjs_core777 = __toESM(require("vanjs-core"), 1);
+
 var Import = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core777.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 3v12" }),
@@ -12390,9 +10801,9 @@ var Import = /* @__PURE__ */ __name((props = {}) => {
 }, "Import");
 
 // src/icons/Inbox.ts
-var import_vanjs_core778 = __toESM(require("vanjs-core"), 1);
+
 var Inbox = /* @__PURE__ */ __name((props = {}) => {
-  const { polyline, path } = import_vanjs_core778.default.tags(svgNamespace);
+  const { polyline, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polyline({ points: "22 12 16 12 14 15 10 15 8 12 2 12" }),
@@ -12403,9 +10814,9 @@ var Inbox = /* @__PURE__ */ __name((props = {}) => {
 }, "Inbox");
 
 // src/icons/IndentDecrease.ts
-var import_vanjs_core779 = __toESM(require("vanjs-core"), 1);
+
 var IndentDecrease = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core779.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 12H11" }),
@@ -12416,9 +10827,9 @@ var IndentDecrease = /* @__PURE__ */ __name((props = {}) => {
 }, "IndentDecrease");
 
 // src/icons/IndentIncrease.ts
-var import_vanjs_core780 = __toESM(require("vanjs-core"), 1);
+
 var IndentIncrease = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core780.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 12H11" }),
@@ -12429,9 +10840,9 @@ var IndentIncrease = /* @__PURE__ */ __name((props = {}) => {
 }, "IndentIncrease");
 
 // src/icons/IndianRupee.ts
-var import_vanjs_core781 = __toESM(require("vanjs-core"), 1);
+
 var IndianRupee = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core781.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M6 3h12" }),
@@ -12443,9 +10854,9 @@ var IndianRupee = /* @__PURE__ */ __name((props = {}) => {
 }, "IndianRupee");
 
 // src/icons/InfinityIcon.ts
-var import_vanjs_core782 = __toESM(require("vanjs-core"), 1);
+
 var InfinityIcon = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core782.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -12455,9 +10866,9 @@ var InfinityIcon = /* @__PURE__ */ __name((props = {}) => {
 }, "InfinityIcon");
 
 // src/icons/Info.ts
-var import_vanjs_core783 = __toESM(require("vanjs-core"), 1);
+
 var Info = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core783.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -12467,9 +10878,9 @@ var Info = /* @__PURE__ */ __name((props = {}) => {
 }, "Info");
 
 // src/icons/InspectionPanel.ts
-var import_vanjs_core784 = __toESM(require("vanjs-core"), 1);
+
 var InspectionPanel = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core784.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -12481,9 +10892,9 @@ var InspectionPanel = /* @__PURE__ */ __name((props = {}) => {
 }, "InspectionPanel");
 
 // src/icons/Instagram.ts
-var import_vanjs_core785 = __toESM(require("vanjs-core"), 1);
+
 var Instagram = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path, line } = import_vanjs_core785.default.tags(svgNamespace);
+  const { rect, path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "20", height: "20", "x": "2", "y": "2", rx: "5", ry: "5" }),
@@ -12493,9 +10904,9 @@ var Instagram = /* @__PURE__ */ __name((props = {}) => {
 }, "Instagram");
 
 // src/icons/Italic.ts
-var import_vanjs_core786 = __toESM(require("vanjs-core"), 1);
+
 var Italic = /* @__PURE__ */ __name((props = {}) => {
-  const { line } = import_vanjs_core786.default.tags(svgNamespace);
+  const { line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "19", x2: "10", y1: "4", y2: "4" }),
@@ -12505,9 +10916,9 @@ var Italic = /* @__PURE__ */ __name((props = {}) => {
 }, "Italic");
 
 // src/icons/IterationCcw.ts
-var import_vanjs_core787 = __toESM(require("vanjs-core"), 1);
+
 var IterationCcw = /* @__PURE__ */ __name((props = {}) => {
-  const { path, polyline } = import_vanjs_core787.default.tags(svgNamespace);
+  const { path, polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M20 10c0-4.4-3.6-8-8-8s-8 3.6-8 8 3.6 8 8 8h8" }),
@@ -12516,9 +10927,9 @@ var IterationCcw = /* @__PURE__ */ __name((props = {}) => {
 }, "IterationCcw");
 
 // src/icons/IterationCw.ts
-var import_vanjs_core788 = __toESM(require("vanjs-core"), 1);
+
 var IterationCw = /* @__PURE__ */ __name((props = {}) => {
-  const { path, polyline } = import_vanjs_core788.default.tags(svgNamespace);
+  const { path, polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 10c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8H4" }),
@@ -12527,9 +10938,9 @@ var IterationCw = /* @__PURE__ */ __name((props = {}) => {
 }, "IterationCw");
 
 // src/icons/JapaneseYen.ts
-var import_vanjs_core789 = __toESM(require("vanjs-core"), 1);
+
 var JapaneseYen = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core789.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 9.5V21m0-11.5L6 3m6 6.5L18 3" }),
@@ -12539,9 +10950,9 @@ var JapaneseYen = /* @__PURE__ */ __name((props = {}) => {
 }, "JapaneseYen");
 
 // src/icons/Joystick.ts
-var import_vanjs_core790 = __toESM(require("vanjs-core"), 1);
+
 var Joystick = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core790.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -12554,9 +10965,9 @@ var Joystick = /* @__PURE__ */ __name((props = {}) => {
 }, "Joystick");
 
 // src/icons/Kanban.ts
-var import_vanjs_core791 = __toESM(require("vanjs-core"), 1);
+
 var Kanban = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core791.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M6 5v11" }),
@@ -12566,9 +10977,9 @@ var Kanban = /* @__PURE__ */ __name((props = {}) => {
 }, "Kanban");
 
 // src/icons/KeyRound.ts
-var import_vanjs_core792 = __toESM(require("vanjs-core"), 1);
+
 var KeyRound = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core792.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -12579,9 +10990,9 @@ var KeyRound = /* @__PURE__ */ __name((props = {}) => {
 }, "KeyRound");
 
 // src/icons/KeySquare.ts
-var import_vanjs_core793 = __toESM(require("vanjs-core"), 1);
+
 var KeySquare = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core793.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -12595,9 +11006,9 @@ var KeySquare = /* @__PURE__ */ __name((props = {}) => {
 }, "KeySquare");
 
 // src/icons/Key.ts
-var import_vanjs_core794 = __toESM(require("vanjs-core"), 1);
+
 var Key = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core794.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -12609,9 +11020,9 @@ var Key = /* @__PURE__ */ __name((props = {}) => {
 }, "Key");
 
 // src/icons/KeyboardMusic.ts
-var import_vanjs_core795 = __toESM(require("vanjs-core"), 1);
+
 var KeyboardMusic = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core795.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "20", height: "16", "x": "2", "y": "4", rx: "2" }),
@@ -12627,9 +11038,9 @@ var KeyboardMusic = /* @__PURE__ */ __name((props = {}) => {
 }, "KeyboardMusic");
 
 // src/icons/KeyboardOff.ts
-var import_vanjs_core796 = __toESM(require("vanjs-core"), 1);
+
 var KeyboardOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core796.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M 20 4 A2 2 0 0 1 22 6" }),
@@ -12646,9 +11057,9 @@ var KeyboardOff = /* @__PURE__ */ __name((props = {}) => {
 }, "KeyboardOff");
 
 // src/icons/Keyboard.ts
-var import_vanjs_core797 = __toESM(require("vanjs-core"), 1);
+
 var Keyboard = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core797.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 8h.01" }),
@@ -12664,9 +11075,9 @@ var Keyboard = /* @__PURE__ */ __name((props = {}) => {
 }, "Keyboard");
 
 // src/icons/LampCeiling.ts
-var import_vanjs_core798 = __toESM(require("vanjs-core"), 1);
+
 var LampCeiling = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core798.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 2v5" }),
@@ -12676,9 +11087,9 @@ var LampCeiling = /* @__PURE__ */ __name((props = {}) => {
 }, "LampCeiling");
 
 // src/icons/LampDesk.ts
-var import_vanjs_core799 = __toESM(require("vanjs-core"), 1);
+
 var LampDesk = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core799.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m14 5-3 3 2 7 8-8-7-2Z" }),
@@ -12689,9 +11100,9 @@ var LampDesk = /* @__PURE__ */ __name((props = {}) => {
 }, "LampDesk");
 
 // src/icons/LampFloor.ts
-var import_vanjs_core800 = __toESM(require("vanjs-core"), 1);
+
 var LampFloor = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core800.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M9 2h6l3 7H6l3-7Z" }),
@@ -12701,9 +11112,9 @@ var LampFloor = /* @__PURE__ */ __name((props = {}) => {
 }, "LampFloor");
 
 // src/icons/LampWallDown.ts
-var import_vanjs_core801 = __toESM(require("vanjs-core"), 1);
+
 var LampWallDown = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core801.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11 13h6l3 7H8l3-7Z" }),
@@ -12713,9 +11124,9 @@ var LampWallDown = /* @__PURE__ */ __name((props = {}) => {
 }, "LampWallDown");
 
 // src/icons/LampWallUp.ts
-var import_vanjs_core802 = __toESM(require("vanjs-core"), 1);
+
 var LampWallUp = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core802.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11 4h6l3 7H8l3-7Z" }),
@@ -12725,9 +11136,9 @@ var LampWallUp = /* @__PURE__ */ __name((props = {}) => {
 }, "LampWallUp");
 
 // src/icons/Lamp.ts
-var import_vanjs_core803 = __toESM(require("vanjs-core"), 1);
+
 var Lamp = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core803.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 2h8l4 10H4L8 2Z" }),
@@ -12737,9 +11148,9 @@ var Lamp = /* @__PURE__ */ __name((props = {}) => {
 }, "Lamp");
 
 // src/icons/LandPlot.ts
-var import_vanjs_core804 = __toESM(require("vanjs-core"), 1);
+
 var LandPlot = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core804.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m12 8 6-3-6-3v10" }),
@@ -12752,9 +11163,9 @@ var LandPlot = /* @__PURE__ */ __name((props = {}) => {
 }, "LandPlot");
 
 // src/icons/Landmark.ts
-var import_vanjs_core805 = __toESM(require("vanjs-core"), 1);
+
 var Landmark = /* @__PURE__ */ __name((props = {}) => {
-  const { line, polygon } = import_vanjs_core805.default.tags(svgNamespace);
+  const { line, polygon } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "3", x2: "21", y1: "22", y2: "22" }),
@@ -12767,9 +11178,9 @@ var Landmark = /* @__PURE__ */ __name((props = {}) => {
 }, "Landmark");
 
 // src/icons/Languages.ts
-var import_vanjs_core806 = __toESM(require("vanjs-core"), 1);
+
 var Languages = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core806.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m5 8 6 6" }),
@@ -12782,9 +11193,9 @@ var Languages = /* @__PURE__ */ __name((props = {}) => {
 }, "Languages");
 
 // src/icons/LaptopMinimalCheck.ts
-var import_vanjs_core807 = __toESM(require("vanjs-core"), 1);
+
 var LaptopMinimalCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core807.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 20h20" }),
@@ -12794,9 +11205,9 @@ var LaptopMinimalCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "LaptopMinimalCheck");
 
 // src/icons/LaptopMinimal.ts
-var import_vanjs_core808 = __toESM(require("vanjs-core"), 1);
+
 var LaptopMinimal = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, line } = import_vanjs_core808.default.tags(svgNamespace);
+  const { rect, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "12", "x": "3", "y": "4", rx: "2", ry: "2" }),
@@ -12805,9 +11216,9 @@ var LaptopMinimal = /* @__PURE__ */ __name((props = {}) => {
 }, "LaptopMinimal");
 
 // src/icons/Laptop.ts
-var import_vanjs_core809 = __toESM(require("vanjs-core"), 1);
+
 var Laptop = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core809.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -12817,9 +11228,9 @@ var Laptop = /* @__PURE__ */ __name((props = {}) => {
 }, "Laptop");
 
 // src/icons/LassoSelect.ts
-var import_vanjs_core810 = __toESM(require("vanjs-core"), 1);
+
 var LassoSelect = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core810.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M7 22a5 5 0 0 1-2-4" }),
@@ -12835,9 +11246,9 @@ var LassoSelect = /* @__PURE__ */ __name((props = {}) => {
 }, "LassoSelect");
 
 // src/icons/Lasso.ts
-var import_vanjs_core811 = __toESM(require("vanjs-core"), 1);
+
 var Lasso = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core811.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M7 22a5 5 0 0 1-2-4" }),
@@ -12849,9 +11260,9 @@ var Lasso = /* @__PURE__ */ __name((props = {}) => {
 }, "Lasso");
 
 // src/icons/Laugh.ts
-var import_vanjs_core812 = __toESM(require("vanjs-core"), 1);
+
 var Laugh = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path, line } = import_vanjs_core812.default.tags(svgNamespace);
+  const { circle, path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -12862,9 +11273,9 @@ var Laugh = /* @__PURE__ */ __name((props = {}) => {
 }, "Laugh");
 
 // src/icons/Layers2.ts
-var import_vanjs_core813 = __toESM(require("vanjs-core"), 1);
+
 var Layers2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core813.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -12877,9 +11288,9 @@ var Layers2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Layers2");
 
 // src/icons/Layers.ts
-var import_vanjs_core814 = __toESM(require("vanjs-core"), 1);
+
 var Layers = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core814.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -12895,9 +11306,9 @@ var Layers = /* @__PURE__ */ __name((props = {}) => {
 }, "Layers");
 
 // src/icons/LayoutDashboard.ts
-var import_vanjs_core815 = __toESM(require("vanjs-core"), 1);
+
 var LayoutDashboard = /* @__PURE__ */ __name((props = {}) => {
-  const { rect } = import_vanjs_core815.default.tags(svgNamespace);
+  const { rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "7", height: "9", "x": "3", "y": "3", rx: "1" }),
@@ -12908,9 +11319,9 @@ var LayoutDashboard = /* @__PURE__ */ __name((props = {}) => {
 }, "LayoutDashboard");
 
 // src/icons/LayoutGrid.ts
-var import_vanjs_core816 = __toESM(require("vanjs-core"), 1);
+
 var LayoutGrid = /* @__PURE__ */ __name((props = {}) => {
-  const { rect } = import_vanjs_core816.default.tags(svgNamespace);
+  const { rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "7", height: "7", "x": "3", "y": "3", rx: "1" }),
@@ -12921,9 +11332,9 @@ var LayoutGrid = /* @__PURE__ */ __name((props = {}) => {
 }, "LayoutGrid");
 
 // src/icons/LayoutList.ts
-var import_vanjs_core817 = __toESM(require("vanjs-core"), 1);
+
 var LayoutList = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core817.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "7", height: "7", "x": "3", "y": "3", rx: "1" }),
@@ -12936,9 +11347,9 @@ var LayoutList = /* @__PURE__ */ __name((props = {}) => {
 }, "LayoutList");
 
 // src/icons/LayoutPanelLeft.ts
-var import_vanjs_core818 = __toESM(require("vanjs-core"), 1);
+
 var LayoutPanelLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { rect } = import_vanjs_core818.default.tags(svgNamespace);
+  const { rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "7", height: "18", "x": "3", "y": "3", rx: "1" }),
@@ -12948,9 +11359,9 @@ var LayoutPanelLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "LayoutPanelLeft");
 
 // src/icons/LayoutPanelTop.ts
-var import_vanjs_core819 = __toESM(require("vanjs-core"), 1);
+
 var LayoutPanelTop = /* @__PURE__ */ __name((props = {}) => {
-  const { rect } = import_vanjs_core819.default.tags(svgNamespace);
+  const { rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "7", "x": "3", "y": "3", rx: "1" }),
@@ -12960,9 +11371,9 @@ var LayoutPanelTop = /* @__PURE__ */ __name((props = {}) => {
 }, "LayoutPanelTop");
 
 // src/icons/LayoutTemplate.ts
-var import_vanjs_core820 = __toESM(require("vanjs-core"), 1);
+
 var LayoutTemplate = /* @__PURE__ */ __name((props = {}) => {
-  const { rect } = import_vanjs_core820.default.tags(svgNamespace);
+  const { rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "7", "x": "3", "y": "3", rx: "1" }),
@@ -12972,9 +11383,9 @@ var LayoutTemplate = /* @__PURE__ */ __name((props = {}) => {
 }, "LayoutTemplate");
 
 // src/icons/Leaf.ts
-var import_vanjs_core821 = __toESM(require("vanjs-core"), 1);
+
 var Leaf = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core821.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -12985,9 +11396,9 @@ var Leaf = /* @__PURE__ */ __name((props = {}) => {
 }, "Leaf");
 
 // src/icons/LeafyGreen.ts
-var import_vanjs_core822 = __toESM(require("vanjs-core"), 1);
+
 var LeafyGreen = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core822.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -12998,9 +11409,9 @@ var LeafyGreen = /* @__PURE__ */ __name((props = {}) => {
 }, "LeafyGreen");
 
 // src/icons/Lectern.ts
-var import_vanjs_core823 = __toESM(require("vanjs-core"), 1);
+
 var Lectern = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core823.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -13012,9 +11423,9 @@ var Lectern = /* @__PURE__ */ __name((props = {}) => {
 }, "Lectern");
 
 // src/icons/LetterText.ts
-var import_vanjs_core824 = __toESM(require("vanjs-core"), 1);
+
 var LetterText = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core824.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 12h6" }),
@@ -13026,9 +11437,9 @@ var LetterText = /* @__PURE__ */ __name((props = {}) => {
 }, "LetterText");
 
 // src/icons/LibraryBig.ts
-var import_vanjs_core825 = __toESM(require("vanjs-core"), 1);
+
 var LibraryBig = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core825.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "8", height: "18", "x": "3", "y": "3", rx: "1" }),
@@ -13040,9 +11451,9 @@ var LibraryBig = /* @__PURE__ */ __name((props = {}) => {
 }, "LibraryBig");
 
 // src/icons/Library.ts
-var import_vanjs_core826 = __toESM(require("vanjs-core"), 1);
+
 var Library = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core826.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m16 6 4 14" }),
@@ -13053,9 +11464,9 @@ var Library = /* @__PURE__ */ __name((props = {}) => {
 }, "Library");
 
 // src/icons/LifeBuoy.ts
-var import_vanjs_core827 = __toESM(require("vanjs-core"), 1);
+
 var LifeBuoy = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core827.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -13068,9 +11479,9 @@ var LifeBuoy = /* @__PURE__ */ __name((props = {}) => {
 }, "LifeBuoy");
 
 // src/icons/Ligature.ts
-var import_vanjs_core828 = __toESM(require("vanjs-core"), 1);
+
 var Ligature = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core828.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 20V8c0-2.2 1.8-4 4-4 1.5 0 2.8.8 3.5 2" }),
@@ -13082,9 +11493,9 @@ var Ligature = /* @__PURE__ */ __name((props = {}) => {
 }, "Ligature");
 
 // src/icons/LightbulbOff.ts
-var import_vanjs_core829 = __toESM(require("vanjs-core"), 1);
+
 var LightbulbOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core829.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16.8 11.2c.8-.9 1.2-2 1.2-3.2a6 6 0 0 0-9.3-5" }),
@@ -13096,9 +11507,9 @@ var LightbulbOff = /* @__PURE__ */ __name((props = {}) => {
 }, "LightbulbOff");
 
 // src/icons/Lightbulb.ts
-var import_vanjs_core830 = __toESM(require("vanjs-core"), 1);
+
 var Lightbulb = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core830.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -13110,9 +11521,9 @@ var Lightbulb = /* @__PURE__ */ __name((props = {}) => {
 }, "Lightbulb");
 
 // src/icons/Link2Off.ts
-var import_vanjs_core831 = __toESM(require("vanjs-core"), 1);
+
 var Link2Off = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core831.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M9 17H7A5 5 0 0 1 7 7" }),
@@ -13123,9 +11534,9 @@ var Link2Off = /* @__PURE__ */ __name((props = {}) => {
 }, "Link2Off");
 
 // src/icons/Link2.ts
-var import_vanjs_core832 = __toESM(require("vanjs-core"), 1);
+
 var Link2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core832.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M9 17H7A5 5 0 0 1 7 7h2" }),
@@ -13135,9 +11546,9 @@ var Link2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Link2");
 
 // src/icons/Link.ts
-var import_vanjs_core833 = __toESM(require("vanjs-core"), 1);
+
 var Link = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core833.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -13150,9 +11561,9 @@ var Link = /* @__PURE__ */ __name((props = {}) => {
 }, "Link");
 
 // src/icons/Linkedin.ts
-var import_vanjs_core834 = __toESM(require("vanjs-core"), 1);
+
 var Linkedin = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect, circle } = import_vanjs_core834.default.tags(svgNamespace);
+  const { path, rect, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -13164,9 +11575,9 @@ var Linkedin = /* @__PURE__ */ __name((props = {}) => {
 }, "Linkedin");
 
 // src/icons/ListCheck.ts
-var import_vanjs_core835 = __toESM(require("vanjs-core"), 1);
+
 var ListCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core835.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11 18H3" }),
@@ -13177,9 +11588,9 @@ var ListCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "ListCheck");
 
 // src/icons/ListChecks.ts
-var import_vanjs_core836 = __toESM(require("vanjs-core"), 1);
+
 var ListChecks = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core836.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m3 17 2 2 4-4" }),
@@ -13191,9 +11602,9 @@ var ListChecks = /* @__PURE__ */ __name((props = {}) => {
 }, "ListChecks");
 
 // src/icons/ListCollapse.ts
-var import_vanjs_core837 = __toESM(require("vanjs-core"), 1);
+
 var ListCollapse = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core837.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m3 10 2.5-2.5L3 5" }),
@@ -13205,9 +11616,9 @@ var ListCollapse = /* @__PURE__ */ __name((props = {}) => {
 }, "ListCollapse");
 
 // src/icons/ListEnd.ts
-var import_vanjs_core838 = __toESM(require("vanjs-core"), 1);
+
 var ListEnd = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core838.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 12H3" }),
@@ -13219,9 +11630,9 @@ var ListEnd = /* @__PURE__ */ __name((props = {}) => {
 }, "ListEnd");
 
 // src/icons/ListFilterPlus.ts
-var import_vanjs_core839 = __toESM(require("vanjs-core"), 1);
+
 var ListFilterPlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core839.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 18h4" }),
@@ -13233,9 +11644,9 @@ var ListFilterPlus = /* @__PURE__ */ __name((props = {}) => {
 }, "ListFilterPlus");
 
 // src/icons/ListFilter.ts
-var import_vanjs_core840 = __toESM(require("vanjs-core"), 1);
+
 var ListFilter = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core840.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 6h18" }),
@@ -13245,9 +11656,9 @@ var ListFilter = /* @__PURE__ */ __name((props = {}) => {
 }, "ListFilter");
 
 // src/icons/ListMinus.ts
-var import_vanjs_core841 = __toESM(require("vanjs-core"), 1);
+
 var ListMinus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core841.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11 12H3" }),
@@ -13258,9 +11669,9 @@ var ListMinus = /* @__PURE__ */ __name((props = {}) => {
 }, "ListMinus");
 
 // src/icons/ListMusic.ts
-var import_vanjs_core842 = __toESM(require("vanjs-core"), 1);
+
 var ListMusic = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core842.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 15V6" }),
@@ -13272,9 +11683,9 @@ var ListMusic = /* @__PURE__ */ __name((props = {}) => {
 }, "ListMusic");
 
 // src/icons/ListOrdered.ts
-var import_vanjs_core843 = __toESM(require("vanjs-core"), 1);
+
 var ListOrdered = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core843.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 12h11" }),
@@ -13287,9 +11698,9 @@ var ListOrdered = /* @__PURE__ */ __name((props = {}) => {
 }, "ListOrdered");
 
 // src/icons/ListPlus.ts
-var import_vanjs_core844 = __toESM(require("vanjs-core"), 1);
+
 var ListPlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core844.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11 12H3" }),
@@ -13301,9 +11712,9 @@ var ListPlus = /* @__PURE__ */ __name((props = {}) => {
 }, "ListPlus");
 
 // src/icons/ListRestart.ts
-var import_vanjs_core845 = __toESM(require("vanjs-core"), 1);
+
 var ListRestart = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core845.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 6H3" }),
@@ -13317,9 +11728,9 @@ var ListRestart = /* @__PURE__ */ __name((props = {}) => {
 }, "ListRestart");
 
 // src/icons/ListStart.ts
-var import_vanjs_core846 = __toESM(require("vanjs-core"), 1);
+
 var ListStart = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core846.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 12H3" }),
@@ -13331,9 +11742,9 @@ var ListStart = /* @__PURE__ */ __name((props = {}) => {
 }, "ListStart");
 
 // src/icons/ListTodo.ts
-var import_vanjs_core847 = __toESM(require("vanjs-core"), 1);
+
 var ListTodo = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core847.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ "x": "3", "y": "5", width: "6", height: "6", rx: "1" }),
@@ -13345,9 +11756,9 @@ var ListTodo = /* @__PURE__ */ __name((props = {}) => {
 }, "ListTodo");
 
 // src/icons/ListTree.ts
-var import_vanjs_core848 = __toESM(require("vanjs-core"), 1);
+
 var ListTree = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core848.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 12h-8" }),
@@ -13359,9 +11770,9 @@ var ListTree = /* @__PURE__ */ __name((props = {}) => {
 }, "ListTree");
 
 // src/icons/ListVideo.ts
-var import_vanjs_core849 = __toESM(require("vanjs-core"), 1);
+
 var ListVideo = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core849.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 12H3" }),
@@ -13372,9 +11783,9 @@ var ListVideo = /* @__PURE__ */ __name((props = {}) => {
 }, "ListVideo");
 
 // src/icons/ListX.ts
-var import_vanjs_core850 = __toESM(require("vanjs-core"), 1);
+
 var ListX = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core850.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11 12H3" }),
@@ -13386,9 +11797,9 @@ var ListX = /* @__PURE__ */ __name((props = {}) => {
 }, "ListX");
 
 // src/icons/List.ts
-var import_vanjs_core851 = __toESM(require("vanjs-core"), 1);
+
 var List = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core851.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 12h.01" }),
@@ -13401,9 +11812,9 @@ var List = /* @__PURE__ */ __name((props = {}) => {
 }, "List");
 
 // src/icons/LoaderCircle.ts
-var import_vanjs_core852 = __toESM(require("vanjs-core"), 1);
+
 var LoaderCircle = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core852.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 12a9 9 0 1 1-6.219-8.56" })
@@ -13411,9 +11822,9 @@ var LoaderCircle = /* @__PURE__ */ __name((props = {}) => {
 }, "LoaderCircle");
 
 // src/icons/LoaderPinwheel.ts
-var import_vanjs_core853 = __toESM(require("vanjs-core"), 1);
+
 var LoaderPinwheel = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core853.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M22 12a1 1 0 0 1-10 0 1 1 0 0 0-10 0" }),
@@ -13424,9 +11835,9 @@ var LoaderPinwheel = /* @__PURE__ */ __name((props = {}) => {
 }, "LoaderPinwheel");
 
 // src/icons/Loader.ts
-var import_vanjs_core854 = __toESM(require("vanjs-core"), 1);
+
 var Loader = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core854.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 2v4" }),
@@ -13441,9 +11852,9 @@ var Loader = /* @__PURE__ */ __name((props = {}) => {
 }, "Loader");
 
 // src/icons/LocateFixed.ts
-var import_vanjs_core855 = __toESM(require("vanjs-core"), 1);
+
 var LocateFixed = /* @__PURE__ */ __name((props = {}) => {
-  const { line, circle } = import_vanjs_core855.default.tags(svgNamespace);
+  const { line, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "2", x2: "5", y1: "12", y2: "12" }),
@@ -13456,9 +11867,9 @@ var LocateFixed = /* @__PURE__ */ __name((props = {}) => {
 }, "LocateFixed");
 
 // src/icons/LocateOff.ts
-var import_vanjs_core856 = __toESM(require("vanjs-core"), 1);
+
 var LocateOff = /* @__PURE__ */ __name((props = {}) => {
-  const { line, path } = import_vanjs_core856.default.tags(svgNamespace);
+  const { line, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "2", x2: "5", y1: "12", y2: "12" }),
@@ -13476,9 +11887,9 @@ var LocateOff = /* @__PURE__ */ __name((props = {}) => {
 }, "LocateOff");
 
 // src/icons/Locate.ts
-var import_vanjs_core857 = __toESM(require("vanjs-core"), 1);
+
 var Locate = /* @__PURE__ */ __name((props = {}) => {
-  const { line, circle } = import_vanjs_core857.default.tags(svgNamespace);
+  const { line, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "2", x2: "5", y1: "12", y2: "12" }),
@@ -13490,9 +11901,9 @@ var Locate = /* @__PURE__ */ __name((props = {}) => {
 }, "Locate");
 
 // src/icons/LockKeyholeOpen.ts
-var import_vanjs_core858 = __toESM(require("vanjs-core"), 1);
+
 var LockKeyholeOpen = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, rect, path } = import_vanjs_core858.default.tags(svgNamespace);
+  const { circle, rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "16", "r": "1" }),
@@ -13502,9 +11913,9 @@ var LockKeyholeOpen = /* @__PURE__ */ __name((props = {}) => {
 }, "LockKeyholeOpen");
 
 // src/icons/LockKeyhole.ts
-var import_vanjs_core859 = __toESM(require("vanjs-core"), 1);
+
 var LockKeyhole = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, rect, path } = import_vanjs_core859.default.tags(svgNamespace);
+  const { circle, rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "16", "r": "1" }),
@@ -13514,9 +11925,9 @@ var LockKeyhole = /* @__PURE__ */ __name((props = {}) => {
 }, "LockKeyhole");
 
 // src/icons/LockOpen.ts
-var import_vanjs_core860 = __toESM(require("vanjs-core"), 1);
+
 var LockOpen = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core860.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "11", "x": "3", "y": "11", rx: "2", ry: "2" }),
@@ -13525,9 +11936,9 @@ var LockOpen = /* @__PURE__ */ __name((props = {}) => {
 }, "LockOpen");
 
 // src/icons/Lock.ts
-var import_vanjs_core861 = __toESM(require("vanjs-core"), 1);
+
 var Lock = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core861.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "11", "x": "3", "y": "11", rx: "2", ry: "2" }),
@@ -13536,9 +11947,9 @@ var Lock = /* @__PURE__ */ __name((props = {}) => {
 }, "Lock");
 
 // src/icons/LogIn.ts
-var import_vanjs_core862 = __toESM(require("vanjs-core"), 1);
+
 var LogIn = /* @__PURE__ */ __name((props = {}) => {
-  const { path, polyline, line } = import_vanjs_core862.default.tags(svgNamespace);
+  const { path, polyline, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" }),
@@ -13548,9 +11959,9 @@ var LogIn = /* @__PURE__ */ __name((props = {}) => {
 }, "LogIn");
 
 // src/icons/LogOut.ts
-var import_vanjs_core863 = __toESM(require("vanjs-core"), 1);
+
 var LogOut = /* @__PURE__ */ __name((props = {}) => {
-  const { path, polyline, line } = import_vanjs_core863.default.tags(svgNamespace);
+  const { path, polyline, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" }),
@@ -13560,9 +11971,9 @@ var LogOut = /* @__PURE__ */ __name((props = {}) => {
 }, "LogOut");
 
 // src/icons/Logs.ts
-var import_vanjs_core864 = __toESM(require("vanjs-core"), 1);
+
 var Logs = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core864.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M13 12h8" }),
@@ -13578,9 +11989,9 @@ var Logs = /* @__PURE__ */ __name((props = {}) => {
 }, "Logs");
 
 // src/icons/Lollipop.ts
-var import_vanjs_core865 = __toESM(require("vanjs-core"), 1);
+
 var Lollipop = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core865.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "11", cy: "11", "r": "8" }),
@@ -13590,9 +12001,9 @@ var Lollipop = /* @__PURE__ */ __name((props = {}) => {
 }, "Lollipop");
 
 // src/icons/Luggage.ts
-var import_vanjs_core866 = __toESM(require("vanjs-core"), 1);
+
 var Luggage = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core866.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -13606,9 +12017,9 @@ var Luggage = /* @__PURE__ */ __name((props = {}) => {
 }, "Luggage");
 
 // src/icons/Magnet.ts
-var import_vanjs_core867 = __toESM(require("vanjs-core"), 1);
+
 var Magnet = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core867.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -13620,9 +12031,9 @@ var Magnet = /* @__PURE__ */ __name((props = {}) => {
 }, "Magnet");
 
 // src/icons/MailCheck.ts
-var import_vanjs_core868 = __toESM(require("vanjs-core"), 1);
+
 var MailCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core868.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8" }),
@@ -13632,9 +12043,9 @@ var MailCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "MailCheck");
 
 // src/icons/MailMinus.ts
-var import_vanjs_core869 = __toESM(require("vanjs-core"), 1);
+
 var MailMinus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core869.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M22 15V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8" }),
@@ -13644,9 +12055,9 @@ var MailMinus = /* @__PURE__ */ __name((props = {}) => {
 }, "MailMinus");
 
 // src/icons/MailOpen.ts
-var import_vanjs_core870 = __toESM(require("vanjs-core"), 1);
+
 var MailOpen = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core870.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -13657,9 +12068,9 @@ var MailOpen = /* @__PURE__ */ __name((props = {}) => {
 }, "MailOpen");
 
 // src/icons/MailPlus.ts
-var import_vanjs_core871 = __toESM(require("vanjs-core"), 1);
+
 var MailPlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core871.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8" }),
@@ -13670,9 +12081,9 @@ var MailPlus = /* @__PURE__ */ __name((props = {}) => {
 }, "MailPlus");
 
 // src/icons/MailQuestion.ts
-var import_vanjs_core872 = __toESM(require("vanjs-core"), 1);
+
 var MailQuestion = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core872.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -13687,9 +12098,9 @@ var MailQuestion = /* @__PURE__ */ __name((props = {}) => {
 }, "MailQuestion");
 
 // src/icons/MailSearch.ts
-var import_vanjs_core873 = __toESM(require("vanjs-core"), 1);
+
 var MailSearch = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core873.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -13703,9 +12114,9 @@ var MailSearch = /* @__PURE__ */ __name((props = {}) => {
 }, "MailSearch");
 
 // src/icons/MailWarning.ts
-var import_vanjs_core874 = __toESM(require("vanjs-core"), 1);
+
 var MailWarning = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core874.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -13718,9 +12129,9 @@ var MailWarning = /* @__PURE__ */ __name((props = {}) => {
 }, "MailWarning");
 
 // src/icons/MailX.ts
-var import_vanjs_core875 = __toESM(require("vanjs-core"), 1);
+
 var MailX = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core875.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h9" }),
@@ -13731,9 +12142,9 @@ var MailX = /* @__PURE__ */ __name((props = {}) => {
 }, "MailX");
 
 // src/icons/Mail.ts
-var import_vanjs_core876 = __toESM(require("vanjs-core"), 1);
+
 var Mail = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core876.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "20", height: "16", "x": "2", "y": "4", rx: "2" }),
@@ -13742,9 +12153,9 @@ var Mail = /* @__PURE__ */ __name((props = {}) => {
 }, "Mail");
 
 // src/icons/Mailbox.ts
-var import_vanjs_core877 = __toESM(require("vanjs-core"), 1);
+
 var Mailbox = /* @__PURE__ */ __name((props = {}) => {
-  const { path, polyline, line } = import_vanjs_core877.default.tags(svgNamespace);
+  const { path, polyline, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -13757,9 +12168,9 @@ var Mailbox = /* @__PURE__ */ __name((props = {}) => {
 }, "Mailbox");
 
 // src/icons/Mails.ts
-var import_vanjs_core878 = __toESM(require("vanjs-core"), 1);
+
 var Mails = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core878.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "16", height: "13", "x": "6", "y": "4", rx: "2" }),
@@ -13769,9 +12180,9 @@ var Mails = /* @__PURE__ */ __name((props = {}) => {
 }, "Mails");
 
 // src/icons/MapPinCheckInside.ts
-var import_vanjs_core879 = __toESM(require("vanjs-core"), 1);
+
 var MapPinCheckInside = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core879.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -13782,9 +12193,9 @@ var MapPinCheckInside = /* @__PURE__ */ __name((props = {}) => {
 }, "MapPinCheckInside");
 
 // src/icons/MapPinCheck.ts
-var import_vanjs_core880 = __toESM(require("vanjs-core"), 1);
+
 var MapPinCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core880.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -13796,9 +12207,9 @@ var MapPinCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "MapPinCheck");
 
 // src/icons/MapPinHouse.ts
-var import_vanjs_core881 = __toESM(require("vanjs-core"), 1);
+
 var MapPinHouse = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core881.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -13813,9 +12224,9 @@ var MapPinHouse = /* @__PURE__ */ __name((props = {}) => {
 }, "MapPinHouse");
 
 // src/icons/MapPinMinusInside.ts
-var import_vanjs_core882 = __toESM(require("vanjs-core"), 1);
+
 var MapPinMinusInside = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core882.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -13826,9 +12237,9 @@ var MapPinMinusInside = /* @__PURE__ */ __name((props = {}) => {
 }, "MapPinMinusInside");
 
 // src/icons/MapPinMinus.ts
-var import_vanjs_core883 = __toESM(require("vanjs-core"), 1);
+
 var MapPinMinus = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core883.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -13840,9 +12251,9 @@ var MapPinMinus = /* @__PURE__ */ __name((props = {}) => {
 }, "MapPinMinus");
 
 // src/icons/MapPinOff.ts
-var import_vanjs_core884 = __toESM(require("vanjs-core"), 1);
+
 var MapPinOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core884.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12.75 7.09a3 3 0 0 1 2.16 2.16" }),
@@ -13856,9 +12267,9 @@ var MapPinOff = /* @__PURE__ */ __name((props = {}) => {
 }, "MapPinOff");
 
 // src/icons/MapPinPlusInside.ts
-var import_vanjs_core885 = __toESM(require("vanjs-core"), 1);
+
 var MapPinPlusInside = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core885.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -13870,9 +12281,9 @@ var MapPinPlusInside = /* @__PURE__ */ __name((props = {}) => {
 }, "MapPinPlusInside");
 
 // src/icons/MapPinPlus.ts
-var import_vanjs_core886 = __toESM(require("vanjs-core"), 1);
+
 var MapPinPlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core886.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -13885,9 +12296,9 @@ var MapPinPlus = /* @__PURE__ */ __name((props = {}) => {
 }, "MapPinPlus");
 
 // src/icons/MapPinXInside.ts
-var import_vanjs_core887 = __toESM(require("vanjs-core"), 1);
+
 var MapPinXInside = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core887.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -13899,9 +12310,9 @@ var MapPinXInside = /* @__PURE__ */ __name((props = {}) => {
 }, "MapPinXInside");
 
 // src/icons/MapPinX.ts
-var import_vanjs_core888 = __toESM(require("vanjs-core"), 1);
+
 var MapPinX = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core888.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -13914,9 +12325,9 @@ var MapPinX = /* @__PURE__ */ __name((props = {}) => {
 }, "MapPinX");
 
 // src/icons/MapPin.ts
-var import_vanjs_core889 = __toESM(require("vanjs-core"), 1);
+
 var MapPin = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core889.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -13927,9 +12338,9 @@ var MapPin = /* @__PURE__ */ __name((props = {}) => {
 }, "MapPin");
 
 // src/icons/MapPinned.ts
-var import_vanjs_core890 = __toESM(require("vanjs-core"), 1);
+
 var MapPinned = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core890.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -13943,9 +12354,9 @@ var MapPinned = /* @__PURE__ */ __name((props = {}) => {
 }, "MapPinned");
 
 // src/icons/MapPlus.ts
-var import_vanjs_core891 = __toESM(require("vanjs-core"), 1);
+
 var MapPlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core891.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -13959,9 +12370,9 @@ var MapPlus = /* @__PURE__ */ __name((props = {}) => {
 }, "MapPlus");
 
 // src/icons/Map.ts
-var import_vanjs_core892 = __toESM(require("vanjs-core"), 1);
+
 var Map = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core892.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -13973,9 +12384,9 @@ var Map = /* @__PURE__ */ __name((props = {}) => {
 }, "Map");
 
 // src/icons/MarsStroke.ts
-var import_vanjs_core893 = __toESM(require("vanjs-core"), 1);
+
 var MarsStroke = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core893.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m14 6 4 4" }),
@@ -13986,9 +12397,9 @@ var MarsStroke = /* @__PURE__ */ __name((props = {}) => {
 }, "MarsStroke");
 
 // src/icons/Mars.ts
-var import_vanjs_core894 = __toESM(require("vanjs-core"), 1);
+
 var Mars = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core894.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 3h5v5" }),
@@ -13998,9 +12409,9 @@ var Mars = /* @__PURE__ */ __name((props = {}) => {
 }, "Mars");
 
 // src/icons/Martini.ts
-var import_vanjs_core895 = __toESM(require("vanjs-core"), 1);
+
 var Martini = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core895.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 22h8" }),
@@ -14010,9 +12421,9 @@ var Martini = /* @__PURE__ */ __name((props = {}) => {
 }, "Martini");
 
 // src/icons/Maximize2.ts
-var import_vanjs_core896 = __toESM(require("vanjs-core"), 1);
+
 var Maximize2 = /* @__PURE__ */ __name((props = {}) => {
-  const { polyline, line } = import_vanjs_core896.default.tags(svgNamespace);
+  const { polyline, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polyline({ points: "15 3 21 3 21 9" }),
@@ -14023,9 +12434,9 @@ var Maximize2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Maximize2");
 
 // src/icons/Maximize.ts
-var import_vanjs_core897 = __toESM(require("vanjs-core"), 1);
+
 var Maximize = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core897.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 3H5a2 2 0 0 0-2 2v3" }),
@@ -14036,9 +12447,9 @@ var Maximize = /* @__PURE__ */ __name((props = {}) => {
 }, "Maximize");
 
 // src/icons/Medal.ts
-var import_vanjs_core898 = __toESM(require("vanjs-core"), 1);
+
 var Medal = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core898.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -14053,9 +12464,9 @@ var Medal = /* @__PURE__ */ __name((props = {}) => {
 }, "Medal");
 
 // src/icons/MegaphoneOff.ts
-var import_vanjs_core899 = __toESM(require("vanjs-core"), 1);
+
 var MegaphoneOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core899.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M9.26 9.26 3 11v3l14.14 3.14" }),
@@ -14066,9 +12477,9 @@ var MegaphoneOff = /* @__PURE__ */ __name((props = {}) => {
 }, "MegaphoneOff");
 
 // src/icons/Megaphone.ts
-var import_vanjs_core900 = __toESM(require("vanjs-core"), 1);
+
 var Megaphone = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core900.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m3 11 18-5v12L3 14v-3z" }),
@@ -14077,9 +12488,9 @@ var Megaphone = /* @__PURE__ */ __name((props = {}) => {
 }, "Megaphone");
 
 // src/icons/Meh.ts
-var import_vanjs_core901 = __toESM(require("vanjs-core"), 1);
+
 var Meh = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, line } = import_vanjs_core901.default.tags(svgNamespace);
+  const { circle, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -14090,9 +12501,9 @@ var Meh = /* @__PURE__ */ __name((props = {}) => {
 }, "Meh");
 
 // src/icons/MemoryStick.ts
-var import_vanjs_core902 = __toESM(require("vanjs-core"), 1);
+
 var MemoryStick = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core902.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M6 19v-3" }),
@@ -14110,9 +12521,9 @@ var MemoryStick = /* @__PURE__ */ __name((props = {}) => {
 }, "MemoryStick");
 
 // src/icons/Menu.ts
-var import_vanjs_core903 = __toESM(require("vanjs-core"), 1);
+
 var Menu = /* @__PURE__ */ __name((props = {}) => {
-  const { line } = import_vanjs_core903.default.tags(svgNamespace);
+  const { line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "4", x2: "20", y1: "12", y2: "12" }),
@@ -14122,9 +12533,9 @@ var Menu = /* @__PURE__ */ __name((props = {}) => {
 }, "Menu");
 
 // src/icons/Merge.ts
-var import_vanjs_core904 = __toESM(require("vanjs-core"), 1);
+
 var Merge = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core904.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m8 6 4-4 4 4" }),
@@ -14134,9 +12545,9 @@ var Merge = /* @__PURE__ */ __name((props = {}) => {
 }, "Merge");
 
 // src/icons/MessageCircleCode.ts
-var import_vanjs_core905 = __toESM(require("vanjs-core"), 1);
+
 var MessageCircleCode = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core905.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 9.5 8 12l2 2.5" }),
@@ -14146,9 +12557,9 @@ var MessageCircleCode = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageCircleCode");
 
 // src/icons/MessageCircleDashed.ts
-var import_vanjs_core906 = __toESM(require("vanjs-core"), 1);
+
 var MessageCircleDashed = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core906.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M13.5 3.1c-.5 0-1-.1-1.5-.1s-1 .1-1.5.1" }),
@@ -14163,9 +12574,9 @@ var MessageCircleDashed = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageCircleDashed");
 
 // src/icons/MessageCircleHeart.ts
-var import_vanjs_core907 = __toESM(require("vanjs-core"), 1);
+
 var MessageCircleHeart = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core907.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M7.9 20A9 9 0 1 0 4 16.1L2 22Z" }),
@@ -14176,9 +12587,9 @@ var MessageCircleHeart = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageCircleHeart");
 
 // src/icons/MessageCircleMore.ts
-var import_vanjs_core908 = __toESM(require("vanjs-core"), 1);
+
 var MessageCircleMore = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core908.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M7.9 20A9 9 0 1 0 4 16.1L2 22Z" }),
@@ -14189,9 +12600,9 @@ var MessageCircleMore = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageCircleMore");
 
 // src/icons/MessageCircleOff.ts
-var import_vanjs_core909 = __toESM(require("vanjs-core"), 1);
+
 var MessageCircleOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core909.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M20.5 14.9A9 9 0 0 0 9.1 3.5" }),
@@ -14203,9 +12614,9 @@ var MessageCircleOff = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageCircleOff");
 
 // src/icons/MessageCirclePlus.ts
-var import_vanjs_core910 = __toESM(require("vanjs-core"), 1);
+
 var MessageCirclePlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core910.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M7.9 20A9 9 0 1 0 4 16.1L2 22Z" }),
@@ -14215,9 +12626,9 @@ var MessageCirclePlus = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageCirclePlus");
 
 // src/icons/MessageCircleQuestion.ts
-var import_vanjs_core911 = __toESM(require("vanjs-core"), 1);
+
 var MessageCircleQuestion = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core911.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M7.9 20A9 9 0 1 0 4 16.1L2 22Z" }),
@@ -14227,9 +12638,9 @@ var MessageCircleQuestion = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageCircleQuestion");
 
 // src/icons/MessageCircleReply.ts
-var import_vanjs_core912 = __toESM(require("vanjs-core"), 1);
+
 var MessageCircleReply = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core912.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M7.9 20A9 9 0 1 0 4 16.1L2 22Z" }),
@@ -14239,9 +12650,9 @@ var MessageCircleReply = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageCircleReply");
 
 // src/icons/MessageCircleWarning.ts
-var import_vanjs_core913 = __toESM(require("vanjs-core"), 1);
+
 var MessageCircleWarning = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core913.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M7.9 20A9 9 0 1 0 4 16.1L2 22Z" }),
@@ -14251,9 +12662,9 @@ var MessageCircleWarning = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageCircleWarning");
 
 // src/icons/MessageCircleX.ts
-var import_vanjs_core914 = __toESM(require("vanjs-core"), 1);
+
 var MessageCircleX = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core914.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M7.9 20A9 9 0 1 0 4 16.1L2 22Z" }),
@@ -14263,9 +12674,9 @@ var MessageCircleX = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageCircleX");
 
 // src/icons/MessageCircle.ts
-var import_vanjs_core915 = __toESM(require("vanjs-core"), 1);
+
 var MessageCircle = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core915.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M7.9 20A9 9 0 1 0 4 16.1L2 22Z" })
@@ -14273,9 +12684,9 @@ var MessageCircle = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageCircle");
 
 // src/icons/MessageSquareCode.ts
-var import_vanjs_core916 = __toESM(require("vanjs-core"), 1);
+
 var MessageSquareCode = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core916.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 7.5 8 10l2 2.5" }),
@@ -14287,9 +12698,9 @@ var MessageSquareCode = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageSquareCode");
 
 // src/icons/MessageSquareDashed.ts
-var import_vanjs_core917 = __toESM(require("vanjs-core"), 1);
+
 var MessageSquareDashed = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core917.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 17H7l-4 4v-7" }),
@@ -14305,9 +12716,9 @@ var MessageSquareDashed = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageSquareDashed");
 
 // src/icons/MessageSquareDiff.ts
-var import_vanjs_core918 = __toESM(require("vanjs-core"), 1);
+
 var MessageSquareDiff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core918.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -14320,9 +12731,9 @@ var MessageSquareDiff = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageSquareDiff");
 
 // src/icons/MessageSquareDot.ts
-var import_vanjs_core919 = __toESM(require("vanjs-core"), 1);
+
 var MessageSquareDot = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core919.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11.7 3H5a2 2 0 0 0-2 2v16l4-4h12a2 2 0 0 0 2-2v-2.7" }),
@@ -14331,9 +12742,9 @@ var MessageSquareDot = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageSquareDot");
 
 // src/icons/MessageSquareHeart.ts
-var import_vanjs_core920 = __toESM(require("vanjs-core"), 1);
+
 var MessageSquareHeart = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core920.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -14346,9 +12757,9 @@ var MessageSquareHeart = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageSquareHeart");
 
 // src/icons/MessageSquareLock.ts
-var import_vanjs_core921 = __toESM(require("vanjs-core"), 1);
+
 var MessageSquareLock = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core921.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M19 15v-2a2 2 0 1 0-4 0v2" }),
@@ -14358,9 +12769,9 @@ var MessageSquareLock = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageSquareLock");
 
 // src/icons/MessageSquareMore.ts
-var import_vanjs_core922 = __toESM(require("vanjs-core"), 1);
+
 var MessageSquareMore = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core922.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -14373,9 +12784,9 @@ var MessageSquareMore = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageSquareMore");
 
 // src/icons/MessageSquareOff.ts
-var import_vanjs_core923 = __toESM(require("vanjs-core"), 1);
+
 var MessageSquareOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core923.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 15V5a2 2 0 0 0-2-2H9" }),
@@ -14385,9 +12796,9 @@ var MessageSquareOff = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageSquareOff");
 
 // src/icons/MessageSquarePlus.ts
-var import_vanjs_core924 = __toESM(require("vanjs-core"), 1);
+
 var MessageSquarePlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core924.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -14399,9 +12810,9 @@ var MessageSquarePlus = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageSquarePlus");
 
 // src/icons/MessageSquareQuote.ts
-var import_vanjs_core925 = __toESM(require("vanjs-core"), 1);
+
 var MessageSquareQuote = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core925.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -14413,9 +12824,9 @@ var MessageSquareQuote = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageSquareQuote");
 
 // src/icons/MessageSquareReply.ts
-var import_vanjs_core926 = __toESM(require("vanjs-core"), 1);
+
 var MessageSquareReply = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core926.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -14427,9 +12838,9 @@ var MessageSquareReply = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageSquareReply");
 
 // src/icons/MessageSquareShare.ts
-var import_vanjs_core927 = __toESM(require("vanjs-core"), 1);
+
 var MessageSquareShare = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core927.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 12v3a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h7" }),
@@ -14439,9 +12850,9 @@ var MessageSquareShare = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageSquareShare");
 
 // src/icons/MessageSquareText.ts
-var import_vanjs_core928 = __toESM(require("vanjs-core"), 1);
+
 var MessageSquareText = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core928.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -14453,9 +12864,9 @@ var MessageSquareText = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageSquareText");
 
 // src/icons/MessageSquareWarning.ts
-var import_vanjs_core929 = __toESM(require("vanjs-core"), 1);
+
 var MessageSquareWarning = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core929.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -14467,9 +12878,9 @@ var MessageSquareWarning = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageSquareWarning");
 
 // src/icons/MessageSquareX.ts
-var import_vanjs_core930 = __toESM(require("vanjs-core"), 1);
+
 var MessageSquareX = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core930.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -14481,9 +12892,9 @@ var MessageSquareX = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageSquareX");
 
 // src/icons/MessageSquare.ts
-var import_vanjs_core931 = __toESM(require("vanjs-core"), 1);
+
 var MessageSquare = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core931.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -14493,9 +12904,9 @@ var MessageSquare = /* @__PURE__ */ __name((props = {}) => {
 }, "MessageSquare");
 
 // src/icons/MessagesSquare.ts
-var import_vanjs_core932 = __toESM(require("vanjs-core"), 1);
+
 var MessagesSquare = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core932.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -14506,9 +12917,9 @@ var MessagesSquare = /* @__PURE__ */ __name((props = {}) => {
 }, "MessagesSquare");
 
 // src/icons/MicOff.ts
-var import_vanjs_core933 = __toESM(require("vanjs-core"), 1);
+
 var MicOff = /* @__PURE__ */ __name((props = {}) => {
-  const { line, path } = import_vanjs_core933.default.tags(svgNamespace);
+  const { line, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "2", x2: "22", y1: "2", y2: "22" }),
@@ -14521,9 +12932,9 @@ var MicOff = /* @__PURE__ */ __name((props = {}) => {
 }, "MicOff");
 
 // src/icons/MicVocal.ts
-var import_vanjs_core934 = __toESM(require("vanjs-core"), 1);
+
 var MicVocal = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core934.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -14537,9 +12948,9 @@ var MicVocal = /* @__PURE__ */ __name((props = {}) => {
 }, "MicVocal");
 
 // src/icons/Mic.ts
-var import_vanjs_core935 = __toESM(require("vanjs-core"), 1);
+
 var Mic = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core935.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" }),
@@ -14549,9 +12960,9 @@ var Mic = /* @__PURE__ */ __name((props = {}) => {
 }, "Mic");
 
 // src/icons/Microchip.ts
-var import_vanjs_core936 = __toESM(require("vanjs-core"), 1);
+
 var Microchip = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core936.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M18 12h2" }),
@@ -14571,9 +12982,9 @@ var Microchip = /* @__PURE__ */ __name((props = {}) => {
 }, "Microchip");
 
 // src/icons/Microscope.ts
-var import_vanjs_core937 = __toESM(require("vanjs-core"), 1);
+
 var Microscope = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core937.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M6 18h8" }),
@@ -14586,9 +12997,9 @@ var Microscope = /* @__PURE__ */ __name((props = {}) => {
 }, "Microscope");
 
 // src/icons/Microwave.ts
-var import_vanjs_core938 = __toESM(require("vanjs-core"), 1);
+
 var Microwave = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core938.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "20", height: "15", "x": "2", "y": "4", rx: "2" }),
@@ -14600,9 +13011,9 @@ var Microwave = /* @__PURE__ */ __name((props = {}) => {
 }, "Microwave");
 
 // src/icons/Milestone.ts
-var import_vanjs_core939 = __toESM(require("vanjs-core"), 1);
+
 var Milestone = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core939.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 13v8" }),
@@ -14614,9 +13025,9 @@ var Milestone = /* @__PURE__ */ __name((props = {}) => {
 }, "Milestone");
 
 // src/icons/MilkOff.ts
-var import_vanjs_core940 = __toESM(require("vanjs-core"), 1);
+
 var MilkOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core940.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 2h8" }),
@@ -14629,9 +13040,9 @@ var MilkOff = /* @__PURE__ */ __name((props = {}) => {
 }, "MilkOff");
 
 // src/icons/Milk.ts
-var import_vanjs_core941 = __toESM(require("vanjs-core"), 1);
+
 var Milk = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core941.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 2h8" }),
@@ -14643,9 +13054,9 @@ var Milk = /* @__PURE__ */ __name((props = {}) => {
 }, "Milk");
 
 // src/icons/Minimize2.ts
-var import_vanjs_core942 = __toESM(require("vanjs-core"), 1);
+
 var Minimize2 = /* @__PURE__ */ __name((props = {}) => {
-  const { polyline, line } = import_vanjs_core942.default.tags(svgNamespace);
+  const { polyline, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polyline({ points: "4 14 10 14 10 20" }),
@@ -14656,9 +13067,9 @@ var Minimize2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Minimize2");
 
 // src/icons/Minimize.ts
-var import_vanjs_core943 = __toESM(require("vanjs-core"), 1);
+
 var Minimize = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core943.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 3v3a2 2 0 0 1-2 2H3" }),
@@ -14669,9 +13080,9 @@ var Minimize = /* @__PURE__ */ __name((props = {}) => {
 }, "Minimize");
 
 // src/icons/Minus.ts
-var import_vanjs_core944 = __toESM(require("vanjs-core"), 1);
+
 var Minus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core944.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M5 12h14" })
@@ -14679,9 +13090,9 @@ var Minus = /* @__PURE__ */ __name((props = {}) => {
 }, "Minus");
 
 // src/icons/MonitorCheck.ts
-var import_vanjs_core945 = __toESM(require("vanjs-core"), 1);
+
 var MonitorCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core945.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m9 10 2 2 4-4" }),
@@ -14692,9 +13103,9 @@ var MonitorCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "MonitorCheck");
 
 // src/icons/MonitorCog.ts
-var import_vanjs_core946 = __toESM(require("vanjs-core"), 1);
+
 var MonitorCog = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core946.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 17v4" }),
@@ -14713,9 +13124,9 @@ var MonitorCog = /* @__PURE__ */ __name((props = {}) => {
 }, "MonitorCog");
 
 // src/icons/MonitorDot.ts
-var import_vanjs_core947 = __toESM(require("vanjs-core"), 1);
+
 var MonitorDot = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core947.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "19", cy: "6", "r": "3" }),
@@ -14726,9 +13137,9 @@ var MonitorDot = /* @__PURE__ */ __name((props = {}) => {
 }, "MonitorDot");
 
 // src/icons/MonitorDown.ts
-var import_vanjs_core948 = __toESM(require("vanjs-core"), 1);
+
 var MonitorDown = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core948.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 13V7" }),
@@ -14740,9 +13151,9 @@ var MonitorDown = /* @__PURE__ */ __name((props = {}) => {
 }, "MonitorDown");
 
 // src/icons/MonitorOff.ts
-var import_vanjs_core949 = __toESM(require("vanjs-core"), 1);
+
 var MonitorOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core949.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M17 17H4a2 2 0 0 1-2-2V5c0-1.5 1-2 1-2" }),
@@ -14754,9 +13165,9 @@ var MonitorOff = /* @__PURE__ */ __name((props = {}) => {
 }, "MonitorOff");
 
 // src/icons/MonitorPause.ts
-var import_vanjs_core950 = __toESM(require("vanjs-core"), 1);
+
 var MonitorPause = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core950.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 13V7" }),
@@ -14768,9 +13179,9 @@ var MonitorPause = /* @__PURE__ */ __name((props = {}) => {
 }, "MonitorPause");
 
 // src/icons/MonitorPlay.ts
-var import_vanjs_core951 = __toESM(require("vanjs-core"), 1);
+
 var MonitorPlay = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core951.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -14783,9 +13194,9 @@ var MonitorPlay = /* @__PURE__ */ __name((props = {}) => {
 }, "MonitorPlay");
 
 // src/icons/MonitorSmartphone.ts
-var import_vanjs_core952 = __toESM(require("vanjs-core"), 1);
+
 var MonitorSmartphone = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core952.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8" }),
@@ -14796,9 +13207,9 @@ var MonitorSmartphone = /* @__PURE__ */ __name((props = {}) => {
 }, "MonitorSmartphone");
 
 // src/icons/MonitorSpeaker.ts
-var import_vanjs_core953 = __toESM(require("vanjs-core"), 1);
+
 var MonitorSpeaker = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect, circle } = import_vanjs_core953.default.tags(svgNamespace);
+  const { path, rect, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M5.5 20H8" }),
@@ -14810,9 +13221,9 @@ var MonitorSpeaker = /* @__PURE__ */ __name((props = {}) => {
 }, "MonitorSpeaker");
 
 // src/icons/MonitorStop.ts
-var import_vanjs_core954 = __toESM(require("vanjs-core"), 1);
+
 var MonitorStop = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core954.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 17v4" }),
@@ -14823,9 +13234,9 @@ var MonitorStop = /* @__PURE__ */ __name((props = {}) => {
 }, "MonitorStop");
 
 // src/icons/MonitorUp.ts
-var import_vanjs_core955 = __toESM(require("vanjs-core"), 1);
+
 var MonitorUp = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core955.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m9 10 3-3 3 3" }),
@@ -14837,9 +13248,9 @@ var MonitorUp = /* @__PURE__ */ __name((props = {}) => {
 }, "MonitorUp");
 
 // src/icons/MonitorX.ts
-var import_vanjs_core956 = __toESM(require("vanjs-core"), 1);
+
 var MonitorX = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core956.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m14.5 12.5-5-5" }),
@@ -14851,9 +13262,9 @@ var MonitorX = /* @__PURE__ */ __name((props = {}) => {
 }, "MonitorX");
 
 // src/icons/Monitor.ts
-var import_vanjs_core957 = __toESM(require("vanjs-core"), 1);
+
 var Monitor = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, line } = import_vanjs_core957.default.tags(svgNamespace);
+  const { rect, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "20", height: "14", "x": "2", "y": "3", rx: "2" }),
@@ -14863,9 +13274,9 @@ var Monitor = /* @__PURE__ */ __name((props = {}) => {
 }, "Monitor");
 
 // src/icons/MoonStar.ts
-var import_vanjs_core958 = __toESM(require("vanjs-core"), 1);
+
 var MoonStar = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core958.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9" }),
@@ -14875,9 +13286,9 @@ var MoonStar = /* @__PURE__ */ __name((props = {}) => {
 }, "MoonStar");
 
 // src/icons/Moon.ts
-var import_vanjs_core959 = __toESM(require("vanjs-core"), 1);
+
 var Moon = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core959.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" })
@@ -14885,9 +13296,9 @@ var Moon = /* @__PURE__ */ __name((props = {}) => {
 }, "Moon");
 
 // src/icons/MountainSnow.ts
-var import_vanjs_core960 = __toESM(require("vanjs-core"), 1);
+
 var MountainSnow = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core960.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m8 3 4 8 5-5 5 15H2L8 3z" }),
@@ -14898,9 +13309,9 @@ var MountainSnow = /* @__PURE__ */ __name((props = {}) => {
 }, "MountainSnow");
 
 // src/icons/Mountain.ts
-var import_vanjs_core961 = __toESM(require("vanjs-core"), 1);
+
 var Mountain = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core961.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m8 3 4 8 5-5 5 15H2L8 3z" })
@@ -14908,9 +13319,9 @@ var Mountain = /* @__PURE__ */ __name((props = {}) => {
 }, "Mountain");
 
 // src/icons/MouseOff.ts
-var import_vanjs_core962 = __toESM(require("vanjs-core"), 1);
+
 var MouseOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core962.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 6v.343" }),
@@ -14921,9 +13332,9 @@ var MouseOff = /* @__PURE__ */ __name((props = {}) => {
 }, "MouseOff");
 
 // src/icons/MousePointer2.ts
-var import_vanjs_core963 = __toESM(require("vanjs-core"), 1);
+
 var MousePointer2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core963.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -14933,9 +13344,9 @@ var MousePointer2 = /* @__PURE__ */ __name((props = {}) => {
 }, "MousePointer2");
 
 // src/icons/MousePointerBan.ts
-var import_vanjs_core964 = __toESM(require("vanjs-core"), 1);
+
 var MousePointerBan = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core964.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -14947,9 +13358,9 @@ var MousePointerBan = /* @__PURE__ */ __name((props = {}) => {
 }, "MousePointerBan");
 
 // src/icons/MousePointerClick.ts
-var import_vanjs_core965 = __toESM(require("vanjs-core"), 1);
+
 var MousePointerClick = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core965.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M14 4.1 12 6" }),
@@ -14963,9 +13374,9 @@ var MousePointerClick = /* @__PURE__ */ __name((props = {}) => {
 }, "MousePointerClick");
 
 // src/icons/MousePointer.ts
-var import_vanjs_core966 = __toESM(require("vanjs-core"), 1);
+
 var MousePointer = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core966.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12.586 12.586 19 19" }),
@@ -14976,9 +13387,9 @@ var MousePointer = /* @__PURE__ */ __name((props = {}) => {
 }, "MousePointer");
 
 // src/icons/Mouse.ts
-var import_vanjs_core967 = __toESM(require("vanjs-core"), 1);
+
 var Mouse = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core967.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ "x": "5", "y": "2", width: "14", height: "20", rx: "7" }),
@@ -14987,9 +13398,9 @@ var Mouse = /* @__PURE__ */ __name((props = {}) => {
 }, "Mouse");
 
 // src/icons/Move3d.ts
-var import_vanjs_core968 = __toESM(require("vanjs-core"), 1);
+
 var Move3d = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core968.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M5 3v16h16" }),
@@ -15000,9 +13411,9 @@ var Move3d = /* @__PURE__ */ __name((props = {}) => {
 }, "Move3d");
 
 // src/icons/MoveDiagonal2.ts
-var import_vanjs_core969 = __toESM(require("vanjs-core"), 1);
+
 var MoveDiagonal2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core969.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M19 13v6h-6" }),
@@ -15012,9 +13423,9 @@ var MoveDiagonal2 = /* @__PURE__ */ __name((props = {}) => {
 }, "MoveDiagonal2");
 
 // src/icons/MoveDiagonal.ts
-var import_vanjs_core970 = __toESM(require("vanjs-core"), 1);
+
 var MoveDiagonal = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core970.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11 19H5v-6" }),
@@ -15024,9 +13435,9 @@ var MoveDiagonal = /* @__PURE__ */ __name((props = {}) => {
 }, "MoveDiagonal");
 
 // src/icons/MoveDownLeft.ts
-var import_vanjs_core971 = __toESM(require("vanjs-core"), 1);
+
 var MoveDownLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core971.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11 19H5V13" }),
@@ -15035,9 +13446,9 @@ var MoveDownLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "MoveDownLeft");
 
 // src/icons/MoveDownRight.ts
-var import_vanjs_core972 = __toESM(require("vanjs-core"), 1);
+
 var MoveDownRight = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core972.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M19 13V19H13" }),
@@ -15046,9 +13457,9 @@ var MoveDownRight = /* @__PURE__ */ __name((props = {}) => {
 }, "MoveDownRight");
 
 // src/icons/MoveDown.ts
-var import_vanjs_core973 = __toESM(require("vanjs-core"), 1);
+
 var MoveDown = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core973.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 18L12 22L16 18" }),
@@ -15057,9 +13468,9 @@ var MoveDown = /* @__PURE__ */ __name((props = {}) => {
 }, "MoveDown");
 
 // src/icons/MoveHorizontal.ts
-var import_vanjs_core974 = __toESM(require("vanjs-core"), 1);
+
 var MoveHorizontal = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core974.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m18 8 4 4-4 4" }),
@@ -15069,9 +13480,9 @@ var MoveHorizontal = /* @__PURE__ */ __name((props = {}) => {
 }, "MoveHorizontal");
 
 // src/icons/MoveLeft.ts
-var import_vanjs_core975 = __toESM(require("vanjs-core"), 1);
+
 var MoveLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core975.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M6 8L2 12L6 16" }),
@@ -15080,9 +13491,9 @@ var MoveLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "MoveLeft");
 
 // src/icons/MoveRight.ts
-var import_vanjs_core976 = __toESM(require("vanjs-core"), 1);
+
 var MoveRight = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core976.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M18 8L22 12L18 16" }),
@@ -15091,9 +13502,9 @@ var MoveRight = /* @__PURE__ */ __name((props = {}) => {
 }, "MoveRight");
 
 // src/icons/MoveUpLeft.ts
-var import_vanjs_core977 = __toESM(require("vanjs-core"), 1);
+
 var MoveUpLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core977.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M5 11V5H11" }),
@@ -15102,9 +13513,9 @@ var MoveUpLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "MoveUpLeft");
 
 // src/icons/MoveUpRight.ts
-var import_vanjs_core978 = __toESM(require("vanjs-core"), 1);
+
 var MoveUpRight = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core978.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M13 5H19V11" }),
@@ -15113,9 +13524,9 @@ var MoveUpRight = /* @__PURE__ */ __name((props = {}) => {
 }, "MoveUpRight");
 
 // src/icons/MoveUp.ts
-var import_vanjs_core979 = __toESM(require("vanjs-core"), 1);
+
 var MoveUp = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core979.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 6L12 2L16 6" }),
@@ -15124,9 +13535,9 @@ var MoveUp = /* @__PURE__ */ __name((props = {}) => {
 }, "MoveUp");
 
 // src/icons/MoveVertical.ts
-var import_vanjs_core980 = __toESM(require("vanjs-core"), 1);
+
 var MoveVertical = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core980.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 2v20" }),
@@ -15136,9 +13547,9 @@ var MoveVertical = /* @__PURE__ */ __name((props = {}) => {
 }, "MoveVertical");
 
 // src/icons/Move.ts
-var import_vanjs_core981 = __toESM(require("vanjs-core"), 1);
+
 var Move = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core981.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 2v20" }),
@@ -15151,9 +13562,9 @@ var Move = /* @__PURE__ */ __name((props = {}) => {
 }, "Move");
 
 // src/icons/Music2.ts
-var import_vanjs_core982 = __toESM(require("vanjs-core"), 1);
+
 var Music2 = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core982.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "8", cy: "18", "r": "4" }),
@@ -15162,9 +13573,9 @@ var Music2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Music2");
 
 // src/icons/Music3.ts
-var import_vanjs_core983 = __toESM(require("vanjs-core"), 1);
+
 var Music3 = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core983.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "18", "r": "4" }),
@@ -15173,9 +13584,9 @@ var Music3 = /* @__PURE__ */ __name((props = {}) => {
 }, "Music3");
 
 // src/icons/Music4.ts
-var import_vanjs_core984 = __toESM(require("vanjs-core"), 1);
+
 var Music4 = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core984.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M9 18V5l12-2v13" }),
@@ -15186,9 +13597,9 @@ var Music4 = /* @__PURE__ */ __name((props = {}) => {
 }, "Music4");
 
 // src/icons/Music.ts
-var import_vanjs_core985 = __toESM(require("vanjs-core"), 1);
+
 var Music = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core985.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M9 18V5l12-2v13" }),
@@ -15198,9 +13609,9 @@ var Music = /* @__PURE__ */ __name((props = {}) => {
 }, "Music");
 
 // src/icons/Navigation2Off.ts
-var import_vanjs_core986 = __toESM(require("vanjs-core"), 1);
+
 var Navigation2Off = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core986.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M9.31 9.31 5 21l7-4 7 4-1.17-3.17" }),
@@ -15210,9 +13621,9 @@ var Navigation2Off = /* @__PURE__ */ __name((props = {}) => {
 }, "Navigation2Off");
 
 // src/icons/Navigation2.ts
-var import_vanjs_core987 = __toESM(require("vanjs-core"), 1);
+
 var Navigation2 = /* @__PURE__ */ __name((props = {}) => {
-  const { polygon } = import_vanjs_core987.default.tags(svgNamespace);
+  const { polygon } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polygon({ points: "12 2 19 21 12 17 5 21 12 2" })
@@ -15220,9 +13631,9 @@ var Navigation2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Navigation2");
 
 // src/icons/NavigationOff.ts
-var import_vanjs_core988 = __toESM(require("vanjs-core"), 1);
+
 var NavigationOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core988.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8.43 8.43 3 11l8 2 2 8 2.57-5.43" }),
@@ -15232,9 +13643,9 @@ var NavigationOff = /* @__PURE__ */ __name((props = {}) => {
 }, "NavigationOff");
 
 // src/icons/Navigation.ts
-var import_vanjs_core989 = __toESM(require("vanjs-core"), 1);
+
 var Navigation = /* @__PURE__ */ __name((props = {}) => {
-  const { polygon } = import_vanjs_core989.default.tags(svgNamespace);
+  const { polygon } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polygon({ points: "3 11 22 2 13 21 11 13 3 11" })
@@ -15242,9 +13653,9 @@ var Navigation = /* @__PURE__ */ __name((props = {}) => {
 }, "Navigation");
 
 // src/icons/Network.ts
-var import_vanjs_core990 = __toESM(require("vanjs-core"), 1);
+
 var Network = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core990.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ "x": "16", "y": "16", width: "6", height: "6", rx: "1" }),
@@ -15256,9 +13667,9 @@ var Network = /* @__PURE__ */ __name((props = {}) => {
 }, "Network");
 
 // src/icons/Newspaper.ts
-var import_vanjs_core991 = __toESM(require("vanjs-core"), 1);
+
 var Newspaper = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core991.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -15271,9 +13682,9 @@ var Newspaper = /* @__PURE__ */ __name((props = {}) => {
 }, "Newspaper");
 
 // src/icons/Nfc.ts
-var import_vanjs_core992 = __toESM(require("vanjs-core"), 1);
+
 var Nfc = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core992.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M6 8.32a7.43 7.43 0 0 1 0 7.36" }),
@@ -15284,9 +13695,9 @@ var Nfc = /* @__PURE__ */ __name((props = {}) => {
 }, "Nfc");
 
 // src/icons/NonBinary.ts
-var import_vanjs_core993 = __toESM(require("vanjs-core"), 1);
+
 var NonBinary = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core993.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 2v10" }),
@@ -15297,9 +13708,9 @@ var NonBinary = /* @__PURE__ */ __name((props = {}) => {
 }, "NonBinary");
 
 // src/icons/NotebookPen.ts
-var import_vanjs_core994 = __toESM(require("vanjs-core"), 1);
+
 var NotebookPen = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core994.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -15316,9 +13727,9 @@ var NotebookPen = /* @__PURE__ */ __name((props = {}) => {
 }, "NotebookPen");
 
 // src/icons/NotebookTabs.ts
-var import_vanjs_core995 = __toESM(require("vanjs-core"), 1);
+
 var NotebookTabs = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core995.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 6h4" }),
@@ -15334,9 +13745,9 @@ var NotebookTabs = /* @__PURE__ */ __name((props = {}) => {
 }, "NotebookTabs");
 
 // src/icons/NotebookText.ts
-var import_vanjs_core996 = __toESM(require("vanjs-core"), 1);
+
 var NotebookText = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core996.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 6h4" }),
@@ -15351,9 +13762,9 @@ var NotebookText = /* @__PURE__ */ __name((props = {}) => {
 }, "NotebookText");
 
 // src/icons/Notebook.ts
-var import_vanjs_core997 = __toESM(require("vanjs-core"), 1);
+
 var Notebook = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core997.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 6h4" }),
@@ -15366,9 +13777,9 @@ var Notebook = /* @__PURE__ */ __name((props = {}) => {
 }, "Notebook");
 
 // src/icons/NotepadTextDashed.ts
-var import_vanjs_core998 = __toESM(require("vanjs-core"), 1);
+
 var NotepadTextDashed = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core998.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 2v4" }),
@@ -15388,9 +13799,9 @@ var NotepadTextDashed = /* @__PURE__ */ __name((props = {}) => {
 }, "NotepadTextDashed");
 
 // src/icons/NotepadText.ts
-var import_vanjs_core999 = __toESM(require("vanjs-core"), 1);
+
 var NotepadText = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core999.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 2v4" }),
@@ -15404,9 +13815,9 @@ var NotepadText = /* @__PURE__ */ __name((props = {}) => {
 }, "NotepadText");
 
 // src/icons/NutOff.ts
-var import_vanjs_core1000 = __toESM(require("vanjs-core"), 1);
+
 var NutOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core1000.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 4V2" }),
@@ -15422,9 +13833,9 @@ var NutOff = /* @__PURE__ */ __name((props = {}) => {
 }, "NutOff");
 
 // src/icons/Nut.ts
-var import_vanjs_core1001 = __toESM(require("vanjs-core"), 1);
+
 var Nut = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1001.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 4V2" }),
@@ -15438,9 +13849,9 @@ var Nut = /* @__PURE__ */ __name((props = {}) => {
 }, "Nut");
 
 // src/icons/OctagonAlert.ts
-var import_vanjs_core1002 = __toESM(require("vanjs-core"), 1);
+
 var OctagonAlert = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1002.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 16h.01" }),
@@ -15452,9 +13863,9 @@ var OctagonAlert = /* @__PURE__ */ __name((props = {}) => {
 }, "OctagonAlert");
 
 // src/icons/OctagonMinus.ts
-var import_vanjs_core1003 = __toESM(require("vanjs-core"), 1);
+
 var OctagonMinus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1003.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -15465,9 +13876,9 @@ var OctagonMinus = /* @__PURE__ */ __name((props = {}) => {
 }, "OctagonMinus");
 
 // src/icons/OctagonPause.ts
-var import_vanjs_core1004 = __toESM(require("vanjs-core"), 1);
+
 var OctagonPause = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1004.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 15V9" }),
@@ -15479,9 +13890,9 @@ var OctagonPause = /* @__PURE__ */ __name((props = {}) => {
 }, "OctagonPause");
 
 // src/icons/OctagonX.ts
-var import_vanjs_core1005 = __toESM(require("vanjs-core"), 1);
+
 var OctagonX = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1005.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m15 9-6 6" }),
@@ -15493,9 +13904,9 @@ var OctagonX = /* @__PURE__ */ __name((props = {}) => {
 }, "OctagonX");
 
 // src/icons/Octagon.ts
-var import_vanjs_core1006 = __toESM(require("vanjs-core"), 1);
+
 var Octagon = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1006.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -15505,9 +13916,9 @@ var Octagon = /* @__PURE__ */ __name((props = {}) => {
 }, "Octagon");
 
 // src/icons/Omega.ts
-var import_vanjs_core1007 = __toESM(require("vanjs-core"), 1);
+
 var Omega = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1007.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -15517,9 +13928,9 @@ var Omega = /* @__PURE__ */ __name((props = {}) => {
 }, "Omega");
 
 // src/icons/Option.ts
-var import_vanjs_core1008 = __toESM(require("vanjs-core"), 1);
+
 var Option = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1008.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 3h6l6 18h6" }),
@@ -15528,9 +13939,9 @@ var Option = /* @__PURE__ */ __name((props = {}) => {
 }, "Option");
 
 // src/icons/Orbit.ts
-var import_vanjs_core1009 = __toESM(require("vanjs-core"), 1);
+
 var Orbit = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1009.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "3" }),
@@ -15542,9 +13953,9 @@ var Orbit = /* @__PURE__ */ __name((props = {}) => {
 }, "Orbit");
 
 // src/icons/Origami.ts
-var import_vanjs_core1010 = __toESM(require("vanjs-core"), 1);
+
 var Origami = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1010.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -15560,9 +13971,9 @@ var Origami = /* @__PURE__ */ __name((props = {}) => {
 }, "Origami");
 
 // src/icons/Package2.ts
-var import_vanjs_core1011 = __toESM(require("vanjs-core"), 1);
+
 var Package2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1011.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z" }),
@@ -15572,9 +13983,9 @@ var Package2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Package2");
 
 // src/icons/PackageCheck.ts
-var import_vanjs_core1012 = __toESM(require("vanjs-core"), 1);
+
 var PackageCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { path, polyline, line } = import_vanjs_core1012.default.tags(svgNamespace);
+  const { path, polyline, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m16 16 2 2 4-4" }),
@@ -15588,9 +13999,9 @@ var PackageCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "PackageCheck");
 
 // src/icons/PackageMinus.ts
-var import_vanjs_core1013 = __toESM(require("vanjs-core"), 1);
+
 var PackageMinus = /* @__PURE__ */ __name((props = {}) => {
-  const { path, polyline, line } = import_vanjs_core1013.default.tags(svgNamespace);
+  const { path, polyline, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 16h6" }),
@@ -15604,9 +14015,9 @@ var PackageMinus = /* @__PURE__ */ __name((props = {}) => {
 }, "PackageMinus");
 
 // src/icons/PackageOpen.ts
-var import_vanjs_core1014 = __toESM(require("vanjs-core"), 1);
+
 var PackageOpen = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1014.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 22v-9" }),
@@ -15623,9 +14034,9 @@ var PackageOpen = /* @__PURE__ */ __name((props = {}) => {
 }, "PackageOpen");
 
 // src/icons/PackagePlus.ts
-var import_vanjs_core1015 = __toESM(require("vanjs-core"), 1);
+
 var PackagePlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path, polyline, line } = import_vanjs_core1015.default.tags(svgNamespace);
+  const { path, polyline, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 16h6" }),
@@ -15640,9 +14051,9 @@ var PackagePlus = /* @__PURE__ */ __name((props = {}) => {
 }, "PackagePlus");
 
 // src/icons/PackageSearch.ts
-var import_vanjs_core1016 = __toESM(require("vanjs-core"), 1);
+
 var PackageSearch = /* @__PURE__ */ __name((props = {}) => {
-  const { path, polyline, line, circle } = import_vanjs_core1016.default.tags(svgNamespace);
+  const { path, polyline, line, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -15657,9 +14068,9 @@ var PackageSearch = /* @__PURE__ */ __name((props = {}) => {
 }, "PackageSearch");
 
 // src/icons/PackageX.ts
-var import_vanjs_core1017 = __toESM(require("vanjs-core"), 1);
+
 var PackageX = /* @__PURE__ */ __name((props = {}) => {
-  const { path, polyline, line } = import_vanjs_core1017.default.tags(svgNamespace);
+  const { path, polyline, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -15673,9 +14084,9 @@ var PackageX = /* @__PURE__ */ __name((props = {}) => {
 }, "PackageX");
 
 // src/icons/Package.ts
-var import_vanjs_core1018 = __toESM(require("vanjs-core"), 1);
+
 var Package = /* @__PURE__ */ __name((props = {}) => {
-  const { path, polyline } = import_vanjs_core1018.default.tags(svgNamespace);
+  const { path, polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -15688,9 +14099,9 @@ var Package = /* @__PURE__ */ __name((props = {}) => {
 }, "Package");
 
 // src/icons/PaintBucket.ts
-var import_vanjs_core1019 = __toESM(require("vanjs-core"), 1);
+
 var PaintBucket = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1019.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -15703,9 +14114,9 @@ var PaintBucket = /* @__PURE__ */ __name((props = {}) => {
 }, "PaintBucket");
 
 // src/icons/PaintRoller.ts
-var import_vanjs_core1020 = __toESM(require("vanjs-core"), 1);
+
 var PaintRoller = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1020.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "16", height: "6", "x": "2", "y": "2", rx: "2" }),
@@ -15715,9 +14126,9 @@ var PaintRoller = /* @__PURE__ */ __name((props = {}) => {
 }, "PaintRoller");
 
 // src/icons/PaintbrushVertical.ts
-var import_vanjs_core1021 = __toESM(require("vanjs-core"), 1);
+
 var PaintbrushVertical = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1021.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 2v2" }),
@@ -15730,9 +14141,9 @@ var PaintbrushVertical = /* @__PURE__ */ __name((props = {}) => {
 }, "PaintbrushVertical");
 
 // src/icons/Paintbrush.ts
-var import_vanjs_core1022 = __toESM(require("vanjs-core"), 1);
+
 var Paintbrush = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1022.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m14.622 17.897-10.68-2.913" }),
@@ -15746,9 +14157,9 @@ var Paintbrush = /* @__PURE__ */ __name((props = {}) => {
 }, "Paintbrush");
 
 // src/icons/Palette.ts
-var import_vanjs_core1023 = __toESM(require("vanjs-core"), 1);
+
 var Palette = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1023.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "13.5", cy: "6.5", "r": ".5", fill: "currentColor" }),
@@ -15762,9 +14173,9 @@ var Palette = /* @__PURE__ */ __name((props = {}) => {
 }, "Palette");
 
 // src/icons/PanelBottomClose.ts
-var import_vanjs_core1024 = __toESM(require("vanjs-core"), 1);
+
 var PanelBottomClose = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1024.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -15774,9 +14185,9 @@ var PanelBottomClose = /* @__PURE__ */ __name((props = {}) => {
 }, "PanelBottomClose");
 
 // src/icons/PanelBottomDashed.ts
-var import_vanjs_core1025 = __toESM(require("vanjs-core"), 1);
+
 var PanelBottomDashed = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1025.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -15788,9 +14199,9 @@ var PanelBottomDashed = /* @__PURE__ */ __name((props = {}) => {
 }, "PanelBottomDashed");
 
 // src/icons/PanelBottomOpen.ts
-var import_vanjs_core1026 = __toESM(require("vanjs-core"), 1);
+
 var PanelBottomOpen = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1026.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -15800,9 +14211,9 @@ var PanelBottomOpen = /* @__PURE__ */ __name((props = {}) => {
 }, "PanelBottomOpen");
 
 // src/icons/PanelBottom.ts
-var import_vanjs_core1027 = __toESM(require("vanjs-core"), 1);
+
 var PanelBottom = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1027.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -15811,9 +14222,9 @@ var PanelBottom = /* @__PURE__ */ __name((props = {}) => {
 }, "PanelBottom");
 
 // src/icons/PanelLeftClose.ts
-var import_vanjs_core1028 = __toESM(require("vanjs-core"), 1);
+
 var PanelLeftClose = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1028.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -15823,9 +14234,9 @@ var PanelLeftClose = /* @__PURE__ */ __name((props = {}) => {
 }, "PanelLeftClose");
 
 // src/icons/PanelLeftDashed.ts
-var import_vanjs_core1029 = __toESM(require("vanjs-core"), 1);
+
 var PanelLeftDashed = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1029.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -15837,9 +14248,9 @@ var PanelLeftDashed = /* @__PURE__ */ __name((props = {}) => {
 }, "PanelLeftDashed");
 
 // src/icons/PanelLeftOpen.ts
-var import_vanjs_core1030 = __toESM(require("vanjs-core"), 1);
+
 var PanelLeftOpen = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1030.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -15849,9 +14260,9 @@ var PanelLeftOpen = /* @__PURE__ */ __name((props = {}) => {
 }, "PanelLeftOpen");
 
 // src/icons/PanelLeft.ts
-var import_vanjs_core1031 = __toESM(require("vanjs-core"), 1);
+
 var PanelLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1031.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -15860,9 +14271,9 @@ var PanelLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "PanelLeft");
 
 // src/icons/PanelRightClose.ts
-var import_vanjs_core1032 = __toESM(require("vanjs-core"), 1);
+
 var PanelRightClose = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1032.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -15872,9 +14283,9 @@ var PanelRightClose = /* @__PURE__ */ __name((props = {}) => {
 }, "PanelRightClose");
 
 // src/icons/PanelRightDashed.ts
-var import_vanjs_core1033 = __toESM(require("vanjs-core"), 1);
+
 var PanelRightDashed = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1033.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -15886,9 +14297,9 @@ var PanelRightDashed = /* @__PURE__ */ __name((props = {}) => {
 }, "PanelRightDashed");
 
 // src/icons/PanelRightOpen.ts
-var import_vanjs_core1034 = __toESM(require("vanjs-core"), 1);
+
 var PanelRightOpen = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1034.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -15898,9 +14309,9 @@ var PanelRightOpen = /* @__PURE__ */ __name((props = {}) => {
 }, "PanelRightOpen");
 
 // src/icons/PanelRight.ts
-var import_vanjs_core1035 = __toESM(require("vanjs-core"), 1);
+
 var PanelRight = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1035.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -15909,9 +14320,9 @@ var PanelRight = /* @__PURE__ */ __name((props = {}) => {
 }, "PanelRight");
 
 // src/icons/PanelTopClose.ts
-var import_vanjs_core1036 = __toESM(require("vanjs-core"), 1);
+
 var PanelTopClose = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1036.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -15921,9 +14332,9 @@ var PanelTopClose = /* @__PURE__ */ __name((props = {}) => {
 }, "PanelTopClose");
 
 // src/icons/PanelTopDashed.ts
-var import_vanjs_core1037 = __toESM(require("vanjs-core"), 1);
+
 var PanelTopDashed = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1037.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -15935,9 +14346,9 @@ var PanelTopDashed = /* @__PURE__ */ __name((props = {}) => {
 }, "PanelTopDashed");
 
 // src/icons/PanelTopOpen.ts
-var import_vanjs_core1038 = __toESM(require("vanjs-core"), 1);
+
 var PanelTopOpen = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1038.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -15947,9 +14358,9 @@ var PanelTopOpen = /* @__PURE__ */ __name((props = {}) => {
 }, "PanelTopOpen");
 
 // src/icons/PanelTop.ts
-var import_vanjs_core1039 = __toESM(require("vanjs-core"), 1);
+
 var PanelTop = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1039.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -15958,9 +14369,9 @@ var PanelTop = /* @__PURE__ */ __name((props = {}) => {
 }, "PanelTop");
 
 // src/icons/PanelsLeftBottom.ts
-var import_vanjs_core1040 = __toESM(require("vanjs-core"), 1);
+
 var PanelsLeftBottom = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1040.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -15970,9 +14381,9 @@ var PanelsLeftBottom = /* @__PURE__ */ __name((props = {}) => {
 }, "PanelsLeftBottom");
 
 // src/icons/PanelsRightBottom.ts
-var import_vanjs_core1041 = __toESM(require("vanjs-core"), 1);
+
 var PanelsRightBottom = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1041.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -15982,9 +14393,9 @@ var PanelsRightBottom = /* @__PURE__ */ __name((props = {}) => {
 }, "PanelsRightBottom");
 
 // src/icons/PanelsTopLeft.ts
-var import_vanjs_core1042 = __toESM(require("vanjs-core"), 1);
+
 var PanelsTopLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1042.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -15994,9 +14405,9 @@ var PanelsTopLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "PanelsTopLeft");
 
 // src/icons/Paperclip.ts
-var import_vanjs_core1043 = __toESM(require("vanjs-core"), 1);
+
 var Paperclip = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1043.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M13.234 20.252 21 12.3" }),
@@ -16007,9 +14418,9 @@ var Paperclip = /* @__PURE__ */ __name((props = {}) => {
 }, "Paperclip");
 
 // src/icons/Parentheses.ts
-var import_vanjs_core1044 = __toESM(require("vanjs-core"), 1);
+
 var Parentheses = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1044.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 21s-4-3-4-9 4-9 4-9" }),
@@ -16018,9 +14429,9 @@ var Parentheses = /* @__PURE__ */ __name((props = {}) => {
 }, "Parentheses");
 
 // src/icons/ParkingMeter.ts
-var import_vanjs_core1045 = __toESM(require("vanjs-core"), 1);
+
 var ParkingMeter = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1045.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11 15h2" }),
@@ -16034,9 +14445,9 @@ var ParkingMeter = /* @__PURE__ */ __name((props = {}) => {
 }, "ParkingMeter");
 
 // src/icons/PartyPopper.ts
-var import_vanjs_core1046 = __toESM(require("vanjs-core"), 1);
+
 var PartyPopper = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1046.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M5.8 11.3 2 22l10.7-3.79" }),
@@ -16060,9 +14471,9 @@ var PartyPopper = /* @__PURE__ */ __name((props = {}) => {
 }, "PartyPopper");
 
 // src/icons/Pause.ts
-var import_vanjs_core1047 = __toESM(require("vanjs-core"), 1);
+
 var Pause = /* @__PURE__ */ __name((props = {}) => {
-  const { rect } = import_vanjs_core1047.default.tags(svgNamespace);
+  const { rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ "x": "14", "y": "4", width: "4", height: "16", rx: "1" }),
@@ -16071,9 +14482,9 @@ var Pause = /* @__PURE__ */ __name((props = {}) => {
 }, "Pause");
 
 // src/icons/PawPrint.ts
-var import_vanjs_core1048 = __toESM(require("vanjs-core"), 1);
+
 var PawPrint = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1048.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "11", cy: "4", "r": "2" }),
@@ -16086,9 +14497,9 @@ var PawPrint = /* @__PURE__ */ __name((props = {}) => {
 }, "PawPrint");
 
 // src/icons/PcCase.ts
-var import_vanjs_core1049 = __toESM(require("vanjs-core"), 1);
+
 var PcCase = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1049.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "14", height: "20", "x": "5", "y": "2", rx: "2" }),
@@ -16099,9 +14510,9 @@ var PcCase = /* @__PURE__ */ __name((props = {}) => {
 }, "PcCase");
 
 // src/icons/PenLine.ts
-var import_vanjs_core1050 = __toESM(require("vanjs-core"), 1);
+
 var PenLine = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1050.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 20h9" }),
@@ -16112,9 +14523,9 @@ var PenLine = /* @__PURE__ */ __name((props = {}) => {
 }, "PenLine");
 
 // src/icons/PenOff.ts
-var import_vanjs_core1051 = __toESM(require("vanjs-core"), 1);
+
 var PenOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1051.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -16128,9 +14539,9 @@ var PenOff = /* @__PURE__ */ __name((props = {}) => {
 }, "PenOff");
 
 // src/icons/PenTool.ts
-var import_vanjs_core1052 = __toESM(require("vanjs-core"), 1);
+
 var PenTool = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1052.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -16145,9 +14556,9 @@ var PenTool = /* @__PURE__ */ __name((props = {}) => {
 }, "PenTool");
 
 // src/icons/Pen.ts
-var import_vanjs_core1053 = __toESM(require("vanjs-core"), 1);
+
 var Pen = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1053.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -16157,9 +14568,9 @@ var Pen = /* @__PURE__ */ __name((props = {}) => {
 }, "Pen");
 
 // src/icons/PencilLine.ts
-var import_vanjs_core1054 = __toESM(require("vanjs-core"), 1);
+
 var PencilLine = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1054.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 20h9" }),
@@ -16171,9 +14582,9 @@ var PencilLine = /* @__PURE__ */ __name((props = {}) => {
 }, "PencilLine");
 
 // src/icons/PencilOff.ts
-var import_vanjs_core1055 = __toESM(require("vanjs-core"), 1);
+
 var PencilOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1055.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -16188,9 +14599,9 @@ var PencilOff = /* @__PURE__ */ __name((props = {}) => {
 }, "PencilOff");
 
 // src/icons/PencilRuler.ts
-var import_vanjs_core1056 = __toESM(require("vanjs-core"), 1);
+
 var PencilRuler = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1056.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -16209,9 +14620,9 @@ var PencilRuler = /* @__PURE__ */ __name((props = {}) => {
 }, "PencilRuler");
 
 // src/icons/Pencil.ts
-var import_vanjs_core1057 = __toESM(require("vanjs-core"), 1);
+
 var Pencil = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1057.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -16222,9 +14633,9 @@ var Pencil = /* @__PURE__ */ __name((props = {}) => {
 }, "Pencil");
 
 // src/icons/Pentagon.ts
-var import_vanjs_core1058 = __toESM(require("vanjs-core"), 1);
+
 var Pentagon = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1058.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -16234,9 +14645,9 @@ var Pentagon = /* @__PURE__ */ __name((props = {}) => {
 }, "Pentagon");
 
 // src/icons/Percent.ts
-var import_vanjs_core1059 = __toESM(require("vanjs-core"), 1);
+
 var Percent = /* @__PURE__ */ __name((props = {}) => {
-  const { line, circle } = import_vanjs_core1059.default.tags(svgNamespace);
+  const { line, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "19", x2: "5", y1: "5", y2: "19" }),
@@ -16246,9 +14657,9 @@ var Percent = /* @__PURE__ */ __name((props = {}) => {
 }, "Percent");
 
 // src/icons/PersonStanding.ts
-var import_vanjs_core1060 = __toESM(require("vanjs-core"), 1);
+
 var PersonStanding = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1060.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "5", "r": "1" }),
@@ -16259,9 +14670,9 @@ var PersonStanding = /* @__PURE__ */ __name((props = {}) => {
 }, "PersonStanding");
 
 // src/icons/PhilippinePeso.ts
-var import_vanjs_core1061 = __toESM(require("vanjs-core"), 1);
+
 var PhilippinePeso = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1061.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M20 11H4" }),
@@ -16271,9 +14682,9 @@ var PhilippinePeso = /* @__PURE__ */ __name((props = {}) => {
 }, "PhilippinePeso");
 
 // src/icons/PhoneCall.ts
-var import_vanjs_core1062 = __toESM(require("vanjs-core"), 1);
+
 var PhoneCall = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1062.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -16285,9 +14696,9 @@ var PhoneCall = /* @__PURE__ */ __name((props = {}) => {
 }, "PhoneCall");
 
 // src/icons/PhoneForwarded.ts
-var import_vanjs_core1063 = __toESM(require("vanjs-core"), 1);
+
 var PhoneForwarded = /* @__PURE__ */ __name((props = {}) => {
-  const { polyline, line, path } = import_vanjs_core1063.default.tags(svgNamespace);
+  const { polyline, line, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polyline({ points: "18 2 22 6 18 10" }),
@@ -16299,9 +14710,9 @@ var PhoneForwarded = /* @__PURE__ */ __name((props = {}) => {
 }, "PhoneForwarded");
 
 // src/icons/PhoneIncoming.ts
-var import_vanjs_core1064 = __toESM(require("vanjs-core"), 1);
+
 var PhoneIncoming = /* @__PURE__ */ __name((props = {}) => {
-  const { polyline, line, path } = import_vanjs_core1064.default.tags(svgNamespace);
+  const { polyline, line, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polyline({ points: "16 2 16 8 22 8" }),
@@ -16313,9 +14724,9 @@ var PhoneIncoming = /* @__PURE__ */ __name((props = {}) => {
 }, "PhoneIncoming");
 
 // src/icons/PhoneMissed.ts
-var import_vanjs_core1065 = __toESM(require("vanjs-core"), 1);
+
 var PhoneMissed = /* @__PURE__ */ __name((props = {}) => {
-  const { line, path } = import_vanjs_core1065.default.tags(svgNamespace);
+  const { line, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "22", x2: "16", y1: "2", y2: "8" }),
@@ -16327,9 +14738,9 @@ var PhoneMissed = /* @__PURE__ */ __name((props = {}) => {
 }, "PhoneMissed");
 
 // src/icons/PhoneOff.ts
-var import_vanjs_core1066 = __toESM(require("vanjs-core"), 1);
+
 var PhoneOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core1066.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -16340,9 +14751,9 @@ var PhoneOff = /* @__PURE__ */ __name((props = {}) => {
 }, "PhoneOff");
 
 // src/icons/PhoneOutgoing.ts
-var import_vanjs_core1067 = __toESM(require("vanjs-core"), 1);
+
 var PhoneOutgoing = /* @__PURE__ */ __name((props = {}) => {
-  const { polyline, line, path } = import_vanjs_core1067.default.tags(svgNamespace);
+  const { polyline, line, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polyline({ points: "22 8 22 2 16 2" }),
@@ -16354,9 +14765,9 @@ var PhoneOutgoing = /* @__PURE__ */ __name((props = {}) => {
 }, "PhoneOutgoing");
 
 // src/icons/Phone.ts
-var import_vanjs_core1068 = __toESM(require("vanjs-core"), 1);
+
 var Phone = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1068.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -16366,9 +14777,9 @@ var Phone = /* @__PURE__ */ __name((props = {}) => {
 }, "Phone");
 
 // src/icons/Pi.ts
-var import_vanjs_core1069 = __toESM(require("vanjs-core"), 1);
+
 var Pi = /* @__PURE__ */ __name((props = {}) => {
-  const { line, path } = import_vanjs_core1069.default.tags(svgNamespace);
+  const { line, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "9", x2: "9", y1: "4", y2: "20" }),
@@ -16378,9 +14789,9 @@ var Pi = /* @__PURE__ */ __name((props = {}) => {
 }, "Pi");
 
 // src/icons/Piano.ts
-var import_vanjs_core1070 = __toESM(require("vanjs-core"), 1);
+
 var Piano = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1070.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -16395,9 +14806,9 @@ var Piano = /* @__PURE__ */ __name((props = {}) => {
 }, "Piano");
 
 // src/icons/Pickaxe.ts
-var import_vanjs_core1071 = __toESM(require("vanjs-core"), 1);
+
 var Pickaxe = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1071.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M14.531 12.469 6.619 20.38a1 1 0 1 1-3-3l7.912-7.912" }),
@@ -16414,9 +14825,9 @@ var Pickaxe = /* @__PURE__ */ __name((props = {}) => {
 }, "Pickaxe");
 
 // src/icons/PictureInPicture2.ts
-var import_vanjs_core1072 = __toESM(require("vanjs-core"), 1);
+
 var PictureInPicture2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1072.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 9V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10c0 1.1.9 2 2 2h4" }),
@@ -16425,9 +14836,9 @@ var PictureInPicture2 = /* @__PURE__ */ __name((props = {}) => {
 }, "PictureInPicture2");
 
 // src/icons/PictureInPicture.ts
-var import_vanjs_core1073 = __toESM(require("vanjs-core"), 1);
+
 var PictureInPicture = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1073.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 10h6V4" }),
@@ -16439,9 +14850,9 @@ var PictureInPicture = /* @__PURE__ */ __name((props = {}) => {
 }, "PictureInPicture");
 
 // src/icons/PiggyBank.ts
-var import_vanjs_core1074 = __toESM(require("vanjs-core"), 1);
+
 var PiggyBank = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1074.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -16453,9 +14864,9 @@ var PiggyBank = /* @__PURE__ */ __name((props = {}) => {
 }, "PiggyBank");
 
 // src/icons/PilcrowLeft.ts
-var import_vanjs_core1075 = __toESM(require("vanjs-core"), 1);
+
 var PilcrowLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1075.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M14 3v11" }),
@@ -16467,9 +14878,9 @@ var PilcrowLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "PilcrowLeft");
 
 // src/icons/PilcrowRight.ts
-var import_vanjs_core1076 = __toESM(require("vanjs-core"), 1);
+
 var PilcrowRight = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1076.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 3v11" }),
@@ -16481,9 +14892,9 @@ var PilcrowRight = /* @__PURE__ */ __name((props = {}) => {
 }, "PilcrowRight");
 
 // src/icons/Pilcrow.ts
-var import_vanjs_core1077 = __toESM(require("vanjs-core"), 1);
+
 var Pilcrow = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1077.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M13 4v16" }),
@@ -16493,9 +14904,9 @@ var Pilcrow = /* @__PURE__ */ __name((props = {}) => {
 }, "Pilcrow");
 
 // src/icons/PillBottle.ts
-var import_vanjs_core1078 = __toESM(require("vanjs-core"), 1);
+
 var PillBottle = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1078.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M18 11h-4a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h4" }),
@@ -16505,9 +14916,9 @@ var PillBottle = /* @__PURE__ */ __name((props = {}) => {
 }, "PillBottle");
 
 // src/icons/Pill.ts
-var import_vanjs_core1079 = __toESM(require("vanjs-core"), 1);
+
 var Pill = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1079.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -16518,9 +14929,9 @@ var Pill = /* @__PURE__ */ __name((props = {}) => {
 }, "Pill");
 
 // src/icons/PinOff.ts
-var import_vanjs_core1080 = __toESM(require("vanjs-core"), 1);
+
 var PinOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1080.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 17v5" }),
@@ -16533,9 +14944,9 @@ var PinOff = /* @__PURE__ */ __name((props = {}) => {
 }, "PinOff");
 
 // src/icons/Pin.ts
-var import_vanjs_core1081 = __toESM(require("vanjs-core"), 1);
+
 var Pin = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1081.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 17v5" }),
@@ -16546,9 +14957,9 @@ var Pin = /* @__PURE__ */ __name((props = {}) => {
 }, "Pin");
 
 // src/icons/Pipette.ts
-var import_vanjs_core1082 = __toESM(require("vanjs-core"), 1);
+
 var Pipette = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1082.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m2 22 1-1h3l9-9" }),
@@ -16560,9 +14971,9 @@ var Pipette = /* @__PURE__ */ __name((props = {}) => {
 }, "Pipette");
 
 // src/icons/Pizza.ts
-var import_vanjs_core1083 = __toESM(require("vanjs-core"), 1);
+
 var Pizza = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1083.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m12 14-1 1" }),
@@ -16576,9 +14987,9 @@ var Pizza = /* @__PURE__ */ __name((props = {}) => {
 }, "Pizza");
 
 // src/icons/PlaneLanding.ts
-var import_vanjs_core1084 = __toESM(require("vanjs-core"), 1);
+
 var PlaneLanding = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1084.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 22h20" }),
@@ -16589,9 +15000,9 @@ var PlaneLanding = /* @__PURE__ */ __name((props = {}) => {
 }, "PlaneLanding");
 
 // src/icons/PlaneTakeoff.ts
-var import_vanjs_core1085 = __toESM(require("vanjs-core"), 1);
+
 var PlaneTakeoff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1085.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 22h20" }),
@@ -16602,9 +15013,9 @@ var PlaneTakeoff = /* @__PURE__ */ __name((props = {}) => {
 }, "PlaneTakeoff");
 
 // src/icons/Plane.ts
-var import_vanjs_core1086 = __toESM(require("vanjs-core"), 1);
+
 var Plane = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1086.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -16614,9 +15025,9 @@ var Plane = /* @__PURE__ */ __name((props = {}) => {
 }, "Plane");
 
 // src/icons/Play.ts
-var import_vanjs_core1087 = __toESM(require("vanjs-core"), 1);
+
 var Play = /* @__PURE__ */ __name((props = {}) => {
-  const { polygon } = import_vanjs_core1087.default.tags(svgNamespace);
+  const { polygon } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polygon({ points: "6 3 20 12 6 21 6 3" })
@@ -16624,9 +15035,9 @@ var Play = /* @__PURE__ */ __name((props = {}) => {
 }, "Play");
 
 // src/icons/Plug2.ts
-var import_vanjs_core1088 = __toESM(require("vanjs-core"), 1);
+
 var Plug2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1088.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M9 2v6" }),
@@ -16638,9 +15049,9 @@ var Plug2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Plug2");
 
 // src/icons/PlugZap.ts
-var import_vanjs_core1089 = __toESM(require("vanjs-core"), 1);
+
 var PlugZap = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1089.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -16654,9 +15065,9 @@ var PlugZap = /* @__PURE__ */ __name((props = {}) => {
 }, "PlugZap");
 
 // src/icons/Plug.ts
-var import_vanjs_core1090 = __toESM(require("vanjs-core"), 1);
+
 var Plug = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1090.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 22v-5" }),
@@ -16667,9 +15078,9 @@ var Plug = /* @__PURE__ */ __name((props = {}) => {
 }, "Plug");
 
 // src/icons/Plus.ts
-var import_vanjs_core1091 = __toESM(require("vanjs-core"), 1);
+
 var Plus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1091.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M5 12h14" }),
@@ -16678,9 +15089,9 @@ var Plus = /* @__PURE__ */ __name((props = {}) => {
 }, "Plus");
 
 // src/icons/PocketKnife.ts
-var import_vanjs_core1092 = __toESM(require("vanjs-core"), 1);
+
 var PocketKnife = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1092.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 2v1c0 1 2 1 2 2S3 6 3 7s2 1 2 2-2 1-2 2 2 1 2 2" }),
@@ -16694,9 +15105,9 @@ var PocketKnife = /* @__PURE__ */ __name((props = {}) => {
 }, "PocketKnife");
 
 // src/icons/Pocket.ts
-var import_vanjs_core1093 = __toESM(require("vanjs-core"), 1);
+
 var Pocket = /* @__PURE__ */ __name((props = {}) => {
-  const { path, polyline } = import_vanjs_core1093.default.tags(svgNamespace);
+  const { path, polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -16707,9 +15118,9 @@ var Pocket = /* @__PURE__ */ __name((props = {}) => {
 }, "Pocket");
 
 // src/icons/Podcast.ts
-var import_vanjs_core1094 = __toESM(require("vanjs-core"), 1);
+
 var Podcast = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1094.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16.85 18.58a9 9 0 1 0-9.7 0" }),
@@ -16720,9 +15131,9 @@ var Podcast = /* @__PURE__ */ __name((props = {}) => {
 }, "Podcast");
 
 // src/icons/PointerOff.ts
-var import_vanjs_core1095 = __toESM(require("vanjs-core"), 1);
+
 var PointerOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1095.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 4.5V4a2 2 0 0 0-2.41-1.957" }),
@@ -16739,9 +15150,9 @@ var PointerOff = /* @__PURE__ */ __name((props = {}) => {
 }, "PointerOff");
 
 // src/icons/Pointer.ts
-var import_vanjs_core1096 = __toESM(require("vanjs-core"), 1);
+
 var Pointer = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1096.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M22 14a8 8 0 0 1-8 8" }),
@@ -16755,9 +15166,9 @@ var Pointer = /* @__PURE__ */ __name((props = {}) => {
 }, "Pointer");
 
 // src/icons/Popcorn.ts
-var import_vanjs_core1097 = __toESM(require("vanjs-core"), 1);
+
 var Popcorn = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1097.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -16772,9 +15183,9 @@ var Popcorn = /* @__PURE__ */ __name((props = {}) => {
 }, "Popcorn");
 
 // src/icons/Popsicle.ts
-var import_vanjs_core1098 = __toESM(require("vanjs-core"), 1);
+
 var Popsicle = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1098.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -16785,9 +15196,9 @@ var Popsicle = /* @__PURE__ */ __name((props = {}) => {
 }, "Popsicle");
 
 // src/icons/PoundSterling.ts
-var import_vanjs_core1099 = __toESM(require("vanjs-core"), 1);
+
 var PoundSterling = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1099.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M18 7c0-5.333-8-5.333-8 0" }),
@@ -16798,9 +15209,9 @@ var PoundSterling = /* @__PURE__ */ __name((props = {}) => {
 }, "PoundSterling");
 
 // src/icons/PowerOff.ts
-var import_vanjs_core1100 = __toESM(require("vanjs-core"), 1);
+
 var PowerOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1100.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M18.36 6.64A9 9 0 0 1 20.77 15" }),
@@ -16811,9 +15222,9 @@ var PowerOff = /* @__PURE__ */ __name((props = {}) => {
 }, "PowerOff");
 
 // src/icons/Power.ts
-var import_vanjs_core1101 = __toESM(require("vanjs-core"), 1);
+
 var Power = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1101.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 2v10" }),
@@ -16822,9 +15233,9 @@ var Power = /* @__PURE__ */ __name((props = {}) => {
 }, "Power");
 
 // src/icons/Presentation.ts
-var import_vanjs_core1102 = __toESM(require("vanjs-core"), 1);
+
 var Presentation = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1102.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 3h20" }),
@@ -16834,9 +15245,9 @@ var Presentation = /* @__PURE__ */ __name((props = {}) => {
 }, "Presentation");
 
 // src/icons/PrinterCheck.ts
-var import_vanjs_core1103 = __toESM(require("vanjs-core"), 1);
+
 var PrinterCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1103.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -16849,9 +15260,9 @@ var PrinterCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "PrinterCheck");
 
 // src/icons/Printer.ts
-var import_vanjs_core1104 = __toESM(require("vanjs-core"), 1);
+
 var Printer = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1104.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -16863,9 +15274,9 @@ var Printer = /* @__PURE__ */ __name((props = {}) => {
 }, "Printer");
 
 // src/icons/Projector.ts
-var import_vanjs_core1105 = __toESM(require("vanjs-core"), 1);
+
 var Projector = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1105.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M5 7 3 5" }),
@@ -16880,9 +15291,9 @@ var Projector = /* @__PURE__ */ __name((props = {}) => {
 }, "Projector");
 
 // src/icons/Proportions.ts
-var import_vanjs_core1106 = __toESM(require("vanjs-core"), 1);
+
 var Proportions = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1106.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "20", height: "16", "x": "2", "y": "4", rx: "2" }),
@@ -16892,9 +15303,9 @@ var Proportions = /* @__PURE__ */ __name((props = {}) => {
 }, "Proportions");
 
 // src/icons/Puzzle.ts
-var import_vanjs_core1107 = __toESM(require("vanjs-core"), 1);
+
 var Puzzle = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1107.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -16904,9 +15315,9 @@ var Puzzle = /* @__PURE__ */ __name((props = {}) => {
 }, "Puzzle");
 
 // src/icons/Pyramid.ts
-var import_vanjs_core1108 = __toESM(require("vanjs-core"), 1);
+
 var Pyramid = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1108.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -16917,9 +15328,9 @@ var Pyramid = /* @__PURE__ */ __name((props = {}) => {
 }, "Pyramid");
 
 // src/icons/QrCode.ts
-var import_vanjs_core1109 = __toESM(require("vanjs-core"), 1);
+
 var QrCode = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1109.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "5", height: "5", "x": "3", "y": "3", rx: "1" }),
@@ -16938,9 +15349,9 @@ var QrCode = /* @__PURE__ */ __name((props = {}) => {
 }, "QrCode");
 
 // src/icons/Quote.ts
-var import_vanjs_core1110 = __toESM(require("vanjs-core"), 1);
+
 var Quote = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1110.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -16953,9 +15364,9 @@ var Quote = /* @__PURE__ */ __name((props = {}) => {
 }, "Quote");
 
 // src/icons/Rabbit.ts
-var import_vanjs_core1111 = __toESM(require("vanjs-core"), 1);
+
 var Rabbit = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1111.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M13 16a3 3 0 0 1 2.24 5" }),
@@ -16969,9 +15380,9 @@ var Rabbit = /* @__PURE__ */ __name((props = {}) => {
 }, "Rabbit");
 
 // src/icons/Radar.ts
-var import_vanjs_core1112 = __toESM(require("vanjs-core"), 1);
+
 var Radar = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1112.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M19.07 4.93A10 10 0 0 0 6.99 3.34" }),
@@ -16986,9 +15397,9 @@ var Radar = /* @__PURE__ */ __name((props = {}) => {
 }, "Radar");
 
 // src/icons/Radiation.ts
-var import_vanjs_core1113 = __toESM(require("vanjs-core"), 1);
+
 var Radiation = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1113.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 12h.01" }),
@@ -17005,9 +15416,9 @@ var Radiation = /* @__PURE__ */ __name((props = {}) => {
 }, "Radiation");
 
 // src/icons/Radical.ts
-var import_vanjs_core1114 = __toESM(require("vanjs-core"), 1);
+
 var Radical = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1114.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -17017,9 +15428,9 @@ var Radical = /* @__PURE__ */ __name((props = {}) => {
 }, "Radical");
 
 // src/icons/RadioReceiver.ts
-var import_vanjs_core1115 = __toESM(require("vanjs-core"), 1);
+
 var RadioReceiver = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1115.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M5 16v2" }),
@@ -17030,9 +15441,9 @@ var RadioReceiver = /* @__PURE__ */ __name((props = {}) => {
 }, "RadioReceiver");
 
 // src/icons/RadioTower.ts
-var import_vanjs_core1116 = __toESM(require("vanjs-core"), 1);
+
 var RadioTower = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1116.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4.9 16.1C1 12.2 1 5.8 4.9 1.9" }),
@@ -17046,9 +15457,9 @@ var RadioTower = /* @__PURE__ */ __name((props = {}) => {
 }, "RadioTower");
 
 // src/icons/Radio.ts
-var import_vanjs_core1117 = __toESM(require("vanjs-core"), 1);
+
 var Radio = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1117.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4.9 19.1C1 15.2 1 8.8 4.9 4.9" }),
@@ -17060,9 +15471,9 @@ var Radio = /* @__PURE__ */ __name((props = {}) => {
 }, "Radio");
 
 // src/icons/Radius.ts
-var import_vanjs_core1118 = __toESM(require("vanjs-core"), 1);
+
 var Radius = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1118.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M20.34 17.52a10 10 0 1 0-2.82 2.82" }),
@@ -17073,9 +15484,9 @@ var Radius = /* @__PURE__ */ __name((props = {}) => {
 }, "Radius");
 
 // src/icons/RailSymbol.ts
-var import_vanjs_core1119 = __toESM(require("vanjs-core"), 1);
+
 var RailSymbol = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1119.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M5 15h14" }),
@@ -17085,9 +15496,9 @@ var RailSymbol = /* @__PURE__ */ __name((props = {}) => {
 }, "RailSymbol");
 
 // src/icons/Rainbow.ts
-var import_vanjs_core1120 = __toESM(require("vanjs-core"), 1);
+
 var Rainbow = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1120.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M22 17a10 10 0 0 0-20 0" }),
@@ -17097,9 +15508,9 @@ var Rainbow = /* @__PURE__ */ __name((props = {}) => {
 }, "Rainbow");
 
 // src/icons/Rat.ts
-var import_vanjs_core1121 = __toESM(require("vanjs-core"), 1);
+
 var Rat = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1121.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M13 22H4a2 2 0 0 1 0-4h12" }),
@@ -17115,9 +15526,9 @@ var Rat = /* @__PURE__ */ __name((props = {}) => {
 }, "Rat");
 
 // src/icons/Ratio.ts
-var import_vanjs_core1122 = __toESM(require("vanjs-core"), 1);
+
 var Ratio = /* @__PURE__ */ __name((props = {}) => {
-  const { rect } = import_vanjs_core1122.default.tags(svgNamespace);
+  const { rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "12", height: "20", "x": "6", "y": "2", rx: "2" }),
@@ -17126,9 +15537,9 @@ var Ratio = /* @__PURE__ */ __name((props = {}) => {
 }, "Ratio");
 
 // src/icons/ReceiptCent.ts
-var import_vanjs_core1123 = __toESM(require("vanjs-core"), 1);
+
 var ReceiptCent = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1123.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -17140,9 +15551,9 @@ var ReceiptCent = /* @__PURE__ */ __name((props = {}) => {
 }, "ReceiptCent");
 
 // src/icons/ReceiptEuro.ts
-var import_vanjs_core1124 = __toESM(require("vanjs-core"), 1);
+
 var ReceiptEuro = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1124.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -17154,9 +15565,9 @@ var ReceiptEuro = /* @__PURE__ */ __name((props = {}) => {
 }, "ReceiptEuro");
 
 // src/icons/ReceiptIndianRupee.ts
-var import_vanjs_core1125 = __toESM(require("vanjs-core"), 1);
+
 var ReceiptIndianRupee = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1125.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -17169,9 +15580,9 @@ var ReceiptIndianRupee = /* @__PURE__ */ __name((props = {}) => {
 }, "ReceiptIndianRupee");
 
 // src/icons/ReceiptJapaneseYen.ts
-var import_vanjs_core1126 = __toESM(require("vanjs-core"), 1);
+
 var ReceiptJapaneseYen = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1126.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -17185,9 +15596,9 @@ var ReceiptJapaneseYen = /* @__PURE__ */ __name((props = {}) => {
 }, "ReceiptJapaneseYen");
 
 // src/icons/ReceiptPoundSterling.ts
-var import_vanjs_core1127 = __toESM(require("vanjs-core"), 1);
+
 var ReceiptPoundSterling = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1127.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -17200,9 +15611,9 @@ var ReceiptPoundSterling = /* @__PURE__ */ __name((props = {}) => {
 }, "ReceiptPoundSterling");
 
 // src/icons/ReceiptRussianRuble.ts
-var import_vanjs_core1128 = __toESM(require("vanjs-core"), 1);
+
 var ReceiptRussianRuble = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1128.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -17214,9 +15625,9 @@ var ReceiptRussianRuble = /* @__PURE__ */ __name((props = {}) => {
 }, "ReceiptRussianRuble");
 
 // src/icons/ReceiptSwissFranc.ts
-var import_vanjs_core1129 = __toESM(require("vanjs-core"), 1);
+
 var ReceiptSwissFranc = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1129.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -17229,9 +15640,9 @@ var ReceiptSwissFranc = /* @__PURE__ */ __name((props = {}) => {
 }, "ReceiptSwissFranc");
 
 // src/icons/ReceiptText.ts
-var import_vanjs_core1130 = __toESM(require("vanjs-core"), 1);
+
 var ReceiptText = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1130.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -17244,9 +15655,9 @@ var ReceiptText = /* @__PURE__ */ __name((props = {}) => {
 }, "ReceiptText");
 
 // src/icons/Receipt.ts
-var import_vanjs_core1131 = __toESM(require("vanjs-core"), 1);
+
 var Receipt = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1131.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -17258,9 +15669,9 @@ var Receipt = /* @__PURE__ */ __name((props = {}) => {
 }, "Receipt");
 
 // src/icons/RectangleEllipsis.ts
-var import_vanjs_core1132 = __toESM(require("vanjs-core"), 1);
+
 var RectangleEllipsis = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1132.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "20", height: "12", "x": "2", "y": "6", rx: "2" }),
@@ -17271,9 +15682,9 @@ var RectangleEllipsis = /* @__PURE__ */ __name((props = {}) => {
 }, "RectangleEllipsis");
 
 // src/icons/RectangleHorizontal.ts
-var import_vanjs_core1133 = __toESM(require("vanjs-core"), 1);
+
 var RectangleHorizontal = /* @__PURE__ */ __name((props = {}) => {
-  const { rect } = import_vanjs_core1133.default.tags(svgNamespace);
+  const { rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "20", height: "12", "x": "2", "y": "6", rx: "2" })
@@ -17281,9 +15692,9 @@ var RectangleHorizontal = /* @__PURE__ */ __name((props = {}) => {
 }, "RectangleHorizontal");
 
 // src/icons/RectangleVertical.ts
-var import_vanjs_core1134 = __toESM(require("vanjs-core"), 1);
+
 var RectangleVertical = /* @__PURE__ */ __name((props = {}) => {
-  const { rect } = import_vanjs_core1134.default.tags(svgNamespace);
+  const { rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "12", height: "20", "x": "6", "y": "2", rx: "2" })
@@ -17291,9 +15702,9 @@ var RectangleVertical = /* @__PURE__ */ __name((props = {}) => {
 }, "RectangleVertical");
 
 // src/icons/Recycle.ts
-var import_vanjs_core1135 = __toESM(require("vanjs-core"), 1);
+
 var Recycle = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1135.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -17312,9 +15723,9 @@ var Recycle = /* @__PURE__ */ __name((props = {}) => {
 }, "Recycle");
 
 // src/icons/Redo2.ts
-var import_vanjs_core1136 = __toESM(require("vanjs-core"), 1);
+
 var Redo2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1136.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m15 14 5-5-5-5" }),
@@ -17323,9 +15734,9 @@ var Redo2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Redo2");
 
 // src/icons/RedoDot.ts
-var import_vanjs_core1137 = __toESM(require("vanjs-core"), 1);
+
 var RedoDot = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1137.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "17", "r": "1" }),
@@ -17335,9 +15746,9 @@ var RedoDot = /* @__PURE__ */ __name((props = {}) => {
 }, "RedoDot");
 
 // src/icons/Redo.ts
-var import_vanjs_core1138 = __toESM(require("vanjs-core"), 1);
+
 var Redo = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1138.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 7v6h-6" }),
@@ -17346,9 +15757,9 @@ var Redo = /* @__PURE__ */ __name((props = {}) => {
 }, "Redo");
 
 // src/icons/RefreshCcwDot.ts
-var import_vanjs_core1139 = __toESM(require("vanjs-core"), 1);
+
 var RefreshCcwDot = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1139.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 2v6h6" }),
@@ -17360,9 +15771,9 @@ var RefreshCcwDot = /* @__PURE__ */ __name((props = {}) => {
 }, "RefreshCcwDot");
 
 // src/icons/RefreshCcw.ts
-var import_vanjs_core1140 = __toESM(require("vanjs-core"), 1);
+
 var RefreshCcw = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1140.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" }),
@@ -17373,9 +15784,9 @@ var RefreshCcw = /* @__PURE__ */ __name((props = {}) => {
 }, "RefreshCcw");
 
 // src/icons/RefreshCwOff.ts
-var import_vanjs_core1141 = __toESM(require("vanjs-core"), 1);
+
 var RefreshCwOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1141.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -17393,9 +15804,9 @@ var RefreshCwOff = /* @__PURE__ */ __name((props = {}) => {
 }, "RefreshCwOff");
 
 // src/icons/RefreshCw.ts
-var import_vanjs_core1142 = __toESM(require("vanjs-core"), 1);
+
 var RefreshCw = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1142.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" }),
@@ -17406,9 +15817,9 @@ var RefreshCw = /* @__PURE__ */ __name((props = {}) => {
 }, "RefreshCw");
 
 // src/icons/Refrigerator.ts
-var import_vanjs_core1143 = __toESM(require("vanjs-core"), 1);
+
 var Refrigerator = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1143.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -17420,9 +15831,9 @@ var Refrigerator = /* @__PURE__ */ __name((props = {}) => {
 }, "Refrigerator");
 
 // src/icons/Regex.ts
-var import_vanjs_core1144 = __toESM(require("vanjs-core"), 1);
+
 var Regex = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1144.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M17 3v10" }),
@@ -17435,9 +15846,9 @@ var Regex = /* @__PURE__ */ __name((props = {}) => {
 }, "Regex");
 
 // src/icons/RemoveFormatting.ts
-var import_vanjs_core1145 = __toESM(require("vanjs-core"), 1);
+
 var RemoveFormatting = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1145.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 7V4h16v3" }),
@@ -17449,9 +15860,9 @@ var RemoveFormatting = /* @__PURE__ */ __name((props = {}) => {
 }, "RemoveFormatting");
 
 // src/icons/Repeat1.ts
-var import_vanjs_core1146 = __toESM(require("vanjs-core"), 1);
+
 var Repeat1 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1146.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m17 2 4 4-4 4" }),
@@ -17463,9 +15874,9 @@ var Repeat1 = /* @__PURE__ */ __name((props = {}) => {
 }, "Repeat1");
 
 // src/icons/Repeat2.ts
-var import_vanjs_core1147 = __toESM(require("vanjs-core"), 1);
+
 var Repeat2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1147.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m2 9 3-3 3 3" }),
@@ -17476,9 +15887,9 @@ var Repeat2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Repeat2");
 
 // src/icons/Repeat.ts
-var import_vanjs_core1148 = __toESM(require("vanjs-core"), 1);
+
 var Repeat = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1148.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m17 2 4 4-4 4" }),
@@ -17489,9 +15900,9 @@ var Repeat = /* @__PURE__ */ __name((props = {}) => {
 }, "Repeat");
 
 // src/icons/ReplaceAll.ts
-var import_vanjs_core1149 = __toESM(require("vanjs-core"), 1);
+
 var ReplaceAll = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1149.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M14 14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2" }),
@@ -17507,9 +15918,9 @@ var ReplaceAll = /* @__PURE__ */ __name((props = {}) => {
 }, "ReplaceAll");
 
 // src/icons/Replace.ts
-var import_vanjs_core1150 = __toESM(require("vanjs-core"), 1);
+
 var Replace = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1150.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M14 4a2 2 0 0 1 2-2" }),
@@ -17523,9 +15934,9 @@ var Replace = /* @__PURE__ */ __name((props = {}) => {
 }, "Replace");
 
 // src/icons/ReplyAll.ts
-var import_vanjs_core1151 = __toESM(require("vanjs-core"), 1);
+
 var ReplyAll = /* @__PURE__ */ __name((props = {}) => {
-  const { polyline, path } = import_vanjs_core1151.default.tags(svgNamespace);
+  const { polyline, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polyline({ points: "7 17 2 12 7 7" }),
@@ -17535,9 +15946,9 @@ var ReplyAll = /* @__PURE__ */ __name((props = {}) => {
 }, "ReplyAll");
 
 // src/icons/Reply.ts
-var import_vanjs_core1152 = __toESM(require("vanjs-core"), 1);
+
 var Reply = /* @__PURE__ */ __name((props = {}) => {
-  const { polyline, path } = import_vanjs_core1152.default.tags(svgNamespace);
+  const { polyline, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polyline({ points: "9 17 4 12 9 7" }),
@@ -17546,9 +15957,9 @@ var Reply = /* @__PURE__ */ __name((props = {}) => {
 }, "Reply");
 
 // src/icons/Rewind.ts
-var import_vanjs_core1153 = __toESM(require("vanjs-core"), 1);
+
 var Rewind = /* @__PURE__ */ __name((props = {}) => {
-  const { polygon } = import_vanjs_core1153.default.tags(svgNamespace);
+  const { polygon } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polygon({ points: "11 19 2 12 11 5 11 19" }),
@@ -17557,9 +15968,9 @@ var Rewind = /* @__PURE__ */ __name((props = {}) => {
 }, "Rewind");
 
 // src/icons/Ribbon.ts
-var import_vanjs_core1154 = __toESM(require("vanjs-core"), 1);
+
 var Ribbon = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1154.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -17575,9 +15986,9 @@ var Ribbon = /* @__PURE__ */ __name((props = {}) => {
 }, "Ribbon");
 
 // src/icons/Rocket.ts
-var import_vanjs_core1155 = __toESM(require("vanjs-core"), 1);
+
 var Rocket = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1155.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -17592,9 +16003,9 @@ var Rocket = /* @__PURE__ */ __name((props = {}) => {
 }, "Rocket");
 
 // src/icons/RockingChair.ts
-var import_vanjs_core1156 = __toESM(require("vanjs-core"), 1);
+
 var RockingChair = /* @__PURE__ */ __name((props = {}) => {
-  const { polyline, line, path } = import_vanjs_core1156.default.tags(svgNamespace);
+  const { polyline, line, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polyline({ points: "3.5 2 6.5 12.5 18 12.5" }),
@@ -17605,9 +16016,9 @@ var RockingChair = /* @__PURE__ */ __name((props = {}) => {
 }, "RockingChair");
 
 // src/icons/RollerCoaster.ts
-var import_vanjs_core1157 = __toESM(require("vanjs-core"), 1);
+
 var RollerCoaster = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1157.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M6 19V5" }),
@@ -17623,9 +16034,9 @@ var RollerCoaster = /* @__PURE__ */ __name((props = {}) => {
 }, "RollerCoaster");
 
 // src/icons/Rotate3d.ts
-var import_vanjs_core1158 = __toESM(require("vanjs-core"), 1);
+
 var Rotate3d = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1158.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -17639,9 +16050,9 @@ var Rotate3d = /* @__PURE__ */ __name((props = {}) => {
 }, "Rotate3d");
 
 // src/icons/RotateCcwSquare.ts
-var import_vanjs_core1159 = __toESM(require("vanjs-core"), 1);
+
 var RotateCcwSquare = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1159.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M20 9V7a2 2 0 0 0-2-2h-6" }),
@@ -17651,9 +16062,9 @@ var RotateCcwSquare = /* @__PURE__ */ __name((props = {}) => {
 }, "RotateCcwSquare");
 
 // src/icons/RotateCcw.ts
-var import_vanjs_core1160 = __toESM(require("vanjs-core"), 1);
+
 var RotateCcw = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1160.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" }),
@@ -17662,9 +16073,9 @@ var RotateCcw = /* @__PURE__ */ __name((props = {}) => {
 }, "RotateCcw");
 
 // src/icons/RotateCwSquare.ts
-var import_vanjs_core1161 = __toESM(require("vanjs-core"), 1);
+
 var RotateCwSquare = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1161.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 5H6a2 2 0 0 0-2 2v3" }),
@@ -17674,9 +16085,9 @@ var RotateCwSquare = /* @__PURE__ */ __name((props = {}) => {
 }, "RotateCwSquare");
 
 // src/icons/RotateCw.ts
-var import_vanjs_core1162 = __toESM(require("vanjs-core"), 1);
+
 var RotateCw = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1162.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8" }),
@@ -17685,9 +16096,9 @@ var RotateCw = /* @__PURE__ */ __name((props = {}) => {
 }, "RotateCw");
 
 // src/icons/RouteOff.ts
-var import_vanjs_core1163 = __toESM(require("vanjs-core"), 1);
+
 var RouteOff = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1163.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "6", cy: "19", "r": "3" }),
@@ -17701,9 +16112,9 @@ var RouteOff = /* @__PURE__ */ __name((props = {}) => {
 }, "RouteOff");
 
 // src/icons/Route.ts
-var import_vanjs_core1164 = __toESM(require("vanjs-core"), 1);
+
 var Route = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1164.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "6", cy: "19", "r": "3" }),
@@ -17713,9 +16124,9 @@ var Route = /* @__PURE__ */ __name((props = {}) => {
 }, "Route");
 
 // src/icons/Router.ts
-var import_vanjs_core1165 = __toESM(require("vanjs-core"), 1);
+
 var Router = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1165.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "20", height: "8", "x": "2", "y": "14", rx: "2" }),
@@ -17728,9 +16139,9 @@ var Router = /* @__PURE__ */ __name((props = {}) => {
 }, "Router");
 
 // src/icons/Rows2.ts
-var import_vanjs_core1166 = __toESM(require("vanjs-core"), 1);
+
 var Rows2 = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1166.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -17739,9 +16150,9 @@ var Rows2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Rows2");
 
 // src/icons/Rows3.ts
-var import_vanjs_core1167 = __toESM(require("vanjs-core"), 1);
+
 var Rows3 = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1167.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -17751,9 +16162,9 @@ var Rows3 = /* @__PURE__ */ __name((props = {}) => {
 }, "Rows3");
 
 // src/icons/Rows4.ts
-var import_vanjs_core1168 = __toESM(require("vanjs-core"), 1);
+
 var Rows4 = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1168.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -17764,9 +16175,9 @@ var Rows4 = /* @__PURE__ */ __name((props = {}) => {
 }, "Rows4");
 
 // src/icons/Rss.ts
-var import_vanjs_core1169 = __toESM(require("vanjs-core"), 1);
+
 var Rss = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1169.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 11a9 9 0 0 1 9 9" }),
@@ -17776,9 +16187,9 @@ var Rss = /* @__PURE__ */ __name((props = {}) => {
 }, "Rss");
 
 // src/icons/Ruler.ts
-var import_vanjs_core1170 = __toESM(require("vanjs-core"), 1);
+
 var Ruler = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1170.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -17792,9 +16203,9 @@ var Ruler = /* @__PURE__ */ __name((props = {}) => {
 }, "Ruler");
 
 // src/icons/RussianRuble.ts
-var import_vanjs_core1171 = __toESM(require("vanjs-core"), 1);
+
 var RussianRuble = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1171.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M6 11h8a4 4 0 0 0 0-8H9v18" }),
@@ -17803,9 +16214,9 @@ var RussianRuble = /* @__PURE__ */ __name((props = {}) => {
 }, "RussianRuble");
 
 // src/icons/Sailboat.ts
-var import_vanjs_core1172 = __toESM(require("vanjs-core"), 1);
+
 var Sailboat = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1172.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M22 18H2a4 4 0 0 0 4 4h12a4 4 0 0 0 4-4Z" }),
@@ -17815,9 +16226,9 @@ var Sailboat = /* @__PURE__ */ __name((props = {}) => {
 }, "Sailboat");
 
 // src/icons/Salad.ts
-var import_vanjs_core1173 = __toESM(require("vanjs-core"), 1);
+
 var Salad = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1173.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M7 21h10" }),
@@ -17831,9 +16242,9 @@ var Salad = /* @__PURE__ */ __name((props = {}) => {
 }, "Salad");
 
 // src/icons/Sandwich.ts
-var import_vanjs_core1174 = __toESM(require("vanjs-core"), 1);
+
 var Sandwich = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1174.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m2.37 11.223 8.372-6.777a2 2 0 0 1 2.516 0l8.371 6.777" }),
@@ -17845,9 +16256,9 @@ var Sandwich = /* @__PURE__ */ __name((props = {}) => {
 }, "Sandwich");
 
 // src/icons/SatelliteDish.ts
-var import_vanjs_core1175 = __toESM(require("vanjs-core"), 1);
+
 var SatelliteDish = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1175.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 10a7.31 7.31 0 0 0 10 10Z" }),
@@ -17858,9 +16269,9 @@ var SatelliteDish = /* @__PURE__ */ __name((props = {}) => {
 }, "SatelliteDish");
 
 // src/icons/Satellite.ts
-var import_vanjs_core1176 = __toESM(require("vanjs-core"), 1);
+
 var Satellite = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1176.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M13 7 9 3 5 7l4 4" }),
@@ -17872,9 +16283,9 @@ var Satellite = /* @__PURE__ */ __name((props = {}) => {
 }, "Satellite");
 
 // src/icons/SaveAll.ts
-var import_vanjs_core1177 = __toESM(require("vanjs-core"), 1);
+
 var SaveAll = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1177.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 2v3a1 1 0 0 0 1 1h5" }),
@@ -17887,9 +16298,9 @@ var SaveAll = /* @__PURE__ */ __name((props = {}) => {
 }, "SaveAll");
 
 // src/icons/SaveOff.ts
-var import_vanjs_core1178 = __toESM(require("vanjs-core"), 1);
+
 var SaveOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1178.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M13 13H8a1 1 0 0 0-1 1v7" }),
@@ -17905,9 +16316,9 @@ var SaveOff = /* @__PURE__ */ __name((props = {}) => {
 }, "SaveOff");
 
 // src/icons/Save.ts
-var import_vanjs_core1179 = __toESM(require("vanjs-core"), 1);
+
 var Save = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1179.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -17919,9 +16330,9 @@ var Save = /* @__PURE__ */ __name((props = {}) => {
 }, "Save");
 
 // src/icons/Scale3d.ts
-var import_vanjs_core1180 = __toESM(require("vanjs-core"), 1);
+
 var Scale3d = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1180.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M5 7v11a1 1 0 0 0 1 1h11" }),
@@ -17932,9 +16343,9 @@ var Scale3d = /* @__PURE__ */ __name((props = {}) => {
 }, "Scale3d");
 
 // src/icons/Scale.ts
-var import_vanjs_core1181 = __toESM(require("vanjs-core"), 1);
+
 var Scale = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1181.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" }),
@@ -17946,9 +16357,9 @@ var Scale = /* @__PURE__ */ __name((props = {}) => {
 }, "Scale");
 
 // src/icons/Scaling.ts
-var import_vanjs_core1182 = __toESM(require("vanjs-core"), 1);
+
 var Scaling = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1182.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" }),
@@ -17959,9 +16370,9 @@ var Scaling = /* @__PURE__ */ __name((props = {}) => {
 }, "Scaling");
 
 // src/icons/ScanBarcode.ts
-var import_vanjs_core1183 = __toESM(require("vanjs-core"), 1);
+
 var ScanBarcode = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1183.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 7V5a2 2 0 0 1 2-2h2" }),
@@ -17975,9 +16386,9 @@ var ScanBarcode = /* @__PURE__ */ __name((props = {}) => {
 }, "ScanBarcode");
 
 // src/icons/ScanEye.ts
-var import_vanjs_core1184 = __toESM(require("vanjs-core"), 1);
+
 var ScanEye = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1184.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 7V5a2 2 0 0 1 2-2h2" }),
@@ -17992,9 +16403,9 @@ var ScanEye = /* @__PURE__ */ __name((props = {}) => {
 }, "ScanEye");
 
 // src/icons/ScanFace.ts
-var import_vanjs_core1185 = __toESM(require("vanjs-core"), 1);
+
 var ScanFace = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1185.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 7V5a2 2 0 0 1 2-2h2" }),
@@ -18008,9 +16419,9 @@ var ScanFace = /* @__PURE__ */ __name((props = {}) => {
 }, "ScanFace");
 
 // src/icons/ScanHeart.ts
-var import_vanjs_core1186 = __toESM(require("vanjs-core"), 1);
+
 var ScanHeart = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1186.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -18024,9 +16435,9 @@ var ScanHeart = /* @__PURE__ */ __name((props = {}) => {
 }, "ScanHeart");
 
 // src/icons/ScanLine.ts
-var import_vanjs_core1187 = __toESM(require("vanjs-core"), 1);
+
 var ScanLine = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1187.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 7V5a2 2 0 0 1 2-2h2" }),
@@ -18038,9 +16449,9 @@ var ScanLine = /* @__PURE__ */ __name((props = {}) => {
 }, "ScanLine");
 
 // src/icons/ScanQrCode.ts
-var import_vanjs_core1188 = __toESM(require("vanjs-core"), 1);
+
 var ScanQrCode = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1188.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M17 12v4a1 1 0 0 1-1 1h-4" }),
@@ -18055,9 +16466,9 @@ var ScanQrCode = /* @__PURE__ */ __name((props = {}) => {
 }, "ScanQrCode");
 
 // src/icons/ScanSearch.ts
-var import_vanjs_core1189 = __toESM(require("vanjs-core"), 1);
+
 var ScanSearch = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1189.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 7V5a2 2 0 0 1 2-2h2" }),
@@ -18070,9 +16481,9 @@ var ScanSearch = /* @__PURE__ */ __name((props = {}) => {
 }, "ScanSearch");
 
 // src/icons/ScanText.ts
-var import_vanjs_core1190 = __toESM(require("vanjs-core"), 1);
+
 var ScanText = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1190.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 7V5a2 2 0 0 1 2-2h2" }),
@@ -18086,9 +16497,9 @@ var ScanText = /* @__PURE__ */ __name((props = {}) => {
 }, "ScanText");
 
 // src/icons/Scan.ts
-var import_vanjs_core1191 = __toESM(require("vanjs-core"), 1);
+
 var Scan = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1191.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 7V5a2 2 0 0 1 2-2h2" }),
@@ -18099,9 +16510,9 @@ var Scan = /* @__PURE__ */ __name((props = {}) => {
 }, "Scan");
 
 // src/icons/School.ts
-var import_vanjs_core1192 = __toESM(require("vanjs-core"), 1);
+
 var School = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1192.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M14 22v-4a2 2 0 1 0-4 0v4" }),
@@ -18116,9 +16527,9 @@ var School = /* @__PURE__ */ __name((props = {}) => {
 }, "School");
 
 // src/icons/ScissorsLineDashed.ts
-var import_vanjs_core1193 = __toESM(require("vanjs-core"), 1);
+
 var ScissorsLineDashed = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1193.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M5.42 9.42 8 12" }),
@@ -18132,9 +16543,9 @@ var ScissorsLineDashed = /* @__PURE__ */ __name((props = {}) => {
 }, "ScissorsLineDashed");
 
 // src/icons/Scissors.ts
-var import_vanjs_core1194 = __toESM(require("vanjs-core"), 1);
+
 var Scissors = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1194.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "6", cy: "6", "r": "3" }),
@@ -18146,9 +16557,9 @@ var Scissors = /* @__PURE__ */ __name((props = {}) => {
 }, "Scissors");
 
 // src/icons/ScreenShareOff.ts
-var import_vanjs_core1195 = __toESM(require("vanjs-core"), 1);
+
 var ScreenShareOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1195.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M13 3H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-3" }),
@@ -18160,9 +16571,9 @@ var ScreenShareOff = /* @__PURE__ */ __name((props = {}) => {
 }, "ScreenShareOff");
 
 // src/icons/ScreenShare.ts
-var import_vanjs_core1196 = __toESM(require("vanjs-core"), 1);
+
 var ScreenShare = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1196.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M13 3H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-3" }),
@@ -18174,9 +16585,9 @@ var ScreenShare = /* @__PURE__ */ __name((props = {}) => {
 }, "ScreenShare");
 
 // src/icons/ScrollText.ts
-var import_vanjs_core1197 = __toESM(require("vanjs-core"), 1);
+
 var ScrollText = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1197.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 12h-5" }),
@@ -18189,9 +16600,9 @@ var ScrollText = /* @__PURE__ */ __name((props = {}) => {
 }, "ScrollText");
 
 // src/icons/Scroll.ts
-var import_vanjs_core1198 = __toESM(require("vanjs-core"), 1);
+
 var Scroll = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1198.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M19 17V5a2 2 0 0 0-2-2H4" }),
@@ -18202,9 +16613,9 @@ var Scroll = /* @__PURE__ */ __name((props = {}) => {
 }, "Scroll");
 
 // src/icons/SearchCheck.ts
-var import_vanjs_core1199 = __toESM(require("vanjs-core"), 1);
+
 var SearchCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1199.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m8 11 2 2 4-4" }),
@@ -18214,9 +16625,9 @@ var SearchCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "SearchCheck");
 
 // src/icons/SearchCode.ts
-var import_vanjs_core1200 = __toESM(require("vanjs-core"), 1);
+
 var SearchCode = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1200.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m13 13.5 2-2.5-2-2.5" }),
@@ -18227,9 +16638,9 @@ var SearchCode = /* @__PURE__ */ __name((props = {}) => {
 }, "SearchCode");
 
 // src/icons/SearchSlash.ts
-var import_vanjs_core1201 = __toESM(require("vanjs-core"), 1);
+
 var SearchSlash = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1201.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m13.5 8.5-5 5" }),
@@ -18239,9 +16650,9 @@ var SearchSlash = /* @__PURE__ */ __name((props = {}) => {
 }, "SearchSlash");
 
 // src/icons/SearchX.ts
-var import_vanjs_core1202 = __toESM(require("vanjs-core"), 1);
+
 var SearchX = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1202.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m13.5 8.5-5 5" }),
@@ -18252,9 +16663,9 @@ var SearchX = /* @__PURE__ */ __name((props = {}) => {
 }, "SearchX");
 
 // src/icons/Search.ts
-var import_vanjs_core1203 = __toESM(require("vanjs-core"), 1);
+
 var Search = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1203.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "11", cy: "11", "r": "8" }),
@@ -18263,9 +16674,9 @@ var Search = /* @__PURE__ */ __name((props = {}) => {
 }, "Search");
 
 // src/icons/Section.ts
-var import_vanjs_core1204 = __toESM(require("vanjs-core"), 1);
+
 var Section = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1204.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 5a4 3 0 0 0-8 0c0 4 8 3 8 7a4 3 0 0 1-8 0" }),
@@ -18274,9 +16685,9 @@ var Section = /* @__PURE__ */ __name((props = {}) => {
 }, "Section");
 
 // src/icons/SendHorizontal.ts
-var import_vanjs_core1205 = __toESM(require("vanjs-core"), 1);
+
 var SendHorizontal = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1205.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -18287,9 +16698,9 @@ var SendHorizontal = /* @__PURE__ */ __name((props = {}) => {
 }, "SendHorizontal");
 
 // src/icons/SendToBack.ts
-var import_vanjs_core1206 = __toESM(require("vanjs-core"), 1);
+
 var SendToBack = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1206.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ "x": "14", "y": "14", width: "8", height: "8", rx: "2" }),
@@ -18300,9 +16711,9 @@ var SendToBack = /* @__PURE__ */ __name((props = {}) => {
 }, "SendToBack");
 
 // src/icons/Send.ts
-var import_vanjs_core1207 = __toESM(require("vanjs-core"), 1);
+
 var Send = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1207.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -18313,9 +16724,9 @@ var Send = /* @__PURE__ */ __name((props = {}) => {
 }, "Send");
 
 // src/icons/SeparatorHorizontal.ts
-var import_vanjs_core1208 = __toESM(require("vanjs-core"), 1);
+
 var SeparatorHorizontal = /* @__PURE__ */ __name((props = {}) => {
-  const { line, polyline } = import_vanjs_core1208.default.tags(svgNamespace);
+  const { line, polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "3", x2: "21", y1: "12", y2: "12" }),
@@ -18325,9 +16736,9 @@ var SeparatorHorizontal = /* @__PURE__ */ __name((props = {}) => {
 }, "SeparatorHorizontal");
 
 // src/icons/SeparatorVertical.ts
-var import_vanjs_core1209 = __toESM(require("vanjs-core"), 1);
+
 var SeparatorVertical = /* @__PURE__ */ __name((props = {}) => {
-  const { line, polyline } = import_vanjs_core1209.default.tags(svgNamespace);
+  const { line, polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "12", x2: "12", y1: "3", y2: "21" }),
@@ -18337,9 +16748,9 @@ var SeparatorVertical = /* @__PURE__ */ __name((props = {}) => {
 }, "SeparatorVertical");
 
 // src/icons/ServerCog.ts
-var import_vanjs_core1210 = __toESM(require("vanjs-core"), 1);
+
 var ServerCog = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1210.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "3" }),
@@ -18363,9 +16774,9 @@ var ServerCog = /* @__PURE__ */ __name((props = {}) => {
 }, "ServerCog");
 
 // src/icons/ServerCrash.ts
-var import_vanjs_core1211 = __toESM(require("vanjs-core"), 1);
+
 var ServerCrash = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1211.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -18381,9 +16792,9 @@ var ServerCrash = /* @__PURE__ */ __name((props = {}) => {
 }, "ServerCrash");
 
 // src/icons/ServerOff.ts
-var import_vanjs_core1212 = __toESM(require("vanjs-core"), 1);
+
 var ServerOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1212.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M7 2h13a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-5" }),
@@ -18396,9 +16807,9 @@ var ServerOff = /* @__PURE__ */ __name((props = {}) => {
 }, "ServerOff");
 
 // src/icons/Server.ts
-var import_vanjs_core1213 = __toESM(require("vanjs-core"), 1);
+
 var Server = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, line } = import_vanjs_core1213.default.tags(svgNamespace);
+  const { rect, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "20", height: "8", "x": "2", "y": "2", rx: "2", ry: "2" }),
@@ -18409,9 +16820,9 @@ var Server = /* @__PURE__ */ __name((props = {}) => {
 }, "Server");
 
 // src/icons/Settings2.ts
-var import_vanjs_core1214 = __toESM(require("vanjs-core"), 1);
+
 var Settings2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1214.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M20 7h-9" }),
@@ -18422,9 +16833,9 @@ var Settings2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Settings2");
 
 // src/icons/Settings.ts
-var import_vanjs_core1215 = __toESM(require("vanjs-core"), 1);
+
 var Settings = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1215.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -18435,9 +16846,9 @@ var Settings = /* @__PURE__ */ __name((props = {}) => {
 }, "Settings");
 
 // src/icons/Shapes.ts
-var import_vanjs_core1216 = __toESM(require("vanjs-core"), 1);
+
 var Shapes = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect, circle } = import_vanjs_core1216.default.tags(svgNamespace);
+  const { path, rect, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -18449,9 +16860,9 @@ var Shapes = /* @__PURE__ */ __name((props = {}) => {
 }, "Shapes");
 
 // src/icons/Share2.ts
-var import_vanjs_core1217 = __toESM(require("vanjs-core"), 1);
+
 var Share2 = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, line } = import_vanjs_core1217.default.tags(svgNamespace);
+  const { circle, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "18", cy: "5", "r": "3" }),
@@ -18463,9 +16874,9 @@ var Share2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Share2");
 
 // src/icons/Share.ts
-var import_vanjs_core1218 = __toESM(require("vanjs-core"), 1);
+
 var Share = /* @__PURE__ */ __name((props = {}) => {
-  const { path, polyline, line } = import_vanjs_core1218.default.tags(svgNamespace);
+  const { path, polyline, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" }),
@@ -18475,9 +16886,9 @@ var Share = /* @__PURE__ */ __name((props = {}) => {
 }, "Share");
 
 // src/icons/Sheet.ts
-var import_vanjs_core1219 = __toESM(require("vanjs-core"), 1);
+
 var Sheet = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, line } = import_vanjs_core1219.default.tags(svgNamespace);
+  const { rect, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2", ry: "2" }),
@@ -18489,9 +16900,9 @@ var Sheet = /* @__PURE__ */ __name((props = {}) => {
 }, "Sheet");
 
 // src/icons/Shell.ts
-var import_vanjs_core1220 = __toESM(require("vanjs-core"), 1);
+
 var Shell = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1220.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -18501,9 +16912,9 @@ var Shell = /* @__PURE__ */ __name((props = {}) => {
 }, "Shell");
 
 // src/icons/ShieldAlert.ts
-var import_vanjs_core1221 = __toESM(require("vanjs-core"), 1);
+
 var ShieldAlert = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1221.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -18515,9 +16926,9 @@ var ShieldAlert = /* @__PURE__ */ __name((props = {}) => {
 }, "ShieldAlert");
 
 // src/icons/ShieldBan.ts
-var import_vanjs_core1222 = __toESM(require("vanjs-core"), 1);
+
 var ShieldBan = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1222.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -18528,9 +16939,9 @@ var ShieldBan = /* @__PURE__ */ __name((props = {}) => {
 }, "ShieldBan");
 
 // src/icons/ShieldCheck.ts
-var import_vanjs_core1223 = __toESM(require("vanjs-core"), 1);
+
 var ShieldCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1223.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -18541,9 +16952,9 @@ var ShieldCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "ShieldCheck");
 
 // src/icons/ShieldEllipsis.ts
-var import_vanjs_core1224 = __toESM(require("vanjs-core"), 1);
+
 var ShieldEllipsis = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1224.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -18556,9 +16967,9 @@ var ShieldEllipsis = /* @__PURE__ */ __name((props = {}) => {
 }, "ShieldEllipsis");
 
 // src/icons/ShieldHalf.ts
-var import_vanjs_core1225 = __toESM(require("vanjs-core"), 1);
+
 var ShieldHalf = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1225.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -18569,9 +16980,9 @@ var ShieldHalf = /* @__PURE__ */ __name((props = {}) => {
 }, "ShieldHalf");
 
 // src/icons/ShieldMinus.ts
-var import_vanjs_core1226 = __toESM(require("vanjs-core"), 1);
+
 var ShieldMinus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1226.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -18582,9 +16993,9 @@ var ShieldMinus = /* @__PURE__ */ __name((props = {}) => {
 }, "ShieldMinus");
 
 // src/icons/ShieldOff.ts
-var import_vanjs_core1227 = __toESM(require("vanjs-core"), 1);
+
 var ShieldOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1227.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m2 2 20 20" }),
@@ -18598,9 +17009,9 @@ var ShieldOff = /* @__PURE__ */ __name((props = {}) => {
 }, "ShieldOff");
 
 // src/icons/ShieldPlus.ts
-var import_vanjs_core1228 = __toESM(require("vanjs-core"), 1);
+
 var ShieldPlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1228.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -18612,9 +17023,9 @@ var ShieldPlus = /* @__PURE__ */ __name((props = {}) => {
 }, "ShieldPlus");
 
 // src/icons/ShieldQuestion.ts
-var import_vanjs_core1229 = __toESM(require("vanjs-core"), 1);
+
 var ShieldQuestion = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1229.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -18626,9 +17037,9 @@ var ShieldQuestion = /* @__PURE__ */ __name((props = {}) => {
 }, "ShieldQuestion");
 
 // src/icons/ShieldUser.ts
-var import_vanjs_core1230 = __toESM(require("vanjs-core"), 1);
+
 var ShieldUser = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1230.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -18640,9 +17051,9 @@ var ShieldUser = /* @__PURE__ */ __name((props = {}) => {
 }, "ShieldUser");
 
 // src/icons/ShieldX.ts
-var import_vanjs_core1231 = __toESM(require("vanjs-core"), 1);
+
 var ShieldX = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1231.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -18654,9 +17065,9 @@ var ShieldX = /* @__PURE__ */ __name((props = {}) => {
 }, "ShieldX");
 
 // src/icons/Shield.ts
-var import_vanjs_core1232 = __toESM(require("vanjs-core"), 1);
+
 var Shield = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1232.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -18666,9 +17077,9 @@ var Shield = /* @__PURE__ */ __name((props = {}) => {
 }, "Shield");
 
 // src/icons/ShipWheel.ts
-var import_vanjs_core1233 = __toESM(require("vanjs-core"), 1);
+
 var ShipWheel = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1233.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "8" }),
@@ -18685,9 +17096,9 @@ var ShipWheel = /* @__PURE__ */ __name((props = {}) => {
 }, "ShipWheel");
 
 // src/icons/Ship.ts
-var import_vanjs_core1234 = __toESM(require("vanjs-core"), 1);
+
 var Ship = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1234.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 10.189V14" }),
@@ -18703,9 +17114,9 @@ var Ship = /* @__PURE__ */ __name((props = {}) => {
 }, "Ship");
 
 // src/icons/Shirt.ts
-var import_vanjs_core1235 = __toESM(require("vanjs-core"), 1);
+
 var Shirt = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1235.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -18715,9 +17126,9 @@ var Shirt = /* @__PURE__ */ __name((props = {}) => {
 }, "Shirt");
 
 // src/icons/ShoppingBag.ts
-var import_vanjs_core1236 = __toESM(require("vanjs-core"), 1);
+
 var ShoppingBag = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1236.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" }),
@@ -18727,9 +17138,9 @@ var ShoppingBag = /* @__PURE__ */ __name((props = {}) => {
 }, "ShoppingBag");
 
 // src/icons/ShoppingBasket.ts
-var import_vanjs_core1237 = __toESM(require("vanjs-core"), 1);
+
 var ShoppingBasket = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1237.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m15 11-1 9" }),
@@ -18745,9 +17156,9 @@ var ShoppingBasket = /* @__PURE__ */ __name((props = {}) => {
 }, "ShoppingBasket");
 
 // src/icons/ShoppingCart.ts
-var import_vanjs_core1238 = __toESM(require("vanjs-core"), 1);
+
 var ShoppingCart = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1238.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "8", cy: "21", "r": "1" }),
@@ -18759,9 +17170,9 @@ var ShoppingCart = /* @__PURE__ */ __name((props = {}) => {
 }, "ShoppingCart");
 
 // src/icons/Shovel.ts
-var import_vanjs_core1239 = __toESM(require("vanjs-core"), 1);
+
 var Shovel = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1239.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 22v-5l5-5 5 5-5 5z" }),
@@ -18773,9 +17184,9 @@ var Shovel = /* @__PURE__ */ __name((props = {}) => {
 }, "Shovel");
 
 // src/icons/ShowerHead.ts
-var import_vanjs_core1240 = __toESM(require("vanjs-core"), 1);
+
 var ShowerHead = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1240.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m4 4 2.5 2.5" }),
@@ -18792,9 +17203,9 @@ var ShowerHead = /* @__PURE__ */ __name((props = {}) => {
 }, "ShowerHead");
 
 // src/icons/Shrink.ts
-var import_vanjs_core1241 = __toESM(require("vanjs-core"), 1);
+
 var Shrink = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1241.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m15 15 6 6m-6-6v4.8m0-4.8h4.8" }),
@@ -18805,9 +17216,9 @@ var Shrink = /* @__PURE__ */ __name((props = {}) => {
 }, "Shrink");
 
 // src/icons/Shrub.ts
-var import_vanjs_core1242 = __toESM(require("vanjs-core"), 1);
+
 var Shrub = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1242.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 22v-7l-2-2" }),
@@ -18819,9 +17230,9 @@ var Shrub = /* @__PURE__ */ __name((props = {}) => {
 }, "Shrub");
 
 // src/icons/Shuffle.ts
-var import_vanjs_core1243 = __toESM(require("vanjs-core"), 1);
+
 var Shuffle = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1243.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m18 14 4 4-4 4" }),
@@ -18835,9 +17246,9 @@ var Shuffle = /* @__PURE__ */ __name((props = {}) => {
 }, "Shuffle");
 
 // src/icons/Sigma.ts
-var import_vanjs_core1244 = __toESM(require("vanjs-core"), 1);
+
 var Sigma = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1244.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -18847,9 +17258,9 @@ var Sigma = /* @__PURE__ */ __name((props = {}) => {
 }, "Sigma");
 
 // src/icons/SignalHigh.ts
-var import_vanjs_core1245 = __toESM(require("vanjs-core"), 1);
+
 var SignalHigh = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1245.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 20h.01" }),
@@ -18860,9 +17271,9 @@ var SignalHigh = /* @__PURE__ */ __name((props = {}) => {
 }, "SignalHigh");
 
 // src/icons/SignalLow.ts
-var import_vanjs_core1246 = __toESM(require("vanjs-core"), 1);
+
 var SignalLow = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1246.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 20h.01" }),
@@ -18871,9 +17282,9 @@ var SignalLow = /* @__PURE__ */ __name((props = {}) => {
 }, "SignalLow");
 
 // src/icons/SignalMedium.ts
-var import_vanjs_core1247 = __toESM(require("vanjs-core"), 1);
+
 var SignalMedium = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1247.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 20h.01" }),
@@ -18883,9 +17294,9 @@ var SignalMedium = /* @__PURE__ */ __name((props = {}) => {
 }, "SignalMedium");
 
 // src/icons/SignalZero.ts
-var import_vanjs_core1248 = __toESM(require("vanjs-core"), 1);
+
 var SignalZero = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1248.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 20h.01" })
@@ -18893,9 +17304,9 @@ var SignalZero = /* @__PURE__ */ __name((props = {}) => {
 }, "SignalZero");
 
 // src/icons/Signal.ts
-var import_vanjs_core1249 = __toESM(require("vanjs-core"), 1);
+
 var Signal = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1249.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 20h.01" }),
@@ -18907,9 +17318,9 @@ var Signal = /* @__PURE__ */ __name((props = {}) => {
 }, "Signal");
 
 // src/icons/Signature.ts
-var import_vanjs_core1250 = __toESM(require("vanjs-core"), 1);
+
 var Signature = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1250.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -18920,9 +17331,9 @@ var Signature = /* @__PURE__ */ __name((props = {}) => {
 }, "Signature");
 
 // src/icons/SignpostBig.ts
-var import_vanjs_core1251 = __toESM(require("vanjs-core"), 1);
+
 var SignpostBig = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1251.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 9H4L2 7l2-2h6" }),
@@ -18933,9 +17344,9 @@ var SignpostBig = /* @__PURE__ */ __name((props = {}) => {
 }, "SignpostBig");
 
 // src/icons/Signpost.ts
-var import_vanjs_core1252 = __toESM(require("vanjs-core"), 1);
+
 var Signpost = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1252.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 13v8" }),
@@ -18947,9 +17358,9 @@ var Signpost = /* @__PURE__ */ __name((props = {}) => {
 }, "Signpost");
 
 // src/icons/Siren.ts
-var import_vanjs_core1253 = __toESM(require("vanjs-core"), 1);
+
 var Siren = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1253.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M7 18v-6a5 5 0 1 1 10 0v6" }),
@@ -18966,9 +17377,9 @@ var Siren = /* @__PURE__ */ __name((props = {}) => {
 }, "Siren");
 
 // src/icons/SkipBack.ts
-var import_vanjs_core1254 = __toESM(require("vanjs-core"), 1);
+
 var SkipBack = /* @__PURE__ */ __name((props = {}) => {
-  const { polygon, line } = import_vanjs_core1254.default.tags(svgNamespace);
+  const { polygon, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polygon({ points: "19 20 9 12 19 4 19 20" }),
@@ -18977,9 +17388,9 @@ var SkipBack = /* @__PURE__ */ __name((props = {}) => {
 }, "SkipBack");
 
 // src/icons/SkipForward.ts
-var import_vanjs_core1255 = __toESM(require("vanjs-core"), 1);
+
 var SkipForward = /* @__PURE__ */ __name((props = {}) => {
-  const { polygon, line } = import_vanjs_core1255.default.tags(svgNamespace);
+  const { polygon, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polygon({ points: "5 4 15 12 5 20 5 4" }),
@@ -18988,9 +17399,9 @@ var SkipForward = /* @__PURE__ */ __name((props = {}) => {
 }, "SkipForward");
 
 // src/icons/Skull.ts
-var import_vanjs_core1256 = __toESM(require("vanjs-core"), 1);
+
 var Skull = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1256.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m12.5 17-.5-1-.5 1h1z" }),
@@ -19003,9 +17414,9 @@ var Skull = /* @__PURE__ */ __name((props = {}) => {
 }, "Skull");
 
 // src/icons/Slack.ts
-var import_vanjs_core1257 = __toESM(require("vanjs-core"), 1);
+
 var Slack = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1257.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "3", height: "8", "x": "13", "y": "2", rx: "1.5" }),
@@ -19020,9 +17431,9 @@ var Slack = /* @__PURE__ */ __name((props = {}) => {
 }, "Slack");
 
 // src/icons/Slash.ts
-var import_vanjs_core1258 = __toESM(require("vanjs-core"), 1);
+
 var Slash = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1258.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M22 2 2 22" })
@@ -19030,9 +17441,9 @@ var Slash = /* @__PURE__ */ __name((props = {}) => {
 }, "Slash");
 
 // src/icons/Slice.ts
-var import_vanjs_core1259 = __toESM(require("vanjs-core"), 1);
+
 var Slice = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1259.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -19042,9 +17453,9 @@ var Slice = /* @__PURE__ */ __name((props = {}) => {
 }, "Slice");
 
 // src/icons/SlidersHorizontal.ts
-var import_vanjs_core1260 = __toESM(require("vanjs-core"), 1);
+
 var SlidersHorizontal = /* @__PURE__ */ __name((props = {}) => {
-  const { line } = import_vanjs_core1260.default.tags(svgNamespace);
+  const { line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "21", x2: "14", y1: "4", y2: "4" }),
@@ -19060,9 +17471,9 @@ var SlidersHorizontal = /* @__PURE__ */ __name((props = {}) => {
 }, "SlidersHorizontal");
 
 // src/icons/SlidersVertical.ts
-var import_vanjs_core1261 = __toESM(require("vanjs-core"), 1);
+
 var SlidersVertical = /* @__PURE__ */ __name((props = {}) => {
-  const { line } = import_vanjs_core1261.default.tags(svgNamespace);
+  const { line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "4", x2: "4", y1: "21", y2: "14" }),
@@ -19078,9 +17489,9 @@ var SlidersVertical = /* @__PURE__ */ __name((props = {}) => {
 }, "SlidersVertical");
 
 // src/icons/SmartphoneCharging.ts
-var import_vanjs_core1262 = __toESM(require("vanjs-core"), 1);
+
 var SmartphoneCharging = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1262.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "14", height: "20", "x": "5", "y": "2", rx: "2", ry: "2" }),
@@ -19089,9 +17500,9 @@ var SmartphoneCharging = /* @__PURE__ */ __name((props = {}) => {
 }, "SmartphoneCharging");
 
 // src/icons/SmartphoneNfc.ts
-var import_vanjs_core1263 = __toESM(require("vanjs-core"), 1);
+
 var SmartphoneNfc = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1263.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "7", height: "12", "x": "2", "y": "6", rx: "1" }),
@@ -19102,9 +17513,9 @@ var SmartphoneNfc = /* @__PURE__ */ __name((props = {}) => {
 }, "SmartphoneNfc");
 
 // src/icons/Smartphone.ts
-var import_vanjs_core1264 = __toESM(require("vanjs-core"), 1);
+
 var Smartphone = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1264.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "14", height: "20", "x": "5", "y": "2", rx: "2", ry: "2" }),
@@ -19113,9 +17524,9 @@ var Smartphone = /* @__PURE__ */ __name((props = {}) => {
 }, "Smartphone");
 
 // src/icons/SmilePlus.ts
-var import_vanjs_core1265 = __toESM(require("vanjs-core"), 1);
+
 var SmilePlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core1265.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M22 11v1a10 10 0 1 1-9-10" }),
@@ -19128,9 +17539,9 @@ var SmilePlus = /* @__PURE__ */ __name((props = {}) => {
 }, "SmilePlus");
 
 // src/icons/Smile.ts
-var import_vanjs_core1266 = __toESM(require("vanjs-core"), 1);
+
 var Smile = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path, line } = import_vanjs_core1266.default.tags(svgNamespace);
+  const { circle, path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -19141,9 +17552,9 @@ var Smile = /* @__PURE__ */ __name((props = {}) => {
 }, "Smile");
 
 // src/icons/Snail.ts
-var import_vanjs_core1267 = __toESM(require("vanjs-core"), 1);
+
 var Snail = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1267.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 13a6 6 0 1 0 12 0 4 4 0 1 0-8 0 2 2 0 0 0 4 0" }),
@@ -19155,9 +17566,9 @@ var Snail = /* @__PURE__ */ __name((props = {}) => {
 }, "Snail");
 
 // src/icons/Snowflake.ts
-var import_vanjs_core1268 = __toESM(require("vanjs-core"), 1);
+
 var Snowflake = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1268.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m10 20-1.25-2.5L6 18" }),
@@ -19176,9 +17587,9 @@ var Snowflake = /* @__PURE__ */ __name((props = {}) => {
 }, "Snowflake");
 
 // src/icons/Sofa.ts
-var import_vanjs_core1269 = __toESM(require("vanjs-core"), 1);
+
 var Sofa = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1269.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3" }),
@@ -19192,9 +17603,9 @@ var Sofa = /* @__PURE__ */ __name((props = {}) => {
 }, "Sofa");
 
 // src/icons/Soup.ts
-var import_vanjs_core1270 = __toESM(require("vanjs-core"), 1);
+
 var Soup = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1270.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z" }),
@@ -19213,9 +17624,9 @@ var Soup = /* @__PURE__ */ __name((props = {}) => {
 }, "Soup");
 
 // src/icons/Space.ts
-var import_vanjs_core1271 = __toESM(require("vanjs-core"), 1);
+
 var Space = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1271.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M22 17v1c0 .5-.5 1-1 1H3c-.5 0-1-.5-1-1v-1" })
@@ -19223,9 +17634,9 @@ var Space = /* @__PURE__ */ __name((props = {}) => {
 }, "Space");
 
 // src/icons/Spade.ts
-var import_vanjs_core1272 = __toESM(require("vanjs-core"), 1);
+
 var Spade = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1272.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -19236,9 +17647,9 @@ var Spade = /* @__PURE__ */ __name((props = {}) => {
 }, "Spade");
 
 // src/icons/Sparkle.ts
-var import_vanjs_core1273 = __toESM(require("vanjs-core"), 1);
+
 var Sparkle = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1273.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -19248,9 +17659,9 @@ var Sparkle = /* @__PURE__ */ __name((props = {}) => {
 }, "Sparkle");
 
 // src/icons/Sparkles.ts
-var import_vanjs_core1274 = __toESM(require("vanjs-core"), 1);
+
 var Sparkles = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1274.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -19264,9 +17675,9 @@ var Sparkles = /* @__PURE__ */ __name((props = {}) => {
 }, "Sparkles");
 
 // src/icons/Speaker.ts
-var import_vanjs_core1275 = __toESM(require("vanjs-core"), 1);
+
 var Speaker = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path, circle } = import_vanjs_core1275.default.tags(svgNamespace);
+  const { rect, path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "16", height: "20", "x": "4", "y": "2", rx: "2" }),
@@ -19277,9 +17688,9 @@ var Speaker = /* @__PURE__ */ __name((props = {}) => {
 }, "Speaker");
 
 // src/icons/Speech.ts
-var import_vanjs_core1276 = __toESM(require("vanjs-core"), 1);
+
 var Speech = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1276.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -19291,9 +17702,9 @@ var Speech = /* @__PURE__ */ __name((props = {}) => {
 }, "Speech");
 
 // src/icons/SpellCheck2.ts
-var import_vanjs_core1277 = __toESM(require("vanjs-core"), 1);
+
 var SpellCheck2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1277.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m6 16 6-12 6 12" }),
@@ -19305,9 +17716,9 @@ var SpellCheck2 = /* @__PURE__ */ __name((props = {}) => {
 }, "SpellCheck2");
 
 // src/icons/SpellCheck.ts
-var import_vanjs_core1278 = __toESM(require("vanjs-core"), 1);
+
 var SpellCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1278.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m6 16 6-12 6 12" }),
@@ -19317,9 +17728,9 @@ var SpellCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "SpellCheck");
 
 // src/icons/Spline.ts
-var import_vanjs_core1279 = __toESM(require("vanjs-core"), 1);
+
 var Spline = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1279.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "19", cy: "5", "r": "2" }),
@@ -19329,9 +17740,9 @@ var Spline = /* @__PURE__ */ __name((props = {}) => {
 }, "Spline");
 
 // src/icons/Split.ts
-var import_vanjs_core1280 = __toESM(require("vanjs-core"), 1);
+
 var Split = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1280.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 3h5v5" }),
@@ -19342,9 +17753,9 @@ var Split = /* @__PURE__ */ __name((props = {}) => {
 }, "Split");
 
 // src/icons/SprayCan.ts
-var import_vanjs_core1281 = __toESM(require("vanjs-core"), 1);
+
 var SprayCan = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1281.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 3h.01" }),
@@ -19361,9 +17772,9 @@ var SprayCan = /* @__PURE__ */ __name((props = {}) => {
 }, "SprayCan");
 
 // src/icons/Sprout.ts
-var import_vanjs_core1282 = __toESM(require("vanjs-core"), 1);
+
 var Sprout = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1282.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M7 20h10" }),
@@ -19378,9 +17789,9 @@ var Sprout = /* @__PURE__ */ __name((props = {}) => {
 }, "Sprout");
 
 // src/icons/SquareActivity.ts
-var import_vanjs_core1283 = __toESM(require("vanjs-core"), 1);
+
 var SquareActivity = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1283.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19389,9 +17800,9 @@ var SquareActivity = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareActivity");
 
 // src/icons/SquareArrowDownLeft.ts
-var import_vanjs_core1284 = __toESM(require("vanjs-core"), 1);
+
 var SquareArrowDownLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1284.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19401,9 +17812,9 @@ var SquareArrowDownLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareArrowDownLeft");
 
 // src/icons/SquareArrowDownRight.ts
-var import_vanjs_core1285 = __toESM(require("vanjs-core"), 1);
+
 var SquareArrowDownRight = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1285.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19413,9 +17824,9 @@ var SquareArrowDownRight = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareArrowDownRight");
 
 // src/icons/SquareArrowDown.ts
-var import_vanjs_core1286 = __toESM(require("vanjs-core"), 1);
+
 var SquareArrowDown = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1286.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19425,9 +17836,9 @@ var SquareArrowDown = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareArrowDown");
 
 // src/icons/SquareArrowLeft.ts
-var import_vanjs_core1287 = __toESM(require("vanjs-core"), 1);
+
 var SquareArrowLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1287.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19437,9 +17848,9 @@ var SquareArrowLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareArrowLeft");
 
 // src/icons/SquareArrowOutDownLeft.ts
-var import_vanjs_core1288 = __toESM(require("vanjs-core"), 1);
+
 var SquareArrowOutDownLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1288.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M13 21h6a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6" }),
@@ -19449,9 +17860,9 @@ var SquareArrowOutDownLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareArrowOutDownLeft");
 
 // src/icons/SquareArrowOutDownRight.ts
-var import_vanjs_core1289 = __toESM(require("vanjs-core"), 1);
+
 var SquareArrowOutDownRight = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1289.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 11V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6" }),
@@ -19461,9 +17872,9 @@ var SquareArrowOutDownRight = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareArrowOutDownRight");
 
 // src/icons/SquareArrowOutUpLeft.ts
-var import_vanjs_core1290 = __toESM(require("vanjs-core"), 1);
+
 var SquareArrowOutUpLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1290.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M13 3h6a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6" }),
@@ -19473,9 +17884,9 @@ var SquareArrowOutUpLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareArrowOutUpLeft");
 
 // src/icons/SquareArrowOutUpRight.ts
-var import_vanjs_core1291 = __toESM(require("vanjs-core"), 1);
+
 var SquareArrowOutUpRight = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1291.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6" }),
@@ -19485,9 +17896,9 @@ var SquareArrowOutUpRight = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareArrowOutUpRight");
 
 // src/icons/SquareArrowRight.ts
-var import_vanjs_core1292 = __toESM(require("vanjs-core"), 1);
+
 var SquareArrowRight = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1292.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19497,9 +17908,9 @@ var SquareArrowRight = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareArrowRight");
 
 // src/icons/SquareArrowUpLeft.ts
-var import_vanjs_core1293 = __toESM(require("vanjs-core"), 1);
+
 var SquareArrowUpLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1293.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19509,9 +17920,9 @@ var SquareArrowUpLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareArrowUpLeft");
 
 // src/icons/SquareArrowUpRight.ts
-var import_vanjs_core1294 = __toESM(require("vanjs-core"), 1);
+
 var SquareArrowUpRight = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1294.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19521,9 +17932,9 @@ var SquareArrowUpRight = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareArrowUpRight");
 
 // src/icons/SquareArrowUp.ts
-var import_vanjs_core1295 = __toESM(require("vanjs-core"), 1);
+
 var SquareArrowUp = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1295.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19533,9 +17944,9 @@ var SquareArrowUp = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareArrowUp");
 
 // src/icons/SquareAsterisk.ts
-var import_vanjs_core1296 = __toESM(require("vanjs-core"), 1);
+
 var SquareAsterisk = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1296.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19546,9 +17957,9 @@ var SquareAsterisk = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareAsterisk");
 
 // src/icons/SquareBottomDashedScissors.ts
-var import_vanjs_core1297 = __toESM(require("vanjs-core"), 1);
+
 var SquareBottomDashedScissors = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1297.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -19565,9 +17976,9 @@ var SquareBottomDashedScissors = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareBottomDashedScissors");
 
 // src/icons/SquareChartGantt.ts
-var import_vanjs_core1298 = __toESM(require("vanjs-core"), 1);
+
 var SquareChartGantt = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1298.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19578,9 +17989,9 @@ var SquareChartGantt = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareChartGantt");
 
 // src/icons/SquareCheckBig.ts
-var import_vanjs_core1299 = __toESM(require("vanjs-core"), 1);
+
 var SquareCheckBig = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1299.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -19591,9 +18002,9 @@ var SquareCheckBig = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareCheckBig");
 
 // src/icons/SquareCheck.ts
-var import_vanjs_core1300 = __toESM(require("vanjs-core"), 1);
+
 var SquareCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1300.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19602,9 +18013,9 @@ var SquareCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareCheck");
 
 // src/icons/SquareChevronDown.ts
-var import_vanjs_core1301 = __toESM(require("vanjs-core"), 1);
+
 var SquareChevronDown = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1301.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19613,9 +18024,9 @@ var SquareChevronDown = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareChevronDown");
 
 // src/icons/SquareChevronLeft.ts
-var import_vanjs_core1302 = __toESM(require("vanjs-core"), 1);
+
 var SquareChevronLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1302.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19624,9 +18035,9 @@ var SquareChevronLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareChevronLeft");
 
 // src/icons/SquareChevronRight.ts
-var import_vanjs_core1303 = __toESM(require("vanjs-core"), 1);
+
 var SquareChevronRight = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1303.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19635,9 +18046,9 @@ var SquareChevronRight = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareChevronRight");
 
 // src/icons/SquareChevronUp.ts
-var import_vanjs_core1304 = __toESM(require("vanjs-core"), 1);
+
 var SquareChevronUp = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1304.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19646,9 +18057,9 @@ var SquareChevronUp = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareChevronUp");
 
 // src/icons/SquareCode.ts
-var import_vanjs_core1305 = __toESM(require("vanjs-core"), 1);
+
 var SquareCode = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1305.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 9.5 8 12l2 2.5" }),
@@ -19658,9 +18069,9 @@ var SquareCode = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareCode");
 
 // src/icons/SquareDashedBottomCode.ts
-var import_vanjs_core1306 = __toESM(require("vanjs-core"), 1);
+
 var SquareDashedBottomCode = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1306.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 9.5 8 12l2 2.5" }),
@@ -19674,9 +18085,9 @@ var SquareDashedBottomCode = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareDashedBottomCode");
 
 // src/icons/SquareDashedBottom.ts
-var import_vanjs_core1307 = __toESM(require("vanjs-core"), 1);
+
 var SquareDashedBottom = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1307.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -19688,9 +18099,9 @@ var SquareDashedBottom = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareDashedBottom");
 
 // src/icons/SquareDashedKanban.ts
-var import_vanjs_core1308 = __toESM(require("vanjs-core"), 1);
+
 var SquareDashedKanban = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1308.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 7v7" }),
@@ -19712,9 +18123,9 @@ var SquareDashedKanban = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareDashedKanban");
 
 // src/icons/SquareDashedMousePointer.ts
-var import_vanjs_core1309 = __toESM(require("vanjs-core"), 1);
+
 var SquareDashedMousePointer = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1309.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -19733,9 +18144,9 @@ var SquareDashedMousePointer = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareDashedMousePointer");
 
 // src/icons/SquareDashed.ts
-var import_vanjs_core1310 = __toESM(require("vanjs-core"), 1);
+
 var SquareDashed = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1310.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M5 3a2 2 0 0 0-2 2" }),
@@ -19754,9 +18165,9 @@ var SquareDashed = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareDashed");
 
 // src/icons/SquareDivide.ts
-var import_vanjs_core1311 = __toESM(require("vanjs-core"), 1);
+
 var SquareDivide = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, line } = import_vanjs_core1311.default.tags(svgNamespace);
+  const { rect, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2", ry: "2" }),
@@ -19767,9 +18178,9 @@ var SquareDivide = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareDivide");
 
 // src/icons/SquareDot.ts
-var import_vanjs_core1312 = __toESM(require("vanjs-core"), 1);
+
 var SquareDot = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, circle } = import_vanjs_core1312.default.tags(svgNamespace);
+  const { rect, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19778,9 +18189,9 @@ var SquareDot = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareDot");
 
 // src/icons/SquareEqual.ts
-var import_vanjs_core1313 = __toESM(require("vanjs-core"), 1);
+
 var SquareEqual = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1313.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19790,9 +18201,9 @@ var SquareEqual = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareEqual");
 
 // src/icons/SquareFunction.ts
-var import_vanjs_core1314 = __toESM(require("vanjs-core"), 1);
+
 var SquareFunction = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1314.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2", ry: "2" }),
@@ -19802,9 +18213,9 @@ var SquareFunction = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareFunction");
 
 // src/icons/SquareKanban.ts
-var import_vanjs_core1315 = __toESM(require("vanjs-core"), 1);
+
 var SquareKanban = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1315.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19815,9 +18226,9 @@ var SquareKanban = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareKanban");
 
 // src/icons/SquareLibrary.ts
-var import_vanjs_core1316 = __toESM(require("vanjs-core"), 1);
+
 var SquareLibrary = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1316.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19828,9 +18239,9 @@ var SquareLibrary = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareLibrary");
 
 // src/icons/SquareM.ts
-var import_vanjs_core1317 = __toESM(require("vanjs-core"), 1);
+
 var SquareM = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1317.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19839,9 +18250,9 @@ var SquareM = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareM");
 
 // src/icons/SquareMenu.ts
-var import_vanjs_core1318 = __toESM(require("vanjs-core"), 1);
+
 var SquareMenu = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1318.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19852,9 +18263,9 @@ var SquareMenu = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareMenu");
 
 // src/icons/SquareMinus.ts
-var import_vanjs_core1319 = __toESM(require("vanjs-core"), 1);
+
 var SquareMinus = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1319.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19863,9 +18274,9 @@ var SquareMinus = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareMinus");
 
 // src/icons/SquareMousePointer.ts
-var import_vanjs_core1320 = __toESM(require("vanjs-core"), 1);
+
 var SquareMousePointer = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1320.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -19876,9 +18287,9 @@ var SquareMousePointer = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareMousePointer");
 
 // src/icons/SquareParkingOff.ts
-var import_vanjs_core1321 = __toESM(require("vanjs-core"), 1);
+
 var SquareParkingOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1321.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -19892,9 +18303,9 @@ var SquareParkingOff = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareParkingOff");
 
 // src/icons/SquareParking.ts
-var import_vanjs_core1322 = __toESM(require("vanjs-core"), 1);
+
 var SquareParking = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1322.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19903,9 +18314,9 @@ var SquareParking = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareParking");
 
 // src/icons/SquarePen.ts
-var import_vanjs_core1323 = __toESM(require("vanjs-core"), 1);
+
 var SquarePen = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1323.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" }),
@@ -19916,9 +18327,9 @@ var SquarePen = /* @__PURE__ */ __name((props = {}) => {
 }, "SquarePen");
 
 // src/icons/SquarePercent.ts
-var import_vanjs_core1324 = __toESM(require("vanjs-core"), 1);
+
 var SquarePercent = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1324.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19929,9 +18340,9 @@ var SquarePercent = /* @__PURE__ */ __name((props = {}) => {
 }, "SquarePercent");
 
 // src/icons/SquarePi.ts
-var import_vanjs_core1325 = __toESM(require("vanjs-core"), 1);
+
 var SquarePi = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1325.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19942,9 +18353,9 @@ var SquarePi = /* @__PURE__ */ __name((props = {}) => {
 }, "SquarePi");
 
 // src/icons/SquarePilcrow.ts
-var import_vanjs_core1326 = __toESM(require("vanjs-core"), 1);
+
 var SquarePilcrow = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1326.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19955,9 +18366,9 @@ var SquarePilcrow = /* @__PURE__ */ __name((props = {}) => {
 }, "SquarePilcrow");
 
 // src/icons/SquarePlay.ts
-var import_vanjs_core1327 = __toESM(require("vanjs-core"), 1);
+
 var SquarePlay = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1327.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19966,9 +18377,9 @@ var SquarePlay = /* @__PURE__ */ __name((props = {}) => {
 }, "SquarePlay");
 
 // src/icons/SquarePlus.ts
-var import_vanjs_core1328 = __toESM(require("vanjs-core"), 1);
+
 var SquarePlus = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1328.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -19978,9 +18389,9 @@ var SquarePlus = /* @__PURE__ */ __name((props = {}) => {
 }, "SquarePlus");
 
 // src/icons/SquarePower.ts
-var import_vanjs_core1329 = __toESM(require("vanjs-core"), 1);
+
 var SquarePower = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1329.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 7v4" }),
@@ -19990,9 +18401,9 @@ var SquarePower = /* @__PURE__ */ __name((props = {}) => {
 }, "SquarePower");
 
 // src/icons/SquareRadical.ts
-var import_vanjs_core1330 = __toESM(require("vanjs-core"), 1);
+
 var SquareRadical = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1330.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M7 12h2l2 5 2-10h4" }),
@@ -20001,9 +18412,9 @@ var SquareRadical = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareRadical");
 
 // src/icons/SquareScissors.ts
-var import_vanjs_core1331 = __toESM(require("vanjs-core"), 1);
+
 var SquareScissors = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, circle, path } = import_vanjs_core1331.default.tags(svgNamespace);
+  const { rect, circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "20", height: "20", "x": "2", "y": "2", rx: "2" }),
@@ -20016,9 +18427,9 @@ var SquareScissors = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareScissors");
 
 // src/icons/SquareSigma.ts
-var import_vanjs_core1332 = __toESM(require("vanjs-core"), 1);
+
 var SquareSigma = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1332.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -20027,9 +18438,9 @@ var SquareSigma = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareSigma");
 
 // src/icons/SquareSlash.ts
-var import_vanjs_core1333 = __toESM(require("vanjs-core"), 1);
+
 var SquareSlash = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, line } = import_vanjs_core1333.default.tags(svgNamespace);
+  const { rect, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -20038,9 +18449,9 @@ var SquareSlash = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareSlash");
 
 // src/icons/SquareSplitHorizontal.ts
-var import_vanjs_core1334 = __toESM(require("vanjs-core"), 1);
+
 var SquareSplitHorizontal = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core1334.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 19H5c-1 0-2-1-2-2V7c0-1 1-2 2-2h3" }),
@@ -20050,9 +18461,9 @@ var SquareSplitHorizontal = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareSplitHorizontal");
 
 // src/icons/SquareSplitVertical.ts
-var import_vanjs_core1335 = __toESM(require("vanjs-core"), 1);
+
 var SquareSplitVertical = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core1335.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M5 8V5c0-1 1-2 2-2h10c1 0 2 1 2 2v3" }),
@@ -20062,9 +18473,9 @@ var SquareSplitVertical = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareSplitVertical");
 
 // src/icons/SquareSquare.ts
-var import_vanjs_core1336 = __toESM(require("vanjs-core"), 1);
+
 var SquareSquare = /* @__PURE__ */ __name((props = {}) => {
-  const { rect } = import_vanjs_core1336.default.tags(svgNamespace);
+  const { rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ "x": "3", "y": "3", width: "18", height: "18", rx: "2" }),
@@ -20073,9 +18484,9 @@ var SquareSquare = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareSquare");
 
 // src/icons/SquareStack.ts
-var import_vanjs_core1337 = __toESM(require("vanjs-core"), 1);
+
 var SquareStack = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1337.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 10c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2" }),
@@ -20085,9 +18496,9 @@ var SquareStack = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareStack");
 
 // src/icons/SquareTerminal.ts
-var import_vanjs_core1338 = __toESM(require("vanjs-core"), 1);
+
 var SquareTerminal = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1338.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m7 11 2-2-2-2" }),
@@ -20097,9 +18508,9 @@ var SquareTerminal = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareTerminal");
 
 // src/icons/SquareUserRound.ts
-var import_vanjs_core1339 = __toESM(require("vanjs-core"), 1);
+
 var SquareUserRound = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle, rect } = import_vanjs_core1339.default.tags(svgNamespace);
+  const { path, circle, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M18 21a6 6 0 0 0-12 0" }),
@@ -20109,9 +18520,9 @@ var SquareUserRound = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareUserRound");
 
 // src/icons/SquareUser.ts
-var import_vanjs_core1340 = __toESM(require("vanjs-core"), 1);
+
 var SquareUser = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, circle, path } = import_vanjs_core1340.default.tags(svgNamespace);
+  const { rect, circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -20121,9 +18532,9 @@ var SquareUser = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareUser");
 
 // src/icons/SquareX.ts
-var import_vanjs_core1341 = __toESM(require("vanjs-core"), 1);
+
 var SquareX = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1341.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2", ry: "2" }),
@@ -20133,9 +18544,9 @@ var SquareX = /* @__PURE__ */ __name((props = {}) => {
 }, "SquareX");
 
 // src/icons/Square.ts
-var import_vanjs_core1342 = __toESM(require("vanjs-core"), 1);
+
 var Square = /* @__PURE__ */ __name((props = {}) => {
-  const { rect } = import_vanjs_core1342.default.tags(svgNamespace);
+  const { rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" })
@@ -20143,9 +18554,9 @@ var Square = /* @__PURE__ */ __name((props = {}) => {
 }, "Square");
 
 // src/icons/Squircle.ts
-var import_vanjs_core1343 = __toESM(require("vanjs-core"), 1);
+
 var Squircle = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1343.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 3c7.2 0 9 1.8 9 9s-1.8 9-9 9-9-1.8-9-9 1.8-9 9-9" })
@@ -20153,9 +18564,9 @@ var Squircle = /* @__PURE__ */ __name((props = {}) => {
 }, "Squircle");
 
 // src/icons/Squirrel.ts
-var import_vanjs_core1344 = __toESM(require("vanjs-core"), 1);
+
 var Squirrel = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1344.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15.236 22a3 3 0 0 0-2.2-5" }),
@@ -20168,9 +18579,9 @@ var Squirrel = /* @__PURE__ */ __name((props = {}) => {
 }, "Squirrel");
 
 // src/icons/Stamp.ts
-var import_vanjs_core1345 = __toESM(require("vanjs-core"), 1);
+
 var Stamp = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1345.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M5 22h14" }),
@@ -20184,9 +18595,9 @@ var Stamp = /* @__PURE__ */ __name((props = {}) => {
 }, "Stamp");
 
 // src/icons/StarHalf.ts
-var import_vanjs_core1346 = __toESM(require("vanjs-core"), 1);
+
 var StarHalf = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1346.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -20196,9 +18607,9 @@ var StarHalf = /* @__PURE__ */ __name((props = {}) => {
 }, "StarHalf");
 
 // src/icons/StarOff.ts
-var import_vanjs_core1347 = __toESM(require("vanjs-core"), 1);
+
 var StarOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core1347.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -20210,9 +18621,9 @@ var StarOff = /* @__PURE__ */ __name((props = {}) => {
 }, "StarOff");
 
 // src/icons/Star.ts
-var import_vanjs_core1348 = __toESM(require("vanjs-core"), 1);
+
 var Star = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1348.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -20222,9 +18633,9 @@ var Star = /* @__PURE__ */ __name((props = {}) => {
 }, "Star");
 
 // src/icons/StepBack.ts
-var import_vanjs_core1349 = __toESM(require("vanjs-core"), 1);
+
 var StepBack = /* @__PURE__ */ __name((props = {}) => {
-  const { line, polygon } = import_vanjs_core1349.default.tags(svgNamespace);
+  const { line, polygon } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "18", x2: "18", y1: "20", y2: "4" }),
@@ -20233,9 +18644,9 @@ var StepBack = /* @__PURE__ */ __name((props = {}) => {
 }, "StepBack");
 
 // src/icons/StepForward.ts
-var import_vanjs_core1350 = __toESM(require("vanjs-core"), 1);
+
 var StepForward = /* @__PURE__ */ __name((props = {}) => {
-  const { line, polygon } = import_vanjs_core1350.default.tags(svgNamespace);
+  const { line, polygon } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "6", x2: "6", y1: "4", y2: "20" }),
@@ -20244,9 +18655,9 @@ var StepForward = /* @__PURE__ */ __name((props = {}) => {
 }, "StepForward");
 
 // src/icons/Stethoscope.ts
-var import_vanjs_core1351 = __toESM(require("vanjs-core"), 1);
+
 var Stethoscope = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1351.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11 2v2" }),
@@ -20258,9 +18669,9 @@ var Stethoscope = /* @__PURE__ */ __name((props = {}) => {
 }, "Stethoscope");
 
 // src/icons/Sticker.ts
-var import_vanjs_core1352 = __toESM(require("vanjs-core"), 1);
+
 var Sticker = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1352.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -20274,9 +18685,9 @@ var Sticker = /* @__PURE__ */ __name((props = {}) => {
 }, "Sticker");
 
 // src/icons/StickyNote.ts
-var import_vanjs_core1353 = __toESM(require("vanjs-core"), 1);
+
 var StickyNote = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1353.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8Z" }),
@@ -20285,9 +18696,9 @@ var StickyNote = /* @__PURE__ */ __name((props = {}) => {
 }, "StickyNote");
 
 // src/icons/Store.ts
-var import_vanjs_core1354 = __toESM(require("vanjs-core"), 1);
+
 var Store = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1354.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -20303,9 +18714,9 @@ var Store = /* @__PURE__ */ __name((props = {}) => {
 }, "Store");
 
 // src/icons/StretchHorizontal.ts
-var import_vanjs_core1355 = __toESM(require("vanjs-core"), 1);
+
 var StretchHorizontal = /* @__PURE__ */ __name((props = {}) => {
-  const { rect } = import_vanjs_core1355.default.tags(svgNamespace);
+  const { rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "20", height: "6", "x": "2", "y": "4", rx: "2" }),
@@ -20314,9 +18725,9 @@ var StretchHorizontal = /* @__PURE__ */ __name((props = {}) => {
 }, "StretchHorizontal");
 
 // src/icons/StretchVertical.ts
-var import_vanjs_core1356 = __toESM(require("vanjs-core"), 1);
+
 var StretchVertical = /* @__PURE__ */ __name((props = {}) => {
-  const { rect } = import_vanjs_core1356.default.tags(svgNamespace);
+  const { rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "6", height: "20", "x": "4", "y": "2", rx: "2" }),
@@ -20325,9 +18736,9 @@ var StretchVertical = /* @__PURE__ */ __name((props = {}) => {
 }, "StretchVertical");
 
 // src/icons/Strikethrough.ts
-var import_vanjs_core1357 = __toESM(require("vanjs-core"), 1);
+
 var Strikethrough = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core1357.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 4H9a3 3 0 0 0-2.83 4" }),
@@ -20337,9 +18748,9 @@ var Strikethrough = /* @__PURE__ */ __name((props = {}) => {
 }, "Strikethrough");
 
 // src/icons/Subscript.ts
-var import_vanjs_core1358 = __toESM(require("vanjs-core"), 1);
+
 var Subscript = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1358.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m4 5 8 8" }),
@@ -20351,9 +18762,9 @@ var Subscript = /* @__PURE__ */ __name((props = {}) => {
 }, "Subscript");
 
 // src/icons/SunDim.ts
-var import_vanjs_core1359 = __toESM(require("vanjs-core"), 1);
+
 var SunDim = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1359.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "4" }),
@@ -20369,9 +18780,9 @@ var SunDim = /* @__PURE__ */ __name((props = {}) => {
 }, "SunDim");
 
 // src/icons/SunMedium.ts
-var import_vanjs_core1360 = __toESM(require("vanjs-core"), 1);
+
 var SunMedium = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1360.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "4" }),
@@ -20387,9 +18798,9 @@ var SunMedium = /* @__PURE__ */ __name((props = {}) => {
 }, "SunMedium");
 
 // src/icons/SunMoon.ts
-var import_vanjs_core1361 = __toESM(require("vanjs-core"), 1);
+
 var SunMoon = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1361.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 8a2.83 2.83 0 0 0 4 4 4 4 0 1 1-4-4" }),
@@ -20405,9 +18816,9 @@ var SunMoon = /* @__PURE__ */ __name((props = {}) => {
 }, "SunMoon");
 
 // src/icons/SunSnow.ts
-var import_vanjs_core1362 = __toESM(require("vanjs-core"), 1);
+
 var SunSnow = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1362.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 21v-1" }),
@@ -20425,9 +18836,9 @@ var SunSnow = /* @__PURE__ */ __name((props = {}) => {
 }, "SunSnow");
 
 // src/icons/Sun.ts
-var import_vanjs_core1363 = __toESM(require("vanjs-core"), 1);
+
 var Sun = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1363.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "4" }),
@@ -20443,9 +18854,9 @@ var Sun = /* @__PURE__ */ __name((props = {}) => {
 }, "Sun");
 
 // src/icons/Sunrise.ts
-var import_vanjs_core1364 = __toESM(require("vanjs-core"), 1);
+
 var Sunrise = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1364.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 2v8" }),
@@ -20460,9 +18871,9 @@ var Sunrise = /* @__PURE__ */ __name((props = {}) => {
 }, "Sunrise");
 
 // src/icons/Sunset.ts
-var import_vanjs_core1365 = __toESM(require("vanjs-core"), 1);
+
 var Sunset = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1365.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 10V2" }),
@@ -20477,9 +18888,9 @@ var Sunset = /* @__PURE__ */ __name((props = {}) => {
 }, "Sunset");
 
 // src/icons/Superscript.ts
-var import_vanjs_core1366 = __toESM(require("vanjs-core"), 1);
+
 var Superscript = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1366.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m4 19 8-8" }),
@@ -20491,9 +18902,9 @@ var Superscript = /* @__PURE__ */ __name((props = {}) => {
 }, "Superscript");
 
 // src/icons/SwatchBook.ts
-var import_vanjs_core1367 = __toESM(require("vanjs-core"), 1);
+
 var SwatchBook = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1367.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11 17a4 4 0 0 1-8 0V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2Z" }),
@@ -20506,9 +18917,9 @@ var SwatchBook = /* @__PURE__ */ __name((props = {}) => {
 }, "SwatchBook");
 
 // src/icons/SwissFranc.ts
-var import_vanjs_core1368 = __toESM(require("vanjs-core"), 1);
+
 var SwissFranc = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1368.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 21V3h8" }),
@@ -20518,9 +18929,9 @@ var SwissFranc = /* @__PURE__ */ __name((props = {}) => {
 }, "SwissFranc");
 
 // src/icons/SwitchCamera.ts
-var import_vanjs_core1369 = __toESM(require("vanjs-core"), 1);
+
 var SwitchCamera = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1369.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11 19H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5" }),
@@ -20532,9 +18943,9 @@ var SwitchCamera = /* @__PURE__ */ __name((props = {}) => {
 }, "SwitchCamera");
 
 // src/icons/Sword.ts
-var import_vanjs_core1370 = __toESM(require("vanjs-core"), 1);
+
 var Sword = /* @__PURE__ */ __name((props = {}) => {
-  const { polyline, line } = import_vanjs_core1370.default.tags(svgNamespace);
+  const { polyline, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polyline({ points: "14.5 17.5 3 6 3 3 6 3 17.5 14.5" }),
@@ -20545,9 +18956,9 @@ var Sword = /* @__PURE__ */ __name((props = {}) => {
 }, "Sword");
 
 // src/icons/Swords.ts
-var import_vanjs_core1371 = __toESM(require("vanjs-core"), 1);
+
 var Swords = /* @__PURE__ */ __name((props = {}) => {
-  const { polyline, line } = import_vanjs_core1371.default.tags(svgNamespace);
+  const { polyline, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polyline({ points: "14.5 17.5 3 6 3 3 6 3 17.5 14.5" }),
@@ -20562,9 +18973,9 @@ var Swords = /* @__PURE__ */ __name((props = {}) => {
 }, "Swords");
 
 // src/icons/Syringe.ts
-var import_vanjs_core1372 = __toESM(require("vanjs-core"), 1);
+
 var Syringe = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1372.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m18 2 4 4" }),
@@ -20579,9 +18990,9 @@ var Syringe = /* @__PURE__ */ __name((props = {}) => {
 }, "Syringe");
 
 // src/icons/Table2.ts
-var import_vanjs_core1373 = __toESM(require("vanjs-core"), 1);
+
 var Table2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1373.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -20591,9 +19002,9 @@ var Table2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Table2");
 
 // src/icons/TableCellsMerge.ts
-var import_vanjs_core1374 = __toESM(require("vanjs-core"), 1);
+
 var TableCellsMerge = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1374.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 21v-6" }),
@@ -20605,9 +19016,9 @@ var TableCellsMerge = /* @__PURE__ */ __name((props = {}) => {
 }, "TableCellsMerge");
 
 // src/icons/TableCellsSplit.ts
-var import_vanjs_core1375 = __toESM(require("vanjs-core"), 1);
+
 var TableCellsSplit = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1375.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 15V9" }),
@@ -20618,9 +19029,9 @@ var TableCellsSplit = /* @__PURE__ */ __name((props = {}) => {
 }, "TableCellsSplit");
 
 // src/icons/TableColumnsSplit.ts
-var import_vanjs_core1376 = __toESM(require("vanjs-core"), 1);
+
 var TableColumnsSplit = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1376.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M14 14v2" }),
@@ -20638,9 +19049,9 @@ var TableColumnsSplit = /* @__PURE__ */ __name((props = {}) => {
 }, "TableColumnsSplit");
 
 // src/icons/TableOfContents.ts
-var import_vanjs_core1377 = __toESM(require("vanjs-core"), 1);
+
 var TableOfContents = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1377.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 12H3" }),
@@ -20653,9 +19064,9 @@ var TableOfContents = /* @__PURE__ */ __name((props = {}) => {
 }, "TableOfContents");
 
 // src/icons/TableProperties.ts
-var import_vanjs_core1378 = __toESM(require("vanjs-core"), 1);
+
 var TableProperties = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1378.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 3v18" }),
@@ -20666,9 +19077,9 @@ var TableProperties = /* @__PURE__ */ __name((props = {}) => {
 }, "TableProperties");
 
 // src/icons/TableRowsSplit.ts
-var import_vanjs_core1379 = __toESM(require("vanjs-core"), 1);
+
 var TableRowsSplit = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1379.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M14 10h2" }),
@@ -20686,9 +19097,9 @@ var TableRowsSplit = /* @__PURE__ */ __name((props = {}) => {
 }, "TableRowsSplit");
 
 // src/icons/Table.ts
-var import_vanjs_core1380 = __toESM(require("vanjs-core"), 1);
+
 var Table = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1380.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 3v18" }),
@@ -20699,9 +19110,9 @@ var Table = /* @__PURE__ */ __name((props = {}) => {
 }, "Table");
 
 // src/icons/TabletSmartphone.ts
-var import_vanjs_core1381 = __toESM(require("vanjs-core"), 1);
+
 var TabletSmartphone = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1381.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "10", height: "14", "x": "3", "y": "8", rx: "2" }),
@@ -20711,9 +19122,9 @@ var TabletSmartphone = /* @__PURE__ */ __name((props = {}) => {
 }, "TabletSmartphone");
 
 // src/icons/Tablet.ts
-var import_vanjs_core1382 = __toESM(require("vanjs-core"), 1);
+
 var Tablet = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, line } = import_vanjs_core1382.default.tags(svgNamespace);
+  const { rect, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "16", height: "20", "x": "4", "y": "2", rx: "2", ry: "2" }),
@@ -20722,9 +19133,9 @@ var Tablet = /* @__PURE__ */ __name((props = {}) => {
 }, "Tablet");
 
 // src/icons/Tablets.ts
-var import_vanjs_core1383 = __toESM(require("vanjs-core"), 1);
+
 var Tablets = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1383.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "7", cy: "7", "r": "5" }),
@@ -20735,9 +19146,9 @@ var Tablets = /* @__PURE__ */ __name((props = {}) => {
 }, "Tablets");
 
 // src/icons/Tag.ts
-var import_vanjs_core1384 = __toESM(require("vanjs-core"), 1);
+
 var Tag = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1384.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -20748,9 +19159,9 @@ var Tag = /* @__PURE__ */ __name((props = {}) => {
 }, "Tag");
 
 // src/icons/Tags.ts
-var import_vanjs_core1385 = __toESM(require("vanjs-core"), 1);
+
 var Tags = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1385.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m15 5 6.3 6.3a2.4 2.4 0 0 1 0 3.4L17 19" }),
@@ -20762,9 +19173,9 @@ var Tags = /* @__PURE__ */ __name((props = {}) => {
 }, "Tags");
 
 // src/icons/Tally1.ts
-var import_vanjs_core1386 = __toESM(require("vanjs-core"), 1);
+
 var Tally1 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1386.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 4v16" })
@@ -20772,9 +19183,9 @@ var Tally1 = /* @__PURE__ */ __name((props = {}) => {
 }, "Tally1");
 
 // src/icons/Tally2.ts
-var import_vanjs_core1387 = __toESM(require("vanjs-core"), 1);
+
 var Tally2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1387.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 4v16" }),
@@ -20783,9 +19194,9 @@ var Tally2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Tally2");
 
 // src/icons/Tally3.ts
-var import_vanjs_core1388 = __toESM(require("vanjs-core"), 1);
+
 var Tally3 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1388.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 4v16" }),
@@ -20795,9 +19206,9 @@ var Tally3 = /* @__PURE__ */ __name((props = {}) => {
 }, "Tally3");
 
 // src/icons/Tally4.ts
-var import_vanjs_core1389 = __toESM(require("vanjs-core"), 1);
+
 var Tally4 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1389.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 4v16" }),
@@ -20808,9 +19219,9 @@ var Tally4 = /* @__PURE__ */ __name((props = {}) => {
 }, "Tally4");
 
 // src/icons/Tally5.ts
-var import_vanjs_core1390 = __toESM(require("vanjs-core"), 1);
+
 var Tally5 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1390.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 4v16" }),
@@ -20822,9 +19233,9 @@ var Tally5 = /* @__PURE__ */ __name((props = {}) => {
 }, "Tally5");
 
 // src/icons/Tangent.ts
-var import_vanjs_core1391 = __toESM(require("vanjs-core"), 1);
+
 var Tangent = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1391.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "17", cy: "4", "r": "2" }),
@@ -20835,9 +19246,9 @@ var Tangent = /* @__PURE__ */ __name((props = {}) => {
 }, "Tangent");
 
 // src/icons/Target.ts
-var import_vanjs_core1392 = __toESM(require("vanjs-core"), 1);
+
 var Target = /* @__PURE__ */ __name((props = {}) => {
-  const { circle } = import_vanjs_core1392.default.tags(svgNamespace);
+  const { circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "10" }),
@@ -20847,9 +19258,9 @@ var Target = /* @__PURE__ */ __name((props = {}) => {
 }, "Target");
 
 // src/icons/Telescope.ts
-var import_vanjs_core1393 = __toESM(require("vanjs-core"), 1);
+
 var Telescope = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1393.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -20867,9 +19278,9 @@ var Telescope = /* @__PURE__ */ __name((props = {}) => {
 }, "Telescope");
 
 // src/icons/TentTree.ts
-var import_vanjs_core1394 = __toESM(require("vanjs-core"), 1);
+
 var TentTree = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1394.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "4", cy: "4", "r": "2" }),
@@ -20883,9 +19294,9 @@ var TentTree = /* @__PURE__ */ __name((props = {}) => {
 }, "TentTree");
 
 // src/icons/Tent.ts
-var import_vanjs_core1395 = __toESM(require("vanjs-core"), 1);
+
 var Tent = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1395.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3.5 21 14 3" }),
@@ -20896,9 +19307,9 @@ var Tent = /* @__PURE__ */ __name((props = {}) => {
 }, "Tent");
 
 // src/icons/Terminal.ts
-var import_vanjs_core1396 = __toESM(require("vanjs-core"), 1);
+
 var Terminal = /* @__PURE__ */ __name((props = {}) => {
-  const { polyline, line } = import_vanjs_core1396.default.tags(svgNamespace);
+  const { polyline, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polyline({ points: "4 17 10 11 4 5" }),
@@ -20907,9 +19318,9 @@ var Terminal = /* @__PURE__ */ __name((props = {}) => {
 }, "Terminal");
 
 // src/icons/TestTubeDiagonal.ts
-var import_vanjs_core1397 = __toESM(require("vanjs-core"), 1);
+
 var TestTubeDiagonal = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1397.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -20921,9 +19332,9 @@ var TestTubeDiagonal = /* @__PURE__ */ __name((props = {}) => {
 }, "TestTubeDiagonal");
 
 // src/icons/TestTube.ts
-var import_vanjs_core1398 = __toESM(require("vanjs-core"), 1);
+
 var TestTube = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1398.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -20935,9 +19346,9 @@ var TestTube = /* @__PURE__ */ __name((props = {}) => {
 }, "TestTube");
 
 // src/icons/TestTubes.ts
-var import_vanjs_core1399 = __toESM(require("vanjs-core"), 1);
+
 var TestTubes = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1399.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M9 2v17.5A2.5 2.5 0 0 1 6.5 22A2.5 2.5 0 0 1 4 19.5V2" }),
@@ -20950,9 +19361,9 @@ var TestTubes = /* @__PURE__ */ __name((props = {}) => {
 }, "TestTubes");
 
 // src/icons/TextCursorInput.ts
-var import_vanjs_core1400 = __toESM(require("vanjs-core"), 1);
+
 var TextCursorInput = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1400.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M5 4h1a3 3 0 0 1 3 3 3 3 0 0 1 3-3h1" }),
@@ -20964,9 +19375,9 @@ var TextCursorInput = /* @__PURE__ */ __name((props = {}) => {
 }, "TextCursorInput");
 
 // src/icons/TextCursor.ts
-var import_vanjs_core1401 = __toESM(require("vanjs-core"), 1);
+
 var TextCursor = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1401.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M17 22h-1a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4h1" }),
@@ -20976,9 +19387,9 @@ var TextCursor = /* @__PURE__ */ __name((props = {}) => {
 }, "TextCursor");
 
 // src/icons/TextQuote.ts
-var import_vanjs_core1402 = __toESM(require("vanjs-core"), 1);
+
 var TextQuote = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1402.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M17 6H3" }),
@@ -20989,9 +19400,9 @@ var TextQuote = /* @__PURE__ */ __name((props = {}) => {
 }, "TextQuote");
 
 // src/icons/TextSearch.ts
-var import_vanjs_core1403 = __toESM(require("vanjs-core"), 1);
+
 var TextSearch = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1403.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 6H3" }),
@@ -21003,9 +19414,9 @@ var TextSearch = /* @__PURE__ */ __name((props = {}) => {
 }, "TextSearch");
 
 // src/icons/TextSelect.ts
-var import_vanjs_core1404 = __toESM(require("vanjs-core"), 1);
+
 var TextSelect = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core1404.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M5 3a2 2 0 0 0-2 2" }),
@@ -21027,9 +19438,9 @@ var TextSelect = /* @__PURE__ */ __name((props = {}) => {
 }, "TextSelect");
 
 // src/icons/Text.ts
-var import_vanjs_core1405 = __toESM(require("vanjs-core"), 1);
+
 var Text = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1405.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M17 6.1H3" }),
@@ -21039,9 +19450,9 @@ var Text = /* @__PURE__ */ __name((props = {}) => {
 }, "Text");
 
 // src/icons/Theater.ts
-var import_vanjs_core1406 = __toESM(require("vanjs-core"), 1);
+
 var Theater = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1406.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 10s3-3 3-8" }),
@@ -21057,9 +19468,9 @@ var Theater = /* @__PURE__ */ __name((props = {}) => {
 }, "Theater");
 
 // src/icons/ThermometerSnowflake.ts
-var import_vanjs_core1407 = __toESM(require("vanjs-core"), 1);
+
 var ThermometerSnowflake = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1407.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m10 20-1.25-2.5L6 18" }),
@@ -21074,9 +19485,9 @@ var ThermometerSnowflake = /* @__PURE__ */ __name((props = {}) => {
 }, "ThermometerSnowflake");
 
 // src/icons/ThermometerSun.ts
-var import_vanjs_core1408 = __toESM(require("vanjs-core"), 1);
+
 var ThermometerSun = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1408.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 9a4 4 0 0 0-2 7.5" }),
@@ -21089,9 +19500,9 @@ var ThermometerSun = /* @__PURE__ */ __name((props = {}) => {
 }, "ThermometerSun");
 
 // src/icons/Thermometer.ts
-var import_vanjs_core1409 = __toESM(require("vanjs-core"), 1);
+
 var Thermometer = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1409.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z" })
@@ -21099,9 +19510,9 @@ var Thermometer = /* @__PURE__ */ __name((props = {}) => {
 }, "Thermometer");
 
 // src/icons/ThumbsDown.ts
-var import_vanjs_core1410 = __toESM(require("vanjs-core"), 1);
+
 var ThumbsDown = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1410.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M17 14V2" }),
@@ -21112,9 +19523,9 @@ var ThumbsDown = /* @__PURE__ */ __name((props = {}) => {
 }, "ThumbsDown");
 
 // src/icons/ThumbsUp.ts
-var import_vanjs_core1411 = __toESM(require("vanjs-core"), 1);
+
 var ThumbsUp = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1411.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M7 10v12" }),
@@ -21125,9 +19536,9 @@ var ThumbsUp = /* @__PURE__ */ __name((props = {}) => {
 }, "ThumbsUp");
 
 // src/icons/TicketCheck.ts
-var import_vanjs_core1412 = __toESM(require("vanjs-core"), 1);
+
 var TicketCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1412.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -21138,9 +19549,9 @@ var TicketCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "TicketCheck");
 
 // src/icons/TicketMinus.ts
-var import_vanjs_core1413 = __toESM(require("vanjs-core"), 1);
+
 var TicketMinus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1413.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -21151,9 +19562,9 @@ var TicketMinus = /* @__PURE__ */ __name((props = {}) => {
 }, "TicketMinus");
 
 // src/icons/TicketPercent.ts
-var import_vanjs_core1414 = __toESM(require("vanjs-core"), 1);
+
 var TicketPercent = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1414.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -21166,9 +19577,9 @@ var TicketPercent = /* @__PURE__ */ __name((props = {}) => {
 }, "TicketPercent");
 
 // src/icons/TicketPlus.ts
-var import_vanjs_core1415 = __toESM(require("vanjs-core"), 1);
+
 var TicketPlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1415.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -21180,9 +19591,9 @@ var TicketPlus = /* @__PURE__ */ __name((props = {}) => {
 }, "TicketPlus");
 
 // src/icons/TicketSlash.ts
-var import_vanjs_core1416 = __toESM(require("vanjs-core"), 1);
+
 var TicketSlash = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1416.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -21193,9 +19604,9 @@ var TicketSlash = /* @__PURE__ */ __name((props = {}) => {
 }, "TicketSlash");
 
 // src/icons/TicketX.ts
-var import_vanjs_core1417 = __toESM(require("vanjs-core"), 1);
+
 var TicketX = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1417.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -21207,9 +19618,9 @@ var TicketX = /* @__PURE__ */ __name((props = {}) => {
 }, "TicketX");
 
 // src/icons/Ticket.ts
-var import_vanjs_core1418 = __toESM(require("vanjs-core"), 1);
+
 var Ticket = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1418.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -21222,9 +19633,9 @@ var Ticket = /* @__PURE__ */ __name((props = {}) => {
 }, "Ticket");
 
 // src/icons/TicketsPlane.ts
-var import_vanjs_core1419 = __toESM(require("vanjs-core"), 1);
+
 var TicketsPlane = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1419.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10.5 17h1.227a2 2 0 0 0 1.345-.52L18 12" }),
@@ -21238,9 +19649,9 @@ var TicketsPlane = /* @__PURE__ */ __name((props = {}) => {
 }, "TicketsPlane");
 
 // src/icons/Tickets.ts
-var import_vanjs_core1420 = __toESM(require("vanjs-core"), 1);
+
 var Tickets = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1420.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m4.5 8 10.58-5.06a1 1 0 0 1 1.342.488L18.5 8" }),
@@ -21252,9 +19663,9 @@ var Tickets = /* @__PURE__ */ __name((props = {}) => {
 }, "Tickets");
 
 // src/icons/TimerOff.ts
-var import_vanjs_core1421 = __toESM(require("vanjs-core"), 1);
+
 var TimerOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1421.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 2h4" }),
@@ -21266,9 +19677,9 @@ var TimerOff = /* @__PURE__ */ __name((props = {}) => {
 }, "TimerOff");
 
 // src/icons/TimerReset.ts
-var import_vanjs_core1422 = __toESM(require("vanjs-core"), 1);
+
 var TimerReset = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1422.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 2h4" }),
@@ -21279,9 +19690,9 @@ var TimerReset = /* @__PURE__ */ __name((props = {}) => {
 }, "TimerReset");
 
 // src/icons/Timer.ts
-var import_vanjs_core1423 = __toESM(require("vanjs-core"), 1);
+
 var Timer = /* @__PURE__ */ __name((props = {}) => {
-  const { line, circle } = import_vanjs_core1423.default.tags(svgNamespace);
+  const { line, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "10", x2: "14", y1: "2", y2: "2" }),
@@ -21291,9 +19702,9 @@ var Timer = /* @__PURE__ */ __name((props = {}) => {
 }, "Timer");
 
 // src/icons/ToggleLeft.ts
-var import_vanjs_core1424 = __toESM(require("vanjs-core"), 1);
+
 var ToggleLeft = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, circle } = import_vanjs_core1424.default.tags(svgNamespace);
+  const { rect, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "20", height: "12", "x": "2", "y": "6", rx: "6", ry: "6" }),
@@ -21302,9 +19713,9 @@ var ToggleLeft = /* @__PURE__ */ __name((props = {}) => {
 }, "ToggleLeft");
 
 // src/icons/ToggleRight.ts
-var import_vanjs_core1425 = __toESM(require("vanjs-core"), 1);
+
 var ToggleRight = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, circle } = import_vanjs_core1425.default.tags(svgNamespace);
+  const { rect, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "20", height: "12", "x": "2", "y": "6", rx: "6", ry: "6" }),
@@ -21313,9 +19724,9 @@ var ToggleRight = /* @__PURE__ */ __name((props = {}) => {
 }, "ToggleRight");
 
 // src/icons/Toilet.ts
-var import_vanjs_core1426 = __toESM(require("vanjs-core"), 1);
+
 var Toilet = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1426.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -21326,9 +19737,9 @@ var Toilet = /* @__PURE__ */ __name((props = {}) => {
 }, "Toilet");
 
 // src/icons/Tornado.ts
-var import_vanjs_core1427 = __toESM(require("vanjs-core"), 1);
+
 var Tornado = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1427.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 4H3" }),
@@ -21340,9 +19751,9 @@ var Tornado = /* @__PURE__ */ __name((props = {}) => {
 }, "Tornado");
 
 // src/icons/Torus.ts
-var import_vanjs_core1428 = __toESM(require("vanjs-core"), 1);
+
 var Torus = /* @__PURE__ */ __name((props = {}) => {
-  const { ellipse } = import_vanjs_core1428.default.tags(svgNamespace);
+  const { ellipse } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     ellipse({ cx: "12", cy: "11", rx: "3", ry: "2" }),
@@ -21351,9 +19762,9 @@ var Torus = /* @__PURE__ */ __name((props = {}) => {
 }, "Torus");
 
 // src/icons/TouchpadOff.ts
-var import_vanjs_core1429 = __toESM(require("vanjs-core"), 1);
+
 var TouchpadOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1429.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M4 4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16" }),
@@ -21366,9 +19777,9 @@ var TouchpadOff = /* @__PURE__ */ __name((props = {}) => {
 }, "TouchpadOff");
 
 // src/icons/Touchpad.ts
-var import_vanjs_core1430 = __toESM(require("vanjs-core"), 1);
+
 var Touchpad = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1430.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "20", height: "16", "x": "2", "y": "4", rx: "2" }),
@@ -21378,9 +19789,9 @@ var Touchpad = /* @__PURE__ */ __name((props = {}) => {
 }, "Touchpad");
 
 // src/icons/TowerControl.ts
-var import_vanjs_core1431 = __toESM(require("vanjs-core"), 1);
+
 var TowerControl = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1431.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -21396,9 +19807,9 @@ var TowerControl = /* @__PURE__ */ __name((props = {}) => {
 }, "TowerControl");
 
 // src/icons/ToyBrick.ts
-var import_vanjs_core1432 = __toESM(require("vanjs-core"), 1);
+
 var ToyBrick = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1432.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "12", "x": "3", "y": "8", rx: "1" }),
@@ -21408,9 +19819,9 @@ var ToyBrick = /* @__PURE__ */ __name((props = {}) => {
 }, "ToyBrick");
 
 // src/icons/Tractor.ts
-var import_vanjs_core1433 = __toESM(require("vanjs-core"), 1);
+
 var Tractor = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1433.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -21428,9 +19839,9 @@ var Tractor = /* @__PURE__ */ __name((props = {}) => {
 }, "Tractor");
 
 // src/icons/TrafficCone.ts
-var import_vanjs_core1434 = __toESM(require("vanjs-core"), 1);
+
 var TrafficCone = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1434.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M9.3 6.2a4.55 4.55 0 0 0 5.4 0" }),
@@ -21445,9 +19856,9 @@ var TrafficCone = /* @__PURE__ */ __name((props = {}) => {
 }, "TrafficCone");
 
 // src/icons/TrainFrontTunnel.ts
-var import_vanjs_core1435 = __toESM(require("vanjs-core"), 1);
+
 var TrainFrontTunnel = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1435.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 22V12a10 10 0 1 1 20 0v10" }),
@@ -21461,9 +19872,9 @@ var TrainFrontTunnel = /* @__PURE__ */ __name((props = {}) => {
 }, "TrainFrontTunnel");
 
 // src/icons/TrainFront.ts
-var import_vanjs_core1436 = __toESM(require("vanjs-core"), 1);
+
 var TrainFront = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1436.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 3.1V7a4 4 0 0 0 8 0V3.1" }),
@@ -21478,9 +19889,9 @@ var TrainFront = /* @__PURE__ */ __name((props = {}) => {
 }, "TrainFront");
 
 // src/icons/TrainTrack.ts
-var import_vanjs_core1437 = __toESM(require("vanjs-core"), 1);
+
 var TrainTrack = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1437.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 17 17 2" }),
@@ -21494,9 +19905,9 @@ var TrainTrack = /* @__PURE__ */ __name((props = {}) => {
 }, "TrainTrack");
 
 // src/icons/TramFront.ts
-var import_vanjs_core1438 = __toESM(require("vanjs-core"), 1);
+
 var TramFront = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1438.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "16", height: "16", "x": "4", "y": "3", rx: "2" }),
@@ -21510,9 +19921,9 @@ var TramFront = /* @__PURE__ */ __name((props = {}) => {
 }, "TramFront");
 
 // src/icons/Transgender.ts
-var import_vanjs_core1439 = __toESM(require("vanjs-core"), 1);
+
 var Transgender = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1439.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 16v6" }),
@@ -21527,9 +19938,9 @@ var Transgender = /* @__PURE__ */ __name((props = {}) => {
 }, "Transgender");
 
 // src/icons/Trash2.ts
-var import_vanjs_core1440 = __toESM(require("vanjs-core"), 1);
+
 var Trash2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core1440.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 6h18" }),
@@ -21541,9 +19952,9 @@ var Trash2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Trash2");
 
 // src/icons/Trash.ts
-var import_vanjs_core1441 = __toESM(require("vanjs-core"), 1);
+
 var Trash = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1441.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 6h18" }),
@@ -21553,9 +19964,9 @@ var Trash = /* @__PURE__ */ __name((props = {}) => {
 }, "Trash");
 
 // src/icons/TreeDeciduous.ts
-var import_vanjs_core1442 = __toESM(require("vanjs-core"), 1);
+
 var TreeDeciduous = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1442.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -21566,9 +19977,9 @@ var TreeDeciduous = /* @__PURE__ */ __name((props = {}) => {
 }, "TreeDeciduous");
 
 // src/icons/TreePalm.ts
-var import_vanjs_core1443 = __toESM(require("vanjs-core"), 1);
+
 var TreePalm = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1443.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M13 8c0-2.76-2.46-5-5.5-5S2 5.24 2 8h2l1-1 1 1h4" }),
@@ -21583,9 +19994,9 @@ var TreePalm = /* @__PURE__ */ __name((props = {}) => {
 }, "TreePalm");
 
 // src/icons/TreePine.ts
-var import_vanjs_core1444 = __toESM(require("vanjs-core"), 1);
+
 var TreePine = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1444.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -21596,9 +20007,9 @@ var TreePine = /* @__PURE__ */ __name((props = {}) => {
 }, "TreePine");
 
 // src/icons/Trees.ts
-var import_vanjs_core1445 = __toESM(require("vanjs-core"), 1);
+
 var Trees = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1445.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -21613,9 +20024,9 @@ var Trees = /* @__PURE__ */ __name((props = {}) => {
 }, "Trees");
 
 // src/icons/Trello.ts
-var import_vanjs_core1446 = __toESM(require("vanjs-core"), 1);
+
 var Trello = /* @__PURE__ */ __name((props = {}) => {
-  const { rect } = import_vanjs_core1446.default.tags(svgNamespace);
+  const { rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2", ry: "2" }),
@@ -21625,9 +20036,9 @@ var Trello = /* @__PURE__ */ __name((props = {}) => {
 }, "Trello");
 
 // src/icons/TrendingDown.ts
-var import_vanjs_core1447 = __toESM(require("vanjs-core"), 1);
+
 var TrendingDown = /* @__PURE__ */ __name((props = {}) => {
-  const { polyline } = import_vanjs_core1447.default.tags(svgNamespace);
+  const { polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polyline({ points: "22 17 13.5 8.5 8.5 13.5 2 7" }),
@@ -21636,9 +20047,9 @@ var TrendingDown = /* @__PURE__ */ __name((props = {}) => {
 }, "TrendingDown");
 
 // src/icons/TrendingUpDown.ts
-var import_vanjs_core1448 = __toESM(require("vanjs-core"), 1);
+
 var TrendingUpDown = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1448.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M14.828 14.828 21 21" }),
@@ -21649,9 +20060,9 @@ var TrendingUpDown = /* @__PURE__ */ __name((props = {}) => {
 }, "TrendingUpDown");
 
 // src/icons/TrendingUp.ts
-var import_vanjs_core1449 = __toESM(require("vanjs-core"), 1);
+
 var TrendingUp = /* @__PURE__ */ __name((props = {}) => {
-  const { polyline } = import_vanjs_core1449.default.tags(svgNamespace);
+  const { polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polyline({ points: "22 7 13.5 15.5 8.5 10.5 2 17" }),
@@ -21660,9 +20071,9 @@ var TrendingUp = /* @__PURE__ */ __name((props = {}) => {
 }, "TrendingUp");
 
 // src/icons/TriangleAlert.ts
-var import_vanjs_core1450 = __toESM(require("vanjs-core"), 1);
+
 var TriangleAlert = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1450.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -21674,9 +20085,9 @@ var TriangleAlert = /* @__PURE__ */ __name((props = {}) => {
 }, "TriangleAlert");
 
 // src/icons/TriangleDashed.ts
-var import_vanjs_core1451 = __toESM(require("vanjs-core"), 1);
+
 var TriangleDashed = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1451.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10.17 4.193a2 2 0 0 1 3.666.013" }),
@@ -21692,9 +20103,9 @@ var TriangleDashed = /* @__PURE__ */ __name((props = {}) => {
 }, "TriangleDashed");
 
 // src/icons/TriangleRight.ts
-var import_vanjs_core1452 = __toESM(require("vanjs-core"), 1);
+
 var TriangleRight = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1452.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -21704,9 +20115,9 @@ var TriangleRight = /* @__PURE__ */ __name((props = {}) => {
 }, "TriangleRight");
 
 // src/icons/Triangle.ts
-var import_vanjs_core1453 = __toESM(require("vanjs-core"), 1);
+
 var Triangle = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1453.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -21716,9 +20127,9 @@ var Triangle = /* @__PURE__ */ __name((props = {}) => {
 }, "Triangle");
 
 // src/icons/Trophy.ts
-var import_vanjs_core1454 = __toESM(require("vanjs-core"), 1);
+
 var Trophy = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1454.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M6 9H4.5a2.5 2.5 0 0 1 0-5H6" }),
@@ -21733,9 +20144,9 @@ var Trophy = /* @__PURE__ */ __name((props = {}) => {
 }, "Trophy");
 
 // src/icons/Truck.ts
-var import_vanjs_core1455 = __toESM(require("vanjs-core"), 1);
+
 var Truck = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1455.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" }),
@@ -21749,9 +20160,9 @@ var Truck = /* @__PURE__ */ __name((props = {}) => {
 }, "Truck");
 
 // src/icons/Turtle.ts
-var import_vanjs_core1456 = __toESM(require("vanjs-core"), 1);
+
 var Turtle = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1456.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -21764,9 +20175,9 @@ var Turtle = /* @__PURE__ */ __name((props = {}) => {
 }, "Turtle");
 
 // src/icons/TvMinimalPlay.ts
-var import_vanjs_core1457 = __toESM(require("vanjs-core"), 1);
+
 var TvMinimalPlay = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1457.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -21778,9 +20189,9 @@ var TvMinimalPlay = /* @__PURE__ */ __name((props = {}) => {
 }, "TvMinimalPlay");
 
 // src/icons/TvMinimal.ts
-var import_vanjs_core1458 = __toESM(require("vanjs-core"), 1);
+
 var TvMinimal = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1458.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M7 21h10" }),
@@ -21789,9 +20200,9 @@ var TvMinimal = /* @__PURE__ */ __name((props = {}) => {
 }, "TvMinimal");
 
 // src/icons/Tv.ts
-var import_vanjs_core1459 = __toESM(require("vanjs-core"), 1);
+
 var Tv = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, polyline } = import_vanjs_core1459.default.tags(svgNamespace);
+  const { rect, polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "20", height: "15", "x": "2", "y": "7", rx: "2", ry: "2" }),
@@ -21800,9 +20211,9 @@ var Tv = /* @__PURE__ */ __name((props = {}) => {
 }, "Tv");
 
 // src/icons/Twitch.ts
-var import_vanjs_core1460 = __toESM(require("vanjs-core"), 1);
+
 var Twitch = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1460.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 2H3v16h5v4l4-4h5l4-4V2zm-10 9V7m5 4V7" })
@@ -21810,9 +20221,9 @@ var Twitch = /* @__PURE__ */ __name((props = {}) => {
 }, "Twitch");
 
 // src/icons/Twitter.ts
-var import_vanjs_core1461 = __toESM(require("vanjs-core"), 1);
+
 var Twitter = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1461.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -21822,9 +20233,9 @@ var Twitter = /* @__PURE__ */ __name((props = {}) => {
 }, "Twitter");
 
 // src/icons/TypeOutline.ts
-var import_vanjs_core1462 = __toESM(require("vanjs-core"), 1);
+
 var TypeOutline = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1462.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -21834,9 +20245,9 @@ var TypeOutline = /* @__PURE__ */ __name((props = {}) => {
 }, "TypeOutline");
 
 // src/icons/Type.ts
-var import_vanjs_core1463 = __toESM(require("vanjs-core"), 1);
+
 var Type = /* @__PURE__ */ __name((props = {}) => {
-  const { polyline, line } = import_vanjs_core1463.default.tags(svgNamespace);
+  const { polyline, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     polyline({ points: "4 7 4 4 20 4 20 7" }),
@@ -21846,9 +20257,9 @@ var Type = /* @__PURE__ */ __name((props = {}) => {
 }, "Type");
 
 // src/icons/UmbrellaOff.ts
-var import_vanjs_core1464 = __toESM(require("vanjs-core"), 1);
+
 var UmbrellaOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1464.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 2v1" }),
@@ -21861,9 +20272,9 @@ var UmbrellaOff = /* @__PURE__ */ __name((props = {}) => {
 }, "UmbrellaOff");
 
 // src/icons/Umbrella.ts
-var import_vanjs_core1465 = __toESM(require("vanjs-core"), 1);
+
 var Umbrella = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1465.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M22 12a10.06 10.06 1 0 0-20 0Z" }),
@@ -21873,9 +20284,9 @@ var Umbrella = /* @__PURE__ */ __name((props = {}) => {
 }, "Umbrella");
 
 // src/icons/Underline.ts
-var import_vanjs_core1466 = __toESM(require("vanjs-core"), 1);
+
 var Underline = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core1466.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M6 4v6a6 6 0 0 0 12 0V4" }),
@@ -21884,9 +20295,9 @@ var Underline = /* @__PURE__ */ __name((props = {}) => {
 }, "Underline");
 
 // src/icons/Undo2.ts
-var import_vanjs_core1467 = __toESM(require("vanjs-core"), 1);
+
 var Undo2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1467.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M9 14 4 9l5-5" }),
@@ -21895,9 +20306,9 @@ var Undo2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Undo2");
 
 // src/icons/UndoDot.ts
-var import_vanjs_core1468 = __toESM(require("vanjs-core"), 1);
+
 var UndoDot = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1468.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 17a9 9 0 0 0-15-6.7L3 13" }),
@@ -21907,9 +20318,9 @@ var UndoDot = /* @__PURE__ */ __name((props = {}) => {
 }, "UndoDot");
 
 // src/icons/Undo.ts
-var import_vanjs_core1469 = __toESM(require("vanjs-core"), 1);
+
 var Undo = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1469.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 7v6h6" }),
@@ -21918,9 +20329,9 @@ var Undo = /* @__PURE__ */ __name((props = {}) => {
 }, "Undo");
 
 // src/icons/UnfoldHorizontal.ts
-var import_vanjs_core1470 = __toESM(require("vanjs-core"), 1);
+
 var UnfoldHorizontal = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1470.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 12h6" }),
@@ -21935,9 +20346,9 @@ var UnfoldHorizontal = /* @__PURE__ */ __name((props = {}) => {
 }, "UnfoldHorizontal");
 
 // src/icons/UnfoldVertical.ts
-var import_vanjs_core1471 = __toESM(require("vanjs-core"), 1);
+
 var UnfoldVertical = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1471.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 22v-6" }),
@@ -21952,9 +20363,9 @@ var UnfoldVertical = /* @__PURE__ */ __name((props = {}) => {
 }, "UnfoldVertical");
 
 // src/icons/Ungroup.ts
-var import_vanjs_core1472 = __toESM(require("vanjs-core"), 1);
+
 var Ungroup = /* @__PURE__ */ __name((props = {}) => {
-  const { rect } = import_vanjs_core1472.default.tags(svgNamespace);
+  const { rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "8", height: "6", "x": "5", "y": "4", rx: "1" }),
@@ -21963,9 +20374,9 @@ var Ungroup = /* @__PURE__ */ __name((props = {}) => {
 }, "Ungroup");
 
 // src/icons/University.ts
-var import_vanjs_core1473 = __toESM(require("vanjs-core"), 1);
+
 var University = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1473.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "10", "r": "1" }),
@@ -21979,9 +20390,9 @@ var University = /* @__PURE__ */ __name((props = {}) => {
 }, "University");
 
 // src/icons/Unlink2.ts
-var import_vanjs_core1474 = __toESM(require("vanjs-core"), 1);
+
 var Unlink2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1474.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 7h2a5 5 0 0 1 0 10h-2m-6 0H7A5 5 0 0 1 7 7h2" })
@@ -21989,9 +20400,9 @@ var Unlink2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Unlink2");
 
 // src/icons/Unlink.ts
-var import_vanjs_core1475 = __toESM(require("vanjs-core"), 1);
+
 var Unlink = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core1475.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -22008,9 +20419,9 @@ var Unlink = /* @__PURE__ */ __name((props = {}) => {
 }, "Unlink");
 
 // src/icons/Unplug.ts
-var import_vanjs_core1476 = __toESM(require("vanjs-core"), 1);
+
 var Unplug = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1476.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m19 5 3-3" }),
@@ -22027,9 +20438,9 @@ var Unplug = /* @__PURE__ */ __name((props = {}) => {
 }, "Unplug");
 
 // src/icons/Upload.ts
-var import_vanjs_core1477 = __toESM(require("vanjs-core"), 1);
+
 var Upload = /* @__PURE__ */ __name((props = {}) => {
-  const { path, polyline, line } = import_vanjs_core1477.default.tags(svgNamespace);
+  const { path, polyline, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" }),
@@ -22039,9 +20450,9 @@ var Upload = /* @__PURE__ */ __name((props = {}) => {
 }, "Upload");
 
 // src/icons/Usb.ts
-var import_vanjs_core1478 = __toESM(require("vanjs-core"), 1);
+
 var Usb = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1478.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "10", cy: "7", "r": "1" }),
@@ -22055,9 +20466,9 @@ var Usb = /* @__PURE__ */ __name((props = {}) => {
 }, "Usb");
 
 // src/icons/UserCheck.ts
-var import_vanjs_core1479 = __toESM(require("vanjs-core"), 1);
+
 var UserCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle, polyline } = import_vanjs_core1479.default.tags(svgNamespace);
+  const { path, circle, polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" }),
@@ -22067,9 +20478,9 @@ var UserCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "UserCheck");
 
 // src/icons/UserCog.ts
-var import_vanjs_core1480 = __toESM(require("vanjs-core"), 1);
+
 var UserCog = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1480.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "18", cy: "15", "r": "3" }),
@@ -22087,9 +20498,9 @@ var UserCog = /* @__PURE__ */ __name((props = {}) => {
 }, "UserCog");
 
 // src/icons/UserMinus.ts
-var import_vanjs_core1481 = __toESM(require("vanjs-core"), 1);
+
 var UserMinus = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle, line } = import_vanjs_core1481.default.tags(svgNamespace);
+  const { path, circle, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" }),
@@ -22099,9 +20510,9 @@ var UserMinus = /* @__PURE__ */ __name((props = {}) => {
 }, "UserMinus");
 
 // src/icons/UserPen.ts
-var import_vanjs_core1482 = __toESM(require("vanjs-core"), 1);
+
 var UserPen = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1482.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11.5 15H7a4 4 0 0 0-4 4v2" }),
@@ -22113,9 +20524,9 @@ var UserPen = /* @__PURE__ */ __name((props = {}) => {
 }, "UserPen");
 
 // src/icons/UserPlus.ts
-var import_vanjs_core1483 = __toESM(require("vanjs-core"), 1);
+
 var UserPlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle, line } = import_vanjs_core1483.default.tags(svgNamespace);
+  const { path, circle, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" }),
@@ -22126,9 +20537,9 @@ var UserPlus = /* @__PURE__ */ __name((props = {}) => {
 }, "UserPlus");
 
 // src/icons/UserRoundCheck.ts
-var import_vanjs_core1484 = __toESM(require("vanjs-core"), 1);
+
 var UserRoundCheck = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1484.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 21a8 8 0 0 1 13.292-6" }),
@@ -22138,9 +20549,9 @@ var UserRoundCheck = /* @__PURE__ */ __name((props = {}) => {
 }, "UserRoundCheck");
 
 // src/icons/UserRoundCog.ts
-var import_vanjs_core1485 = __toESM(require("vanjs-core"), 1);
+
 var UserRoundCog = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1485.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 21a8 8 0 0 1 10.434-7.62" }),
@@ -22158,9 +20569,9 @@ var UserRoundCog = /* @__PURE__ */ __name((props = {}) => {
 }, "UserRoundCog");
 
 // src/icons/UserRoundMinus.ts
-var import_vanjs_core1486 = __toESM(require("vanjs-core"), 1);
+
 var UserRoundMinus = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1486.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 21a8 8 0 0 1 13.292-6" }),
@@ -22170,9 +20581,9 @@ var UserRoundMinus = /* @__PURE__ */ __name((props = {}) => {
 }, "UserRoundMinus");
 
 // src/icons/UserRoundPen.ts
-var import_vanjs_core1487 = __toESM(require("vanjs-core"), 1);
+
 var UserRoundPen = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1487.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 21a8 8 0 0 1 10.821-7.487" }),
@@ -22184,9 +20595,9 @@ var UserRoundPen = /* @__PURE__ */ __name((props = {}) => {
 }, "UserRoundPen");
 
 // src/icons/UserRoundPlus.ts
-var import_vanjs_core1488 = __toESM(require("vanjs-core"), 1);
+
 var UserRoundPlus = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1488.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 21a8 8 0 0 1 13.292-6" }),
@@ -22197,9 +20608,9 @@ var UserRoundPlus = /* @__PURE__ */ __name((props = {}) => {
 }, "UserRoundPlus");
 
 // src/icons/UserRoundSearch.ts
-var import_vanjs_core1489 = __toESM(require("vanjs-core"), 1);
+
 var UserRoundSearch = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1489.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "10", cy: "8", "r": "5" }),
@@ -22210,9 +20621,9 @@ var UserRoundSearch = /* @__PURE__ */ __name((props = {}) => {
 }, "UserRoundSearch");
 
 // src/icons/UserRoundX.ts
-var import_vanjs_core1490 = __toESM(require("vanjs-core"), 1);
+
 var UserRoundX = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1490.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 21a8 8 0 0 1 11.873-7" }),
@@ -22223,9 +20634,9 @@ var UserRoundX = /* @__PURE__ */ __name((props = {}) => {
 }, "UserRoundX");
 
 // src/icons/UserRound.ts
-var import_vanjs_core1491 = __toESM(require("vanjs-core"), 1);
+
 var UserRound = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1491.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "8", "r": "5" }),
@@ -22234,9 +20645,9 @@ var UserRound = /* @__PURE__ */ __name((props = {}) => {
 }, "UserRound");
 
 // src/icons/UserSearch.ts
-var import_vanjs_core1492 = __toESM(require("vanjs-core"), 1);
+
 var UserSearch = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1492.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "10", cy: "7", "r": "4" }),
@@ -22247,9 +20658,9 @@ var UserSearch = /* @__PURE__ */ __name((props = {}) => {
 }, "UserSearch");
 
 // src/icons/UserX.ts
-var import_vanjs_core1493 = __toESM(require("vanjs-core"), 1);
+
 var UserX = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle, line } = import_vanjs_core1493.default.tags(svgNamespace);
+  const { path, circle, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" }),
@@ -22260,9 +20671,9 @@ var UserX = /* @__PURE__ */ __name((props = {}) => {
 }, "UserX");
 
 // src/icons/User.ts
-var import_vanjs_core1494 = __toESM(require("vanjs-core"), 1);
+
 var User = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1494.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" }),
@@ -22271,9 +20682,9 @@ var User = /* @__PURE__ */ __name((props = {}) => {
 }, "User");
 
 // src/icons/UsersRound.ts
-var import_vanjs_core1495 = __toESM(require("vanjs-core"), 1);
+
 var UsersRound = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1495.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M18 21a8 8 0 0 0-16 0" }),
@@ -22283,9 +20694,9 @@ var UsersRound = /* @__PURE__ */ __name((props = {}) => {
 }, "UsersRound");
 
 // src/icons/Users.ts
-var import_vanjs_core1496 = __toESM(require("vanjs-core"), 1);
+
 var Users = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1496.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" }),
@@ -22296,9 +20707,9 @@ var Users = /* @__PURE__ */ __name((props = {}) => {
 }, "Users");
 
 // src/icons/UtensilsCrossed.ts
-var import_vanjs_core1497 = __toESM(require("vanjs-core"), 1);
+
 var UtensilsCrossed = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1497.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8" }),
@@ -22311,9 +20722,9 @@ var UtensilsCrossed = /* @__PURE__ */ __name((props = {}) => {
 }, "UtensilsCrossed");
 
 // src/icons/Utensils.ts
-var import_vanjs_core1498 = __toESM(require("vanjs-core"), 1);
+
 var Utensils = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1498.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" }),
@@ -22323,9 +20734,9 @@ var Utensils = /* @__PURE__ */ __name((props = {}) => {
 }, "Utensils");
 
 // src/icons/UtilityPole.ts
-var import_vanjs_core1499 = __toESM(require("vanjs-core"), 1);
+
 var UtilityPole = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1499.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 2v20" }),
@@ -22339,9 +20750,9 @@ var UtilityPole = /* @__PURE__ */ __name((props = {}) => {
 }, "UtilityPole");
 
 // src/icons/Variable.ts
-var import_vanjs_core1500 = __toESM(require("vanjs-core"), 1);
+
 var Variable = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core1500.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 21s-4-3-4-9 4-9 4-9" }),
@@ -22352,9 +20763,9 @@ var Variable = /* @__PURE__ */ __name((props = {}) => {
 }, "Variable");
 
 // src/icons/Vault.ts
-var import_vanjs_core1501 = __toESM(require("vanjs-core"), 1);
+
 var Vault = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, circle, path } = import_vanjs_core1501.default.tags(svgNamespace);
+  const { rect, circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -22371,9 +20782,9 @@ var Vault = /* @__PURE__ */ __name((props = {}) => {
 }, "Vault");
 
 // src/icons/Vegan.ts
-var import_vanjs_core1502 = __toESM(require("vanjs-core"), 1);
+
 var Vegan = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1502.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 8q6 0 6-6-6 0-6 6" }),
@@ -22383,9 +20794,9 @@ var Vegan = /* @__PURE__ */ __name((props = {}) => {
 }, "Vegan");
 
 // src/icons/VenetianMask.ts
-var import_vanjs_core1503 = __toESM(require("vanjs-core"), 1);
+
 var VenetianMask = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1503.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M18 11c-1.5 0-2.5.5-3 2" }),
@@ -22397,9 +20808,9 @@ var VenetianMask = /* @__PURE__ */ __name((props = {}) => {
 }, "VenetianMask");
 
 // src/icons/VenusAndMars.ts
-var import_vanjs_core1504 = __toESM(require("vanjs-core"), 1);
+
 var VenusAndMars = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1504.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 20h4" }),
@@ -22411,9 +20822,9 @@ var VenusAndMars = /* @__PURE__ */ __name((props = {}) => {
 }, "VenusAndMars");
 
 // src/icons/Venus.ts
-var import_vanjs_core1505 = __toESM(require("vanjs-core"), 1);
+
 var Venus = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1505.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 15v7" }),
@@ -22423,9 +20834,9 @@ var Venus = /* @__PURE__ */ __name((props = {}) => {
 }, "Venus");
 
 // src/icons/VibrateOff.ts
-var import_vanjs_core1506 = __toESM(require("vanjs-core"), 1);
+
 var VibrateOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core1506.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m2 8 2 2-2 2 2 2-2 2" }),
@@ -22437,9 +20848,9 @@ var VibrateOff = /* @__PURE__ */ __name((props = {}) => {
 }, "VibrateOff");
 
 // src/icons/Vibrate.ts
-var import_vanjs_core1507 = __toESM(require("vanjs-core"), 1);
+
 var Vibrate = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1507.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m2 8 2 2-2 2 2 2-2 2" }),
@@ -22449,9 +20860,9 @@ var Vibrate = /* @__PURE__ */ __name((props = {}) => {
 }, "Vibrate");
 
 // src/icons/VideoOff.ts
-var import_vanjs_core1508 = __toESM(require("vanjs-core"), 1);
+
 var VideoOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1508.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -22463,9 +20874,9 @@ var VideoOff = /* @__PURE__ */ __name((props = {}) => {
 }, "VideoOff");
 
 // src/icons/Video.ts
-var import_vanjs_core1509 = __toESM(require("vanjs-core"), 1);
+
 var Video = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1509.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -22476,9 +20887,9 @@ var Video = /* @__PURE__ */ __name((props = {}) => {
 }, "Video");
 
 // src/icons/Videotape.ts
-var import_vanjs_core1510 = __toESM(require("vanjs-core"), 1);
+
 var Videotape = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path, circle } = import_vanjs_core1510.default.tags(svgNamespace);
+  const { rect, path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "20", height: "16", "x": "2", "y": "4", rx: "2" }),
@@ -22490,9 +20901,9 @@ var Videotape = /* @__PURE__ */ __name((props = {}) => {
 }, "Videotape");
 
 // src/icons/View.ts
-var import_vanjs_core1511 = __toESM(require("vanjs-core"), 1);
+
 var View = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1511.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M21 17v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2" }),
@@ -22505,9 +20916,9 @@ var View = /* @__PURE__ */ __name((props = {}) => {
 }, "View");
 
 // src/icons/Voicemail.ts
-var import_vanjs_core1512 = __toESM(require("vanjs-core"), 1);
+
 var Voicemail = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, line } = import_vanjs_core1512.default.tags(svgNamespace);
+  const { circle, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "6", cy: "12", "r": "4" }),
@@ -22517,9 +20928,9 @@ var Voicemail = /* @__PURE__ */ __name((props = {}) => {
 }, "Voicemail");
 
 // src/icons/Volleyball.ts
-var import_vanjs_core1513 = __toESM(require("vanjs-core"), 1);
+
 var Volleyball = /* @__PURE__ */ __name((props = {}) => {
-  const { path, circle } = import_vanjs_core1513.default.tags(svgNamespace);
+  const { path, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M11.1 7.1a16.55 16.55 0 0 1 10.9 4" }),
@@ -22532,9 +20943,9 @@ var Volleyball = /* @__PURE__ */ __name((props = {}) => {
 }, "Volleyball");
 
 // src/icons/Volume1.ts
-var import_vanjs_core1514 = __toESM(require("vanjs-core"), 1);
+
 var Volume1 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1514.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -22545,9 +20956,9 @@ var Volume1 = /* @__PURE__ */ __name((props = {}) => {
 }, "Volume1");
 
 // src/icons/Volume2.ts
-var import_vanjs_core1515 = __toESM(require("vanjs-core"), 1);
+
 var Volume2 = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1515.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -22559,9 +20970,9 @@ var Volume2 = /* @__PURE__ */ __name((props = {}) => {
 }, "Volume2");
 
 // src/icons/VolumeOff.ts
-var import_vanjs_core1516 = __toESM(require("vanjs-core"), 1);
+
 var VolumeOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1516.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M16 9a5 5 0 0 1 .95 2.293" }),
@@ -22575,9 +20986,9 @@ var VolumeOff = /* @__PURE__ */ __name((props = {}) => {
 }, "VolumeOff");
 
 // src/icons/VolumeX.ts
-var import_vanjs_core1517 = __toESM(require("vanjs-core"), 1);
+
 var VolumeX = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core1517.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -22589,9 +21000,9 @@ var VolumeX = /* @__PURE__ */ __name((props = {}) => {
 }, "VolumeX");
 
 // src/icons/Volume.ts
-var import_vanjs_core1518 = __toESM(require("vanjs-core"), 1);
+
 var Volume = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1518.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -22601,9 +21012,9 @@ var Volume = /* @__PURE__ */ __name((props = {}) => {
 }, "Volume");
 
 // src/icons/Vote.ts
-var import_vanjs_core1519 = __toESM(require("vanjs-core"), 1);
+
 var Vote = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1519.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m9 12 2 2 4-4" }),
@@ -22613,9 +21024,9 @@ var Vote = /* @__PURE__ */ __name((props = {}) => {
 }, "Vote");
 
 // src/icons/WalletCards.ts
-var import_vanjs_core1520 = __toESM(require("vanjs-core"), 1);
+
 var WalletCards = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1520.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
@@ -22627,9 +21038,9 @@ var WalletCards = /* @__PURE__ */ __name((props = {}) => {
 }, "WalletCards");
 
 // src/icons/WalletMinimal.ts
-var import_vanjs_core1521 = __toESM(require("vanjs-core"), 1);
+
 var WalletMinimal = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1521.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M17 14h.01" }),
@@ -22640,9 +21051,9 @@ var WalletMinimal = /* @__PURE__ */ __name((props = {}) => {
 }, "WalletMinimal");
 
 // src/icons/Wallet.ts
-var import_vanjs_core1522 = __toESM(require("vanjs-core"), 1);
+
 var Wallet = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1522.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -22653,9 +21064,9 @@ var Wallet = /* @__PURE__ */ __name((props = {}) => {
 }, "Wallet");
 
 // src/icons/Wallpaper.ts
-var import_vanjs_core1523 = __toESM(require("vanjs-core"), 1);
+
 var Wallpaper = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1523.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "8", cy: "9", "r": "2" }),
@@ -22668,9 +21079,9 @@ var Wallpaper = /* @__PURE__ */ __name((props = {}) => {
 }, "Wallpaper");
 
 // src/icons/WandSparkles.ts
-var import_vanjs_core1524 = __toESM(require("vanjs-core"), 1);
+
 var WandSparkles = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1524.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -22687,9 +21098,9 @@ var WandSparkles = /* @__PURE__ */ __name((props = {}) => {
 }, "WandSparkles");
 
 // src/icons/Wand.ts
-var import_vanjs_core1525 = __toESM(require("vanjs-core"), 1);
+
 var Wand = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1525.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M15 4V2" }),
@@ -22705,9 +21116,9 @@ var Wand = /* @__PURE__ */ __name((props = {}) => {
 }, "Wand");
 
 // src/icons/Warehouse.ts
-var import_vanjs_core1526 = __toESM(require("vanjs-core"), 1);
+
 var Warehouse = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect } = import_vanjs_core1526.default.tags(svgNamespace);
+  const { path, rect } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -22720,9 +21131,9 @@ var Warehouse = /* @__PURE__ */ __name((props = {}) => {
 }, "Warehouse");
 
 // src/icons/WashingMachine.ts
-var import_vanjs_core1527 = __toESM(require("vanjs-core"), 1);
+
 var WashingMachine = /* @__PURE__ */ __name((props = {}) => {
-  const { path, rect, circle } = import_vanjs_core1527.default.tags(svgNamespace);
+  const { path, rect, circle } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M3 6h3" }),
@@ -22734,9 +21145,9 @@ var WashingMachine = /* @__PURE__ */ __name((props = {}) => {
 }, "WashingMachine");
 
 // src/icons/Watch.ts
-var import_vanjs_core1528 = __toESM(require("vanjs-core"), 1);
+
 var Watch = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, polyline, path } = import_vanjs_core1528.default.tags(svgNamespace);
+  const { circle, polyline, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "12", "r": "6" }),
@@ -22751,9 +21162,9 @@ var Watch = /* @__PURE__ */ __name((props = {}) => {
 }, "Watch");
 
 // src/icons/WavesLadder.ts
-var import_vanjs_core1529 = __toESM(require("vanjs-core"), 1);
+
 var WavesLadder = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1529.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M19 5a2 2 0 0 0-2 2v11" }),
@@ -22767,9 +21178,9 @@ var WavesLadder = /* @__PURE__ */ __name((props = {}) => {
 }, "WavesLadder");
 
 // src/icons/Waves.ts
-var import_vanjs_core1530 = __toESM(require("vanjs-core"), 1);
+
 var Waves = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1530.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -22785,9 +21196,9 @@ var Waves = /* @__PURE__ */ __name((props = {}) => {
 }, "Waves");
 
 // src/icons/Waypoints.ts
-var import_vanjs_core1531 = __toESM(require("vanjs-core"), 1);
+
 var Waypoints = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1531.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "4.5", "r": "2.5" }),
@@ -22801,9 +21212,9 @@ var Waypoints = /* @__PURE__ */ __name((props = {}) => {
 }, "Waypoints");
 
 // src/icons/Webcam.ts
-var import_vanjs_core1532 = __toESM(require("vanjs-core"), 1);
+
 var Webcam = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1532.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "10", "r": "8" }),
@@ -22814,9 +21225,9 @@ var Webcam = /* @__PURE__ */ __name((props = {}) => {
 }, "Webcam");
 
 // src/icons/WebhookOff.ts
-var import_vanjs_core1533 = __toESM(require("vanjs-core"), 1);
+
 var WebhookOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1533.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M17 17h-5c-1.09-.02-1.94.92-2.5 1.9A3 3 0 1 1 2.57 15" }),
@@ -22830,9 +21241,9 @@ var WebhookOff = /* @__PURE__ */ __name((props = {}) => {
 }, "WebhookOff");
 
 // src/icons/Webhook.ts
-var import_vanjs_core1534 = __toESM(require("vanjs-core"), 1);
+
 var Webhook = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1534.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -22844,9 +21255,9 @@ var Webhook = /* @__PURE__ */ __name((props = {}) => {
 }, "Webhook");
 
 // src/icons/Weight.ts
-var import_vanjs_core1535 = __toESM(require("vanjs-core"), 1);
+
 var Weight = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1535.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "12", cy: "5", "r": "3" }),
@@ -22857,9 +21268,9 @@ var Weight = /* @__PURE__ */ __name((props = {}) => {
 }, "Weight");
 
 // src/icons/WheatOff.ts
-var import_vanjs_core1536 = __toESM(require("vanjs-core"), 1);
+
 var WheatOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core1536.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m2 22 10-10" }),
@@ -22888,9 +21299,9 @@ var WheatOff = /* @__PURE__ */ __name((props = {}) => {
 }, "WheatOff");
 
 // src/icons/Wheat.ts
-var import_vanjs_core1537 = __toESM(require("vanjs-core"), 1);
+
 var Wheat = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1537.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M2 22 16 8" }),
@@ -22917,9 +21328,9 @@ var Wheat = /* @__PURE__ */ __name((props = {}) => {
 }, "Wheat");
 
 // src/icons/WholeWord.ts
-var import_vanjs_core1538 = __toESM(require("vanjs-core"), 1);
+
 var WholeWord = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, path } = import_vanjs_core1538.default.tags(svgNamespace);
+  const { circle, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "7", cy: "12", "r": "3" }),
@@ -22931,9 +21342,9 @@ var WholeWord = /* @__PURE__ */ __name((props = {}) => {
 }, "WholeWord");
 
 // src/icons/WifiHigh.ts
-var import_vanjs_core1539 = __toESM(require("vanjs-core"), 1);
+
 var WifiHigh = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1539.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 20h.01" }),
@@ -22943,9 +21354,9 @@ var WifiHigh = /* @__PURE__ */ __name((props = {}) => {
 }, "WifiHigh");
 
 // src/icons/WifiLow.ts
-var import_vanjs_core1540 = __toESM(require("vanjs-core"), 1);
+
 var WifiLow = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1540.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 20h.01" }),
@@ -22954,9 +21365,9 @@ var WifiLow = /* @__PURE__ */ __name((props = {}) => {
 }, "WifiLow");
 
 // src/icons/WifiOff.ts
-var import_vanjs_core1541 = __toESM(require("vanjs-core"), 1);
+
 var WifiOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1541.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 20h.01" }),
@@ -22970,9 +21381,9 @@ var WifiOff = /* @__PURE__ */ __name((props = {}) => {
 }, "WifiOff");
 
 // src/icons/WifiZero.ts
-var import_vanjs_core1542 = __toESM(require("vanjs-core"), 1);
+
 var WifiZero = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1542.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 20h.01" })
@@ -22980,9 +21391,9 @@ var WifiZero = /* @__PURE__ */ __name((props = {}) => {
 }, "WifiZero");
 
 // src/icons/Wifi.ts
-var import_vanjs_core1543 = __toESM(require("vanjs-core"), 1);
+
 var Wifi = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1543.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12 20h.01" }),
@@ -22993,9 +21404,9 @@ var Wifi = /* @__PURE__ */ __name((props = {}) => {
 }, "Wifi");
 
 // src/icons/WindArrowDown.ts
-var import_vanjs_core1544 = __toESM(require("vanjs-core"), 1);
+
 var WindArrowDown = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1544.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10 2v8" }),
@@ -23006,9 +21417,9 @@ var WindArrowDown = /* @__PURE__ */ __name((props = {}) => {
 }, "WindArrowDown");
 
 // src/icons/Wind.ts
-var import_vanjs_core1545 = __toESM(require("vanjs-core"), 1);
+
 var Wind = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1545.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M12.8 19.6A2 2 0 1 0 14 16H2" }),
@@ -23018,9 +21429,9 @@ var Wind = /* @__PURE__ */ __name((props = {}) => {
 }, "Wind");
 
 // src/icons/WineOff.ts
-var import_vanjs_core1546 = __toESM(require("vanjs-core"), 1);
+
 var WineOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path, line } = import_vanjs_core1546.default.tags(svgNamespace);
+  const { path, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 22h8" }),
@@ -23034,9 +21445,9 @@ var WineOff = /* @__PURE__ */ __name((props = {}) => {
 }, "WineOff");
 
 // src/icons/Wine.ts
-var import_vanjs_core1547 = __toESM(require("vanjs-core"), 1);
+
 var Wine = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1547.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M8 22h8" }),
@@ -23049,9 +21460,9 @@ var Wine = /* @__PURE__ */ __name((props = {}) => {
 }, "Wine");
 
 // src/icons/Workflow.ts
-var import_vanjs_core1548 = __toESM(require("vanjs-core"), 1);
+
 var Workflow = /* @__PURE__ */ __name((props = {}) => {
-  const { rect, path } = import_vanjs_core1548.default.tags(svgNamespace);
+  const { rect, path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     rect({ width: "8", height: "8", "x": "3", "y": "3", rx: "2" }),
@@ -23061,9 +21472,9 @@ var Workflow = /* @__PURE__ */ __name((props = {}) => {
 }, "Workflow");
 
 // src/icons/Worm.ts
-var import_vanjs_core1549 = __toESM(require("vanjs-core"), 1);
+
 var Worm = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1549.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "m19 12-1.5 3" }),
@@ -23075,9 +21486,9 @@ var Worm = /* @__PURE__ */ __name((props = {}) => {
 }, "Worm");
 
 // src/icons/WrapText.ts
-var import_vanjs_core1550 = __toESM(require("vanjs-core"), 1);
+
 var WrapText = /* @__PURE__ */ __name((props = {}) => {
-  const { line, path, polyline } = import_vanjs_core1550.default.tags(svgNamespace);
+  const { line, path, polyline } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     line({ x1: "3", x2: "21", y1: "6", y2: "6" }),
@@ -23088,9 +21499,9 @@ var WrapText = /* @__PURE__ */ __name((props = {}) => {
 }, "WrapText");
 
 // src/icons/Wrench.ts
-var import_vanjs_core1551 = __toESM(require("vanjs-core"), 1);
+
 var Wrench = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1551.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -23100,9 +21511,9 @@ var Wrench = /* @__PURE__ */ __name((props = {}) => {
 }, "Wrench");
 
 // src/icons/X.ts
-var import_vanjs_core1552 = __toESM(require("vanjs-core"), 1);
+
 var X = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1552.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M18 6 6 18" }),
@@ -23111,9 +21522,9 @@ var X = /* @__PURE__ */ __name((props = {}) => {
 }, "X");
 
 // src/icons/Youtube.ts
-var import_vanjs_core1553 = __toESM(require("vanjs-core"), 1);
+
 var Youtube = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1553.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -23124,9 +21535,9 @@ var Youtube = /* @__PURE__ */ __name((props = {}) => {
 }, "Youtube");
 
 // src/icons/ZapOff.ts
-var import_vanjs_core1554 = __toESM(require("vanjs-core"), 1);
+
 var ZapOff = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1554.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({ "d": "M10.513 4.856 13.12 2.17a.5.5 0 0 1 .86.46l-1.377 4.317" }),
@@ -23139,9 +21550,9 @@ var ZapOff = /* @__PURE__ */ __name((props = {}) => {
 }, "ZapOff");
 
 // src/icons/Zap.ts
-var import_vanjs_core1555 = __toESM(require("vanjs-core"), 1);
+
 var Zap = /* @__PURE__ */ __name((props = {}) => {
-  const { path } = import_vanjs_core1555.default.tags(svgNamespace);
+  const { path } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     path({
@@ -23151,9 +21562,9 @@ var Zap = /* @__PURE__ */ __name((props = {}) => {
 }, "Zap");
 
 // src/icons/ZoomIn.ts
-var import_vanjs_core1556 = __toESM(require("vanjs-core"), 1);
+
 var ZoomIn = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, line } = import_vanjs_core1556.default.tags(svgNamespace);
+  const { circle, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "11", cy: "11", "r": "8" }),
@@ -23164,9 +21575,9 @@ var ZoomIn = /* @__PURE__ */ __name((props = {}) => {
 }, "ZoomIn");
 
 // src/icons/ZoomOut.ts
-var import_vanjs_core1557 = __toESM(require("vanjs-core"), 1);
+
 var ZoomOut = /* @__PURE__ */ __name((props = {}) => {
-  const { circle, line } = import_vanjs_core1557.default.tags(svgNamespace);
+  const { circle, line } = _vanjscore2.default.tags(svgNamespace);
   return LucideIcon(
     props,
     circle({ cx: "11", cy: "11", "r": "8" }),
@@ -23174,1564 +21585,1563 @@ var ZoomOut = /* @__PURE__ */ __name((props = {}) => {
     line({ x1: "8", x2: "14", y1: "11", y2: "11" })
   );
 }, "ZoomOut");
-// Annotate the CommonJS export names for ESM import in node:
-0 && (module.exports = {
-  AArrowDown,
-  AArrowUp,
-  ALargeSmall,
-  Accessibility,
-  Activity,
-  AirVent,
-  Airplay,
-  AlarmClock,
-  AlarmClockCheck,
-  AlarmClockMinus,
-  AlarmClockOff,
-  AlarmClockPlus,
-  AlarmSmoke,
-  Album,
-  AlignCenter,
-  AlignCenterHorizontal,
-  AlignCenterVertical,
-  AlignEndHorizontal,
-  AlignEndVertical,
-  AlignHorizontalDistributeCenter,
-  AlignHorizontalDistributeEnd,
-  AlignHorizontalDistributeStart,
-  AlignHorizontalJustifyCenter,
-  AlignHorizontalJustifyEnd,
-  AlignHorizontalJustifyStart,
-  AlignHorizontalSpaceAround,
-  AlignHorizontalSpaceBetween,
-  AlignJustify,
-  AlignLeft,
-  AlignRight,
-  AlignStartHorizontal,
-  AlignStartVertical,
-  AlignVerticalDistributeCenter,
-  AlignVerticalDistributeEnd,
-  AlignVerticalDistributeStart,
-  AlignVerticalJustifyCenter,
-  AlignVerticalJustifyEnd,
-  AlignVerticalJustifyStart,
-  AlignVerticalSpaceAround,
-  AlignVerticalSpaceBetween,
-  Ambulance,
-  Ampersand,
-  Ampersands,
-  Amphora,
-  Anchor,
-  Angry,
-  Annoyed,
-  Antenna,
-  Anvil,
-  Aperture,
-  AppWindow,
-  AppWindowMac,
-  Apple,
-  Archive,
-  ArchiveRestore,
-  ArchiveX,
-  Armchair,
-  ArrowBigDown,
-  ArrowBigDownDash,
-  ArrowBigLeft,
-  ArrowBigLeftDash,
-  ArrowBigRight,
-  ArrowBigRightDash,
-  ArrowBigUp,
-  ArrowBigUpDash,
-  ArrowDown,
-  ArrowDown01,
-  ArrowDown10,
-  ArrowDownAZ,
-  ArrowDownFromLine,
-  ArrowDownLeft,
-  ArrowDownNarrowWide,
-  ArrowDownRight,
-  ArrowDownToDot,
-  ArrowDownToLine,
-  ArrowDownUp,
-  ArrowDownWideNarrow,
-  ArrowDownZA,
-  ArrowLeft,
-  ArrowLeftFromLine,
-  ArrowLeftRight,
-  ArrowLeftToLine,
-  ArrowRight,
-  ArrowRightFromLine,
-  ArrowRightLeft,
-  ArrowRightToLine,
-  ArrowUp,
-  ArrowUp01,
-  ArrowUp10,
-  ArrowUpAZ,
-  ArrowUpDown,
-  ArrowUpFromDot,
-  ArrowUpFromLine,
-  ArrowUpLeft,
-  ArrowUpNarrowWide,
-  ArrowUpRight,
-  ArrowUpToLine,
-  ArrowUpWideNarrow,
-  ArrowUpZA,
-  ArrowsUpFromLine,
-  Asterisk,
-  AtSign,
-  Atom,
-  AudioLines,
-  AudioWaveform,
-  Award,
-  Axe,
-  Axis3d,
-  Baby,
-  Backpack,
-  Badge,
-  BadgeAlert,
-  BadgeCent,
-  BadgeCheck,
-  BadgeDollarSign,
-  BadgeEuro,
-  BadgeHelp,
-  BadgeIndianRupee,
-  BadgeInfo,
-  BadgeJapaneseYen,
-  BadgeMinus,
-  BadgePercent,
-  BadgePlus,
-  BadgePoundSterling,
-  BadgeRussianRuble,
-  BadgeSwissFranc,
-  BadgeX,
-  BaggageClaim,
-  Ban,
-  Banana,
-  Bandage,
-  Banknote,
-  Barcode,
-  Baseline,
-  Bath,
-  Battery,
-  BatteryCharging,
-  BatteryFull,
-  BatteryLow,
-  BatteryMedium,
-  BatteryPlus,
-  BatteryWarning,
-  Beaker,
-  Bean,
-  BeanOff,
-  Bed,
-  BedDouble,
-  BedSingle,
-  Beef,
-  Beer,
-  BeerOff,
-  Bell,
-  BellDot,
-  BellElectric,
-  BellMinus,
-  BellOff,
-  BellPlus,
-  BellRing,
-  BetweenHorizontalEnd,
-  BetweenHorizontalStart,
-  BetweenVerticalEnd,
-  BetweenVerticalStart,
-  BicepsFlexed,
-  Bike,
-  Binary,
-  Binoculars,
-  Biohazard,
-  Bird,
-  Bitcoin,
-  Blend,
-  Blinds,
-  Blocks,
-  Bluetooth,
-  BluetoothConnected,
-  BluetoothOff,
-  BluetoothSearching,
-  Bold,
-  Bolt,
-  Bomb,
-  Bone,
-  Book,
-  BookA,
-  BookAudio,
-  BookCheck,
-  BookCopy,
-  BookDashed,
-  BookDown,
-  BookHeadphones,
-  BookHeart,
-  BookImage,
-  BookKey,
-  BookLock,
-  BookMarked,
-  BookMinus,
-  BookOpen,
-  BookOpenCheck,
-  BookOpenText,
-  BookPlus,
-  BookText,
-  BookType,
-  BookUp,
-  BookUp2,
-  BookUser,
-  BookX,
-  Bookmark,
-  BookmarkCheck,
-  BookmarkMinus,
-  BookmarkPlus,
-  BookmarkX,
-  BoomBox,
-  Bot,
-  BotMessageSquare,
-  BotOff,
-  Box,
-  Boxes,
-  Braces,
-  Brackets,
-  Brain,
-  BrainCircuit,
-  BrainCog,
-  BrickWall,
-  Briefcase,
-  BriefcaseBusiness,
-  BriefcaseConveyorBelt,
-  BriefcaseMedical,
-  BringToFront,
-  Brush,
-  Bug,
-  BugOff,
-  BugPlay,
-  Building,
-  Building2,
-  Bus,
-  BusFront,
-  Cable,
-  CableCar,
-  Cake,
-  CakeSlice,
-  Calculator,
-  Calendar,
-  Calendar1,
-  CalendarArrowDown,
-  CalendarArrowUp,
-  CalendarCheck,
-  CalendarCheck2,
-  CalendarClock,
-  CalendarCog,
-  CalendarDays,
-  CalendarFold,
-  CalendarHeart,
-  CalendarMinus,
-  CalendarMinus2,
-  CalendarOff,
-  CalendarPlus,
-  CalendarPlus2,
-  CalendarRange,
-  CalendarSearch,
-  CalendarSync,
-  CalendarX,
-  CalendarX2,
-  Camera,
-  CameraOff,
-  Candy,
-  CandyCane,
-  CandyOff,
-  Cannabis,
-  Captions,
-  CaptionsOff,
-  Car,
-  CarFront,
-  CarTaxiFront,
-  Caravan,
-  Carrot,
-  CaseLower,
-  CaseSensitive,
-  CaseUpper,
-  CassetteTape,
-  Cast,
-  Castle,
-  Cat,
-  Cctv,
-  ChartArea,
-  ChartBar,
-  ChartBarBig,
-  ChartBarDecreasing,
-  ChartBarIncreasing,
-  ChartBarStacked,
-  ChartCandlestick,
-  ChartColumn,
-  ChartColumnBig,
-  ChartColumnDecreasing,
-  ChartColumnIncreasing,
-  ChartColumnStacked,
-  ChartGantt,
-  ChartLine,
-  ChartNetwork,
-  ChartNoAxesColumn,
-  ChartNoAxesColumnDecreasing,
-  ChartNoAxesColumnIncreasing,
-  ChartNoAxesCombined,
-  ChartNoAxesGantt,
-  ChartPie,
-  ChartScatter,
-  ChartSpline,
-  Check,
-  CheckCheck,
-  ChefHat,
-  Cherry,
-  ChevronDown,
-  ChevronFirst,
-  ChevronLast,
-  ChevronLeft,
-  ChevronRight,
-  ChevronUp,
-  ChevronsDown,
-  ChevronsDownUp,
-  ChevronsLeft,
-  ChevronsLeftRight,
-  ChevronsLeftRightEllipsis,
-  ChevronsRight,
-  ChevronsRightLeft,
-  ChevronsUp,
-  ChevronsUpDown,
-  Chrome,
-  Church,
-  Cigarette,
-  CigaretteOff,
-  Circle,
-  CircleAlert,
-  CircleArrowDown,
-  CircleArrowLeft,
-  CircleArrowOutDownLeft,
-  CircleArrowOutDownRight,
-  CircleArrowOutUpLeft,
-  CircleArrowOutUpRight,
-  CircleArrowRight,
-  CircleArrowUp,
-  CircleCheck,
-  CircleCheckBig,
-  CircleChevronDown,
-  CircleChevronLeft,
-  CircleChevronRight,
-  CircleChevronUp,
-  CircleDashed,
-  CircleDivide,
-  CircleDollarSign,
-  CircleDot,
-  CircleDotDashed,
-  CircleEllipsis,
-  CircleEqual,
-  CircleFadingArrowUp,
-  CircleFadingPlus,
-  CircleGauge,
-  CircleHelp,
-  CircleMinus,
-  CircleOff,
-  CircleParking,
-  CircleParkingOff,
-  CirclePause,
-  CirclePercent,
-  CirclePlay,
-  CirclePlus,
-  CirclePower,
-  CircleSlash,
-  CircleSlash2,
-  CircleSmall,
-  CircleStop,
-  CircleUser,
-  CircleUserRound,
-  CircleX,
-  CircuitBoard,
-  Citrus,
-  Clapperboard,
-  Clipboard,
-  ClipboardCheck,
-  ClipboardCopy,
-  ClipboardList,
-  ClipboardMinus,
-  ClipboardPaste,
-  ClipboardPen,
-  ClipboardPenLine,
-  ClipboardPlus,
-  ClipboardType,
-  ClipboardX,
-  Clock,
-  Clock1,
-  Clock10,
-  Clock11,
-  Clock12,
-  Clock2,
-  Clock3,
-  Clock4,
-  Clock5,
-  Clock6,
-  Clock7,
-  Clock8,
-  Clock9,
-  ClockAlert,
-  ClockArrowDown,
-  ClockArrowUp,
-  Cloud,
-  CloudAlert,
-  CloudCog,
-  CloudDownload,
-  CloudDrizzle,
-  CloudFog,
-  CloudHail,
-  CloudLightning,
-  CloudMoon,
-  CloudMoonRain,
-  CloudOff,
-  CloudRain,
-  CloudRainWind,
-  CloudSnow,
-  CloudSun,
-  CloudSunRain,
-  CloudUpload,
-  Cloudy,
-  Clover,
-  Club,
-  Code,
-  CodeXml,
-  Codepen,
-  Codesandbox,
-  Coffee,
-  Cog,
-  Coins,
-  Columns2,
-  Columns3,
-  Columns4,
-  Combine,
-  Command,
-  Compass,
-  Component,
-  Computer,
-  ConciergeBell,
-  Cone,
-  Construction,
-  Contact,
-  ContactRound,
-  Container,
-  Contrast,
-  Cookie,
-  CookingPot,
-  Copy,
-  CopyCheck,
-  CopyMinus,
-  CopyPlus,
-  CopySlash,
-  CopyX,
-  Copyleft,
-  Copyright,
-  CornerDownLeft,
-  CornerDownRight,
-  CornerLeftDown,
-  CornerLeftUp,
-  CornerRightDown,
-  CornerRightUp,
-  CornerUpLeft,
-  CornerUpRight,
-  Cpu,
-  CreativeCommons,
-  CreditCard,
-  Croissant,
-  Crop,
-  Cross,
-  Crosshair,
-  Crown,
-  Cuboid,
-  CupSoda,
-  Currency,
-  Cylinder,
-  Dam,
-  Database,
-  DatabaseBackup,
-  DatabaseZap,
-  Delete,
-  Dessert,
-  Diameter,
-  Diamond,
-  DiamondMinus,
-  DiamondPercent,
-  DiamondPlus,
-  Dice1,
-  Dice2,
-  Dice3,
-  Dice4,
-  Dice5,
-  Dice6,
-  Dices,
-  Diff,
-  Disc,
-  Disc2,
-  Disc3,
-  DiscAlbum,
-  Divide,
-  Dna,
-  DnaOff,
-  Dock,
-  Dog,
-  DollarSign,
-  Donut,
-  DoorClosed,
-  DoorOpen,
-  Dot,
-  Download,
-  DraftingCompass,
-  Drama,
-  Dribbble,
-  Drill,
-  Droplet,
-  DropletOff,
-  Droplets,
-  Drum,
-  Drumstick,
-  Dumbbell,
-  Ear,
-  EarOff,
-  Earth,
-  EarthLock,
-  Eclipse,
-  Egg,
-  EggFried,
-  EggOff,
-  Ellipsis,
-  EllipsisVertical,
-  Equal,
-  EqualApproximately,
-  EqualNot,
-  Eraser,
-  EthernetPort,
-  Euro,
-  Expand,
-  ExternalLink,
-  Eye,
-  EyeClosed,
-  EyeOff,
-  Facebook,
-  Factory,
-  Fan,
-  FastForward,
-  Feather,
-  Fence,
-  FerrisWheel,
-  Figma,
-  File,
-  FileArchive,
-  FileAudio,
-  FileAudio2,
-  FileAxis3d,
-  FileBadge,
-  FileBadge2,
-  FileBox,
-  FileChartColumn,
-  FileChartColumnIncreasing,
-  FileChartLine,
-  FileChartPie,
-  FileCheck,
-  FileCheck2,
-  FileClock,
-  FileCode,
-  FileCode2,
-  FileCog,
-  FileDiff,
-  FileDigit,
-  FileDown,
-  FileHeart,
-  FileImage,
-  FileInput,
-  FileJson,
-  FileJson2,
-  FileKey,
-  FileKey2,
-  FileLock,
-  FileLock2,
-  FileMinus,
-  FileMinus2,
-  FileMusic,
-  FileOutput,
-  FilePen,
-  FilePenLine,
-  FilePlus,
-  FilePlus2,
-  FileQuestion,
-  FileScan,
-  FileSearch,
-  FileSearch2,
-  FileSliders,
-  FileSpreadsheet,
-  FileStack,
-  FileSymlink,
-  FileTerminal,
-  FileText,
-  FileType,
-  FileType2,
-  FileUp,
-  FileUser,
-  FileVideo,
-  FileVideo2,
-  FileVolume,
-  FileVolume2,
-  FileWarning,
-  FileX,
-  FileX2,
-  Files,
-  Film,
-  Filter,
-  FilterX,
-  Fingerprint,
-  FireExtinguisher,
-  Fish,
-  FishOff,
-  FishSymbol,
-  Flag,
-  FlagOff,
-  FlagTriangleLeft,
-  FlagTriangleRight,
-  Flame,
-  FlameKindling,
-  Flashlight,
-  FlashlightOff,
-  FlaskConical,
-  FlaskConicalOff,
-  FlaskRound,
-  FlipHorizontal,
-  FlipHorizontal2,
-  FlipVertical,
-  FlipVertical2,
-  Flower,
-  Flower2,
-  Focus,
-  FoldHorizontal,
-  FoldVertical,
-  Folder,
-  FolderArchive,
-  FolderCheck,
-  FolderClock,
-  FolderClosed,
-  FolderCode,
-  FolderCog,
-  FolderDot,
-  FolderDown,
-  FolderGit,
-  FolderGit2,
-  FolderHeart,
-  FolderInput,
-  FolderKanban,
-  FolderKey,
-  FolderLock,
-  FolderMinus,
-  FolderOpen,
-  FolderOpenDot,
-  FolderOutput,
-  FolderPen,
-  FolderPlus,
-  FolderRoot,
-  FolderSearch,
-  FolderSearch2,
-  FolderSymlink,
-  FolderSync,
-  FolderTree,
-  FolderUp,
-  FolderX,
-  Folders,
-  Footprints,
-  Forklift,
-  Forward,
-  Frame,
-  Framer,
-  Frown,
-  Fuel,
-  Fullscreen,
-  GalleryHorizontal,
-  GalleryHorizontalEnd,
-  GalleryThumbnails,
-  GalleryVertical,
-  GalleryVerticalEnd,
-  Gamepad,
-  Gamepad2,
-  Gauge,
-  Gavel,
-  Gem,
-  Ghost,
-  Gift,
-  GitBranch,
-  GitBranchPlus,
-  GitCommitHorizontal,
-  GitCommitVertical,
-  GitCompare,
-  GitCompareArrows,
-  GitFork,
-  GitGraph,
-  GitMerge,
-  GitPullRequest,
-  GitPullRequestArrow,
-  GitPullRequestClosed,
-  GitPullRequestCreate,
-  GitPullRequestCreateArrow,
-  GitPullRequestDraft,
-  Github,
-  Gitlab,
-  GlassWater,
-  Glasses,
-  Globe,
-  GlobeLock,
-  Goal,
-  Grab,
-  GraduationCap,
-  Grape,
-  Grid2x2,
-  Grid2x2Check,
-  Grid2x2Plus,
-  Grid2x2X,
-  Grid3x3,
-  Grip,
-  GripHorizontal,
-  GripVertical,
-  Group,
-  Guitar,
-  Ham,
-  Hammer,
-  Hand,
-  HandCoins,
-  HandHeart,
-  HandHelping,
-  HandMetal,
-  HandPlatter,
-  Handshake,
-  HardDrive,
-  HardDriveDownload,
-  HardDriveUpload,
-  HardHat,
-  Hash,
-  Haze,
-  HdmiPort,
-  Heading,
-  Heading1,
-  Heading2,
-  Heading3,
-  Heading4,
-  Heading5,
-  Heading6,
-  HeadphoneOff,
-  Headphones,
-  Headset,
-  Heart,
-  HeartCrack,
-  HeartHandshake,
-  HeartOff,
-  HeartPulse,
-  Heater,
-  Hexagon,
-  Highlighter,
-  History,
-  Hop,
-  HopOff,
-  Hospital,
-  Hotel,
-  Hourglass,
-  House,
-  HousePlug,
-  HousePlus,
-  HouseWifi,
-  IceCreamBowl,
-  IceCreamCone,
-  IdCard,
-  Image,
-  ImageDown,
-  ImageMinus,
-  ImageOff,
-  ImagePlay,
-  ImagePlus,
-  ImageUp,
-  ImageUpscale,
-  Images,
-  Import,
-  Inbox,
-  IndentDecrease,
-  IndentIncrease,
-  IndianRupee,
-  InfinityIcon,
-  Info,
-  InspectionPanel,
-  Instagram,
-  Italic,
-  IterationCcw,
-  IterationCw,
-  JapaneseYen,
-  Joystick,
-  Kanban,
-  Key,
-  KeyRound,
-  KeySquare,
-  Keyboard,
-  KeyboardMusic,
-  KeyboardOff,
-  Lamp,
-  LampCeiling,
-  LampDesk,
-  LampFloor,
-  LampWallDown,
-  LampWallUp,
-  LandPlot,
-  Landmark,
-  Languages,
-  Laptop,
-  LaptopMinimal,
-  LaptopMinimalCheck,
-  Lasso,
-  LassoSelect,
-  Laugh,
-  Layers,
-  Layers2,
-  LayoutDashboard,
-  LayoutGrid,
-  LayoutList,
-  LayoutPanelLeft,
-  LayoutPanelTop,
-  LayoutTemplate,
-  Leaf,
-  LeafyGreen,
-  Lectern,
-  LetterText,
-  Library,
-  LibraryBig,
-  LifeBuoy,
-  Ligature,
-  Lightbulb,
-  LightbulbOff,
-  Link,
-  Link2,
-  Link2Off,
-  Linkedin,
-  List,
-  ListCheck,
-  ListChecks,
-  ListCollapse,
-  ListEnd,
-  ListFilter,
-  ListFilterPlus,
-  ListMinus,
-  ListMusic,
-  ListOrdered,
-  ListPlus,
-  ListRestart,
-  ListStart,
-  ListTodo,
-  ListTree,
-  ListVideo,
-  ListX,
-  Loader,
-  LoaderCircle,
-  LoaderPinwheel,
-  Locate,
-  LocateFixed,
-  LocateOff,
-  Lock,
-  LockKeyhole,
-  LockKeyholeOpen,
-  LockOpen,
-  LogIn,
-  LogOut,
-  Logs,
-  Lollipop,
-  Luggage,
-  Magnet,
-  Mail,
-  MailCheck,
-  MailMinus,
-  MailOpen,
-  MailPlus,
-  MailQuestion,
-  MailSearch,
-  MailWarning,
-  MailX,
-  Mailbox,
-  Mails,
-  Map,
-  MapPin,
-  MapPinCheck,
-  MapPinCheckInside,
-  MapPinHouse,
-  MapPinMinus,
-  MapPinMinusInside,
-  MapPinOff,
-  MapPinPlus,
-  MapPinPlusInside,
-  MapPinX,
-  MapPinXInside,
-  MapPinned,
-  MapPlus,
-  Mars,
-  MarsStroke,
-  Martini,
-  Maximize,
-  Maximize2,
-  Medal,
-  Megaphone,
-  MegaphoneOff,
-  Meh,
-  MemoryStick,
-  Menu,
-  Merge,
-  MessageCircle,
-  MessageCircleCode,
-  MessageCircleDashed,
-  MessageCircleHeart,
-  MessageCircleMore,
-  MessageCircleOff,
-  MessageCirclePlus,
-  MessageCircleQuestion,
-  MessageCircleReply,
-  MessageCircleWarning,
-  MessageCircleX,
-  MessageSquare,
-  MessageSquareCode,
-  MessageSquareDashed,
-  MessageSquareDiff,
-  MessageSquareDot,
-  MessageSquareHeart,
-  MessageSquareLock,
-  MessageSquareMore,
-  MessageSquareOff,
-  MessageSquarePlus,
-  MessageSquareQuote,
-  MessageSquareReply,
-  MessageSquareShare,
-  MessageSquareText,
-  MessageSquareWarning,
-  MessageSquareX,
-  MessagesSquare,
-  Mic,
-  MicOff,
-  MicVocal,
-  Microchip,
-  Microscope,
-  Microwave,
-  Milestone,
-  Milk,
-  MilkOff,
-  Minimize,
-  Minimize2,
-  Minus,
-  Monitor,
-  MonitorCheck,
-  MonitorCog,
-  MonitorDot,
-  MonitorDown,
-  MonitorOff,
-  MonitorPause,
-  MonitorPlay,
-  MonitorSmartphone,
-  MonitorSpeaker,
-  MonitorStop,
-  MonitorUp,
-  MonitorX,
-  Moon,
-  MoonStar,
-  Mountain,
-  MountainSnow,
-  Mouse,
-  MouseOff,
-  MousePointer,
-  MousePointer2,
-  MousePointerBan,
-  MousePointerClick,
-  Move,
-  Move3d,
-  MoveDiagonal,
-  MoveDiagonal2,
-  MoveDown,
-  MoveDownLeft,
-  MoveDownRight,
-  MoveHorizontal,
-  MoveLeft,
-  MoveRight,
-  MoveUp,
-  MoveUpLeft,
-  MoveUpRight,
-  MoveVertical,
-  Music,
-  Music2,
-  Music3,
-  Music4,
-  Navigation,
-  Navigation2,
-  Navigation2Off,
-  NavigationOff,
-  Network,
-  Newspaper,
-  Nfc,
-  NonBinary,
-  Notebook,
-  NotebookPen,
-  NotebookTabs,
-  NotebookText,
-  NotepadText,
-  NotepadTextDashed,
-  Nut,
-  NutOff,
-  Octagon,
-  OctagonAlert,
-  OctagonMinus,
-  OctagonPause,
-  OctagonX,
-  Omega,
-  Option,
-  Orbit,
-  Origami,
-  Package,
-  Package2,
-  PackageCheck,
-  PackageMinus,
-  PackageOpen,
-  PackagePlus,
-  PackageSearch,
-  PackageX,
-  PaintBucket,
-  PaintRoller,
-  Paintbrush,
-  PaintbrushVertical,
-  Palette,
-  PanelBottom,
-  PanelBottomClose,
-  PanelBottomDashed,
-  PanelBottomOpen,
-  PanelLeft,
-  PanelLeftClose,
-  PanelLeftDashed,
-  PanelLeftOpen,
-  PanelRight,
-  PanelRightClose,
-  PanelRightDashed,
-  PanelRightOpen,
-  PanelTop,
-  PanelTopClose,
-  PanelTopDashed,
-  PanelTopOpen,
-  PanelsLeftBottom,
-  PanelsRightBottom,
-  PanelsTopLeft,
-  Paperclip,
-  Parentheses,
-  ParkingMeter,
-  PartyPopper,
-  Pause,
-  PawPrint,
-  PcCase,
-  Pen,
-  PenLine,
-  PenOff,
-  PenTool,
-  Pencil,
-  PencilLine,
-  PencilOff,
-  PencilRuler,
-  Pentagon,
-  Percent,
-  PersonStanding,
-  PhilippinePeso,
-  Phone,
-  PhoneCall,
-  PhoneForwarded,
-  PhoneIncoming,
-  PhoneMissed,
-  PhoneOff,
-  PhoneOutgoing,
-  Pi,
-  Piano,
-  Pickaxe,
-  PictureInPicture,
-  PictureInPicture2,
-  PiggyBank,
-  Pilcrow,
-  PilcrowLeft,
-  PilcrowRight,
-  Pill,
-  PillBottle,
-  Pin,
-  PinOff,
-  Pipette,
-  Pizza,
-  Plane,
-  PlaneLanding,
-  PlaneTakeoff,
-  Play,
-  Plug,
-  Plug2,
-  PlugZap,
-  Plus,
-  Pocket,
-  PocketKnife,
-  Podcast,
-  Pointer,
-  PointerOff,
-  Popcorn,
-  Popsicle,
-  PoundSterling,
-  Power,
-  PowerOff,
-  Presentation,
-  Printer,
-  PrinterCheck,
-  Projector,
-  Proportions,
-  Puzzle,
-  Pyramid,
-  QrCode,
-  Quote,
-  Rabbit,
-  Radar,
-  Radiation,
-  Radical,
-  Radio,
-  RadioReceiver,
-  RadioTower,
-  Radius,
-  RailSymbol,
-  Rainbow,
-  Rat,
-  Ratio,
-  Receipt,
-  ReceiptCent,
-  ReceiptEuro,
-  ReceiptIndianRupee,
-  ReceiptJapaneseYen,
-  ReceiptPoundSterling,
-  ReceiptRussianRuble,
-  ReceiptSwissFranc,
-  ReceiptText,
-  RectangleEllipsis,
-  RectangleHorizontal,
-  RectangleVertical,
-  Recycle,
-  Redo,
-  Redo2,
-  RedoDot,
-  RefreshCcw,
-  RefreshCcwDot,
-  RefreshCw,
-  RefreshCwOff,
-  Refrigerator,
-  Regex,
-  RemoveFormatting,
-  Repeat,
-  Repeat1,
-  Repeat2,
-  Replace,
-  ReplaceAll,
-  Reply,
-  ReplyAll,
-  Rewind,
-  Ribbon,
-  Rocket,
-  RockingChair,
-  RollerCoaster,
-  Rotate3d,
-  RotateCcw,
-  RotateCcwSquare,
-  RotateCw,
-  RotateCwSquare,
-  Route,
-  RouteOff,
-  Router,
-  Rows2,
-  Rows3,
-  Rows4,
-  Rss,
-  Ruler,
-  RussianRuble,
-  Sailboat,
-  Salad,
-  Sandwich,
-  Satellite,
-  SatelliteDish,
-  Save,
-  SaveAll,
-  SaveOff,
-  Scale,
-  Scale3d,
-  Scaling,
-  Scan,
-  ScanBarcode,
-  ScanEye,
-  ScanFace,
-  ScanHeart,
-  ScanLine,
-  ScanQrCode,
-  ScanSearch,
-  ScanText,
-  School,
-  Scissors,
-  ScissorsLineDashed,
-  ScreenShare,
-  ScreenShareOff,
-  Scroll,
-  ScrollText,
-  Search,
-  SearchCheck,
-  SearchCode,
-  SearchSlash,
-  SearchX,
-  Section,
-  Send,
-  SendHorizontal,
-  SendToBack,
-  SeparatorHorizontal,
-  SeparatorVertical,
-  Server,
-  ServerCog,
-  ServerCrash,
-  ServerOff,
-  Settings,
-  Settings2,
-  Shapes,
-  Share,
-  Share2,
-  Sheet,
-  Shell,
-  Shield,
-  ShieldAlert,
-  ShieldBan,
-  ShieldCheck,
-  ShieldEllipsis,
-  ShieldHalf,
-  ShieldMinus,
-  ShieldOff,
-  ShieldPlus,
-  ShieldQuestion,
-  ShieldUser,
-  ShieldX,
-  Ship,
-  ShipWheel,
-  Shirt,
-  ShoppingBag,
-  ShoppingBasket,
-  ShoppingCart,
-  Shovel,
-  ShowerHead,
-  Shrink,
-  Shrub,
-  Shuffle,
-  Sigma,
-  Signal,
-  SignalHigh,
-  SignalLow,
-  SignalMedium,
-  SignalZero,
-  Signature,
-  Signpost,
-  SignpostBig,
-  Siren,
-  SkipBack,
-  SkipForward,
-  Skull,
-  Slack,
-  Slash,
-  Slice,
-  SlidersHorizontal,
-  SlidersVertical,
-  Smartphone,
-  SmartphoneCharging,
-  SmartphoneNfc,
-  Smile,
-  SmilePlus,
-  Snail,
-  Snowflake,
-  Sofa,
-  Soup,
-  Space,
-  Spade,
-  Sparkle,
-  Sparkles,
-  Speaker,
-  Speech,
-  SpellCheck,
-  SpellCheck2,
-  Spline,
-  Split,
-  SprayCan,
-  Sprout,
-  Square,
-  SquareActivity,
-  SquareArrowDown,
-  SquareArrowDownLeft,
-  SquareArrowDownRight,
-  SquareArrowLeft,
-  SquareArrowOutDownLeft,
-  SquareArrowOutDownRight,
-  SquareArrowOutUpLeft,
-  SquareArrowOutUpRight,
-  SquareArrowRight,
-  SquareArrowUp,
-  SquareArrowUpLeft,
-  SquareArrowUpRight,
-  SquareAsterisk,
-  SquareBottomDashedScissors,
-  SquareChartGantt,
-  SquareCheck,
-  SquareCheckBig,
-  SquareChevronDown,
-  SquareChevronLeft,
-  SquareChevronRight,
-  SquareChevronUp,
-  SquareCode,
-  SquareDashed,
-  SquareDashedBottom,
-  SquareDashedBottomCode,
-  SquareDashedKanban,
-  SquareDashedMousePointer,
-  SquareDivide,
-  SquareDot,
-  SquareEqual,
-  SquareFunction,
-  SquareKanban,
-  SquareLibrary,
-  SquareM,
-  SquareMenu,
-  SquareMinus,
-  SquareMousePointer,
-  SquareParking,
-  SquareParkingOff,
-  SquarePen,
-  SquarePercent,
-  SquarePi,
-  SquarePilcrow,
-  SquarePlay,
-  SquarePlus,
-  SquarePower,
-  SquareRadical,
-  SquareScissors,
-  SquareSigma,
-  SquareSlash,
-  SquareSplitHorizontal,
-  SquareSplitVertical,
-  SquareSquare,
-  SquareStack,
-  SquareTerminal,
-  SquareUser,
-  SquareUserRound,
-  SquareX,
-  Squircle,
-  Squirrel,
-  Stamp,
-  Star,
-  StarHalf,
-  StarOff,
-  StepBack,
-  StepForward,
-  Stethoscope,
-  Sticker,
-  StickyNote,
-  Store,
-  StretchHorizontal,
-  StretchVertical,
-  Strikethrough,
-  Subscript,
-  Sun,
-  SunDim,
-  SunMedium,
-  SunMoon,
-  SunSnow,
-  Sunrise,
-  Sunset,
-  Superscript,
-  SwatchBook,
-  SwissFranc,
-  SwitchCamera,
-  Sword,
-  Swords,
-  Syringe,
-  Table,
-  Table2,
-  TableCellsMerge,
-  TableCellsSplit,
-  TableColumnsSplit,
-  TableOfContents,
-  TableProperties,
-  TableRowsSplit,
-  Tablet,
-  TabletSmartphone,
-  Tablets,
-  Tag,
-  Tags,
-  Tally1,
-  Tally2,
-  Tally3,
-  Tally4,
-  Tally5,
-  Tangent,
-  Target,
-  Telescope,
-  Tent,
-  TentTree,
-  Terminal,
-  TestTube,
-  TestTubeDiagonal,
-  TestTubes,
-  Text,
-  TextCursor,
-  TextCursorInput,
-  TextQuote,
-  TextSearch,
-  TextSelect,
-  Theater,
-  Thermometer,
-  ThermometerSnowflake,
-  ThermometerSun,
-  ThumbsDown,
-  ThumbsUp,
-  Ticket,
-  TicketCheck,
-  TicketMinus,
-  TicketPercent,
-  TicketPlus,
-  TicketSlash,
-  TicketX,
-  Tickets,
-  TicketsPlane,
-  Timer,
-  TimerOff,
-  TimerReset,
-  ToggleLeft,
-  ToggleRight,
-  Toilet,
-  Tornado,
-  Torus,
-  Touchpad,
-  TouchpadOff,
-  TowerControl,
-  ToyBrick,
-  Tractor,
-  TrafficCone,
-  TrainFront,
-  TrainFrontTunnel,
-  TrainTrack,
-  TramFront,
-  Transgender,
-  Trash,
-  Trash2,
-  TreeDeciduous,
-  TreePalm,
-  TreePine,
-  Trees,
-  Trello,
-  TrendingDown,
-  TrendingUp,
-  TrendingUpDown,
-  Triangle,
-  TriangleAlert,
-  TriangleDashed,
-  TriangleRight,
-  Trophy,
-  Truck,
-  Turtle,
-  Tv,
-  TvMinimal,
-  TvMinimalPlay,
-  Twitch,
-  Twitter,
-  Type,
-  TypeOutline,
-  Umbrella,
-  UmbrellaOff,
-  Underline,
-  Undo,
-  Undo2,
-  UndoDot,
-  UnfoldHorizontal,
-  UnfoldVertical,
-  Ungroup,
-  University,
-  Unlink,
-  Unlink2,
-  Unplug,
-  Upload,
-  Usb,
-  User,
-  UserCheck,
-  UserCog,
-  UserMinus,
-  UserPen,
-  UserPlus,
-  UserRound,
-  UserRoundCheck,
-  UserRoundCog,
-  UserRoundMinus,
-  UserRoundPen,
-  UserRoundPlus,
-  UserRoundSearch,
-  UserRoundX,
-  UserSearch,
-  UserX,
-  Users,
-  UsersRound,
-  Utensils,
-  UtensilsCrossed,
-  UtilityPole,
-  Variable,
-  Vault,
-  Vegan,
-  VenetianMask,
-  Venus,
-  VenusAndMars,
-  Vibrate,
-  VibrateOff,
-  Video,
-  VideoOff,
-  Videotape,
-  View,
-  Voicemail,
-  Volleyball,
-  Volume,
-  Volume1,
-  Volume2,
-  VolumeOff,
-  VolumeX,
-  Vote,
-  Wallet,
-  WalletCards,
-  WalletMinimal,
-  Wallpaper,
-  Wand,
-  WandSparkles,
-  Warehouse,
-  WashingMachine,
-  Watch,
-  Waves,
-  WavesLadder,
-  Waypoints,
-  Webcam,
-  Webhook,
-  WebhookOff,
-  Weight,
-  Wheat,
-  WheatOff,
-  WholeWord,
-  Wifi,
-  WifiHigh,
-  WifiLow,
-  WifiOff,
-  WifiZero,
-  Wind,
-  WindArrowDown,
-  Wine,
-  WineOff,
-  Workflow,
-  Worm,
-  WrapText,
-  Wrench,
-  X,
-  Youtube,
-  Zap,
-  ZapOff,
-  ZoomIn,
-  ZoomOut
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+exports.AArrowDown = AArrowDown; exports.AArrowUp = AArrowUp; exports.ALargeSmall = ALargeSmall; exports.Accessibility = Accessibility; exports.Activity = Activity; exports.AirVent = AirVent; exports.Airplay = Airplay; exports.AlarmClock = AlarmClock; exports.AlarmClockCheck = AlarmClockCheck; exports.AlarmClockMinus = AlarmClockMinus; exports.AlarmClockOff = AlarmClockOff; exports.AlarmClockPlus = AlarmClockPlus; exports.AlarmSmoke = AlarmSmoke; exports.Album = Album; exports.AlignCenter = AlignCenter; exports.AlignCenterHorizontal = AlignCenterHorizontal; exports.AlignCenterVertical = AlignCenterVertical; exports.AlignEndHorizontal = AlignEndHorizontal; exports.AlignEndVertical = AlignEndVertical; exports.AlignHorizontalDistributeCenter = AlignHorizontalDistributeCenter; exports.AlignHorizontalDistributeEnd = AlignHorizontalDistributeEnd; exports.AlignHorizontalDistributeStart = AlignHorizontalDistributeStart; exports.AlignHorizontalJustifyCenter = AlignHorizontalJustifyCenter; exports.AlignHorizontalJustifyEnd = AlignHorizontalJustifyEnd; exports.AlignHorizontalJustifyStart = AlignHorizontalJustifyStart; exports.AlignHorizontalSpaceAround = AlignHorizontalSpaceAround; exports.AlignHorizontalSpaceBetween = AlignHorizontalSpaceBetween; exports.AlignJustify = AlignJustify; exports.AlignLeft = AlignLeft; exports.AlignRight = AlignRight; exports.AlignStartHorizontal = AlignStartHorizontal; exports.AlignStartVertical = AlignStartVertical; exports.AlignVerticalDistributeCenter = AlignVerticalDistributeCenter; exports.AlignVerticalDistributeEnd = AlignVerticalDistributeEnd; exports.AlignVerticalDistributeStart = AlignVerticalDistributeStart; exports.AlignVerticalJustifyCenter = AlignVerticalJustifyCenter; exports.AlignVerticalJustifyEnd = AlignVerticalJustifyEnd; exports.AlignVerticalJustifyStart = AlignVerticalJustifyStart; exports.AlignVerticalSpaceAround = AlignVerticalSpaceAround; exports.AlignVerticalSpaceBetween = AlignVerticalSpaceBetween; exports.Ambulance = Ambulance; exports.Ampersand = Ampersand; exports.Ampersands = Ampersands; exports.Amphora = Amphora; exports.Anchor = Anchor; exports.Angry = Angry; exports.Annoyed = Annoyed; exports.Antenna = Antenna; exports.Anvil = Anvil; exports.Aperture = Aperture; exports.AppWindow = AppWindow; exports.AppWindowMac = AppWindowMac; exports.Apple = Apple; exports.Archive = Archive; exports.ArchiveRestore = ArchiveRestore; exports.ArchiveX = ArchiveX; exports.Armchair = Armchair; exports.ArrowBigDown = ArrowBigDown; exports.ArrowBigDownDash = ArrowBigDownDash; exports.ArrowBigLeft = ArrowBigLeft; exports.ArrowBigLeftDash = ArrowBigLeftDash; exports.ArrowBigRight = ArrowBigRight; exports.ArrowBigRightDash = ArrowBigRightDash; exports.ArrowBigUp = ArrowBigUp; exports.ArrowBigUpDash = ArrowBigUpDash; exports.ArrowDown = ArrowDown; exports.ArrowDown01 = ArrowDown01; exports.ArrowDown10 = ArrowDown10; exports.ArrowDownAZ = ArrowDownAZ; exports.ArrowDownFromLine = ArrowDownFromLine; exports.ArrowDownLeft = ArrowDownLeft; exports.ArrowDownNarrowWide = ArrowDownNarrowWide; exports.ArrowDownRight = ArrowDownRight; exports.ArrowDownToDot = ArrowDownToDot; exports.ArrowDownToLine = ArrowDownToLine; exports.ArrowDownUp = ArrowDownUp; exports.ArrowDownWideNarrow = ArrowDownWideNarrow; exports.ArrowDownZA = ArrowDownZA; exports.ArrowLeft = ArrowLeft; exports.ArrowLeftFromLine = ArrowLeftFromLine; exports.ArrowLeftRight = ArrowLeftRight; exports.ArrowLeftToLine = ArrowLeftToLine; exports.ArrowRight = ArrowRight; exports.ArrowRightFromLine = ArrowRightFromLine; exports.ArrowRightLeft = ArrowRightLeft; exports.ArrowRightToLine = ArrowRightToLine; exports.ArrowUp = ArrowUp; exports.ArrowUp01 = ArrowUp01; exports.ArrowUp10 = ArrowUp10; exports.ArrowUpAZ = ArrowUpAZ; exports.ArrowUpDown = ArrowUpDown; exports.ArrowUpFromDot = ArrowUpFromDot; exports.ArrowUpFromLine = ArrowUpFromLine; exports.ArrowUpLeft = ArrowUpLeft; exports.ArrowUpNarrowWide = ArrowUpNarrowWide; exports.ArrowUpRight = ArrowUpRight; exports.ArrowUpToLine = ArrowUpToLine; exports.ArrowUpWideNarrow = ArrowUpWideNarrow; exports.ArrowUpZA = ArrowUpZA; exports.ArrowsUpFromLine = ArrowsUpFromLine; exports.Asterisk = Asterisk; exports.AtSign = AtSign; exports.Atom = Atom; exports.AudioLines = AudioLines; exports.AudioWaveform = AudioWaveform; exports.Award = Award; exports.Axe = Axe; exports.Axis3d = Axis3d; exports.Baby = Baby; exports.Backpack = Backpack; exports.Badge = Badge; exports.BadgeAlert = BadgeAlert; exports.BadgeCent = BadgeCent; exports.BadgeCheck = BadgeCheck; exports.BadgeDollarSign = BadgeDollarSign; exports.BadgeEuro = BadgeEuro; exports.BadgeHelp = BadgeHelp; exports.BadgeIndianRupee = BadgeIndianRupee; exports.BadgeInfo = BadgeInfo; exports.BadgeJapaneseYen = BadgeJapaneseYen; exports.BadgeMinus = BadgeMinus; exports.BadgePercent = BadgePercent; exports.BadgePlus = BadgePlus; exports.BadgePoundSterling = BadgePoundSterling; exports.BadgeRussianRuble = BadgeRussianRuble; exports.BadgeSwissFranc = BadgeSwissFranc; exports.BadgeX = BadgeX; exports.BaggageClaim = BaggageClaim; exports.Ban = Ban; exports.Banana = Banana; exports.Bandage = Bandage; exports.Banknote = Banknote; exports.Barcode = Barcode; exports.Baseline = Baseline; exports.Bath = Bath; exports.Battery = Battery; exports.BatteryCharging = BatteryCharging; exports.BatteryFull = BatteryFull; exports.BatteryLow = BatteryLow; exports.BatteryMedium = BatteryMedium; exports.BatteryPlus = BatteryPlus; exports.BatteryWarning = BatteryWarning; exports.Beaker = Beaker; exports.Bean = Bean; exports.BeanOff = BeanOff; exports.Bed = Bed; exports.BedDouble = BedDouble; exports.BedSingle = BedSingle; exports.Beef = Beef; exports.Beer = Beer; exports.BeerOff = BeerOff; exports.Bell = Bell; exports.BellDot = BellDot; exports.BellElectric = BellElectric; exports.BellMinus = BellMinus; exports.BellOff = BellOff; exports.BellPlus = BellPlus; exports.BellRing = BellRing; exports.BetweenHorizontalEnd = BetweenHorizontalEnd; exports.BetweenHorizontalStart = BetweenHorizontalStart; exports.BetweenVerticalEnd = BetweenVerticalEnd; exports.BetweenVerticalStart = BetweenVerticalStart; exports.BicepsFlexed = BicepsFlexed; exports.Bike = Bike; exports.Binary = Binary; exports.Binoculars = Binoculars; exports.Biohazard = Biohazard; exports.Bird = Bird; exports.Bitcoin = Bitcoin; exports.Blend = Blend; exports.Blinds = Blinds; exports.Blocks = Blocks; exports.Bluetooth = Bluetooth; exports.BluetoothConnected = BluetoothConnected; exports.BluetoothOff = BluetoothOff; exports.BluetoothSearching = BluetoothSearching; exports.Bold = Bold; exports.Bolt = Bolt; exports.Bomb = Bomb; exports.Bone = Bone; exports.Book = Book; exports.BookA = BookA; exports.BookAudio = BookAudio; exports.BookCheck = BookCheck; exports.BookCopy = BookCopy; exports.BookDashed = BookDashed; exports.BookDown = BookDown; exports.BookHeadphones = BookHeadphones; exports.BookHeart = BookHeart; exports.BookImage = BookImage; exports.BookKey = BookKey; exports.BookLock = BookLock; exports.BookMarked = BookMarked; exports.BookMinus = BookMinus; exports.BookOpen = BookOpen; exports.BookOpenCheck = BookOpenCheck; exports.BookOpenText = BookOpenText; exports.BookPlus = BookPlus; exports.BookText = BookText; exports.BookType = BookType; exports.BookUp = BookUp; exports.BookUp2 = BookUp2; exports.BookUser = BookUser; exports.BookX = BookX; exports.Bookmark = Bookmark; exports.BookmarkCheck = BookmarkCheck; exports.BookmarkMinus = BookmarkMinus; exports.BookmarkPlus = BookmarkPlus; exports.BookmarkX = BookmarkX; exports.BoomBox = BoomBox; exports.Bot = Bot; exports.BotMessageSquare = BotMessageSquare; exports.BotOff = BotOff; exports.Box = Box; exports.Boxes = Boxes; exports.Braces = Braces; exports.Brackets = Brackets; exports.Brain = Brain; exports.BrainCircuit = BrainCircuit; exports.BrainCog = BrainCog; exports.BrickWall = BrickWall; exports.Briefcase = Briefcase; exports.BriefcaseBusiness = BriefcaseBusiness; exports.BriefcaseConveyorBelt = BriefcaseConveyorBelt; exports.BriefcaseMedical = BriefcaseMedical; exports.BringToFront = BringToFront; exports.Brush = Brush; exports.Bug = Bug; exports.BugOff = BugOff; exports.BugPlay = BugPlay; exports.Building = Building; exports.Building2 = Building2; exports.Bus = Bus; exports.BusFront = BusFront; exports.Cable = Cable; exports.CableCar = CableCar; exports.Cake = Cake; exports.CakeSlice = CakeSlice; exports.Calculator = Calculator; exports.Calendar = Calendar; exports.Calendar1 = Calendar1; exports.CalendarArrowDown = CalendarArrowDown; exports.CalendarArrowUp = CalendarArrowUp; exports.CalendarCheck = CalendarCheck; exports.CalendarCheck2 = CalendarCheck2; exports.CalendarClock = CalendarClock; exports.CalendarCog = CalendarCog; exports.CalendarDays = CalendarDays; exports.CalendarFold = CalendarFold; exports.CalendarHeart = CalendarHeart; exports.CalendarMinus = CalendarMinus; exports.CalendarMinus2 = CalendarMinus2; exports.CalendarOff = CalendarOff; exports.CalendarPlus = CalendarPlus; exports.CalendarPlus2 = CalendarPlus2; exports.CalendarRange = CalendarRange; exports.CalendarSearch = CalendarSearch; exports.CalendarSync = CalendarSync; exports.CalendarX = CalendarX; exports.CalendarX2 = CalendarX2; exports.Camera = Camera; exports.CameraOff = CameraOff; exports.Candy = Candy; exports.CandyCane = CandyCane; exports.CandyOff = CandyOff; exports.Cannabis = Cannabis; exports.Captions = Captions; exports.CaptionsOff = CaptionsOff; exports.Car = Car; exports.CarFront = CarFront; exports.CarTaxiFront = CarTaxiFront; exports.Caravan = Caravan; exports.Carrot = Carrot; exports.CaseLower = CaseLower; exports.CaseSensitive = CaseSensitive; exports.CaseUpper = CaseUpper; exports.CassetteTape = CassetteTape; exports.Cast = Cast; exports.Castle = Castle; exports.Cat = Cat; exports.Cctv = Cctv; exports.ChartArea = ChartArea; exports.ChartBar = ChartBar; exports.ChartBarBig = ChartBarBig; exports.ChartBarDecreasing = ChartBarDecreasing; exports.ChartBarIncreasing = ChartBarIncreasing; exports.ChartBarStacked = ChartBarStacked; exports.ChartCandlestick = ChartCandlestick; exports.ChartColumn = ChartColumn; exports.ChartColumnBig = ChartColumnBig; exports.ChartColumnDecreasing = ChartColumnDecreasing; exports.ChartColumnIncreasing = ChartColumnIncreasing; exports.ChartColumnStacked = ChartColumnStacked; exports.ChartGantt = ChartGantt; exports.ChartLine = ChartLine; exports.ChartNetwork = ChartNetwork; exports.ChartNoAxesColumn = ChartNoAxesColumn; exports.ChartNoAxesColumnDecreasing = ChartNoAxesColumnDecreasing; exports.ChartNoAxesColumnIncreasing = ChartNoAxesColumnIncreasing; exports.ChartNoAxesCombined = ChartNoAxesCombined; exports.ChartNoAxesGantt = ChartNoAxesGantt; exports.ChartPie = ChartPie; exports.ChartScatter = ChartScatter; exports.ChartSpline = ChartSpline; exports.Check = Check; exports.CheckCheck = CheckCheck; exports.ChefHat = ChefHat; exports.Cherry = Cherry; exports.ChevronDown = ChevronDown; exports.ChevronFirst = ChevronFirst; exports.ChevronLast = ChevronLast; exports.ChevronLeft = ChevronLeft; exports.ChevronRight = ChevronRight; exports.ChevronUp = ChevronUp; exports.ChevronsDown = ChevronsDown; exports.ChevronsDownUp = ChevronsDownUp; exports.ChevronsLeft = ChevronsLeft; exports.ChevronsLeftRight = ChevronsLeftRight; exports.ChevronsLeftRightEllipsis = ChevronsLeftRightEllipsis; exports.ChevronsRight = ChevronsRight; exports.ChevronsRightLeft = ChevronsRightLeft; exports.ChevronsUp = ChevronsUp; exports.ChevronsUpDown = ChevronsUpDown; exports.Chrome = Chrome; exports.Church = Church; exports.Cigarette = Cigarette; exports.CigaretteOff = CigaretteOff; exports.Circle = Circle; exports.CircleAlert = CircleAlert; exports.CircleArrowDown = CircleArrowDown; exports.CircleArrowLeft = CircleArrowLeft; exports.CircleArrowOutDownLeft = CircleArrowOutDownLeft; exports.CircleArrowOutDownRight = CircleArrowOutDownRight; exports.CircleArrowOutUpLeft = CircleArrowOutUpLeft; exports.CircleArrowOutUpRight = CircleArrowOutUpRight; exports.CircleArrowRight = CircleArrowRight; exports.CircleArrowUp = CircleArrowUp; exports.CircleCheck = CircleCheck; exports.CircleCheckBig = CircleCheckBig; exports.CircleChevronDown = CircleChevronDown; exports.CircleChevronLeft = CircleChevronLeft; exports.CircleChevronRight = CircleChevronRight; exports.CircleChevronUp = CircleChevronUp; exports.CircleDashed = CircleDashed; exports.CircleDivide = CircleDivide; exports.CircleDollarSign = CircleDollarSign; exports.CircleDot = CircleDot; exports.CircleDotDashed = CircleDotDashed; exports.CircleEllipsis = CircleEllipsis; exports.CircleEqual = CircleEqual; exports.CircleFadingArrowUp = CircleFadingArrowUp; exports.CircleFadingPlus = CircleFadingPlus; exports.CircleGauge = CircleGauge; exports.CircleHelp = CircleHelp; exports.CircleMinus = CircleMinus; exports.CircleOff = CircleOff; exports.CircleParking = CircleParking; exports.CircleParkingOff = CircleParkingOff; exports.CirclePause = CirclePause; exports.CirclePercent = CirclePercent; exports.CirclePlay = CirclePlay; exports.CirclePlus = CirclePlus; exports.CirclePower = CirclePower; exports.CircleSlash = CircleSlash; exports.CircleSlash2 = CircleSlash2; exports.CircleSmall = CircleSmall; exports.CircleStop = CircleStop; exports.CircleUser = CircleUser; exports.CircleUserRound = CircleUserRound; exports.CircleX = CircleX; exports.CircuitBoard = CircuitBoard; exports.Citrus = Citrus; exports.Clapperboard = Clapperboard; exports.Clipboard = Clipboard; exports.ClipboardCheck = ClipboardCheck; exports.ClipboardCopy = ClipboardCopy; exports.ClipboardList = ClipboardList; exports.ClipboardMinus = ClipboardMinus; exports.ClipboardPaste = ClipboardPaste; exports.ClipboardPen = ClipboardPen; exports.ClipboardPenLine = ClipboardPenLine; exports.ClipboardPlus = ClipboardPlus; exports.ClipboardType = ClipboardType; exports.ClipboardX = ClipboardX; exports.Clock = Clock; exports.Clock1 = Clock1; exports.Clock10 = Clock10; exports.Clock11 = Clock11; exports.Clock12 = Clock12; exports.Clock2 = Clock2; exports.Clock3 = Clock3; exports.Clock4 = Clock4; exports.Clock5 = Clock5; exports.Clock6 = Clock6; exports.Clock7 = Clock7; exports.Clock8 = Clock8; exports.Clock9 = Clock9; exports.ClockAlert = ClockAlert; exports.ClockArrowDown = ClockArrowDown; exports.ClockArrowUp = ClockArrowUp; exports.Cloud = Cloud; exports.CloudAlert = CloudAlert; exports.CloudCog = CloudCog; exports.CloudDownload = CloudDownload; exports.CloudDrizzle = CloudDrizzle; exports.CloudFog = CloudFog; exports.CloudHail = CloudHail; exports.CloudLightning = CloudLightning; exports.CloudMoon = CloudMoon; exports.CloudMoonRain = CloudMoonRain; exports.CloudOff = CloudOff; exports.CloudRain = CloudRain; exports.CloudRainWind = CloudRainWind; exports.CloudSnow = CloudSnow; exports.CloudSun = CloudSun; exports.CloudSunRain = CloudSunRain; exports.CloudUpload = CloudUpload; exports.Cloudy = Cloudy; exports.Clover = Clover; exports.Club = Club; exports.Code = Code; exports.CodeXml = CodeXml; exports.Codepen = Codepen; exports.Codesandbox = Codesandbox; exports.Coffee = Coffee; exports.Cog = Cog; exports.Coins = Coins; exports.Columns2 = Columns2; exports.Columns3 = Columns3; exports.Columns4 = Columns4; exports.Combine = Combine; exports.Command = Command; exports.Compass = Compass; exports.Component = Component; exports.Computer = Computer; exports.ConciergeBell = ConciergeBell; exports.Cone = Cone; exports.Construction = Construction; exports.Contact = Contact; exports.ContactRound = ContactRound; exports.Container = Container; exports.Contrast = Contrast; exports.Cookie = Cookie; exports.CookingPot = CookingPot; exports.Copy = Copy; exports.CopyCheck = CopyCheck; exports.CopyMinus = CopyMinus; exports.CopyPlus = CopyPlus; exports.CopySlash = CopySlash; exports.CopyX = CopyX; exports.Copyleft = Copyleft; exports.Copyright = Copyright; exports.CornerDownLeft = CornerDownLeft; exports.CornerDownRight = CornerDownRight; exports.CornerLeftDown = CornerLeftDown; exports.CornerLeftUp = CornerLeftUp; exports.CornerRightDown = CornerRightDown; exports.CornerRightUp = CornerRightUp; exports.CornerUpLeft = CornerUpLeft; exports.CornerUpRight = CornerUpRight; exports.Cpu = Cpu; exports.CreativeCommons = CreativeCommons; exports.CreditCard = CreditCard; exports.Croissant = Croissant; exports.Crop = Crop; exports.Cross = Cross; exports.Crosshair = Crosshair; exports.Crown = Crown; exports.Cuboid = Cuboid; exports.CupSoda = CupSoda; exports.Currency = Currency; exports.Cylinder = Cylinder; exports.Dam = Dam; exports.Database = Database; exports.DatabaseBackup = DatabaseBackup; exports.DatabaseZap = DatabaseZap; exports.Delete = Delete; exports.Dessert = Dessert; exports.Diameter = Diameter; exports.Diamond = Diamond; exports.DiamondMinus = DiamondMinus; exports.DiamondPercent = DiamondPercent; exports.DiamondPlus = DiamondPlus; exports.Dice1 = Dice1; exports.Dice2 = Dice2; exports.Dice3 = Dice3; exports.Dice4 = Dice4; exports.Dice5 = Dice5; exports.Dice6 = Dice6; exports.Dices = Dices; exports.Diff = Diff; exports.Disc = Disc; exports.Disc2 = Disc2; exports.Disc3 = Disc3; exports.DiscAlbum = DiscAlbum; exports.Divide = Divide; exports.Dna = Dna; exports.DnaOff = DnaOff; exports.Dock = Dock; exports.Dog = Dog; exports.DollarSign = DollarSign; exports.Donut = Donut; exports.DoorClosed = DoorClosed; exports.DoorOpen = DoorOpen; exports.Dot = Dot; exports.Download = Download; exports.DraftingCompass = DraftingCompass; exports.Drama = Drama; exports.Dribbble = Dribbble; exports.Drill = Drill; exports.Droplet = Droplet; exports.DropletOff = DropletOff; exports.Droplets = Droplets; exports.Drum = Drum; exports.Drumstick = Drumstick; exports.Dumbbell = Dumbbell; exports.Ear = Ear; exports.EarOff = EarOff; exports.Earth = Earth; exports.EarthLock = EarthLock; exports.Eclipse = Eclipse; exports.Egg = Egg; exports.EggFried = EggFried; exports.EggOff = EggOff; exports.Ellipsis = Ellipsis; exports.EllipsisVertical = EllipsisVertical; exports.Equal = Equal; exports.EqualApproximately = EqualApproximately; exports.EqualNot = EqualNot; exports.Eraser = Eraser; exports.EthernetPort = EthernetPort; exports.Euro = Euro; exports.Expand = Expand; exports.ExternalLink = ExternalLink; exports.Eye = Eye; exports.EyeClosed = EyeClosed; exports.EyeOff = EyeOff; exports.Facebook = Facebook; exports.Factory = Factory; exports.Fan = Fan; exports.FastForward = FastForward; exports.Feather = Feather; exports.Fence = Fence; exports.FerrisWheel = FerrisWheel; exports.Figma = Figma; exports.File = File; exports.FileArchive = FileArchive; exports.FileAudio = FileAudio; exports.FileAudio2 = FileAudio2; exports.FileAxis3d = FileAxis3d; exports.FileBadge = FileBadge; exports.FileBadge2 = FileBadge2; exports.FileBox = FileBox; exports.FileChartColumn = FileChartColumn; exports.FileChartColumnIncreasing = FileChartColumnIncreasing; exports.FileChartLine = FileChartLine; exports.FileChartPie = FileChartPie; exports.FileCheck = FileCheck; exports.FileCheck2 = FileCheck2; exports.FileClock = FileClock; exports.FileCode = FileCode; exports.FileCode2 = FileCode2; exports.FileCog = FileCog; exports.FileDiff = FileDiff; exports.FileDigit = FileDigit; exports.FileDown = FileDown; exports.FileHeart = FileHeart; exports.FileImage = FileImage; exports.FileInput = FileInput; exports.FileJson = FileJson; exports.FileJson2 = FileJson2; exports.FileKey = FileKey; exports.FileKey2 = FileKey2; exports.FileLock = FileLock; exports.FileLock2 = FileLock2; exports.FileMinus = FileMinus; exports.FileMinus2 = FileMinus2; exports.FileMusic = FileMusic; exports.FileOutput = FileOutput; exports.FilePen = FilePen; exports.FilePenLine = FilePenLine; exports.FilePlus = FilePlus; exports.FilePlus2 = FilePlus2; exports.FileQuestion = FileQuestion; exports.FileScan = FileScan; exports.FileSearch = FileSearch; exports.FileSearch2 = FileSearch2; exports.FileSliders = FileSliders; exports.FileSpreadsheet = FileSpreadsheet; exports.FileStack = FileStack; exports.FileSymlink = FileSymlink; exports.FileTerminal = FileTerminal; exports.FileText = FileText; exports.FileType = FileType; exports.FileType2 = FileType2; exports.FileUp = FileUp; exports.FileUser = FileUser; exports.FileVideo = FileVideo; exports.FileVideo2 = FileVideo2; exports.FileVolume = FileVolume; exports.FileVolume2 = FileVolume2; exports.FileWarning = FileWarning; exports.FileX = FileX; exports.FileX2 = FileX2; exports.Files = Files; exports.Film = Film; exports.Filter = Filter; exports.FilterX = FilterX; exports.Fingerprint = Fingerprint; exports.FireExtinguisher = FireExtinguisher; exports.Fish = Fish; exports.FishOff = FishOff; exports.FishSymbol = FishSymbol; exports.Flag = Flag; exports.FlagOff = FlagOff; exports.FlagTriangleLeft = FlagTriangleLeft; exports.FlagTriangleRight = FlagTriangleRight; exports.Flame = Flame; exports.FlameKindling = FlameKindling; exports.Flashlight = Flashlight; exports.FlashlightOff = FlashlightOff; exports.FlaskConical = FlaskConical; exports.FlaskConicalOff = FlaskConicalOff; exports.FlaskRound = FlaskRound; exports.FlipHorizontal = FlipHorizontal; exports.FlipHorizontal2 = FlipHorizontal2; exports.FlipVertical = FlipVertical; exports.FlipVertical2 = FlipVertical2; exports.Flower = Flower; exports.Flower2 = Flower2; exports.Focus = Focus; exports.FoldHorizontal = FoldHorizontal; exports.FoldVertical = FoldVertical; exports.Folder = Folder; exports.FolderArchive = FolderArchive; exports.FolderCheck = FolderCheck; exports.FolderClock = FolderClock; exports.FolderClosed = FolderClosed; exports.FolderCode = FolderCode; exports.FolderCog = FolderCog; exports.FolderDot = FolderDot; exports.FolderDown = FolderDown; exports.FolderGit = FolderGit; exports.FolderGit2 = FolderGit2; exports.FolderHeart = FolderHeart; exports.FolderInput = FolderInput; exports.FolderKanban = FolderKanban; exports.FolderKey = FolderKey; exports.FolderLock = FolderLock; exports.FolderMinus = FolderMinus; exports.FolderOpen = FolderOpen; exports.FolderOpenDot = FolderOpenDot; exports.FolderOutput = FolderOutput; exports.FolderPen = FolderPen; exports.FolderPlus = FolderPlus; exports.FolderRoot = FolderRoot; exports.FolderSearch = FolderSearch; exports.FolderSearch2 = FolderSearch2; exports.FolderSymlink = FolderSymlink; exports.FolderSync = FolderSync; exports.FolderTree = FolderTree; exports.FolderUp = FolderUp; exports.FolderX = FolderX; exports.Folders = Folders; exports.Footprints = Footprints; exports.Forklift = Forklift; exports.Forward = Forward; exports.Frame = Frame; exports.Framer = Framer; exports.Frown = Frown; exports.Fuel = Fuel; exports.Fullscreen = Fullscreen; exports.GalleryHorizontal = GalleryHorizontal; exports.GalleryHorizontalEnd = GalleryHorizontalEnd; exports.GalleryThumbnails = GalleryThumbnails; exports.GalleryVertical = GalleryVertical; exports.GalleryVerticalEnd = GalleryVerticalEnd; exports.Gamepad = Gamepad; exports.Gamepad2 = Gamepad2; exports.Gauge = Gauge; exports.Gavel = Gavel; exports.Gem = Gem; exports.Ghost = Ghost; exports.Gift = Gift; exports.GitBranch = GitBranch; exports.GitBranchPlus = GitBranchPlus; exports.GitCommitHorizontal = GitCommitHorizontal; exports.GitCommitVertical = GitCommitVertical; exports.GitCompare = GitCompare; exports.GitCompareArrows = GitCompareArrows; exports.GitFork = GitFork; exports.GitGraph = GitGraph; exports.GitMerge = GitMerge; exports.GitPullRequest = GitPullRequest; exports.GitPullRequestArrow = GitPullRequestArrow; exports.GitPullRequestClosed = GitPullRequestClosed; exports.GitPullRequestCreate = GitPullRequestCreate; exports.GitPullRequestCreateArrow = GitPullRequestCreateArrow; exports.GitPullRequestDraft = GitPullRequestDraft; exports.Github = Github; exports.Gitlab = Gitlab; exports.GlassWater = GlassWater; exports.Glasses = Glasses; exports.Globe = Globe; exports.GlobeLock = GlobeLock; exports.Goal = Goal; exports.Grab = Grab; exports.GraduationCap = GraduationCap; exports.Grape = Grape; exports.Grid2x2 = Grid2x2; exports.Grid2x2Check = Grid2x2Check; exports.Grid2x2Plus = Grid2x2Plus; exports.Grid2x2X = Grid2x2X; exports.Grid3x3 = Grid3x3; exports.Grip = Grip; exports.GripHorizontal = GripHorizontal; exports.GripVertical = GripVertical; exports.Group = Group; exports.Guitar = Guitar; exports.Ham = Ham; exports.Hammer = Hammer; exports.Hand = Hand; exports.HandCoins = HandCoins; exports.HandHeart = HandHeart; exports.HandHelping = HandHelping; exports.HandMetal = HandMetal; exports.HandPlatter = HandPlatter; exports.Handshake = Handshake; exports.HardDrive = HardDrive; exports.HardDriveDownload = HardDriveDownload; exports.HardDriveUpload = HardDriveUpload; exports.HardHat = HardHat; exports.Hash = Hash; exports.Haze = Haze; exports.HdmiPort = HdmiPort; exports.Heading = Heading; exports.Heading1 = Heading1; exports.Heading2 = Heading2; exports.Heading3 = Heading3; exports.Heading4 = Heading4; exports.Heading5 = Heading5; exports.Heading6 = Heading6; exports.HeadphoneOff = HeadphoneOff; exports.Headphones = Headphones; exports.Headset = Headset; exports.Heart = Heart; exports.HeartCrack = HeartCrack; exports.HeartHandshake = HeartHandshake; exports.HeartOff = HeartOff; exports.HeartPulse = HeartPulse; exports.Heater = Heater; exports.Hexagon = Hexagon; exports.Highlighter = Highlighter; exports.History = History; exports.Hop = Hop; exports.HopOff = HopOff; exports.Hospital = Hospital; exports.Hotel = Hotel; exports.Hourglass = Hourglass; exports.House = House; exports.HousePlug = HousePlug; exports.HousePlus = HousePlus; exports.HouseWifi = HouseWifi; exports.IceCreamBowl = IceCreamBowl; exports.IceCreamCone = IceCreamCone; exports.IdCard = IdCard; exports.Image = Image; exports.ImageDown = ImageDown; exports.ImageMinus = ImageMinus; exports.ImageOff = ImageOff; exports.ImagePlay = ImagePlay; exports.ImagePlus = ImagePlus; exports.ImageUp = ImageUp; exports.ImageUpscale = ImageUpscale; exports.Images = Images; exports.Import = Import; exports.Inbox = Inbox; exports.IndentDecrease = IndentDecrease; exports.IndentIncrease = IndentIncrease; exports.IndianRupee = IndianRupee; exports.InfinityIcon = InfinityIcon; exports.Info = Info; exports.InspectionPanel = InspectionPanel; exports.Instagram = Instagram; exports.Italic = Italic; exports.IterationCcw = IterationCcw; exports.IterationCw = IterationCw; exports.JapaneseYen = JapaneseYen; exports.Joystick = Joystick; exports.Kanban = Kanban; exports.Key = Key; exports.KeyRound = KeyRound; exports.KeySquare = KeySquare; exports.Keyboard = Keyboard; exports.KeyboardMusic = KeyboardMusic; exports.KeyboardOff = KeyboardOff; exports.Lamp = Lamp; exports.LampCeiling = LampCeiling; exports.LampDesk = LampDesk; exports.LampFloor = LampFloor; exports.LampWallDown = LampWallDown; exports.LampWallUp = LampWallUp; exports.LandPlot = LandPlot; exports.Landmark = Landmark; exports.Languages = Languages; exports.Laptop = Laptop; exports.LaptopMinimal = LaptopMinimal; exports.LaptopMinimalCheck = LaptopMinimalCheck; exports.Lasso = Lasso; exports.LassoSelect = LassoSelect; exports.Laugh = Laugh; exports.Layers = Layers; exports.Layers2 = Layers2; exports.LayoutDashboard = LayoutDashboard; exports.LayoutGrid = LayoutGrid; exports.LayoutList = LayoutList; exports.LayoutPanelLeft = LayoutPanelLeft; exports.LayoutPanelTop = LayoutPanelTop; exports.LayoutTemplate = LayoutTemplate; exports.Leaf = Leaf; exports.LeafyGreen = LeafyGreen; exports.Lectern = Lectern; exports.LetterText = LetterText; exports.Library = Library; exports.LibraryBig = LibraryBig; exports.LifeBuoy = LifeBuoy; exports.Ligature = Ligature; exports.Lightbulb = Lightbulb; exports.LightbulbOff = LightbulbOff; exports.Link = Link; exports.Link2 = Link2; exports.Link2Off = Link2Off; exports.Linkedin = Linkedin; exports.List = List; exports.ListCheck = ListCheck; exports.ListChecks = ListChecks; exports.ListCollapse = ListCollapse; exports.ListEnd = ListEnd; exports.ListFilter = ListFilter; exports.ListFilterPlus = ListFilterPlus; exports.ListMinus = ListMinus; exports.ListMusic = ListMusic; exports.ListOrdered = ListOrdered; exports.ListPlus = ListPlus; exports.ListRestart = ListRestart; exports.ListStart = ListStart; exports.ListTodo = ListTodo; exports.ListTree = ListTree; exports.ListVideo = ListVideo; exports.ListX = ListX; exports.Loader = Loader; exports.LoaderCircle = LoaderCircle; exports.LoaderPinwheel = LoaderPinwheel; exports.Locate = Locate; exports.LocateFixed = LocateFixed; exports.LocateOff = LocateOff; exports.Lock = Lock; exports.LockKeyhole = LockKeyhole; exports.LockKeyholeOpen = LockKeyholeOpen; exports.LockOpen = LockOpen; exports.LogIn = LogIn; exports.LogOut = LogOut; exports.Logs = Logs; exports.Lollipop = Lollipop; exports.Luggage = Luggage; exports.Magnet = Magnet; exports.Mail = Mail; exports.MailCheck = MailCheck; exports.MailMinus = MailMinus; exports.MailOpen = MailOpen; exports.MailPlus = MailPlus; exports.MailQuestion = MailQuestion; exports.MailSearch = MailSearch; exports.MailWarning = MailWarning; exports.MailX = MailX; exports.Mailbox = Mailbox; exports.Mails = Mails; exports.Map = Map; exports.MapPin = MapPin; exports.MapPinCheck = MapPinCheck; exports.MapPinCheckInside = MapPinCheckInside; exports.MapPinHouse = MapPinHouse; exports.MapPinMinus = MapPinMinus; exports.MapPinMinusInside = MapPinMinusInside; exports.MapPinOff = MapPinOff; exports.MapPinPlus = MapPinPlus; exports.MapPinPlusInside = MapPinPlusInside; exports.MapPinX = MapPinX; exports.MapPinXInside = MapPinXInside; exports.MapPinned = MapPinned; exports.MapPlus = MapPlus; exports.Mars = Mars; exports.MarsStroke = MarsStroke; exports.Martini = Martini; exports.Maximize = Maximize; exports.Maximize2 = Maximize2; exports.Medal = Medal; exports.Megaphone = Megaphone; exports.MegaphoneOff = MegaphoneOff; exports.Meh = Meh; exports.MemoryStick = MemoryStick; exports.Menu = Menu; exports.Merge = Merge; exports.MessageCircle = MessageCircle; exports.MessageCircleCode = MessageCircleCode; exports.MessageCircleDashed = MessageCircleDashed; exports.MessageCircleHeart = MessageCircleHeart; exports.MessageCircleMore = MessageCircleMore; exports.MessageCircleOff = MessageCircleOff; exports.MessageCirclePlus = MessageCirclePlus; exports.MessageCircleQuestion = MessageCircleQuestion; exports.MessageCircleReply = MessageCircleReply; exports.MessageCircleWarning = MessageCircleWarning; exports.MessageCircleX = MessageCircleX; exports.MessageSquare = MessageSquare; exports.MessageSquareCode = MessageSquareCode; exports.MessageSquareDashed = MessageSquareDashed; exports.MessageSquareDiff = MessageSquareDiff; exports.MessageSquareDot = MessageSquareDot; exports.MessageSquareHeart = MessageSquareHeart; exports.MessageSquareLock = MessageSquareLock; exports.MessageSquareMore = MessageSquareMore; exports.MessageSquareOff = MessageSquareOff; exports.MessageSquarePlus = MessageSquarePlus; exports.MessageSquareQuote = MessageSquareQuote; exports.MessageSquareReply = MessageSquareReply; exports.MessageSquareShare = MessageSquareShare; exports.MessageSquareText = MessageSquareText; exports.MessageSquareWarning = MessageSquareWarning; exports.MessageSquareX = MessageSquareX; exports.MessagesSquare = MessagesSquare; exports.Mic = Mic; exports.MicOff = MicOff; exports.MicVocal = MicVocal; exports.Microchip = Microchip; exports.Microscope = Microscope; exports.Microwave = Microwave; exports.Milestone = Milestone; exports.Milk = Milk; exports.MilkOff = MilkOff; exports.Minimize = Minimize; exports.Minimize2 = Minimize2; exports.Minus = Minus; exports.Monitor = Monitor; exports.MonitorCheck = MonitorCheck; exports.MonitorCog = MonitorCog; exports.MonitorDot = MonitorDot; exports.MonitorDown = MonitorDown; exports.MonitorOff = MonitorOff; exports.MonitorPause = MonitorPause; exports.MonitorPlay = MonitorPlay; exports.MonitorSmartphone = MonitorSmartphone; exports.MonitorSpeaker = MonitorSpeaker; exports.MonitorStop = MonitorStop; exports.MonitorUp = MonitorUp; exports.MonitorX = MonitorX; exports.Moon = Moon; exports.MoonStar = MoonStar; exports.Mountain = Mountain; exports.MountainSnow = MountainSnow; exports.Mouse = Mouse; exports.MouseOff = MouseOff; exports.MousePointer = MousePointer; exports.MousePointer2 = MousePointer2; exports.MousePointerBan = MousePointerBan; exports.MousePointerClick = MousePointerClick; exports.Move = Move; exports.Move3d = Move3d; exports.MoveDiagonal = MoveDiagonal; exports.MoveDiagonal2 = MoveDiagonal2; exports.MoveDown = MoveDown; exports.MoveDownLeft = MoveDownLeft; exports.MoveDownRight = MoveDownRight; exports.MoveHorizontal = MoveHorizontal; exports.MoveLeft = MoveLeft; exports.MoveRight = MoveRight; exports.MoveUp = MoveUp; exports.MoveUpLeft = MoveUpLeft; exports.MoveUpRight = MoveUpRight; exports.MoveVertical = MoveVertical; exports.Music = Music; exports.Music2 = Music2; exports.Music3 = Music3; exports.Music4 = Music4; exports.Navigation = Navigation; exports.Navigation2 = Navigation2; exports.Navigation2Off = Navigation2Off; exports.NavigationOff = NavigationOff; exports.Network = Network; exports.Newspaper = Newspaper; exports.Nfc = Nfc; exports.NonBinary = NonBinary; exports.Notebook = Notebook; exports.NotebookPen = NotebookPen; exports.NotebookTabs = NotebookTabs; exports.NotebookText = NotebookText; exports.NotepadText = NotepadText; exports.NotepadTextDashed = NotepadTextDashed; exports.Nut = Nut; exports.NutOff = NutOff; exports.Octagon = Octagon; exports.OctagonAlert = OctagonAlert; exports.OctagonMinus = OctagonMinus; exports.OctagonPause = OctagonPause; exports.OctagonX = OctagonX; exports.Omega = Omega; exports.Option = Option; exports.Orbit = Orbit; exports.Origami = Origami; exports.Package = Package; exports.Package2 = Package2; exports.PackageCheck = PackageCheck; exports.PackageMinus = PackageMinus; exports.PackageOpen = PackageOpen; exports.PackagePlus = PackagePlus; exports.PackageSearch = PackageSearch; exports.PackageX = PackageX; exports.PaintBucket = PaintBucket; exports.PaintRoller = PaintRoller; exports.Paintbrush = Paintbrush; exports.PaintbrushVertical = PaintbrushVertical; exports.Palette = Palette; exports.PanelBottom = PanelBottom; exports.PanelBottomClose = PanelBottomClose; exports.PanelBottomDashed = PanelBottomDashed; exports.PanelBottomOpen = PanelBottomOpen; exports.PanelLeft = PanelLeft; exports.PanelLeftClose = PanelLeftClose; exports.PanelLeftDashed = PanelLeftDashed; exports.PanelLeftOpen = PanelLeftOpen; exports.PanelRight = PanelRight; exports.PanelRightClose = PanelRightClose; exports.PanelRightDashed = PanelRightDashed; exports.PanelRightOpen = PanelRightOpen; exports.PanelTop = PanelTop; exports.PanelTopClose = PanelTopClose; exports.PanelTopDashed = PanelTopDashed; exports.PanelTopOpen = PanelTopOpen; exports.PanelsLeftBottom = PanelsLeftBottom; exports.PanelsRightBottom = PanelsRightBottom; exports.PanelsTopLeft = PanelsTopLeft; exports.Paperclip = Paperclip; exports.Parentheses = Parentheses; exports.ParkingMeter = ParkingMeter; exports.PartyPopper = PartyPopper; exports.Pause = Pause; exports.PawPrint = PawPrint; exports.PcCase = PcCase; exports.Pen = Pen; exports.PenLine = PenLine; exports.PenOff = PenOff; exports.PenTool = PenTool; exports.Pencil = Pencil; exports.PencilLine = PencilLine; exports.PencilOff = PencilOff; exports.PencilRuler = PencilRuler; exports.Pentagon = Pentagon; exports.Percent = Percent; exports.PersonStanding = PersonStanding; exports.PhilippinePeso = PhilippinePeso; exports.Phone = Phone; exports.PhoneCall = PhoneCall; exports.PhoneForwarded = PhoneForwarded; exports.PhoneIncoming = PhoneIncoming; exports.PhoneMissed = PhoneMissed; exports.PhoneOff = PhoneOff; exports.PhoneOutgoing = PhoneOutgoing; exports.Pi = Pi; exports.Piano = Piano; exports.Pickaxe = Pickaxe; exports.PictureInPicture = PictureInPicture; exports.PictureInPicture2 = PictureInPicture2; exports.PiggyBank = PiggyBank; exports.Pilcrow = Pilcrow; exports.PilcrowLeft = PilcrowLeft; exports.PilcrowRight = PilcrowRight; exports.Pill = Pill; exports.PillBottle = PillBottle; exports.Pin = Pin; exports.PinOff = PinOff; exports.Pipette = Pipette; exports.Pizza = Pizza; exports.Plane = Plane; exports.PlaneLanding = PlaneLanding; exports.PlaneTakeoff = PlaneTakeoff; exports.Play = Play; exports.Plug = Plug; exports.Plug2 = Plug2; exports.PlugZap = PlugZap; exports.Plus = Plus; exports.Pocket = Pocket; exports.PocketKnife = PocketKnife; exports.Podcast = Podcast; exports.Pointer = Pointer; exports.PointerOff = PointerOff; exports.Popcorn = Popcorn; exports.Popsicle = Popsicle; exports.PoundSterling = PoundSterling; exports.Power = Power; exports.PowerOff = PowerOff; exports.Presentation = Presentation; exports.Printer = Printer; exports.PrinterCheck = PrinterCheck; exports.Projector = Projector; exports.Proportions = Proportions; exports.Puzzle = Puzzle; exports.Pyramid = Pyramid; exports.QrCode = QrCode; exports.Quote = Quote; exports.Rabbit = Rabbit; exports.Radar = Radar; exports.Radiation = Radiation; exports.Radical = Radical; exports.Radio = Radio; exports.RadioReceiver = RadioReceiver; exports.RadioTower = RadioTower; exports.Radius = Radius; exports.RailSymbol = RailSymbol; exports.Rainbow = Rainbow; exports.Rat = Rat; exports.Ratio = Ratio; exports.Receipt = Receipt; exports.ReceiptCent = ReceiptCent; exports.ReceiptEuro = ReceiptEuro; exports.ReceiptIndianRupee = ReceiptIndianRupee; exports.ReceiptJapaneseYen = ReceiptJapaneseYen; exports.ReceiptPoundSterling = ReceiptPoundSterling; exports.ReceiptRussianRuble = ReceiptRussianRuble; exports.ReceiptSwissFranc = ReceiptSwissFranc; exports.ReceiptText = ReceiptText; exports.RectangleEllipsis = RectangleEllipsis; exports.RectangleHorizontal = RectangleHorizontal; exports.RectangleVertical = RectangleVertical; exports.Recycle = Recycle; exports.Redo = Redo; exports.Redo2 = Redo2; exports.RedoDot = RedoDot; exports.RefreshCcw = RefreshCcw; exports.RefreshCcwDot = RefreshCcwDot; exports.RefreshCw = RefreshCw; exports.RefreshCwOff = RefreshCwOff; exports.Refrigerator = Refrigerator; exports.Regex = Regex; exports.RemoveFormatting = RemoveFormatting; exports.Repeat = Repeat; exports.Repeat1 = Repeat1; exports.Repeat2 = Repeat2; exports.Replace = Replace; exports.ReplaceAll = ReplaceAll; exports.Reply = Reply; exports.ReplyAll = ReplyAll; exports.Rewind = Rewind; exports.Ribbon = Ribbon; exports.Rocket = Rocket; exports.RockingChair = RockingChair; exports.RollerCoaster = RollerCoaster; exports.Rotate3d = Rotate3d; exports.RotateCcw = RotateCcw; exports.RotateCcwSquare = RotateCcwSquare; exports.RotateCw = RotateCw; exports.RotateCwSquare = RotateCwSquare; exports.Route = Route; exports.RouteOff = RouteOff; exports.Router = Router; exports.Rows2 = Rows2; exports.Rows3 = Rows3; exports.Rows4 = Rows4; exports.Rss = Rss; exports.Ruler = Ruler; exports.RussianRuble = RussianRuble; exports.Sailboat = Sailboat; exports.Salad = Salad; exports.Sandwich = Sandwich; exports.Satellite = Satellite; exports.SatelliteDish = SatelliteDish; exports.Save = Save; exports.SaveAll = SaveAll; exports.SaveOff = SaveOff; exports.Scale = Scale; exports.Scale3d = Scale3d; exports.Scaling = Scaling; exports.Scan = Scan; exports.ScanBarcode = ScanBarcode; exports.ScanEye = ScanEye; exports.ScanFace = ScanFace; exports.ScanHeart = ScanHeart; exports.ScanLine = ScanLine; exports.ScanQrCode = ScanQrCode; exports.ScanSearch = ScanSearch; exports.ScanText = ScanText; exports.School = School; exports.Scissors = Scissors; exports.ScissorsLineDashed = ScissorsLineDashed; exports.ScreenShare = ScreenShare; exports.ScreenShareOff = ScreenShareOff; exports.Scroll = Scroll; exports.ScrollText = ScrollText; exports.Search = Search; exports.SearchCheck = SearchCheck; exports.SearchCode = SearchCode; exports.SearchSlash = SearchSlash; exports.SearchX = SearchX; exports.Section = Section; exports.Send = Send; exports.SendHorizontal = SendHorizontal; exports.SendToBack = SendToBack; exports.SeparatorHorizontal = SeparatorHorizontal; exports.SeparatorVertical = SeparatorVertical; exports.Server = Server; exports.ServerCog = ServerCog; exports.ServerCrash = ServerCrash; exports.ServerOff = ServerOff; exports.Settings = Settings; exports.Settings2 = Settings2; exports.Shapes = Shapes; exports.Share = Share; exports.Share2 = Share2; exports.Sheet = Sheet; exports.Shell = Shell; exports.Shield = Shield; exports.ShieldAlert = ShieldAlert; exports.ShieldBan = ShieldBan; exports.ShieldCheck = ShieldCheck; exports.ShieldEllipsis = ShieldEllipsis; exports.ShieldHalf = ShieldHalf; exports.ShieldMinus = ShieldMinus; exports.ShieldOff = ShieldOff; exports.ShieldPlus = ShieldPlus; exports.ShieldQuestion = ShieldQuestion; exports.ShieldUser = ShieldUser; exports.ShieldX = ShieldX; exports.Ship = Ship; exports.ShipWheel = ShipWheel; exports.Shirt = Shirt; exports.ShoppingBag = ShoppingBag; exports.ShoppingBasket = ShoppingBasket; exports.ShoppingCart = ShoppingCart; exports.Shovel = Shovel; exports.ShowerHead = ShowerHead; exports.Shrink = Shrink; exports.Shrub = Shrub; exports.Shuffle = Shuffle; exports.Sigma = Sigma; exports.Signal = Signal; exports.SignalHigh = SignalHigh; exports.SignalLow = SignalLow; exports.SignalMedium = SignalMedium; exports.SignalZero = SignalZero; exports.Signature = Signature; exports.Signpost = Signpost; exports.SignpostBig = SignpostBig; exports.Siren = Siren; exports.SkipBack = SkipBack; exports.SkipForward = SkipForward; exports.Skull = Skull; exports.Slack = Slack; exports.Slash = Slash; exports.Slice = Slice; exports.SlidersHorizontal = SlidersHorizontal; exports.SlidersVertical = SlidersVertical; exports.Smartphone = Smartphone; exports.SmartphoneCharging = SmartphoneCharging; exports.SmartphoneNfc = SmartphoneNfc; exports.Smile = Smile; exports.SmilePlus = SmilePlus; exports.Snail = Snail; exports.Snowflake = Snowflake; exports.Sofa = Sofa; exports.Soup = Soup; exports.Space = Space; exports.Spade = Spade; exports.Sparkle = Sparkle; exports.Sparkles = Sparkles; exports.Speaker = Speaker; exports.Speech = Speech; exports.SpellCheck = SpellCheck; exports.SpellCheck2 = SpellCheck2; exports.Spline = Spline; exports.Split = Split; exports.SprayCan = SprayCan; exports.Sprout = Sprout; exports.Square = Square; exports.SquareActivity = SquareActivity; exports.SquareArrowDown = SquareArrowDown; exports.SquareArrowDownLeft = SquareArrowDownLeft; exports.SquareArrowDownRight = SquareArrowDownRight; exports.SquareArrowLeft = SquareArrowLeft; exports.SquareArrowOutDownLeft = SquareArrowOutDownLeft; exports.SquareArrowOutDownRight = SquareArrowOutDownRight; exports.SquareArrowOutUpLeft = SquareArrowOutUpLeft; exports.SquareArrowOutUpRight = SquareArrowOutUpRight; exports.SquareArrowRight = SquareArrowRight; exports.SquareArrowUp = SquareArrowUp; exports.SquareArrowUpLeft = SquareArrowUpLeft; exports.SquareArrowUpRight = SquareArrowUpRight; exports.SquareAsterisk = SquareAsterisk; exports.SquareBottomDashedScissors = SquareBottomDashedScissors; exports.SquareChartGantt = SquareChartGantt; exports.SquareCheck = SquareCheck; exports.SquareCheckBig = SquareCheckBig; exports.SquareChevronDown = SquareChevronDown; exports.SquareChevronLeft = SquareChevronLeft; exports.SquareChevronRight = SquareChevronRight; exports.SquareChevronUp = SquareChevronUp; exports.SquareCode = SquareCode; exports.SquareDashed = SquareDashed; exports.SquareDashedBottom = SquareDashedBottom; exports.SquareDashedBottomCode = SquareDashedBottomCode; exports.SquareDashedKanban = SquareDashedKanban; exports.SquareDashedMousePointer = SquareDashedMousePointer; exports.SquareDivide = SquareDivide; exports.SquareDot = SquareDot; exports.SquareEqual = SquareEqual; exports.SquareFunction = SquareFunction; exports.SquareKanban = SquareKanban; exports.SquareLibrary = SquareLibrary; exports.SquareM = SquareM; exports.SquareMenu = SquareMenu; exports.SquareMinus = SquareMinus; exports.SquareMousePointer = SquareMousePointer; exports.SquareParking = SquareParking; exports.SquareParkingOff = SquareParkingOff; exports.SquarePen = SquarePen; exports.SquarePercent = SquarePercent; exports.SquarePi = SquarePi; exports.SquarePilcrow = SquarePilcrow; exports.SquarePlay = SquarePlay; exports.SquarePlus = SquarePlus; exports.SquarePower = SquarePower; exports.SquareRadical = SquareRadical; exports.SquareScissors = SquareScissors; exports.SquareSigma = SquareSigma; exports.SquareSlash = SquareSlash; exports.SquareSplitHorizontal = SquareSplitHorizontal; exports.SquareSplitVertical = SquareSplitVertical; exports.SquareSquare = SquareSquare; exports.SquareStack = SquareStack; exports.SquareTerminal = SquareTerminal; exports.SquareUser = SquareUser; exports.SquareUserRound = SquareUserRound; exports.SquareX = SquareX; exports.Squircle = Squircle; exports.Squirrel = Squirrel; exports.Stamp = Stamp; exports.Star = Star; exports.StarHalf = StarHalf; exports.StarOff = StarOff; exports.StepBack = StepBack; exports.StepForward = StepForward; exports.Stethoscope = Stethoscope; exports.Sticker = Sticker; exports.StickyNote = StickyNote; exports.Store = Store; exports.StretchHorizontal = StretchHorizontal; exports.StretchVertical = StretchVertical; exports.Strikethrough = Strikethrough; exports.Subscript = Subscript; exports.Sun = Sun; exports.SunDim = SunDim; exports.SunMedium = SunMedium; exports.SunMoon = SunMoon; exports.SunSnow = SunSnow; exports.Sunrise = Sunrise; exports.Sunset = Sunset; exports.Superscript = Superscript; exports.SwatchBook = SwatchBook; exports.SwissFranc = SwissFranc; exports.SwitchCamera = SwitchCamera; exports.Sword = Sword; exports.Swords = Swords; exports.Syringe = Syringe; exports.Table = Table; exports.Table2 = Table2; exports.TableCellsMerge = TableCellsMerge; exports.TableCellsSplit = TableCellsSplit; exports.TableColumnsSplit = TableColumnsSplit; exports.TableOfContents = TableOfContents; exports.TableProperties = TableProperties; exports.TableRowsSplit = TableRowsSplit; exports.Tablet = Tablet; exports.TabletSmartphone = TabletSmartphone; exports.Tablets = Tablets; exports.Tag = Tag; exports.Tags = Tags; exports.Tally1 = Tally1; exports.Tally2 = Tally2; exports.Tally3 = Tally3; exports.Tally4 = Tally4; exports.Tally5 = Tally5; exports.Tangent = Tangent; exports.Target = Target; exports.Telescope = Telescope; exports.Tent = Tent; exports.TentTree = TentTree; exports.Terminal = Terminal; exports.TestTube = TestTube; exports.TestTubeDiagonal = TestTubeDiagonal; exports.TestTubes = TestTubes; exports.Text = Text; exports.TextCursor = TextCursor; exports.TextCursorInput = TextCursorInput; exports.TextQuote = TextQuote; exports.TextSearch = TextSearch; exports.TextSelect = TextSelect; exports.Theater = Theater; exports.Thermometer = Thermometer; exports.ThermometerSnowflake = ThermometerSnowflake; exports.ThermometerSun = ThermometerSun; exports.ThumbsDown = ThumbsDown; exports.ThumbsUp = ThumbsUp; exports.Ticket = Ticket; exports.TicketCheck = TicketCheck; exports.TicketMinus = TicketMinus; exports.TicketPercent = TicketPercent; exports.TicketPlus = TicketPlus; exports.TicketSlash = TicketSlash; exports.TicketX = TicketX; exports.Tickets = Tickets; exports.TicketsPlane = TicketsPlane; exports.Timer = Timer; exports.TimerOff = TimerOff; exports.TimerReset = TimerReset; exports.ToggleLeft = ToggleLeft; exports.ToggleRight = ToggleRight; exports.Toilet = Toilet; exports.Tornado = Tornado; exports.Torus = Torus; exports.Touchpad = Touchpad; exports.TouchpadOff = TouchpadOff; exports.TowerControl = TowerControl; exports.ToyBrick = ToyBrick; exports.Tractor = Tractor; exports.TrafficCone = TrafficCone; exports.TrainFront = TrainFront; exports.TrainFrontTunnel = TrainFrontTunnel; exports.TrainTrack = TrainTrack; exports.TramFront = TramFront; exports.Transgender = Transgender; exports.Trash = Trash; exports.Trash2 = Trash2; exports.TreeDeciduous = TreeDeciduous; exports.TreePalm = TreePalm; exports.TreePine = TreePine; exports.Trees = Trees; exports.Trello = Trello; exports.TrendingDown = TrendingDown; exports.TrendingUp = TrendingUp; exports.TrendingUpDown = TrendingUpDown; exports.Triangle = Triangle; exports.TriangleAlert = TriangleAlert; exports.TriangleDashed = TriangleDashed; exports.TriangleRight = TriangleRight; exports.Trophy = Trophy; exports.Truck = Truck; exports.Turtle = Turtle; exports.Tv = Tv; exports.TvMinimal = TvMinimal; exports.TvMinimalPlay = TvMinimalPlay; exports.Twitch = Twitch; exports.Twitter = Twitter; exports.Type = Type; exports.TypeOutline = TypeOutline; exports.Umbrella = Umbrella; exports.UmbrellaOff = UmbrellaOff; exports.Underline = Underline; exports.Undo = Undo; exports.Undo2 = Undo2; exports.UndoDot = UndoDot; exports.UnfoldHorizontal = UnfoldHorizontal; exports.UnfoldVertical = UnfoldVertical; exports.Ungroup = Ungroup; exports.University = University; exports.Unlink = Unlink; exports.Unlink2 = Unlink2; exports.Unplug = Unplug; exports.Upload = Upload; exports.Usb = Usb; exports.User = User; exports.UserCheck = UserCheck; exports.UserCog = UserCog; exports.UserMinus = UserMinus; exports.UserPen = UserPen; exports.UserPlus = UserPlus; exports.UserRound = UserRound; exports.UserRoundCheck = UserRoundCheck; exports.UserRoundCog = UserRoundCog; exports.UserRoundMinus = UserRoundMinus; exports.UserRoundPen = UserRoundPen; exports.UserRoundPlus = UserRoundPlus; exports.UserRoundSearch = UserRoundSearch; exports.UserRoundX = UserRoundX; exports.UserSearch = UserSearch; exports.UserX = UserX; exports.Users = Users; exports.UsersRound = UsersRound; exports.Utensils = Utensils; exports.UtensilsCrossed = UtensilsCrossed; exports.UtilityPole = UtilityPole; exports.Variable = Variable; exports.Vault = Vault; exports.Vegan = Vegan; exports.VenetianMask = VenetianMask; exports.Venus = Venus; exports.VenusAndMars = VenusAndMars; exports.Vibrate = Vibrate; exports.VibrateOff = VibrateOff; exports.Video = Video; exports.VideoOff = VideoOff; exports.Videotape = Videotape; exports.View = View; exports.Voicemail = Voicemail; exports.Volleyball = Volleyball; exports.Volume = Volume; exports.Volume1 = Volume1; exports.Volume2 = Volume2; exports.VolumeOff = VolumeOff; exports.VolumeX = VolumeX; exports.Vote = Vote; exports.Wallet = Wallet; exports.WalletCards = WalletCards; exports.WalletMinimal = WalletMinimal; exports.Wallpaper = Wallpaper; exports.Wand = Wand; exports.WandSparkles = WandSparkles; exports.Warehouse = Warehouse; exports.WashingMachine = WashingMachine; exports.Watch = Watch; exports.Waves = Waves; exports.WavesLadder = WavesLadder; exports.Waypoints = Waypoints; exports.Webcam = Webcam; exports.Webhook = Webhook; exports.WebhookOff = WebhookOff; exports.Weight = Weight; exports.Wheat = Wheat; exports.WheatOff = WheatOff; exports.WholeWord = WholeWord; exports.Wifi = Wifi; exports.WifiHigh = WifiHigh; exports.WifiLow = WifiLow; exports.WifiOff = WifiOff; exports.WifiZero = WifiZero; exports.Wind = Wind; exports.WindArrowDown = WindArrowDown; exports.Wine = Wine; exports.WineOff = WineOff; exports.Workflow = Workflow; exports.Worm = Worm; exports.WrapText = WrapText; exports.Wrench = Wrench; exports.X = X; exports.Youtube = Youtube; exports.Zap = Zap; exports.ZapOff = ZapOff; exports.ZoomIn = ZoomIn; exports.ZoomOut = ZoomOut;
 //# sourceMappingURL=index.cjs.map
 //# sourceMappingURL=index.cjs.map

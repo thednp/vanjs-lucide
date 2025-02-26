@@ -1,5 +1,5 @@
 import van from "vanjs-core";
-import { ArrowDown } from "../../../src/index";
+import { CloudDownload, Github } from "../../../src/index";
 
 export default function Header() {
   const { header, div, ul, li, a, h1, span } = van.tags;
@@ -29,10 +29,25 @@ export default function Header() {
             href:
               "https://github.com/thednp/vanjs-lucide/archive/refs/heads/main.zip",
           },
-          ArrowDown({ class: "h-6" }),
+          CloudDownload({ class: "h-6" }),
           span(
             { class: "sr-only sm:not-sr-only" },
             "Download",
+          ),
+        ),
+      ),
+      li(
+        { class: "py-3 flex flex-row items-center gap-3 text-md" },
+        a(
+          {
+            class:
+              "text-neutral-600 hover:text-neutral-950 dark:text-neutral-400 dark:hover:text-neutral-100 font-semibold font-stretch-125% flex items-center gap-2",
+            href: "https://github.com/thednp/vanjs-lucide/",
+          },
+          Github({ class: "h-6" }),
+          span(
+            { class: "sr-only sm:not-sr-only" },
+            "Github",
           ),
         ),
       ),

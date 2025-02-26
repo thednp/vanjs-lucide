@@ -7,7 +7,7 @@ const copyToClipboard = (
 
   if (clip?.length) {
     navigator.clipboard.writeText(clip);
-    alert(`Copied Icon Component "${clip}" to clipboard`);
+    alert(`Copied Icon Component to clipboard:\n${clip}`);
   }
 };
 

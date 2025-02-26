@@ -1,7 +1,7 @@
 import { resolve } from 'node:path';
 import { defineConfig } from "vite";
 
-const NAME = 'VanJSFeather';
+const NAME = 'VanJSLucide';
 
 const fileName = {
   iife: `index.js`,
