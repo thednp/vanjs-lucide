@@ -140,7 +140,7 @@ export default function Main() {
                 class:
                   "text-xl md:text-2xl font-light font-stretch-125% text-black dark:text-white",
               },
-              "Feather Icons for VanJS",
+              "Lucide Icons for VanJS",
             ),
             p(
               { class: "font-stretch-125% font-bold" },
@@ -305,7 +305,7 @@ export default function Main() {
           type: "text",
           autocomplete: "off",
           spellcheck: "false",
-          "aria-label": "Search icon",
+          "aria-label": "Search 1560 icons..",
           oninput: (e: ChangeEvent) => query.val = String(e.target.value),
         }),
       ),
@@ -327,7 +327,6 @@ export default function Main() {
                 type: "button",
                 "data-clip":
                   `${name}({ width: ${size.val}, height: ${size.val}, "stroke-width": ${sWidth.val} })`,
-                "data-target": `feather-icon-${lowerName}`,
                 onclick: lowerName !== "not-found" as "Activity"
                   ? copyToClipboard
                   : null,
@@ -342,7 +341,7 @@ export default function Main() {
               }),
               span(
                 {
-                  id: `feather-icon-${lowerName}`,
+                  id: `lucide-icon-${lowerName}`,
                   class:
                     "text-[12px] font-semibold font-stretch-90% text-black dark:text-white",
                 },
