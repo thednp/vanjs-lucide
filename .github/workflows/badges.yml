@@ -5,7 +5,7 @@ on:
     # or if the package.json file changes, or this file changes
     # IMPORTANT: branches must match
     branches:
-      - main
+      - master
     paths:
       - README.md
       - package.json
