@@ -8,7 +8,9 @@ import Tags from "./tags.json";
 const TagsEntries = Object.entries(Tags);
 const TagNames = () => TagsEntries.map(([name]) => name);
 
-import { Activity, ArrowRight, Info } from "../../../src/index";
+import { Activity } from "../../../src/icons/Activity.ts";
+import { Info } from "../../../src/icons/Info.ts";
+import { ArrowRight } from "../../../src/icons/ArrowRight.ts";
 
 type ChangeEvent<T extends EventTarget & Element = HTMLInputElement> =
   & InputEvent
@@ -21,8 +23,8 @@ export default function Main() {
   const List = vanX.reactive<{ icons: Record<string, typeof SVGTag>[] }>({
     icons: [],
   });
-  const size = van.state(64);
-  const sWidth = van.state(2);
+  const size = van.state(32);
+  const sWidth = van.state(1);
   const count = van.state(0);
   const query = van.state("");
   const fetching = van.state(false);
@@ -140,7 +142,7 @@ export default function Main() {
     div(
       {
         class:
-          "container h-[50vh] md:h-[75vh] px-5 mx-auto flex flex-col flex-row items-center",
+          "container h-[50vh] md:h-[75vh] px-5 mx-auto flex flex-row items-center",
       },
       div(
         { class: "w-full flex flex-col md:flex-row items-center" },
@@ -359,7 +361,7 @@ export default function Main() {
                   "w-full flex flex-col items-center cursor-pointer p-3 py-8 xl:py-12 rounded-[5px] bg-stone-50 hover:bg-stone-200 dark:bg-stone-950 dark:hover:bg-stone-800",
               },
               icon({
-                class: "text-stone-500",
+                class: "text-stone-500 mb-4",
                 width: size,
                 height: size,
                 "stroke-width": sWidth,
