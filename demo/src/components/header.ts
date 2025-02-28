@@ -1,5 +1,6 @@
 import van from "vanjs-core";
-import { CloudDownload, Github } from "../../../src/index";
+import { CloudDownload } from "../../../src/icons/CloudDownload";
+import { Github } from "../../../src/icons/Github";
 
 export default function Header() {
   const { header, div, ul, li, a, h1, span } = van.tags;

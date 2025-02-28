@@ -25,7 +25,7 @@ export default function Main() {
   });
   const size = van.state(32);
   const sWidth = van.state(1);
-  const count = van.state(0);
+  const count = van.state(64);
   const query = van.state("");
   const fetching = van.state(false);
   const fetchIcons = async (items: string[]) => {
