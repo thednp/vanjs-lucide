@@ -7,8 +7,11 @@ var _vanjscore = require('vanjs-core'); var _vanjscore2 = _interopRequireDefault
 // src/LucideIcon.ts
 
 var svgNamespace = "http://www.w3.org/2000/svg";
-var LucideIcon = /* @__PURE__ */ __name((props = {}, ...children) => {
+var LucideIcon = /* @__PURE__ */ __name((initialProps = {}, ...children) => {
   const { svg } = _vanjscore2.default.tags(svgNamespace);
+  const props = Object.fromEntries(
+    Object.entries(initialProps).filter(([_, val]) => val)
+  );
   const defaultProps = {
     xmlns: svgNamespace,
     viewBox: "0 0 24 24",
