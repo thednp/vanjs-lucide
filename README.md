@@ -4,7 +4,7 @@
 [![ci](https://github.com/thednp/vanjs-lucide/actions/workflows/ci.yml/badge.svg)](https://github.com/thednp/vanjs-lucide/actions/workflows/ci.yml)
 [![NPM Version](https://img.shields.io/npm/v/vanjs-lucide.svg)](https://www.npmjs.com/package/vanjs-lucide)
 [![typescript version](https://img.shields.io/badge/typescript-5.8.2-brightgreen)](https://www.typescriptlang.org/)
-[![vitest version](https://img.shields.io/badge/vitest-3.0.8-brightgreen)](https://www.vitest.dev/)
+[![vitest version](https://img.shields.io/badge/vitest-3.0.9-brightgreen)](https://www.vitest.dev/)
 [![vite version](https://img.shields.io/badge/vite-6.2.2-brightgreen)](https://vitejs.dev/)
 
 [<img width="100%" src="vanjs-lucide.png" alt="vanjs-lucide">](https://thednp.github.io/vanjs-lucide)
