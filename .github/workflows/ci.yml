@@ -7,7 +7,6 @@ on:
     paths:
       - src/**/*
       - src/*
-      - test
       - package.json
       - .github/workflows/ci.yml
 
@@ -17,7 +16,6 @@ on:
     paths:
       - src/**/*
       - src/*
-      - test
       - package.json
       - .github/workflows/ci.yml
 
