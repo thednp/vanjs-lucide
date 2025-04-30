@@ -3,7 +3,7 @@ import * as vanX from "vanjs-ext";
 import copyToClipboard from "../util/copyToClipboard";
 import { SVGTag } from "../../../src/types";
 import Tooltip from "./tooltip";
-import Tags from "./tags.json";
+import Tags from "../util/tags.json";
 
 const TagsEntries = Object.entries(Tags);
 const TagNames = () => TagsEntries.map(([name]) => name);
