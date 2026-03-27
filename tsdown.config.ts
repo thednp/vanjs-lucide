@@ -34,37 +34,27 @@ export default defineConfig([
     }
     
   },
-  // { // CJS
-  //   entry: {
-  //     index: "src/index.ts",
-  //   },
-  //   target: "esnext",
-  //   platform: "neutral",
-  //   exports: true,
-  //   format: ["cjs"],
-  //   dts: true,
-  //   // clean: true,
-  //   sourcemap: true,
-  //   globalName: "VanJSLucide",
-  //   banner: banner.replace("$package", "CJS"),
-  //   plugins: [stripComments({ type: "keep-jsdoc" })],
-  // },
   { // UMD
     entry: {
       index: "src/index.ts",
     },
     platform: "browser",
     target: "esnext",
-    // minify: true,
+    minify: true,
     // exports: true,
     format: ["umd"],
     sourcemap: true,
     banner: miniBanner.replace("$package", "UMD"),
     globalName: "VanJSLucide",
     plugins: [stripComments({ type: "none" })],
+    outputOptions: {
+      globals: {
+        "vanjs-core": "van"
+      }
+    },
     deps: {
-      // skipNodeModulesBundle: true,
-      // alwaysBundle: ["vanjs-core"]
+      skipNodeModulesBundle: true,
+      neverBundle: ["vanjs-core"]
     }
   },
 ]);
