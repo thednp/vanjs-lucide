@@ -1,7 +1,7 @@
 // VanJS Lucide - Columns4
 import van from "vanjs-core";
-import { LucideIcon, svgNamespace } from "../LucideIcon";
-import { type SVGProps } from "../types";
+import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
+import { type SVGProps } from "../types.ts";
 
 export const Columns4 = (props: Partial<SVGProps> = {}) => {
   const { rect, path } = van.tags(svgNamespace);

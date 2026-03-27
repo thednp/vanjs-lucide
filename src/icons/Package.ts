@@ -1,7 +1,7 @@
 // VanJS Lucide - Package
 import van from "vanjs-core";
-import { LucideIcon, svgNamespace } from "../LucideIcon";
-import { type SVGProps } from "../types";
+import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
+import { type SVGProps } from "../types.ts";
 
 export const Package = (props: Partial<SVGProps> = {}) => {
   const { path, polyline } = van.tags(svgNamespace);

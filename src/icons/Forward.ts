@@ -1,7 +1,7 @@
 // VanJS Lucide - Forward
 import van from "vanjs-core";
-import { LucideIcon, svgNamespace } from "../LucideIcon";
-import { type SVGProps } from "../types";
+import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
+import { type SVGProps } from "../types.ts";
 
 export const Forward = (props: Partial<SVGProps> = {}) => {
   const { polyline, path } = van.tags(svgNamespace);

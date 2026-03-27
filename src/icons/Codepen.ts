@@ -1,7 +1,7 @@
 // VanJS Lucide - Codepen
 import van from "vanjs-core";
-import { LucideIcon, svgNamespace } from "../LucideIcon";
-import { type SVGProps } from "../types";
+import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
+import { type SVGProps } from "../types.ts";
 
 export const Codepen = (props: Partial<SVGProps> = {}) => {
   const { polygon, line, polyline } = van.tags(svgNamespace);

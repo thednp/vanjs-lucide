@@ -1,7 +1,7 @@
 // VanJS Lucide - Copyright
 import van from "vanjs-core";
-import { LucideIcon, svgNamespace } from "../LucideIcon";
-import { type SVGProps } from "../types";
+import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
+import { type SVGProps } from "../types.ts";
 
 export const Copyright = (props: Partial<SVGProps> = {}) => {
   const { circle, path } = van.tags(svgNamespace);

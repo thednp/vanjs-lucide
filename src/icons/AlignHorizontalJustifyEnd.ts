@@ -1,7 +1,7 @@
 // VanJS Lucide - AlignHorizontalJustifyEnd
 import van from "vanjs-core";
-import { LucideIcon, svgNamespace } from "../LucideIcon";
-import { type SVGProps } from "../types";
+import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
+import { type SVGProps } from "../types.ts";
 
 export const AlignHorizontalJustifyEnd = (props: Partial<SVGProps> = {}) => {
   const { rect, path } = van.tags(svgNamespace);

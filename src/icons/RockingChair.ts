@@ -1,7 +1,7 @@
 // VanJS Lucide - RockingChair
 import van from "vanjs-core";
-import { LucideIcon, svgNamespace } from "../LucideIcon";
-import { type SVGProps } from "../types";
+import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
+import { type SVGProps } from "../types.ts";
 
 export const RockingChair = (props: Partial<SVGProps> = {}) => {
   const { polyline, line, path } = van.tags(svgNamespace);

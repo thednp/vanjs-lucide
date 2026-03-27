@@ -1,7 +1,7 @@
 // VanJS Lucide - ALargeSmall
 import van from "vanjs-core";
-import { LucideIcon, svgNamespace } from "../LucideIcon";
-import { type SVGProps } from "../types";
+import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
+import { type SVGProps } from "../types.ts";
 
 export const ALargeSmall = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);

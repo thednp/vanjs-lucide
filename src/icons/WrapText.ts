@@ -1,7 +1,7 @@
 // VanJS Lucide - WrapText
 import van from "vanjs-core";
-import { LucideIcon, svgNamespace } from "../LucideIcon";
-import { type SVGProps } from "../types";
+import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
+import { type SVGProps } from "../types.ts";
 
 export const WrapText = (props: Partial<SVGProps> = {}) => {
   const { line, path, polyline } = van.tags(svgNamespace);

@@ -1,7 +1,7 @@
 // VanJS Lucide - UserCheck
 import van from "vanjs-core";
-import { LucideIcon, svgNamespace } from "../LucideIcon";
-import { type SVGProps } from "../types";
+import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
+import { type SVGProps } from "../types.ts";
 
 export const UserCheck = (props: Partial<SVGProps> = {}) => {
   const { path, circle, polyline } = van.tags(svgNamespace);

@@ -1,7 +1,7 @@
 // VanJS Lucide - Link2
 import van from "vanjs-core";
-import { LucideIcon, svgNamespace } from "../LucideIcon";
-import { type SVGProps } from "../types";
+import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
+import { type SVGProps } from "../types.ts";
 
 export const Link2 = (props: Partial<SVGProps> = {}) => {
   const { path, line } = van.tags(svgNamespace);

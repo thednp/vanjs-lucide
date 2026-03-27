@@ -1,7 +1,7 @@
 // VanJS Lucide - CircleStop
 import van from "vanjs-core";
-import { LucideIcon, svgNamespace } from "../LucideIcon";
-import { type SVGProps } from "../types";
+import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
+import { type SVGProps } from "../types.ts";
 
 export const CircleStop = (props: Partial<SVGProps> = {}) => {
   const { circle, rect } = van.tags(svgNamespace);
