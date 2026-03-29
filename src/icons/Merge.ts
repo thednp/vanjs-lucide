@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const Merge = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "m8 6 4-4 4 4" }),

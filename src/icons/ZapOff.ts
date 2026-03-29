@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const ZapOff = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M10.513 4.856 13.12 2.17a.5.5 0 0 1 .86.46l-1.377 4.317" }),

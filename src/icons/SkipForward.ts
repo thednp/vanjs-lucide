@@ -4,10 +4,14 @@ import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
 import { type SVGProps } from "../types.ts";
 
 export const SkipForward = (props: Partial<SVGProps> = {}) => {
-  const { polygon, line } = van.tags(svgNamespace);
+  const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    polygon({ points: "5 4 15 12 5 20 5 4" }),
-    line({ x1: "19", x2: "19", y1: "5", y2: "19" }),
+    path({ "d": "M21 4v16" }),
+    path({
+      "d":
+        "M6.029 4.285A2 2 0 0 0 3 6v12a2 2 0 0 0 3.029 1.715l9.997-5.998a2 2 0 0 0 .003-3.432z",
+    }),
   );
 };

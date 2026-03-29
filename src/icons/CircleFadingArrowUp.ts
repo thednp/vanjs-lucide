@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const CircleFadingArrowUp = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M12 2a10 10 0 0 1 7.38 16.75" }),

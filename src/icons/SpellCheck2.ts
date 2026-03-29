@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const SpellCheck2 = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "m6 16 6-12 6 12" }),

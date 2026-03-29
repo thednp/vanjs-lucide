@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const Fish = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({

@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const MousePointer = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M12.586 12.586 19 19" }),

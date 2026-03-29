@@ -1,5 +1,5 @@
 /*!
-* vanjs-lucide ESM v0.0.6 (https://thednp.github.io/vanjs-lucide)
+* vanjs-lucide ESM v0.0.7 (https://thednp.github.io/vanjs-lucide)
 * Copyright 2026 © thednp
 * Licensed under MIT (https://github.com/thednp/vanjs-lucide/blob/master/LICENSE)
 */
@@ -442,9 +442,6 @@ declare const AlignCenterHorizontal: (props?: Partial<SVGProps>) => SVGSVGElemen
 //#region src/icons/AlignCenterVertical.d.ts
 declare const AlignCenterVertical: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/AlignCenter.d.ts
-declare const AlignCenter: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
 //#region src/icons/AlignEndHorizontal.d.ts
 declare const AlignEndHorizontal: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -474,15 +471,6 @@ declare const AlignHorizontalSpaceAround: (props?: Partial<SVGProps>) => SVGSVGE
 //#endregion
 //#region src/icons/AlignHorizontalSpaceBetween.d.ts
 declare const AlignHorizontalSpaceBetween: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlignJustify.d.ts
-declare const AlignJustify: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlignLeft.d.ts
-declare const AlignLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlignRight.d.ts
-declare const AlignRight: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/AlignStartHorizontal.d.ts
 declare const AlignStartHorizontal: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -739,9 +727,6 @@ declare const BadgeDollarSign: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/BadgeEuro.d.ts
 declare const BadgeEuro: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/BadgeHelp.d.ts
-declare const BadgeHelp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
 //#region src/icons/BadgeIndianRupee.d.ts
 declare const BadgeIndianRupee: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -763,11 +748,17 @@ declare const BadgePlus: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/BadgePoundSterling.d.ts
 declare const BadgePoundSterling: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/BadgeQuestionMark.d.ts
+declare const BadgeQuestionMark: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/BadgeRussianRuble.d.ts
 declare const BadgeRussianRuble: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/BadgeSwissFranc.d.ts
 declare const BadgeSwissFranc: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/BadgeTurkishLira.d.ts
+declare const BadgeTurkishLira: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/BadgeX.d.ts
 declare const BadgeX: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -778,6 +769,9 @@ declare const Badge: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/BaggageClaim.d.ts
 declare const BaggageClaim: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/Balloon.d.ts
+declare const Balloon: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Ban.d.ts
 declare const Ban: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -787,11 +781,23 @@ declare const Banana: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Bandage.d.ts
 declare const Bandage: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/BanknoteArrowDown.d.ts
+declare const BanknoteArrowDown: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/BanknoteArrowUp.d.ts
+declare const BanknoteArrowUp: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/BanknoteX.d.ts
+declare const BanknoteX: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Banknote.d.ts
 declare const Banknote: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Barcode.d.ts
 declare const Barcode: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/Barrel.d.ts
+declare const Barrel: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Baseline.d.ts
 declare const Baseline: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -837,6 +843,9 @@ declare const BedSingle: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Bed.d.ts
 declare const Bed: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/BeefOff.d.ts
+declare const BeefOff: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Beef.d.ts
 declare const Beef: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -898,6 +907,9 @@ declare const Biohazard: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Bird.d.ts
 declare const Bird: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/Birdhouse.d.ts
+declare const Birdhouse: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Bitcoin.d.ts
 declare const Bitcoin: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -936,6 +948,9 @@ declare const Bone: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/BookA.d.ts
 declare const BookA: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/BookAlert.d.ts
+declare const BookAlert: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/BookAudio.d.ts
 declare const BookAudio: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -985,6 +1000,9 @@ declare const BookOpen: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/BookPlus.d.ts
 declare const BookPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/BookSearch.d.ts
+declare const BookSearch: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/BookText.d.ts
 declare const BookText: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -1033,6 +1051,12 @@ declare const BotOff: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Bot.d.ts
 declare const Bot: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/BottleWine.d.ts
+declare const BottleWine: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/BowArrow.d.ts
+declare const BowArrow: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Box.d.ts
 declare const Box: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -1054,6 +1078,12 @@ declare const BrainCog: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Brain.d.ts
 declare const Brain: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/BrickWallFire.d.ts
+declare const BrickWallFire: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/BrickWallShield.d.ts
+declare const BrickWallShield: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/BrickWall.d.ts
 declare const BrickWall: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -1072,8 +1102,14 @@ declare const Briefcase: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/BringToFront.d.ts
 declare const BringToFront: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/BrushCleaning.d.ts
+declare const BrushCleaning: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Brush.d.ts
 declare const Brush: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/Bubbles.d.ts
+declare const Bubbles: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/BugOff.d.ts
 declare const BugOff: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -1174,6 +1210,9 @@ declare const CalendarX: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Calendar.d.ts
 declare const Calendar: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/Calendars.d.ts
+declare const Calendars: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/CameraOff.d.ts
 declare const CameraOff: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -1188,6 +1227,9 @@ declare const CandyOff: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Candy.d.ts
 declare const Candy: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/CannabisOff.d.ts
+declare const CannabisOff: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Cannabis.d.ts
 declare const Cannabis: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -1209,6 +1251,9 @@ declare const Car: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Caravan.d.ts
 declare const Caravan: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/CardSim.d.ts
+declare const CardSim: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Carrot.d.ts
 declare const Carrot: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -1233,6 +1278,9 @@ declare const Castle: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Cat.d.ts
 declare const Cat: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/CctvOff.d.ts
+declare const CctvOff: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Cctv.d.ts
 declare const Cctv: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -1309,6 +1357,9 @@ declare const ChartSpline: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/CheckCheck.d.ts
 declare const CheckCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/CheckLine.d.ts
+declare const CheckLine: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Check.d.ts
 declare const Check: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -1317,6 +1368,24 @@ declare const ChefHat: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Cherry.d.ts
 declare const Cherry: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ChessBishop.d.ts
+declare const ChessBishop: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ChessKing.d.ts
+declare const ChessKing: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ChessKnight.d.ts
+declare const ChessKnight: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ChessPawn.d.ts
+declare const ChessPawn: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ChessQueen.d.ts
+declare const ChessQueen: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ChessRook.d.ts
+declare const ChessRook: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/ChevronDown.d.ts
 declare const ChevronDown: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -1362,9 +1431,6 @@ declare const ChevronsUpDown: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/ChevronsUp.d.ts
 declare const ChevronsUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Chrome.d.ts
-declare const Chrome: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Church.d.ts
 declare const Church: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -1450,9 +1516,6 @@ declare const CircleFadingPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/CircleGauge.d.ts
 declare const CircleGauge: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/CircleHelp.d.ts
-declare const CircleHelp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
 //#region src/icons/CircleMinus.d.ts
 declare const CircleMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -1471,14 +1534,23 @@ declare const CirclePause: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/CirclePercent.d.ts
 declare const CirclePercent: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/CirclePile.d.ts
+declare const CirclePile: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/CirclePlay.d.ts
 declare const CirclePlay: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/CirclePlus.d.ts
 declare const CirclePlus: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/CirclePoundSterling.d.ts
+declare const CirclePoundSterling: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/CirclePower.d.ts
 declare const CirclePower: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/CircleQuestionMark.d.ts
+declare const CircleQuestionMark: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/CircleSlash2.d.ts
 declare const CircleSlash2: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -1488,6 +1560,9 @@ declare const CircleSlash: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/CircleSmall.d.ts
 declare const CircleSmall: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/CircleStar.d.ts
+declare const CircleStar: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/CircleStop.d.ts
 declare const CircleStop: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -1515,6 +1590,9 @@ declare const Clapperboard: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/ClipboardCheck.d.ts
 declare const ClipboardCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ClipboardClock.d.ts
+declare const ClipboardClock: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/ClipboardCopy.d.ts
 declare const ClipboardCopy: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -1591,11 +1669,29 @@ declare const ClockArrowDown: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/ClockArrowUp.d.ts
 declare const ClockArrowUp: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/ClockCheck.d.ts
+declare const ClockCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ClockFading.d.ts
+declare const ClockFading: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ClockPlus.d.ts
+declare const ClockPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Clock.d.ts
 declare const Clock: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/ClosedCaption.d.ts
+declare const ClosedCaption: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/CloudAlert.d.ts
 declare const CloudAlert: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/CloudBackup.d.ts
+declare const CloudBackup: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/CloudCheck.d.ts
+declare const CloudCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/CloudCog.d.ts
 declare const CloudCog: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -1639,6 +1735,9 @@ declare const CloudSunRain: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/CloudSun.d.ts
 declare const CloudSun: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/CloudSync.d.ts
+declare const CloudSync: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/CloudUpload.d.ts
 declare const CloudUpload: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -1660,12 +1759,6 @@ declare const CodeXml: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Code.d.ts
 declare const Code: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/Codepen.d.ts
-declare const Codepen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Codesandbox.d.ts
-declare const Codesandbox: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
 //#region src/icons/Coffee.d.ts
 declare const Coffee: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -1677,6 +1770,9 @@ declare const Coins: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Columns2.d.ts
 declare const Columns2: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/Columns3Cog.d.ts
+declare const Columns3Cog: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Columns3.d.ts
 declare const Columns3: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -1816,11 +1912,20 @@ declare const Dam: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/DatabaseBackup.d.ts
 declare const DatabaseBackup: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/DatabaseSearch.d.ts
+declare const DatabaseSearch: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/DatabaseZap.d.ts
 declare const DatabaseZap: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Database.d.ts
 declare const Database: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/DecimalsArrowLeft.d.ts
+declare const DecimalsArrowLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/DecimalsArrowRight.d.ts
+declare const DecimalsArrowRight: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Delete.d.ts
 declare const Delete: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -1900,6 +2005,9 @@ declare const DollarSign: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Donut.d.ts
 declare const Donut: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/DoorClosedLocked.d.ts
+declare const DoorClosedLocked: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/DoorClosed.d.ts
 declare const DoorClosed: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -1918,11 +2026,11 @@ declare const DraftingCompass: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Drama.d.ts
 declare const Drama: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/Dribbble.d.ts
-declare const Dribbble: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
 //#region src/icons/Drill.d.ts
 declare const Drill: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/Drone.d.ts
+declare const Drone: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/DropletOff.d.ts
 declare const DropletOff: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -1966,6 +2074,9 @@ declare const EggOff: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Egg.d.ts
 declare const Egg: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/Ellipse.d.ts
+declare const Ellipse: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/EllipsisVertical.d.ts
 declare const EllipsisVertical: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -1990,6 +2101,9 @@ declare const EthernetPort: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Euro.d.ts
 declare const Euro: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/EvCharger.d.ts
+declare const EvCharger: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Expand.d.ts
 declare const Expand: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -2004,9 +2118,6 @@ declare const EyeOff: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Eye.d.ts
 declare const Eye: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Facebook.d.ts
-declare const Facebook: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Factory.d.ts
 declare const Factory: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2026,29 +2137,23 @@ declare const Fence: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/FerrisWheel.d.ts
 declare const FerrisWheel: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/Figma.d.ts
-declare const Figma: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
 //#region src/icons/FileArchive.d.ts
 declare const FileArchive: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/FileAudio2.d.ts
-declare const FileAudio2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileAudio.d.ts
-declare const FileAudio: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
 //#region src/icons/FileAxis3d.d.ts
 declare const FileAxis3d: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileBadge2.d.ts
-declare const FileBadge2: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/FileBadge.d.ts
 declare const FileBadge: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/FileBox.d.ts
 declare const FileBox: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/FileBracesCorner.d.ts
+declare const FileBracesCorner: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/FileBraces.d.ts
+declare const FileBraces: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/FileChartColumnIncreasing.d.ts
 declare const FileChartColumnIncreasing: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2062,8 +2167,8 @@ declare const FileChartLine: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/FileChartPie.d.ts
 declare const FileChartPie: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/FileCheck2.d.ts
-declare const FileCheck2: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#region src/icons/FileCheckCorner.d.ts
+declare const FileCheckCorner: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/FileCheck.d.ts
 declare const FileCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2071,8 +2176,8 @@ declare const FileCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/FileClock.d.ts
 declare const FileClock: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/FileCode2.d.ts
-declare const FileCode2: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#region src/icons/FileCodeCorner.d.ts
+declare const FileCodeCorner: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/FileCode.d.ts
 declare const FileCode: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2089,6 +2194,12 @@ declare const FileDigit: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/FileDown.d.ts
 declare const FileDown: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/FileExclamationPoint.d.ts
+declare const FileExclamationPoint: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/FileHeadphone.d.ts
+declare const FileHeadphone: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/FileHeart.d.ts
 declare const FileHeart: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -2098,26 +2209,14 @@ declare const FileImage: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/FileInput.d.ts
 declare const FileInput: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/FileJson2.d.ts
-declare const FileJson2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileJson.d.ts
-declare const FileJson: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileKey2.d.ts
-declare const FileKey2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
 //#region src/icons/FileKey.d.ts
 declare const FileKey: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileLock2.d.ts
-declare const FileLock2: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/FileLock.d.ts
 declare const FileLock: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/FileMinus2.d.ts
-declare const FileMinus2: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#region src/icons/FileMinusCorner.d.ts
+declare const FileMinusCorner: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/FileMinus.d.ts
 declare const FileMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2134,23 +2233,29 @@ declare const FilePenLine: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/FilePen.d.ts
 declare const FilePen: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/FilePlus2.d.ts
-declare const FilePlus2: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#region src/icons/FilePlay.d.ts
+declare const FilePlay: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/FilePlusCorner.d.ts
+declare const FilePlusCorner: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/FilePlus.d.ts
 declare const FilePlus: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/FileQuestion.d.ts
-declare const FileQuestion: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#region src/icons/FileQuestionMark.d.ts
+declare const FileQuestionMark: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/FileScan.d.ts
 declare const FileScan: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/FileSearch2.d.ts
-declare const FileSearch2: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#region src/icons/FileSearchCorner.d.ts
+declare const FileSearchCorner: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/FileSearch.d.ts
 declare const FileSearch: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/FileSignal.d.ts
+declare const FileSignal: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/FileSliders.d.ts
 declare const FileSliders: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2170,8 +2275,8 @@ declare const FileTerminal: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/FileText.d.ts
 declare const FileText: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/FileType2.d.ts
-declare const FileType2: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#region src/icons/FileTypeCorner.d.ts
+declare const FileTypeCorner: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/FileType.d.ts
 declare const FileType: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2182,23 +2287,14 @@ declare const FileUp: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/FileUser.d.ts
 declare const FileUser: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/FileVideo2.d.ts
-declare const FileVideo2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileVideo.d.ts
-declare const FileVideo: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileVolume2.d.ts
-declare const FileVolume2: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#region src/icons/FileVideoCamera.d.ts
+declare const FileVideoCamera: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/FileVolume.d.ts
 declare const FileVolume: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/FileWarning.d.ts
-declare const FileWarning: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileX2.d.ts
-declare const FileX2: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#region src/icons/FileXCorner.d.ts
+declare const FileXCorner: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/FileX.d.ts
 declare const FileX: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2212,14 +2308,8 @@ declare const Files: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Film.d.ts
 declare const Film: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/FilterX.d.ts
-declare const FilterX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Filter.d.ts
-declare const Filter: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Fingerprint.d.ts
-declare const Fingerprint: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#region src/icons/FingerprintPattern.d.ts
+declare const FingerprintPattern: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/FireExtinguisher.d.ts
 declare const FireExtinguisher: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2232,6 +2322,12 @@ declare const FishSymbol: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Fish.d.ts
 declare const Fish: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/FishingHook.d.ts
+declare const FishingHook: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/FishingRod.d.ts
+declare const FishingRod: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/FlagOff.d.ts
 declare const FlagOff: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2269,14 +2365,8 @@ declare const FlaskRound: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/FlipHorizontal2.d.ts
 declare const FlipHorizontal2: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/FlipHorizontal.d.ts
-declare const FlipHorizontal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
 //#region src/icons/FlipVertical2.d.ts
 declare const FlipVertical2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FlipVertical.d.ts
-declare const FlipVertical: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Flower2.d.ts
 declare const Flower2: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2392,14 +2482,14 @@ declare const Footprints: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Forklift.d.ts
 declare const Forklift: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/Form.d.ts
+declare const Form: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Forward.d.ts
 declare const Forward: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Frame.d.ts
 declare const Frame: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Framer.d.ts
-declare const Framer: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Frown.d.ts
 declare const Frown: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2409,6 +2499,15 @@ declare const Fuel: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Fullscreen.d.ts
 declare const Fullscreen: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/FunnelPlus.d.ts
+declare const FunnelPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/FunnelX.d.ts
+declare const FunnelX: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/Funnel.d.ts
+declare const Funnel: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/GalleryHorizontalEnd.d.ts
 declare const GalleryHorizontalEnd: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2428,6 +2527,9 @@ declare const GalleryVertical: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Gamepad2.d.ts
 declare const Gamepad2: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/GamepadDirectional.d.ts
+declare const GamepadDirectional: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Gamepad.d.ts
 declare const Gamepad: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -2440,11 +2542,17 @@ declare const Gavel: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Gem.d.ts
 declare const Gem: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/GeorgianLari.d.ts
+declare const GeorgianLari: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Ghost.d.ts
 declare const Ghost: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Gift.d.ts
 declare const Gift: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/GitBranchMinus.d.ts
+declare const GitBranchMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/GitBranchPlus.d.ts
 declare const GitBranchPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2470,6 +2578,9 @@ declare const GitFork: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/GitGraph.d.ts
 declare const GitGraph: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/GitMergeConflict.d.ts
+declare const GitMergeConflict: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/GitMerge.d.ts
 declare const GitMerge: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -2491,12 +2602,6 @@ declare const GitPullRequestDraft: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/GitPullRequest.d.ts
 declare const GitPullRequest: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/Github.d.ts
-declare const Github: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Gitlab.d.ts
-declare const Gitlab: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
 //#region src/icons/GlassWater.d.ts
 declare const GlassWater: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -2506,14 +2611,20 @@ declare const Glasses: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/GlobeLock.d.ts
 declare const GlobeLock: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/GlobeOff.d.ts
+declare const GlobeOff: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/GlobeX.d.ts
+declare const GlobeX: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Globe.d.ts
 declare const Globe: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Goal.d.ts
 declare const Goal: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/Grab.d.ts
-declare const Grab: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#region src/icons/Gpu.d.ts
+declare const Gpu: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/GraduationCap.d.ts
 declare const GraduationCap: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2532,6 +2643,9 @@ declare const Grid2x2X: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Grid2x2.d.ts
 declare const Grid2x2: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/Grid3x2.d.ts
+declare const Grid3x2: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Grid3x3.d.ts
 declare const Grid3x3: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2554,11 +2668,20 @@ declare const Guitar: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Ham.d.ts
 declare const Ham: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/Hamburger.d.ts
+declare const Hamburger: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Hammer.d.ts
 declare const Hammer: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/HandCoins.d.ts
 declare const HandCoins: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/HandFist.d.ts
+declare const HandFist: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/HandGrab.d.ts
+declare const HandGrab: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/HandHeart.d.ts
 declare const HandHeart: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2574,6 +2697,9 @@ declare const HandPlatter: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Hand.d.ts
 declare const Hand: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/Handbag.d.ts
+declare const Handbag: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Handshake.d.ts
 declare const Handshake: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2593,8 +2719,14 @@ declare const HardHat: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Hash.d.ts
 declare const Hash: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/HatGlasses.d.ts
+declare const HatGlasses: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Haze.d.ts
 declare const Haze: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/Hd.d.ts
+declare const Hd: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/HdmiPort.d.ts
 declare const HdmiPort: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2635,8 +2767,14 @@ declare const HeartCrack: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/HeartHandshake.d.ts
 declare const HeartHandshake: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/HeartMinus.d.ts
+declare const HeartMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/HeartOff.d.ts
 declare const HeartOff: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/HeartPlus.d.ts
+declare const HeartPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/HeartPulse.d.ts
 declare const HeartPulse: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2646,6 +2784,9 @@ declare const Heart: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Heater.d.ts
 declare const Heater: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/Helicopter.d.ts
+declare const Helicopter: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Hexagon.d.ts
 declare const Hexagon: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2671,6 +2812,9 @@ declare const Hotel: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Hourglass.d.ts
 declare const Hourglass: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/HouseHeart.d.ts
+declare const HouseHeart: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/HousePlug.d.ts
 declare const HousePlug: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -2688,6 +2832,9 @@ declare const IceCreamBowl: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/IceCreamCone.d.ts
 declare const IceCreamCone: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/IdCardLanyard.d.ts
+declare const IdCardLanyard: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/IdCard.d.ts
 declare const IdCard: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2725,12 +2872,6 @@ declare const Import: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Inbox.d.ts
 declare const Inbox: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/IndentDecrease.d.ts
-declare const IndentDecrease: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/IndentIncrease.d.ts
-declare const IndentIncrease: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
 //#region src/icons/IndianRupee.d.ts
 declare const IndianRupee: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -2742,9 +2883,6 @@ declare const Info: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/InspectionPanel.d.ts
 declare const InspectionPanel: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Instagram.d.ts
-declare const Instagram: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Italic.d.ts
 declare const Italic: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2763,6 +2901,9 @@ declare const Joystick: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Kanban.d.ts
 declare const Kanban: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/Kayak.d.ts
+declare const Kayak: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/KeyRound.d.ts
 declare const KeyRound: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2830,6 +2971,9 @@ declare const Laugh: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Layers2.d.ts
 declare const Layers2: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/LayersPlus.d.ts
+declare const LayersPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Layers.d.ts
 declare const Layers: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -2860,8 +3004,11 @@ declare const LeafyGreen: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Lectern.d.ts
 declare const Lectern: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/LetterText.d.ts
-declare const LetterText: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#region src/icons/LensConcave.d.ts
+declare const LensConcave: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/LensConvex.d.ts
+declare const LensConvex: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/LibraryBig.d.ts
 declare const LibraryBig: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2881,6 +3028,15 @@ declare const LightbulbOff: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Lightbulb.d.ts
 declare const Lightbulb: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/LineDotRightHorizontal.d.ts
+declare const LineDotRightHorizontal: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/LineSquiggle.d.ts
+declare const LineSquiggle: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/LineStyle.d.ts
+declare const LineStyle: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Link2Off.d.ts
 declare const Link2Off: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -2890,14 +3046,17 @@ declare const Link2: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Link.d.ts
 declare const Link: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/Linkedin.d.ts
-declare const Linkedin: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
 //#region src/icons/ListCheck.d.ts
 declare const ListCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/ListChecks.d.ts
 declare const ListChecks: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ListChevronsDownUp.d.ts
+declare const ListChevronsDownUp: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ListChevronsUpDown.d.ts
+declare const ListChevronsUpDown: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/ListCollapse.d.ts
 declare const ListCollapse: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -2910,6 +3069,12 @@ declare const ListFilterPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/ListFilter.d.ts
 declare const ListFilter: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ListIndentDecrease.d.ts
+declare const ListIndentDecrease: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ListIndentIncrease.d.ts
+declare const ListIndentIncrease: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/ListMinus.d.ts
 declare const ListMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -3004,8 +3169,8 @@ declare const MailOpen: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/MailPlus.d.ts
 declare const MailPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/MailQuestion.d.ts
-declare const MailQuestion: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#region src/icons/MailQuestionMark.d.ts
+declare const MailQuestionMark: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/MailSearch.d.ts
 declare const MailSearch: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -3025,6 +3190,9 @@ declare const Mailbox: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Mails.d.ts
 declare const Mails: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/MapMinus.d.ts
+declare const MapMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/MapPinCheckInside.d.ts
 declare const MapPinCheckInside: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -3043,11 +3211,17 @@ declare const MapPinMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/MapPinOff.d.ts
 declare const MapPinOff: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/MapPinPen.d.ts
+declare const MapPinPen: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/MapPinPlusInside.d.ts
 declare const MapPinPlusInside: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/MapPinPlus.d.ts
 declare const MapPinPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/MapPinSearch.d.ts
+declare const MapPinSearch: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/MapPinXInside.d.ts
 declare const MapPinXInside: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -3103,6 +3277,9 @@ declare const Menu: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Merge.d.ts
 declare const Merge: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/MessageCircleCheck.d.ts
+declare const MessageCircleCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/MessageCircleCode.d.ts
 declare const MessageCircleCode: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -3121,8 +3298,8 @@ declare const MessageCircleOff: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/MessageCirclePlus.d.ts
 declare const MessageCirclePlus: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/MessageCircleQuestion.d.ts
-declare const MessageCircleQuestion: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#region src/icons/MessageCircleQuestionMark.d.ts
+declare const MessageCircleQuestionMark: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/MessageCircleReply.d.ts
 declare const MessageCircleReply: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -3135,6 +3312,9 @@ declare const MessageCircleX: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/MessageCircle.d.ts
 declare const MessageCircle: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/MessageSquareCheck.d.ts
+declare const MessageSquareCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/MessageSquareCode.d.ts
 declare const MessageSquareCode: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -3187,6 +3367,9 @@ declare const MessageSquare: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/MessagesSquare.d.ts
 declare const MessagesSquare: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/Metronome.d.ts
+declare const Metronome: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/MicOff.d.ts
 declare const MicOff: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -3223,8 +3406,17 @@ declare const Minimize: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Minus.d.ts
 declare const Minus: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/MirrorRectangular.d.ts
+declare const MirrorRectangular: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/MirrorRound.d.ts
+declare const MirrorRound: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/MonitorCheck.d.ts
 declare const MonitorCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/MonitorCloud.d.ts
+declare const MonitorCloud: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/MonitorCog.d.ts
 declare const MonitorCog: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -3268,14 +3460,23 @@ declare const MoonStar: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Moon.d.ts
 declare const Moon: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/Motorbike.d.ts
+declare const Motorbike: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/MountainSnow.d.ts
 declare const MountainSnow: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Mountain.d.ts
 declare const Mountain: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/MouseLeft.d.ts
+declare const MouseLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/MouseOff.d.ts
 declare const MouseOff: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/MousePointer2Off.d.ts
+declare const MousePointer2Off: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/MousePointer2.d.ts
 declare const MousePointer2: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -3288,6 +3489,9 @@ declare const MousePointerClick: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/MousePointer.d.ts
 declare const MousePointer: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/MouseRight.d.ts
+declare const MouseRight: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Mouse.d.ts
 declare const Mouse: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -3460,6 +3664,9 @@ declare const Paintbrush: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Palette.d.ts
 declare const Palette: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/Panda.d.ts
+declare const Panda: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/PanelBottomClose.d.ts
 declare const PanelBottomClose: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -3481,6 +3688,9 @@ declare const PanelLeftDashed: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/PanelLeftOpen.d.ts
 declare const PanelLeftOpen: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/PanelLeftRightDashed.d.ts
+declare const PanelLeftRightDashed: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/PanelLeft.d.ts
 declare const PanelLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -3495,6 +3705,9 @@ declare const PanelRightOpen: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/PanelRight.d.ts
 declare const PanelRight: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/PanelTopBottomDashed.d.ts
+declare const PanelTopBottomDashed: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/PanelTopClose.d.ts
 declare const PanelTopClose: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -3667,9 +3880,6 @@ declare const Plus: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/PocketKnife.d.ts
 declare const PocketKnife: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/Pocket.d.ts
-declare const Pocket: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
 //#region src/icons/Podcast.d.ts
 declare const Podcast: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -3699,6 +3909,9 @@ declare const Presentation: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/PrinterCheck.d.ts
 declare const PrinterCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/PrinterX.d.ts
+declare const PrinterX: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Printer.d.ts
 declare const Printer: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -3733,6 +3946,9 @@ declare const Radiation: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Radical.d.ts
 declare const Radical: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/RadioOff.d.ts
+declare const RadioOff: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/RadioReceiver.d.ts
 declare const RadioReceiver: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -3744,9 +3960,6 @@ declare const Radio: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Radius.d.ts
 declare const Radius: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/RailSymbol.d.ts
-declare const RailSymbol: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Rainbow.d.ts
 declare const Rainbow: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -3781,11 +3994,20 @@ declare const ReceiptSwissFranc: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/ReceiptText.d.ts
 declare const ReceiptText: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/ReceiptTurkishLira.d.ts
+declare const ReceiptTurkishLira: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Receipt.d.ts
 declare const Receipt: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/RectangleCircle.d.ts
+declare const RectangleCircle: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/RectangleEllipsis.d.ts
 declare const RectangleEllipsis: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/RectangleGoggles.d.ts
+declare const RectangleGoggles: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/RectangleHorizontal.d.ts
 declare const RectangleHorizontal: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -3853,6 +4075,9 @@ declare const Rewind: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Ribbon.d.ts
 declare const Ribbon: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/Road.d.ts
+declare const Road: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Rocket.d.ts
 declare const Rocket: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -3862,8 +4087,14 @@ declare const RockingChair: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/RollerCoaster.d.ts
 declare const RollerCoaster: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/Rose.d.ts
+declare const Rose: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Rotate3d.d.ts
 declare const Rotate3d: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/RotateCcwKey.d.ts
+declare const RotateCcwKey: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/RotateCcwSquare.d.ts
 declare const RotateCcwSquare: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -3898,6 +4129,9 @@ declare const Rows4: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Rss.d.ts
 declare const Rss: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/RulerDimensionLine.d.ts
+declare const RulerDimensionLine: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Ruler.d.ts
 declare const Ruler: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -3918,6 +4152,9 @@ declare const SatelliteDish: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Satellite.d.ts
 declare const Satellite: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/SaudiRiyal.d.ts
+declare const SaudiRiyal: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/SaveAll.d.ts
 declare const SaveAll: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -3973,6 +4210,9 @@ declare const ScissorsLineDashed: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Scissors.d.ts
 declare const Scissors: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/Scooter.d.ts
+declare const Scooter: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/ScreenShareOff.d.ts
 declare const ScreenShareOff: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -3984,6 +4224,9 @@ declare const ScrollText: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Scroll.d.ts
 declare const Scroll: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/SearchAlert.d.ts
+declare const SearchAlert: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/SearchCheck.d.ts
 declare const SearchCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -4051,6 +4294,9 @@ declare const Sheet: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Shell.d.ts
 declare const Shell: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/ShelvingUnit.d.ts
+declare const ShelvingUnit: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/ShieldAlert.d.ts
 declare const ShieldAlert: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -4059,6 +4305,12 @@ declare const ShieldBan: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/ShieldCheck.d.ts
 declare const ShieldCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ShieldCogCorner.d.ts
+declare const ShieldCogCorner: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ShieldCog.d.ts
+declare const ShieldCog: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/ShieldEllipsis.d.ts
 declare const ShieldEllipsis: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -4075,8 +4327,8 @@ declare const ShieldOff: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/ShieldPlus.d.ts
 declare const ShieldPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/ShieldQuestion.d.ts
-declare const ShieldQuestion: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#region src/icons/ShieldQuestionMark.d.ts
+declare const ShieldQuestionMark: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/ShieldUser.d.ts
 declare const ShieldUser: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -4110,6 +4362,12 @@ declare const Shovel: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/ShowerHead.d.ts
 declare const ShowerHead: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/Shredder.d.ts
+declare const Shredder: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/Shrimp.d.ts
+declare const Shrimp: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Shrink.d.ts
 declare const Shrink: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -4159,9 +4417,6 @@ declare const SkipForward: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Skull.d.ts
 declare const Skull: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/Slack.d.ts
-declare const Slack: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
 //#region src/icons/Slash.d.ts
 declare const Slash: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -4195,8 +4450,14 @@ declare const Snail: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Snowflake.d.ts
 declare const Snowflake: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/SoapDispenserDroplet.d.ts
+declare const SoapDispenserDroplet: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Sofa.d.ts
 declare const Sofa: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/SolarPanel.d.ts
+declare const SolarPanel: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Soup.d.ts
 declare const Soup: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -4225,11 +4486,23 @@ declare const SpellCheck2: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/SpellCheck.d.ts
 declare const SpellCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/SplinePointer.d.ts
+declare const SplinePointer: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Spline.d.ts
 declare const Spline: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Split.d.ts
 declare const Split: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/Spool.d.ts
+declare const Spool: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/SportShoe.d.ts
+declare const SportShoe: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/Spotlight.d.ts
+declare const Spotlight: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/SprayCan.d.ts
 declare const SprayCan: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -4264,6 +4537,12 @@ declare const SquareArrowOutUpLeft: (props?: Partial<SVGProps>) => SVGSVGElement
 //#region src/icons/SquareArrowOutUpRight.d.ts
 declare const SquareArrowOutUpRight: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/SquareArrowRightEnter.d.ts
+declare const SquareArrowRightEnter: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/SquareArrowRightExit.d.ts
+declare const SquareArrowRightExit: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/SquareArrowRight.d.ts
 declare const SquareArrowRight: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -4281,6 +4560,12 @@ declare const SquareAsterisk: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/SquareBottomDashedScissors.d.ts
 declare const SquareBottomDashedScissors: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/SquareCenterlineDashedHorizontal.d.ts
+declare const SquareCenterlineDashedHorizontal: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/SquareCenterlineDashedVertical.d.ts
+declare const SquareCenterlineDashedVertical: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/SquareChartGantt.d.ts
 declare const SquareChartGantt: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -4317,6 +4602,9 @@ declare const SquareDashedKanban: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/SquareDashedMousePointer.d.ts
 declare const SquareDashedMousePointer: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/SquareDashedTopSolid.d.ts
+declare const SquareDashedTopSolid: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/SquareDashed.d.ts
 declare const SquareDashed: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -4357,6 +4645,9 @@ declare const SquareParkingOff: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/SquareParking.d.ts
 declare const SquareParking: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/SquarePause.d.ts
+declare const SquarePause: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/SquarePen.d.ts
 declare const SquarePen: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -4381,6 +4672,9 @@ declare const SquarePower: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/SquareRadical.d.ts
 declare const SquareRadical: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/SquareRoundCorner.d.ts
+declare const SquareRoundCorner: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/SquareScissors.d.ts
 declare const SquareScissors: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -4402,6 +4696,12 @@ declare const SquareSquare: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/SquareStack.d.ts
 declare const SquareStack: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/SquareStar.d.ts
+declare const SquareStar: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/SquareStop.d.ts
+declare const SquareStop: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/SquareTerminal.d.ts
 declare const SquareTerminal: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -4416,6 +4716,21 @@ declare const SquareX: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Square.d.ts
 declare const Square: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/SquaresExclude.d.ts
+declare const SquaresExclude: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/SquaresIntersect.d.ts
+declare const SquaresIntersect: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/SquaresSubtract.d.ts
+declare const SquaresSubtract: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/SquaresUnite.d.ts
+declare const SquaresUnite: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/SquircleDashed.d.ts
+declare const SquircleDashed: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Squircle.d.ts
 declare const Squircle: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -4449,6 +4764,9 @@ declare const Sticker: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/StickyNote.d.ts
 declare const StickyNote: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/Stone.d.ts
+declare const Stone: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Store.d.ts
 declare const Store: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -4588,11 +4906,26 @@ declare const TestTube: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/TestTubes.d.ts
 declare const TestTubes: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/TextAlignCenter.d.ts
+declare const TextAlignCenter: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/TextAlignEnd.d.ts
+declare const TextAlignEnd: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/TextAlignJustify.d.ts
+declare const TextAlignJustify: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/TextAlignStart.d.ts
+declare const TextAlignStart: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/TextCursorInput.d.ts
 declare const TextCursorInput: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/TextCursor.d.ts
 declare const TextCursor: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/TextInitial.d.ts
+declare const TextInitial: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/TextQuote.d.ts
 declare const TextQuote: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -4603,8 +4936,8 @@ declare const TextSearch: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/TextSelect.d.ts
 declare const TextSelect: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/Text.d.ts
-declare const Text: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#region src/icons/TextWrap.d.ts
+declare const TextWrap: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Theater.d.ts
 declare const Theater: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -4669,6 +5002,12 @@ declare const ToggleRight: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Toilet.d.ts
 declare const Toilet: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/ToolCase.d.ts
+declare const ToolCase: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/Toolbox.d.ts
+declare const Toolbox: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Tornado.d.ts
 declare const Tornado: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -4680,6 +5019,9 @@ declare const TouchpadOff: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Touchpad.d.ts
 declare const Touchpad: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/TowelRack.d.ts
+declare const TowelRack: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/TowerControl.d.ts
 declare const TowerControl: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -4726,9 +5068,6 @@ declare const TreePine: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Trees.d.ts
 declare const Trees: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/Trello.d.ts
-declare const Trello: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
 //#region src/icons/TrendingDown.d.ts
 declare const TrendingDown: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -4753,8 +5092,17 @@ declare const Triangle: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Trophy.d.ts
 declare const Trophy: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/TruckElectric.d.ts
+declare const TruckElectric: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Truck.d.ts
 declare const Truck: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/TurkishLira.d.ts
+declare const TurkishLira: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/Turntable.d.ts
+declare const Turntable: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Turtle.d.ts
 declare const Turtle: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -4767,12 +5115,6 @@ declare const TvMinimal: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Tv.d.ts
 declare const Tv: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Twitch.d.ts
-declare const Twitch: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Twitter.d.ts
-declare const Twitter: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/TypeOutline.d.ts
 declare const TypeOutline: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -4831,6 +5173,12 @@ declare const UserCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/UserCog.d.ts
 declare const UserCog: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/UserKey.d.ts
+declare const UserKey: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/UserLock.d.ts
+declare const UserLock: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/UserMinus.d.ts
 declare const UserMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -4845,6 +5193,9 @@ declare const UserRoundCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/UserRoundCog.d.ts
 declare const UserRoundCog: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/UserRoundKey.d.ts
+declare const UserRoundKey: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/UserRoundMinus.d.ts
 declare const UserRoundMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -4867,6 +5218,9 @@ declare const UserRound: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/UserSearch.d.ts
 declare const UserSearch: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/UserStar.d.ts
+declare const UserStar: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/UserX.d.ts
 declare const UserX: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -4888,11 +5242,17 @@ declare const Utensils: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/UtilityPole.d.ts
 declare const UtilityPole: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/Van.d.ts
+declare const Van: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Variable.d.ts
 declare const Variable: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Vault.d.ts
 declare const Vault: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/VectorSquare.d.ts
+declare const VectorSquare: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/Vegan.d.ts
 declare const Vegan: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -4975,6 +5335,12 @@ declare const WashingMachine: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Watch.d.ts
 declare const Watch: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/WavesArrowDown.d.ts
+declare const WavesArrowDown: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/WavesArrowUp.d.ts
+declare const WavesArrowUp: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/WavesLadder.d.ts
 declare const WavesLadder: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -4993,6 +5359,9 @@ declare const WebhookOff: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Webhook.d.ts
 declare const Webhook: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/WeightTilde.d.ts
+declare const WeightTilde: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/Weight.d.ts
 declare const Weight: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -5005,6 +5374,9 @@ declare const Wheat: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/WholeWord.d.ts
 declare const WholeWord: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/WifiCog.d.ts
+declare const WifiCog: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/WifiHigh.d.ts
 declare const WifiHigh: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
@@ -5013,6 +5385,12 @@ declare const WifiLow: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/WifiOff.d.ts
 declare const WifiOff: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/WifiPen.d.ts
+declare const WifiPen: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/WifiSync.d.ts
+declare const WifiSync: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/WifiZero.d.ts
 declare const WifiZero: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -5038,17 +5416,14 @@ declare const Workflow: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Worm.d.ts
 declare const Worm: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-//#region src/icons/WrapText.d.ts
-declare const WrapText: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
 //#region src/icons/Wrench.d.ts
 declare const Wrench: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/XLineTop.d.ts
+declare const XLineTop: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/X.d.ts
 declare const X: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Youtube.d.ts
-declare const Youtube: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/ZapOff.d.ts
 declare const ZapOff: (props?: Partial<SVGProps>) => SVGSVGElement;
@@ -5056,11 +5431,50 @@ declare const ZapOff: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#region src/icons/Zap.d.ts
 declare const Zap: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
+//#region src/icons/ZodiacAquarius.d.ts
+declare const ZodiacAquarius: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ZodiacAries.d.ts
+declare const ZodiacAries: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ZodiacCancer.d.ts
+declare const ZodiacCancer: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ZodiacCapricorn.d.ts
+declare const ZodiacCapricorn: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ZodiacGemini.d.ts
+declare const ZodiacGemini: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ZodiacLeo.d.ts
+declare const ZodiacLeo: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ZodiacLibra.d.ts
+declare const ZodiacLibra: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ZodiacOphiuchus.d.ts
+declare const ZodiacOphiuchus: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ZodiacPisces.d.ts
+declare const ZodiacPisces: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ZodiacSagittarius.d.ts
+declare const ZodiacSagittarius: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ZodiacScorpio.d.ts
+declare const ZodiacScorpio: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ZodiacTaurus.d.ts
+declare const ZodiacTaurus: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
+//#region src/icons/ZodiacVirgo.d.ts
+declare const ZodiacVirgo: (props?: Partial<SVGProps>) => SVGSVGElement;
+//#endregion
 //#region src/icons/ZoomIn.d.ts
 declare const ZoomIn: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
 //#region src/icons/ZoomOut.d.ts
 declare const ZoomOut: (props?: Partial<SVGProps>) => SVGSVGElement;
 //#endregion
-export { AArrowDown, AArrowUp, ALargeSmall, Accessibility, Activity, AirVent, Airplay, AlarmClock, AlarmClockCheck, AlarmClockMinus, AlarmClockOff, AlarmClockPlus, AlarmSmoke, Album, AlignCenter, AlignCenterHorizontal, AlignCenterVertical, AlignEndHorizontal, AlignEndVertical, AlignHorizontalDistributeCenter, AlignHorizontalDistributeEnd, AlignHorizontalDistributeStart, AlignHorizontalJustifyCenter, AlignHorizontalJustifyEnd, AlignHorizontalJustifyStart, AlignHorizontalSpaceAround, AlignHorizontalSpaceBetween, AlignJustify, AlignLeft, AlignRight, AlignStartHorizontal, AlignStartVertical, AlignVerticalDistributeCenter, AlignVerticalDistributeEnd, AlignVerticalDistributeStart, AlignVerticalJustifyCenter, AlignVerticalJustifyEnd, AlignVerticalJustifyStart, AlignVerticalSpaceAround, AlignVerticalSpaceBetween, Ambulance, Ampersand, Ampersands, Amphora, Anchor, Angry, Annoyed, Antenna, Anvil, Aperture, AppWindow, AppWindowMac, Apple, Archive, ArchiveRestore, ArchiveX, Armchair, ArrowBigDown, ArrowBigDownDash, ArrowBigLeft, ArrowBigLeftDash, ArrowBigRight, ArrowBigRightDash, ArrowBigUp, ArrowBigUpDash, ArrowDown, ArrowDown01, ArrowDown10, ArrowDownAZ, ArrowDownFromLine, ArrowDownLeft, ArrowDownNarrowWide, ArrowDownRight, ArrowDownToDot, ArrowDownToLine, ArrowDownUp, ArrowDownWideNarrow, ArrowDownZA, ArrowLeft, ArrowLeftFromLine, ArrowLeftRight, ArrowLeftToLine, ArrowRight, ArrowRightFromLine, ArrowRightLeft, ArrowRightToLine, ArrowUp, ArrowUp01, ArrowUp10, ArrowUpAZ, ArrowUpDown, ArrowUpFromDot, ArrowUpFromLine, ArrowUpLeft, ArrowUpNarrowWide, ArrowUpRight, ArrowUpToLine, ArrowUpWideNarrow, ArrowUpZA, ArrowsUpFromLine, Asterisk, AtSign, Atom, AudioLines, AudioWaveform, Award, Axe, Axis3d, Baby, Backpack, Badge, BadgeAlert, BadgeCent, BadgeCheck, BadgeDollarSign, BadgeEuro, BadgeHelp, BadgeIndianRupee, BadgeInfo, BadgeJapaneseYen, BadgeMinus, BadgePercent, BadgePlus, BadgePoundSterling, BadgeRussianRuble, BadgeSwissFranc, BadgeX, BaggageClaim, Ban, Banana, Bandage, Banknote, Barcode, Baseline, Bath, Battery, BatteryCharging, BatteryFull, BatteryLow, BatteryMedium, BatteryPlus, BatteryWarning, Beaker, Bean, BeanOff, Bed, BedDouble, BedSingle, Beef, Beer, BeerOff, Bell, BellDot, BellElectric, BellMinus, BellOff, BellPlus, BellRing, BetweenHorizontalEnd, BetweenHorizontalStart, BetweenVerticalEnd, BetweenVerticalStart, BicepsFlexed, Bike, Binary, Binoculars, Biohazard, Bird, Bitcoin, Blend, Blinds, Blocks, Bluetooth, BluetoothConnected, BluetoothOff, BluetoothSearching, Bold, Bolt, Bomb, Bone, Book, BookA, BookAudio, BookCheck, BookCopy, BookDashed, BookDown, BookHeadphones, BookHeart, BookImage, BookKey, BookLock, BookMarked, BookMinus, BookOpen, BookOpenCheck, BookOpenText, BookPlus, BookText, BookType, BookUp, BookUp2, BookUser, BookX, Bookmark, BookmarkCheck, BookmarkMinus, BookmarkPlus, BookmarkX, BoomBox, Bot, BotMessageSquare, BotOff, Box, Boxes, Braces, Brackets, Brain, BrainCircuit, BrainCog, BrickWall, Briefcase, BriefcaseBusiness, BriefcaseConveyorBelt, BriefcaseMedical, BringToFront, Brush, Bug, BugOff, BugPlay, Building, Building2, Bus, BusFront, Cable, CableCar, Cake, CakeSlice, Calculator, Calendar, Calendar1, CalendarArrowDown, CalendarArrowUp, CalendarCheck, CalendarCheck2, CalendarClock, CalendarCog, CalendarDays, CalendarFold, CalendarHeart, CalendarMinus, CalendarMinus2, CalendarOff, CalendarPlus, CalendarPlus2, CalendarRange, CalendarSearch, CalendarSync, CalendarX, CalendarX2, Camera, CameraOff, Candy, CandyCane, CandyOff, Cannabis, Captions, CaptionsOff, Car, CarFront, CarTaxiFront, Caravan, Carrot, CaseLower, CaseSensitive, CaseUpper, CassetteTape, Cast, Castle, Cat, Cctv, ChartArea, ChartBar, ChartBarBig, ChartBarDecreasing, ChartBarIncreasing, ChartBarStacked, ChartCandlestick, ChartColumn, ChartColumnBig, ChartColumnDecreasing, ChartColumnIncreasing, ChartColumnStacked, ChartGantt, ChartLine, ChartNetwork, ChartNoAxesColumn, ChartNoAxesColumnDecreasing, ChartNoAxesColumnIncreasing, ChartNoAxesCombined, ChartNoAxesGantt, ChartPie, ChartScatter, ChartSpline, Check, CheckCheck, ChefHat, Cherry, ChevronDown, ChevronFirst, ChevronLast, ChevronLeft, ChevronRight, ChevronUp, ChevronsDown, ChevronsDownUp, ChevronsLeft, ChevronsLeftRight, ChevronsLeftRightEllipsis, ChevronsRight, ChevronsRightLeft, ChevronsUp, ChevronsUpDown, Chrome, Church, Cigarette, CigaretteOff, Circle, CircleAlert, CircleArrowDown, CircleArrowLeft, CircleArrowOutDownLeft, CircleArrowOutDownRight, CircleArrowOutUpLeft, CircleArrowOutUpRight, CircleArrowRight, CircleArrowUp, CircleCheck, CircleCheckBig, CircleChevronDown, CircleChevronLeft, CircleChevronRight, CircleChevronUp, CircleDashed, CircleDivide, CircleDollarSign, CircleDot, CircleDotDashed, CircleEllipsis, CircleEqual, CircleFadingArrowUp, CircleFadingPlus, CircleGauge, CircleHelp, CircleMinus, CircleOff, CircleParking, CircleParkingOff, CirclePause, CirclePercent, CirclePlay, CirclePlus, CirclePower, CircleSlash, CircleSlash2, CircleSmall, CircleStop, CircleUser, CircleUserRound, CircleX, CircuitBoard, Citrus, Clapperboard, Clipboard, ClipboardCheck, ClipboardCopy, ClipboardList, ClipboardMinus, ClipboardPaste, ClipboardPen, ClipboardPenLine, ClipboardPlus, ClipboardType, ClipboardX, Clock, Clock1, Clock10, Clock11, Clock12, Clock2, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, ClockAlert, ClockArrowDown, ClockArrowUp, Cloud, CloudAlert, CloudCog, CloudDownload, CloudDrizzle, CloudFog, CloudHail, CloudLightning, CloudMoon, CloudMoonRain, CloudOff, CloudRain, CloudRainWind, CloudSnow, CloudSun, CloudSunRain, CloudUpload, Cloudy, Clover, Club, Code, CodeXml, Codepen, Codesandbox, Coffee, Cog, Coins, Columns2, Columns3, Columns4, Combine, Command, Compass, Component, Computer, ConciergeBell, Cone, Construction, Contact, ContactRound, Container, Contrast, Cookie, CookingPot, Copy, CopyCheck, CopyMinus, CopyPlus, CopySlash, CopyX, Copyleft, Copyright, CornerDownLeft, CornerDownRight, CornerLeftDown, CornerLeftUp, CornerRightDown, CornerRightUp, CornerUpLeft, CornerUpRight, Cpu, CreativeCommons, CreditCard, Croissant, Crop, Cross, Crosshair, Crown, Cuboid, CupSoda, Currency, Cylinder, Dam, Database, DatabaseBackup, DatabaseZap, Delete, Dessert, Diameter, Diamond, DiamondMinus, DiamondPercent, DiamondPlus, Dice1, Dice2, Dice3, Dice4, Dice5, Dice6, Dices, Diff, Disc, Disc2, Disc3, DiscAlbum, Divide, Dna, DnaOff, Dock, Dog, DollarSign, Donut, DoorClosed, DoorOpen, Dot, Download, DraftingCompass, Drama, Dribbble, Drill, Droplet, DropletOff, Droplets, Drum, Drumstick, Dumbbell, Ear, EarOff, Earth, EarthLock, Eclipse, Egg, EggFried, EggOff, Ellipsis, EllipsisVertical, Equal, EqualApproximately, EqualNot, Eraser, EthernetPort, Euro, Expand, ExternalLink, Eye, EyeClosed, EyeOff, Facebook, Factory, Fan, FastForward, Feather, Fence, FerrisWheel, Figma, File, FileArchive, FileAudio, FileAudio2, FileAxis3d, FileBadge, FileBadge2, FileBox, FileChartColumn, FileChartColumnIncreasing, FileChartLine, FileChartPie, FileCheck, FileCheck2, FileClock, FileCode, FileCode2, FileCog, FileDiff, FileDigit, FileDown, FileHeart, FileImage, FileInput, FileJson, FileJson2, FileKey, FileKey2, FileLock, FileLock2, FileMinus, FileMinus2, FileMusic, FileOutput, FilePen, FilePenLine, FilePlus, FilePlus2, FileQuestion, FileScan, FileSearch, FileSearch2, FileSliders, FileSpreadsheet, FileStack, FileSymlink, FileTerminal, FileText, FileType, FileType2, FileUp, FileUser, FileVideo, FileVideo2, FileVolume, FileVolume2, FileWarning, FileX, FileX2, Files, Film, Filter, FilterX, Fingerprint, FireExtinguisher, Fish, FishOff, FishSymbol, Flag, FlagOff, FlagTriangleLeft, FlagTriangleRight, Flame, FlameKindling, Flashlight, FlashlightOff, FlaskConical, FlaskConicalOff, FlaskRound, FlipHorizontal, FlipHorizontal2, FlipVertical, FlipVertical2, Flower, Flower2, Focus, FoldHorizontal, FoldVertical, Folder, FolderArchive, FolderCheck, FolderClock, FolderClosed, FolderCode, FolderCog, FolderDot, FolderDown, FolderGit, FolderGit2, FolderHeart, FolderInput, FolderKanban, FolderKey, FolderLock, FolderMinus, FolderOpen, FolderOpenDot, FolderOutput, FolderPen, FolderPlus, FolderRoot, FolderSearch, FolderSearch2, FolderSymlink, FolderSync, FolderTree, FolderUp, FolderX, Folders, Footprints, Forklift, Forward, Frame, Framer, Frown, Fuel, Fullscreen, GalleryHorizontal, GalleryHorizontalEnd, GalleryThumbnails, GalleryVertical, GalleryVerticalEnd, Gamepad, Gamepad2, Gauge, Gavel, Gem, Ghost, Gift, GitBranch, GitBranchPlus, GitCommitHorizontal, GitCommitVertical, GitCompare, GitCompareArrows, GitFork, GitGraph, GitMerge, GitPullRequest, GitPullRequestArrow, GitPullRequestClosed, GitPullRequestCreate, GitPullRequestCreateArrow, GitPullRequestDraft, Github, Gitlab, GlassWater, Glasses, Globe, GlobeLock, Goal, Grab, GraduationCap, Grape, Grid2x2, Grid2x2Check, Grid2x2Plus, Grid2x2X, Grid3x3, Grip, GripHorizontal, GripVertical, Group, Guitar, Ham, Hammer, Hand, HandCoins, HandHeart, HandHelping, HandMetal, HandPlatter, Handshake, HardDrive, HardDriveDownload, HardDriveUpload, HardHat, Hash, Haze, HdmiPort, Heading, Heading1, Heading2, Heading3, Heading4, Heading5, Heading6, HeadphoneOff, Headphones, Headset, Heart, HeartCrack, HeartHandshake, HeartOff, HeartPulse, Heater, Hexagon, Highlighter, History, Hop, HopOff, Hospital, Hotel, Hourglass, House, HousePlug, HousePlus, HouseWifi, IceCreamBowl, IceCreamCone, IdCard, Image, ImageDown, ImageMinus, ImageOff, ImagePlay, ImagePlus, ImageUp, ImageUpscale, Images, Import, Inbox, IndentDecrease, IndentIncrease, IndianRupee, InfinityIcon, Info, InspectionPanel, Instagram, Italic, IterationCcw, IterationCw, JapaneseYen, Joystick, Kanban, Key, KeyRound, KeySquare, Keyboard, KeyboardMusic, KeyboardOff, Lamp, LampCeiling, LampDesk, LampFloor, LampWallDown, LampWallUp, LandPlot, Landmark, Languages, Laptop, LaptopMinimal, LaptopMinimalCheck, Lasso, LassoSelect, Laugh, Layers, Layers2, LayoutDashboard, LayoutGrid, LayoutList, LayoutPanelLeft, LayoutPanelTop, LayoutTemplate, Leaf, LeafyGreen, Lectern, LetterText, Library, LibraryBig, LifeBuoy, Ligature, Lightbulb, LightbulbOff, Link, Link2, Link2Off, Linkedin, List, ListCheck, ListChecks, ListCollapse, ListEnd, ListFilter, ListFilterPlus, ListMinus, ListMusic, ListOrdered, ListPlus, ListRestart, ListStart, ListTodo, ListTree, ListVideo, ListX, Loader, LoaderCircle, LoaderPinwheel, Locate, LocateFixed, LocateOff, Lock, LockKeyhole, LockKeyholeOpen, LockOpen, LogIn, LogOut, Logs, Lollipop, Luggage, Magnet, Mail, MailCheck, MailMinus, MailOpen, MailPlus, MailQuestion, MailSearch, MailWarning, MailX, Mailbox, Mails, Map, MapPin, MapPinCheck, MapPinCheckInside, MapPinHouse, MapPinMinus, MapPinMinusInside, MapPinOff, MapPinPlus, MapPinPlusInside, MapPinX, MapPinXInside, MapPinned, MapPlus, Mars, MarsStroke, Martini, Maximize, Maximize2, Medal, Megaphone, MegaphoneOff, Meh, MemoryStick, Menu, Merge, MessageCircle, MessageCircleCode, MessageCircleDashed, MessageCircleHeart, MessageCircleMore, MessageCircleOff, MessageCirclePlus, MessageCircleQuestion, MessageCircleReply, MessageCircleWarning, MessageCircleX, MessageSquare, MessageSquareCode, MessageSquareDashed, MessageSquareDiff, MessageSquareDot, MessageSquareHeart, MessageSquareLock, MessageSquareMore, MessageSquareOff, MessageSquarePlus, MessageSquareQuote, MessageSquareReply, MessageSquareShare, MessageSquareText, MessageSquareWarning, MessageSquareX, MessagesSquare, Mic, MicOff, MicVocal, Microchip, Microscope, Microwave, Milestone, Milk, MilkOff, Minimize, Minimize2, Minus, Monitor, MonitorCheck, MonitorCog, MonitorDot, MonitorDown, MonitorOff, MonitorPause, MonitorPlay, MonitorSmartphone, MonitorSpeaker, MonitorStop, MonitorUp, MonitorX, Moon, MoonStar, Mountain, MountainSnow, Mouse, MouseOff, MousePointer, MousePointer2, MousePointerBan, MousePointerClick, Move, Move3d, MoveDiagonal, MoveDiagonal2, MoveDown, MoveDownLeft, MoveDownRight, MoveHorizontal, MoveLeft, MoveRight, MoveUp, MoveUpLeft, MoveUpRight, MoveVertical, Music, Music2, Music3, Music4, Navigation, Navigation2, Navigation2Off, NavigationOff, Network, Newspaper, Nfc, NonBinary, Notebook, NotebookPen, NotebookTabs, NotebookText, NotepadText, NotepadTextDashed, Nut, NutOff, Octagon, OctagonAlert, OctagonMinus, OctagonPause, OctagonX, Omega, Option, Orbit, Origami, Package, Package2, PackageCheck, PackageMinus, PackageOpen, PackagePlus, PackageSearch, PackageX, PaintBucket, PaintRoller, Paintbrush, PaintbrushVertical, Palette, PanelBottom, PanelBottomClose, PanelBottomDashed, PanelBottomOpen, PanelLeft, PanelLeftClose, PanelLeftDashed, PanelLeftOpen, PanelRight, PanelRightClose, PanelRightDashed, PanelRightOpen, PanelTop, PanelTopClose, PanelTopDashed, PanelTopOpen, PanelsLeftBottom, PanelsRightBottom, PanelsTopLeft, Paperclip, Parentheses, ParkingMeter, PartyPopper, Pause, PawPrint, PcCase, Pen, PenLine, PenOff, PenTool, Pencil, PencilLine, PencilOff, PencilRuler, Pentagon, Percent, PersonStanding, PhilippinePeso, Phone, PhoneCall, PhoneForwarded, PhoneIncoming, PhoneMissed, PhoneOff, PhoneOutgoing, Pi, Piano, Pickaxe, PictureInPicture, PictureInPicture2, PiggyBank, Pilcrow, PilcrowLeft, PilcrowRight, Pill, PillBottle, Pin, PinOff, Pipette, Pizza, Plane, PlaneLanding, PlaneTakeoff, Play, Plug, Plug2, PlugZap, Plus, Pocket, PocketKnife, Podcast, Pointer, PointerOff, Popcorn, Popsicle, PoundSterling, Power, PowerOff, Presentation, Printer, PrinterCheck, Projector, Proportions, Puzzle, Pyramid, QrCode, Quote, Rabbit, Radar, Radiation, Radical, Radio, RadioReceiver, RadioTower, Radius, RailSymbol, Rainbow, Rat, Ratio, Receipt, ReceiptCent, ReceiptEuro, ReceiptIndianRupee, ReceiptJapaneseYen, ReceiptPoundSterling, ReceiptRussianRuble, ReceiptSwissFranc, ReceiptText, RectangleEllipsis, RectangleHorizontal, RectangleVertical, Recycle, Redo, Redo2, RedoDot, RefreshCcw, RefreshCcwDot, RefreshCw, RefreshCwOff, Refrigerator, Regex, RemoveFormatting, Repeat, Repeat1, Repeat2, Replace, ReplaceAll, Reply, ReplyAll, Rewind, Ribbon, Rocket, RockingChair, RollerCoaster, Rotate3d, RotateCcw, RotateCcwSquare, RotateCw, RotateCwSquare, Route, RouteOff, Router, Rows2, Rows3, Rows4, Rss, Ruler, RussianRuble, Sailboat, Salad, Sandwich, Satellite, SatelliteDish, Save, SaveAll, SaveOff, Scale, Scale3d, Scaling, Scan, ScanBarcode, ScanEye, ScanFace, ScanHeart, ScanLine, ScanQrCode, ScanSearch, ScanText, School, Scissors, ScissorsLineDashed, ScreenShare, ScreenShareOff, Scroll, ScrollText, Search, SearchCheck, SearchCode, SearchSlash, SearchX, Section, Send, SendHorizontal, SendToBack, SeparatorHorizontal, SeparatorVertical, Server, ServerCog, ServerCrash, ServerOff, Settings, Settings2, Shapes, Share, Share2, Sheet, Shell, Shield, ShieldAlert, ShieldBan, ShieldCheck, ShieldEllipsis, ShieldHalf, ShieldMinus, ShieldOff, ShieldPlus, ShieldQuestion, ShieldUser, ShieldX, Ship, ShipWheel, Shirt, ShoppingBag, ShoppingBasket, ShoppingCart, Shovel, ShowerHead, Shrink, Shrub, Shuffle, Sigma, Signal, SignalHigh, SignalLow, SignalMedium, SignalZero, Signature, Signpost, SignpostBig, Siren, SkipBack, SkipForward, Skull, Slack, Slash, Slice, SlidersHorizontal, SlidersVertical, Smartphone, SmartphoneCharging, SmartphoneNfc, Smile, SmilePlus, Snail, Snowflake, Sofa, Soup, Space, Spade, Sparkle, Sparkles, Speaker, Speech, SpellCheck, SpellCheck2, Spline, Split, SprayCan, Sprout, Square, SquareActivity, SquareArrowDown, SquareArrowDownLeft, SquareArrowDownRight, SquareArrowLeft, SquareArrowOutDownLeft, SquareArrowOutDownRight, SquareArrowOutUpLeft, SquareArrowOutUpRight, SquareArrowRight, SquareArrowUp, SquareArrowUpLeft, SquareArrowUpRight, SquareAsterisk, SquareBottomDashedScissors, SquareChartGantt, SquareCheck, SquareCheckBig, SquareChevronDown, SquareChevronLeft, SquareChevronRight, SquareChevronUp, SquareCode, SquareDashed, SquareDashedBottom, SquareDashedBottomCode, SquareDashedKanban, SquareDashedMousePointer, SquareDivide, SquareDot, SquareEqual, SquareFunction, SquareKanban, SquareLibrary, SquareM, SquareMenu, SquareMinus, SquareMousePointer, SquareParking, SquareParkingOff, SquarePen, SquarePercent, SquarePi, SquarePilcrow, SquarePlay, SquarePlus, SquarePower, SquareRadical, SquareScissors, SquareSigma, SquareSlash, SquareSplitHorizontal, SquareSplitVertical, SquareSquare, SquareStack, SquareTerminal, SquareUser, SquareUserRound, SquareX, Squircle, Squirrel, Stamp, Star, StarHalf, StarOff, StepBack, StepForward, Stethoscope, Sticker, StickyNote, Store, StretchHorizontal, StretchVertical, Strikethrough, Subscript, Sun, SunDim, SunMedium, SunMoon, SunSnow, Sunrise, Sunset, Superscript, SwatchBook, SwissFranc, SwitchCamera, Sword, Swords, Syringe, Table, Table2, TableCellsMerge, TableCellsSplit, TableColumnsSplit, TableOfContents, TableProperties, TableRowsSplit, Tablet, TabletSmartphone, Tablets, Tag, Tags, Tally1, Tally2, Tally3, Tally4, Tally5, Tangent, Target, Telescope, Tent, TentTree, Terminal, TestTube, TestTubeDiagonal, TestTubes, Text, TextCursor, TextCursorInput, TextQuote, TextSearch, TextSelect, Theater, Thermometer, ThermometerSnowflake, ThermometerSun, ThumbsDown, ThumbsUp, Ticket, TicketCheck, TicketMinus, TicketPercent, TicketPlus, TicketSlash, TicketX, Tickets, TicketsPlane, Timer, TimerOff, TimerReset, ToggleLeft, ToggleRight, Toilet, Tornado, Torus, Touchpad, TouchpadOff, TowerControl, ToyBrick, Tractor, TrafficCone, TrainFront, TrainFrontTunnel, TrainTrack, TramFront, Transgender, Trash, Trash2, TreeDeciduous, TreePalm, TreePine, Trees, Trello, TrendingDown, TrendingUp, TrendingUpDown, Triangle, TriangleAlert, TriangleDashed, TriangleRight, Trophy, Truck, Turtle, Tv, TvMinimal, TvMinimalPlay, Twitch, Twitter, Type, TypeOutline, Umbrella, UmbrellaOff, Underline, Undo, Undo2, UndoDot, UnfoldHorizontal, UnfoldVertical, Ungroup, University, Unlink, Unlink2, Unplug, Upload, Usb, User, UserCheck, UserCog, UserMinus, UserPen, UserPlus, UserRound, UserRoundCheck, UserRoundCog, UserRoundMinus, UserRoundPen, UserRoundPlus, UserRoundSearch, UserRoundX, UserSearch, UserX, Users, UsersRound, Utensils, UtensilsCrossed, UtilityPole, Variable, Vault, Vegan, VenetianMask, Venus, VenusAndMars, Vibrate, VibrateOff, Video, VideoOff, Videotape, View, Voicemail, Volleyball, Volume, Volume1, Volume2, VolumeOff, VolumeX, Vote, Wallet, WalletCards, WalletMinimal, Wallpaper, Wand, WandSparkles, Warehouse, WashingMachine, Watch, Waves, WavesLadder, Waypoints, Webcam, Webhook, WebhookOff, Weight, Wheat, WheatOff, WholeWord, Wifi, WifiHigh, WifiLow, WifiOff, WifiZero, Wind, WindArrowDown, Wine, WineOff, Workflow, Worm, WrapText, Wrench, X, Youtube, Zap, ZapOff, ZoomIn, ZoomOut };
+export { AArrowDown, AArrowUp, ALargeSmall, Accessibility, Activity, AirVent, Airplay, AlarmClock, AlarmClockCheck, AlarmClockMinus, AlarmClockOff, AlarmClockPlus, AlarmSmoke, Album, AlignCenterHorizontal, AlignCenterVertical, AlignEndHorizontal, AlignEndVertical, AlignHorizontalDistributeCenter, AlignHorizontalDistributeEnd, AlignHorizontalDistributeStart, AlignHorizontalJustifyCenter, AlignHorizontalJustifyEnd, AlignHorizontalJustifyStart, AlignHorizontalSpaceAround, AlignHorizontalSpaceBetween, AlignStartHorizontal, AlignStartVertical, AlignVerticalDistributeCenter, AlignVerticalDistributeEnd, AlignVerticalDistributeStart, AlignVerticalJustifyCenter, AlignVerticalJustifyEnd, AlignVerticalJustifyStart, AlignVerticalSpaceAround, AlignVerticalSpaceBetween, Ambulance, Ampersand, Ampersands, Amphora, Anchor, Angry, Annoyed, Antenna, Anvil, Aperture, AppWindow, AppWindowMac, Apple, Archive, ArchiveRestore, ArchiveX, Armchair, ArrowBigDown, ArrowBigDownDash, ArrowBigLeft, ArrowBigLeftDash, ArrowBigRight, ArrowBigRightDash, ArrowBigUp, ArrowBigUpDash, ArrowDown, ArrowDown01, ArrowDown10, ArrowDownAZ, ArrowDownFromLine, ArrowDownLeft, ArrowDownNarrowWide, ArrowDownRight, ArrowDownToDot, ArrowDownToLine, ArrowDownUp, ArrowDownWideNarrow, ArrowDownZA, ArrowLeft, ArrowLeftFromLine, ArrowLeftRight, ArrowLeftToLine, ArrowRight, ArrowRightFromLine, ArrowRightLeft, ArrowRightToLine, ArrowUp, ArrowUp01, ArrowUp10, ArrowUpAZ, ArrowUpDown, ArrowUpFromDot, ArrowUpFromLine, ArrowUpLeft, ArrowUpNarrowWide, ArrowUpRight, ArrowUpToLine, ArrowUpWideNarrow, ArrowUpZA, ArrowsUpFromLine, Asterisk, AtSign, Atom, AudioLines, AudioWaveform, Award, Axe, Axis3d, Baby, Backpack, Badge, BadgeAlert, BadgeCent, BadgeCheck, BadgeDollarSign, BadgeEuro, BadgeIndianRupee, BadgeInfo, BadgeJapaneseYen, BadgeMinus, BadgePercent, BadgePlus, BadgePoundSterling, BadgeQuestionMark, BadgeRussianRuble, BadgeSwissFranc, BadgeTurkishLira, BadgeX, BaggageClaim, Balloon, Ban, Banana, Bandage, Banknote, BanknoteArrowDown, BanknoteArrowUp, BanknoteX, Barcode, Barrel, Baseline, Bath, Battery, BatteryCharging, BatteryFull, BatteryLow, BatteryMedium, BatteryPlus, BatteryWarning, Beaker, Bean, BeanOff, Bed, BedDouble, BedSingle, Beef, BeefOff, Beer, BeerOff, Bell, BellDot, BellElectric, BellMinus, BellOff, BellPlus, BellRing, BetweenHorizontalEnd, BetweenHorizontalStart, BetweenVerticalEnd, BetweenVerticalStart, BicepsFlexed, Bike, Binary, Binoculars, Biohazard, Bird, Birdhouse, Bitcoin, Blend, Blinds, Blocks, Bluetooth, BluetoothConnected, BluetoothOff, BluetoothSearching, Bold, Bolt, Bomb, Bone, Book, BookA, BookAlert, BookAudio, BookCheck, BookCopy, BookDashed, BookDown, BookHeadphones, BookHeart, BookImage, BookKey, BookLock, BookMarked, BookMinus, BookOpen, BookOpenCheck, BookOpenText, BookPlus, BookSearch, BookText, BookType, BookUp, BookUp2, BookUser, BookX, Bookmark, BookmarkCheck, BookmarkMinus, BookmarkPlus, BookmarkX, BoomBox, Bot, BotMessageSquare, BotOff, BottleWine, BowArrow, Box, Boxes, Braces, Brackets, Brain, BrainCircuit, BrainCog, BrickWall, BrickWallFire, BrickWallShield, Briefcase, BriefcaseBusiness, BriefcaseConveyorBelt, BriefcaseMedical, BringToFront, Brush, BrushCleaning, Bubbles, Bug, BugOff, BugPlay, Building, Building2, Bus, BusFront, Cable, CableCar, Cake, CakeSlice, Calculator, Calendar, Calendar1, CalendarArrowDown, CalendarArrowUp, CalendarCheck, CalendarCheck2, CalendarClock, CalendarCog, CalendarDays, CalendarFold, CalendarHeart, CalendarMinus, CalendarMinus2, CalendarOff, CalendarPlus, CalendarPlus2, CalendarRange, CalendarSearch, CalendarSync, CalendarX, CalendarX2, Calendars, Camera, CameraOff, Candy, CandyCane, CandyOff, Cannabis, CannabisOff, Captions, CaptionsOff, Car, CarFront, CarTaxiFront, Caravan, CardSim, Carrot, CaseLower, CaseSensitive, CaseUpper, CassetteTape, Cast, Castle, Cat, Cctv, CctvOff, ChartArea, ChartBar, ChartBarBig, ChartBarDecreasing, ChartBarIncreasing, ChartBarStacked, ChartCandlestick, ChartColumn, ChartColumnBig, ChartColumnDecreasing, ChartColumnIncreasing, ChartColumnStacked, ChartGantt, ChartLine, ChartNetwork, ChartNoAxesColumn, ChartNoAxesColumnDecreasing, ChartNoAxesColumnIncreasing, ChartNoAxesCombined, ChartNoAxesGantt, ChartPie, ChartScatter, ChartSpline, Check, CheckCheck, CheckLine, ChefHat, Cherry, ChessBishop, ChessKing, ChessKnight, ChessPawn, ChessQueen, ChessRook, ChevronDown, ChevronFirst, ChevronLast, ChevronLeft, ChevronRight, ChevronUp, ChevronsDown, ChevronsDownUp, ChevronsLeft, ChevronsLeftRight, ChevronsLeftRightEllipsis, ChevronsRight, ChevronsRightLeft, ChevronsUp, ChevronsUpDown, Church, Cigarette, CigaretteOff, Circle, CircleAlert, CircleArrowDown, CircleArrowLeft, CircleArrowOutDownLeft, CircleArrowOutDownRight, CircleArrowOutUpLeft, CircleArrowOutUpRight, CircleArrowRight, CircleArrowUp, CircleCheck, CircleCheckBig, CircleChevronDown, CircleChevronLeft, CircleChevronRight, CircleChevronUp, CircleDashed, CircleDivide, CircleDollarSign, CircleDot, CircleDotDashed, CircleEllipsis, CircleEqual, CircleFadingArrowUp, CircleFadingPlus, CircleGauge, CircleMinus, CircleOff, CircleParking, CircleParkingOff, CirclePause, CirclePercent, CirclePile, CirclePlay, CirclePlus, CirclePoundSterling, CirclePower, CircleQuestionMark, CircleSlash, CircleSlash2, CircleSmall, CircleStar, CircleStop, CircleUser, CircleUserRound, CircleX, CircuitBoard, Citrus, Clapperboard, Clipboard, ClipboardCheck, ClipboardClock, ClipboardCopy, ClipboardList, ClipboardMinus, ClipboardPaste, ClipboardPen, ClipboardPenLine, ClipboardPlus, ClipboardType, ClipboardX, Clock, Clock1, Clock10, Clock11, Clock12, Clock2, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, ClockAlert, ClockArrowDown, ClockArrowUp, ClockCheck, ClockFading, ClockPlus, ClosedCaption, Cloud, CloudAlert, CloudBackup, CloudCheck, CloudCog, CloudDownload, CloudDrizzle, CloudFog, CloudHail, CloudLightning, CloudMoon, CloudMoonRain, CloudOff, CloudRain, CloudRainWind, CloudSnow, CloudSun, CloudSunRain, CloudSync, CloudUpload, Cloudy, Clover, Club, Code, CodeXml, Coffee, Cog, Coins, Columns2, Columns3, Columns3Cog, Columns4, Combine, Command, Compass, Component, Computer, ConciergeBell, Cone, Construction, Contact, ContactRound, Container, Contrast, Cookie, CookingPot, Copy, CopyCheck, CopyMinus, CopyPlus, CopySlash, CopyX, Copyleft, Copyright, CornerDownLeft, CornerDownRight, CornerLeftDown, CornerLeftUp, CornerRightDown, CornerRightUp, CornerUpLeft, CornerUpRight, Cpu, CreativeCommons, CreditCard, Croissant, Crop, Cross, Crosshair, Crown, Cuboid, CupSoda, Currency, Cylinder, Dam, Database, DatabaseBackup, DatabaseSearch, DatabaseZap, DecimalsArrowLeft, DecimalsArrowRight, Delete, Dessert, Diameter, Diamond, DiamondMinus, DiamondPercent, DiamondPlus, Dice1, Dice2, Dice3, Dice4, Dice5, Dice6, Dices, Diff, Disc, Disc2, Disc3, DiscAlbum, Divide, Dna, DnaOff, Dock, Dog, DollarSign, Donut, DoorClosed, DoorClosedLocked, DoorOpen, Dot, Download, DraftingCompass, Drama, Drill, Drone, Droplet, DropletOff, Droplets, Drum, Drumstick, Dumbbell, Ear, EarOff, Earth, EarthLock, Eclipse, Egg, EggFried, EggOff, Ellipse, Ellipsis, EllipsisVertical, Equal, EqualApproximately, EqualNot, Eraser, EthernetPort, Euro, EvCharger, Expand, ExternalLink, Eye, EyeClosed, EyeOff, Factory, Fan, FastForward, Feather, Fence, FerrisWheel, File, FileArchive, FileAxis3d, FileBadge, FileBox, FileBraces, FileBracesCorner, FileChartColumn, FileChartColumnIncreasing, FileChartLine, FileChartPie, FileCheck, FileCheckCorner, FileClock, FileCode, FileCodeCorner, FileCog, FileDiff, FileDigit, FileDown, FileExclamationPoint, FileHeadphone, FileHeart, FileImage, FileInput, FileKey, FileLock, FileMinus, FileMinusCorner, FileMusic, FileOutput, FilePen, FilePenLine, FilePlay, FilePlus, FilePlusCorner, FileQuestionMark, FileScan, FileSearch, FileSearchCorner, FileSignal, FileSliders, FileSpreadsheet, FileStack, FileSymlink, FileTerminal, FileText, FileType, FileTypeCorner, FileUp, FileUser, FileVideoCamera, FileVolume, FileX, FileXCorner, Files, Film, FingerprintPattern, FireExtinguisher, Fish, FishOff, FishSymbol, FishingHook, FishingRod, Flag, FlagOff, FlagTriangleLeft, FlagTriangleRight, Flame, FlameKindling, Flashlight, FlashlightOff, FlaskConical, FlaskConicalOff, FlaskRound, FlipHorizontal2, FlipVertical2, Flower, Flower2, Focus, FoldHorizontal, FoldVertical, Folder, FolderArchive, FolderCheck, FolderClock, FolderClosed, FolderCode, FolderCog, FolderDot, FolderDown, FolderGit, FolderGit2, FolderHeart, FolderInput, FolderKanban, FolderKey, FolderLock, FolderMinus, FolderOpen, FolderOpenDot, FolderOutput, FolderPen, FolderPlus, FolderRoot, FolderSearch, FolderSearch2, FolderSymlink, FolderSync, FolderTree, FolderUp, FolderX, Folders, Footprints, Forklift, Form, Forward, Frame, Frown, Fuel, Fullscreen, Funnel, FunnelPlus, FunnelX, GalleryHorizontal, GalleryHorizontalEnd, GalleryThumbnails, GalleryVertical, GalleryVerticalEnd, Gamepad, Gamepad2, GamepadDirectional, Gauge, Gavel, Gem, GeorgianLari, Ghost, Gift, GitBranch, GitBranchMinus, GitBranchPlus, GitCommitHorizontal, GitCommitVertical, GitCompare, GitCompareArrows, GitFork, GitGraph, GitMerge, GitMergeConflict, GitPullRequest, GitPullRequestArrow, GitPullRequestClosed, GitPullRequestCreate, GitPullRequestCreateArrow, GitPullRequestDraft, GlassWater, Glasses, Globe, GlobeLock, GlobeOff, GlobeX, Goal, Gpu, GraduationCap, Grape, Grid2x2, Grid2x2Check, Grid2x2Plus, Grid2x2X, Grid3x2, Grid3x3, Grip, GripHorizontal, GripVertical, Group, Guitar, Ham, Hamburger, Hammer, Hand, HandCoins, HandFist, HandGrab, HandHeart, HandHelping, HandMetal, HandPlatter, Handbag, Handshake, HardDrive, HardDriveDownload, HardDriveUpload, HardHat, Hash, HatGlasses, Haze, Hd, HdmiPort, Heading, Heading1, Heading2, Heading3, Heading4, Heading5, Heading6, HeadphoneOff, Headphones, Headset, Heart, HeartCrack, HeartHandshake, HeartMinus, HeartOff, HeartPlus, HeartPulse, Heater, Helicopter, Hexagon, Highlighter, History, Hop, HopOff, Hospital, Hotel, Hourglass, House, HouseHeart, HousePlug, HousePlus, HouseWifi, IceCreamBowl, IceCreamCone, IdCard, IdCardLanyard, Image, ImageDown, ImageMinus, ImageOff, ImagePlay, ImagePlus, ImageUp, ImageUpscale, Images, Import, Inbox, IndianRupee, InfinityIcon, Info, InspectionPanel, Italic, IterationCcw, IterationCw, JapaneseYen, Joystick, Kanban, Kayak, Key, KeyRound, KeySquare, Keyboard, KeyboardMusic, KeyboardOff, Lamp, LampCeiling, LampDesk, LampFloor, LampWallDown, LampWallUp, LandPlot, Landmark, Languages, Laptop, LaptopMinimal, LaptopMinimalCheck, Lasso, LassoSelect, Laugh, Layers, Layers2, LayersPlus, LayoutDashboard, LayoutGrid, LayoutList, LayoutPanelLeft, LayoutPanelTop, LayoutTemplate, Leaf, LeafyGreen, Lectern, LensConcave, LensConvex, Library, LibraryBig, LifeBuoy, Ligature, Lightbulb, LightbulbOff, LineDotRightHorizontal, LineSquiggle, LineStyle, Link, Link2, Link2Off, List, ListCheck, ListChecks, ListChevronsDownUp, ListChevronsUpDown, ListCollapse, ListEnd, ListFilter, ListFilterPlus, ListIndentDecrease, ListIndentIncrease, ListMinus, ListMusic, ListOrdered, ListPlus, ListRestart, ListStart, ListTodo, ListTree, ListVideo, ListX, Loader, LoaderCircle, LoaderPinwheel, Locate, LocateFixed, LocateOff, Lock, LockKeyhole, LockKeyholeOpen, LockOpen, LogIn, LogOut, Logs, Lollipop, Luggage, Magnet, Mail, MailCheck, MailMinus, MailOpen, MailPlus, MailQuestionMark, MailSearch, MailWarning, MailX, Mailbox, Mails, Map, MapMinus, MapPin, MapPinCheck, MapPinCheckInside, MapPinHouse, MapPinMinus, MapPinMinusInside, MapPinOff, MapPinPen, MapPinPlus, MapPinPlusInside, MapPinSearch, MapPinX, MapPinXInside, MapPinned, MapPlus, Mars, MarsStroke, Martini, Maximize, Maximize2, Medal, Megaphone, MegaphoneOff, Meh, MemoryStick, Menu, Merge, MessageCircle, MessageCircleCheck, MessageCircleCode, MessageCircleDashed, MessageCircleHeart, MessageCircleMore, MessageCircleOff, MessageCirclePlus, MessageCircleQuestionMark, MessageCircleReply, MessageCircleWarning, MessageCircleX, MessageSquare, MessageSquareCheck, MessageSquareCode, MessageSquareDashed, MessageSquareDiff, MessageSquareDot, MessageSquareHeart, MessageSquareLock, MessageSquareMore, MessageSquareOff, MessageSquarePlus, MessageSquareQuote, MessageSquareReply, MessageSquareShare, MessageSquareText, MessageSquareWarning, MessageSquareX, MessagesSquare, Metronome, Mic, MicOff, MicVocal, Microchip, Microscope, Microwave, Milestone, Milk, MilkOff, Minimize, Minimize2, Minus, MirrorRectangular, MirrorRound, Monitor, MonitorCheck, MonitorCloud, MonitorCog, MonitorDot, MonitorDown, MonitorOff, MonitorPause, MonitorPlay, MonitorSmartphone, MonitorSpeaker, MonitorStop, MonitorUp, MonitorX, Moon, MoonStar, Motorbike, Mountain, MountainSnow, Mouse, MouseLeft, MouseOff, MousePointer, MousePointer2, MousePointer2Off, MousePointerBan, MousePointerClick, MouseRight, Move, Move3d, MoveDiagonal, MoveDiagonal2, MoveDown, MoveDownLeft, MoveDownRight, MoveHorizontal, MoveLeft, MoveRight, MoveUp, MoveUpLeft, MoveUpRight, MoveVertical, Music, Music2, Music3, Music4, Navigation, Navigation2, Navigation2Off, NavigationOff, Network, Newspaper, Nfc, NonBinary, Notebook, NotebookPen, NotebookTabs, NotebookText, NotepadText, NotepadTextDashed, Nut, NutOff, Octagon, OctagonAlert, OctagonMinus, OctagonPause, OctagonX, Omega, Option, Orbit, Origami, Package, Package2, PackageCheck, PackageMinus, PackageOpen, PackagePlus, PackageSearch, PackageX, PaintBucket, PaintRoller, Paintbrush, PaintbrushVertical, Palette, Panda, PanelBottom, PanelBottomClose, PanelBottomDashed, PanelBottomOpen, PanelLeft, PanelLeftClose, PanelLeftDashed, PanelLeftOpen, PanelLeftRightDashed, PanelRight, PanelRightClose, PanelRightDashed, PanelRightOpen, PanelTop, PanelTopBottomDashed, PanelTopClose, PanelTopDashed, PanelTopOpen, PanelsLeftBottom, PanelsRightBottom, PanelsTopLeft, Paperclip, Parentheses, ParkingMeter, PartyPopper, Pause, PawPrint, PcCase, Pen, PenLine, PenOff, PenTool, Pencil, PencilLine, PencilOff, PencilRuler, Pentagon, Percent, PersonStanding, PhilippinePeso, Phone, PhoneCall, PhoneForwarded, PhoneIncoming, PhoneMissed, PhoneOff, PhoneOutgoing, Pi, Piano, Pickaxe, PictureInPicture, PictureInPicture2, PiggyBank, Pilcrow, PilcrowLeft, PilcrowRight, Pill, PillBottle, Pin, PinOff, Pipette, Pizza, Plane, PlaneLanding, PlaneTakeoff, Play, Plug, Plug2, PlugZap, Plus, PocketKnife, Podcast, Pointer, PointerOff, Popcorn, Popsicle, PoundSterling, Power, PowerOff, Presentation, Printer, PrinterCheck, PrinterX, Projector, Proportions, Puzzle, Pyramid, QrCode, Quote, Rabbit, Radar, Radiation, Radical, Radio, RadioOff, RadioReceiver, RadioTower, Radius, Rainbow, Rat, Ratio, Receipt, ReceiptCent, ReceiptEuro, ReceiptIndianRupee, ReceiptJapaneseYen, ReceiptPoundSterling, ReceiptRussianRuble, ReceiptSwissFranc, ReceiptText, ReceiptTurkishLira, RectangleCircle, RectangleEllipsis, RectangleGoggles, RectangleHorizontal, RectangleVertical, Recycle, Redo, Redo2, RedoDot, RefreshCcw, RefreshCcwDot, RefreshCw, RefreshCwOff, Refrigerator, Regex, RemoveFormatting, Repeat, Repeat1, Repeat2, Replace, ReplaceAll, Reply, ReplyAll, Rewind, Ribbon, Road, Rocket, RockingChair, RollerCoaster, Rose, Rotate3d, RotateCcw, RotateCcwKey, RotateCcwSquare, RotateCw, RotateCwSquare, Route, RouteOff, Router, Rows2, Rows3, Rows4, Rss, Ruler, RulerDimensionLine, RussianRuble, Sailboat, Salad, Sandwich, Satellite, SatelliteDish, SaudiRiyal, Save, SaveAll, SaveOff, Scale, Scale3d, Scaling, Scan, ScanBarcode, ScanEye, ScanFace, ScanHeart, ScanLine, ScanQrCode, ScanSearch, ScanText, School, Scissors, ScissorsLineDashed, Scooter, ScreenShare, ScreenShareOff, Scroll, ScrollText, Search, SearchAlert, SearchCheck, SearchCode, SearchSlash, SearchX, Section, Send, SendHorizontal, SendToBack, SeparatorHorizontal, SeparatorVertical, Server, ServerCog, ServerCrash, ServerOff, Settings, Settings2, Shapes, Share, Share2, Sheet, Shell, ShelvingUnit, Shield, ShieldAlert, ShieldBan, ShieldCheck, ShieldCog, ShieldCogCorner, ShieldEllipsis, ShieldHalf, ShieldMinus, ShieldOff, ShieldPlus, ShieldQuestionMark, ShieldUser, ShieldX, Ship, ShipWheel, Shirt, ShoppingBag, ShoppingBasket, ShoppingCart, Shovel, ShowerHead, Shredder, Shrimp, Shrink, Shrub, Shuffle, Sigma, Signal, SignalHigh, SignalLow, SignalMedium, SignalZero, Signature, Signpost, SignpostBig, Siren, SkipBack, SkipForward, Skull, Slash, Slice, SlidersHorizontal, SlidersVertical, Smartphone, SmartphoneCharging, SmartphoneNfc, Smile, SmilePlus, Snail, Snowflake, SoapDispenserDroplet, Sofa, SolarPanel, Soup, Space, Spade, Sparkle, Sparkles, Speaker, Speech, SpellCheck, SpellCheck2, Spline, SplinePointer, Split, Spool, SportShoe, Spotlight, SprayCan, Sprout, Square, SquareActivity, SquareArrowDown, SquareArrowDownLeft, SquareArrowDownRight, SquareArrowLeft, SquareArrowOutDownLeft, SquareArrowOutDownRight, SquareArrowOutUpLeft, SquareArrowOutUpRight, SquareArrowRight, SquareArrowRightEnter, SquareArrowRightExit, SquareArrowUp, SquareArrowUpLeft, SquareArrowUpRight, SquareAsterisk, SquareBottomDashedScissors, SquareCenterlineDashedHorizontal, SquareCenterlineDashedVertical, SquareChartGantt, SquareCheck, SquareCheckBig, SquareChevronDown, SquareChevronLeft, SquareChevronRight, SquareChevronUp, SquareCode, SquareDashed, SquareDashedBottom, SquareDashedBottomCode, SquareDashedKanban, SquareDashedMousePointer, SquareDashedTopSolid, SquareDivide, SquareDot, SquareEqual, SquareFunction, SquareKanban, SquareLibrary, SquareM, SquareMenu, SquareMinus, SquareMousePointer, SquareParking, SquareParkingOff, SquarePause, SquarePen, SquarePercent, SquarePi, SquarePilcrow, SquarePlay, SquarePlus, SquarePower, SquareRadical, SquareRoundCorner, SquareScissors, SquareSigma, SquareSlash, SquareSplitHorizontal, SquareSplitVertical, SquareSquare, SquareStack, SquareStar, SquareStop, SquareTerminal, SquareUser, SquareUserRound, SquareX, SquaresExclude, SquaresIntersect, SquaresSubtract, SquaresUnite, Squircle, SquircleDashed, Squirrel, Stamp, Star, StarHalf, StarOff, StepBack, StepForward, Stethoscope, Sticker, StickyNote, Stone, Store, StretchHorizontal, StretchVertical, Strikethrough, Subscript, Sun, SunDim, SunMedium, SunMoon, SunSnow, Sunrise, Sunset, Superscript, SwatchBook, SwissFranc, SwitchCamera, Sword, Swords, Syringe, Table, Table2, TableCellsMerge, TableCellsSplit, TableColumnsSplit, TableOfContents, TableProperties, TableRowsSplit, Tablet, TabletSmartphone, Tablets, Tag, Tags, Tally1, Tally2, Tally3, Tally4, Tally5, Tangent, Target, Telescope, Tent, TentTree, Terminal, TestTube, TestTubeDiagonal, TestTubes, TextAlignCenter, TextAlignEnd, TextAlignJustify, TextAlignStart, TextCursor, TextCursorInput, TextInitial, TextQuote, TextSearch, TextSelect, TextWrap, Theater, Thermometer, ThermometerSnowflake, ThermometerSun, ThumbsDown, ThumbsUp, Ticket, TicketCheck, TicketMinus, TicketPercent, TicketPlus, TicketSlash, TicketX, Tickets, TicketsPlane, Timer, TimerOff, TimerReset, ToggleLeft, ToggleRight, Toilet, ToolCase, Toolbox, Tornado, Torus, Touchpad, TouchpadOff, TowelRack, TowerControl, ToyBrick, Tractor, TrafficCone, TrainFront, TrainFrontTunnel, TrainTrack, TramFront, Transgender, Trash, Trash2, TreeDeciduous, TreePalm, TreePine, Trees, TrendingDown, TrendingUp, TrendingUpDown, Triangle, TriangleAlert, TriangleDashed, TriangleRight, Trophy, Truck, TruckElectric, TurkishLira, Turntable, Turtle, Tv, TvMinimal, TvMinimalPlay, Type, TypeOutline, Umbrella, UmbrellaOff, Underline, Undo, Undo2, UndoDot, UnfoldHorizontal, UnfoldVertical, Ungroup, University, Unlink, Unlink2, Unplug, Upload, Usb, User, UserCheck, UserCog, UserKey, UserLock, UserMinus, UserPen, UserPlus, UserRound, UserRoundCheck, UserRoundCog, UserRoundKey, UserRoundMinus, UserRoundPen, UserRoundPlus, UserRoundSearch, UserRoundX, UserSearch, UserStar, UserX, Users, UsersRound, Utensils, UtensilsCrossed, UtilityPole, Van, Variable, Vault, VectorSquare, Vegan, VenetianMask, Venus, VenusAndMars, Vibrate, VibrateOff, Video, VideoOff, Videotape, View, Voicemail, Volleyball, Volume, Volume1, Volume2, VolumeOff, VolumeX, Vote, Wallet, WalletCards, WalletMinimal, Wallpaper, Wand, WandSparkles, Warehouse, WashingMachine, Watch, Waves, WavesArrowDown, WavesArrowUp, WavesLadder, Waypoints, Webcam, Webhook, WebhookOff, Weight, WeightTilde, Wheat, WheatOff, WholeWord, Wifi, WifiCog, WifiHigh, WifiLow, WifiOff, WifiPen, WifiSync, WifiZero, Wind, WindArrowDown, Wine, WineOff, Workflow, Worm, Wrench, X, XLineTop, Zap, ZapOff, ZodiacAquarius, ZodiacAries, ZodiacCancer, ZodiacCapricorn, ZodiacGemini, ZodiacLeo, ZodiacLibra, ZodiacOphiuchus, ZodiacPisces, ZodiacSagittarius, ZodiacScorpio, ZodiacTaurus, ZodiacVirgo, ZoomIn, ZoomOut };
 //# sourceMappingURL=index.d.ts.map

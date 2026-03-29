@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const Paintbrush = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "m14.622 17.897-10.68-2.913" }),

@@ -5,9 +5,15 @@ import { type SVGProps } from "../types.ts";
 
 export const DatabaseBackup = (props: Partial<SVGProps> = {}) => {
   const { ellipse, path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    ellipse({ cx: "12", cy: "5", rx: "9", ry: "3" }),
+    ellipse({
+      cx: "12",
+      cy: "5",
+      rx: "9",
+      ry: "3",
+    }),
     path({ "d": "M3 12a9 3 0 0 0 5 2.69" }),
     path({ "d": "M21 9.3V5" }),
     path({ "d": "M3 5v14a9 3 0 0 0 6.47 2.88" }),

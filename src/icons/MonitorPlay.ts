@@ -5,14 +5,21 @@ import { type SVGProps } from "../types.ts";
 
 export const MonitorPlay = (props: Partial<SVGProps> = {}) => {
   const { path, rect } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({
       "d":
-        "M10 7.75a.75.75 0 0 1 1.142-.638l3.664 2.249a.75.75 0 0 1 0 1.278l-3.664 2.25a.75.75 0 0 1-1.142-.64z",
+        "M15.033 9.44a.647.647 0 0 1 0 1.12l-4.065 2.352a.645.645 0 0 1-.968-.56V7.648a.645.645 0 0 1 .967-.56z",
     }),
     path({ "d": "M12 17v4" }),
     path({ "d": "M8 21h8" }),
-    rect({ "x": "2", "y": "3", width: "20", height: "14", rx: "2" }),
+    rect({
+      "x": "2",
+      "y": "3",
+      width: "20",
+      height: "14",
+      rx: "2",
+    }),
   );
 };

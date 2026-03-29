@@ -5,9 +5,18 @@ import { type SVGProps } from "../types.ts";
 
 export const Blend = (props: Partial<SVGProps> = {}) => {
   const { circle } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    circle({ cx: "9", cy: "9", "r": "7" }),
-    circle({ cx: "15", cy: "15", "r": "7" }),
+    circle({
+      cx: "9",
+      cy: "9",
+      "r": "7",
+    }),
+    circle({
+      cx: "15",
+      cy: "15",
+      "r": "7",
+    }),
   );
 };

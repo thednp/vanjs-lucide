@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const Rabbit = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M13 16a3 3 0 0 1 2.24 5" }),

@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const BeanOff = (props: Partial<SVGProps> = {}) => {
   const { path, line } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({
@@ -16,6 +17,11 @@ export const BeanOff = (props: Partial<SVGProps> = {}) => {
       "d":
         "M5.341 10.62a4 4 0 0 0 6.487 1.208M10.62 5.341a4.015 4.015 0 0 1 2.039 2.04",
     }),
-    line({ x1: "2", x2: "22", y1: "2", y2: "22" }),
+    line({
+      x1: "2",
+      x2: "22",
+      y1: "2",
+      y2: "22",
+    }),
   );
 };

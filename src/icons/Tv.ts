@@ -4,10 +4,17 @@ import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
 import { type SVGProps } from "../types.ts";
 
 export const Tv = (props: Partial<SVGProps> = {}) => {
-  const { rect, polyline } = van.tags(svgNamespace);
+  const { path, rect } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    rect({ width: "20", height: "15", "x": "2", "y": "7", rx: "2", ry: "2" }),
-    polyline({ points: "17 2 12 7 7 2" }),
+    path({ "d": "m17 2-5 5-5-5" }),
+    rect({
+      width: "20",
+      height: "15",
+      "x": "2",
+      "y": "7",
+      rx: "2",
+    }),
   );
 };

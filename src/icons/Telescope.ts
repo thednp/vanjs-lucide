@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const Telescope = (props: Partial<SVGProps> = {}) => {
   const { path, circle } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({
@@ -19,6 +20,10 @@ export const Telescope = (props: Partial<SVGProps> = {}) => {
     }),
     path({ "d": "m6.158 8.633 1.114 4.456" }),
     path({ "d": "m8 21 3.105-6.21" }),
-    circle({ cx: "12", cy: "13", "r": "2" }),
+    circle({
+      cx: "12",
+      cy: "13",
+      "r": "2",
+    }),
   );
 };

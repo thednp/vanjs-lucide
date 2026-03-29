@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const WheatOff = (props: Partial<SVGProps> = {}) => {
   const { path, line } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "m2 22 10-10" }),
@@ -34,6 +35,11 @@ export const WheatOff = (props: Partial<SVGProps> = {}) => {
       "d":
         "M18.74 13.09c.26-.15.51-.34.73-.56L21 11l-1.53-1.53a3.5 3.5 0 0 0-4.62-.28",
     }),
-    line({ x1: "2", x2: "22", y1: "2", y2: "22" }),
+    line({
+      x1: "2",
+      x2: "22",
+      y1: "2",
+      y2: "22",
+    }),
   );
 };

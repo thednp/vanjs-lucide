@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const Inbox = (props: Partial<SVGProps> = {}) => {
   const { polyline, path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     polyline({ points: "22 12 16 12 14 15 10 15 8 12 2 12" }),

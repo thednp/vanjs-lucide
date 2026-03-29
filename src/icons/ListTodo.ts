@@ -4,13 +4,20 @@ import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
 import { type SVGProps } from "../types.ts";
 
 export const ListTodo = (props: Partial<SVGProps> = {}) => {
-  const { rect, path } = van.tags(svgNamespace);
+  const { path, rect } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    rect({ "x": "3", "y": "5", width: "6", height: "6", rx: "1" }),
-    path({ "d": "m3 17 2 2 4-4" }),
-    path({ "d": "M13 6h8" }),
+    path({ "d": "M13 5h8" }),
     path({ "d": "M13 12h8" }),
-    path({ "d": "M13 18h8" }),
+    path({ "d": "M13 19h8" }),
+    path({ "d": "m3 17 2 2 4-4" }),
+    rect({
+      "x": "3",
+      "y": "4",
+      width: "6",
+      height: "6",
+      rx: "1",
+    }),
   );
 };

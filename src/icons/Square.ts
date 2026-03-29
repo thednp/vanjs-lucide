@@ -5,8 +5,15 @@ import { type SVGProps } from "../types.ts";
 
 export const Square = (props: Partial<SVGProps> = {}) => {
   const { rect } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
+    rect({
+      width: "18",
+      height: "18",
+      "x": "3",
+      "y": "3",
+      rx: "2",
+    }),
   );
 };

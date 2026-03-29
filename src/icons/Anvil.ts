@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const Anvil = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M7 10H6a4 4 0 0 1-4-4 1 1 0 0 1 1-1h4" }),

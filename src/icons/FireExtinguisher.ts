@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const FireExtinguisher = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M15 6.5V3a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3.5" }),

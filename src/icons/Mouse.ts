@@ -5,9 +5,16 @@ import { type SVGProps } from "../types.ts";
 
 export const Mouse = (props: Partial<SVGProps> = {}) => {
   const { rect, path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    rect({ "x": "5", "y": "2", width: "14", height: "20", rx: "7" }),
+    rect({
+      "x": "5",
+      "y": "2",
+      width: "14",
+      height: "20",
+      rx: "7",
+    }),
     path({ "d": "M12 6v4" }),
   );
 };

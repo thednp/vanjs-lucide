@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const MapPinHouse = (props: Partial<SVGProps> = {}) => {
   const { path, circle } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({
@@ -16,6 +17,10 @@ export const MapPinHouse = (props: Partial<SVGProps> = {}) => {
         "M18 10a8 8 0 0 0-16 0c0 4.993 5.539 10.193 7.399 11.799a1 1 0 0 0 .601.2",
     }),
     path({ "d": "M18 22v-3" }),
-    circle({ cx: "10", cy: "10", "r": "3" }),
+    circle({
+      cx: "10",
+      cy: "10",
+      "r": "3",
+    }),
   );
 };

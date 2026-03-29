@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const LassoSelect = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M7 22a5 5 0 0 1-2-4" }),

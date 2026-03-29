@@ -5,9 +5,16 @@ import { type SVGProps } from "../types.ts";
 
 export const BrickWall = (props: Partial<SVGProps> = {}) => {
   const { rect, path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
+    rect({
+      width: "18",
+      height: "18",
+      "x": "3",
+      "y": "3",
+      rx: "2",
+    }),
     path({ "d": "M12 9v6" }),
     path({ "d": "M16 15v6" }),
     path({ "d": "M16 3v6" }),

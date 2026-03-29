@@ -5,9 +5,14 @@ import { type SVGProps } from "../types.ts";
 
 export const Aperture = (props: Partial<SVGProps> = {}) => {
   const { circle, path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    circle({ cx: "12", cy: "12", "r": "10" }),
+    circle({
+      cx: "12",
+      cy: "12",
+      "r": "10",
+    }),
     path({ "d": "m14.31 8 5.74 9.94" }),
     path({ "d": "M9.69 8h11.48" }),
     path({ "d": "m7.38 12 5.74-9.94" }),

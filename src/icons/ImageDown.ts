@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const ImageDown = (props: Partial<SVGProps> = {}) => {
   const { path, circle } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({
@@ -13,6 +14,10 @@ export const ImageDown = (props: Partial<SVGProps> = {}) => {
     }),
     path({ "d": "m14 19 3 3v-5.5" }),
     path({ "d": "m17 22 3-3" }),
-    circle({ cx: "9", cy: "9", "r": "2" }),
+    circle({
+      cx: "9",
+      cy: "9",
+      "r": "2",
+    }),
   );
 };

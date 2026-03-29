@@ -5,8 +5,15 @@ import { type SVGProps } from "../types.ts";
 
 export const RectangleVertical = (props: Partial<SVGProps> = {}) => {
   const { rect } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    rect({ width: "12", height: "20", "x": "6", "y": "2", rx: "2" }),
+    rect({
+      width: "12",
+      height: "20",
+      "x": "6",
+      "y": "2",
+      rx: "2",
+    }),
   );
 };

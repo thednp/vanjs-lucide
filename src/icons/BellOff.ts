@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const BellOff = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M10.268 21a2 2 0 0 0 3.464 0" }),

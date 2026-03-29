@@ -4,11 +4,16 @@ import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
 import { type SVGProps } from "../types.ts";
 
 export const UserCheck = (props: Partial<SVGProps> = {}) => {
-  const { path, circle, polyline } = van.tags(svgNamespace);
+  const { path, circle } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
+    path({ "d": "m16 11 2 2 4-4" }),
     path({ "d": "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" }),
-    circle({ cx: "9", cy: "7", "r": "4" }),
-    polyline({ points: "16 11 18 13 22 9" }),
+    circle({
+      cx: "9",
+      cy: "7",
+      "r": "4",
+    }),
   );
 };

@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const SatelliteDish = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M4 10a7.31 7.31 0 0 0 10 10Z" }),

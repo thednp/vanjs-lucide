@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const Joystick = (props: Partial<SVGProps> = {}) => {
   const { path, circle } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({
@@ -13,6 +14,10 @@ export const Joystick = (props: Partial<SVGProps> = {}) => {
     }),
     path({ "d": "M6 15v-2" }),
     path({ "d": "M12 15V9" }),
-    circle({ cx: "12", cy: "6", "r": "3" }),
+    circle({
+      cx: "12",
+      cy: "6",
+      "r": "3",
+    }),
   );
 };

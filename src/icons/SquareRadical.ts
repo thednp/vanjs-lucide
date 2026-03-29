@@ -5,9 +5,16 @@ import { type SVGProps } from "../types.ts";
 
 export const SquareRadical = (props: Partial<SVGProps> = {}) => {
   const { path, rect } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M7 12h2l2 5 2-10h4" }),
-    rect({ "x": "3", "y": "3", width: "18", height: "18", rx: "2" }),
+    rect({
+      "x": "3",
+      "y": "3",
+      width: "18",
+      height: "18",
+      rx: "2",
+    }),
   );
 };

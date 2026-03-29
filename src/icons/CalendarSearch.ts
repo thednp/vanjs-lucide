@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const CalendarSearch = (props: Partial<SVGProps> = {}) => {
   const { path, circle } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M16 2v4" }),
@@ -14,6 +15,10 @@ export const CalendarSearch = (props: Partial<SVGProps> = {}) => {
     path({ "d": "m22 22-1.875-1.875" }),
     path({ "d": "M3 10h18" }),
     path({ "d": "M8 2v4" }),
-    circle({ cx: "18", cy: "18", "r": "3" }),
+    circle({
+      cx: "18",
+      cy: "18",
+      "r": "3",
+    }),
   );
 };

@@ -4,11 +4,12 @@ import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
 import { type SVGProps } from "../types.ts";
 
 export const ChartNoAxesColumnIncreasing = (props: Partial<SVGProps> = {}) => {
-  const { line } = van.tags(svgNamespace);
+  const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    line({ x1: "12", x2: "12", y1: "20", y2: "10" }),
-    line({ x1: "18", x2: "18", y1: "20", y2: "4" }),
-    line({ x1: "6", x2: "6", y1: "20", y2: "16" }),
+    path({ "d": "M5 21v-6" }),
+    path({ "d": "M12 21V9" }),
+    path({ "d": "M19 21V3" }),
   );
 };

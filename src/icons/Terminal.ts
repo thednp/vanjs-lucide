@@ -4,10 +4,11 @@ import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
 import { type SVGProps } from "../types.ts";
 
 export const Terminal = (props: Partial<SVGProps> = {}) => {
-  const { polyline, line } = van.tags(svgNamespace);
+  const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    polyline({ points: "4 17 10 11 4 5" }),
-    line({ x1: "12", x2: "20", y1: "19", y2: "19" }),
+    path({ "d": "M12 19h8" }),
+    path({ "d": "m4 17 6-6-6-6" }),
   );
 };

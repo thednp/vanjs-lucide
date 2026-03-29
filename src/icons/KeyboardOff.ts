@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const KeyboardOff = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M 20 4 A2 2 0 0 1 22 6" }),

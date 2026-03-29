@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const RemoveFormatting = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M4 7V4h16v3" }),

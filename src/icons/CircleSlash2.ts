@@ -4,10 +4,15 @@ import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
 import { type SVGProps } from "../types.ts";
 
 export const CircleSlash2 = (props: Partial<SVGProps> = {}) => {
-  const { path, circle } = van.tags(svgNamespace);
+  const { circle, path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
+    circle({
+      cx: "12",
+      cy: "12",
+      "r": "10",
+    }),
     path({ "d": "M22 2 2 22" }),
-    circle({ cx: "12", cy: "12", "r": "10" }),
   );
 };

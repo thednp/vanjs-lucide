@@ -5,9 +5,14 @@ import { type SVGProps } from "../types.ts";
 
 export const Accessibility = (props: Partial<SVGProps> = {}) => {
   const { circle, path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    circle({ cx: "16", cy: "4", "r": "1" }),
+    circle({
+      cx: "16",
+      cy: "4",
+      "r": "1",
+    }),
     path({ "d": "m18 19 1-7-6 1" }),
     path({ "d": "m5 8 3-3 5.5 3-2.36 3.5" }),
     path({ "d": "M4.24 14.5a5 5 0 0 0 6.88 6" }),

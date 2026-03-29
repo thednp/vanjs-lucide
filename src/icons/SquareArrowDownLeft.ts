@@ -5,9 +5,16 @@ import { type SVGProps } from "../types.ts";
 
 export const SquareArrowDownLeft = (props: Partial<SVGProps> = {}) => {
   const { rect, path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
+    rect({
+      width: "18",
+      height: "18",
+      "x": "3",
+      "y": "3",
+      rx: "2",
+    }),
     path({ "d": "m16 8-8 8" }),
     path({ "d": "M16 16H8V8" }),
   );

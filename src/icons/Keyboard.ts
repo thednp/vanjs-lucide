@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const Keyboard = (props: Partial<SVGProps> = {}) => {
   const { path, rect } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M10 8h.01" }),
@@ -15,6 +16,12 @@ export const Keyboard = (props: Partial<SVGProps> = {}) => {
     path({ "d": "M6 8h.01" }),
     path({ "d": "M7 16h10" }),
     path({ "d": "M8 12h.01" }),
-    rect({ width: "20", height: "16", "x": "2", "y": "4", rx: "2" }),
+    rect({
+      width: "20",
+      height: "16",
+      "x": "2",
+      "y": "4",
+      rx: "2",
+    }),
   );
 };

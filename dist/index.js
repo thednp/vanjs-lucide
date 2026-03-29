@@ -1,5 +1,5 @@
 /*!
-* vanjs-lucide ESM v0.0.6 (https://thednp.github.io/vanjs-lucide)
+* vanjs-lucide ESM v0.0.7 (https://thednp.github.io/vanjs-lucide)
 * Copyright 2026 © thednp
 * Licensed under MIT (https://github.com/thednp/vanjs-lucide/blob/master/LICENSE)
 */
@@ -26,19 +26,19 @@ const LucideIcon = (initialProps = {}, ...children) => {
 //#region src/icons/AArrowDown.ts
 const AArrowDown = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M3.5 13h6" }), path({ "d": "m2 16 4.5-9 4.5 9" }), path({ "d": "M18 7v9" }), path({ "d": "m14 12 4 4 4-4" }));
+	return LucideIcon(props, path({ "d": "m14 12 4 4 4-4" }), path({ "d": "M18 16V7" }), path({ "d": "m2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16" }), path({ "d": "M3.304 13h6.392" }));
 };
 //#endregion
 //#region src/icons/AArrowUp.ts
 const AArrowUp = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M3.5 13h6" }), path({ "d": "m2 16 4.5-9 4.5 9" }), path({ "d": "M18 16V7" }), path({ "d": "m14 11 4-4 4 4" }));
+	return LucideIcon(props, path({ "d": "m14 11 4-4 4 4" }), path({ "d": "M18 16V7" }), path({ "d": "m2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16" }), path({ "d": "M3.304 13h6.392" }));
 };
 //#endregion
 //#region src/icons/ALargeSmall.ts
 const ALargeSmall = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 14h-5" }), path({ "d": "M16 16v-3.5a2.5 2.5 0 0 1 5 0V16" }), path({ "d": "M4.5 13h6" }), path({ "d": "m3 16 4.5-9 4.5 9" }));
+	return LucideIcon(props, path({ "d": "m15 16 2.536-7.328a1.02 1.02 1 0 1 1.928 0L22 16" }), path({ "d": "M15.697 14h5.606" }), path({ "d": "m2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16" }), path({ "d": "M3.304 13h6.392" }));
 };
 //#endregion
 //#region src/icons/Accessibility.ts
@@ -60,7 +60,7 @@ const Activity = (props = {}) => {
 //#region src/icons/AirVent.ts
 const AirVent = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M6 12H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" }), path({ "d": "M6 8h12" }), path({ "d": "M18.3 17.7a2.5 2.5 0 0 1-3.16 3.83 2.53 2.53 0 0 1-1.14-2V12" }), path({ "d": "M6.6 15.6A2 2 0 1 0 10 17v-5" }));
+	return LucideIcon(props, path({ "d": "M18 17.5a2.5 2.5 0 1 1-4 2.03V12" }), path({ "d": "M6 12H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" }), path({ "d": "M6 8h12" }), path({ "d": "M6.6 15.572A2 2 0 1 0 10 17v-5" }));
 };
 //#endregion
 //#region src/icons/Airplay.ts
@@ -144,12 +144,6 @@ const AlignCenterHorizontal = (props = {}) => {
 const AlignCenterVertical = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M12 2v20" }), path({ "d": "M8 10H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2h4" }), path({ "d": "M16 10h4a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-4" }), path({ "d": "M8 20H7a2 2 0 0 1-2-2v-2c0-1.1.9-2 2-2h1" }), path({ "d": "M16 14h1a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-1" }));
-};
-//#endregion
-//#region src/icons/AlignCenter.ts
-const AlignCenter = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M17 12H7" }), path({ "d": "M19 18H5" }), path({ "d": "M21 6H3" }));
 };
 //#endregion
 //#region src/icons/AlignEndHorizontal.ts
@@ -324,24 +318,6 @@ const AlignHorizontalSpaceBetween = (props = {}) => {
 		"y": "7",
 		rx: "2"
 	}), path({ "d": "M3 2v20" }), path({ "d": "M21 2v20" }));
-};
-//#endregion
-//#region src/icons/AlignJustify.ts
-const AlignJustify = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M3 12h18" }), path({ "d": "M3 18h18" }), path({ "d": "M3 6h18" }));
-};
-//#endregion
-//#region src/icons/AlignLeft.ts
-const AlignLeft = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 12H3" }), path({ "d": "M17 18H3" }), path({ "d": "M21 6H3" }));
-};
-//#endregion
-//#region src/icons/AlignRight.ts
-const AlignRight = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 12H9" }), path({ "d": "M21 18H7" }), path({ "d": "M21 6H3" }));
 };
 //#endregion
 //#region src/icons/AlignStartHorizontal.ts
@@ -535,7 +511,7 @@ const Ambulance = (props = {}) => {
 //#region src/icons/Ampersand.ts
 const Ampersand = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M17.5 12c0 4.4-3.6 8-8 8A4.5 4.5 0 0 1 5 15.5c0-6 8-4 8-8.5a3 3 0 1 0-6 0c0 3 2.5 8.5 12 13" }), path({ "d": "M16 12h3" }));
+	return LucideIcon(props, path({ "d": "M16 12h3" }), path({ "d": "M17.5 12a8 8 0 0 1-8 8A4.5 4.5 0 0 1 5 15.5c0-6 8-4 8-8.5a3 3 0 1 0-6 0c0 3 2.5 8.5 12 13" }));
 };
 //#endregion
 //#region src/icons/Ampersands.ts
@@ -553,10 +529,10 @@ const Amphora = (props = {}) => {
 //#region src/icons/Anchor.ts
 const Anchor = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 22V8" }), path({ "d": "M5 12H2a10 10 0 0 0 20 0h-3" }), circle({
+	return LucideIcon(props, path({ "d": "M12 6v16" }), path({ "d": "m19 13 2-1a9 9 0 0 1-18 0l2 1" }), path({ "d": "M9 11h6" }), circle({
 		cx: "12",
-		cy: "5",
-		"r": "3"
+		cy: "4",
+		"r": "2"
 	}));
 };
 //#endregion
@@ -629,7 +605,7 @@ const AppWindow = (props = {}) => {
 //#region src/icons/Apple.ts
 const Apple = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z" }), path({ "d": "M10 2c1 .5 2 2 2 5" }));
+	return LucideIcon(props, path({ "d": "M12 6.528V3a1 1 0 0 1 1-1h0" }), path({ "d": "M18.237 21A15 15 0 0 0 22 11a6 6 0 0 0-10-4.472A6 6 0 0 0 2 11a15.1 15.1 0 0 0 3.763 10 3 3 0 0 0 3.648.648 5.5 5.5 0 0 1 5.178 0A3 3 0 0 0 18.237 21" }));
 };
 //#endregion
 //#region src/icons/ArchiveRestore.ts
@@ -677,49 +653,49 @@ const Armchair = (props = {}) => {
 //#region src/icons/ArrowBigDownDash.ts
 const ArrowBigDownDash = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 5H9" }), path({ "d": "M15 9v3h4l-7 7-7-7h4V9z" }));
+	return LucideIcon(props, path({ "d": "M14 8a1 1 0 0 1 1 1v2a1 1 0 0 0 1 1h3.293a.707.707 0 0 1 .5 1.207l-6.939 6.939a1.207 1.207 0 0 1-1.708 0l-6.94-6.94a.707.707 0 0 1 .5-1.206H8a1 1 0 0 0 1-1V9a1 1 0 0 1 1-1z" }), path({ "d": "M9 4h6" }));
 };
 //#endregion
 //#region src/icons/ArrowBigDown.ts
 const ArrowBigDown = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 6v6h4l-7 7-7-7h4V6h6z" }));
+	return LucideIcon(props, path({ "d": "M9 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 0 1 1h3.293a.707.707 0 0 1 .5 1.207l-7.086 7.086a1 1 0 0 1-1.414 0l-7.086-7.086a.707.707 0 0 1 .5-1.207H8a1 1 0 0 0 1-1z" }));
 };
 //#endregion
 //#region src/icons/ArrowBigLeftDash.ts
 const ArrowBigLeftDash = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M19 15V9" }), path({ "d": "M15 15h-3v4l-7-7 7-7v4h3v6z" }));
+	return LucideIcon(props, path({ "d": "M13 9a1 1 0 0 1-1-1V4.707a.707.707 0 0 0-1.207-.5l-6.94 6.94a1.207 1.207 0 0 0 0 1.707l6.94 6.94a.707.707 0 0 0 1.207-.5V16a1 1 0 0 1 1-1h2a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1z" }), path({ "d": "M20 9v6" }));
 };
 //#endregion
 //#region src/icons/ArrowBigLeft.ts
 const ArrowBigLeft = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M18 15h-6v4l-7-7 7-7v4h6v6z" }));
+	return LucideIcon(props, path({ "d": "M10.793 19.793a.707.707 0 0 0 1.207-.5V16a1 1 0 0 1 1-1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-6a1 1 0 0 1-1-1V4.707a.707.707 0 0 0-1.207-.5l-6.94 6.94a1.207 1.207 0 0 0 0 1.707z" }));
 };
 //#endregion
 //#region src/icons/ArrowBigRightDash.ts
 const ArrowBigRightDash = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M5 9v6" }), path({ "d": "M9 9h3V5l7 7-7 7v-4H9V9z" }));
+	return LucideIcon(props, path({ "d": "M11 9a1 1 0 0 0 1-1V4.707a.707.707 0 0 1 1.207-.5l6.94 6.94a1.207 1.207 0 0 1 0 1.707l-6.94 6.94a.707.707 0 0 1-1.207-.5V16a1 1 0 0 0-1-1H9a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1z" }), path({ "d": "M4 9v6" }));
 };
 //#endregion
 //#region src/icons/ArrowBigRight.ts
 const ArrowBigRight = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M6 9h6V5l7 7-7 7v-4H6V9z" }));
+	return LucideIcon(props, path({ "d": "M13.207 19.793a.707.707 0 0 1-1.207-.5V16a1 1 0 0 0-1-1H5a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h6a1 1 0 0 0 1-1V4.707a.707.707 0 0 1 1.207-.5l6.94 6.94a1.207 1.207 0 0 1 0 1.707z" }));
 };
 //#endregion
 //#region src/icons/ArrowBigUpDash.ts
 const ArrowBigUpDash = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M9 19h6" }), path({ "d": "M9 15v-3H5l7-7 7 7h-4v3H9z" }));
+	return LucideIcon(props, path({ "d": "M14 16a1 1 0 0 0 1-1v-2a1 1 0 0 1 1-1h3.293a.707.707 0 0 0 .5-1.207l-6.939-6.939a1.207 1.207 0 0 0-1.708 0l-6.94 6.94a.707.707 0 0 0 .5 1.206H8a1 1 0 0 1 1 1v2a1 1 0 0 0 1 1z" }), path({ "d": "M9 20h6" }));
 };
 //#endregion
 //#region src/icons/ArrowBigUp.ts
 const ArrowBigUp = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M9 18v-6H5l7-7 7 7h-4v6H9z" }));
+	return LucideIcon(props, path({ "d": "M9 19a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-6a1 1 0 0 1 1-1h3.293a.707.707 0 0 0 .5-1.207l-7.086-7.086a1 1 0 0 0-1.414 0l-7.086 7.086a.707.707 0 0 0 .5 1.207H8a1 1 0 0 1 1 1z" }));
 };
 //#endregion
 //#region src/icons/ArrowDown01.ts
@@ -1015,19 +991,19 @@ const Award = (props = {}) => {
 //#region src/icons/Axe.ts
 const Axe = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m14 12-8.5 8.5a2.12 2.12 0 1 1-3-3L11 9" }), path({ "d": "M15 13 9 7l4-4 6 6h3a8 8 0 0 1-7 7z" }));
+	return LucideIcon(props, path({ "d": "m14 12-8.381 8.38a1 1 0 0 1-3.001-3L11 9" }), path({ "d": "M15 15.5a.5.5 0 0 0 .5.5A6.5 6.5 0 0 0 22 9.5a.5.5 0 0 0-.5-.5h-1.672a2 2 0 0 1-1.414-.586l-5.062-5.062a1.205 1.205 0 0 0-1.704 0L9.352 5.648a1.205 1.205 0 0 0 0 1.704l5.062 5.062A2 2 0 0 1 15 13.828z" }));
 };
 //#endregion
 //#region src/icons/Axis3d.ts
 const Axis3d = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 4v16h16" }), path({ "d": "m4 20 7-7" }));
+	return LucideIcon(props, path({ "d": "M13.5 10.5 15 9" }), path({ "d": "M4 4v15a1 1 0 0 0 1 1h15" }), path({ "d": "M4.293 19.707 6 18" }), path({ "d": "m9 15 1.5-1.5" }));
 };
 //#endregion
 //#region src/icons/Baby.ts
 const Baby = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M9 12h.01" }), path({ "d": "M15 12h.01" }), path({ "d": "M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5" }), path({ "d": "M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1" }));
+	return LucideIcon(props, path({ "d": "M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5" }), path({ "d": "M15 12h.01" }), path({ "d": "M19.38 6.813A9 9 0 0 1 20.8 10.2a2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1" }), path({ "d": "M9 12h.01" }));
 };
 //#endregion
 //#region src/icons/Backpack.ts
@@ -1074,17 +1050,6 @@ const BadgeDollarSign = (props = {}) => {
 const BadgeEuro = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }), path({ "d": "M7 12h5" }), path({ "d": "M15 9.4a4 4 0 1 0 0 5.2" }));
-};
-//#endregion
-//#region src/icons/BadgeHelp.ts
-const BadgeHelp = (props = {}) => {
-	const { path, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }), path({ "d": "M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" }), line({
-		x1: "12",
-		x2: "12.01",
-		y1: "17",
-		y2: "17"
-	}));
 };
 //#endregion
 //#region src/icons/BadgeIndianRupee.ts
@@ -1154,6 +1119,17 @@ const BadgePoundSterling = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }), path({ "d": "M8 12h4" }), path({ "d": "M10 16V9.5a2.5 2.5 0 0 1 5 0" }), path({ "d": "M8 16h7" }));
 };
 //#endregion
+//#region src/icons/BadgeQuestionMark.ts
+const BadgeQuestionMark = (props = {}) => {
+	const { path, line } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }), path({ "d": "M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" }), line({
+		x1: "12",
+		x2: "12.01",
+		y1: "17",
+		y2: "17"
+	}));
+};
+//#endregion
 //#region src/icons/BadgeRussianRuble.ts
 const BadgeRussianRuble = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
@@ -1164,6 +1140,12 @@ const BadgeRussianRuble = (props = {}) => {
 const BadgeSwissFranc = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }), path({ "d": "M11 17V8h4" }), path({ "d": "M11 12h3" }), path({ "d": "M9 16h4" }));
+};
+//#endregion
+//#region src/icons/BadgeTurkishLira.ts
+const BadgeTurkishLira = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M11 7v10a5 5 0 0 0 5-5" }), path({ "d": "m15 8-6 3" }), path({ "d": "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76" }));
 };
 //#endregion
 //#region src/icons/BadgeX.ts
@@ -1208,6 +1190,12 @@ const BaggageClaim = (props = {}) => {
 	}));
 };
 //#endregion
+//#region src/icons/Balloon.ts
+const Balloon = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 16v1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v1" }), path({ "d": "M12 6a2 2 0 0 1 2 2" }), path({ "d": "M18 8c0 4-3.5 8-6 8s-6-4-6-8a6 6 0 0 1 12 0" }));
+};
+//#endregion
 //#region src/icons/Ban.ts
 const Ban = (props = {}) => {
 	const { circle, path } = van.tags(svgNamespace);
@@ -1215,7 +1203,7 @@ const Ban = (props = {}) => {
 		cx: "12",
 		cy: "12",
 		"r": "10"
-	}), path({ "d": "m4.9 4.9 14.2 14.2" }));
+	}), path({ "d": "M4.929 4.929 19.07 19.071" }));
 };
 //#endregion
 //#region src/icons/Banana.ts
@@ -1227,12 +1215,42 @@ const Banana = (props = {}) => {
 //#region src/icons/Bandage.ts
 const Bandage = (props = {}) => {
 	const { path, rect } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M10 10.01h.01" }), path({ "d": "M10 14.01h.01" }), path({ "d": "M14 10.01h.01" }), path({ "d": "M14 14.01h.01" }), path({ "d": "M18 6v11.5" }), path({ "d": "M6 6v12" }), rect({
+	return LucideIcon(props, path({ "d": "M10 10.01h.01" }), path({ "d": "M10 14.01h.01" }), path({ "d": "M14 10.01h.01" }), path({ "d": "M14 14.01h.01" }), path({ "d": "M18 6v12" }), path({ "d": "M6 6v12" }), rect({
 		"x": "2",
 		"y": "6",
 		width: "20",
 		height: "12",
 		rx: "2"
+	}));
+};
+//#endregion
+//#region src/icons/BanknoteArrowDown.ts
+const BanknoteArrowDown = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5" }), path({ "d": "m16 19 3 3 3-3" }), path({ "d": "M18 12h.01" }), path({ "d": "M19 16v6" }), path({ "d": "M6 12h.01" }), circle({
+		cx: "12",
+		cy: "12",
+		"r": "2"
+	}));
+};
+//#endregion
+//#region src/icons/BanknoteArrowUp.ts
+const BanknoteArrowUp = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5" }), path({ "d": "M18 12h.01" }), path({ "d": "M19 22v-6" }), path({ "d": "m22 19-3-3-3 3" }), path({ "d": "M6 12h.01" }), circle({
+		cx: "12",
+		cy: "12",
+		"r": "2"
+	}));
+};
+//#endregion
+//#region src/icons/BanknoteX.ts
+const BanknoteX = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M13 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5" }), path({ "d": "m17 17 5 5" }), path({ "d": "M18 12h.01" }), path({ "d": "m22 17-5 5" }), path({ "d": "M6 12h.01" }), circle({
+		cx: "12",
+		cy: "12",
+		"r": "2"
 	}));
 };
 //#endregion
@@ -1258,6 +1276,12 @@ const Barcode = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M3 5v14" }), path({ "d": "M8 5v14" }), path({ "d": "M12 5v14" }), path({ "d": "M17 5v14" }), path({ "d": "M21 5v14" }));
 };
 //#endregion
+//#region src/icons/Barrel.ts
+const Barrel = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 3a41 41 0 0 0 0 18" }), path({ "d": "M14 3a41 41 0 0 1 0 18" }), path({ "d": "M17 3a2 2 0 0 1 1.68.92 15.25 15.25 0 0 1 0 16.16A2 2 0 0 1 17 21H7a2 2 0 0 1-1.68-.92 15.25 15.25 0 0 1 0-16.16A2 2 0 0 1 7 3z" }), path({ "d": "M3.84 17h16.32" }), path({ "d": "M3.84 7h16.32" }));
+};
+//#endregion
 //#region src/icons/Baseline.ts
 const Baseline = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
@@ -1272,126 +1296,67 @@ const Bath = (props = {}) => {
 //#endregion
 //#region src/icons/BatteryCharging.ts
 const BatteryCharging = (props = {}) => {
-	const { path, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 7h1a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2" }), path({ "d": "M6 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h1" }), path({ "d": "m11 7-3 5h4l-3 5" }), line({
-		x1: "22",
-		x2: "22",
-		y1: "11",
-		y2: "13"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m11 7-3 5h4l-3 5" }), path({ "d": "M14.856 6H16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.935" }), path({ "d": "M22 14v-4" }), path({ "d": "M5.14 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2.936" }));
 };
 //#endregion
 //#region src/icons/BatteryFull.ts
 const BatteryFull = (props = {}) => {
-	const { rect, line } = van.tags(svgNamespace);
-	return LucideIcon(props, rect({
-		width: "16",
-		height: "10",
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 10v4" }), path({ "d": "M14 10v4" }), path({ "d": "M22 14v-4" }), path({ "d": "M6 10v4" }), rect({
 		"x": "2",
-		"y": "7",
-		rx: "2",
-		ry: "2"
-	}), line({
-		x1: "22",
-		x2: "22",
-		y1: "11",
-		y2: "13"
-	}), line({
-		x1: "6",
-		x2: "6",
-		y1: "11",
-		y2: "13"
-	}), line({
-		x1: "10",
-		x2: "10",
-		y1: "11",
-		y2: "13"
-	}), line({
-		x1: "14",
-		x2: "14",
-		y1: "11",
-		y2: "13"
+		"y": "6",
+		width: "16",
+		height: "12",
+		rx: "2"
 	}));
 };
 //#endregion
 //#region src/icons/BatteryLow.ts
 const BatteryLow = (props = {}) => {
-	const { rect, line } = van.tags(svgNamespace);
-	return LucideIcon(props, rect({
-		width: "16",
-		height: "10",
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M22 14v-4" }), path({ "d": "M6 14v-4" }), rect({
 		"x": "2",
-		"y": "7",
-		rx: "2",
-		ry: "2"
-	}), line({
-		x1: "22",
-		x2: "22",
-		y1: "11",
-		y2: "13"
-	}), line({
-		x1: "6",
-		x2: "6",
-		y1: "11",
-		y2: "13"
+		"y": "6",
+		width: "16",
+		height: "12",
+		rx: "2"
 	}));
 };
 //#endregion
 //#region src/icons/BatteryMedium.ts
 const BatteryMedium = (props = {}) => {
-	const { rect, line } = van.tags(svgNamespace);
-	return LucideIcon(props, rect({
-		width: "16",
-		height: "10",
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 14v-4" }), path({ "d": "M22 14v-4" }), path({ "d": "M6 14v-4" }), rect({
 		"x": "2",
-		"y": "7",
-		rx: "2",
-		ry: "2"
-	}), line({
-		x1: "22",
-		x2: "22",
-		y1: "11",
-		y2: "13"
-	}), line({
-		x1: "6",
-		x2: "6",
-		y1: "11",
-		y2: "13"
-	}), line({
-		x1: "10",
-		x2: "10",
-		y1: "11",
-		y2: "13"
+		"y": "6",
+		width: "16",
+		height: "12",
+		rx: "2"
 	}));
 };
 //#endregion
 //#region src/icons/BatteryPlus.ts
 const BatteryPlus = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M10 9v6" }), path({ "d": "M13.5 7H16a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2.5" }), path({ "d": "M22 11v2" }), path({ "d": "M6.5 17H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h2.5" }), path({ "d": "M7 12h6" }));
+	return LucideIcon(props, path({ "d": "M10 9v6" }), path({ "d": "M12.543 6H16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3.605" }), path({ "d": "M22 14v-4" }), path({ "d": "M7 12h6" }), path({ "d": "M7.606 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3.606" }));
 };
 //#endregion
 //#region src/icons/BatteryWarning.ts
 const BatteryWarning = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M10 17h.01" }), path({ "d": "M10 7v6" }), path({ "d": "M14 7h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2" }), path({ "d": "M22 11v2" }), path({ "d": "M6 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" }));
+	return LucideIcon(props, path({ "d": "M10 17h.01" }), path({ "d": "M10 7v6" }), path({ "d": "M14 6h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2" }), path({ "d": "M22 14v-4" }), path({ "d": "M6 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2" }));
 };
 //#endregion
 //#region src/icons/Battery.ts
 const Battery = (props = {}) => {
-	const { rect, line } = van.tags(svgNamespace);
-	return LucideIcon(props, rect({
-		width: "16",
-		height: "10",
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M 22 14 L 22 10" }), rect({
 		"x": "2",
-		"y": "7",
-		rx: "2",
-		ry: "2"
-	}), line({
-		x1: "22",
-		x2: "22",
-		y1: "11",
-		y2: "13"
+		"y": "6",
+		width: "16",
+		height: "12",
+		rx: "2"
 	}));
 };
 //#endregion
@@ -1436,6 +1401,12 @@ const Bed = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M2 4v16" }), path({ "d": "M2 8h18a2 2 0 0 1 2 2v10" }), path({ "d": "M2 17h20" }), path({ "d": "M6 8v9" }));
 };
 //#endregion
+//#region src/icons/BeefOff.ts
+const BeefOff = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M11.771 6.109a2.5 2.5 0 0 1 3.12 3.12" }), path({ "d": "M17.852 12.185a6.5 6.5 0 0 0-9.035-9.04" }), path({ "d": "M18.013 18.013C15.029 20.349 10.831 22 7 22a3 3 0 0 1-2.68-1.66L2.4 16.5" }), path({ "d": "m18.5 6 2.19 4.5a6.48 6.48 0 0 1-.139 4.393" }), path({ "d": "m2 2 20 20" }), path({ "d": "M6.355 6.37a7 7 0 0 0-.075.23c-1.1 3.13-.78 3.9-3.18 6.08A3 3 0 0 0 5 18c3.356 0 6.993-1.267 9.85-3.151" }));
+};
+//#endregion
 //#region src/icons/Beef.ts
 const Beef = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
@@ -1461,9 +1432,9 @@ const Beer = (props = {}) => {
 //#region src/icons/BellDot.ts
 const BellDot = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M10.268 21a2 2 0 0 0 3.464 0" }), path({ "d": "M13.916 2.314A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.74 7.327A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673 9 9 0 0 1-.585-.665" }), circle({
+	return LucideIcon(props, path({ "d": "M10.268 21a2 2 0 0 0 3.464 0" }), path({ "d": "M11.68 2.009A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673c-.824-.85-1.678-1.731-2.21-3.348" }), circle({
 		cx: "18",
-		cy: "8",
+		cy: "5",
 		"r": "3"
 	}));
 };
@@ -1471,20 +1442,20 @@ const BellDot = (props = {}) => {
 //#region src/icons/BellElectric.ts
 const BellElectric = (props = {}) => {
 	const { path, circle, rect } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M18.8 4A6.3 8.7 0 0 1 20 9" }), path({ "d": "M9 9h.01" }), circle({
+	return LucideIcon(props, path({ "d": "M18.518 17.347A7 7 0 0 1 14 19" }), path({ "d": "M18.8 4A11 11 0 0 1 20 9" }), path({ "d": "M9 9h.01" }), circle({
+		cx: "20",
+		cy: "16",
+		"r": "2"
+	}), circle({
 		cx: "9",
 		cy: "9",
 		"r": "7"
 	}), rect({
-		width: "10",
-		height: "6",
 		"x": "4",
 		"y": "16",
+		width: "10",
+		height: "6",
 		rx: "2"
-	}), path({ "d": "M14 19c3 0 4.6-1.6 4.6-1.6" }), circle({
-		cx: "20",
-		cy: "16",
-		"r": "2"
 	}));
 };
 //#endregion
@@ -1654,6 +1625,16 @@ const Bird = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M16 7h.01" }), path({ "d": "M3.4 18H12a8 8 0 0 0 8-8V7a4 4 0 0 0-7.28-2.3L2 20" }), path({ "d": "m20 7 2 .5-2 .5" }), path({ "d": "M10 18v3" }), path({ "d": "M14 17.75V21" }), path({ "d": "M7 18a6 6 0 0 0 3.84-10.61" }));
 };
 //#endregion
+//#region src/icons/Birdhouse.ts
+const Birdhouse = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 18v4" }), path({ "d": "m17 18 1.956-11.468" }), path({ "d": "m3 8 7.82-5.615a2 2 0 0 1 2.36 0L21 8" }), path({ "d": "M4 18h16" }), path({ "d": "M7 18 5.044 6.532" }), circle({
+		cx: "12",
+		cy: "10",
+		"r": "2"
+	}));
+};
+//#endregion
 //#region src/icons/Bitcoin.ts
 const Bitcoin = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
@@ -1686,14 +1667,14 @@ const Blinds = (props = {}) => {
 //#endregion
 //#region src/icons/Blocks.ts
 const Blocks = (props = {}) => {
-	const { rect, path } = van.tags(svgNamespace);
-	return LucideIcon(props, rect({
-		width: "7",
-		height: "7",
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2" }), rect({
 		"x": "14",
-		"y": "3",
+		"y": "2",
+		width: "8",
+		height: "8",
 		rx: "1"
-	}), path({ "d": "M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3" }));
+	}));
 };
 //#endregion
 //#region src/icons/BluetoothConnected.ts
@@ -1768,6 +1749,12 @@ const BookA = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }), path({ "d": "m8 13 4-7 4 7" }), path({ "d": "M9.1 11h5.7" }));
 };
 //#endregion
+//#region src/icons/BookAlert.ts
+const BookAlert = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 13h.01" }), path({ "d": "M12 6v3" }), path({ "d": "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }));
+};
+//#endregion
 //#region src/icons/BookAudio.ts
 const BookAudio = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
@@ -1783,7 +1770,7 @@ const BookCheck = (props = {}) => {
 //#region src/icons/BookCopy.ts
 const BookCopy = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M2 16V4a2 2 0 0 1 2-2h11" }), path({ "d": "M22 18H11a2 2 0 1 0 0 4h10.5a.5.5 0 0 0 .5-.5v-15a.5.5 0 0 0-.5-.5H11a2 2 0 0 0-2 2v12" }), path({ "d": "M5 14H4a2 2 0 1 0 0 4h1" }));
+	return LucideIcon(props, path({ "d": "M5 7a2 2 0 0 0-2 2v11" }), path({ "d": "M5.803 18H5a2 2 0 0 0 0 4h9.5a.5.5 0 0 0 .5-.5V21" }), path({ "d": "M9 15V4a2 2 0 0 1 2-2h9.5a.5.5 0 0 1 .5.5v14a.5.5 0 0 1-.5.5H11a2 2 0 0 1 0-4h10" }));
 };
 //#endregion
 //#region src/icons/BookDashed.ts
@@ -1815,7 +1802,7 @@ const BookHeadphones = (props = {}) => {
 //#region src/icons/BookHeart.ts
 const BookHeart = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M16 8.2A2.22 2.22 0 0 0 13.8 6c-.8 0-1.4.3-1.8.9-.4-.6-1-.9-1.8-.9A2.22 2.22 0 0 0 8 8.2c0 .6.3 1.2.7 1.6A226.652 226.652 0 0 0 12 13a404 404 0 0 0 3.3-3.1 2.413 2.413 0 0 0 .7-1.7" }), path({ "d": "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }));
+	return LucideIcon(props, path({ "d": "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }), path({ "d": "M8.62 9.8A2.25 2.25 0 1 1 12 6.836a2.25 2.25 0 1 1 3.38 2.966l-2.626 2.856a.998.998 0 0 1-1.507 0z" }));
 };
 //#endregion
 //#region src/icons/BookImage.ts
@@ -1831,9 +1818,9 @@ const BookImage = (props = {}) => {
 //#region src/icons/BookKey.ts
 const BookKey = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m19 3 1 1" }), path({ "d": "m20 2-4.5 4.5" }), path({ "d": "M20 8v13a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }), path({ "d": "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H14" }), circle({
-		cx: "14",
-		cy: "8",
+	return LucideIcon(props, path({ "d": "M13 2H6.5A2.5 2.5 0 0 0 4 4.5v15" }), path({ "d": "M17 2v6" }), path({ "d": "M17 4h2" }), path({ "d": "M20 15.2V21a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }), circle({
+		cx: "17",
+		cy: "10",
 		"r": "2"
 	}));
 };
@@ -1886,6 +1873,16 @@ const BookPlus = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M12 7v6" }), path({ "d": "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" }), path({ "d": "M9 10h6" }));
 };
 //#endregion
+//#region src/icons/BookSearch.ts
+const BookSearch = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M11 22H5.5a1 1 0 0 1 0-5h4.501" }), path({ "d": "m21 22-1.879-1.878" }), path({ "d": "M3 19.5v-15A2.5 2.5 0 0 1 5.5 2H18a1 1 0 0 1 1 1v8" }), circle({
+		cx: "17",
+		cy: "18",
+		"r": "3"
+	}));
+};
+//#endregion
 //#region src/icons/BookText.ts
 const BookText = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
@@ -1935,46 +1932,31 @@ const Book = (props = {}) => {
 //#region src/icons/BookmarkCheck.ts
 const BookmarkCheck = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2Z" }), path({ "d": "m9 10 2 2 4-4" }));
+	return LucideIcon(props, path({ "d": "M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z" }), path({ "d": "m9 10 2 2 4-4" }));
 };
 //#endregion
 //#region src/icons/BookmarkMinus.ts
 const BookmarkMinus = (props = {}) => {
-	const { path, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" }), line({
-		x1: "15",
-		x2: "9",
-		y1: "10",
-		y2: "10"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M15 10H9" }), path({ "d": "M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z" }));
 };
 //#endregion
 //#region src/icons/BookmarkPlus.ts
 const BookmarkPlus = (props = {}) => {
-	const { path, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" }), line({
-		x1: "12",
-		x2: "12",
-		y1: "7",
-		y2: "13"
-	}), line({
-		x1: "15",
-		x2: "9",
-		y1: "10",
-		y2: "10"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 7v6" }), path({ "d": "M15 10H9" }), path({ "d": "M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z" }));
 };
 //#endregion
 //#region src/icons/BookmarkX.ts
 const BookmarkX = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2Z" }), path({ "d": "m14.5 7.5-5 5" }), path({ "d": "m9.5 7.5 5 5" }));
+	return LucideIcon(props, path({ "d": "m14.5 7.5-5 5" }), path({ "d": "M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z" }), path({ "d": "m9.5 7.5 5 5" }));
 };
 //#endregion
 //#region src/icons/Bookmark.ts
 const Bookmark = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" }));
+	return LucideIcon(props, path({ "d": "M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z" }));
 };
 //#endregion
 //#region src/icons/BoomBox.ts
@@ -2000,7 +1982,7 @@ const BoomBox = (props = {}) => {
 //#region src/icons/BotMessageSquare.ts
 const BotMessageSquare = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 6V2H8" }), path({ "d": "m8 18-4 4V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2Z" }), path({ "d": "M2 12h2" }), path({ "d": "M9 11v2" }), path({ "d": "M15 11v2" }), path({ "d": "M20 12h2" }));
+	return LucideIcon(props, path({ "d": "M12 6V2H8" }), path({ "d": "M15 11v2" }), path({ "d": "M2 12h2" }), path({ "d": "M20 12h2" }), path({ "d": "M20 16a2 2 0 0 1-2 2H8.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 4 20.286V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z" }), path({ "d": "M9 11v2" }));
 };
 //#endregion
 //#region src/icons/BotOff.ts
@@ -2019,6 +2001,18 @@ const Bot = (props = {}) => {
 		"y": "8",
 		rx: "2"
 	}), path({ "d": "M2 14h2" }), path({ "d": "M20 14h2" }), path({ "d": "M15 13v2" }), path({ "d": "M9 13v2" }));
+};
+//#endregion
+//#region src/icons/BottleWine.ts
+const BottleWine = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a6 6 0 0 0 1.2 3.6l.6.8A6 6 0 0 1 17 13v8a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-8a6 6 0 0 1 1.2-3.6l.6-.8A6 6 0 0 0 10 5z" }), path({ "d": "M17 13h-4a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h4" }));
+};
+//#endregion
+//#region src/icons/BowArrow.ts
+const BowArrow = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M17 3h4v4" }), path({ "d": "M18.575 11.082a13 13 0 0 1 1.048 9.027 1.17 1.17 0 0 1-1.914.597L14 17" }), path({ "d": "M7 10 3.29 6.29a1.17 1.17 0 0 1 .6-1.91 13 13 0 0 1 9.03 1.05" }), path({ "d": "M7 14a1.7 1.7 0 0 0-1.207.5l-2.646 2.646A.5.5 0 0 0 3.5 18H5a1 1 0 0 1 1 1v1.5a.5.5 0 0 0 .854.354L9.5 18.207A1.7 1.7 0 0 0 10 17v-2a1 1 0 0 0-1-1z" }), path({ "d": "M9.707 14.293 21 3" }));
 };
 //#endregion
 //#region src/icons/Box.ts
@@ -2042,7 +2036,7 @@ const Braces = (props = {}) => {
 //#region src/icons/Brackets.ts
 const Brackets = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M16 3h3v18h-3" }), path({ "d": "M8 21H5V3h3" }));
+	return LucideIcon(props, path({ "d": "M16 3h3a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-3" }), path({ "d": "M8 21H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h3" }));
 };
 //#endregion
 //#region src/icons/BrainCircuit.ts
@@ -2070,17 +2064,29 @@ const BrainCircuit = (props = {}) => {
 //#region src/icons/BrainCog.ts
 const BrainCog = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 5a3 3 0 1 0-5.997.142 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588 4 4 0 0 0 7.636 2.106 3.2 3.2 0 0 0 .164-.546c.028-.13.306-.13.335 0a3.2 3.2 0 0 0 .163.546 4 4 0 0 0 7.636-2.106 4 4 0 0 0 .556-6.588 4 4 0 0 0-2.526-5.77A3 3 0 1 0 12 5" }), path({ "d": "M17.599 6.5a3 3 0 0 0 .399-1.375" }), path({ "d": "M6.003 5.125A3 3 0 0 0 6.401 6.5" }), path({ "d": "M3.477 10.896a4 4 0 0 1 .585-.396" }), path({ "d": "M19.938 10.5a4 4 0 0 1 .585.396" }), path({ "d": "M6 18a4 4 0 0 1-1.967-.516" }), path({ "d": "M19.967 17.484A4 4 0 0 1 18 18" }), circle({
+	return LucideIcon(props, path({ "d": "m10.852 14.772-.383.923" }), path({ "d": "m10.852 9.228-.383-.923" }), path({ "d": "m13.148 14.772.382.924" }), path({ "d": "m13.531 8.305-.383.923" }), path({ "d": "m14.772 10.852.923-.383" }), path({ "d": "m14.772 13.148.923.383" }), path({ "d": "M17.598 6.5A3 3 0 1 0 12 5a3 3 0 0 0-5.63-1.446 3 3 0 0 0-.368 1.571 4 4 0 0 0-2.525 5.771" }), path({ "d": "M17.998 5.125a4 4 0 0 1 2.525 5.771" }), path({ "d": "M19.505 10.294a4 4 0 0 1-1.5 7.706" }), path({ "d": "M4.032 17.483A4 4 0 0 0 11.464 20c.18-.311.892-.311 1.072 0a4 4 0 0 0 7.432-2.516" }), path({ "d": "M4.5 10.291A4 4 0 0 0 6 18" }), path({ "d": "M6.002 5.125a3 3 0 0 0 .4 1.375" }), path({ "d": "m9.228 10.852-.923-.383" }), path({ "d": "m9.228 13.148-.923.383" }), circle({
 		cx: "12",
 		cy: "12",
 		"r": "3"
-	}), path({ "d": "m15.7 10.4-.9.4" }), path({ "d": "m9.2 13.2-.9.4" }), path({ "d": "m13.6 15.7-.4-.9" }), path({ "d": "m10.8 9.2-.4-.9" }), path({ "d": "m15.7 13.5-.9-.4" }), path({ "d": "m9.2 10.9-.9-.4" }), path({ "d": "m10.5 15.7.4-.9" }), path({ "d": "m13.1 9.2.4-.9" }));
+	}));
 };
 //#endregion
 //#region src/icons/Brain.ts
 const Brain = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" }), path({ "d": "M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z" }), path({ "d": "M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" }), path({ "d": "M17.599 6.5a3 3 0 0 0 .399-1.375" }), path({ "d": "M6.003 5.125A3 3 0 0 0 6.401 6.5" }), path({ "d": "M3.477 10.896a4 4 0 0 1 .585-.396" }), path({ "d": "M19.938 10.5a4 4 0 0 1 .585.396" }), path({ "d": "M6 18a4 4 0 0 1-1.967-.516" }), path({ "d": "M19.967 17.484A4 4 0 0 1 18 18" }));
+	return LucideIcon(props, path({ "d": "M12 18V5" }), path({ "d": "M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4" }), path({ "d": "M17.598 6.5A3 3 0 1 0 12 5a3 3 0 1 0-5.598 1.5" }), path({ "d": "M17.997 5.125a4 4 0 0 1 2.526 5.77" }), path({ "d": "M18 18a4 4 0 0 0 2-7.464" }), path({ "d": "M19.967 17.483A4 4 0 1 1 12 18a4 4 0 1 1-7.967-.517" }), path({ "d": "M6 18a4 4 0 0 1-2-7.464" }), path({ "d": "M6.003 5.125a4 4 0 0 0-2.526 5.77" }));
+};
+//#endregion
+//#region src/icons/BrickWallFire.ts
+const BrickWallFire = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M16 3v2.107" }), path({ "d": "M17 9c1 3 2.5 3.5 3.5 4.5A5 5 0 0 1 22 17a5 5 0 0 1-10 0c0-.3 0-.6.1-.9a2 2 0 1 0 3.3-2C13 11.5 16 9 17 9" }), path({ "d": "M21 8.274V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.938" }), path({ "d": "M3 15h5.253" }), path({ "d": "M3 9h8.228" }), path({ "d": "M8 15v6" }), path({ "d": "M8 3v6" }));
+};
+//#endregion
+//#region src/icons/BrickWallShield.ts
+const BrickWallShield = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 9v1.258" }), path({ "d": "M16 3v5.46" }), path({ "d": "M21 9.118V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5.75" }), path({ "d": "M22 17.5c0 2.499-1.75 3.749-3.83 4.474a.5.5 0 0 1-.335-.005c-2.085-.72-3.835-1.97-3.835-4.47V14a.5.5 0 0 1 .5-.499c1 0 2.25-.6 3.12-1.36a.6.6 0 0 1 .76-.001c.875.765 2.12 1.36 3.12 1.36a.5.5 0 0 1 .5.5z" }), path({ "d": "M3 15h7" }), path({ "d": "M3 9h12.142" }), path({ "d": "M8 15v6" }), path({ "d": "M8 3v6" }));
 };
 //#endregion
 //#region src/icons/BrickWall.ts
@@ -2155,47 +2161,70 @@ const BringToFront = (props = {}) => {
 	}), path({ "d": "M4 10a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2" }), path({ "d": "M14 20a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2" }));
 };
 //#endregion
+//#region src/icons/BrushCleaning.ts
+const BrushCleaning = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m16 22-1-4" }), path({ "d": "M19 14a1 1 0 0 0 1-1v-1a2 2 0 0 0-2-2h-3a1 1 0 0 1-1-1V4a2 2 0 0 0-4 0v5a1 1 0 0 1-1 1H6a2 2 0 0 0-2 2v1a1 1 0 0 0 1 1" }), path({ "d": "M19 14H5l-1.973 6.767A1 1 0 0 0 4 22h16a1 1 0 0 0 .973-1.233z" }), path({ "d": "m8 22 1-4" }));
+};
+//#endregion
 //#region src/icons/Brush.ts
 const Brush = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08" }), path({ "d": "M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z" }));
+	return LucideIcon(props, path({ "d": "m11 10 3 3" }), path({ "d": "M6.5 21A3.5 3.5 0 1 0 3 17.5a2.62 2.62 0 0 1-.708 1.792A1 1 0 0 0 3 21z" }), path({ "d": "M9.969 17.031 21.378 5.624a1 1 0 0 0-3.002-3.002L6.967 14.031" }));
+};
+//#endregion
+//#region src/icons/Bubbles.ts
+const Bubbles = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M7.001 15.085A1.5 1.5 0 0 1 9 16.5" }), circle({
+		cx: "18.5",
+		cy: "8.5",
+		"r": "3.5"
+	}), circle({
+		cx: "7.5",
+		cy: "16.5",
+		"r": "5.5"
+	}), circle({
+		cx: "7.5",
+		cy: "4.5",
+		"r": "2.5"
+	}));
 };
 //#endregion
 //#region src/icons/BugOff.ts
 const BugOff = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 7.13V6a3 3 0 0 0-5.14-2.1L8 2" }), path({ "d": "M14.12 3.88 16 2" }), path({ "d": "M22 13h-4v-2a4 4 0 0 0-4-4h-1.3" }), path({ "d": "M20.97 5c0 2.1-1.6 3.8-3.5 4" }), path({ "d": "m2 2 20 20" }), path({ "d": "M7.7 7.7A4 4 0 0 0 6 11v3a6 6 0 0 0 11.13 3.13" }), path({ "d": "M12 20v-8" }), path({ "d": "M6 13H2" }), path({ "d": "M3 21c0-2.1 1.7-3.9 3.8-4" }));
+	return LucideIcon(props, path({ "d": "M12 20v-8" }), path({ "d": "M12.656 7H14a4 4 0 0 1 4 4v1.344" }), path({ "d": "M14.12 3.88 16 2" }), path({ "d": "M17.123 17.123A6 6 0 0 1 6 14v-3a4 4 0 0 1 1.72-3.287" }), path({ "d": "m2 2 20 20" }), path({ "d": "M21 5a4 4 0 0 1-3.55 3.97" }), path({ "d": "M22 13h-3.344" }), path({ "d": "M3 21a4 4 0 0 1 3.81-4" }), path({ "d": "M3 5a4 4 0 0 0 3.55 3.97" }), path({ "d": "M6 13H2" }), path({ "d": "m8 2 1.88 1.88" }), path({ "d": "M9.712 4.06A3 3 0 0 1 15 6v1.13" }));
 };
 //#endregion
 //#region src/icons/BugPlay.ts
 const BugPlay = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12.765 21.522a.5.5 0 0 1-.765-.424v-8.196a.5.5 0 0 1 .765-.424l5.878 3.674a1 1 0 0 1 0 1.696z" }), path({ "d": "M14.12 3.88 16 2" }), path({ "d": "M18 11a4 4 0 0 0-4-4h-4a4 4 0 0 0-4 4v3a6.1 6.1 0 0 0 2 4.5" }), path({ "d": "M20.97 5c0 2.1-1.6 3.8-3.5 4" }), path({ "d": "M3 21c0-2.1 1.7-3.9 3.8-4" }), path({ "d": "M6 13H2" }), path({ "d": "M6.53 9C4.6 8.8 3 7.1 3 5" }), path({ "d": "m8 2 1.88 1.88" }), path({ "d": "M9 7.13v-1a3.003 3.003 0 1 1 6 0v1" }));
+	return LucideIcon(props, path({ "d": "M10 19.655A6 6 0 0 1 6 14v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 3.97" }), path({ "d": "M14 15.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997a1 1 0 0 1-1.517-.86z" }), path({ "d": "M14.12 3.88 16 2" }), path({ "d": "M21 5a4 4 0 0 1-3.55 3.97" }), path({ "d": "M3 21a4 4 0 0 1 3.81-4" }), path({ "d": "M3 5a4 4 0 0 0 3.55 3.97" }), path({ "d": "M6 13H2" }), path({ "d": "m8 2 1.88 1.88" }), path({ "d": "M9 7.13V6a3 3 0 1 1 6 0v1.13" }));
 };
 //#endregion
 //#region src/icons/Bug.ts
 const Bug = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m8 2 1.88 1.88" }), path({ "d": "M14.12 3.88 16 2" }), path({ "d": "M9 7.13v-1a3.003 3.003 0 1 1 6 0v1" }), path({ "d": "M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6" }), path({ "d": "M12 20v-9" }), path({ "d": "M6.53 9C4.6 8.8 3 7.1 3 5" }), path({ "d": "M6 13H2" }), path({ "d": "M3 21c0-2.1 1.7-3.9 3.8-4" }), path({ "d": "M20.97 5c0 2.1-1.6 3.8-3.5 4" }), path({ "d": "M22 13h-4" }), path({ "d": "M17.2 17c2.1.1 3.8 1.9 3.8 4" }));
+	return LucideIcon(props, path({ "d": "M12 20v-9" }), path({ "d": "M14 7a4 4 0 0 1 4 4v3a6 6 0 0 1-12 0v-3a4 4 0 0 1 4-4z" }), path({ "d": "M14.12 3.88 16 2" }), path({ "d": "M21 21a4 4 0 0 0-3.81-4" }), path({ "d": "M21 5a4 4 0 0 1-3.55 3.97" }), path({ "d": "M22 13h-4" }), path({ "d": "M3 21a4 4 0 0 1 3.81-4" }), path({ "d": "M3 5a4 4 0 0 0 3.55 3.97" }), path({ "d": "M6 13H2" }), path({ "d": "m8 2 1.88 1.88" }), path({ "d": "M9 7.13V6a3 3 0 1 1 6 0v1.13" }));
 };
 //#endregion
 //#region src/icons/Building2.ts
 const Building2 = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" }), path({ "d": "M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" }), path({ "d": "M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" }), path({ "d": "M10 6h4" }), path({ "d": "M10 10h4" }), path({ "d": "M10 14h4" }), path({ "d": "M10 18h4" }));
+	return LucideIcon(props, path({ "d": "M10 12h4" }), path({ "d": "M10 8h4" }), path({ "d": "M14 21v-3a2 2 0 0 0-4 0v3" }), path({ "d": "M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2" }), path({ "d": "M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16" }));
 };
 //#endregion
 //#region src/icons/Building.ts
 const Building = (props = {}) => {
-	const { rect, path } = van.tags(svgNamespace);
-	return LucideIcon(props, rect({
-		width: "16",
-		height: "20",
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 10h.01" }), path({ "d": "M12 14h.01" }), path({ "d": "M12 6h.01" }), path({ "d": "M16 10h.01" }), path({ "d": "M16 14h.01" }), path({ "d": "M16 6h.01" }), path({ "d": "M8 10h.01" }), path({ "d": "M8 14h.01" }), path({ "d": "M8 6h.01" }), path({ "d": "M9 22v-3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" }), rect({
 		"x": "4",
 		"y": "2",
-		rx: "2",
-		ry: "2"
-	}), path({ "d": "M9 22v-4h6v4" }), path({ "d": "M8 6h.01" }), path({ "d": "M16 6h.01" }), path({ "d": "M12 6h.01" }), path({ "d": "M12 10h.01" }), path({ "d": "M12 14h.01" }), path({ "d": "M16 10h.01" }), path({ "d": "M16 14h.01" }), path({ "d": "M8 10h.01" }), path({ "d": "M8 14h.01" }));
+		width: "16",
+		height: "20",
+		rx: "2"
+	}));
 };
 //#endregion
 //#region src/icons/BusFront.ts
@@ -2239,17 +2268,17 @@ const CableCar = (props = {}) => {
 //#region src/icons/Cable.ts
 const Cable = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M17 21v-2a1 1 0 0 1-1-1v-1a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1" }), path({ "d": "M19 15V6.5a1 1 0 0 0-7 0v11a1 1 0 0 1-7 0V9" }), path({ "d": "M21 21v-2h-4" }), path({ "d": "M3 5h4V3" }), path({ "d": "M7 5a1 1 0 0 1 1 1v1a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1V3" }));
+	return LucideIcon(props, path({ "d": "M17 19a1 1 0 0 1-1-1v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a1 1 0 0 1-1 1z" }), path({ "d": "M17 21v-2" }), path({ "d": "M19 14V6.5a1 1 0 0 0-7 0v11a1 1 0 0 1-7 0V10" }), path({ "d": "M21 21v-2" }), path({ "d": "M3 5V3" }), path({ "d": "M4 10a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2z" }), path({ "d": "M7 5V3" }));
 };
 //#endregion
 //#region src/icons/CakeSlice.ts
 const CakeSlice = (props = {}) => {
-	const { circle, path } = van.tags(svgNamespace);
-	return LucideIcon(props, circle({
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M16 13H3" }), path({ "d": "M16 17H3" }), path({ "d": "m7.2 7.9-3.388 2.5A2 2 0 0 0 3 12.01V20a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-8.654c0-2-2.44-6.026-6.44-8.026a1 1 0 0 0-1.082.057L10.4 5.6" }), circle({
 		cx: "9",
 		cy: "7",
 		"r": "2"
-	}), path({ "d": "M7.2 7.9 3 11v9c0 .6.4 1 1 1h16c.6 0 1-.4 1-1v-9c0-2-3-6-7-8l-3.6 2.6" }), path({ "d": "M16 13H3" }), path({ "d": "M16 17H3" }));
+	}));
 };
 //#endregion
 //#region src/icons/Cake.ts
@@ -2325,7 +2354,7 @@ const CalendarCheck = (props = {}) => {
 //#region src/icons/CalendarClock.ts
 const CalendarClock = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5" }), path({ "d": "M16 2v4" }), path({ "d": "M8 2v4" }), path({ "d": "M3 10h5" }), path({ "d": "M17.5 17.5 16 16.3V14" }), circle({
+	return LucideIcon(props, path({ "d": "M16 14v2.2l1.6 1" }), path({ "d": "M16 2v4" }), path({ "d": "M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5" }), path({ "d": "M3 10h5" }), path({ "d": "M8 2v4" }), circle({
 		cx: "16",
 		cy: "16",
 		"r": "6"
@@ -2335,7 +2364,7 @@ const CalendarClock = (props = {}) => {
 //#region src/icons/CalendarCog.ts
 const CalendarCog = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m15.2 16.9-.9-.4" }), path({ "d": "m15.2 19.1-.9.4" }), path({ "d": "M16 2v4" }), path({ "d": "m16.9 15.2-.4-.9" }), path({ "d": "m16.9 20.8-.4.9" }), path({ "d": "m19.5 14.3-.4.9" }), path({ "d": "m19.5 21.7-.4-.9" }), path({ "d": "M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6" }), path({ "d": "m21.7 16.5-.9.4" }), path({ "d": "m21.7 19.5-.9-.4" }), path({ "d": "M3 10h18" }), path({ "d": "M8 2v4" }), circle({
+	return LucideIcon(props, path({ "d": "m15.228 16.852-.923-.383" }), path({ "d": "m15.228 19.148-.923.383" }), path({ "d": "M16 2v4" }), path({ "d": "m16.47 14.305.382.923" }), path({ "d": "m16.852 20.772-.383.924" }), path({ "d": "m19.148 15.228.383-.923" }), path({ "d": "m19.53 21.696-.382-.924" }), path({ "d": "m20.772 16.852.924-.383" }), path({ "d": "m20.772 19.148.924.383" }), path({ "d": "M21 10.592V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6" }), path({ "d": "M3 10h18" }), path({ "d": "M8 2v4" }), circle({
 		cx: "18",
 		cy: "18",
 		"r": "3"
@@ -2357,13 +2386,13 @@ const CalendarDays = (props = {}) => {
 //#region src/icons/CalendarFold.ts
 const CalendarFold = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M8 2v4" }), path({ "d": "M16 2v4" }), path({ "d": "M21 17V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11Z" }), path({ "d": "M3 10h18" }), path({ "d": "M15 22v-4a2 2 0 0 1 2-2h4" }));
+	return LucideIcon(props, path({ "d": "M3 20a2 2 0 0 0 2 2h10a2.4 2.4 0 0 0 1.706-.706l3.588-3.588A2.4 2.4 0 0 0 21 16V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z" }), path({ "d": "M15 22v-5a1 1 0 0 1 1-1h5" }), path({ "d": "M8 2v4" }), path({ "d": "M16 2v4" }), path({ "d": "M3 10h18" }));
 };
 //#endregion
 //#region src/icons/CalendarHeart.ts
 const CalendarHeart = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M3 10h18V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7" }), path({ "d": "M8 2v4" }), path({ "d": "M16 2v4" }), path({ "d": "M21.29 14.7a2.43 2.43 0 0 0-2.65-.52c-.3.12-.57.3-.8.53l-.34.34-.35-.34a2.43 2.43 0 0 0-2.65-.53c-.3.12-.56.3-.79.53-.95.94-1 2.53.2 3.74L17.5 22l3.6-3.55c1.2-1.21 1.14-2.8.19-3.74Z" }));
+	return LucideIcon(props, path({ "d": "M12.127 22H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5.125" }), path({ "d": "M14.62 18.8A2.25 2.25 0 1 1 18 15.836a2.25 2.25 0 1 1 3.38 2.966l-2.626 2.856a.998.998 0 0 1-1.507 0z" }), path({ "d": "M16 2v4" }), path({ "d": "M3 10h18" }), path({ "d": "M8 2v4" }));
 };
 //#endregion
 //#region src/icons/CalendarMinus2.ts
@@ -2405,7 +2434,7 @@ const CalendarPlus2 = (props = {}) => {
 //#region src/icons/CalendarPlus.ts
 const CalendarPlus = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M8 2v4" }), path({ "d": "M16 2v4" }), path({ "d": "M21 13V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8" }), path({ "d": "M3 10h18" }), path({ "d": "M16 19h6" }), path({ "d": "M19 16v6" }));
+	return LucideIcon(props, path({ "d": "M16 19h6" }), path({ "d": "M16 2v4" }), path({ "d": "M19 16v6" }), path({ "d": "M21 12.598V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8.5" }), path({ "d": "M3 10h18" }), path({ "d": "M8 2v4" }));
 };
 //#endregion
 //#region src/icons/CalendarRange.ts
@@ -2466,21 +2495,28 @@ const Calendar = (props = {}) => {
 	}), path({ "d": "M3 10h18" }));
 };
 //#endregion
+//#region src/icons/Calendars.ts
+const Calendars = (props = {}) => {
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 2v2" }), path({ "d": "M15.726 21.01A2 2 0 0 1 14 22H4a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2" }), path({ "d": "M18 2v2" }), path({ "d": "M2 13h2" }), path({ "d": "M8 8h14" }), rect({
+		"x": "8",
+		"y": "3",
+		width: "14",
+		height: "14",
+		rx: "2"
+	}));
+};
+//#endregion
 //#region src/icons/CameraOff.ts
 const CameraOff = (props = {}) => {
-	const { line, path } = van.tags(svgNamespace);
-	return LucideIcon(props, line({
-		x1: "2",
-		x2: "22",
-		y1: "2",
-		y2: "22"
-	}), path({ "d": "M7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16" }), path({ "d": "M9.5 4h5L17 7h3a2 2 0 0 1 2 2v7.5" }), path({ "d": "M14.121 15.121A3 3 0 1 1 9.88 10.88" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M14.564 14.558a3 3 0 1 1-4.122-4.121" }), path({ "d": "m2 2 20 20" }), path({ "d": "M20 20H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1.997a2 2 0 0 0 .819-.175" }), path({ "d": "M9.695 4.024A2 2 0 0 1 10.004 4h3.993a2 2 0 0 1 1.76 1.05l.486.9A2 2 0 0 0 18.003 7H20a2 2 0 0 1 2 2v7.344" }));
 };
 //#endregion
 //#region src/icons/Camera.ts
 const Camera = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" }), circle({
+	return LucideIcon(props, path({ "d": "M13.997 4a2 2 0 0 1 1.76 1.05l.486.9A2 2 0 0 0 18.003 7H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1.997a2 2 0 0 0 1.759-1.048l.489-.904A2 2 0 0 1 10.004 4z" }), circle({
 		cx: "12",
 		cy: "13",
 		"r": "3"
@@ -2495,19 +2531,20 @@ const CandyCane = (props = {}) => {
 //#endregion
 //#region src/icons/CandyOff.ts
 const CandyOff = (props = {}) => {
-	const { path, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m8.5 8.5-1 1a4.95 4.95 0 0 0 7 7l1-1" }), path({ "d": "M11.843 6.187A4.947 4.947 0 0 1 16.5 7.5a4.947 4.947 0 0 1 1.313 4.657" }), path({ "d": "M14 16.5V14" }), path({ "d": "M14 6.5v1.843" }), path({ "d": "M10 10v7.5" }), path({ "d": "m16 7 1-5 1.367.683A3 3 0 0 0 19.708 3H21v1.292a3 3 0 0 0 .317 1.341L22 7l-5 1" }), path({ "d": "m8 17-1 5-1.367-.683A3 3 0 0 0 4.292 21H3v-1.292a3 3 0 0 0-.317-1.341L2 17l5-1" }), line({
-		x1: "2",
-		x2: "22",
-		y1: "2",
-		y2: "22"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 10v7.9" }), path({ "d": "M11.802 6.145a5 5 0 0 1 6.053 6.053" }), path({ "d": "M14 6.1v2.243" }), path({ "d": "m15.5 15.571-.964.964a5 5 0 0 1-7.071 0 5 5 0 0 1 0-7.07l.964-.965" }), path({ "d": "M16 7V3a1 1 0 0 1 1.707-.707 2.5 2.5 0 0 0 2.152.717 1 1 0 0 1 1.131 1.131 2.5 2.5 0 0 0 .717 2.152A1 1 0 0 1 21 8h-4" }), path({ "d": "m2 2 20 20" }), path({ "d": "M8 17v4a1 1 0 0 1-1.707.707 2.5 2.5 0 0 0-2.152-.717 1 1 0 0 1-1.131-1.131 2.5 2.5 0 0 0-.717-2.152A1 1 0 0 1 3 16h4" }));
 };
 //#endregion
 //#region src/icons/Candy.ts
 const Candy = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m9.5 7.5-2 2a4.95 4.95 0 1 0 7 7l2-2a4.95 4.95 0 1 0-7-7Z" }), path({ "d": "M14 6.5v10" }), path({ "d": "M10 7.5v10" }), path({ "d": "m16 7 1-5 1.37.68A3 3 0 0 0 19.7 3H21v1.3c0 .46.1.92.32 1.33L22 7l-5 1" }), path({ "d": "m8 17-1 5-1.37-.68A3 3 0 0 0 4.3 21H3v-1.3a3 3 0 0 0-.32-1.33L2 17l5-1" }));
+	return LucideIcon(props, path({ "d": "M10 7v10.9" }), path({ "d": "M14 6.1V17" }), path({ "d": "M16 7V3a1 1 0 0 1 1.707-.707 2.5 2.5 0 0 0 2.152.717 1 1 0 0 1 1.131 1.131 2.5 2.5 0 0 0 .717 2.152A1 1 0 0 1 21 8h-4" }), path({ "d": "M16.536 7.465a5 5 0 0 0-7.072 0l-2 2a5 5 0 0 0 0 7.07 5 5 0 0 0 7.072 0l2-2a5 5 0 0 0 0-7.07" }), path({ "d": "M8 17v4a1 1 0 0 1-1.707.707 2.5 2.5 0 0 0-2.152-.717 1 1 0 0 1-1.131-1.131 2.5 2.5 0 0 0-.717-2.152A1 1 0 0 1 3 16h4" }));
+};
+//#endregion
+//#region src/icons/CannabisOff.ts
+const CannabisOff = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 22v-4c1.5 1.5 3.5 3 6 3 0-1.5-.5-3.5-2-5" }), path({ "d": "M13.988 8.327C13.902 6.054 13.365 3.82 12 2a9.3 9.3 0 0 0-1.445 2.9" }), path({ "d": "M17.375 11.725C18.882 10.53 21 7.841 21 6c-2.324 0-5.08 1.296-6.662 2.684" }), path({ "d": "m2 2 20 20" }), path({ "d": "M21.024 15.378A15 15 0 0 0 22 15c-.426-1.279-2.67-2.557-4.25-2.907" }), path({ "d": "M6.995 6.992C5.714 6.4 4.29 6 3 6c0 2 2.5 5 4 6-1.5 0-4.5 1.5-5 3 3.5 1.5 6 1 6 1-1.5 1.5-2 3.5-2 5 2.5 0 4.5-1.5 6-3" }));
 };
 //#endregion
 //#region src/icons/Cannabis.ts
@@ -2583,6 +2620,18 @@ const Caravan = (props = {}) => {
 	}));
 };
 //#endregion
+//#region src/icons/CardSim.ts
+const CardSim = (props = {}) => {
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 14v4" }), path({ "d": "M14.172 2a2 2 0 0 1 1.414.586l3.828 3.828A2 2 0 0 1 20 7.828V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" }), path({ "d": "M8 14h8" }), rect({
+		"x": "8",
+		"y": "10",
+		width: "8",
+		height: "8",
+		rx: "1"
+	}));
+};
+//#endregion
 //#region src/icons/Carrot.ts
 const Carrot = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
@@ -2591,32 +2640,32 @@ const Carrot = (props = {}) => {
 //#endregion
 //#region src/icons/CaseLower.ts
 const CaseLower = (props = {}) => {
-	const { circle, path } = van.tags(svgNamespace);
-	return LucideIcon(props, circle({
-		cx: "7",
-		cy: "12",
-		"r": "3"
-	}), path({ "d": "M10 9v6" }), circle({
-		cx: "17",
-		cy: "12",
-		"r": "3"
-	}), path({ "d": "M14 7v8" }));
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 9v7" }), path({ "d": "M14 6v10" }), circle({
+		cx: "17.5",
+		cy: "12.5",
+		"r": "3.5"
+	}), circle({
+		cx: "6.5",
+		cy: "12.5",
+		"r": "3.5"
+	}));
 };
 //#endregion
 //#region src/icons/CaseSensitive.ts
 const CaseSensitive = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m3 15 4-8 4 8" }), path({ "d": "M4 13h6" }), circle({
-		cx: "18",
-		cy: "12",
-		"r": "3"
-	}), path({ "d": "M21 9v6" }));
+	return LucideIcon(props, path({ "d": "m2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16" }), path({ "d": "M22 9v7" }), path({ "d": "M3.304 13h6.392" }), circle({
+		cx: "18.5",
+		cy: "12.5",
+		"r": "3.5"
+	}));
 };
 //#endregion
 //#region src/icons/CaseUpper.ts
 const CaseUpper = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m3 15 4-8 4 8" }), path({ "d": "M4 13h6" }), path({ "d": "M15 11h4.5a2 2 0 0 1 0 4H15V7h4a2 2 0 0 1 0 4" }));
+	return LucideIcon(props, path({ "d": "M15 11h4.5a1 1 0 0 1 0 5h-4a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h3a1 1 0 0 1 0 5" }), path({ "d": "m2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16" }), path({ "d": "M3.304 13h6.392" }));
 };
 //#endregion
 //#region src/icons/CassetteTape.ts
@@ -2653,13 +2702,19 @@ const Cast = (props = {}) => {
 //#region src/icons/Castle.ts
 const Castle = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M22 20v-9H2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2Z" }), path({ "d": "M18 11V4H6v7" }), path({ "d": "M15 22v-4a3 3 0 0 0-3-3a3 3 0 0 0-3 3v4" }), path({ "d": "M22 11V9" }), path({ "d": "M2 11V9" }), path({ "d": "M6 4V2" }), path({ "d": "M18 4V2" }), path({ "d": "M10 4V2" }), path({ "d": "M14 4V2" }));
+	return LucideIcon(props, path({ "d": "M10 5V3" }), path({ "d": "M14 5V3" }), path({ "d": "M15 21v-3a3 3 0 0 0-6 0v3" }), path({ "d": "M18 3v8" }), path({ "d": "M18 5H6" }), path({ "d": "M22 11H2" }), path({ "d": "M22 9v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9" }), path({ "d": "M6 3v8" }));
 };
 //#endregion
 //#region src/icons/Cat.ts
 const Cat = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M12 5c.67 0 1.35.09 2 .26 1.78-2 5.03-2.84 6.42-2.26 1.4.58-.42 7-.42 7 .57 1.07 1 2.24 1 3.44C21 17.9 16.97 21 12 21s-9-3-9-7.56c0-1.25.5-2.4 1-3.44 0 0-1.89-6.42-.5-7 1.39-.58 4.72.23 6.5 2.23A9.04 9.04 0 0 1 12 5Z" }), path({ "d": "M8 14v.5" }), path({ "d": "M16 14v.5" }), path({ "d": "M11.25 16.25h1.5L12 17l-.75-.75Z" }));
+};
+//#endregion
+//#region src/icons/CctvOff.ts
+const CctvOff = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m12.309 6.652 4.797 2.401a1 1 0 0 1 .447 1.341l-.501 1.001.605.605h2.725a1 1 0 0 1 .894 1.447l-.724 1.448" }), path({ "d": "m15.166 15.166-.719 1.439a1 1 0 0 1-1.342.447L3.61 12.3a2.92 2.92 0 0 1-1.3-3.91L3.69 5.6a2.9 2.9 0 0 1 .873-1.037" }), path({ "d": "M2 19h3.76a2 2 0 0 0 1.8-1.1l1.441-2.902" }), path({ "d": "m2 2 20 20" }), path({ "d": "M2 21v-4" }), path({ "d": "M7 9h.01" }));
 };
 //#endregion
 //#region src/icons/Cctv.ts
@@ -2833,49 +2888,19 @@ const ChartNetwork = (props = {}) => {
 //#region src/icons/ChartNoAxesColumnDecreasing.ts
 const ChartNoAxesColumnDecreasing = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 20V10" }), path({ "d": "M18 20v-4" }), path({ "d": "M6 20V4" }));
+	return LucideIcon(props, path({ "d": "M5 21V3" }), path({ "d": "M12 21V9" }), path({ "d": "M19 21v-6" }));
 };
 //#endregion
 //#region src/icons/ChartNoAxesColumnIncreasing.ts
 const ChartNoAxesColumnIncreasing = (props = {}) => {
-	const { line } = van.tags(svgNamespace);
-	return LucideIcon(props, line({
-		x1: "12",
-		x2: "12",
-		y1: "20",
-		y2: "10"
-	}), line({
-		x1: "18",
-		x2: "18",
-		y1: "20",
-		y2: "4"
-	}), line({
-		x1: "6",
-		x2: "6",
-		y1: "20",
-		y2: "16"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M5 21v-6" }), path({ "d": "M12 21V9" }), path({ "d": "M19 21V3" }));
 };
 //#endregion
 //#region src/icons/ChartNoAxesColumn.ts
 const ChartNoAxesColumn = (props = {}) => {
-	const { line } = van.tags(svgNamespace);
-	return LucideIcon(props, line({
-		x1: "18",
-		x2: "18",
-		y1: "20",
-		y2: "10"
-	}), line({
-		x1: "12",
-		x2: "12",
-		y1: "20",
-		y2: "4"
-	}), line({
-		x1: "6",
-		x2: "6",
-		y1: "20",
-		y2: "14"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M5 21v-6" }), path({ "d": "M12 21V3" }), path({ "d": "M19 21V9" }));
 };
 //#endregion
 //#region src/icons/ChartNoAxesCombined.ts
@@ -2887,7 +2912,7 @@ const ChartNoAxesCombined = (props = {}) => {
 //#region src/icons/ChartNoAxesGantt.ts
 const ChartNoAxesGantt = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M8 6h10" }), path({ "d": "M6 12h9" }), path({ "d": "M11 18h7" }));
+	return LucideIcon(props, path({ "d": "M6 5h12" }), path({ "d": "M4 12h10" }), path({ "d": "M12 19h8" }));
 };
 //#endregion
 //#region src/icons/ChartPie.ts
@@ -2939,6 +2964,12 @@ const CheckCheck = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M18 6 7 17l-5-5" }), path({ "d": "m22 10-7.5 7.5L13 16" }));
 };
 //#endregion
+//#region src/icons/CheckLine.ts
+const CheckLine = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M20 4L9 15" }), path({ "d": "M21 19L3 19" }), path({ "d": "M9 15L4 10" }));
+};
+//#endregion
 //#region src/icons/Check.ts
 const Check = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
@@ -2955,6 +2986,58 @@ const ChefHat = (props = {}) => {
 const Cherry = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M2 17a5 5 0 0 0 10 0c0-2.76-2.5-5-5-3-2.5-2-5 .24-5 3Z" }), path({ "d": "M12 17a5 5 0 0 0 10 0c0-2.76-2.5-5-5-3-2.5-2-5 .24-5 3Z" }), path({ "d": "M7 14c3.22-2.91 4.29-8.75 5-12 1.66 2.38 4.94 9 5 12" }), path({ "d": "M22 9c-4.29 0-7.14-2.33-10-7 5.71 0 10 4.67 10 7Z" }));
+};
+//#endregion
+//#region src/icons/ChessBishop.ts
+const ChessBishop = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M5 20a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1z" }), path({ "d": "M15 18c1.5-.615 3-2.461 3-4.923C18 8.769 14.5 4.462 12 2 9.5 4.462 6 8.77 6 13.077 6 15.539 7.5 17.385 9 18" }), path({ "d": "m16 7-2.5 2.5" }), path({ "d": "M9 2h6" }));
+};
+//#endregion
+//#region src/icons/ChessKing.ts
+const ChessKing = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M4 20a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z" }), path({ "d": "m6.7 18-1-1C4.35 15.682 3 14.09 3 12a5 5 0 0 1 4.95-5c1.584 0 2.7.455 4.05 1.818C13.35 7.455 14.466 7 16.05 7A5 5 0 0 1 21 12c0 2.082-1.359 3.673-2.7 5l-1 1" }), path({ "d": "M10 4h4" }), path({ "d": "M12 2v6.818" }));
+};
+//#endregion
+//#region src/icons/ChessKnight.ts
+const ChessKnight = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M5 20a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1z" }), path({ "d": "M16.5 18c1-2 2.5-5 2.5-9a7 7 0 0 0-7-7H6.635a1 1 0 0 0-.768 1.64L7 5l-2.32 5.802a2 2 0 0 0 .95 2.526l2.87 1.456" }), path({ "d": "m15 5 1.425-1.425" }), path({ "d": "m17 8 1.53-1.53" }), path({ "d": "M9.713 12.185 7 18" }));
+};
+//#endregion
+//#region src/icons/ChessPawn.ts
+const ChessPawn = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M5 20a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1z" }), path({ "d": "m14.5 10 1.5 8" }), path({ "d": "M7 10h10" }), path({ "d": "m8 18 1.5-8" }), circle({
+		cx: "12",
+		cy: "6",
+		"r": "4"
+	}));
+};
+//#endregion
+//#region src/icons/ChessQueen.ts
+const ChessQueen = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M4 20a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z" }), path({ "d": "m12.474 5.943 1.567 5.34a1 1 0 0 0 1.75.328l2.616-3.402" }), path({ "d": "m20 9-3 9" }), path({ "d": "m5.594 8.209 2.615 3.403a1 1 0 0 0 1.75-.329l1.567-5.34" }), path({ "d": "M7 18 4 9" }), circle({
+		cx: "12",
+		cy: "4",
+		"r": "2"
+	}), circle({
+		cx: "20",
+		cy: "7",
+		"r": "2"
+	}), circle({
+		cx: "4",
+		cy: "7",
+		"r": "2"
+	}));
+};
+//#endregion
+//#region src/icons/ChessRook.ts
+const ChessRook = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M5 20a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1z" }), path({ "d": "M10 2v2" }), path({ "d": "M14 2v2" }), path({ "d": "m17 18-1-9" }), path({ "d": "M6 2v5a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2" }), path({ "d": "M6 4h12" }), path({ "d": "m7 18 1-9" }));
 };
 //#endregion
 //#region src/icons/ChevronDown.ts
@@ -3008,7 +3091,7 @@ const ChevronsDown = (props = {}) => {
 //#region src/icons/ChevronsLeftRightEllipsis.ts
 const ChevronsLeftRightEllipsis = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m18 8 4 4-4 4" }), path({ "d": "m6 8-4 4 4 4" }), path({ "d": "M8 12h.01" }), path({ "d": "M12 12h.01" }), path({ "d": "M16 12h.01" }));
+	return LucideIcon(props, path({ "d": "M12 12h.01" }), path({ "d": "M16 12h.01" }), path({ "d": "m17 7 5 5-5 5" }), path({ "d": "m7 7-5 5 5 5" }), path({ "d": "M8 12h.01" }));
 };
 //#endregion
 //#region src/icons/ChevronsLeftRight.ts
@@ -3047,39 +3130,10 @@ const ChevronsUp = (props = {}) => {
 	return LucideIcon(props, path({ "d": "m17 11-5-5-5 5" }), path({ "d": "m17 18-5-5-5 5" }));
 };
 //#endregion
-//#region src/icons/Chrome.ts
-const Chrome = (props = {}) => {
-	const { circle, line } = van.tags(svgNamespace);
-	return LucideIcon(props, circle({
-		cx: "12",
-		cy: "12",
-		"r": "10"
-	}), circle({
-		cx: "12",
-		cy: "12",
-		"r": "4"
-	}), line({
-		x1: "21.17",
-		x2: "12",
-		y1: "8",
-		y2: "8"
-	}), line({
-		x1: "3.95",
-		x2: "8.54",
-		y1: "6.06",
-		y2: "14"
-	}), line({
-		x1: "10.88",
-		x2: "15.46",
-		y1: "21.94",
-		y2: "14"
-	}));
-};
-//#endregion
 //#region src/icons/Church.ts
 const Church = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M10 9h4" }), path({ "d": "M12 7v5" }), path({ "d": "M14 22v-4a2 2 0 0 0-4 0v4" }), path({ "d": "M18 22V5.618a1 1 0 0 0-.553-.894l-4.553-2.277a2 2 0 0 0-1.788 0L6.553 4.724A1 1 0 0 0 6 5.618V22" }), path({ "d": "m18 7 3.447 1.724a1 1 0 0 1 .553.894V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9.618a1 1 0 0 1 .553-.894L6 7" }));
+	return LucideIcon(props, path({ "d": "M10 9h4" }), path({ "d": "M12 7v5" }), path({ "d": "M14 21v-3a2 2 0 0 0-4 0v3" }), path({ "d": "m18 9 3.52 2.147a1 1 0 0 1 .48.854V19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-6.999a1 1 0 0 1 .48-.854L6 9" }), path({ "d": "M6 21V7a1 1 0 0 1 .376-.782l5-3.999a1 1 0 0 1 1.249.001l5 4A1 1 0 0 1 18 7v14" }));
 };
 //#endregion
 //#region src/icons/CigaretteOff.ts
@@ -3131,7 +3185,7 @@ const CircleArrowLeft = (props = {}) => {
 		cx: "12",
 		cy: "12",
 		"r": "10"
-	}), path({ "d": "M16 12H8" }), path({ "d": "m12 8-4 4 4 4" }));
+	}), path({ "d": "m12 8-4 4 4 4" }), path({ "d": "M16 12H8" }));
 };
 //#endregion
 //#region src/icons/CircleArrowOutDownLeft.ts
@@ -3165,7 +3219,7 @@ const CircleArrowRight = (props = {}) => {
 		cx: "12",
 		cy: "12",
 		"r": "10"
-	}), path({ "d": "M8 12h8" }), path({ "d": "m12 16 4-4-4-4" }));
+	}), path({ "d": "m12 16 4-4-4-4" }), path({ "d": "M8 12h8" }));
 };
 //#endregion
 //#region src/icons/CircleArrowUp.ts
@@ -3242,8 +3296,12 @@ const CircleDashed = (props = {}) => {
 //#endregion
 //#region src/icons/CircleDivide.ts
 const CircleDivide = (props = {}) => {
-	const { line, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, line({
+	const { circle, line } = van.tags(svgNamespace);
+	return LucideIcon(props, circle({
+		cx: "12",
+		cy: "12",
+		"r": "10"
+	}), line({
 		x1: "8",
 		x2: "16",
 		y1: "12",
@@ -3258,10 +3316,6 @@ const CircleDivide = (props = {}) => {
 		x2: "12",
 		y1: "8",
 		y2: "8"
-	}), circle({
-		cx: "12",
-		cy: "12",
-		"r": "10"
 	}));
 };
 //#endregion
@@ -3311,12 +3365,12 @@ const CircleEllipsis = (props = {}) => {
 //#endregion
 //#region src/icons/CircleEqual.ts
 const CircleEqual = (props = {}) => {
-	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M7 10h10" }), path({ "d": "M7 14h10" }), circle({
+	const { circle, path } = van.tags(svgNamespace);
+	return LucideIcon(props, circle({
 		cx: "12",
 		cy: "12",
 		"r": "10"
-	}));
+	}), path({ "d": "M7 10h10" }), path({ "d": "M7 14h10" }));
 };
 //#endregion
 //#region src/icons/CircleFadingArrowUp.ts
@@ -3341,16 +3395,6 @@ const CircleGauge = (props = {}) => {
 	}), path({ "d": "M13.4 10.6 19 5" }));
 };
 //#endregion
-//#region src/icons/CircleHelp.ts
-const CircleHelp = (props = {}) => {
-	const { circle, path } = van.tags(svgNamespace);
-	return LucideIcon(props, circle({
-		cx: "12",
-		cy: "12",
-		"r": "10"
-	}), path({ "d": "M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" }), path({ "d": "M12 17h.01" }));
-};
-//#endregion
 //#region src/icons/CircleMinus.ts
 const CircleMinus = (props = {}) => {
 	const { circle, path } = van.tags(svgNamespace);
@@ -3369,12 +3413,8 @@ const CircleOff = (props = {}) => {
 //#endregion
 //#region src/icons/CircleParkingOff.ts
 const CircleParkingOff = (props = {}) => {
-	const { circle, path } = van.tags(svgNamespace);
-	return LucideIcon(props, circle({
-		cx: "12",
-		cy: "12",
-		"r": "10"
-	}), path({ "d": "m5 5 14 14" }), path({ "d": "M13 13a3 3 0 1 0 0-6H9v2" }), path({ "d": "M9 17v-2.34" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12.656 7H13a3 3 0 0 1 2.984 3.307" }), path({ "d": "M13 13H9" }), path({ "d": "M19.071 19.071A1 1 0 0 1 4.93 4.93" }), path({ "d": "m2 2 20 20" }), path({ "d": "M8.357 2.687a10 10 0 0 1 12.956 12.956" }), path({ "d": "M9 17V9" }));
 };
 //#endregion
 //#region src/icons/CircleParking.ts
@@ -3417,14 +3457,44 @@ const CirclePercent = (props = {}) => {
 	}), path({ "d": "m15 9-6 6" }), path({ "d": "M9 9h.01" }), path({ "d": "M15 15h.01" }));
 };
 //#endregion
+//#region src/icons/CirclePile.ts
+const CirclePile = (props = {}) => {
+	const { circle } = van.tags(svgNamespace);
+	return LucideIcon(props, circle({
+		cx: "12",
+		cy: "19",
+		"r": "2"
+	}), circle({
+		cx: "12",
+		cy: "5",
+		"r": "2"
+	}), circle({
+		cx: "16",
+		cy: "12",
+		"r": "2"
+	}), circle({
+		cx: "20",
+		cy: "19",
+		"r": "2"
+	}), circle({
+		cx: "4",
+		cy: "19",
+		"r": "2"
+	}), circle({
+		cx: "8",
+		cy: "12",
+		"r": "2"
+	}));
+};
+//#endregion
 //#region src/icons/CirclePlay.ts
 const CirclePlay = (props = {}) => {
-	const { circle, polygon } = van.tags(svgNamespace);
-	return LucideIcon(props, circle({
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M9 9.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997A1 1 0 0 1 9 14.996z" }), circle({
 		cx: "12",
 		cy: "12",
 		"r": "10"
-	}), polygon({ points: "10 8 16 12 10 16 10 8" }));
+	}));
 };
 //#endregion
 //#region src/icons/CirclePlus.ts
@@ -3437,24 +3507,44 @@ const CirclePlus = (props = {}) => {
 	}), path({ "d": "M8 12h8" }), path({ "d": "M12 8v8" }));
 };
 //#endregion
-//#region src/icons/CirclePower.ts
-const CirclePower = (props = {}) => {
-	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 7v4" }), path({ "d": "M7.998 9.003a5 5 0 1 0 8-.005" }), circle({
+//#region src/icons/CirclePoundSterling.ts
+const CirclePoundSterling = (props = {}) => {
+	const { circle, path } = van.tags(svgNamespace);
+	return LucideIcon(props, circle({
 		cx: "12",
 		cy: "12",
 		"r": "10"
-	}));
+	}), path({ "d": "M10 16V9.5a1 1 0 0 1 5 0" }), path({ "d": "M8 12h4" }), path({ "d": "M8 16h7" }));
+};
+//#endregion
+//#region src/icons/CirclePower.ts
+const CirclePower = (props = {}) => {
+	const { circle, path } = van.tags(svgNamespace);
+	return LucideIcon(props, circle({
+		cx: "12",
+		cy: "12",
+		"r": "10"
+	}), path({ "d": "M12 7v4" }), path({ "d": "M7.998 9.003a5 5 0 1 0 8-.005" }));
+};
+//#endregion
+//#region src/icons/CircleQuestionMark.ts
+const CircleQuestionMark = (props = {}) => {
+	const { circle, path } = van.tags(svgNamespace);
+	return LucideIcon(props, circle({
+		cx: "12",
+		cy: "12",
+		"r": "10"
+	}), path({ "d": "M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" }), path({ "d": "M12 17h.01" }));
 };
 //#endregion
 //#region src/icons/CircleSlash2.ts
 const CircleSlash2 = (props = {}) => {
-	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M22 2 2 22" }), circle({
+	const { circle, path } = van.tags(svgNamespace);
+	return LucideIcon(props, circle({
 		cx: "12",
 		cy: "12",
 		"r": "10"
-	}));
+	}), path({ "d": "M22 2 2 22" }));
 };
 //#endregion
 //#region src/icons/CircleSlash.ts
@@ -3482,6 +3572,16 @@ const CircleSmall = (props = {}) => {
 	}));
 };
 //#endregion
+//#region src/icons/CircleStar.ts
+const CircleStar = (props = {}) => {
+	const { circle, path } = van.tags(svgNamespace);
+	return LucideIcon(props, circle({
+		cx: "12",
+		cy: "12",
+		"r": "10"
+	}), path({ "d": "M11.051 7.616a1 1 0 0 1 1.909.024l.737 1.452a1 1 0 0 0 .737.535l1.634.256a1 1 0 0 1 .588 1.806l-1.172 1.168a1 1 0 0 0-.282.866l.259 1.613a1 1 0 0 1-1.541 1.134l-1.465-.75a1 1 0 0 0-.912 0l-1.465.75a1 1 0 0 1-1.539-1.133l.258-1.613a1 1 0 0 0-.282-.867l-1.156-1.152a1 1 0 0 1 .572-1.822l1.633-.256a1 1 0 0 0 .737-.535z" }));
+};
+//#endregion
 //#region src/icons/CircleStop.ts
 const CircleStop = (props = {}) => {
 	const { circle, rect } = van.tags(svgNamespace);
@@ -3501,9 +3601,9 @@ const CircleStop = (props = {}) => {
 //#region src/icons/CircleUserRound.ts
 const CircleUserRound = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M18 20a6 6 0 0 0-12 0" }), circle({
+	return LucideIcon(props, path({ "d": "M17.925 20.056a6 6 0 0 0-11.851.001" }), circle({
 		cx: "12",
-		cy: "10",
+		cy: "11",
 		"r": "4"
 	}), circle({
 		cx: "12",
@@ -3575,7 +3675,7 @@ const Citrus = (props = {}) => {
 //#region src/icons/Clapperboard.ts
 const Clapperboard = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z" }), path({ "d": "m6.2 5.3 3.1 3.9" }), path({ "d": "m12.4 3.4 3.1 4" }), path({ "d": "M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" }));
+	return LucideIcon(props, path({ "d": "m12.296 3.464 3.02 3.956" }), path({ "d": "M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3z" }), path({ "d": "M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" }), path({ "d": "m6.18 5.276 3.1 3.899" }));
 };
 //#endregion
 //#region src/icons/ClipboardCheck.ts
@@ -3589,6 +3689,22 @@ const ClipboardCheck = (props = {}) => {
 		rx: "1",
 		ry: "1"
 	}), path({ "d": "M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" }), path({ "d": "m9 14 2 2 4-4" }));
+};
+//#endregion
+//#region src/icons/ClipboardClock.ts
+const ClipboardClock = (props = {}) => {
+	const { path, circle, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M16 14v2.2l1.6 1" }), path({ "d": "M16 4h2a2 2 0 0 1 2 2v.832" }), path({ "d": "M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h2" }), circle({
+		cx: "16",
+		cy: "16",
+		"r": "6"
+	}), rect({
+		"x": "8",
+		"y": "2",
+		width: "8",
+		height: "4",
+		rx: "1"
+	}));
 };
 //#endregion
 //#region src/icons/ClipboardCopy.ts
@@ -3632,8 +3748,14 @@ const ClipboardMinus = (props = {}) => {
 //#endregion
 //#region src/icons/ClipboardPaste.ts
 const ClipboardPaste = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H9a1 1 0 0 0-1 1v2c0 .6.4 1 1 1h6c.6 0 1-.4 1-1V3c0-.6-.4-1-1-1Z" }), path({ "d": "M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2M16 4h2a2 2 0 0 1 2 2v2M11 14h10" }), path({ "d": "m17 10 4 4-4 4" }));
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M11 14h10" }), path({ "d": "M16 4h2a2 2 0 0 1 2 2v1.344" }), path({ "d": "m17 18 4-4-4-4" }), path({ "d": "M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 1.793-1.113" }), rect({
+		"x": "8",
+		"y": "2",
+		width: "8",
+		height: "4",
+		rx: "1"
+	}));
 };
 //#endregion
 //#region src/icons/ClipboardPenLine.ts
@@ -3650,14 +3772,14 @@ const ClipboardPenLine = (props = {}) => {
 //#endregion
 //#region src/icons/ClipboardPen.ts
 const ClipboardPen = (props = {}) => {
-	const { rect, path } = van.tags(svgNamespace);
-	return LucideIcon(props, rect({
-		width: "8",
-		height: "4",
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M16 4h2a2 2 0 0 1 2 2v2" }), path({ "d": "M21.34 15.664a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" }), path({ "d": "M8 22H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" }), rect({
 		"x": "8",
 		"y": "2",
+		width: "8",
+		height: "4",
 		rx: "1"
-	}), path({ "d": "M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-5.5" }), path({ "d": "M4 13.5V6a2 2 0 0 1 2-2h2" }), path({ "d": "M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" }));
+	}));
 };
 //#endregion
 //#region src/icons/ClipboardPlus.ts
@@ -3714,166 +3836,204 @@ const Clipboard = (props = {}) => {
 //#endregion
 //#region src/icons/Clock1.ts
 const Clock1 = (props = {}) => {
-	const { circle, polyline } = van.tags(svgNamespace);
+	const { circle, path } = van.tags(svgNamespace);
 	return LucideIcon(props, circle({
 		cx: "12",
 		cy: "12",
 		"r": "10"
-	}), polyline({ points: "12 6 12 12 14.5 8" }));
+	}), path({ "d": "M12 6v6l2-4" }));
 };
 //#endregion
 //#region src/icons/Clock10.ts
 const Clock10 = (props = {}) => {
-	const { circle, polyline } = van.tags(svgNamespace);
+	const { circle, path } = van.tags(svgNamespace);
 	return LucideIcon(props, circle({
 		cx: "12",
 		cy: "12",
 		"r": "10"
-	}), polyline({ points: "12 6 12 12 8 10" }));
+	}), path({ "d": "M12 6v6l-4-2" }));
 };
 //#endregion
 //#region src/icons/Clock11.ts
 const Clock11 = (props = {}) => {
-	const { circle, polyline } = van.tags(svgNamespace);
+	const { circle, path } = van.tags(svgNamespace);
 	return LucideIcon(props, circle({
 		cx: "12",
 		cy: "12",
 		"r": "10"
-	}), polyline({ points: "12 6 12 12 9.5 8" }));
+	}), path({ "d": "M12 6v6l-2-4" }));
 };
 //#endregion
 //#region src/icons/Clock12.ts
 const Clock12 = (props = {}) => {
-	const { circle, polyline } = van.tags(svgNamespace);
+	const { circle, path } = van.tags(svgNamespace);
 	return LucideIcon(props, circle({
 		cx: "12",
 		cy: "12",
 		"r": "10"
-	}), polyline({ points: "12 6 12 12" }));
+	}), path({ "d": "M12 6v6" }));
 };
 //#endregion
 //#region src/icons/Clock2.ts
 const Clock2 = (props = {}) => {
-	const { circle, polyline } = van.tags(svgNamespace);
+	const { circle, path } = van.tags(svgNamespace);
 	return LucideIcon(props, circle({
 		cx: "12",
 		cy: "12",
 		"r": "10"
-	}), polyline({ points: "12 6 12 12 16 10" }));
+	}), path({ "d": "M12 6v6l4-2" }));
 };
 //#endregion
 //#region src/icons/Clock3.ts
 const Clock3 = (props = {}) => {
-	const { circle, polyline } = van.tags(svgNamespace);
+	const { circle, path } = van.tags(svgNamespace);
 	return LucideIcon(props, circle({
 		cx: "12",
 		cy: "12",
 		"r": "10"
-	}), polyline({ points: "12 6 12 12 16.5 12" }));
+	}), path({ "d": "M12 6v6h4" }));
 };
 //#endregion
 //#region src/icons/Clock4.ts
 const Clock4 = (props = {}) => {
-	const { circle, polyline } = van.tags(svgNamespace);
+	const { circle, path } = van.tags(svgNamespace);
 	return LucideIcon(props, circle({
 		cx: "12",
 		cy: "12",
 		"r": "10"
-	}), polyline({ points: "12 6 12 12 16 14" }));
+	}), path({ "d": "M12 6v6l4 2" }));
 };
 //#endregion
 //#region src/icons/Clock5.ts
 const Clock5 = (props = {}) => {
-	const { circle, polyline } = van.tags(svgNamespace);
+	const { circle, path } = van.tags(svgNamespace);
 	return LucideIcon(props, circle({
 		cx: "12",
 		cy: "12",
 		"r": "10"
-	}), polyline({ points: "12 6 12 12 14.5 16" }));
+	}), path({ "d": "M12 6v6l2 4" }));
 };
 //#endregion
 //#region src/icons/Clock6.ts
 const Clock6 = (props = {}) => {
-	const { circle, polyline } = van.tags(svgNamespace);
+	const { circle, path } = van.tags(svgNamespace);
 	return LucideIcon(props, circle({
 		cx: "12",
 		cy: "12",
 		"r": "10"
-	}), polyline({ points: "12 6 12 12 12 16.5" }));
+	}), path({ "d": "M12 6v10" }));
 };
 //#endregion
 //#region src/icons/Clock7.ts
 const Clock7 = (props = {}) => {
-	const { circle, polyline } = van.tags(svgNamespace);
+	const { circle, path } = van.tags(svgNamespace);
 	return LucideIcon(props, circle({
 		cx: "12",
 		cy: "12",
 		"r": "10"
-	}), polyline({ points: "12 6 12 12 9.5 16" }));
+	}), path({ "d": "M12 6v6l-2 4" }));
 };
 //#endregion
 //#region src/icons/Clock8.ts
 const Clock8 = (props = {}) => {
-	const { circle, polyline } = van.tags(svgNamespace);
+	const { circle, path } = van.tags(svgNamespace);
 	return LucideIcon(props, circle({
 		cx: "12",
 		cy: "12",
 		"r": "10"
-	}), polyline({ points: "12 6 12 12 8 14" }));
+	}), path({ "d": "M12 6v6l-4 2" }));
 };
 //#endregion
 //#region src/icons/Clock9.ts
 const Clock9 = (props = {}) => {
-	const { circle, polyline } = van.tags(svgNamespace);
+	const { circle, path } = van.tags(svgNamespace);
 	return LucideIcon(props, circle({
 		cx: "12",
 		cy: "12",
 		"r": "10"
-	}), polyline({ points: "12 6 12 12 7.5 12" }));
+	}), path({ "d": "M12 6v6H8" }));
 };
 //#endregion
 //#region src/icons/ClockAlert.ts
 const ClockAlert = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 6v6l4 2" }), path({ "d": "M16 21.16a10 10 0 1 1 5-13.516" }), path({ "d": "M20 11.5v6" }), path({ "d": "M20 21.5h.01" }));
+	return LucideIcon(props, path({ "d": "M12 6v6l4 2" }), path({ "d": "M20 12v5" }), path({ "d": "M20 21h.01" }), path({ "d": "M21.25 8.2A10 10 0 1 0 16 21.16" }));
 };
 //#endregion
 //#region src/icons/ClockArrowDown.ts
 const ClockArrowDown = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12.338 21.994A10 10 0 1 1 21.925 13.227" }), path({ "d": "M12 6v6l2 1" }), path({ "d": "m14 18 4 4 4-4" }), path({ "d": "M18 14v8" }));
+	return LucideIcon(props, path({ "d": "M12 6v6l2 1" }), path({ "d": "M12.337 21.994a10 10 0 1 1 9.588-8.767" }), path({ "d": "m14 18 4 4 4-4" }), path({ "d": "M18 14v8" }));
 };
 //#endregion
 //#region src/icons/ClockArrowUp.ts
 const ClockArrowUp = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M13.228 21.925A10 10 0 1 1 21.994 12.338" }), path({ "d": "M12 6v6l1.562.781" }), path({ "d": "m14 18 4-4 4 4" }), path({ "d": "M18 22v-8" }));
+	return LucideIcon(props, path({ "d": "M12 6v6l1.56.78" }), path({ "d": "M13.227 21.925a10 10 0 1 1 8.767-9.588" }), path({ "d": "m14 18 4-4 4 4" }), path({ "d": "M18 22v-8" }));
+};
+//#endregion
+//#region src/icons/ClockCheck.ts
+const ClockCheck = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 6v6l4 2" }), path({ "d": "M22 12a10 10 0 1 0-11 9.95" }), path({ "d": "m22 16-5.5 5.5L14 19" }));
+};
+//#endregion
+//#region src/icons/ClockFading.ts
+const ClockFading = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 2a10 10 0 0 1 7.38 16.75" }), path({ "d": "M12 6v6l4 2" }), path({ "d": "M2.5 8.875a10 10 0 0 0-.5 3" }), path({ "d": "M2.83 16a10 10 0 0 0 2.43 3.4" }), path({ "d": "M4.636 5.235a10 10 0 0 1 .891-.857" }), path({ "d": "M8.644 21.42a10 10 0 0 0 7.631-.38" }));
+};
+//#endregion
+//#region src/icons/ClockPlus.ts
+const ClockPlus = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 6v6l3.644 1.822" }), path({ "d": "M16 19h6" }), path({ "d": "M19 16v6" }), path({ "d": "M21.92 13.267a10 10 0 1 0-8.653 8.653" }));
 };
 //#endregion
 //#region src/icons/Clock.ts
 const Clock = (props = {}) => {
-	const { circle, polyline } = van.tags(svgNamespace);
+	const { circle, path } = van.tags(svgNamespace);
 	return LucideIcon(props, circle({
 		cx: "12",
 		cy: "12",
 		"r": "10"
-	}), polyline({ points: "12 6 12 12 16 14" }));
+	}), path({ "d": "M12 6v6l4 2" }));
+};
+//#endregion
+//#region src/icons/ClosedCaption.ts
+const ClosedCaption = (props = {}) => {
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 9.17a3 3 0 1 0 0 5.66" }), path({ "d": "M17 9.17a3 3 0 1 0 0 5.66" }), rect({
+		"x": "2",
+		"y": "5",
+		width: "20",
+		height: "14",
+		rx: "2"
+	}));
 };
 //#endregion
 //#region src/icons/CloudAlert.ts
 const CloudAlert = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 12v4" }), path({ "d": "M12 20h.01" }), path({ "d": "M17 18h.5a1 1 0 0 0 0-9h-1.79A7 7 0 1 0 7 17.708" }));
+	return LucideIcon(props, path({ "d": "M12 12v4" }), path({ "d": "M12 20h.01" }), path({ "d": "M8.128 16.949A7 7 0 1 1 15.71 8h1.79a1 1 0 0 1 0 9h-1.642" }));
+};
+//#endregion
+//#region src/icons/CloudBackup.ts
+const CloudBackup = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M21 15.251A4.5 4.5 0 0 0 17.5 8h-1.79A7 7 0 1 0 3 13.607" }), path({ "d": "M7 11v4h4" }), path({ "d": "M8 19a5 5 0 0 0 9-3 4.5 4.5 0 0 0-4.5-4.5 4.82 4.82 0 0 0-3.41 1.41L7 15" }));
+};
+//#endregion
+//#region src/icons/CloudCheck.ts
+const CloudCheck = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m17 15-5.5 5.5L9 18" }), path({ "d": "M5.516 16.07A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 3.501 7.327" }));
 };
 //#endregion
 //#region src/icons/CloudCog.ts
 const CloudCog = (props = {}) => {
-	const { circle, path } = van.tags(svgNamespace);
-	return LucideIcon(props, circle({
-		cx: "12",
-		cy: "17",
-		"r": "3"
-	}), path({ "d": "M4.2 15.1A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.2" }), path({ "d": "m15.7 18.4-.9-.3" }), path({ "d": "m9.2 15.9-.9-.3" }), path({ "d": "m10.6 20.7.3-.9" }), path({ "d": "m13.1 14.2.3-.9" }), path({ "d": "m13.6 20.7-.4-1" }), path({ "d": "m10.8 14.3-.4-1" }), path({ "d": "m8.3 18.6 1-.4" }), path({ "d": "m14.7 15.8 1-.4" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m10.852 19.772-.383.924" }), path({ "d": "m13.148 14.228.383-.923" }), path({ "d": "M13.148 19.772a3 3 0 1 0-2.296-5.544l-.383-.923" }), path({ "d": "m13.53 20.696-.382-.924a3 3 0 1 1-2.296-5.544" }), path({ "d": "m14.772 15.852.923-.383" }), path({ "d": "m14.772 18.148.923.383" }), path({ "d": "M4.2 15.1a7 7 0 1 1 9.93-9.858A7 7 0 0 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.2" }), path({ "d": "m9.228 15.852-.923-.383" }), path({ "d": "m9.228 18.148-.923.383" }));
 };
 //#endregion
 //#region src/icons/CloudDownload.ts
@@ -3909,19 +4069,19 @@ const CloudLightning = (props = {}) => {
 //#region src/icons/CloudMoonRain.ts
 const CloudMoonRain = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M10.188 8.5A6 6 0 0 1 16 4a1 1 0 0 0 6 6 6 6 0 0 1-3 5.197" }), path({ "d": "M11 20v2" }), path({ "d": "M3 20a5 5 0 1 1 8.9-4H13a3 3 0 0 1 2 5.24" }), path({ "d": "M7 19v2" }));
+	return LucideIcon(props, path({ "d": "M11 20v2" }), path({ "d": "M18.376 14.512a6 6 0 0 0 3.461-4.127c.148-.625-.659-.97-1.248-.714a4 4 0 0 1-5.259-5.26c.255-.589-.09-1.395-.716-1.248a6 6 0 0 0-4.594 5.36" }), path({ "d": "M3 20a5 5 0 1 1 8.9-4H13a3 3 0 0 1 2 5.24" }), path({ "d": "M7 19v2" }));
 };
 //#endregion
 //#region src/icons/CloudMoon.ts
 const CloudMoon = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M10.188 8.5A6 6 0 0 1 16 4a1 1 0 0 0 6 6 6 6 0 0 1-3 5.197" }), path({ "d": "M13 16a3 3 0 1 1 0 6H7a5 5 0 1 1 4.9-6Z" }));
+	return LucideIcon(props, path({ "d": "M13 16a3 3 0 0 1 0 6H7a5 5 0 1 1 4.9-6z" }), path({ "d": "M18.376 14.512a6 6 0 0 0 3.461-4.127c.148-.625-.659-.97-1.248-.714a4 4 0 0 1-5.259-5.26c.255-.589-.09-1.395-.716-1.248a6 6 0 0 0-4.594 5.36" }));
 };
 //#endregion
 //#region src/icons/CloudOff.ts
 const CloudOff = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m2 2 20 20" }), path({ "d": "M5.782 5.782A7 7 0 0 0 9 19h8.5a4.5 4.5 0 0 0 1.307-.193" }), path({ "d": "M21.532 16.5A4.5 4.5 0 0 0 17.5 10h-1.79A7.008 7.008 0 0 0 10 5.07" }));
+	return LucideIcon(props, path({ "d": "M10.94 5.274A7 7 0 0 1 15.71 10h1.79a4.5 4.5 0 0 1 4.222 6.057" }), path({ "d": "M18.796 18.81A4.5 4.5 0 0 1 17.5 19H9A7 7 0 0 1 5.79 5.78" }), path({ "d": "m2 2 20 20" }));
 };
 //#endregion
 //#region src/icons/CloudRainWind.ts
@@ -3954,6 +4114,12 @@ const CloudSun = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M12 2v2" }), path({ "d": "m4.93 4.93 1.41 1.41" }), path({ "d": "M20 12h2" }), path({ "d": "m19.07 4.93-1.41 1.41" }), path({ "d": "M15.947 12.65a4 4 0 0 0-5.925-4.128" }), path({ "d": "M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z" }));
 };
 //#endregion
+//#region src/icons/CloudSync.ts
+const CloudSync = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m17 18-1.535 1.605a5 5 0 0 1-8-1.5" }), path({ "d": "M17 22v-4h-4" }), path({ "d": "M20.996 15.251A4.5 4.5 0 0 0 17.495 8h-1.79a7 7 0 1 0-12.709 5.607" }), path({ "d": "M7 10v4h4" }), path({ "d": "m7 14 1.535-1.605a5 5 0 0 1 8 1.5" }));
+};
+//#endregion
 //#region src/icons/CloudUpload.ts
 const CloudUpload = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
@@ -3969,7 +4135,7 @@ const Cloud = (props = {}) => {
 //#region src/icons/Cloudy.ts
 const Cloudy = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M17.5 21H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" }), path({ "d": "M22 10a3 3 0 0 0-3-3h-2.207a5.502 5.502 0 0 0-10.702.5" }));
+	return LucideIcon(props, path({ "d": "M17.5 12a1 1 0 1 1 0 9H9.006a7 7 0 1 1 6.702-9z" }), path({ "d": "M21.832 9A3 3 0 0 0 19 7h-2.207a5.5 5.5 0 0 0-10.72.61" }));
 };
 //#endregion
 //#region src/icons/Clover.ts
@@ -3992,35 +4158,8 @@ const CodeXml = (props = {}) => {
 //#endregion
 //#region src/icons/Code.ts
 const Code = (props = {}) => {
-	const { polyline } = van.tags(svgNamespace);
-	return LucideIcon(props, polyline({ points: "16 18 22 12 16 6" }), polyline({ points: "8 6 2 12 8 18" }));
-};
-//#endregion
-//#region src/icons/Codepen.ts
-const Codepen = (props = {}) => {
-	const { polygon, line, polyline } = van.tags(svgNamespace);
-	return LucideIcon(props, polygon({ points: "12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2" }), line({
-		x1: "12",
-		x2: "12",
-		y1: "22",
-		y2: "15.5"
-	}), polyline({ points: "22 8.5 12 15.5 2 8.5" }), polyline({ points: "2 15.5 12 8.5 22 15.5" }), line({
-		x1: "12",
-		x2: "12",
-		y1: "2",
-		y2: "8.5"
-	}));
-};
-//#endregion
-//#region src/icons/Codesandbox.ts
-const Codesandbox = (props = {}) => {
-	const { path, polyline, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" }), polyline({ points: "7.5 4.21 12 6.81 16.5 4.21" }), polyline({ points: "7.5 19.79 7.5 14.6 3 12" }), polyline({ points: "21 12 16.5 14.6 16.5 19.79" }), polyline({ points: "3.27 6.96 12 12.01 20.73 6.96" }), line({
-		x1: "12",
-		x2: "12",
-		y1: "22.08",
-		y2: "12"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m16 18 6-6-6-6" }), path({ "d": "m8 6-6 6 6 6" }));
 };
 //#endregion
 //#region src/icons/Coffee.ts
@@ -4031,18 +4170,26 @@ const Coffee = (props = {}) => {
 //#endregion
 //#region src/icons/Cog.ts
 const Cog = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z" }), path({ "d": "M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" }), path({ "d": "M12 2v2" }), path({ "d": "M12 22v-2" }), path({ "d": "m17 20.66-1-1.73" }), path({ "d": "M11 10.27 7 3.34" }), path({ "d": "m20.66 17-1.73-1" }), path({ "d": "m3.34 7 1.73 1" }), path({ "d": "M14 12h8" }), path({ "d": "M2 12h2" }), path({ "d": "m20.66 7-1.73 1" }), path({ "d": "m3.34 17 1.73-1" }), path({ "d": "m17 3.34-1 1.73" }), path({ "d": "m11 13.73-4 6.93" }));
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M11 10.27 7 3.34" }), path({ "d": "m11 13.73-4 6.93" }), path({ "d": "M12 22v-2" }), path({ "d": "M12 2v2" }), path({ "d": "M14 12h8" }), path({ "d": "m17 20.66-1-1.73" }), path({ "d": "m17 3.34-1 1.73" }), path({ "d": "M2 12h2" }), path({ "d": "m20.66 17-1.73-1" }), path({ "d": "m20.66 7-1.73 1" }), path({ "d": "m3.34 17 1.73-1" }), path({ "d": "m3.34 7 1.73 1" }), circle({
+		cx: "12",
+		cy: "12",
+		"r": "2"
+	}), circle({
+		cx: "12",
+		cy: "12",
+		"r": "8"
+	}));
 };
 //#endregion
 //#region src/icons/Coins.ts
 const Coins = (props = {}) => {
-	const { circle, path } = van.tags(svgNamespace);
-	return LucideIcon(props, circle({
-		cx: "8",
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M13.744 17.736a6 6 0 1 1-7.48-7.48" }), path({ "d": "M15 6h1v4" }), path({ "d": "m6.134 14.768.866-.5 2 3.464" }), circle({
+		cx: "16",
 		cy: "8",
 		"r": "6"
-	}), path({ "d": "M18.09 10.37A6 6 0 1 1 10.34 18" }), path({ "d": "M7 6h1v4" }), path({ "d": "m16.71 13.88.7.71-2.82 2.82" }));
+	}));
 };
 //#endregion
 //#region src/icons/Columns2.ts
@@ -4055,6 +4202,16 @@ const Columns2 = (props = {}) => {
 		"y": "3",
 		rx: "2"
 	}), path({ "d": "M12 3v18" }));
+};
+//#endregion
+//#region src/icons/Columns3Cog.ts
+const Columns3Cog = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10.5 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5.5" }), path({ "d": "m14.3 19.6 1-.4" }), path({ "d": "M15 3v7.5" }), path({ "d": "m15.2 16.9-.9-.3" }), path({ "d": "m16.6 21.7.3-.9" }), path({ "d": "m16.8 15.3-.4-1" }), path({ "d": "m19.1 15.2.3-.9" }), path({ "d": "m19.6 21.7-.4-1" }), path({ "d": "m20.7 16.8 1-.4" }), path({ "d": "m21.7 19.4-.9-.3" }), path({ "d": "M9 3v18" }), circle({
+		cx: "18",
+		cy: "18",
+		"r": "3"
+	}));
 };
 //#endregion
 //#region src/icons/Columns3.ts
@@ -4084,18 +4241,18 @@ const Columns4 = (props = {}) => {
 //#region src/icons/Combine.ts
 const Combine = (props = {}) => {
 	const { path, rect } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M10 18H5a3 3 0 0 1-3-3v-1" }), path({ "d": "M14 2a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2" }), path({ "d": "M20 2a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2" }), path({ "d": "m7 21 3-3-3-3" }), rect({
+	return LucideIcon(props, path({ "d": "M14 3a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1" }), path({ "d": "M19 3a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1" }), path({ "d": "m7 15 3 3" }), path({ "d": "m7 21 3-3H5a2 2 0 0 1-2-2v-2" }), rect({
 		"x": "14",
 		"y": "14",
-		width: "8",
-		height: "8",
-		rx: "2"
+		width: "7",
+		height: "7",
+		rx: "1"
 	}), rect({
-		"x": "2",
-		"y": "2",
-		width: "8",
-		height: "8",
-		rx: "2"
+		"x": "3",
+		"y": "3",
+		width: "7",
+		height: "7",
+		rx: "1"
 	}));
 };
 //#endregion
@@ -4107,12 +4264,12 @@ const Command = (props = {}) => {
 //#endregion
 //#region src/icons/Compass.ts
 const Compass = (props = {}) => {
-	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z" }), circle({
+	const { circle, path } = van.tags(svgNamespace);
+	return LucideIcon(props, circle({
 		cx: "12",
 		cy: "12",
 		"r": "10"
-	}));
+	}), path({ "d": "m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z" }));
 };
 //#endregion
 //#region src/icons/Component.ts
@@ -4358,68 +4515,68 @@ const Copyright = (props = {}) => {
 //#endregion
 //#region src/icons/CornerDownLeft.ts
 const CornerDownLeft = (props = {}) => {
-	const { polyline, path } = van.tags(svgNamespace);
-	return LucideIcon(props, polyline({ points: "9 10 4 15 9 20" }), path({ "d": "M20 4v7a4 4 0 0 1-4 4H4" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M20 4v7a4 4 0 0 1-4 4H4" }), path({ "d": "m9 10-5 5 5 5" }));
 };
 //#endregion
 //#region src/icons/CornerDownRight.ts
 const CornerDownRight = (props = {}) => {
-	const { polyline, path } = van.tags(svgNamespace);
-	return LucideIcon(props, polyline({ points: "15 10 20 15 15 20" }), path({ "d": "M4 4v7a4 4 0 0 0 4 4h12" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m15 10 5 5-5 5" }), path({ "d": "M4 4v7a4 4 0 0 0 4 4h12" }));
 };
 //#endregion
 //#region src/icons/CornerLeftDown.ts
 const CornerLeftDown = (props = {}) => {
-	const { polyline, path } = van.tags(svgNamespace);
-	return LucideIcon(props, polyline({ points: "14 15 9 20 4 15" }), path({ "d": "M20 4h-7a4 4 0 0 0-4 4v12" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m14 15-5 5-5-5" }), path({ "d": "M20 4h-7a4 4 0 0 0-4 4v12" }));
 };
 //#endregion
 //#region src/icons/CornerLeftUp.ts
 const CornerLeftUp = (props = {}) => {
-	const { polyline, path } = van.tags(svgNamespace);
-	return LucideIcon(props, polyline({ points: "14 9 9 4 4 9" }), path({ "d": "M20 20h-7a4 4 0 0 1-4-4V4" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M14 9 9 4 4 9" }), path({ "d": "M20 20h-7a4 4 0 0 1-4-4V4" }));
 };
 //#endregion
 //#region src/icons/CornerRightDown.ts
 const CornerRightDown = (props = {}) => {
-	const { polyline, path } = van.tags(svgNamespace);
-	return LucideIcon(props, polyline({ points: "10 15 15 20 20 15" }), path({ "d": "M4 4h7a4 4 0 0 1 4 4v12" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m10 15 5 5 5-5" }), path({ "d": "M4 4h7a4 4 0 0 1 4 4v12" }));
 };
 //#endregion
 //#region src/icons/CornerRightUp.ts
 const CornerRightUp = (props = {}) => {
-	const { polyline, path } = van.tags(svgNamespace);
-	return LucideIcon(props, polyline({ points: "10 9 15 4 20 9" }), path({ "d": "M4 20h7a4 4 0 0 0 4-4V4" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m10 9 5-5 5 5" }), path({ "d": "M4 20h7a4 4 0 0 0 4-4V4" }));
 };
 //#endregion
 //#region src/icons/CornerUpLeft.ts
 const CornerUpLeft = (props = {}) => {
-	const { polyline, path } = van.tags(svgNamespace);
-	return LucideIcon(props, polyline({ points: "9 14 4 9 9 4" }), path({ "d": "M20 20v-7a4 4 0 0 0-4-4H4" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M20 20v-7a4 4 0 0 0-4-4H4" }), path({ "d": "M9 14 4 9l5-5" }));
 };
 //#endregion
 //#region src/icons/CornerUpRight.ts
 const CornerUpRight = (props = {}) => {
-	const { polyline, path } = van.tags(svgNamespace);
-	return LucideIcon(props, polyline({ points: "15 14 20 9 15 4" }), path({ "d": "M4 20v-7a4 4 0 0 1 4-4h12" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m15 14 5-5-5-5" }), path({ "d": "M4 20v-7a4 4 0 0 1 4-4h12" }));
 };
 //#endregion
 //#region src/icons/Cpu.ts
 const Cpu = (props = {}) => {
-	const { rect, path } = van.tags(svgNamespace);
-	return LucideIcon(props, rect({
-		width: "16",
-		height: "16",
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 20v2" }), path({ "d": "M12 2v2" }), path({ "d": "M17 20v2" }), path({ "d": "M17 2v2" }), path({ "d": "M2 12h2" }), path({ "d": "M2 17h2" }), path({ "d": "M2 7h2" }), path({ "d": "M20 12h2" }), path({ "d": "M20 17h2" }), path({ "d": "M20 7h2" }), path({ "d": "M7 20v2" }), path({ "d": "M7 2v2" }), rect({
 		"x": "4",
 		"y": "4",
+		width: "16",
+		height: "16",
 		rx: "2"
 	}), rect({
-		width: "6",
-		height: "6",
-		"x": "9",
-		"y": "9",
+		"x": "8",
+		"y": "8",
+		width: "8",
+		height: "8",
 		rx: "1"
-	}), path({ "d": "M15 2v2" }), path({ "d": "M15 20v2" }), path({ "d": "M2 15h2" }), path({ "d": "M2 9h2" }), path({ "d": "M20 15h2" }), path({ "d": "M20 9h2" }), path({ "d": "M9 2v2" }), path({ "d": "M9 20v2" }));
+	}));
 };
 //#endregion
 //#region src/icons/CreativeCommons.ts
@@ -4452,7 +4609,7 @@ const CreditCard = (props = {}) => {
 //#region src/icons/Croissant.ts
 const Croissant = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m4.6 13.11 5.79-3.21c1.89-1.05 4.79 1.78 3.71 3.71l-3.22 5.81C8.8 23.16.79 15.23 4.6 13.11Z" }), path({ "d": "m10.5 9.5-1-2.29C9.2 6.48 8.8 6 8 6H4.5C2.79 6 2 6.5 2 8.5a7.71 7.71 0 0 0 2 4.83" }), path({ "d": "M8 6c0-1.55.24-4-2-4-2 0-2.5 2.17-2.5 4" }), path({ "d": "m14.5 13.5 2.29 1c.73.3 1.21.7 1.21 1.5v3.5c0 1.71-.5 2.5-2.5 2.5a7.71 7.71 0 0 1-4.83-2" }), path({ "d": "M18 16c1.55 0 4-.24 4 2 0 2-2.17 2.5-4 2.5" }));
+	return LucideIcon(props, path({ "d": "M10.2 18H4.774a1.5 1.5 0 0 1-1.352-.97 11 11 0 0 1 .132-6.487" }), path({ "d": "M18 10.2V4.774a1.5 1.5 0 0 0-.97-1.352 11 11 0 0 0-6.486.132" }), path({ "d": "M18 5a4 3 0 0 1 4 3 2 2 0 0 1-2 2 10 10 0 0 0-5.139 1.42" }), path({ "d": "M5 18a3 4 0 0 0 3 4 2 2 0 0 0 2-2 10 10 0 0 1 1.42-5.14" }), path({ "d": "M8.709 2.554a10 10 0 0 0-6.155 6.155 1.5 1.5 0 0 0 .676 1.626l9.807 5.42a2 2 0 0 0 2.718-2.718l-5.42-9.807a1.5 1.5 0 0 0-1.626-.676" }));
 };
 //#endregion
 //#region src/icons/Crop.ts
@@ -4506,7 +4663,7 @@ const Crown = (props = {}) => {
 //#region src/icons/Cuboid.ts
 const Cuboid = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m21.12 6.4-6.05-4.06a2 2 0 0 0-2.17-.05L2.95 8.41a2 2 0 0 0-.95 1.7v5.82a2 2 0 0 0 .88 1.66l6.05 4.07a2 2 0 0 0 2.17.05l9.95-6.12a2 2 0 0 0 .95-1.7V8.06a2 2 0 0 0-.88-1.66Z" }), path({ "d": "M10 22v-8L2.25 9.15" }), path({ "d": "m10 14 11.77-6.87" }));
+	return LucideIcon(props, path({ "d": "M10 22v-8" }), path({ "d": "M2.336 8.89 10 14l11.715-7.029" }), path({ "d": "M22 14a2 2 0 0 1-.971 1.715l-10 6a2 2 0 0 1-2.138-.05l-6-4A2 2 0 0 1 2 16v-6a2 2 0 0 1 .971-1.715l10-6a2 2 0 0 1 2.138.05l6 4A2 2 0 0 1 22 8z" }));
 };
 //#endregion
 //#region src/icons/CupSoda.ts
@@ -4573,6 +4730,21 @@ const DatabaseBackup = (props = {}) => {
 	}), path({ "d": "M3 12a9 3 0 0 0 5 2.69" }), path({ "d": "M21 9.3V5" }), path({ "d": "M3 5v14a9 3 0 0 0 6.47 2.88" }), path({ "d": "M12 12v4h4" }), path({ "d": "M13 20a5 5 0 0 0 9-3 4.5 4.5 0 0 0-4.5-4.5c-1.33 0-2.54.54-3.41 1.41L12 16" }));
 };
 //#endregion
+//#region src/icons/DatabaseSearch.ts
+const DatabaseSearch = (props = {}) => {
+	const { path, circle, ellipse } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M21 11.693V5" }), path({ "d": "m22 22-1.875-1.875" }), path({ "d": "M3 12a9 3 0 0 0 8.697 2.998" }), path({ "d": "M3 5v14a9 3 0 0 0 9.28 2.999" }), circle({
+		cx: "18",
+		cy: "18",
+		"r": "3"
+	}), ellipse({
+		cx: "12",
+		cy: "5",
+		rx: "9",
+		ry: "3"
+	}));
+};
+//#endregion
 //#region src/icons/DatabaseZap.ts
 const DatabaseZap = (props = {}) => {
 	const { ellipse, path } = van.tags(svgNamespace);
@@ -4595,6 +4767,36 @@ const Database = (props = {}) => {
 	}), path({ "d": "M3 5V19A9 3 0 0 0 21 19V5" }), path({ "d": "M3 12A9 3 0 0 0 21 12" }));
 };
 //#endregion
+//#region src/icons/DecimalsArrowLeft.ts
+const DecimalsArrowLeft = (props = {}) => {
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m13 21-3-3 3-3" }), path({ "d": "M20 18H10" }), path({ "d": "M3 11h.01" }), rect({
+		"x": "6",
+		"y": "3",
+		width: "5",
+		height: "8",
+		rx: "2.5"
+	}));
+};
+//#endregion
+//#region src/icons/DecimalsArrowRight.ts
+const DecimalsArrowRight = (props = {}) => {
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 18h10" }), path({ "d": "m17 21 3-3-3-3" }), path({ "d": "M3 11h.01" }), rect({
+		"x": "15",
+		"y": "3",
+		width: "5",
+		height: "8",
+		rx: "2.5"
+	}), rect({
+		"x": "6",
+		"y": "3",
+		width: "5",
+		height: "8",
+		rx: "2.5"
+	}));
+};
+//#endregion
 //#region src/icons/Delete.ts
 const Delete = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
@@ -4603,12 +4805,12 @@ const Delete = (props = {}) => {
 //#endregion
 //#region src/icons/Dessert.ts
 const Dessert = (props = {}) => {
-	const { circle, path } = van.tags(svgNamespace);
-	return LucideIcon(props, circle({
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10.162 3.167A10 10 0 0 0 2 13a2 2 0 0 0 4 0v-1a2 2 0 0 1 4 0v4a2 2 0 0 0 4 0v-4a2 2 0 0 1 4 0v1a2 2 0 0 0 4-.006 10 10 0 0 0-8.161-9.826" }), path({ "d": "M20.804 14.869a9 9 0 0 1-17.608 0" }), circle({
 		cx: "12",
 		cy: "4",
 		"r": "2"
-	}), path({ "d": "M10.2 3.2C5.5 4 2 8.1 2 13a2 2 0 0 0 4 0v-1a2 2 0 0 1 4 0v4a2 2 0 0 0 4 0v-4a2 2 0 0 1 4 0v1a2 2 0 0 0 4 0c0-4.9-3.5-9-8.2-9.8" }), path({ "d": "M3.2 14.8a9 9 0 0 0 17.6 0" }));
+	}));
 };
 //#endregion
 //#region src/icons/Diameter.ts
@@ -4874,16 +5076,28 @@ const Donut = (props = {}) => {
 	}));
 };
 //#endregion
+//#region src/icons/DoorClosedLocked.ts
+const DoorClosedLocked = (props = {}) => {
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 12h.01" }), path({ "d": "M18 9V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14" }), path({ "d": "M2 20h8" }), path({ "d": "M20 17v-2a2 2 0 1 0-4 0v2" }), rect({
+		"x": "14",
+		"y": "17",
+		width: "8",
+		height: "5",
+		rx: "1"
+	}));
+};
+//#endregion
 //#region src/icons/DoorClosed.ts
 const DoorClosed = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M18 20V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14" }), path({ "d": "M2 20h20" }), path({ "d": "M14 12v.01" }));
+	return LucideIcon(props, path({ "d": "M10 12h.01" }), path({ "d": "M18 20V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14" }), path({ "d": "M2 20h20" }));
 };
 //#endregion
 //#region src/icons/DoorOpen.ts
 const DoorOpen = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M13 4h3a2 2 0 0 1 2 2v14" }), path({ "d": "M2 20h3" }), path({ "d": "M13 20h9" }), path({ "d": "M10 12v.01" }), path({ "d": "M13 4.562v16.157a1 1 0 0 1-1.242.97L5 20V5.562a2 2 0 0 1 1.515-1.94l4-1A2 2 0 0 1 13 4.561Z" }));
+	return LucideIcon(props, path({ "d": "M11 20H2" }), path({ "d": "M11 4.562v16.157a1 1 0 0 0 1.242.97L19 20V5.562a2 2 0 0 0-1.515-1.94l-4-1A2 2 0 0 0 11 4.561z" }), path({ "d": "M11 4H8a2 2 0 0 0-2 2v14" }), path({ "d": "M14 12h.01" }), path({ "d": "M22 20h-3" }));
 };
 //#endregion
 //#region src/icons/Dot.ts
@@ -4898,13 +5112,8 @@ const Dot = (props = {}) => {
 //#endregion
 //#region src/icons/Download.ts
 const Download = (props = {}) => {
-	const { path, polyline, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" }), polyline({ points: "7 10 12 15 17 10" }), line({
-		x1: "12",
-		x2: "12",
-		y1: "15",
-		y2: "3"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 15V3" }), path({ "d": "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" }), path({ "d": "m7 10 5 5 5-5" }));
 };
 //#endregion
 //#region src/icons/DraftingCompass.ts
@@ -4923,20 +5132,22 @@ const Drama = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M10 11h.01" }), path({ "d": "M14 6h.01" }), path({ "d": "M18 6h.01" }), path({ "d": "M6.5 13.1h.01" }), path({ "d": "M22 5c0 9-4 12-6 12s-6-3-6-12c0-2 2-3 6-3s6 1 6 3" }), path({ "d": "M17.4 9.9c-.8.8-2 .8-2.8 0" }), path({ "d": "M10.1 7.1C9 7.2 7.7 7.7 6 8.6c-3.5 2-4.7 3.9-3.7 5.6 4.5 7.8 9.5 8.4 11.2 7.4.9-.5 1.9-2.1 1.9-4.7" }), path({ "d": "M9.1 16.5c.3-1.1 1.4-1.7 2.4-1.4" }));
 };
 //#endregion
-//#region src/icons/Dribbble.ts
-const Dribbble = (props = {}) => {
-	const { circle, path } = van.tags(svgNamespace);
-	return LucideIcon(props, circle({
-		cx: "12",
-		cy: "12",
-		"r": "10"
-	}), path({ "d": "M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94" }), path({ "d": "M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32" }), path({ "d": "M8.56 2.75c4.37 6 6 9.42 8 17.72" }));
-};
-//#endregion
 //#region src/icons/Drill.ts
 const Drill = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M10 18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H5a3 3 0 0 1-3-3 1 1 0 0 1 1-1z" }), path({ "d": "M13 10H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1l-.81 3.242a1 1 0 0 1-.97.758H8" }), path({ "d": "M14 4h3a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-3" }), path({ "d": "M18 6h4" }), path({ "d": "m5 10-2 8" }), path({ "d": "m7 18 2-8" }));
+};
+//#endregion
+//#region src/icons/Drone.ts
+const Drone = (props = {}) => {
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 10 7 7" }), path({ "d": "m10 14-3 3" }), path({ "d": "m14 10 3-3" }), path({ "d": "m14 14 3 3" }), path({ "d": "M14.205 4.139a4 4 0 1 1 5.439 5.863" }), path({ "d": "M19.637 14a4 4 0 1 1-5.432 5.868" }), path({ "d": "M4.367 10a4 4 0 1 1 5.438-5.862" }), path({ "d": "M9.795 19.862a4 4 0 1 1-5.429-5.873" }), rect({
+		"x": "10",
+		"y": "8",
+		width: "4",
+		height: "8",
+		rx: "1"
+	}));
 };
 //#endregion
 //#region src/icons/DropletOff.ts
@@ -4977,7 +5188,7 @@ const Drumstick = (props = {}) => {
 //#region src/icons/Dumbbell.ts
 const Dumbbell = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M14.4 14.4 9.6 9.6" }), path({ "d": "M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z" }), path({ "d": "m21.5 21.5-1.4-1.4" }), path({ "d": "M3.9 3.9 2.5 2.5" }), path({ "d": "M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z" }));
+	return LucideIcon(props, path({ "d": "M17.596 12.768a2 2 0 1 0 2.829-2.829l-1.768-1.767a2 2 0 0 0 2.828-2.829l-2.828-2.828a2 2 0 0 0-2.829 2.828l-1.767-1.768a2 2 0 1 0-2.829 2.829z" }), path({ "d": "m2.5 21.5 1.4-1.4" }), path({ "d": "m20.1 3.9 1.4-1.4" }), path({ "d": "M5.343 21.485a2 2 0 1 0 2.829-2.828l1.767 1.768a2 2 0 1 0 2.829-2.829l-6.364-6.364a2 2 0 1 0-2.829 2.829l1.768 1.767a2 2 0 0 0-2.828 2.829z" }), path({ "d": "m9.6 14.4 4.8-4.8" }));
 };
 //#endregion
 //#region src/icons/EarOff.ts
@@ -5041,19 +5252,25 @@ const EggFried = (props = {}) => {
 //#endregion
 //#region src/icons/EggOff.ts
 const EggOff = (props = {}) => {
-	const { path, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M6.399 6.399C5.362 8.157 4.65 10.189 4.5 12c-.37 4.43 1.27 9.95 7.5 10 3.256-.026 5.259-1.547 6.375-3.625" }), path({ "d": "M19.532 13.875A14.07 14.07 0 0 0 19.5 12c-.36-4.34-3.95-9.96-7.5-10-1.04.012-2.082.502-3.046 1.297" }), line({
-		x1: "2",
-		x2: "22",
-		y1: "2",
-		y2: "22"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m2 2 20 20" }), path({ "d": "M20 14.347V14c0-6-4-12-8-12-1.078 0-2.157.436-3.157 1.19" }), path({ "d": "M6.206 6.21C4.871 8.4 4 11.2 4 14a8 8 0 0 0 14.568 4.568" }));
 };
 //#endregion
 //#region src/icons/Egg.ts
 const Egg = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 22c6.23-.05 7.87-5.57 7.5-10-.36-4.34-3.95-9.96-7.5-10-3.55.04-7.14 5.66-7.5 10-.37 4.43 1.27 9.95 7.5 10z" }));
+	return LucideIcon(props, path({ "d": "M12 2C8 2 4 8 4 14a8 8 0 0 0 16 0c0-6-4-12-8-12" }));
+};
+//#endregion
+//#region src/icons/Ellipse.ts
+const Ellipse = (props = {}) => {
+	const { ellipse } = van.tags(svgNamespace);
+	return LucideIcon(props, ellipse({
+		cx: "12",
+		cy: "12",
+		rx: "10",
+		ry: "6"
+	}));
 };
 //#endregion
 //#region src/icons/EllipsisVertical.ts
@@ -5138,7 +5355,7 @@ const Equal = (props = {}) => {
 //#region src/icons/Eraser.ts
 const Eraser = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m7 21-4.3-4.3c-1-1-1-2.5 0-3.4l9.6-9.6c1-1 2.5-1 3.4 0l5.6 5.6c1 1 1 2.5 0 3.4L13 21" }), path({ "d": "M22 21H7" }), path({ "d": "m5 11 9 9" }));
+	return LucideIcon(props, path({ "d": "M21 21H8a2 2 0 0 1-1.42-.587l-3.994-3.999a2 2 0 0 1 0-2.828l10-10a2 2 0 0 1 2.829 0l5.999 6a2 2 0 0 1 0 2.828L12.834 21" }), path({ "d": "m5.082 11.09 8.828 8.828" }));
 };
 //#endregion
 //#region src/icons/EthernetPort.ts
@@ -5153,10 +5370,16 @@ const Euro = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M4 10h12" }), path({ "d": "M4 14h9" }), path({ "d": "M19 6a7.7 7.7 0 0 0-5.2-2A7.9 7.9 0 0 0 6 12c0 4.4 3.5 8 7.8 8 2 0 3.8-.8 5.2-2" }));
 };
 //#endregion
+//#region src/icons/EvCharger.ts
+const EvCharger = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M14 13h2a2 2 0 0 1 2 2v2a2 2 0 0 0 4 0v-6.998a2 2 0 0 0-.59-1.42L18 5" }), path({ "d": "M14 21V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v16" }), path({ "d": "M2 21h13" }), path({ "d": "M3 7h11" }), path({ "d": "m9 11-2 3h3l-2 3" }));
+};
+//#endregion
 //#region src/icons/Expand.ts
 const Expand = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m15 15 6 6" }), path({ "d": "m15 9 6-6" }), path({ "d": "M21 16.2V21h-4.8" }), path({ "d": "M21 7.8V3h-4.8" }), path({ "d": "M3 16.2V21h4.8" }), path({ "d": "m3 21 6-6" }), path({ "d": "M3 7.8V3h4.8" }), path({ "d": "M9 9 3 3" }));
+	return LucideIcon(props, path({ "d": "m15 15 6 6" }), path({ "d": "m15 9 6-6" }), path({ "d": "M21 16v5h-5" }), path({ "d": "M21 8V3h-5" }), path({ "d": "M3 16v5h5" }), path({ "d": "m3 21 6-6" }), path({ "d": "M3 8V3h5" }), path({ "d": "M9 9 3 3" }));
 };
 //#endregion
 //#region src/icons/ExternalLink.ts
@@ -5187,16 +5410,10 @@ const Eye = (props = {}) => {
 	}));
 };
 //#endregion
-//#region src/icons/Facebook.ts
-const Facebook = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" }));
-};
-//#endregion
 //#region src/icons/Factory.ts
 const Factory = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" }), path({ "d": "M17 18h1" }), path({ "d": "M12 18h1" }), path({ "d": "M7 18h1" }));
+	return LucideIcon(props, path({ "d": "M12 16h.01" }), path({ "d": "M16 16h.01" }), path({ "d": "M3 19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5a.5.5 0 0 0-.769-.422l-4.462 2.844A.5.5 0 0 1 15 10.5v-2a.5.5 0 0 0-.769-.422L9.77 10.922A.5.5 0 0 1 9 10.5V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z" }), path({ "d": "M8 16h.01" }));
 };
 //#endregion
 //#region src/icons/Fan.ts
@@ -5207,8 +5424,8 @@ const Fan = (props = {}) => {
 //#endregion
 //#region src/icons/FastForward.ts
 const FastForward = (props = {}) => {
-	const { polygon } = van.tags(svgNamespace);
-	return LucideIcon(props, polygon({ points: "13 19 22 12 13 5 13 19" }), polygon({ points: "2 19 11 12 2 5 2 19" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 6a2 2 0 0 1 3.414-1.414l6 6a2 2 0 0 1 0 2.828l-6 6A2 2 0 0 1 12 18z" }), path({ "d": "M2 6a2 2 0 0 1 3.414-1.414l6 6a2 2 0 0 1 0 2.828l-6 6A2 2 0 0 1 2 18z" }));
 };
 //#endregion
 //#region src/icons/Feather.ts
@@ -5233,134 +5450,114 @@ const FerrisWheel = (props = {}) => {
 	}), path({ "d": "M12 2v4" }), path({ "d": "m6.8 15-3.5 2" }), path({ "d": "m20.7 7-3.5 2" }), path({ "d": "M6.8 9 3.3 7" }), path({ "d": "m20.7 17-3.5-2" }), path({ "d": "m9 22 3-8 3 8" }), path({ "d": "M8 22h8" }), path({ "d": "M18 18.7a9 9 0 1 0-12 0" }));
 };
 //#endregion
-//#region src/icons/Figma.ts
-const Figma = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" }), path({ "d": "M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z" }), path({ "d": "M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z" }), path({ "d": "M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z" }), path({ "d": "M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z" }));
-};
-//#endregion
 //#region src/icons/FileArchive.ts
 const FileArchive = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M10 12v-1" }), path({ "d": "M10 18v-2" }), path({ "d": "M10 7V6" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M15.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v16a2 2 0 0 0 .274 1.01" }), circle({
-		cx: "10",
+	return LucideIcon(props, path({ "d": "M13.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v11.5" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M8 12v-1" }), path({ "d": "M8 18v-2" }), path({ "d": "M8 7V6" }), circle({
+		cx: "8",
 		cy: "20",
 		"r": "2"
 	}));
 };
 //#endregion
-//#region src/icons/FileAudio2.ts
-const FileAudio2 = (props = {}) => {
-	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v2" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), circle({
-		cx: "3",
-		cy: "17",
-		"r": "1"
-	}), path({ "d": "M2 17v-3a4 4 0 0 1 8 0v3" }), circle({
-		cx: "9",
-		cy: "17",
-		"r": "1"
-	}));
-};
-//#endregion
-//#region src/icons/FileAudio.ts
-const FileAudio = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M17.5 22h.5a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M2 19a2 2 0 1 1 4 0v1a2 2 0 1 1-4 0v-4a6 6 0 0 1 12 0v4a2 2 0 1 1-4 0v-1a2 2 0 1 1 4 0" }));
-};
-//#endregion
 //#region src/icons/FileAxis3d.ts
 const FileAxis3d = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "m8 18 4-4" }), path({ "d": "M8 10v8h8" }));
-};
-//#endregion
-//#region src/icons/FileBadge2.ts
-const FileBadge2 = (props = {}) => {
-	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), circle({
-		cx: "12",
-		cy: "10",
-		"r": "3"
-	}), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "m14 12.5 1 5.5-3-1-3 1 1-5.5" }));
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "m8 18 4-4" }), path({ "d": "M8 10v8h8" }));
 };
 //#endregion
 //#region src/icons/FileBadge.ts
 const FileBadge = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 22h6a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M5 17a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" }), path({ "d": "M7 16.5 8 22l-3-1-3 1 1-5.5" }));
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M13 22h5a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v3.3" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "m7.69 16.479 1.29 4.88a.5.5 0 0 1-.698.591l-1.843-.849a1 1 0 0 0-.879.001l-1.846.85a.5.5 0 0 1-.692-.593l1.29-4.88" }), circle({
+		cx: "6",
+		cy: "14",
+		"r": "3"
+	}));
 };
 //#endregion
 //#region src/icons/FileBox.ts
 const FileBox = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M14.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M3 13.1a2 2 0 0 0-1 1.76v3.24a2 2 0 0 0 .97 1.78L6 21.7a2 2 0 0 0 2.03.01L11 19.9a2 2 0 0 0 1-1.76V14.9a2 2 0 0 0-.97-1.78L8 11.3a2 2 0 0 0-2.03-.01Z" }), path({ "d": "M7 17v5" }), path({ "d": "M11.7 14.2 7 17l-4.7-2.8" }));
+	return LucideIcon(props, path({ "d": "M14.5 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v3.8" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M11.7 14.2 7 17l-4.7-2.8" }), path({ "d": "M3 13.1a2 2 0 0 0-.999 1.76v3.24a2 2 0 0 0 .969 1.78L6 21.7a2 2 0 0 0 2.03.01L11 19.9a2 2 0 0 0 1-1.76V14.9a2 2 0 0 0-.97-1.78L8 11.3a2 2 0 0 0-2.03-.01z" }), path({ "d": "M7 17v5" }));
+};
+//#endregion
+//#region src/icons/FileBracesCorner.ts
+const FileBracesCorner = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M14 22h4a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v6" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M5 14a1 1 0 0 0-1 1v2a1 1 0 0 1-1 1 1 1 0 0 1 1 1v2a1 1 0 0 0 1 1" }), path({ "d": "M9 22a1 1 0 0 0 1-1v-2a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-2a1 1 0 0 0-1-1" }));
+};
+//#endregion
+//#region src/icons/FileBraces.ts
+const FileBraces = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M10 12a1 1 0 0 0-1 1v1a1 1 0 0 1-1 1 1 1 0 0 1 1 1v1a1 1 0 0 0 1 1" }), path({ "d": "M14 18a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1" }));
 };
 //#endregion
 //#region src/icons/FileChartColumnIncreasing.ts
 const FileChartColumnIncreasing = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M8 18v-2" }), path({ "d": "M12 18v-4" }), path({ "d": "M16 18v-6" }));
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M8 18v-2" }), path({ "d": "M12 18v-4" }), path({ "d": "M16 18v-6" }));
 };
 //#endregion
 //#region src/icons/FileChartColumn.ts
 const FileChartColumn = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M8 18v-1" }), path({ "d": "M12 18v-6" }), path({ "d": "M16 18v-3" }));
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M8 18v-1" }), path({ "d": "M12 18v-6" }), path({ "d": "M16 18v-3" }));
 };
 //#endregion
 //#region src/icons/FileChartLine.ts
 const FileChartLine = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "m16 13-3.5 3.5-2-2L8 17" }));
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "m16 13-3.5 3.5-2-2L8 17" }));
 };
 //#endregion
 //#region src/icons/FileChartPie.ts
 const FileChartPie = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M16 22h2a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3.5" }), path({ "d": "M4.017 11.512a6 6 0 1 0 8.466 8.475" }), path({ "d": "M9 16a1 1 0 0 1-1-1v-4c0-.552.45-1.008.995-.917a6 6 0 0 1 4.922 4.922c.091.544-.365.995-.917.995z" }));
+	return LucideIcon(props, path({ "d": "M15.941 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.704l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v3.512" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M4.017 11.512a6 6 0 1 0 8.466 8.475" }), path({ "d": "M9 16a1 1 0 0 1-1-1v-4c0-.552.45-1.008.995-.917a6 6 0 0 1 4.922 4.922c.091.544-.365.995-.917.995z" }));
 };
 //#endregion
-//#region src/icons/FileCheck2.ts
-const FileCheck2 = (props = {}) => {
+//#region src/icons/FileCheckCorner.ts
+const FileCheckCorner = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "m3 15 2 2 4-4" }));
+	return LucideIcon(props, path({ "d": "M10.5 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v6" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "m14 20 2 2 4-4" }));
 };
 //#endregion
 //#region src/icons/FileCheck.ts
 const FileCheck = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "m9 15 2 2 4-4" }));
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "m9 15 2 2 4-4" }));
 };
 //#endregion
 //#region src/icons/FileClock.ts
 const FileClock = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M16 22h2a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), circle({
+	return LucideIcon(props, path({ "d": "M16 22h2a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v2.85" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M8 14v2.2l1.6 1" }), circle({
 		cx: "8",
 		cy: "16",
 		"r": "6"
-	}), path({ "d": "M9.5 17.5 8 16.25V14" }));
+	}));
 };
 //#endregion
-//#region src/icons/FileCode2.ts
-const FileCode2 = (props = {}) => {
+//#region src/icons/FileCodeCorner.ts
+const FileCodeCorner = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "m5 12-3 3 3 3" }), path({ "d": "m9 18 3-3-3-3" }));
+	return LucideIcon(props, path({ "d": "M4 12.15V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3.35" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "m5 16-3 3 3 3" }), path({ "d": "m9 22 3-3-3-3" }));
 };
 //#endregion
 //#region src/icons/FileCode.ts
 const FileCode = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M10 12.5 8 15l2 2.5" }), path({ "d": "m14 12.5 2 2.5-2 2.5" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z" }));
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M10 12.5 8 15l2 2.5" }), path({ "d": "m14 12.5 2 2.5-2 2.5" }));
 };
 //#endregion
 //#region src/icons/FileCog.ts
 const FileCog = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "m3.2 12.9-.9-.4" }), path({ "d": "m3.2 15.1-.9.4" }), path({ "d": "M4.677 21.5a2 2 0 0 0 1.313.5H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v2.5" }), path({ "d": "m4.9 11.2-.4-.9" }), path({ "d": "m4.9 16.8-.4.9" }), path({ "d": "m7.5 10.3-.4.9" }), path({ "d": "m7.5 17.7-.4-.9" }), path({ "d": "m9.7 12.5-.9.4" }), path({ "d": "m9.7 15.5-.9-.4" }), circle({
-		cx: "6",
-		cy: "14",
+	return LucideIcon(props, path({ "d": "M15 8a1 1 0 0 1-1-1V2a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8z" }), path({ "d": "M20 8v12a2 2 0 0 1-2 2h-4.182" }), path({ "d": "m3.305 19.53.923-.382" }), path({ "d": "M4 10.592V4a2 2 0 0 1 2-2h8" }), path({ "d": "m4.228 16.852-.924-.383" }), path({ "d": "m5.852 15.228-.383-.923" }), path({ "d": "m5.852 20.772-.383.924" }), path({ "d": "m8.148 15.228.383-.923" }), path({ "d": "m8.53 21.696-.382-.924" }), path({ "d": "m9.773 16.852.922-.383" }), path({ "d": "m9.773 19.148.922.383" }), circle({
+		cx: "7",
+		cy: "18",
 		"r": "3"
 	}));
 };
@@ -5368,37 +5565,49 @@ const FileCog = (props = {}) => {
 //#region src/icons/FileDiff.ts
 const FileDiff = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), path({ "d": "M9 10h6" }), path({ "d": "M12 13V7" }), path({ "d": "M9 17h6" }));
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M9 10h6" }), path({ "d": "M12 13V7" }), path({ "d": "M9 17h6" }));
 };
 //#endregion
 //#region src/icons/FileDigit.ts
 const FileDigit = (props = {}) => {
 	const { path, rect } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), rect({
+	return LucideIcon(props, path({ "d": "M4 12V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M10 16h2v6" }), path({ "d": "M10 22h4" }), rect({
+		"x": "2",
+		"y": "16",
 		width: "4",
 		height: "6",
-		"x": "2",
-		"y": "12",
 		rx: "2"
-	}), path({ "d": "M10 12h2v6" }), path({ "d": "M10 18h4" }));
+	}));
 };
 //#endregion
 //#region src/icons/FileDown.ts
 const FileDown = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M12 18v-6" }), path({ "d": "m9 15 3 3 3-3" }));
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M12 18v-6" }), path({ "d": "m9 15 3 3 3-3" }));
+};
+//#endregion
+//#region src/icons/FileExclamationPoint.ts
+const FileExclamationPoint = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M12 9v4" }), path({ "d": "M12 17h.01" }));
+};
+//#endregion
+//#region src/icons/FileHeadphone.ts
+const FileHeadphone = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M4 6.835V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-.343" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M2 19a2 2 0 0 1 4 0v1a2 2 0 0 1-4 0v-4a6 6 0 0 1 12 0v4a2 2 0 0 1-4 0v-1a2 2 0 0 1 4 0" }));
 };
 //#endregion
 //#region src/icons/FileHeart.ts
 const FileHeart = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v2" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M10.29 10.7a2.43 2.43 0 0 0-2.66-.52c-.29.12-.56.3-.78.53l-.35.34-.35-.34a2.43 2.43 0 0 0-2.65-.53c-.3.12-.56.3-.79.53-.95.94-1 2.53.2 3.74L6.5 18l3.6-3.55c1.2-1.21 1.14-2.8.19-3.74Z" }));
+	return LucideIcon(props, path({ "d": "M13 22h5a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v7" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M3.62 18.8A2.25 2.25 0 1 1 7 15.836a2.25 2.25 0 1 1 3.38 2.966l-2.626 2.856a1 1 0 0 1-1.507 0z" }));
 };
 //#endregion
 //#region src/icons/FileImage.ts
 const FileImage = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), circle({
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), circle({
 		cx: "10",
 		cy: "12",
 		"r": "2"
@@ -5408,87 +5617,49 @@ const FileImage = (props = {}) => {
 //#region src/icons/FileInput.ts
 const FileInput = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M2 15h10" }), path({ "d": "m9 18 3-3-3-3" }));
-};
-//#endregion
-//#region src/icons/FileJson2.ts
-const FileJson2 = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M4 12a1 1 0 0 0-1 1v1a1 1 0 0 1-1 1 1 1 0 0 1 1 1v1a1 1 0 0 0 1 1" }), path({ "d": "M8 18a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1" }));
-};
-//#endregion
-//#region src/icons/FileJson.ts
-const FileJson = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M10 12a1 1 0 0 0-1 1v1a1 1 0 0 1-1 1 1 1 0 0 1 1 1v1a1 1 0 0 0 1 1" }), path({ "d": "M14 18a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1" }));
-};
-//#endregion
-//#region src/icons/FileKey2.ts
-const FileKey2 = (props = {}) => {
-	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v6" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), circle({
-		cx: "4",
-		cy: "16",
-		"r": "2"
-	}), path({ "d": "m10 10-4.5 4.5" }), path({ "d": "m9 11 1 1" }));
+	return LucideIcon(props, path({ "d": "M4 11V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-1" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M2 15h10" }), path({ "d": "m9 18 3-3-3-3" }));
 };
 //#endregion
 //#region src/icons/FileKey.ts
 const FileKey = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), circle({
-		cx: "10",
-		cy: "16",
+	return LucideIcon(props, path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M4 12v6" }), path({ "d": "M4 14h2" }), path({ "d": "M9.65 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v4" }), circle({
+		cx: "4",
+		cy: "20",
 		"r": "2"
-	}), path({ "d": "m16 10-4.5 4.5" }), path({ "d": "m15 11 1 1" }));
-};
-//#endregion
-//#region src/icons/FileLock2.ts
-const FileLock2 = (props = {}) => {
-	const { path, rect } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v1" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), rect({
-		width: "8",
-		height: "5",
-		"x": "2",
-		"y": "13",
-		rx: "1"
-	}), path({ "d": "M8 13v-2a2 2 0 1 0-4 0v2" }));
+	}));
 };
 //#endregion
 //#region src/icons/FileLock.ts
 const FileLock = (props = {}) => {
 	const { path, rect } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), rect({
+	return LucideIcon(props, path({ "d": "M4 9.8V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-3" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M9 17v-2a2 2 0 0 0-4 0v2" }), rect({
 		width: "8",
-		height: "6",
-		"x": "8",
-		"y": "12",
+		height: "5",
+		"x": "3",
+		"y": "17",
 		rx: "1"
-	}), path({ "d": "M10 12v-2a2 2 0 1 1 4 0v2" }));
+	}));
 };
 //#endregion
-//#region src/icons/FileMinus2.ts
-const FileMinus2 = (props = {}) => {
+//#region src/icons/FileMinusCorner.ts
+const FileMinusCorner = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M3 15h6" }));
+	return LucideIcon(props, path({ "d": "M20 14V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M14 18h6" }));
 };
 //#endregion
 //#region src/icons/FileMinus.ts
 const FileMinus = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M9 15h6" }));
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M9 15h6" }));
 };
 //#endregion
 //#region src/icons/FileMusic.ts
 const FileMusic = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M10.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v8.4" }), path({ "d": "M8 18v-7.7L16 9v7" }), circle({
-		cx: "14",
-		cy: "16",
-		"r": "2"
-	}), circle({
+	return LucideIcon(props, path({ "d": "M11.65 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v10.35" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M8 20v-7l3 1.474" }), circle({
 		cx: "6",
-		cy: "18",
+		cy: "20",
 		"r": "2"
 	}));
 };
@@ -5496,187 +5667,181 @@ const FileMusic = (props = {}) => {
 //#region src/icons/FileOutput.ts
 const FileOutput = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M4 7V4a2 2 0 0 1 2-2 2 2 0 0 0-2 2" }), path({ "d": "M4.063 20.999a2 2 0 0 0 2 1L18 22a2 2 0 0 0 2-2V7l-5-5H6" }), path({ "d": "m5 11-3 3" }), path({ "d": "m5 17-3-3h10" }));
+	return LucideIcon(props, path({ "d": "M4.226 20.925A2 2 0 0 0 6 22h12a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v3.127" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "m5 11-3 3" }), path({ "d": "m5 17-3-3h10" }));
 };
 //#endregion
 //#region src/icons/FilePenLine.ts
 const FilePenLine = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m18 5-2.414-2.414A2 2 0 0 0 14.172 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2" }), path({ "d": "M21.378 12.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" }), path({ "d": "M8 18h1" }));
+	return LucideIcon(props, path({ "d": "M14.364 13.634a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506l4.013-4.009a1 1 0 0 0-3.004-3.004z" }), path({ "d": "M14.487 7.858A1 1 0 0 1 14 7V2" }), path({ "d": "M20 19.645V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l2.516 2.516" }), path({ "d": "M8 18h1" }));
 };
 //#endregion
 //#region src/icons/FilePen.ts
 const FilePen = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" }));
+	return LucideIcon(props, path({ "d": "M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z" }));
 };
 //#endregion
-//#region src/icons/FilePlus2.ts
-const FilePlus2 = (props = {}) => {
+//#region src/icons/FilePlay.ts
+const FilePlay = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M3 15h6" }), path({ "d": "M6 12v6" }));
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M15.033 13.44a.647.647 0 0 1 0 1.12l-4.065 2.352a.645.645 0 0 1-.968-.56v-4.704a.645.645 0 0 1 .967-.56z" }));
+};
+//#endregion
+//#region src/icons/FilePlusCorner.ts
+const FilePlusCorner = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M11.35 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v5.35" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M14 19h6" }), path({ "d": "M17 16v6" }));
 };
 //#endregion
 //#region src/icons/FilePlus.ts
 const FilePlus = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M9 15h6" }), path({ "d": "M12 18v-6" }));
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M9 15h6" }), path({ "d": "M12 18v-6" }));
 };
 //#endregion
-//#region src/icons/FileQuestion.ts
-const FileQuestion = (props = {}) => {
+//#region src/icons/FileQuestionMark.ts
+const FileQuestionMark = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 17h.01" }), path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z" }), path({ "d": "M9.1 9a3 3 0 0 1 5.82 1c0 2-3 3-3 3" }));
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M12 17h.01" }), path({ "d": "M9.1 9a3 3 0 0 1 5.82 1c0 2-3 3-3 3" }));
 };
 //#endregion
 //#region src/icons/FileScan.ts
 const FileScan = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M20 10V7l-5-5H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M16 14a2 2 0 0 0-2 2" }), path({ "d": "M20 14a2 2 0 0 1 2 2" }), path({ "d": "M20 22a2 2 0 0 0 2-2" }), path({ "d": "M16 22a2 2 0 0 1-2-2" }));
+	return LucideIcon(props, path({ "d": "M20 10V8a2.4 2.4 0 0 0-.706-1.704l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.35" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M16 14a2 2 0 0 0-2 2" }), path({ "d": "M16 22a2 2 0 0 1-2-2" }), path({ "d": "M20 14a2 2 0 0 1 2 2" }), path({ "d": "M20 22a2 2 0 0 0 2-2" }));
 };
 //#endregion
-//#region src/icons/FileSearch2.ts
-const FileSearch2 = (props = {}) => {
+//#region src/icons/FileSearchCorner.ts
+const FileSearchCorner = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), circle({
+	return LucideIcon(props, path({ "d": "M11.1 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.589 3.588A2.4 2.4 0 0 1 20 8v3.25" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "m21 22-2.88-2.88" }), circle({
+		cx: "16",
+		cy: "17",
+		"r": "3"
+	}));
+};
+//#endregion
+//#region src/icons/FileSearch.ts
+const FileSearch = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), circle({
 		cx: "11.5",
 		cy: "14.5",
 		"r": "2.5"
 	}), path({ "d": "M13.3 16.3 15 18" }));
 };
 //#endregion
-//#region src/icons/FileSearch.ts
-const FileSearch = (props = {}) => {
-	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M4.268 21a2 2 0 0 0 1.727 1H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3" }), path({ "d": "m9 18-1.5-1.5" }), circle({
-		cx: "5",
-		cy: "14",
-		"r": "3"
-	}));
+//#region src/icons/FileSignal.ts
+const FileSignal = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M8 15h.01" }), path({ "d": "M11.5 13.5a2.5 2.5 0 0 1 0 3" }), path({ "d": "M15 12a5 5 0 0 1 0 6" }));
 };
 //#endregion
 //#region src/icons/FileSliders.ts
 const FileSliders = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M8 12h8" }), path({ "d": "M10 11v2" }), path({ "d": "M8 17h8" }), path({ "d": "M14 16v2" }));
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M8 12h8" }), path({ "d": "M10 11v2" }), path({ "d": "M8 17h8" }), path({ "d": "M14 16v2" }));
 };
 //#endregion
 //#region src/icons/FileSpreadsheet.ts
 const FileSpreadsheet = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M8 13h2" }), path({ "d": "M14 13h2" }), path({ "d": "M8 17h2" }), path({ "d": "M14 17h2" }));
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M8 13h2" }), path({ "d": "M14 13h2" }), path({ "d": "M8 17h2" }), path({ "d": "M14 17h2" }));
 };
 //#endregion
 //#region src/icons/FileStack.ts
 const FileStack = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 7h-3a2 2 0 0 1-2-2V2" }), path({ "d": "M21 6v6.5c0 .8-.7 1.5-1.5 1.5h-7c-.8 0-1.5-.7-1.5-1.5v-9c0-.8.7-1.5 1.5-1.5H17Z" }), path({ "d": "M7 8v8.8c0 .3.2.6.4.8.2.2.5.4.8.4H15" }), path({ "d": "M3 12v8.8c0 .3.2.6.4.8.2.2.5.4.8.4H11" }));
+	return LucideIcon(props, path({ "d": "M11 21a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1" }), path({ "d": "M16 16a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1" }), path({ "d": "M21 6a2 2 0 0 0-.586-1.414l-2-2A2 2 0 0 0 17 2h-3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1z" }));
 };
 //#endregion
 //#region src/icons/FileSymlink.ts
 const FileSymlink = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m10 18 3-3-3-3" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M4 11V4a2 2 0 0 1 2-2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h7" }));
+	return LucideIcon(props, path({ "d": "M4 11V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h7" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "m10 18 3-3-3-3" }));
 };
 //#endregion
 //#region src/icons/FileTerminal.ts
 const FileTerminal = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "m8 16 2-2-2-2" }), path({ "d": "M12 18h4" }));
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "m8 16 2-2-2-2" }), path({ "d": "M12 18h4" }));
 };
 //#endregion
 //#region src/icons/FileText.ts
 const FileText = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M10 9H8" }), path({ "d": "M16 13H8" }), path({ "d": "M16 17H8" }));
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M10 9H8" }), path({ "d": "M16 13H8" }), path({ "d": "M16 17H8" }));
 };
 //#endregion
-//#region src/icons/FileType2.ts
-const FileType2 = (props = {}) => {
+//#region src/icons/FileTypeCorner.ts
+const FileTypeCorner = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M2 13v-1h6v1" }), path({ "d": "M5 12v6" }), path({ "d": "M4 18h2" }));
+	return LucideIcon(props, path({ "d": "M12 22h6a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v6" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M3 16v-1.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5V16" }), path({ "d": "M6 22h2" }), path({ "d": "M7 14v8" }));
 };
 //#endregion
 //#region src/icons/FileType.ts
 const FileType = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M9 13v-1h6v1" }), path({ "d": "M12 12v6" }), path({ "d": "M11 18h2" }));
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M11 18h2" }), path({ "d": "M12 12v6" }), path({ "d": "M9 13v-.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 .5.5v.5" }));
 };
 //#endregion
 //#region src/icons/FileUp.ts
 const FileUp = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M12 12v6" }), path({ "d": "m15 15-3-3-3 3" }));
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M12 12v6" }), path({ "d": "m15 15-3-3-3 3" }));
 };
 //#endregion
 //#region src/icons/FileUser.ts
 const FileUser = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M15 18a3 3 0 1 0-6 0" }), path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z" }), circle({
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M16 22a4 4 0 0 0-8 0" }), circle({
 		cx: "12",
-		cy: "13",
-		"r": "2"
+		cy: "15",
+		"r": "3"
 	}));
 };
 //#endregion
-//#region src/icons/FileVideo2.ts
-const FileVideo2 = (props = {}) => {
+//#region src/icons/FileVideoCamera.ts
+const FileVideoCamera = (props = {}) => {
 	const { path, rect } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), rect({
-		width: "8",
+	return LucideIcon(props, path({ "d": "M4 12V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "m10 17.843 3.033-1.755a.64.64 0 0 1 .967.56v4.704a.65.65 0 0 1-.967.56L10 20.157" }), rect({
+		width: "7",
 		height: "6",
-		"x": "2",
-		"y": "12",
+		"x": "3",
+		"y": "16",
 		rx: "1"
-	}), path({ "d": "m10 15.5 4 2.5v-6l-4 2.5" }));
-};
-//#endregion
-//#region src/icons/FileVideo.ts
-const FileVideo = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "m10 11 5 3-5 3v-6Z" }));
-};
-//#endregion
-//#region src/icons/FileVolume2.ts
-const FileVolume2 = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M8 15h.01" }), path({ "d": "M11.5 13.5a2.5 2.5 0 0 1 0 3" }), path({ "d": "M15 12a5 5 0 0 1 0 6" }));
+	}));
 };
 //#endregion
 //#region src/icons/FileVolume.ts
 const FileVolume = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M11 11a5 5 0 0 1 0 6" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "M4 6.765V4a2 2 0 0 1 2-2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-.93-.23" }), path({ "d": "M7 10.51a.5.5 0 0 0-.826-.38l-1.893 1.628A1 1 0 0 1 3.63 12H2.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h1.129a1 1 0 0 1 .652.242l1.893 1.63a.5.5 0 0 0 .826-.38z" }));
+	return LucideIcon(props, path({ "d": "M4 11.55V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-1.95" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M12 15a5 5 0 0 1 0 6" }), path({ "d": "M8 14.502a.5.5 0 0 0-.826-.381l-1.893 1.631a1 1 0 0 1-.651.243H3.5a.5.5 0 0 0-.5.501v3.006a.5.5 0 0 0 .5.501h1.129a1 1 0 0 1 .652.243l1.893 1.633a.5.5 0 0 0 .826-.38z" }));
 };
 //#endregion
-//#region src/icons/FileWarning.ts
-const FileWarning = (props = {}) => {
+//#region src/icons/FileXCorner.ts
+const FileXCorner = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), path({ "d": "M12 9v4" }), path({ "d": "M12 17h.01" }));
-};
-//#endregion
-//#region src/icons/FileX2.ts
-const FileX2 = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "m8 12.5-5 5" }), path({ "d": "m3 12.5 5 5" }));
+	return LucideIcon(props, path({ "d": "M11 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v5" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "m15 17 5 5" }), path({ "d": "m20 17-5 5" }));
 };
 //#endregion
 //#region src/icons/FileX.ts
 const FileX = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }), path({ "d": "m14.5 12.5-5 5" }), path({ "d": "m9.5 12.5 5 5" }));
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "m14.5 12.5-5 5" }), path({ "d": "m9.5 12.5 5 5" }));
 };
 //#endregion
 //#region src/icons/File.ts
 const File = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }), path({ "d": "M14 2v4a2 2 0 0 0 2 2h4" }));
+	return LucideIcon(props, path({ "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }));
 };
 //#endregion
 //#region src/icons/Files.ts
 const Files = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M20 7h-3a2 2 0 0 1-2-2V2" }), path({ "d": "M9 18a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h7l4 4v10a2 2 0 0 1-2 2Z" }), path({ "d": "M3 7.6v12.8A1.6 1.6 0 0 0 4.6 22h9.8" }));
+	return LucideIcon(props, path({ "d": "M15 2h-4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8" }), path({ "d": "M16.706 2.706A2.4 2.4 0 0 0 15 2v5a1 1 0 0 0 1 1h5a2.4 2.4 0 0 0-.706-1.706z" }), path({ "d": "M5 7a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 1.732-1" }));
 };
 //#endregion
 //#region src/icons/Film.ts
@@ -5691,20 +5856,8 @@ const Film = (props = {}) => {
 	}), path({ "d": "M7 3v18" }), path({ "d": "M3 7.5h4" }), path({ "d": "M3 12h18" }), path({ "d": "M3 16.5h4" }), path({ "d": "M17 3v18" }), path({ "d": "M17 7.5h4" }), path({ "d": "M17 16.5h4" }));
 };
 //#endregion
-//#region src/icons/FilterX.ts
-const FilterX = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M13.013 3H2l8 9.46V19l4 2v-8.54l.9-1.055" }), path({ "d": "m22 3-5 5" }), path({ "d": "m17 3 5 5" }));
-};
-//#endregion
-//#region src/icons/Filter.ts
-const Filter = (props = {}) => {
-	const { polygon } = van.tags(svgNamespace);
-	return LucideIcon(props, polygon({ points: "22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" }));
-};
-//#endregion
-//#region src/icons/Fingerprint.ts
-const Fingerprint = (props = {}) => {
+//#region src/icons/FingerprintPattern.ts
+const FingerprintPattern = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4" }), path({ "d": "M14 13.12c0 2.38 0 6.38-1 8.88" }), path({ "d": "M17.29 21.02c.12-.6.43-2.3.5-3.02" }), path({ "d": "M2 12a10 10 0 0 1 18-6" }), path({ "d": "M2 16h.01" }), path({ "d": "M21.8 16c.2-2 .131-5.354 0-6" }), path({ "d": "M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2" }), path({ "d": "M8.65 22c.21-.66.45-1.32.57-2" }), path({ "d": "M9 6.8a6 6 0 0 1 9 5.2v2" }));
 };
@@ -5733,38 +5886,48 @@ const Fish = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z" }), path({ "d": "M18 12v.5" }), path({ "d": "M16 17.93a9.77 9.77 0 0 1 0-11.86" }), path({ "d": "M7 10.67C7 8 5.58 5.97 2.73 5.5c-1 1.5-1 5 .23 6.5-1.24 1.5-1.24 5-.23 6.5C5.58 18.03 7 16 7 13.33" }), path({ "d": "M10.46 7.26C10.2 5.88 9.17 4.24 8 3h5.8a2 2 0 0 1 1.98 1.67l.23 1.4" }), path({ "d": "m16.01 17.93-.23 1.4A2 2 0 0 1 13.8 21H9.5a5.96 5.96 0 0 0 1.49-3.98" }));
 };
 //#endregion
+//#region src/icons/FishingHook.ts
+const FishingHook = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m17.586 11.414-5.93 5.93a1 1 0 0 1-8-8l3.137-3.137a.707.707 0 0 1 1.207.5V10" }), path({ "d": "M20.414 8.586 22 7" }), circle({
+		cx: "19",
+		cy: "10",
+		"r": "2"
+	}));
+};
+//#endregion
+//#region src/icons/FishingRod.ts
+const FishingRod = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M4 11h1" }), path({ "d": "M8 15a2 2 0 0 1-4 0V3a1 1 0 0 1 1-1h.5C14 2 20 9 20 18v4" }), circle({
+		cx: "18",
+		cy: "18",
+		"r": "2"
+	}));
+};
+//#endregion
 //#region src/icons/FlagOff.ts
 const FlagOff = (props = {}) => {
-	const { path, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M8 2c3 0 5 2 8 2s4-1 4-1v11" }), path({ "d": "M4 22V4" }), path({ "d": "M4 15s1-1 4-1 5 2 8 2" }), line({
-		x1: "2",
-		x2: "22",
-		y1: "2",
-		y2: "22"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M16 16c-3 0-5-2-8-2a6 6 0 0 0-4 1.528" }), path({ "d": "m2 2 20 20" }), path({ "d": "M4 22V4" }), path({ "d": "M7.656 2H8c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0 1 20 4v10.347" }));
 };
 //#endregion
 //#region src/icons/FlagTriangleLeft.ts
 const FlagTriangleLeft = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M17 22V2L7 7l10 5" }));
+	return LucideIcon(props, path({ "d": "M18 22V2.8a.8.8 0 0 0-1.17-.71L5.45 7.78a.8.8 0 0 0 0 1.44L18 15.5" }));
 };
 //#endregion
 //#region src/icons/FlagTriangleRight.ts
 const FlagTriangleRight = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M7 22V2l10 5-10 5" }));
+	return LucideIcon(props, path({ "d": "M6 22V2.8a.8.8 0 0 1 1.17-.71l11.38 5.69a.8.8 0 0 1 0 1.44L6 15.5" }));
 };
 //#endregion
 //#region src/icons/Flag.ts
 const Flag = (props = {}) => {
-	const { path, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" }), line({
-		x1: "4",
-		x2: "4",
-		y1: "22",
-		y2: "15"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M4 22V4a1 1 0 0 1 .4-.8A6 6 0 0 1 8 2c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0 1 20 4v10a1 1 0 0 1-.4.8A6 6 0 0 1 16 16c-3 0-5-2-8-2a6 6 0 0 0-4 1.528" }));
 };
 //#endregion
 //#region src/icons/FlameKindling.ts
@@ -5776,39 +5939,19 @@ const FlameKindling = (props = {}) => {
 //#region src/icons/Flame.ts
 const Flame = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" }));
+	return LucideIcon(props, path({ "d": "M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4" }));
 };
 //#endregion
 //#region src/icons/FlashlightOff.ts
 const FlashlightOff = (props = {}) => {
-	const { path, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M16 16v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V10c0-2-2-2-2-4" }), path({ "d": "M7 2h11v4c0 2-2 2-2 4v1" }), line({
-		x1: "11",
-		x2: "18",
-		y1: "6",
-		y2: "6"
-	}), line({
-		x1: "2",
-		x2: "22",
-		y1: "2",
-		y2: "22"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M11.652 6H18" }), path({ "d": "M12 13v1" }), path({ "d": "M16 16v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-8a4 4 0 0 0-.8-2.4l-.6-.8A3 3 0 0 1 6 7V6" }), path({ "d": "m2 2 20 20" }), path({ "d": "M7.649 2H17a1 1 0 0 1 1 1v4a3 3 0 0 1-.6 1.8l-.6.8a4 4 0 0 0-.55 1.007" }));
 };
 //#endregion
 //#region src/icons/Flashlight.ts
 const Flashlight = (props = {}) => {
-	const { path, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M18 6c0 2-2 2-2 4v10a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V10c0-2-2-2-2-4V2h12z" }), line({
-		x1: "6",
-		x2: "18",
-		y1: "6",
-		y2: "6"
-	}), line({
-		x1: "12",
-		x2: "12",
-		y1: "12",
-		y2: "12"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 13v1" }), path({ "d": "M17 2a1 1 0 0 1 1 1v4a3 3 0 0 1-.6 1.8l-.6.8A4 4 0 0 0 16 12v8a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2v-8a4 4 0 0 0-.8-2.4l-.6-.8A3 3 0 0 1 6 7V3a1 1 0 0 1 1-1z" }), path({ "d": "M6 6h12" }));
 };
 //#endregion
 //#region src/icons/FlaskConicalOff.ts
@@ -5835,22 +5978,10 @@ const FlipHorizontal2 = (props = {}) => {
 	return LucideIcon(props, path({ "d": "m3 7 5 5-5 5V7" }), path({ "d": "m21 7-5 5 5 5V7" }), path({ "d": "M12 20v2" }), path({ "d": "M12 14v2" }), path({ "d": "M12 8v2" }), path({ "d": "M12 2v2" }));
 };
 //#endregion
-//#region src/icons/FlipHorizontal.ts
-const FlipHorizontal = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M8 3H5a2 2 0 0 0-2 2v14c0 1.1.9 2 2 2h3" }), path({ "d": "M16 3h3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-3" }), path({ "d": "M12 20v2" }), path({ "d": "M12 14v2" }), path({ "d": "M12 8v2" }), path({ "d": "M12 2v2" }));
-};
-//#endregion
 //#region src/icons/FlipVertical2.ts
 const FlipVertical2 = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "m17 3-5 5-5-5h10" }), path({ "d": "m17 21-5-5-5 5h10" }), path({ "d": "M4 12H2" }), path({ "d": "M10 12H8" }), path({ "d": "M16 12h-2" }), path({ "d": "M22 12h-2" }));
-};
-//#endregion
-//#region src/icons/FlipVertical.ts
-const FlipVertical = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v3" }), path({ "d": "M21 16v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3" }), path({ "d": "M4 12H2" }), path({ "d": "M10 12H8" }), path({ "d": "M16 12h-2" }), path({ "d": "M22 12h-2" }));
 };
 //#endregion
 //#region src/icons/Flower2.ts
@@ -5913,12 +6044,12 @@ const FolderCheck = (props = {}) => {
 //#endregion
 //#region src/icons/FolderClock.ts
 const FolderClock = (props = {}) => {
-	const { circle, path } = van.tags(svgNamespace);
-	return LucideIcon(props, circle({
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M16 14v2.2l1.6 1" }), path({ "d": "M7 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2" }), circle({
 		cx: "16",
 		cy: "16",
 		"r": "6"
-	}), path({ "d": "M7 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2" }), path({ "d": "M16 14v2l1 1" }));
+	}));
 };
 //#endregion
 //#region src/icons/FolderClosed.ts
@@ -5935,12 +6066,12 @@ const FolderCode = (props = {}) => {
 //#endregion
 //#region src/icons/FolderCog.ts
 const FolderCog = (props = {}) => {
-	const { circle, path } = van.tags(svgNamespace);
-	return LucideIcon(props, circle({
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10.3 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.98a2 2 0 0 1 1.69.9l.66 1.2A2 2 0 0 0 12 6h8a2 2 0 0 1 2 2v3.3" }), path({ "d": "m14.305 19.53.923-.382" }), path({ "d": "m15.228 16.852-.923-.383" }), path({ "d": "m16.852 15.228-.383-.923" }), path({ "d": "m16.852 20.772-.383.924" }), path({ "d": "m19.148 15.228.383-.923" }), path({ "d": "m19.53 21.696-.382-.924" }), path({ "d": "m20.772 16.852.924-.383" }), path({ "d": "m20.772 19.148.924.383" }), circle({
 		cx: "18",
 		cy: "18",
 		"r": "3"
-	}), path({ "d": "M10.3 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v3.3" }), path({ "d": "m21.7 19.4-.9-.3" }), path({ "d": "m15.2 16.9-.9-.3" }), path({ "d": "m16.6 21.7.3-.9" }), path({ "d": "m19.1 15.2.3-.9" }), path({ "d": "m19.6 21.7-.4-1" }), path({ "d": "m16.8 15.3-.4-1" }), path({ "d": "m14.3 19.6 1-.4" }), path({ "d": "m20.7 16.8 1-.4" }));
+	}));
 };
 //#endregion
 //#region src/icons/FolderDot.ts
@@ -5962,11 +6093,11 @@ const FolderDown = (props = {}) => {
 //#region src/icons/FolderGit2.ts
 const FolderGit2 = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M9 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v5" }), circle({
+	return LucideIcon(props, path({ "d": "M18 19a5 5 0 0 1-5-5v8" }), path({ "d": "M9 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v5" }), circle({
 		cx: "13",
 		cy: "12",
 		"r": "2"
-	}), path({ "d": "M18 19c-2.8 0-5-2.2-5-5v8" }), circle({
+	}), circle({
 		cx: "20",
 		cy: "19",
 		"r": "2"
@@ -5986,7 +6117,7 @@ const FolderGit = (props = {}) => {
 //#region src/icons/FolderHeart.ts
 const FolderHeart = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M11 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v1.5" }), path({ "d": "M13.9 17.45c-1.2-1.2-1.14-2.8-.2-3.73a2.43 2.43 0 0 1 3.44 0l.36.34.34-.34a2.43 2.43 0 0 1 3.45-.01c.95.95 1 2.53-.2 3.74L17.5 21Z" }));
+	return LucideIcon(props, path({ "d": "M10.638 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v3.417" }), path({ "d": "M14.62 18.8A2.25 2.25 0 1 1 18 15.836a2.25 2.25 0 1 1 3.38 2.966l-2.626 2.856a.998.998 0 0 1-1.507 0z" }));
 };
 //#endregion
 //#region src/icons/FolderInput.ts
@@ -6003,12 +6134,12 @@ const FolderKanban = (props = {}) => {
 //#endregion
 //#region src/icons/FolderKey.ts
 const FolderKey = (props = {}) => {
-	const { circle, path } = van.tags(svgNamespace);
-	return LucideIcon(props, circle({
-		cx: "16",
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M13 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v1.36" }), path({ "d": "M19 12v6" }), path({ "d": "M19 14h2" }), circle({
+		cx: "19",
 		cy: "20",
 		"r": "2"
-	}), path({ "d": "M10 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v2" }), path({ "d": "m22 14-4.5 4.5" }), path({ "d": "m21 15 1 1" }));
+	}));
 };
 //#endregion
 //#region src/icons/FolderLock.ts
@@ -6096,7 +6227,7 @@ const FolderSearch = (props = {}) => {
 //#region src/icons/FolderSymlink.ts
 const FolderSymlink = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M2 9V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h7" }), path({ "d": "m8 16 3-3-3-3" }));
+	return LucideIcon(props, path({ "d": "M2 9.35V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h7" }), path({ "d": "m8 16 3-3-3-3" }));
 };
 //#endregion
 //#region src/icons/FolderSync.ts
@@ -6132,7 +6263,7 @@ const Folder = (props = {}) => {
 //#region src/icons/Folders.ts
 const Folders = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M20 17a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3.9a2 2 0 0 1-1.69-.9l-.81-1.2a2 2 0 0 0-1.67-.9H8a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2Z" }), path({ "d": "M2 8v11a2 2 0 0 0 2 2h14" }));
+	return LucideIcon(props, path({ "d": "M20 5a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2.5a1.5 1.5 0 0 1 1.2.6l.6.8a1.5 1.5 0 0 0 1.2.6z" }), path({ "d": "M3 8.268a2 2 0 0 0-1 1.738V19a2 2 0 0 0 2 2h11a2 2 0 0 0 1.732-1" }));
 };
 //#endregion
 //#region src/icons/Footprints.ts
@@ -6144,7 +6275,7 @@ const Footprints = (props = {}) => {
 //#region src/icons/Forklift.ts
 const Forklift = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 12H5a2 2 0 0 0-2 2v5" }), circle({
+	return LucideIcon(props, path({ "d": "M12 12H5a2 2 0 0 0-2 2v5" }), path({ "d": "M15 19h7" }), path({ "d": "M16 19V2" }), path({ "d": "M6 12V7a2 2 0 0 1 2-2h2.172a2 2 0 0 1 1.414.586l3.828 3.828A2 2 0 0 1 16 10.828" }), path({ "d": "M7 19h4" }), circle({
 		cx: "13",
 		cy: "19",
 		"r": "2"
@@ -6152,13 +6283,31 @@ const Forklift = (props = {}) => {
 		cx: "5",
 		cy: "19",
 		"r": "2"
-	}), path({ "d": "M8 19h3m5-17v17h6M6 12V7c0-1.1.9-2 2-2h3l5 5" }));
+	}));
+};
+//#endregion
+//#region src/icons/Form.ts
+const Form = (props = {}) => {
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M4 14h6" }), path({ "d": "M4 2h10" }), rect({
+		"x": "4",
+		"y": "18",
+		width: "16",
+		height: "4",
+		rx: "1"
+	}), rect({
+		"x": "4",
+		"y": "6",
+		width: "16",
+		height: "4",
+		rx: "1"
+	}));
 };
 //#endregion
 //#region src/icons/Forward.ts
 const Forward = (props = {}) => {
-	const { polyline, path } = van.tags(svgNamespace);
-	return LucideIcon(props, polyline({ points: "15 17 20 12 15 7" }), path({ "d": "M4 18v-2a4 4 0 0 1 4-4h12" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m15 17 5-5-5-5" }), path({ "d": "M4 18v-2a4 4 0 0 1 4-4h12" }));
 };
 //#endregion
 //#region src/icons/Frame.ts
@@ -6187,12 +6336,6 @@ const Frame = (props = {}) => {
 	}));
 };
 //#endregion
-//#region src/icons/Framer.ts
-const Framer = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M5 16V9h14V2H5l14 14h-7m-7 0 7 7v-7m-7 0h7" }));
-};
-//#endregion
 //#region src/icons/Frown.ts
 const Frown = (props = {}) => {
 	const { circle, path, line } = van.tags(svgNamespace);
@@ -6215,18 +6358,8 @@ const Frown = (props = {}) => {
 //#endregion
 //#region src/icons/Fuel.ts
 const Fuel = (props = {}) => {
-	const { line, path } = van.tags(svgNamespace);
-	return LucideIcon(props, line({
-		x1: "3",
-		x2: "15",
-		y1: "22",
-		y2: "22"
-	}), line({
-		x1: "4",
-		x2: "14",
-		y1: "9",
-		y2: "9"
-	}), path({ "d": "M14 22V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v18" }), path({ "d": "M14 13h2a2 2 0 0 1 2 2v2a2 2 0 0 0 2 2a2 2 0 0 0 2-2V9.83a2 2 0 0 0-.59-1.42L18 5" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M14 13h2a2 2 0 0 1 2 2v2a2 2 0 0 0 4 0v-6.998a2 2 0 0 0-.59-1.42L18 5" }), path({ "d": "M14 21V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v16" }), path({ "d": "M2 21h13" }), path({ "d": "M3 9h11" }));
 };
 //#endregion
 //#region src/icons/Fullscreen.ts
@@ -6239,6 +6372,24 @@ const Fullscreen = (props = {}) => {
 		"y": "8",
 		rx: "1"
 	}));
+};
+//#endregion
+//#region src/icons/FunnelPlus.ts
+const FunnelPlus = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M13.354 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14v6a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341l1.218-1.348" }), path({ "d": "M16 6h6" }), path({ "d": "M19 3v6" }));
+};
+//#endregion
+//#region src/icons/FunnelX.ts
+const FunnelX = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12.531 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14v6a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341l.427-.473" }), path({ "d": "m16.5 3.5 5 5" }), path({ "d": "m21.5 3.5-5 5" }));
+};
+//#endregion
+//#region src/icons/Funnel.ts
+const Funnel = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z" }));
 };
 //#endregion
 //#region src/icons/GalleryHorizontalEnd.ts
@@ -6327,6 +6478,12 @@ const Gamepad2 = (props = {}) => {
 	}), path({ "d": "M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z" }));
 };
 //#endregion
+//#region src/icons/GamepadDirectional.ts
+const GamepadDirectional = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M11.146 15.854a1.207 1.207 0 0 1 1.708 0l1.56 1.56A2 2 0 0 1 15 18.828V21a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2.172a2 2 0 0 1 .586-1.414z" }), path({ "d": "M18.828 15a2 2 0 0 1-1.414-.586l-1.56-1.56a1.207 1.207 0 0 1 0-1.708l1.56-1.56A2 2 0 0 1 18.828 9H21a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1z" }), path({ "d": "M6.586 14.414A2 2 0 0 1 5.172 15H3a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h2.172a2 2 0 0 1 1.414.586l1.56 1.56a1.207 1.207 0 0 1 0 1.708z" }), path({ "d": "M9 3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2.172a2 2 0 0 1-.586 1.414l-1.56 1.56a1.207 1.207 0 0 1-1.708 0l-1.56-1.56A2 2 0 0 1 9 5.172z" }));
+};
+//#endregion
 //#region src/icons/Gamepad.ts
 const Gamepad = (props = {}) => {
 	const { line, rect } = van.tags(svgNamespace);
@@ -6368,13 +6525,19 @@ const Gauge = (props = {}) => {
 //#region src/icons/Gavel.ts
 const Gavel = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m14.5 12.5-8 8a2.119 2.119 0 1 1-3-3l8-8" }), path({ "d": "m16 16 6-6" }), path({ "d": "m8 8 6-6" }), path({ "d": "m9 7 8 8" }), path({ "d": "m21 11-8-8" }));
+	return LucideIcon(props, path({ "d": "m14 13-8.381 8.38a1 1 0 0 1-3.001-3l8.384-8.381" }), path({ "d": "m16 16 6-6" }), path({ "d": "m21.5 10.5-8-8" }), path({ "d": "m8 8 6-6" }), path({ "d": "m8.5 7.5 8 8" }));
 };
 //#endregion
 //#region src/icons/Gem.ts
 const Gem = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M6 3h12l4 6-10 13L2 9Z" }), path({ "d": "M11 3 8 9l4 13 4-13-3-6" }), path({ "d": "M2 9h20" }));
+	return LucideIcon(props, path({ "d": "M10.5 3 8 9l4 13 4-13-2.5-6" }), path({ "d": "M17 3a2 2 0 0 1 1.6.8l3 4a2 2 0 0 1 .013 2.382l-7.99 10.986a2 2 0 0 1-3.247 0l-7.99-10.986A2 2 0 0 1 2.4 7.8l2.998-3.997A2 2 0 0 1 7 3z" }), path({ "d": "M2 9h20" }));
+};
+//#endregion
+//#region src/icons/GeorgianLari.ts
+const GeorgianLari = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M11.5 21a7.5 7.5 0 1 1 7.35-9" }), path({ "d": "M13 12V3" }), path({ "d": "M4 21h16" }), path({ "d": "M9 12V3" }));
 };
 //#endregion
 //#region src/icons/Ghost.ts
@@ -6385,14 +6548,28 @@ const Ghost = (props = {}) => {
 //#endregion
 //#region src/icons/Gift.ts
 const Gift = (props = {}) => {
-	const { rect, path } = van.tags(svgNamespace);
-	return LucideIcon(props, rect({
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 7v14" }), path({ "d": "M20 11v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8" }), path({ "d": "M7.5 7a1 1 0 0 1 0-5A4.8 8 0 0 1 12 7a4.8 8 0 0 1 4.5-5 1 1 0 0 1 0 5" }), rect({
 		"x": "3",
-		"y": "8",
+		"y": "7",
 		width: "18",
 		height: "4",
 		rx: "1"
-	}), path({ "d": "M12 8v13" }), path({ "d": "M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7" }), path({ "d": "M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5" }));
+	}));
+};
+//#endregion
+//#region src/icons/GitBranchMinus.ts
+const GitBranchMinus = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M15 6a9 9 0 0 0-9 9V3" }), path({ "d": "M21 18h-6" }), circle({
+		cx: "18",
+		cy: "6",
+		"r": "3"
+	}), circle({
+		cx: "6",
+		cy: "18",
+		"r": "3"
+	}));
 };
 //#endregion
 //#region src/icons/GitBranchPlus.ts
@@ -6403,13 +6580,8 @@ const GitBranchPlus = (props = {}) => {
 //#endregion
 //#region src/icons/GitBranch.ts
 const GitBranch = (props = {}) => {
-	const { line, circle, path } = van.tags(svgNamespace);
-	return LucideIcon(props, line({
-		x1: "6",
-		x2: "6",
-		y1: "3",
-		y2: "15"
-	}), circle({
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M15 6a9 9 0 0 0-9 9V3" }), circle({
 		cx: "18",
 		cy: "6",
 		"r": "3"
@@ -6417,7 +6589,7 @@ const GitBranch = (props = {}) => {
 		cx: "6",
 		cy: "18",
 		"r": "3"
-	}), path({ "d": "M18 9a9 9 0 0 1-9 9" }));
+	}));
 };
 //#endregion
 //#region src/icons/GitCommitHorizontal.ts
@@ -6512,6 +6684,16 @@ const GitGraph = (props = {}) => {
 		cy: "6",
 		"r": "3"
 	}), path({ "d": "M16 15.7A9 9 0 0 0 19 9" }));
+};
+//#endregion
+//#region src/icons/GitMergeConflict.ts
+const GitMergeConflict = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 6h4a2 2 0 0 1 2 2v7" }), path({ "d": "M6 12v9" }), path({ "d": "M9 3 3 9" }), path({ "d": "M9 9 3 3" }), circle({
+		cx: "18",
+		cy: "18",
+		"r": "3"
+	}));
 };
 //#endregion
 //#region src/icons/GitMerge.ts
@@ -6614,18 +6796,6 @@ const GitPullRequest = (props = {}) => {
 	}));
 };
 //#endregion
-//#region src/icons/Github.ts
-const Github = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" }), path({ "d": "M9 18c-4.51 2-5-2-7-2" }));
-};
-//#endregion
-//#region src/icons/Gitlab.ts
-const Gitlab = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m22 13.29-3.33-10a.42.42 0 0 0-.14-.18.38.38 0 0 0-.22-.11.39.39 0 0 0-.23.07.42.42 0 0 0-.14.18l-2.26 6.67H8.32L6.1 3.26a.42.42 0 0 0-.1-.18.38.38 0 0 0-.26-.08.39.39 0 0 0-.23.07.42.42 0 0 0-.14.18L2 13.29a.74.74 0 0 0 .27.83L12 21l9.69-6.88a.71.71 0 0 0 .31-.83Z" }));
-};
-//#endregion
 //#region src/icons/GlassWater.ts
 const GlassWater = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
@@ -6658,6 +6828,18 @@ const GlobeLock = (props = {}) => {
 	}));
 };
 //#endregion
+//#region src/icons/GlobeOff.ts
+const GlobeOff = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10.114 4.462A14.5 14.5 0 0 1 12 2a10 10 0 0 1 9.313 13.643" }), path({ "d": "M15.557 15.556A14.5 14.5 0 0 1 12 22 10 10 0 0 1 4.929 4.929" }), path({ "d": "M15.892 10.234A14.5 14.5 0 0 0 12 2a10 10 0 0 0-3.643.687" }), path({ "d": "M17.656 12H22" }), path({ "d": "M19.071 19.071A10 10 0 0 1 12 22 14.5 14.5 0 0 1 8.44 8.45" }), path({ "d": "M2 12h10" }), path({ "d": "m2 2 20 20" }));
+};
+//#endregion
+//#region src/icons/GlobeX.ts
+const GlobeX = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m16 3 5 5" }), path({ "d": "M2 12h20A10 10 0 1 1 12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 4-10" }), path({ "d": "m21 3-5 5" }));
+};
+//#endregion
 //#region src/icons/Globe.ts
 const Globe = (props = {}) => {
 	const { circle, path } = van.tags(svgNamespace);
@@ -6674,10 +6856,18 @@ const Goal = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M12 13V2l8 4-8 4" }), path({ "d": "M20.561 10.222a9 9 0 1 1-12.55-5.29" }), path({ "d": "M8.002 9.997a5 5 0 1 0 8.9 2.02" }));
 };
 //#endregion
-//#region src/icons/Grab.ts
-const Grab = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M18 11.5V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1.4" }), path({ "d": "M14 10V8a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" }), path({ "d": "M10 9.9V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v5" }), path({ "d": "M6 14a2 2 0 0 0-2-2a2 2 0 0 0-2 2" }), path({ "d": "M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8 2 2 0 1 1 4 0" }));
+//#region src/icons/Gpu.ts
+const Gpu = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M2 17h18a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H2" }), path({ "d": "M2 21V3" }), path({ "d": "M7 17v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3" }), circle({
+		cx: "16",
+		cy: "11",
+		"r": "2"
+	}), circle({
+		cx: "8",
+		cy: "11",
+		"r": "2"
+	}));
 };
 //#endregion
 //#region src/icons/GraduationCap.ts
@@ -6746,6 +6936,18 @@ const Grid2x2X = (props = {}) => {
 const Grid2x2 = (props = {}) => {
 	const { path, rect } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M12 3v18" }), path({ "d": "M3 12h18" }), rect({
+		"x": "3",
+		"y": "3",
+		width: "18",
+		height: "18",
+		rx: "2"
+	}));
+};
+//#endregion
+//#region src/icons/Grid3x2.ts
+const Grid3x2 = (props = {}) => {
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M15 3v18" }), path({ "d": "M3 12h18" }), path({ "d": "M9 3v18" }), rect({
 		"x": "3",
 		"y": "3",
 		width: "18",
@@ -6888,13 +7090,8 @@ const Group = (props = {}) => {
 //#endregion
 //#region src/icons/Guitar.ts
 const Guitar = (props = {}) => {
-	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m11.9 12.1 4.514-4.514" }), path({ "d": "M20.1 2.3a1 1 0 0 0-1.4 0l-1.114 1.114A2 2 0 0 0 17 4.828v1.344a2 2 0 0 1-.586 1.414A2 2 0 0 1 17.828 7h1.344a2 2 0 0 0 1.414-.586L21.7 5.3a1 1 0 0 0 0-1.4z" }), path({ "d": "m6 16 2 2" }), path({ "d": "M8.2 9.9C8.7 8.8 9.8 8 11 8c2.8 0 5 2.2 5 5 0 1.2-.8 2.3-1.9 2.8l-.9.4A2 2 0 0 0 12 18a4 4 0 0 1-4 4c-3.3 0-6-2.7-6-6a4 4 0 0 1 4-4 2 2 0 0 0 1.8-1.2z" }), circle({
-		cx: "11.5",
-		cy: "12.5",
-		"r": ".5",
-		fill: "currentColor"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m11.9 12.1 4.514-4.514" }), path({ "d": "M20.1 2.3a1 1 0 0 0-1.4 0l-1.114 1.114A2 2 0 0 0 17 4.828v1.344a2 2 0 0 1-.586 1.414A2 2 0 0 1 17.828 7h1.344a2 2 0 0 0 1.414-.586L21.7 5.3a1 1 0 0 0 0-1.4z" }), path({ "d": "m6 16 2 2" }), path({ "d": "M8.23 9.85A3 3 0 0 1 11 8a5 5 0 0 1 5 5 3 3 0 0 1-1.85 2.77l-.92.38A2 2 0 0 0 12 18a4 4 0 0 1-4 4 6 6 0 0 1-6-6 4 4 0 0 1 4-4 2 2 0 0 0 1.85-1.23z" }));
 };
 //#endregion
 //#region src/icons/Ham.ts
@@ -6903,10 +7100,16 @@ const Ham = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M13.144 21.144A7.274 10.445 45 1 0 2.856 10.856" }), path({ "d": "M13.144 21.144A7.274 4.365 45 0 0 2.856 10.856a7.274 4.365 45 0 0 10.288 10.288" }), path({ "d": "M16.565 10.435 18.6 8.4a2.501 2.501 0 1 0 1.65-4.65 2.5 2.5 0 1 0-4.66 1.66l-2.024 2.025" }), path({ "d": "m8.5 16.5-1-1" }));
 };
 //#endregion
+//#region src/icons/Hamburger.ts
+const Hamburger = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 16H4a2 2 0 1 1 0-4h16a2 2 0 1 1 0 4h-4.25" }), path({ "d": "M5 12a2 2 0 0 1-2-2 9 7 0 0 1 18 0 2 2 0 0 1-2 2" }), path({ "d": "M5 16a2 2 0 0 0-2 2 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 2 2 0 0 0-2-2q0 0 0 0" }), path({ "d": "m6.67 12 6.13 4.6a2 2 0 0 0 2.8-.4l3.15-4.2" }));
+};
+//#endregion
 //#region src/icons/Hammer.ts
 const Hammer = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9" }), path({ "d": "m18 15 4-4" }), path({ "d": "m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172V7l-2.26-2.26a6 6 0 0 0-4.202-1.756L9 2.96l.92.82A6.18 6.18 0 0 1 12 8.4V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5" }));
+	return LucideIcon(props, path({ "d": "m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9" }), path({ "d": "m18 15 4-4" }), path({ "d": "m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5" }));
 };
 //#endregion
 //#region src/icons/HandCoins.ts
@@ -6923,10 +7126,22 @@ const HandCoins = (props = {}) => {
 	}));
 };
 //#endregion
+//#region src/icons/HandFist.ts
+const HandFist = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12.035 17.012a3 3 0 0 0-3-3l-.311-.002a.72.72 0 0 1-.505-1.229l1.195-1.195A2 2 0 0 1 10.828 11H12a2 2 0 0 0 0-4H9.243a3 3 0 0 0-2.122.879l-2.707 2.707A4.83 4.83 0 0 0 3 14a8 8 0 0 0 8 8h2a8 8 0 0 0 8-8V7a2 2 0 1 0-4 0v2a2 2 0 1 0 4 0" }), path({ "d": "M13.888 9.662A2 2 0 0 0 17 8V5A2 2 0 1 0 13 5" }), path({ "d": "M9 5A2 2 0 1 0 5 5V10" }), path({ "d": "M9 7V4A2 2 0 1 1 13 4V7.268" }));
+};
+//#endregion
+//#region src/icons/HandGrab.ts
+const HandGrab = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M18 11.5V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1.4" }), path({ "d": "M14 10V8a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" }), path({ "d": "M10 9.9V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v5" }), path({ "d": "M6 14a2 2 0 0 0-2-2a2 2 0 0 0-2 2" }), path({ "d": "M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8 2 2 0 1 1 4 0" }));
+};
+//#endregion
 //#region src/icons/HandHeart.ts
 const HandHeart = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16" }), path({ "d": "m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9" }), path({ "d": "m2 15 6 6" }), path({ "d": "M19.5 8.5c.7-.7 1.5-1.6 1.5-2.7A2.73 2.73 0 0 0 16 4a2.78 2.78 0 0 0-5 1.8c0 1.2.8 2 1.5 2.8L16 12Z" }));
+	return LucideIcon(props, path({ "d": "M11 14h2a2 2 0 0 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16" }), path({ "d": "m14.45 13.39 5.05-4.694C20.196 8 21 6.85 21 5.75a2.75 2.75 0 0 0-4.797-1.837.276.276 0 0 1-.406 0A2.75 2.75 0 0 0 11 5.75c0 1.2.802 2.248 1.5 2.946L16 11.95" }), path({ "d": "m2 15 6 6" }), path({ "d": "m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a1 1 0 0 0-2.75-2.91" }));
 };
 //#endregion
 //#region src/icons/HandHelping.ts
@@ -6951,6 +7166,12 @@ const HandPlatter = (props = {}) => {
 const Hand = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" }), path({ "d": "M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" }), path({ "d": "M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" }), path({ "d": "M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" }));
+};
+//#endregion
+//#region src/icons/Handbag.ts
+const Handbag = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M2.048 18.566A2 2 0 0 0 4 21h16a2 2 0 0 0 1.952-2.434l-2-9A2 2 0 0 0 18 8H6a2 2 0 0 0-1.952 1.566z" }), path({ "d": "M8 11V6a4 4 0 0 1 8 0v5" }));
 };
 //#endregion
 //#region src/icons/Handshake.ts
@@ -6985,23 +7206,8 @@ const HardDriveUpload = (props = {}) => {
 //#endregion
 //#region src/icons/HardDrive.ts
 const HardDrive = (props = {}) => {
-	const { line, path } = van.tags(svgNamespace);
-	return LucideIcon(props, line({
-		x1: "22",
-		x2: "2",
-		y1: "12",
-		y2: "12"
-	}), path({ "d": "M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" }), line({
-		x1: "6",
-		x2: "6.01",
-		y1: "16",
-		y2: "16"
-	}), line({
-		x1: "10",
-		x2: "10.01",
-		y1: "16",
-		y2: "16"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 16h.01" }), path({ "d": "M2.212 11.577a2 2 0 0 0-.212.896V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5.527a2 2 0 0 0-.212-.896L18.55 5.11A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" }), path({ "d": "M21.946 12.013H2.054" }), path({ "d": "M6 16h.01" }));
 };
 //#endregion
 //#region src/icons/HardHat.ts
@@ -7042,10 +7248,36 @@ const Hash = (props = {}) => {
 	}));
 };
 //#endregion
+//#region src/icons/HatGlasses.ts
+const HatGlasses = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M14 18a2 2 0 0 0-4 0" }), path({ "d": "m19 11-2.11-6.657a2 2 0 0 0-2.752-1.148l-1.276.61A2 2 0 0 1 12 4H8.5a2 2 0 0 0-1.925 1.456L5 11" }), path({ "d": "M2 11h20" }), circle({
+		cx: "17",
+		cy: "18",
+		"r": "3"
+	}), circle({
+		cx: "7",
+		cy: "18",
+		"r": "3"
+	}));
+};
+//#endregion
 //#region src/icons/Haze.ts
 const Haze = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "m5.2 6.2 1.4 1.4" }), path({ "d": "M2 13h2" }), path({ "d": "M20 13h2" }), path({ "d": "m17.4 7.6 1.4-1.4" }), path({ "d": "M22 17H2" }), path({ "d": "M22 21H2" }), path({ "d": "M16 13a4 4 0 0 0-8 0" }), path({ "d": "M12 5V2.5" }));
+};
+//#endregion
+//#region src/icons/Hd.ts
+const Hd = (props = {}) => {
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 12H6" }), path({ "d": "M10 15V9" }), path({ "d": "M14 14.5a.5.5 0 0 0 .5.5h1a2.5 2.5 0 0 0 2.5-2.5v-1A2.5 2.5 0 0 0 15.5 9h-1a.5.5 0 0 0-.5.5z" }), path({ "d": "M6 15V9" }), rect({
+		"x": "2",
+		"y": "5",
+		width: "20",
+		height: "14",
+		rx: "2"
+	}));
 };
 //#endregion
 //#region src/icons/HdmiPort.ts
@@ -7121,42 +7353,55 @@ const Headset = (props = {}) => {
 //#region src/icons/HeartCrack.ts
 const HeartCrack = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" }), path({ "d": "m12 13-1-1 2-2-3-3 2-2" }));
+	return LucideIcon(props, path({ "d": "M12.409 5.824c-.702.792-1.15 1.496-1.415 2.166l2.153 2.156a.5.5 0 0 1 0 .707l-2.293 2.293a.5.5 0 0 0 0 .707L12 15" }), path({ "d": "M13.508 20.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5a5.5 5.5 0 0 1 9.591-3.677.6.6 0 0 0 .818.001A5.5 5.5 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5z" }));
 };
 //#endregion
 //#region src/icons/HeartHandshake.ts
 const HeartHandshake = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" }), path({ "d": "M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66" }), path({ "d": "m18 15-2-2" }), path({ "d": "m15 18-2-2" }));
+	return LucideIcon(props, path({ "d": "M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762" }));
+};
+//#endregion
+//#region src/icons/HeartMinus.ts
+const HeartMinus = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m14.876 18.99-1.368 1.323a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5a5.2 5.2 0 0 1-.244 1.572" }), path({ "d": "M15 15h6" }));
 };
 //#endregion
 //#region src/icons/HeartOff.ts
 const HeartOff = (props = {}) => {
-	const { line, path } = van.tags(svgNamespace);
-	return LucideIcon(props, line({
-		x1: "2",
-		y1: "2",
-		x2: "22",
-		y2: "22"
-	}), path({ "d": "M16.5 16.5 12 21l-7-7c-1.5-1.45-3-3.2-3-5.5a5.5 5.5 0 0 1 2.14-4.35" }), path({ "d": "M8.76 3.1c1.15.22 2.13.78 3.24 1.9 1.5-1.5 2.74-2 4.5-2A5.5 5.5 0 0 1 22 8.5c0 2.12-1.3 3.78-2.67 5.17" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10.5 4.893a5.5 5.5 0 0 1 1.091.931.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 1.872-1.002 3.356-2.187 4.655" }), path({ "d": "m16.967 16.967-3.459 3.346a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5a5.5 5.5 0 0 1 2.747-4.761" }), path({ "d": "m2 2 20 20" }));
+};
+//#endregion
+//#region src/icons/HeartPlus.ts
+const HeartPlus = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m14.479 19.374-.971.939a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5a5.2 5.2 0 0 1-.219 1.49" }), path({ "d": "M15 15h6" }), path({ "d": "M18 12v6" }));
 };
 //#endregion
 //#region src/icons/HeartPulse.ts
 const HeartPulse = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" }), path({ "d": "M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27" }));
+	return LucideIcon(props, path({ "d": "M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" }), path({ "d": "M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27" }));
 };
 //#endregion
 //#region src/icons/Heart.ts
 const Heart = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" }));
+	return LucideIcon(props, path({ "d": "M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" }));
 };
 //#endregion
 //#region src/icons/Heater.ts
 const Heater = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M11 8c2-3-2-3 0-6" }), path({ "d": "M15.5 8c2-3-2-3 0-6" }), path({ "d": "M6 10h.01" }), path({ "d": "M6 14h.01" }), path({ "d": "M10 16v-4" }), path({ "d": "M14 16v-4" }), path({ "d": "M18 16v-4" }), path({ "d": "M20 6a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3" }), path({ "d": "M5 20v2" }), path({ "d": "M19 20v2" }));
+};
+//#endregion
+//#region src/icons/Helicopter.ts
+const Helicopter = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M11 17v4" }), path({ "d": "M14 3v8a2 2 0 0 0 2 2h5.865" }), path({ "d": "M17 17v4" }), path({ "d": "M18 17a4 4 0 0 0 4-4 8 6 0 0 0-8-6 6 5 0 0 0-6 5v3a2 2 0 0 0 2 2z" }), path({ "d": "M2 10v5" }), path({ "d": "M6 3h16" }), path({ "d": "M7 21h14" }), path({ "d": "M8 13H2" }));
 };
 //#endregion
 //#region src/icons/Hexagon.ts
@@ -7192,7 +7437,7 @@ const Hop = (props = {}) => {
 //#region src/icons/Hospital.ts
 const Hospital = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 6v4" }), path({ "d": "M14 14h-4" }), path({ "d": "M14 18h-4" }), path({ "d": "M14 8h-4" }), path({ "d": "M18 12h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2" }), path({ "d": "M18 22V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v18" }));
+	return LucideIcon(props, path({ "d": "M12 7v4" }), path({ "d": "M14 21v-3a2 2 0 0 0-4 0v3" }), path({ "d": "M14 9h-4" }), path({ "d": "M18 11h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2" }), path({ "d": "M18 21V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16" }));
 };
 //#endregion
 //#region src/icons/Hotel.ts
@@ -7213,28 +7458,34 @@ const Hourglass = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M5 22h14" }), path({ "d": "M5 2h14" }), path({ "d": "M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" }), path({ "d": "M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" }));
 };
 //#endregion
+//#region src/icons/HouseHeart.ts
+const HouseHeart = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M8.62 13.8A2.25 2.25 0 1 1 12 10.836a2.25 2.25 0 1 1 3.38 2.966l-2.626 2.856a.998.998 0 0 1-1.507 0z" }), path({ "d": "M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" }));
+};
+//#endregion
 //#region src/icons/HousePlug.ts
 const HousePlug = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M10 12V8.964" }), path({ "d": "M14 12V8.964" }), path({ "d": "M15 12a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-2a1 1 0 0 1 1-1z" }), path({ "d": "M8.5 21H5a2 2 0 0 1-2-2v-9a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-2" }));
+	return LucideIcon(props, path({ "d": "M10 12V8.964" }), path({ "d": "M14 12V8.964" }), path({ "d": "M15 12a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-2a1 1 0 0 1 1-1z" }), path({ "d": "M8.5 21H5a2 2 0 0 1-2-2v-9a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-2" }));
 };
 //#endregion
 //#region src/icons/HousePlus.ts
 const HousePlus = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M13.22 2.416a2 2 0 0 0-2.511.057l-7 5.999A2 2 0 0 0 3 10v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7.354" }), path({ "d": "M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" }), path({ "d": "M15 6h6" }), path({ "d": "M18 3v6" }));
+	return LucideIcon(props, path({ "d": "M12.35 21H5a2 2 0 0 1-2-2v-9a2 2 0 0 1 .71-1.53l7-6a2 2 0 0 1 2.58 0l7 6A2 2 0 0 1 21 10v2.35" }), path({ "d": "M14.8 12.4A1 1 0 0 0 14 12h-4a1 1 0 0 0-1 1v8" }), path({ "d": "M15 18h6" }), path({ "d": "M18 15v6" }));
 };
 //#endregion
 //#region src/icons/HouseWifi.ts
 const HouseWifi = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M9.5 13.866a4 4 0 0 1 5 .01" }), path({ "d": "M12 17h.01" }), path({ "d": "M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" }), path({ "d": "M7 10.754a8 8 0 0 1 10 0" }));
+	return LucideIcon(props, path({ "d": "M9.5 13.866a4 4 0 0 1 5 .01" }), path({ "d": "M12 17h.01" }), path({ "d": "M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" }), path({ "d": "M7 10.754a8 8 0 0 1 10 0" }));
 };
 //#endregion
 //#region src/icons/House.ts
 const House = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" }), path({ "d": "M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" }));
+	return LucideIcon(props, path({ "d": "M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" }), path({ "d": "M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" }));
 };
 //#endregion
 //#region src/icons/IceCreamBowl.ts
@@ -7247,6 +7498,16 @@ const IceCreamBowl = (props = {}) => {
 const IceCreamCone = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "m7 11 4.08 10.35a1 1 0 0 0 1.84 0L17 11" }), path({ "d": "M17 7A5 5 0 0 0 7 7" }), path({ "d": "M17 7a2 2 0 0 1 0 4H7a2 2 0 0 1 0-4" }));
+};
+//#endregion
+//#region src/icons/IdCardLanyard.ts
+const IdCardLanyard = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M13.5 8h-3" }), path({ "d": "m15 2-1 2h3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h3" }), path({ "d": "M16.899 22A5 5 0 0 0 7.1 22" }), path({ "d": "m9 2 3 6" }), circle({
+		cx: "12",
+		cy: "15",
+		"r": "3"
+	}));
 };
 //#endregion
 //#region src/icons/IdCard.ts
@@ -7314,7 +7575,7 @@ const ImageOff = (props = {}) => {
 //#region src/icons/ImagePlay.ts
 const ImagePlay = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m11 16-5 5" }), path({ "d": "M11 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6.5" }), path({ "d": "M15.765 22a.5.5 0 0 1-.765-.424V13.38a.5.5 0 0 1 .765-.424l5.878 3.674a1 1 0 0 1 0 1.696z" }), circle({
+	return LucideIcon(props, path({ "d": "M15 15.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997a1 1 0 0 1-1.517-.86z" }), path({ "d": "M21 12.17V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6" }), path({ "d": "m6 21 5-5" }), circle({
 		cx: "9",
 		cy: "9",
 		"r": "2"
@@ -7373,15 +7634,16 @@ const Image = (props = {}) => {
 //#region src/icons/Images.ts
 const Images = (props = {}) => {
 	const { path, circle, rect } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M18 22H4a2 2 0 0 1-2-2V6" }), path({ "d": "m22 13-1.296-1.296a2.41 2.41 0 0 0-3.408 0L11 18" }), circle({
-		cx: "12",
-		cy: "8",
-		"r": "2"
+	return LucideIcon(props, path({ "d": "m22 11-1.296-1.296a2.4 2.4 0 0 0-3.408 0L11 16" }), path({ "d": "M4 8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2" }), circle({
+		cx: "13",
+		cy: "7",
+		"r": "1",
+		fill: "currentColor"
 	}), rect({
-		width: "16",
-		height: "16",
-		"x": "6",
+		"x": "8",
 		"y": "2",
+		width: "14",
+		height: "14",
 		rx: "2"
 	}));
 };
@@ -7398,18 +7660,6 @@ const Inbox = (props = {}) => {
 	return LucideIcon(props, polyline({ points: "22 12 16 12 14 15 10 15 8 12 2 12" }), path({ "d": "M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" }));
 };
 //#endregion
-//#region src/icons/IndentDecrease.ts
-const IndentDecrease = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 12H11" }), path({ "d": "M21 18H11" }), path({ "d": "M21 6H11" }), path({ "d": "m7 8-4 4 4 4" }));
-};
-//#endregion
-//#region src/icons/IndentIncrease.ts
-const IndentIncrease = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 12H11" }), path({ "d": "M21 18H11" }), path({ "d": "M21 6H11" }), path({ "d": "m3 8 4 4-4 4" }));
-};
-//#endregion
 //#region src/icons/IndianRupee.ts
 const IndianRupee = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
@@ -7419,7 +7669,7 @@ const IndianRupee = (props = {}) => {
 //#region src/icons/InfinityIcon.ts
 const InfinityIcon = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z" }));
+	return LucideIcon(props, path({ "d": "M6 16c5 0 7-8 12-8a4 4 0 0 1 0 8c-5 0-7-8-12-8a4 4 0 1 0 0 8" }));
 };
 //#endregion
 //#region src/icons/Info.ts
@@ -7442,24 +7692,6 @@ const InspectionPanel = (props = {}) => {
 		"y": "3",
 		rx: "2"
 	}), path({ "d": "M7 7h.01" }), path({ "d": "M17 7h.01" }), path({ "d": "M7 17h.01" }), path({ "d": "M17 17h.01" }));
-};
-//#endregion
-//#region src/icons/Instagram.ts
-const Instagram = (props = {}) => {
-	const { rect, path, line } = van.tags(svgNamespace);
-	return LucideIcon(props, rect({
-		width: "20",
-		height: "20",
-		"x": "2",
-		"y": "2",
-		rx: "5",
-		ry: "5"
-	}), path({ "d": "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" }), line({
-		x1: "17.5",
-		x2: "17.51",
-		y1: "6.5",
-		y2: "6.5"
-	}));
 };
 //#endregion
 //#region src/icons/Italic.ts
@@ -7485,14 +7717,14 @@ const Italic = (props = {}) => {
 //#endregion
 //#region src/icons/IterationCcw.ts
 const IterationCcw = (props = {}) => {
-	const { path, polyline } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M20 10c0-4.4-3.6-8-8-8s-8 3.6-8 8 3.6 8 8 8h8" }), polyline({ points: "16 14 20 18 16 22" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m16 14 4 4-4 4" }), path({ "d": "M20 10a8 8 0 1 0-8 8h8" }));
 };
 //#endregion
 //#region src/icons/IterationCw.ts
 const IterationCw = (props = {}) => {
-	const { path, polyline } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 10c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8H4" }), polyline({ points: "8 22 4 18 8 14" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M4 10a8 8 0 1 1 8 8H4" }), path({ "d": "m8 22-4-4 4-4" }));
 };
 //#endregion
 //#region src/icons/JapaneseYen.ts
@@ -7514,7 +7746,13 @@ const Joystick = (props = {}) => {
 //#region src/icons/Kanban.ts
 const Kanban = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M6 5v11" }), path({ "d": "M12 5v6" }), path({ "d": "M18 5v14" }));
+	return LucideIcon(props, path({ "d": "M5 3v14" }), path({ "d": "M12 3v8" }), path({ "d": "M19 3v18" }));
+};
+//#endregion
+//#region src/icons/Kayak.ts
+const Kayak = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M18 17a1 1 0 0 0-1 1v1a2 2 0 1 0 2-2z" }), path({ "d": "M20.97 3.61a.45.45 0 0 0-.58-.58C10.2 6.6 6.6 10.2 3.03 20.39a.45.45 0 0 0 .58.58C13.8 17.4 17.4 13.8 20.97 3.61" }), path({ "d": "m6.707 6.707 10.586 10.586" }), path({ "d": "M7 5a2 2 0 1 0-2 2h1a1 1 0 0 0 1-1z" }));
 };
 //#endregion
 //#region src/icons/KeyRound.ts
@@ -7577,37 +7815,37 @@ const Keyboard = (props = {}) => {
 //#region src/icons/LampCeiling.ts
 const LampCeiling = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 2v5" }), path({ "d": "M6 7h12l4 9H2l4-9Z" }), path({ "d": "M9.17 16a3 3 0 1 0 5.66 0" }));
+	return LucideIcon(props, path({ "d": "M12 2v5" }), path({ "d": "M14.829 15.998a3 3 0 1 1-5.658 0" }), path({ "d": "M20.92 14.606A1 1 0 0 1 20 16H4a1 1 0 0 1-.92-1.394l3-7A1 1 0 0 1 7 7h10a1 1 0 0 1 .92.606z" }));
 };
 //#endregion
 //#region src/icons/LampDesk.ts
 const LampDesk = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m14 5-3 3 2 7 8-8-7-2Z" }), path({ "d": "m14 5-3 3-3-3 3-3 3 3Z" }), path({ "d": "M9.5 6.5 4 12l3 6" }), path({ "d": "M3 22v-2c0-1.1.9-2 2-2h4a2 2 0 0 1 2 2v2H3Z" }));
+	return LucideIcon(props, path({ "d": "M10.293 2.293a1 1 0 0 1 1.414 0l2.5 2.5 5.994 1.227a1 1 0 0 1 .506 1.687l-7 7a1 1 0 0 1-1.687-.506l-1.227-5.994-2.5-2.5a1 1 0 0 1 0-1.414z" }), path({ "d": "m14.207 4.793-3.414 3.414" }), path({ "d": "M3 20a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z" }), path({ "d": "m9.086 6.5-4.793 4.793a1 1 0 0 0-.18 1.17L7 18" }));
 };
 //#endregion
 //#region src/icons/LampFloor.ts
 const LampFloor = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M9 2h6l3 7H6l3-7Z" }), path({ "d": "M12 9v13" }), path({ "d": "M9 22h6" }));
+	return LucideIcon(props, path({ "d": "M12 10v12" }), path({ "d": "M17.929 7.629A1 1 0 0 1 17 9H7a1 1 0 0 1-.928-1.371l2-5A1 1 0 0 1 9 2h6a1 1 0 0 1 .928.629z" }), path({ "d": "M9 22h6" }));
 };
 //#endregion
 //#region src/icons/LampWallDown.ts
 const LampWallDown = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M11 13h6l3 7H8l3-7Z" }), path({ "d": "M14 13V8a2 2 0 0 0-2-2H8" }), path({ "d": "M4 9h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H4v6Z" }));
+	return LucideIcon(props, path({ "d": "M19.929 18.629A1 1 0 0 1 19 20H9a1 1 0 0 1-.928-1.371l2-5A1 1 0 0 1 11 13h6a1 1 0 0 1 .928.629z" }), path({ "d": "M6 3a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" }), path({ "d": "M8 6h4a2 2 0 0 1 2 2v5" }));
 };
 //#endregion
 //#region src/icons/LampWallUp.ts
 const LampWallUp = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M11 4h6l3 7H8l3-7Z" }), path({ "d": "M14 11v5a2 2 0 0 1-2 2H8" }), path({ "d": "M4 15h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H4v-6Z" }));
+	return LucideIcon(props, path({ "d": "M19.929 9.629A1 1 0 0 1 19 11H9a1 1 0 0 1-.928-1.371l2-5A1 1 0 0 1 11 4h6a1 1 0 0 1 .928.629z" }), path({ "d": "M6 15a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H5a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1z" }), path({ "d": "M8 18h4a2 2 0 0 0 2-2v-5" }));
 };
 //#endregion
 //#region src/icons/Lamp.ts
 const Lamp = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M8 2h8l4 10H4L8 2Z" }), path({ "d": "M12 12v6" }), path({ "d": "M8 22v-2c0-1.1.9-2 2-2h4a2 2 0 0 1 2 2v2H8Z" }));
+	return LucideIcon(props, path({ "d": "M12 12v6" }), path({ "d": "M4.077 10.615A1 1 0 0 0 5 12h14a1 1 0 0 0 .923-1.385l-3.077-7.384A2 2 0 0 0 15 2H9a2 2 0 0 0-1.846 1.23Z" }), path({ "d": "M8 20a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1z" }));
 };
 //#endregion
 //#region src/icons/LandPlot.ts
@@ -7618,33 +7856,8 @@ const LandPlot = (props = {}) => {
 //#endregion
 //#region src/icons/Landmark.ts
 const Landmark = (props = {}) => {
-	const { line, polygon } = van.tags(svgNamespace);
-	return LucideIcon(props, line({
-		x1: "3",
-		x2: "21",
-		y1: "22",
-		y2: "22"
-	}), line({
-		x1: "6",
-		x2: "6",
-		y1: "18",
-		y2: "11"
-	}), line({
-		x1: "10",
-		x2: "10",
-		y1: "18",
-		y2: "11"
-	}), line({
-		x1: "14",
-		x2: "14",
-		y1: "18",
-		y2: "11"
-	}), line({
-		x1: "18",
-		x2: "18",
-		y1: "18",
-		y2: "11"
-	}), polygon({ points: "12 2 20 7 4 7" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 18v-7" }), path({ "d": "M11.12 2.198a2 2 0 0 1 1.76.006l7.866 3.847c.476.233.31.949-.22.949H3.474c-.53 0-.695-.716-.22-.949z" }), path({ "d": "M14 18v-7" }), path({ "d": "M18 18v-7" }), path({ "d": "M3 22h18" }), path({ "d": "M6 18v-7" }));
 };
 //#endregion
 //#region src/icons/Languages.ts
@@ -7686,7 +7899,7 @@ const LaptopMinimal = (props = {}) => {
 //#region src/icons/Laptop.ts
 const Laptop = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16" }));
+	return LucideIcon(props, path({ "d": "M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z" }), path({ "d": "M20.054 15.987H3.946" }));
 };
 //#endregion
 //#region src/icons/LassoSelect.ts
@@ -7697,8 +7910,12 @@ const LassoSelect = (props = {}) => {
 //#endregion
 //#region src/icons/Lasso.ts
 const Lasso = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M7 22a5 5 0 0 1-2-4" }), path({ "d": "M3.3 14A6.8 6.8 0 0 1 2 10c0-4.4 4.5-8 10-8s10 3.6 10 8-4.5 8-10 8a12 12 0 0 1-5-1" }), path({ "d": "M5 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" }));
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M3.704 14.467a10 8 0 1 1 3.115 2.375" }), path({ "d": "M7 22a5 5 0 0 1-2-3.994" }), circle({
+		cx: "5",
+		cy: "16",
+		"r": "2"
+	}));
 };
 //#endregion
 //#region src/icons/Laugh.ts
@@ -7724,7 +7941,13 @@ const Laugh = (props = {}) => {
 //#region src/icons/Layers2.ts
 const Layers2 = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m16.02 12 5.48 3.13a1 1 0 0 1 0 1.74L13 21.74a2 2 0 0 1-2 0l-8.5-4.87a1 1 0 0 1 0-1.74L7.98 12" }), path({ "d": "M13 13.74a2 2 0 0 1-2 0L2.5 8.87a1 1 0 0 1 0-1.74L11 2.26a2 2 0 0 1 2 0l8.5 4.87a1 1 0 0 1 0 1.74Z" }));
+	return LucideIcon(props, path({ "d": "M13 13.74a2 2 0 0 1-2 0L2.5 8.87a1 1 0 0 1 0-1.74L11 2.26a2 2 0 0 1 2 0l8.5 4.87a1 1 0 0 1 0 1.74z" }), path({ "d": "m20 14.285 1.5.845a1 1 0 0 1 0 1.74L13 21.74a2 2 0 0 1-2 0l-8.5-4.87a1 1 0 0 1 0-1.74l1.5-.845" }));
+};
+//#endregion
+//#region src/icons/LayersPlus.ts
+const LayersPlus = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 .83.18 2 2 0 0 0 .83-.18l8.58-3.9a1 1 0 0 0 0-1.831z" }), path({ "d": "M16 17h6" }), path({ "d": "M19 14v6" }), path({ "d": "M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 .825.178" }), path({ "d": "M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l2.116-.962" }));
 };
 //#endregion
 //#region src/icons/Layers.ts
@@ -7907,10 +8130,16 @@ const Lectern = (props = {}) => {
 	}));
 };
 //#endregion
-//#region src/icons/LetterText.ts
-const LetterText = (props = {}) => {
+//#region src/icons/LensConcave.ts
+const LensConcave = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 12h6" }), path({ "d": "M15 6h6" }), path({ "d": "m3 13 3.553-7.724a.5.5 0 0 1 .894 0L11 13" }), path({ "d": "M3 18h18" }), path({ "d": "M4 11h6" }));
+	return LucideIcon(props, path({ "d": "M7 2a1 1 0 0 0-.8 1.6 14 14 0 0 1 0 16.8A1 1 0 0 0 7 22h10a1 1 0 0 0 .8-1.6 14 14 0 0 1 0-16.8A1 1 0 0 0 17 2z" }));
+};
+//#endregion
+//#region src/icons/LensConvex.ts
+const LensConvex = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M13.433 2a1 1 0 0 1 .824.448 18 18 0 0 1 0 19.104 1 1 0 0 1-.824.448h-2.866a1 1 0 0 1-.824-.448 18 18 0 0 1 0-19.104A1 1 0 0 1 10.567 2z" }));
 };
 //#endregion
 //#region src/icons/LibraryBig.ts
@@ -7948,7 +8177,7 @@ const LifeBuoy = (props = {}) => {
 //#region src/icons/Ligature.ts
 const Ligature = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M8 20V8c0-2.2 1.8-4 4-4 1.5 0 2.8.8 3.5 2" }), path({ "d": "M6 12h4" }), path({ "d": "M14 12h2v8" }), path({ "d": "M6 20h4" }), path({ "d": "M14 20h4" }));
+	return LucideIcon(props, path({ "d": "M14 12h2v8" }), path({ "d": "M14 20h4" }), path({ "d": "M6 12h4" }), path({ "d": "M6 20h4" }), path({ "d": "M8 20V8a4 4 0 0 1 7.464-2" }));
 };
 //#endregion
 //#region src/icons/LightbulbOff.ts
@@ -7961,6 +8190,28 @@ const LightbulbOff = (props = {}) => {
 const Lightbulb = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" }), path({ "d": "M9 18h6" }), path({ "d": "M10 22h4" }));
+};
+//#endregion
+//#region src/icons/LineDotRightHorizontal.ts
+const LineDotRightHorizontal = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M 3 12 L 15 12" }), circle({
+		cx: "18",
+		cy: "12",
+		"r": "3"
+	}));
+};
+//#endregion
+//#region src/icons/LineSquiggle.ts
+const LineSquiggle = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M7 3.5c5-2 7 2.5 3 4C1.5 10 2 15 5 16c5 2 9-10 14-7s.5 13.5-4 12c-5-2.5.5-11 6-2" }));
+};
+//#endregion
+//#region src/icons/LineStyle.ts
+const LineStyle = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M11 5h2" }), path({ "d": "M15 12h6" }), path({ "d": "M19 5h2" }), path({ "d": "M3 12h6" }), path({ "d": "M3 19h18" }), path({ "d": "M3 5h2" }));
 };
 //#endregion
 //#region src/icons/Link2Off.ts
@@ -7996,127 +8247,140 @@ const Link = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" }), path({ "d": "M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" }));
 };
 //#endregion
-//#region src/icons/Linkedin.ts
-const Linkedin = (props = {}) => {
-	const { path, rect, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" }), rect({
-		width: "4",
-		height: "12",
-		"x": "2",
-		"y": "9"
-	}), circle({
-		cx: "4",
-		cy: "4",
-		"r": "2"
-	}));
-};
-//#endregion
 //#region src/icons/ListCheck.ts
 const ListCheck = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M11 18H3" }), path({ "d": "m15 18 2 2 4-4" }), path({ "d": "M16 12H3" }), path({ "d": "M16 6H3" }));
+	return LucideIcon(props, path({ "d": "M16 5H3" }), path({ "d": "M16 12H3" }), path({ "d": "M11 19H3" }), path({ "d": "m15 18 2 2 4-4" }));
 };
 //#endregion
 //#region src/icons/ListChecks.ts
 const ListChecks = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m3 17 2 2 4-4" }), path({ "d": "m3 7 2 2 4-4" }), path({ "d": "M13 6h8" }), path({ "d": "M13 12h8" }), path({ "d": "M13 18h8" }));
+	return LucideIcon(props, path({ "d": "M13 5h8" }), path({ "d": "M13 12h8" }), path({ "d": "M13 19h8" }), path({ "d": "m3 17 2 2 4-4" }), path({ "d": "m3 7 2 2 4-4" }));
+};
+//#endregion
+//#region src/icons/ListChevronsDownUp.ts
+const ListChevronsDownUp = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M3 5h8" }), path({ "d": "M3 12h8" }), path({ "d": "M3 19h8" }), path({ "d": "m15 5 3 3 3-3" }), path({ "d": "m15 19 3-3 3 3" }));
+};
+//#endregion
+//#region src/icons/ListChevronsUpDown.ts
+const ListChevronsUpDown = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M3 5h8" }), path({ "d": "M3 12h8" }), path({ "d": "M3 19h8" }), path({ "d": "m15 8 3-3 3 3" }), path({ "d": "m15 16 3 3 3-3" }));
 };
 //#endregion
 //#region src/icons/ListCollapse.ts
 const ListCollapse = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m3 10 2.5-2.5L3 5" }), path({ "d": "m3 19 2.5-2.5L3 14" }), path({ "d": "M10 6h11" }), path({ "d": "M10 12h11" }), path({ "d": "M10 18h11" }));
+	return LucideIcon(props, path({ "d": "M10 5h11" }), path({ "d": "M10 12h11" }), path({ "d": "M10 19h11" }), path({ "d": "m3 10 3-3-3-3" }), path({ "d": "m3 20 3-3-3-3" }));
 };
 //#endregion
 //#region src/icons/ListEnd.ts
 const ListEnd = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M16 12H3" }), path({ "d": "M16 6H3" }), path({ "d": "M10 18H3" }), path({ "d": "M21 6v10a2 2 0 0 1-2 2h-5" }), path({ "d": "m16 16-2 2 2 2" }));
+	return LucideIcon(props, path({ "d": "M16 5H3" }), path({ "d": "M16 12H3" }), path({ "d": "M9 19H3" }), path({ "d": "m16 16-3 3 3 3" }), path({ "d": "M21 5v12a2 2 0 0 1-2 2h-6" }));
 };
 //#endregion
 //#region src/icons/ListFilterPlus.ts
 const ListFilterPlus = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M10 18h4" }), path({ "d": "M11 6H3" }), path({ "d": "M15 6h6" }), path({ "d": "M18 9V3" }), path({ "d": "M7 12h8" }));
+	return LucideIcon(props, path({ "d": "M12 5H2" }), path({ "d": "M6 12h12" }), path({ "d": "M9 19h6" }), path({ "d": "M16 5h6" }), path({ "d": "M19 8V2" }));
 };
 //#endregion
 //#region src/icons/ListFilter.ts
 const ListFilter = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M3 6h18" }), path({ "d": "M7 12h10" }), path({ "d": "M10 18h4" }));
+	return LucideIcon(props, path({ "d": "M2 5h20" }), path({ "d": "M6 12h12" }), path({ "d": "M9 19h6" }));
+};
+//#endregion
+//#region src/icons/ListIndentDecrease.ts
+const ListIndentDecrease = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M21 5H11" }), path({ "d": "M21 12H11" }), path({ "d": "M21 19H11" }), path({ "d": "m7 8-4 4 4 4" }));
+};
+//#endregion
+//#region src/icons/ListIndentIncrease.ts
+const ListIndentIncrease = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M21 5H11" }), path({ "d": "M21 12H11" }), path({ "d": "M21 19H11" }), path({ "d": "m3 8 4 4-4 4" }));
 };
 //#endregion
 //#region src/icons/ListMinus.ts
 const ListMinus = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M11 12H3" }), path({ "d": "M16 6H3" }), path({ "d": "M16 18H3" }), path({ "d": "M21 12h-6" }));
+	return LucideIcon(props, path({ "d": "M16 5H3" }), path({ "d": "M11 12H3" }), path({ "d": "M16 19H3" }), path({ "d": "M21 12h-6" }));
 };
 //#endregion
 //#region src/icons/ListMusic.ts
 const ListMusic = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 15V6" }), path({ "d": "M18.5 18a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" }), path({ "d": "M12 12H3" }), path({ "d": "M16 6H3" }), path({ "d": "M12 18H3" }));
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M16 5H3" }), path({ "d": "M11 12H3" }), path({ "d": "M11 19H3" }), path({ "d": "M21 16V5" }), circle({
+		cx: "18",
+		cy: "16",
+		"r": "3"
+	}));
 };
 //#endregion
 //#region src/icons/ListOrdered.ts
 const ListOrdered = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M10 12h11" }), path({ "d": "M10 18h11" }), path({ "d": "M10 6h11" }), path({ "d": "M4 10h2" }), path({ "d": "M4 6h1v4" }), path({ "d": "M6 18H4c0-1 2-2 2-3s-1-1.5-2-1" }));
+	return LucideIcon(props, path({ "d": "M11 5h10" }), path({ "d": "M11 12h10" }), path({ "d": "M11 19h10" }), path({ "d": "M4 4h1v5" }), path({ "d": "M4 9h2" }), path({ "d": "M6.5 20H3.4c0-1 2.6-1.925 2.6-3.5a1.5 1.5 0 0 0-2.6-1.02" }));
 };
 //#endregion
 //#region src/icons/ListPlus.ts
 const ListPlus = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M11 12H3" }), path({ "d": "M16 6H3" }), path({ "d": "M16 18H3" }), path({ "d": "M18 9v6" }), path({ "d": "M21 12h-6" }));
+	return LucideIcon(props, path({ "d": "M16 5H3" }), path({ "d": "M11 12H3" }), path({ "d": "M16 19H3" }), path({ "d": "M18 9v6" }), path({ "d": "M21 12h-6" }));
 };
 //#endregion
 //#region src/icons/ListRestart.ts
 const ListRestart = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 6H3" }), path({ "d": "M7 12H3" }), path({ "d": "M7 18H3" }), path({ "d": "M12 18a5 5 0 0 0 9-3 4.5 4.5 0 0 0-4.5-4.5c-1.33 0-2.54.54-3.41 1.41L11 14" }), path({ "d": "M11 10v4h4" }));
+	return LucideIcon(props, path({ "d": "M21 5H3" }), path({ "d": "M7 12H3" }), path({ "d": "M7 19H3" }), path({ "d": "M12 18a5 5 0 0 0 9-3 4.5 4.5 0 0 0-4.5-4.5c-1.33 0-2.54.54-3.41 1.41L11 14" }), path({ "d": "M11 10v4h4" }));
 };
 //#endregion
 //#region src/icons/ListStart.ts
 const ListStart = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M16 12H3" }), path({ "d": "M16 18H3" }), path({ "d": "M10 6H3" }), path({ "d": "M21 18V8a2 2 0 0 0-2-2h-5" }), path({ "d": "m16 8-2-2 2-2" }));
+	return LucideIcon(props, path({ "d": "M3 5h6" }), path({ "d": "M3 12h13" }), path({ "d": "M3 19h13" }), path({ "d": "m16 8-3-3 3-3" }), path({ "d": "M21 19V7a2 2 0 0 0-2-2h-6" }));
 };
 //#endregion
 //#region src/icons/ListTodo.ts
 const ListTodo = (props = {}) => {
-	const { rect, path } = van.tags(svgNamespace);
-	return LucideIcon(props, rect({
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M13 5h8" }), path({ "d": "M13 12h8" }), path({ "d": "M13 19h8" }), path({ "d": "m3 17 2 2 4-4" }), rect({
 		"x": "3",
-		"y": "5",
+		"y": "4",
 		width: "6",
 		height: "6",
 		rx: "1"
-	}), path({ "d": "m3 17 2 2 4-4" }), path({ "d": "M13 6h8" }), path({ "d": "M13 12h8" }), path({ "d": "M13 18h8" }));
+	}));
 };
 //#endregion
 //#region src/icons/ListTree.ts
 const ListTree = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 12h-8" }), path({ "d": "M21 6H8" }), path({ "d": "M21 18h-8" }), path({ "d": "M3 6v4c0 1.1.9 2 2 2h3" }), path({ "d": "M3 10v6c0 1.1.9 2 2 2h3" }));
+	return LucideIcon(props, path({ "d": "M8 5h13" }), path({ "d": "M13 12h8" }), path({ "d": "M13 19h8" }), path({ "d": "M3 10a2 2 0 0 0 2 2h3" }), path({ "d": "M3 5v12a2 2 0 0 0 2 2h3" }));
 };
 //#endregion
 //#region src/icons/ListVideo.ts
 const ListVideo = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 12H3" }), path({ "d": "M16 6H3" }), path({ "d": "M12 18H3" }), path({ "d": "m16 12 5 3-5 3v-6Z" }));
+	return LucideIcon(props, path({ "d": "M21 5H3" }), path({ "d": "M10 12H3" }), path({ "d": "M10 19H3" }), path({ "d": "M15 12.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997a1 1 0 0 1-1.517-.86z" }));
 };
 //#endregion
 //#region src/icons/ListX.ts
 const ListX = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M11 12H3" }), path({ "d": "M16 6H3" }), path({ "d": "M16 18H3" }), path({ "d": "m19 10-4 4" }), path({ "d": "m15 10 4 4" }));
+	return LucideIcon(props, path({ "d": "M16 5H3" }), path({ "d": "M11 12H3" }), path({ "d": "M16 19H3" }), path({ "d": "m15.5 9.5 5 5" }), path({ "d": "m20.5 9.5-5 5" }));
 };
 //#endregion
 //#region src/icons/List.ts
 const List = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M3 12h.01" }), path({ "d": "M3 18h.01" }), path({ "d": "M3 6h.01" }), path({ "d": "M8 12h13" }), path({ "d": "M8 18h13" }), path({ "d": "M8 6h13" }));
+	return LucideIcon(props, path({ "d": "M3 5h.01" }), path({ "d": "M3 12h.01" }), path({ "d": "M3 19h.01" }), path({ "d": "M8 5h13" }), path({ "d": "M8 12h13" }), path({ "d": "M8 19h13" }));
 };
 //#endregion
 //#region src/icons/LoaderCircle.ts
@@ -8177,33 +8441,8 @@ const LocateFixed = (props = {}) => {
 //#endregion
 //#region src/icons/LocateOff.ts
 const LocateOff = (props = {}) => {
-	const { line, path } = van.tags(svgNamespace);
-	return LucideIcon(props, line({
-		x1: "2",
-		x2: "5",
-		y1: "12",
-		y2: "12"
-	}), line({
-		x1: "19",
-		x2: "22",
-		y1: "12",
-		y2: "12"
-	}), line({
-		x1: "12",
-		x2: "12",
-		y1: "2",
-		y2: "5"
-	}), line({
-		x1: "12",
-		x2: "12",
-		y1: "19",
-		y2: "22"
-	}), path({ "d": "M7.11 7.11C5.83 8.39 5 10.1 5 12c0 3.87 3.13 7 7 7 1.9 0 3.61-.83 4.89-2.11" }), path({ "d": "M18.71 13.96c.19-.63.29-1.29.29-1.96 0-3.87-3.13-7-7-7-.67 0-1.33.1-1.96.29" }), line({
-		x1: "2",
-		x2: "22",
-		y1: "2",
-		y2: "22"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 19v3" }), path({ "d": "M12 2v3" }), path({ "d": "M18.89 13.24a7 7 0 0 0-8.13-8.13" }), path({ "d": "M19 12h3" }), path({ "d": "M2 12h3" }), path({ "d": "m2 2 20 20" }), path({ "d": "M7.05 7.05a7 7 0 0 0 9.9 9.9" }));
 };
 //#endregion
 //#region src/icons/Locate.ts
@@ -8296,30 +8535,20 @@ const Lock = (props = {}) => {
 //#endregion
 //#region src/icons/LogIn.ts
 const LogIn = (props = {}) => {
-	const { path, polyline, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" }), polyline({ points: "10 17 15 12 10 7" }), line({
-		x1: "15",
-		x2: "3",
-		y1: "12",
-		y2: "12"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m10 17 5-5-5-5" }), path({ "d": "M15 12H3" }), path({ "d": "M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" }));
 };
 //#endregion
 //#region src/icons/LogOut.ts
 const LogOut = (props = {}) => {
-	const { path, polyline, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" }), polyline({ points: "16 17 21 12 16 7" }), line({
-		x1: "21",
-		x2: "9",
-		y1: "12",
-		y2: "12"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m16 17 5-5-5-5" }), path({ "d": "M21 12H9" }), path({ "d": "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" }));
 };
 //#endregion
 //#region src/icons/Logs.ts
 const Logs = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M13 12h8" }), path({ "d": "M13 18h8" }), path({ "d": "M13 6h8" }), path({ "d": "M3 12h1" }), path({ "d": "M3 18h1" }), path({ "d": "M3 6h1" }), path({ "d": "M8 12h1" }), path({ "d": "M8 18h1" }), path({ "d": "M8 6h1" }));
+	return LucideIcon(props, path({ "d": "M3 5h1" }), path({ "d": "M3 12h1" }), path({ "d": "M3 19h1" }), path({ "d": "M8 5h1" }), path({ "d": "M8 12h1" }), path({ "d": "M8 19h1" }), path({ "d": "M13 5h8" }), path({ "d": "M13 12h8" }), path({ "d": "M13 19h8" }));
 };
 //#endregion
 //#region src/icons/Lollipop.ts
@@ -8349,7 +8578,7 @@ const Luggage = (props = {}) => {
 //#region src/icons/Magnet.ts
 const Magnet = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m6 15-4-4 6.75-6.77a7.79 7.79 0 0 1 11 11L13 22l-4-4 6.39-6.36a2.14 2.14 0 0 0-3-3L6 15" }), path({ "d": "m5 8 4 4" }), path({ "d": "m12 15 4 4" }));
+	return LucideIcon(props, path({ "d": "m12 15 4 4" }), path({ "d": "M2.352 10.648a1.205 1.205 0 0 0 0 1.704l2.296 2.296a1.205 1.205 0 0 0 1.704 0l6.029-6.029a1 1 0 1 1 3 3l-6.029 6.029a1.205 1.205 0 0 0 0 1.704l2.296 2.296a1.205 1.205 0 0 0 1.704 0l6.365-6.367A1 1 0 0 0 8.716 4.282z" }), path({ "d": "m5 8 4 4" }));
 };
 //#endregion
 //#region src/icons/MailCheck.ts
@@ -8376,8 +8605,8 @@ const MailPlus = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8" }), path({ "d": "m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" }), path({ "d": "M19 16v6" }), path({ "d": "M16 19h6" }));
 };
 //#endregion
-//#region src/icons/MailQuestion.ts
-const MailQuestion = (props = {}) => {
+//#region src/icons/MailQuestionMark.ts
+const MailQuestionMark = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M22 10.5V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h12.5" }), path({ "d": "m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" }), path({ "d": "M18 15.28c.2-.4.5-.8.9-1a2.1 2.1 0 0 1 2.6.4c.3.4.5.8.5 1.3 0 1.3-2 2-2 2" }), path({ "d": "M20 22v.01" }));
 };
@@ -8406,14 +8635,14 @@ const MailX = (props = {}) => {
 //#endregion
 //#region src/icons/Mail.ts
 const Mail = (props = {}) => {
-	const { rect, path } = van.tags(svgNamespace);
-	return LucideIcon(props, rect({
-		width: "20",
-		height: "16",
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" }), rect({
 		"x": "2",
 		"y": "4",
+		width: "20",
+		height: "16",
 		rx: "2"
-	}), path({ "d": "m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" }));
+	}));
 };
 //#endregion
 //#region src/icons/Mailbox.ts
@@ -8429,14 +8658,20 @@ const Mailbox = (props = {}) => {
 //#endregion
 //#region src/icons/Mails.ts
 const Mails = (props = {}) => {
-	const { rect, path } = van.tags(svgNamespace);
-	return LucideIcon(props, rect({
-		width: "16",
-		height: "13",
-		"x": "6",
-		"y": "4",
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M17 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 1-1.732" }), path({ "d": "m22 5.5-6.419 4.179a2 2 0 0 1-2.162 0L7 5.5" }), rect({
+		"x": "7",
+		"y": "3",
+		width: "15",
+		height: "12",
 		rx: "2"
-	}), path({ "d": "m22 7-7.1 3.78c-.57.3-1.23.3-1.8 0L6 7" }), path({ "d": "M2 8v11c0 1.1.9 2 2 2h14" }));
+	}));
+};
+//#endregion
+//#region src/icons/MapMinus.ts
+const MapMinus = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m11 19-1.106-.552a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0l4.212 2.106a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619V14" }), path({ "d": "M15 5.764V14" }), path({ "d": "M21 18h-6" }), path({ "d": "M9 3.236v15" }));
 };
 //#endregion
 //#region src/icons/MapPinCheckInside.ts
@@ -8487,6 +8722,16 @@ const MapPinOff = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M12.75 7.09a3 3 0 0 1 2.16 2.16" }), path({ "d": "M17.072 17.072c-1.634 2.17-3.527 3.912-4.471 4.727a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 1.432-4.568" }), path({ "d": "m2 2 20 20" }), path({ "d": "M8.475 2.818A8 8 0 0 1 20 10c0 1.183-.31 2.377-.81 3.533" }), path({ "d": "M9.13 9.13a3 3 0 0 0 3.74 3.74" }));
 };
 //#endregion
+//#region src/icons/MapPinPen.ts
+const MapPinPen = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M17.97 9.304A8 8 0 0 0 2 10c0 4.69 4.887 9.562 7.022 11.468" }), path({ "d": "M21.378 16.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" }), circle({
+		cx: "10",
+		cy: "10",
+		"r": "3"
+	}));
+};
+//#endregion
 //#region src/icons/MapPinPlusInside.ts
 const MapPinPlusInside = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
@@ -8501,6 +8746,20 @@ const MapPinPlus = (props = {}) => {
 		cy: "10",
 		"r": "3"
 	}), path({ "d": "M16 18h6" }), path({ "d": "M19 15v6" }));
+};
+//#endregion
+//#region src/icons/MapPinSearch.ts
+const MapPinSearch = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M 12.248 21.969 a 1 1 0 0 1 -0.849 -0.17 C 9.539 20.193 4 14.993 4 10 a 8 8 0 0 1 16 0 C 20 10.42 19.961 10.841 19.888 11.262" }), path({ "d": "m22 22-1.88-1.88" }), circle({
+		cx: "12",
+		cy: "10",
+		"r": "3"
+	}), circle({
+		cx: "18",
+		cy: "18",
+		"r": "3"
+	}));
 };
 //#endregion
 //#region src/icons/MapPinXInside.ts
@@ -8579,18 +8838,8 @@ const Martini = (props = {}) => {
 //#endregion
 //#region src/icons/Maximize2.ts
 const Maximize2 = (props = {}) => {
-	const { polyline, line } = van.tags(svgNamespace);
-	return LucideIcon(props, polyline({ points: "15 3 21 3 21 9" }), polyline({ points: "9 21 3 21 3 15" }), line({
-		x1: "21",
-		x2: "14",
-		y1: "3",
-		y2: "10"
-	}), line({
-		x1: "3",
-		x2: "10",
-		y1: "21",
-		y2: "14"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M15 3h6v6" }), path({ "d": "m21 3-7 7" }), path({ "d": "m3 21 7-7" }), path({ "d": "M9 21H3v-6" }));
 };
 //#endregion
 //#region src/icons/Maximize.ts
@@ -8611,19 +8860,14 @@ const Medal = (props = {}) => {
 //#endregion
 //#region src/icons/MegaphoneOff.ts
 const MegaphoneOff = (props = {}) => {
-	const { path, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M9.26 9.26 3 11v3l14.14 3.14" }), path({ "d": "M21 15.34V6l-7.31 2.03" }), path({ "d": "M11.6 16.8a3 3 0 1 1-5.8-1.6" }), line({
-		x1: "2",
-		x2: "22",
-		y1: "2",
-		y2: "22"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M11.636 6A13 13 0 0 0 19.4 3.2 1 1 0 0 1 21 4v11.344" }), path({ "d": "M14.378 14.357A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h1" }), path({ "d": "m2 2 20 20" }), path({ "d": "M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14" }), path({ "d": "M8 8v6" }));
 };
 //#endregion
 //#region src/icons/Megaphone.ts
 const Megaphone = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m3 11 18-5v12L3 14v-3z" }), path({ "d": "M11.6 16.8a3 3 0 1 1-5.8-1.6" }));
+	return LucideIcon(props, path({ "d": "M11 6a13 13 0 0 0 8.4-2.8A1 1 0 0 1 21 4v12a1 1 0 0 1-1.6.8A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" }), path({ "d": "M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14" }), path({ "d": "M8 6v8" }));
 };
 //#endregion
 //#region src/icons/Meh.ts
@@ -8653,29 +8897,20 @@ const Meh = (props = {}) => {
 //#endregion
 //#region src/icons/MemoryStick.ts
 const MemoryStick = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M6 19v-3" }), path({ "d": "M10 19v-3" }), path({ "d": "M14 19v-3" }), path({ "d": "M18 19v-3" }), path({ "d": "M8 11V9" }), path({ "d": "M16 11V9" }), path({ "d": "M12 11V9" }), path({ "d": "M2 15h20" }), path({ "d": "M2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1.1a2 2 0 0 0 0 3.837V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5.1a2 2 0 0 0 0-3.837Z" }));
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 12v-2" }), path({ "d": "M12 18v-2" }), path({ "d": "M16 12v-2" }), path({ "d": "M16 18v-2" }), path({ "d": "M2 11h1.5" }), path({ "d": "M20 18v-2" }), path({ "d": "M20.5 11H22" }), path({ "d": "M4 18v-2" }), path({ "d": "M8 12v-2" }), path({ "d": "M8 18v-2" }), rect({
+		"x": "2",
+		"y": "6",
+		width: "20",
+		height: "10",
+		rx: "2"
+	}));
 };
 //#endregion
 //#region src/icons/Menu.ts
 const Menu = (props = {}) => {
-	const { line } = van.tags(svgNamespace);
-	return LucideIcon(props, line({
-		x1: "4",
-		x2: "20",
-		y1: "12",
-		y2: "12"
-	}), line({
-		x1: "4",
-		x2: "20",
-		y1: "6",
-		y2: "6"
-	}), line({
-		x1: "4",
-		x2: "20",
-		y1: "18",
-		y2: "18"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M4 5h16" }), path({ "d": "M4 12h16" }), path({ "d": "M4 19h16" }));
 };
 //#endregion
 //#region src/icons/Merge.ts
@@ -8684,95 +8919,107 @@ const Merge = (props = {}) => {
 	return LucideIcon(props, path({ "d": "m8 6 4-4 4 4" }), path({ "d": "M12 2v10.3a4 4 0 0 1-1.172 2.872L4 22" }), path({ "d": "m20 22-5-5" }));
 };
 //#endregion
+//#region src/icons/MessageCircleCheck.ts
+const MessageCircleCheck = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719" }), path({ "d": "m9 12 2 2 4-4" }));
+};
+//#endregion
 //#region src/icons/MessageCircleCode.ts
 const MessageCircleCode = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M10 9.5 8 12l2 2.5" }), path({ "d": "m14 9.5 2 2.5-2 2.5" }), path({ "d": "M7.9 20A9 9 0 1 0 4 16.1L2 22z" }));
+	return LucideIcon(props, path({ "d": "m10 9-3 3 3 3" }), path({ "d": "m14 15 3-3-3-3" }), path({ "d": "M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719" }));
 };
 //#endregion
 //#region src/icons/MessageCircleDashed.ts
 const MessageCircleDashed = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M13.5 3.1c-.5 0-1-.1-1.5-.1s-1 .1-1.5.1" }), path({ "d": "M19.3 6.8a10.45 10.45 0 0 0-2.1-2.1" }), path({ "d": "M20.9 13.5c.1-.5.1-1 .1-1.5s-.1-1-.1-1.5" }), path({ "d": "M17.2 19.3a10.45 10.45 0 0 0 2.1-2.1" }), path({ "d": "M10.5 20.9c.5.1 1 .1 1.5.1s1-.1 1.5-.1" }), path({ "d": "M3.5 17.5 2 22l4.5-1.5" }), path({ "d": "M3.1 10.5c0 .5-.1 1-.1 1.5s.1 1 .1 1.5" }), path({ "d": "M6.8 4.7a10.45 10.45 0 0 0-2.1 2.1" }));
+	return LucideIcon(props, path({ "d": "M10.1 2.182a10 10 0 0 1 3.8 0" }), path({ "d": "M13.9 21.818a10 10 0 0 1-3.8 0" }), path({ "d": "M17.609 3.72a10 10 0 0 1 2.69 2.7" }), path({ "d": "M2.182 13.9a10 10 0 0 1 0-3.8" }), path({ "d": "M20.28 17.61a10 10 0 0 1-2.7 2.69" }), path({ "d": "M21.818 10.1a10 10 0 0 1 0 3.8" }), path({ "d": "M3.721 6.391a10 10 0 0 1 2.7-2.69" }), path({ "d": "m6.163 21.117-2.906.85a1 1 0 0 1-1.236-1.169l.965-2.98" }));
 };
 //#endregion
 //#region src/icons/MessageCircleHeart.ts
 const MessageCircleHeart = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M7.9 20A9 9 0 1 0 4 16.1L2 22Z" }), path({ "d": "M15.8 9.2a2.5 2.5 0 0 0-3.5 0l-.3.4-.35-.3a2.42 2.42 0 1 0-3.2 3.6l3.6 3.5 3.6-3.5c1.2-1.2 1.1-2.7.2-3.7" }));
+	return LucideIcon(props, path({ "d": "M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719" }), path({ "d": "M7.828 13.07A3 3 0 0 1 12 8.764a3 3 0 0 1 5.004 2.224 3 3 0 0 1-.832 2.083l-3.447 3.62a1 1 0 0 1-1.45-.001z" }));
 };
 //#endregion
 //#region src/icons/MessageCircleMore.ts
 const MessageCircleMore = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M7.9 20A9 9 0 1 0 4 16.1L2 22Z" }), path({ "d": "M8 12h.01" }), path({ "d": "M12 12h.01" }), path({ "d": "M16 12h.01" }));
+	return LucideIcon(props, path({ "d": "M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719" }), path({ "d": "M8 12h.01" }), path({ "d": "M12 12h.01" }), path({ "d": "M16 12h.01" }));
 };
 //#endregion
 //#region src/icons/MessageCircleOff.ts
 const MessageCircleOff = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M20.5 14.9A9 9 0 0 0 9.1 3.5" }), path({ "d": "m2 2 20 20" }), path({ "d": "M5.6 5.6C3 8.3 2.2 12.5 4 16l-2 6 6-2c3.4 1.8 7.6 1.1 10.3-1.7" }));
+	return LucideIcon(props, path({ "d": "m2 2 20 20" }), path({ "d": "M4.93 4.929a10 10 0 0 0-1.938 11.412 2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 0 0 11.302-1.989" }), path({ "d": "M8.35 2.69A10 10 0 0 1 21.3 15.65" }));
 };
 //#endregion
 //#region src/icons/MessageCirclePlus.ts
 const MessageCirclePlus = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M7.9 20A9 9 0 1 0 4 16.1L2 22Z" }), path({ "d": "M8 12h8" }), path({ "d": "M12 8v8" }));
+	return LucideIcon(props, path({ "d": "M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719" }), path({ "d": "M8 12h8" }), path({ "d": "M12 8v8" }));
 };
 //#endregion
-//#region src/icons/MessageCircleQuestion.ts
-const MessageCircleQuestion = (props = {}) => {
+//#region src/icons/MessageCircleQuestionMark.ts
+const MessageCircleQuestionMark = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M7.9 20A9 9 0 1 0 4 16.1L2 22Z" }), path({ "d": "M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" }), path({ "d": "M12 17h.01" }));
+	return LucideIcon(props, path({ "d": "M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719" }), path({ "d": "M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" }), path({ "d": "M12 17h.01" }));
 };
 //#endregion
 //#region src/icons/MessageCircleReply.ts
 const MessageCircleReply = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M7.9 20A9 9 0 1 0 4 16.1L2 22Z" }), path({ "d": "m10 15-3-3 3-3" }), path({ "d": "M7 12h7a2 2 0 0 1 2 2v1" }));
+	return LucideIcon(props, path({ "d": "M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719" }), path({ "d": "m10 15-3-3 3-3" }), path({ "d": "M7 12h8a2 2 0 0 1 2 2v1" }));
 };
 //#endregion
 //#region src/icons/MessageCircleWarning.ts
 const MessageCircleWarning = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M7.9 20A9 9 0 1 0 4 16.1L2 22Z" }), path({ "d": "M12 8v4" }), path({ "d": "M12 16h.01" }));
+	return LucideIcon(props, path({ "d": "M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719" }), path({ "d": "M12 8v4" }), path({ "d": "M12 16h.01" }));
 };
 //#endregion
 //#region src/icons/MessageCircleX.ts
 const MessageCircleX = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M7.9 20A9 9 0 1 0 4 16.1L2 22Z" }), path({ "d": "m15 9-6 6" }), path({ "d": "m9 9 6 6" }));
+	return LucideIcon(props, path({ "d": "M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719" }), path({ "d": "m15 9-6 6" }), path({ "d": "m9 9 6 6" }));
 };
 //#endregion
 //#region src/icons/MessageCircle.ts
 const MessageCircle = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M7.9 20A9 9 0 1 0 4 16.1L2 22Z" }));
+	return LucideIcon(props, path({ "d": "M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719" }));
+};
+//#endregion
+//#region src/icons/MessageSquareCheck.ts
+const MessageSquareCheck = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.7.7 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" }), path({ "d": "m9 11 2 2 4-4" }));
 };
 //#endregion
 //#region src/icons/MessageSquareCode.ts
 const MessageSquareCode = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M10 7.5 8 10l2 2.5" }), path({ "d": "m14 7.5 2 2.5-2 2.5" }), path({ "d": "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" }));
+	return LucideIcon(props, path({ "d": "M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" }), path({ "d": "m10 8-3 3 3 3" }), path({ "d": "m14 14 3-3-3-3" }));
 };
 //#endregion
 //#region src/icons/MessageSquareDashed.ts
 const MessageSquareDashed = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M10 17H7l-4 4v-7" }), path({ "d": "M14 17h1" }), path({ "d": "M14 3h1" }), path({ "d": "M19 3a2 2 0 0 1 2 2" }), path({ "d": "M21 14v1a2 2 0 0 1-2 2" }), path({ "d": "M21 9v1" }), path({ "d": "M3 9v1" }), path({ "d": "M5 3a2 2 0 0 0-2 2" }), path({ "d": "M9 3h1" }));
+	return LucideIcon(props, path({ "d": "M14 3h2" }), path({ "d": "M16 19h-2" }), path({ "d": "M2 12v-2" }), path({ "d": "M2 16v5.286a.71.71 0 0 0 1.212.502l1.149-1.149" }), path({ "d": "M20 19a2 2 0 0 0 2-2v-1" }), path({ "d": "M22 10v2" }), path({ "d": "M22 6V5a2 2 0 0 0-2-2" }), path({ "d": "M4 3a2 2 0 0 0-2 2v1" }), path({ "d": "M8 19h2" }), path({ "d": "M8 3h2" }));
 };
 //#endregion
 //#region src/icons/MessageSquareDiff.ts
 const MessageSquareDiff = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m5 19-2 2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2" }), path({ "d": "M9 10h6" }), path({ "d": "M12 7v6" }), path({ "d": "M9 17h6" }));
+	return LucideIcon(props, path({ "d": "M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" }), path({ "d": "M10 15h4" }), path({ "d": "M10 9h4" }), path({ "d": "M12 7v4" }));
 };
 //#endregion
 //#region src/icons/MessageSquareDot.ts
 const MessageSquareDot = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M11.7 3H5a2 2 0 0 0-2 2v16l4-4h12a2 2 0 0 0 2-2v-2.7" }), circle({
-		cx: "18",
+	return LucideIcon(props, path({ "d": "M12.7 3H4a2 2 0 0 0-2 2v16.286a.71.71 0 0 0 1.212.502l2.202-2.202A2 2 0 0 1 6.828 19H20a2 2 0 0 0 2-2v-4.7" }), circle({
+		cx: "19",
 		cy: "6",
 		"r": "3"
 	}));
@@ -8781,14 +9028,14 @@ const MessageSquareDot = (props = {}) => {
 //#region src/icons/MessageSquareHeart.ts
 const MessageSquareHeart = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" }), path({ "d": "M14.8 7.5a1.84 1.84 0 0 0-2.6 0l-.2.3-.3-.3a1.84 1.84 0 1 0-2.4 2.8L12 13l2.7-2.7c.9-.9.8-2.1.1-2.8" }));
+	return LucideIcon(props, path({ "d": "M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" }), path({ "d": "M7.5 9.5c0 .687.265 1.383.697 1.844l3.009 3.264a1.14 1.14 0 0 0 .407.314 1 1 0 0 0 .783-.004 1.14 1.14 0 0 0 .398-.31l3.008-3.264A2.77 2.77 0 0 0 16.5 9.5 2.5 2.5 0 0 0 12 8a2.5 2.5 0 0 0-4.5 1.5" }));
 };
 //#endregion
 //#region src/icons/MessageSquareLock.ts
 const MessageSquareLock = (props = {}) => {
 	const { path, rect } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M19 15v-2a2 2 0 1 0-4 0v2" }), path({ "d": "M9 17H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3.5" }), rect({
-		"x": "13",
+	return LucideIcon(props, path({ "d": "M22 8.5V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v16.286a.71.71 0 0 0 1.212.502l2.202-2.202A2 2 0 0 1 6.828 19H10" }), path({ "d": "M20 15v-2a2 2 0 0 0-4 0v2" }), rect({
+		"x": "14",
 		"y": "15",
 		width: "8",
 		height: "5",
@@ -8799,83 +9046,83 @@ const MessageSquareLock = (props = {}) => {
 //#region src/icons/MessageSquareMore.ts
 const MessageSquareMore = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" }), path({ "d": "M8 10h.01" }), path({ "d": "M12 10h.01" }), path({ "d": "M16 10h.01" }));
+	return LucideIcon(props, path({ "d": "M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" }), path({ "d": "M12 11h.01" }), path({ "d": "M16 11h.01" }), path({ "d": "M8 11h.01" }));
 };
 //#endregion
 //#region src/icons/MessageSquareOff.ts
 const MessageSquareOff = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 15V5a2 2 0 0 0-2-2H9" }), path({ "d": "m2 2 20 20" }), path({ "d": "M3.6 3.6c-.4.3-.6.8-.6 1.4v16l4-4h10" }));
+	return LucideIcon(props, path({ "d": "M19 19H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.7.7 0 0 1 2 21.286V5a2 2 0 0 1 1.184-1.826" }), path({ "d": "m2 2 20 20" }), path({ "d": "M8.656 3H20a2 2 0 0 1 2 2v11.344" }));
 };
 //#endregion
 //#region src/icons/MessageSquarePlus.ts
 const MessageSquarePlus = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" }), path({ "d": "M12 7v6" }), path({ "d": "M9 10h6" }));
+	return LucideIcon(props, path({ "d": "M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" }), path({ "d": "M12 8v6" }), path({ "d": "M9 11h6" }));
 };
 //#endregion
 //#region src/icons/MessageSquareQuote.ts
 const MessageSquareQuote = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" }), path({ "d": "M8 12a2 2 0 0 0 2-2V8H8" }), path({ "d": "M14 12a2 2 0 0 0 2-2V8h-2" }));
+	return LucideIcon(props, path({ "d": "M14 14a2 2 0 0 0 2-2V8h-2" }), path({ "d": "M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" }), path({ "d": "M8 14a2 2 0 0 0 2-2V8H8" }));
 };
 //#endregion
 //#region src/icons/MessageSquareReply.ts
 const MessageSquareReply = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" }), path({ "d": "m10 7-3 3 3 3" }), path({ "d": "M17 13v-1a2 2 0 0 0-2-2H7" }));
+	return LucideIcon(props, path({ "d": "M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" }), path({ "d": "m10 8-3 3 3 3" }), path({ "d": "M17 14v-1a2 2 0 0 0-2-2H7" }));
 };
 //#endregion
 //#region src/icons/MessageSquareShare.ts
 const MessageSquareShare = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 12v3a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h7" }), path({ "d": "M16 3h5v5" }), path({ "d": "m16 8 5-5" }));
+	return LucideIcon(props, path({ "d": "M12 3H4a2 2 0 0 0-2 2v16.286a.71.71 0 0 0 1.212.502l2.202-2.202A2 2 0 0 1 6.828 19H20a2 2 0 0 0 2-2v-4" }), path({ "d": "M16 3h6v6" }), path({ "d": "m16 9 6-6" }));
 };
 //#endregion
 //#region src/icons/MessageSquareText.ts
 const MessageSquareText = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" }), path({ "d": "M13 8H7" }), path({ "d": "M17 12H7" }));
+	return LucideIcon(props, path({ "d": "M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" }), path({ "d": "M7 11h10" }), path({ "d": "M7 15h6" }), path({ "d": "M7 7h8" }));
 };
 //#endregion
 //#region src/icons/MessageSquareWarning.ts
 const MessageSquareWarning = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" }), path({ "d": "M12 7v2" }), path({ "d": "M12 13h.01" }));
+	return LucideIcon(props, path({ "d": "M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" }), path({ "d": "M12 15h.01" }), path({ "d": "M12 7v4" }));
 };
 //#endregion
 //#region src/icons/MessageSquareX.ts
 const MessageSquareX = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" }), path({ "d": "m14.5 7.5-5 5" }), path({ "d": "m9.5 7.5 5 5" }));
+	return LucideIcon(props, path({ "d": "M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" }), path({ "d": "m14.5 8.5-5 5" }), path({ "d": "m9.5 8.5 5 5" }));
 };
 //#endregion
 //#region src/icons/MessageSquare.ts
 const MessageSquare = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" }));
+	return LucideIcon(props, path({ "d": "M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" }));
 };
 //#endregion
 //#region src/icons/MessagesSquare.ts
 const MessagesSquare = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z" }), path({ "d": "M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1" }));
+	return LucideIcon(props, path({ "d": "M16 10a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 14.286V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" }), path({ "d": "M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1" }));
+};
+//#endregion
+//#region src/icons/Metronome.ts
+const Metronome = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 11.4V9.1" }), path({ "d": "m12 17 6.59-6.59" }), path({ "d": "m15.05 5.7-.218-.691a3 3 0 0 0-5.663 0L4.418 19.695A1 1 0 0 0 5.37 21h13.253a1 1 0 0 0 .951-1.31L18.45 16.2" }), circle({
+		cx: "20",
+		cy: "9",
+		"r": "2"
+	}));
 };
 //#endregion
 //#region src/icons/MicOff.ts
 const MicOff = (props = {}) => {
-	const { line, path } = van.tags(svgNamespace);
-	return LucideIcon(props, line({
-		x1: "2",
-		x2: "22",
-		y1: "2",
-		y2: "22"
-	}), path({ "d": "M18.89 13.23A7.12 7.12 0 0 0 19 12v-2" }), path({ "d": "M5 10v2a7 7 0 0 0 12 5" }), path({ "d": "M15 9.34V5a3 3 0 0 0-5.68-1.33" }), path({ "d": "M9 9v3a3 3 0 0 0 5.12 2.12" }), line({
-		x1: "12",
-		x2: "12",
-		y1: "19",
-		y2: "22"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 19v3" }), path({ "d": "M15 9.34V5a3 3 0 0 0-5.68-1.33" }), path({ "d": "M16.95 16.95A7 7 0 0 1 5 12v-2" }), path({ "d": "M18.89 13.23A7 7 0 0 0 19 12v-2" }), path({ "d": "m2 2 20 20" }), path({ "d": "M9 9v3a3 3 0 0 0 5.12 2.12" }));
 };
 //#endregion
 //#region src/icons/MicVocal.ts
@@ -8890,19 +9137,26 @@ const MicVocal = (props = {}) => {
 //#endregion
 //#region src/icons/Mic.ts
 const Mic = (props = {}) => {
-	const { path, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" }), path({ "d": "M19 10v2a7 7 0 0 1-14 0v-2" }), line({
-		x1: "12",
-		x2: "12",
-		y1: "19",
-		y2: "22"
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 19v3" }), path({ "d": "M19 10v2a7 7 0 0 1-14 0v-2" }), rect({
+		"x": "9",
+		"y": "2",
+		width: "6",
+		height: "13",
+		rx: "3"
 	}));
 };
 //#endregion
 //#region src/icons/Microchip.ts
 const Microchip = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M18 12h2" }), path({ "d": "M18 16h2" }), path({ "d": "M18 20h2" }), path({ "d": "M18 4h2" }), path({ "d": "M18 8h2" }), path({ "d": "M4 12h2" }), path({ "d": "M4 16h2" }), path({ "d": "M4 20h2" }), path({ "d": "M4 4h2" }), path({ "d": "M4 8h2" }), path({ "d": "M8 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-1.5c-.276 0-.494.227-.562.495a2 2 0 0 1-3.876 0C9.994 2.227 9.776 2 9.5 2z" }));
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 12h4" }), path({ "d": "M10 17h4" }), path({ "d": "M10 7h4" }), path({ "d": "M18 12h2" }), path({ "d": "M18 18h2" }), path({ "d": "M18 6h2" }), path({ "d": "M4 12h2" }), path({ "d": "M4 18h2" }), path({ "d": "M4 6h2" }), rect({
+		"x": "6",
+		"y": "2",
+		width: "12",
+		height: "20",
+		rx: "2"
+	}));
 };
 //#endregion
 //#region src/icons/Microscope.ts
@@ -8932,7 +9186,7 @@ const Microwave = (props = {}) => {
 //#region src/icons/Milestone.ts
 const Milestone = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 13v8" }), path({ "d": "M12 3v3" }), path({ "d": "M4 6a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h13a2 2 0 0 0 1.152-.365l3.424-2.317a1 1 0 0 0 0-1.635l-3.424-2.318A2 2 0 0 0 17 6z" }));
+	return LucideIcon(props, path({ "d": "M12 13v8" }), path({ "d": "M12 3v3" }), path({ "d": "M18.172 6a2 2 0 0 1 1.414.586l2.06 2.06a1.207 1.207 0 0 1 0 1.708l-2.06 2.06a2 2 0 0 1-1.414.586H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1z" }));
 };
 //#endregion
 //#region src/icons/MilkOff.ts
@@ -8954,18 +9208,8 @@ const Milk = (props = {}) => {
 //#endregion
 //#region src/icons/Minimize2.ts
 const Minimize2 = (props = {}) => {
-	const { polyline, line } = van.tags(svgNamespace);
-	return LucideIcon(props, polyline({ points: "4 14 10 14 10 20" }), polyline({ points: "20 10 14 10 14 4" }), line({
-		x1: "14",
-		x2: "21",
-		y1: "10",
-		y2: "3"
-	}), line({
-		x1: "3",
-		x2: "10",
-		y1: "21",
-		y2: "14"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m14 10 7-7" }), path({ "d": "M20 10h-6V4" }), path({ "d": "m3 21 7-7" }), path({ "d": "M4 14h6v6" }));
 };
 //#endregion
 //#region src/icons/Minimize.ts
@@ -8980,6 +9224,28 @@ const Minus = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M5 12h14" }));
 };
 //#endregion
+//#region src/icons/MirrorRectangular.ts
+const MirrorRectangular = (props = {}) => {
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M11 6 8 9" }), path({ "d": "m16 7-8 8" }), rect({
+		"x": "4",
+		"y": "2",
+		width: "16",
+		height: "20",
+		rx: "2"
+	}));
+};
+//#endregion
+//#region src/icons/MirrorRound.ts
+const MirrorRound = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 6.6 8.6 8" }), path({ "d": "M12 18v4" }), path({ "d": "M15 7.5 9.5 13" }), path({ "d": "M7 22h10" }), circle({
+		cx: "12",
+		cy: "10",
+		"r": "8"
+	}));
+};
+//#endregion
 //#region src/icons/MonitorCheck.ts
 const MonitorCheck = (props = {}) => {
 	const { path, rect } = van.tags(svgNamespace);
@@ -8992,10 +9258,22 @@ const MonitorCheck = (props = {}) => {
 	}), path({ "d": "M12 17v4" }), path({ "d": "M8 21h8" }));
 };
 //#endregion
+//#region src/icons/MonitorCloud.ts
+const MonitorCloud = (props = {}) => {
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M11 13a3 3 0 1 1 2.83-4H14a2 2 0 0 1 0 4z" }), path({ "d": "M12 17v4" }), path({ "d": "M8 21h8" }), rect({
+		"x": "2",
+		"y": "3",
+		width: "20",
+		height: "14",
+		rx: "2"
+	}));
+};
+//#endregion
 //#region src/icons/MonitorCog.ts
 const MonitorCog = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 17v4" }), path({ "d": "m15.2 4.9-.9-.4" }), path({ "d": "m15.2 7.1-.9.4" }), path({ "d": "m16.9 3.2-.4-.9" }), path({ "d": "m16.9 8.8-.4.9" }), path({ "d": "m19.5 2.3-.4.9" }), path({ "d": "m19.5 9.7-.4-.9" }), path({ "d": "m21.7 4.5-.9.4" }), path({ "d": "m21.7 7.5-.9-.4" }), path({ "d": "M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7" }), path({ "d": "M8 21h8" }), circle({
+	return LucideIcon(props, path({ "d": "M12 17v4" }), path({ "d": "m14.305 7.53.923-.382" }), path({ "d": "m15.228 4.852-.923-.383" }), path({ "d": "m16.852 3.228-.383-.924" }), path({ "d": "m16.852 8.772-.383.923" }), path({ "d": "m19.148 3.228.383-.924" }), path({ "d": "m19.53 9.696-.382-.924" }), path({ "d": "m20.772 4.852.924-.383" }), path({ "d": "m20.772 7.148.924.383" }), path({ "d": "M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7" }), path({ "d": "M8 21h8" }), circle({
 		cx: "18",
 		cy: "6",
 		"r": "3"
@@ -9004,12 +9282,12 @@ const MonitorCog = (props = {}) => {
 //#endregion
 //#region src/icons/MonitorDot.ts
 const MonitorDot = (props = {}) => {
-	const { circle, path } = van.tags(svgNamespace);
-	return LucideIcon(props, circle({
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 17v4" }), path({ "d": "M22 12.307V15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8.693" }), path({ "d": "M8 21h8" }), circle({
 		cx: "19",
 		cy: "6",
 		"r": "3"
-	}), path({ "d": "M22 12v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9" }), path({ "d": "M12 17v4" }), path({ "d": "M8 21h8" }));
+	}));
 };
 //#endregion
 //#region src/icons/MonitorDown.ts
@@ -9027,7 +9305,7 @@ const MonitorDown = (props = {}) => {
 //#region src/icons/MonitorOff.ts
 const MonitorOff = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M17 17H4a2 2 0 0 1-2-2V5c0-1.5 1-2 1-2" }), path({ "d": "M22 15V5a2 2 0 0 0-2-2H9" }), path({ "d": "M8 21h8" }), path({ "d": "M12 17v4" }), path({ "d": "m2 2 20 20" }));
+	return LucideIcon(props, path({ "d": "M12 17v4" }), path({ "d": "M17 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 1.184-1.826" }), path({ "d": "m2 2 20 20" }), path({ "d": "M8 21h8" }), path({ "d": "M8.656 3H20a2 2 0 0 1 2 2v10a2 2 0 0 1-.293 1.042" }));
 };
 //#endregion
 //#region src/icons/MonitorPause.ts
@@ -9045,7 +9323,7 @@ const MonitorPause = (props = {}) => {
 //#region src/icons/MonitorPlay.ts
 const MonitorPlay = (props = {}) => {
 	const { path, rect } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M10 7.75a.75.75 0 0 1 1.142-.638l3.664 2.249a.75.75 0 0 1 0 1.278l-3.664 2.25a.75.75 0 0 1-1.142-.64z" }), path({ "d": "M12 17v4" }), path({ "d": "M8 21h8" }), rect({
+	return LucideIcon(props, path({ "d": "M15.033 9.44a.647.647 0 0 1 0 1.12l-4.065 2.352a.645.645 0 0 1-.968-.56V7.648a.645.645 0 0 1 .967-.56z" }), path({ "d": "M12 17v4" }), path({ "d": "M8 21h8" }), rect({
 		"x": "2",
 		"y": "3",
 		width: "20",
@@ -9149,13 +9427,27 @@ const Monitor = (props = {}) => {
 //#region src/icons/MoonStar.ts
 const MoonStar = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9" }), path({ "d": "M20 3v4" }), path({ "d": "M22 5h-4" }));
+	return LucideIcon(props, path({ "d": "M18 5h4" }), path({ "d": "M20 3v4" }), path({ "d": "M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" }));
 };
 //#endregion
 //#region src/icons/Moon.ts
 const Moon = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" }));
+	return LucideIcon(props, path({ "d": "M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" }));
+};
+//#endregion
+//#region src/icons/Motorbike.ts
+const Motorbike = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m18 14-1-3" }), path({ "d": "m3 9 6 2a2 2 0 0 1 2-2h2a2 2 0 0 1 1.99 1.81" }), path({ "d": "M8 17h3a1 1 0 0 0 1-1 6 6 0 0 1 6-6 1 1 0 0 0 1-1v-.75A5 5 0 0 0 17 5" }), circle({
+		cx: "19",
+		cy: "17",
+		"r": "3"
+	}), circle({
+		cx: "5",
+		cy: "17",
+		"r": "3"
+	}));
 };
 //#endregion
 //#region src/icons/MountainSnow.ts
@@ -9170,10 +9462,26 @@ const Mountain = (props = {}) => {
 	return LucideIcon(props, path({ "d": "m8 3 4 8 5-5 5 15H2L8 3z" }));
 };
 //#endregion
+//#region src/icons/MouseLeft.ts
+const MouseLeft = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 7.318V10" }), path({ "d": "M5 10v5a7 7 0 0 0 14 0V9c0-3.527-2.608-6.515-6-7" }), circle({
+		cx: "7",
+		cy: "4",
+		"r": "2"
+	}));
+};
+//#endregion
 //#region src/icons/MouseOff.ts
 const MouseOff = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M12 6v.343" }), path({ "d": "M18.218 18.218A7 7 0 0 1 5 15V9a7 7 0 0 1 .782-3.218" }), path({ "d": "M19 13.343V9A7 7 0 0 0 8.56 2.902" }), path({ "d": "M22 22 2 2" }));
+};
+//#endregion
+//#region src/icons/MousePointer2Off.ts
+const MousePointer2Off = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m15.55 8.45 5.138 2.087a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063L8.45 15.551" }), path({ "d": "M22 2 2 22" }), path({ "d": "m6.816 11.528-2.779-6.84a.495.495 0 0 1 .651-.651l6.84 2.779" }));
 };
 //#endregion
 //#region src/icons/MousePointer2.ts
@@ -9202,6 +9510,16 @@ const MousePointerClick = (props = {}) => {
 const MousePointer = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M12.586 12.586 19 19" }), path({ "d": "M3.688 3.037a.497.497 0 0 0-.651.651l6.5 15.999a.501.501 0 0 0 .947-.062l1.569-6.083a2 2 0 0 1 1.448-1.479l6.124-1.579a.5.5 0 0 0 .063-.947z" }));
+};
+//#endregion
+//#region src/icons/MouseRight.ts
+const MouseRight = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 7.318V10" }), path({ "d": "M19 10v5a7 7 0 0 1-14 0V9c0-3.527 2.608-6.515 6-7" }), circle({
+		cx: "17",
+		cy: "4",
+		"r": "2"
+	}));
 };
 //#endregion
 //#region src/icons/Mouse.ts
@@ -9408,8 +9726,14 @@ const Network = (props = {}) => {
 //#endregion
 //#region src/icons/Newspaper.ts
 const Newspaper = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2" }), path({ "d": "M18 14h-8" }), path({ "d": "M15 18h-5" }), path({ "d": "M10 6h8v4h-8V6Z" }));
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M15 18h-5" }), path({ "d": "M18 14h-8" }), path({ "d": "M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2" }), rect({
+		width: "8",
+		height: "4",
+		"x": "10",
+		"y": "6",
+		rx: "1"
+	}));
 };
 //#endregion
 //#region src/icons/Nfc.ts
@@ -9421,7 +9745,7 @@ const Nfc = (props = {}) => {
 //#region src/icons/NonBinary.ts
 const NonBinary = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 2v10" }), path({ "d": "m9 4 6 4" }), path({ "d": "m9 8 6-4" }), circle({
+	return LucideIcon(props, path({ "d": "M12 2v10" }), path({ "d": "m8.5 4 7 4" }), path({ "d": "m8.5 8 7-4" }), circle({
 		cx: "12",
 		cy: "17",
 		"r": "5"
@@ -9549,8 +9873,8 @@ const Option = (props = {}) => {
 //#endregion
 //#region src/icons/Orbit.ts
 const Orbit = (props = {}) => {
-	const { circle, path } = van.tags(svgNamespace);
-	return LucideIcon(props, circle({
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M20.341 6.484A10 10 0 0 1 10.266 21.85" }), path({ "d": "M3.659 17.516A10 10 0 0 1 13.74 2.152" }), circle({
 		cx: "12",
 		cy: "12",
 		"r": "3"
@@ -9562,7 +9886,7 @@ const Orbit = (props = {}) => {
 		cx: "5",
 		cy: "19",
 		"r": "2"
-	}), path({ "d": "M10.4 21.9a10 10 0 0 0 9.941-15.416" }), path({ "d": "M13.5 2.1a10 10 0 0 0-9.841 15.416" }));
+	}));
 };
 //#endregion
 //#region src/icons/Origami.ts
@@ -9574,29 +9898,19 @@ const Origami = (props = {}) => {
 //#region src/icons/Package2.ts
 const Package2 = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z" }), path({ "d": "m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9" }), path({ "d": "M12 3v6" }));
+	return LucideIcon(props, path({ "d": "M12 3v6" }), path({ "d": "M16.76 3a2 2 0 0 1 1.8 1.1l2.23 4.479a2 2 0 0 1 .21.891V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9.472a2 2 0 0 1 .211-.894L5.45 4.1A2 2 0 0 1 7.24 3z" }), path({ "d": "M3.054 9.013h17.893" }));
 };
 //#endregion
 //#region src/icons/PackageCheck.ts
 const PackageCheck = (props = {}) => {
-	const { path, polyline, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m16 16 2 2 4-4" }), path({ "d": "M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14" }), path({ "d": "m7.5 4.27 9 5.15" }), polyline({ points: "3.29 7 12 12 20.71 7" }), line({
-		x1: "12",
-		x2: "12",
-		y1: "22",
-		y2: "12"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 22V12" }), path({ "d": "m16 17 2 2 4-4" }), path({ "d": "M21 11.127V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l1.32-.753" }), path({ "d": "M3.29 7 12 12l8.71-5" }), path({ "d": "m7.5 4.27 8.997 5.148" }));
 };
 //#endregion
 //#region src/icons/PackageMinus.ts
 const PackageMinus = (props = {}) => {
-	const { path, polyline, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M16 16h6" }), path({ "d": "M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14" }), path({ "d": "m7.5 4.27 9 5.15" }), polyline({ points: "3.29 7 12 12 20.71 7" }), line({
-		x1: "12",
-		x2: "12",
-		y1: "22",
-		y2: "12"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 22V12" }), path({ "d": "M16 17h6" }), path({ "d": "M21 13V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l1.675-.955" }), path({ "d": "M3.29 7 12 12l8.71-5" }), path({ "d": "m7.5 4.27 8.997 5.148" }));
 };
 //#endregion
 //#region src/icons/PackageOpen.ts
@@ -9607,39 +9921,24 @@ const PackageOpen = (props = {}) => {
 //#endregion
 //#region src/icons/PackagePlus.ts
 const PackagePlus = (props = {}) => {
-	const { path, polyline, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M16 16h6" }), path({ "d": "M19 13v6" }), path({ "d": "M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14" }), path({ "d": "m7.5 4.27 9 5.15" }), polyline({ points: "3.29 7 12 12 20.71 7" }), line({
-		x1: "12",
-		x2: "12",
-		y1: "22",
-		y2: "12"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 22V12" }), path({ "d": "M16 17h6" }), path({ "d": "M19 14v6" }), path({ "d": "M21 10.535V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l1.675-.955" }), path({ "d": "M3.29 7 12 12l8.71-5" }), path({ "d": "m7.5 4.27 8.997 5.148" }));
 };
 //#endregion
 //#region src/icons/PackageSearch.ts
 const PackageSearch = (props = {}) => {
-	const { path, polyline, line, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14" }), path({ "d": "m7.5 4.27 9 5.15" }), polyline({ points: "3.29 7 12 12 20.71 7" }), line({
-		x1: "12",
-		x2: "12",
-		y1: "22",
-		y2: "12"
-	}), circle({
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 22V12" }), path({ "d": "M20.27 18.27 22 20" }), path({ "d": "M21 10.498V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l.98-.559" }), path({ "d": "M3.29 7 12 12l8.71-5" }), path({ "d": "m7.5 4.27 8.997 5.148" }), circle({
 		cx: "18.5",
-		cy: "15.5",
+		cy: "16.5",
 		"r": "2.5"
-	}), path({ "d": "M20.27 17.27 22 19" }));
+	}));
 };
 //#endregion
 //#region src/icons/PackageX.ts
 const PackageX = (props = {}) => {
-	const { path, polyline, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14" }), path({ "d": "m7.5 4.27 9 5.15" }), polyline({ points: "3.29 7 12 12 20.71 7" }), line({
-		x1: "12",
-		x2: "12",
-		y1: "22",
-		y2: "12"
-	}), path({ "d": "m17 13 5 5m-5 0 5-5" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 22V12" }), path({ "d": "m16.5 14.5 5 5" }), path({ "d": "m16.5 19.5 5-5" }), path({ "d": "M21 10.5V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l.13-.074" }), path({ "d": "M3.29 7 12 12l8.71-5" }), path({ "d": "m7.5 4.27 8.997 5.148" }));
 };
 //#endregion
 //#region src/icons/Package.ts
@@ -9651,7 +9950,7 @@ const Package = (props = {}) => {
 //#region src/icons/PaintBucket.ts
 const PaintBucket = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m19 11-8-8-8.6 8.6a2 2 0 0 0 0 2.8l5.2 5.2c.8.8 2 .8 2.8 0L19 11Z" }), path({ "d": "m5 2 5 5" }), path({ "d": "M2 13h15" }), path({ "d": "M22 20a2 2 0 1 1-4 0c0-1.6 1.7-2.4 2-4 .3 1.6 2 2.4 2 4Z" }));
+	return LucideIcon(props, path({ "d": "M11 7 6 2" }), path({ "d": "M18.992 12H2.041" }), path({ "d": "M21.145 18.38A3.34 3.34 0 0 1 20 16.5a3.3 3.3 0 0 1-1.145 1.88c-.575.46-.855 1.02-.855 1.595A2 2 0 0 0 20 22a2 2 0 0 0 2-2.025c0-.58-.285-1.13-.855-1.595" }), path({ "d": "m8.5 4.5 2.148-2.148a1.205 1.205 0 0 1 1.704 0l7.296 7.296a1.205 1.205 0 0 1 0 1.704l-7.592 7.592a3.615 3.615 0 0 1-5.112 0l-3.888-3.888a3.615 3.615 0 0 1 0-5.112L5.67 7.33" }));
 };
 //#endregion
 //#region src/icons/PaintRoller.ts
@@ -9686,8 +9985,8 @@ const Paintbrush = (props = {}) => {
 //#endregion
 //#region src/icons/Palette.ts
 const Palette = (props = {}) => {
-	const { circle, path } = van.tags(svgNamespace);
-	return LucideIcon(props, circle({
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z" }), circle({
 		cx: "13.5",
 		cy: "6.5",
 		"r": ".5",
@@ -9698,16 +9997,22 @@ const Palette = (props = {}) => {
 		"r": ".5",
 		fill: "currentColor"
 	}), circle({
-		cx: "8.5",
-		cy: "7.5",
-		"r": ".5",
-		fill: "currentColor"
-	}), circle({
 		cx: "6.5",
 		cy: "12.5",
 		"r": ".5",
 		fill: "currentColor"
-	}), path({ "d": "M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" }));
+	}), circle({
+		cx: "8.5",
+		cy: "7.5",
+		"r": ".5",
+		fill: "currentColor"
+	}));
+};
+//#endregion
+//#region src/icons/Panda.ts
+const Panda = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M11.25 17.25h1.5L12 18z" }), path({ "d": "m15 12 2 2" }), path({ "d": "M18 6.5a.5.5 0 0 0-.5-.5" }), path({ "d": "M20.69 9.67a4.5 4.5 0 1 0-7.04-5.5 8.35 8.35 0 0 0-3.3 0 4.5 4.5 0 1 0-7.04 5.5C2.49 11.2 2 12.88 2 14.5 2 19.47 6.48 22 12 22s10-2.53 10-7.5c0-1.62-.48-3.3-1.3-4.83" }), path({ "d": "M6 6.5a.495.495 0 0 1 .5-.5" }), path({ "d": "m9 12-2 2" }));
 };
 //#endregion
 //#region src/icons/PanelBottomClose.ts
@@ -9794,6 +10099,18 @@ const PanelLeftOpen = (props = {}) => {
 	}), path({ "d": "M9 3v18" }), path({ "d": "m14 9 3 3-3 3" }));
 };
 //#endregion
+//#region src/icons/PanelLeftRightDashed.ts
+const PanelLeftRightDashed = (props = {}) => {
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M15 10V9" }), path({ "d": "M15 15v-1" }), path({ "d": "M15 21v-2" }), path({ "d": "M15 5V3" }), path({ "d": "M9 10V9" }), path({ "d": "M9 15v-1" }), path({ "d": "M9 21v-2" }), path({ "d": "M9 5V3" }), rect({
+		"x": "3",
+		"y": "3",
+		width: "18",
+		height: "18",
+		rx: "2"
+	}));
+};
+//#endregion
 //#region src/icons/PanelLeft.ts
 const PanelLeft = (props = {}) => {
 	const { rect, path } = van.tags(svgNamespace);
@@ -9852,6 +10169,18 @@ const PanelRight = (props = {}) => {
 		"y": "3",
 		rx: "2"
 	}), path({ "d": "M15 3v18" }));
+};
+//#endregion
+//#region src/icons/PanelTopBottomDashed.ts
+const PanelTopBottomDashed = (props = {}) => {
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M14 15h1" }), path({ "d": "M14 9h1" }), path({ "d": "M19 15h2" }), path({ "d": "M19 9h2" }), path({ "d": "M3 15h2" }), path({ "d": "M3 9h2" }), path({ "d": "M9 15h1" }), path({ "d": "M9 9h1" }), rect({
+		"x": "3",
+		"y": "3",
+		width: "18",
+		height: "18",
+		rx: "2"
+	}));
 };
 //#endregion
 //#region src/icons/PanelTopClose.ts
@@ -9941,7 +10270,7 @@ const PanelsTopLeft = (props = {}) => {
 //#region src/icons/Paperclip.ts
 const Paperclip = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M13.234 20.252 21 12.3" }), path({ "d": "m16 6-8.414 8.586a2 2 0 0 0 0 2.828 2 2 0 0 0 2.828 0l8.414-8.586a4 4 0 0 0 0-5.656 4 4 0 0 0-5.656 0l-8.415 8.585a6 6 0 1 0 8.486 8.486" }));
+	return LucideIcon(props, path({ "d": "m16 6-8.414 8.586a2 2 0 0 0 2.829 2.829l8.414-8.586a4 4 0 1 0-5.657-5.657l-8.379 8.551a6 6 0 1 0 8.485 8.485l8.379-8.551" }));
 };
 //#endregion
 //#region src/icons/Parentheses.ts
@@ -9967,15 +10296,15 @@ const Pause = (props = {}) => {
 	const { rect } = van.tags(svgNamespace);
 	return LucideIcon(props, rect({
 		"x": "14",
-		"y": "4",
-		width: "4",
-		height: "16",
+		"y": "3",
+		width: "5",
+		height: "18",
 		rx: "1"
 	}), rect({
-		"x": "6",
-		"y": "4",
-		width: "4",
-		height: "16",
+		"x": "5",
+		"y": "3",
+		width: "5",
+		height: "18",
 		rx: "1"
 	}));
 };
@@ -10013,7 +10342,7 @@ const PcCase = (props = {}) => {
 //#region src/icons/PenLine.ts
 const PenLine = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 20h9" }), path({ "d": "M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z" }));
+	return LucideIcon(props, path({ "d": "M13 21h8" }), path({ "d": "M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" }));
 };
 //#endregion
 //#region src/icons/PenOff.ts
@@ -10041,7 +10370,7 @@ const Pen = (props = {}) => {
 //#region src/icons/PencilLine.ts
 const PencilLine = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 20h9" }), path({ "d": "M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z" }), path({ "d": "m15 5 3 3" }));
+	return LucideIcon(props, path({ "d": "M13 21h8" }), path({ "d": "m15 5 4 4" }), path({ "d": "M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" }));
 };
 //#endregion
 //#region src/icons/PencilOff.ts
@@ -10106,73 +10435,43 @@ const PhilippinePeso = (props = {}) => {
 //#region src/icons/PhoneCall.ts
 const PhoneCall = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" }), path({ "d": "M14.05 2a9 9 0 0 1 8 7.94" }), path({ "d": "M14.05 6A5 5 0 0 1 18 10" }));
+	return LucideIcon(props, path({ "d": "M13 2a9 9 0 0 1 9 9" }), path({ "d": "M13 6a5 5 0 0 1 5 5" }), path({ "d": "M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" }));
 };
 //#endregion
 //#region src/icons/PhoneForwarded.ts
 const PhoneForwarded = (props = {}) => {
-	const { polyline, line, path } = van.tags(svgNamespace);
-	return LucideIcon(props, polyline({ points: "18 2 22 6 18 10" }), line({
-		x1: "14",
-		x2: "22",
-		y1: "6",
-		y2: "6"
-	}), path({ "d": "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M14 6h8" }), path({ "d": "m18 2 4 4-4 4" }), path({ "d": "M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" }));
 };
 //#endregion
 //#region src/icons/PhoneIncoming.ts
 const PhoneIncoming = (props = {}) => {
-	const { polyline, line, path } = van.tags(svgNamespace);
-	return LucideIcon(props, polyline({ points: "16 2 16 8 22 8" }), line({
-		x1: "22",
-		x2: "16",
-		y1: "2",
-		y2: "8"
-	}), path({ "d": "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M16 2v6h6" }), path({ "d": "m22 2-6 6" }), path({ "d": "M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" }));
 };
 //#endregion
 //#region src/icons/PhoneMissed.ts
 const PhoneMissed = (props = {}) => {
-	const { line, path } = van.tags(svgNamespace);
-	return LucideIcon(props, line({
-		x1: "22",
-		x2: "16",
-		y1: "2",
-		y2: "8"
-	}), line({
-		x1: "16",
-		x2: "22",
-		y1: "2",
-		y2: "8"
-	}), path({ "d": "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m16 2 6 6" }), path({ "d": "m22 2-6 6" }), path({ "d": "M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" }));
 };
 //#endregion
 //#region src/icons/PhoneOff.ts
 const PhoneOff = (props = {}) => {
-	const { path, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.42 19.42 0 0 1-3.33-2.67m-2.67-3.34a19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91" }), line({
-		x1: "22",
-		x2: "2",
-		y1: "2",
-		y2: "22"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10.1 13.9a14 14 0 0 0 3.732 2.668 1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2 18 18 0 0 1-12.728-5.272" }), path({ "d": "M22 2 2 22" }), path({ "d": "M4.76 13.582A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 .244.473" }));
 };
 //#endregion
 //#region src/icons/PhoneOutgoing.ts
 const PhoneOutgoing = (props = {}) => {
-	const { polyline, line, path } = van.tags(svgNamespace);
-	return LucideIcon(props, polyline({ points: "22 8 22 2 16 2" }), line({
-		x1: "16",
-		x2: "22",
-		y1: "8",
-		y2: "2"
-	}), path({ "d": "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m16 8 6-6" }), path({ "d": "M22 8V2h-6" }), path({ "d": "M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" }));
 };
 //#endregion
 //#region src/icons/Phone.ts
 const Phone = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" }));
+	return LucideIcon(props, path({ "d": "M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" }));
 };
 //#endregion
 //#region src/icons/Pi.ts
@@ -10195,7 +10494,7 @@ const Piano = (props = {}) => {
 //#region src/icons/Pickaxe.ts
 const Pickaxe = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M14.531 12.469 6.619 20.38a1 1 0 1 1-3-3l7.912-7.912" }), path({ "d": "M15.686 4.314A12.5 12.5 0 0 0 5.461 2.958 1 1 0 0 0 5.58 4.71a22 22 0 0 1 6.318 3.393" }), path({ "d": "M17.7 3.7a1 1 0 0 0-1.4 0l-4.6 4.6a1 1 0 0 0 0 1.4l2.6 2.6a1 1 0 0 0 1.4 0l4.6-4.6a1 1 0 0 0 0-1.4z" }), path({ "d": "M19.686 8.314a12.501 12.501 0 0 1 1.356 10.225 1 1 0 0 1-1.751-.119 22 22 0 0 0-3.393-6.319" }));
+	return LucideIcon(props, path({ "d": "m14 13-8.381 8.38a1 1 0 0 1-3.001-3L11 9.999" }), path({ "d": "M15.973 4.027A13 13 0 0 0 5.902 2.373c-1.398.342-1.092 2.158.277 2.601a19.9 19.9 0 0 1 5.822 3.024" }), path({ "d": "M16.001 11.999a19.9 19.9 0 0 1 3.024 5.824c.444 1.369 2.26 1.676 2.603.278A13 13 0 0 0 20 8.069" }), path({ "d": "M18.352 3.352a1.205 1.205 0 0 0-1.704 0l-5.296 5.296a1.205 1.205 0 0 0 0 1.704l2.296 2.296a1.205 1.205 0 0 0 1.704 0l5.296-5.296a1.205 1.205 0 0 0 0-1.704z" }));
 };
 //#endregion
 //#region src/icons/PictureInPicture2.ts
@@ -10225,7 +10524,7 @@ const PictureInPicture = (props = {}) => {
 //#region src/icons/PiggyBank.ts
 const PiggyBank = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2V5z" }), path({ "d": "M2 9v1c0 1.1.9 2 2 2h1" }), path({ "d": "M16 11h.01" }));
+	return LucideIcon(props, path({ "d": "M11 17h3v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3a3.16 3.16 0 0 0 2-2h1a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-1a5 5 0 0 0-2-4V3a4 4 0 0 0-3.2 1.6l-.3.4H11a6 6 0 0 0-6 6v1a5 5 0 0 0 2 4v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1z" }), path({ "d": "M16 10h.01" }), path({ "d": "M2 8v1a2 2 0 0 0 2 2h1" }));
 };
 //#endregion
 //#region src/icons/PilcrowLeft.ts
@@ -10279,7 +10578,7 @@ const Pin = (props = {}) => {
 //#region src/icons/Pipette.ts
 const Pipette = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m2 22 1-1h3l9-9" }), path({ "d": "M3 21v-3l9-9" }), path({ "d": "m15 6 3.4-3.4a2.1 2.1 0 1 1 3 3L18 9l.4.4a2.1 2.1 0 1 1-3 3l-3.8-3.8a2.1 2.1 0 1 1 3-3l.4.4Z" }));
+	return LucideIcon(props, path({ "d": "m12 9-8.414 8.414A2 2 0 0 0 3 18.828v1.344a2 2 0 0 1-.586 1.414A2 2 0 0 1 3.828 21h1.344a2 2 0 0 0 1.414-.586L15 12" }), path({ "d": "m18 9 .4.4a1 1 0 1 1-3 3l-3.8-3.8a1 1 0 1 1 3-3l.4.4 3.4-3.4a1 1 0 1 1 3 3z" }), path({ "d": "m2 22 .414-.414" }));
 };
 //#endregion
 //#region src/icons/Pizza.ts
@@ -10308,8 +10607,8 @@ const Plane = (props = {}) => {
 //#endregion
 //#region src/icons/Play.ts
 const Play = (props = {}) => {
-	const { polygon } = van.tags(svgNamespace);
-	return LucideIcon(props, polygon({ points: "6 3 20 12 6 21 6 3" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" }));
 };
 //#endregion
 //#region src/icons/Plug2.ts
@@ -10327,7 +10626,7 @@ const PlugZap = (props = {}) => {
 //#region src/icons/Plug.ts
 const Plug = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 22v-5" }), path({ "d": "M9 8V2" }), path({ "d": "M15 8V2" }), path({ "d": "M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z" }));
+	return LucideIcon(props, path({ "d": "M12 22v-5" }), path({ "d": "M15 8V2" }), path({ "d": "M17 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1z" }), path({ "d": "M9 8V2" }));
 };
 //#endregion
 //#region src/icons/Plus.ts
@@ -10342,20 +10641,18 @@ const PocketKnife = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M3 2v1c0 1 2 1 2 2S3 6 3 7s2 1 2 2-2 1-2 2 2 1 2 2" }), path({ "d": "M18 6h.01" }), path({ "d": "M6 18h.01" }), path({ "d": "M20.83 8.83a4 4 0 0 0-5.66-5.66l-12 12a4 4 0 1 0 5.66 5.66Z" }), path({ "d": "M18 11.66V22a4 4 0 0 0 4-4V6" }));
 };
 //#endregion
-//#region src/icons/Pocket.ts
-const Pocket = (props = {}) => {
-	const { path, polyline } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 3h16a2 2 0 0 1 2 2v6a10 10 0 0 1-10 10A10 10 0 0 1 2 11V5a2 2 0 0 1 2-2z" }), polyline({ points: "8 10 12 14 16 10" }));
-};
-//#endregion
 //#region src/icons/Podcast.ts
 const Podcast = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M16.85 18.58a9 9 0 1 0-9.7 0" }), path({ "d": "M8 14a5 5 0 1 1 8 0" }), circle({
+	return LucideIcon(props, path({
+		"d": "M13 17a1 1 0 1 0-2 0l.5 4.5a0.5 0.5 0 0 0 1 0z",
+		fill: "currentColor"
+	}), path({ "d": "M16.85 18.58a9 9 0 1 0-9.7 0" }), path({ "d": "M8 14a5 5 0 1 1 8 0" }), circle({
 		cx: "12",
 		cy: "11",
-		"r": "1"
-	}), path({ "d": "M13 17a1 1 0 1 0-2 0l.5 4.5a.5.5 0 1 0 1 0Z" }));
+		"r": "1",
+		fill: "currentColor"
+	}));
 };
 //#endregion
 //#region src/icons/PointerOff.ts
@@ -10410,6 +10707,12 @@ const Presentation = (props = {}) => {
 const PrinterCheck = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M13.5 22H7a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v.5" }), path({ "d": "m16 19 2 2 4-4" }), path({ "d": "M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v2" }), path({ "d": "M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6" }));
+};
+//#endregion
+//#region src/icons/PrinterX.ts
+const PrinterX = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12.531 22H7a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1h6.377" }), path({ "d": "m16.5 16.5 5 5" }), path({ "d": "m16.5 21.5 5-5" }), path({ "d": "M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1.5" }), path({ "d": "M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6" }));
 };
 //#endregion
 //#region src/icons/Printer.ts
@@ -10507,13 +10810,19 @@ const Radar = (props = {}) => {
 //#region src/icons/Radiation.ts
 const Radiation = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 12h.01" }), path({ "d": "M7.5 4.2c-.3-.5-.9-.7-1.3-.4C3.9 5.5 2.3 8.1 2 11c-.1.5.4 1 1 1h5c0-1.5.8-2.8 2-3.4-1.1-1.9-2-3.5-2.5-4.4z" }), path({ "d": "M21 12c.6 0 1-.4 1-1-.3-2.9-1.8-5.5-4.1-7.1-.4-.3-1.1-.2-1.3.3-.6.9-1.5 2.5-2.6 4.3 1.2.7 2 2 2 3.5h5z" }), path({ "d": "M7.5 19.8c-.3.5-.1 1.1.4 1.3 2.6 1.2 5.6 1.2 8.2 0 .5-.2.7-.8.4-1.3-.5-.9-1.4-2.5-2.5-4.3-1.2.7-2.8.7-4 0-1.1 1.8-2 3.4-2.5 4.3z" }));
+	return LucideIcon(props, path({ "d": "M12 12h.01" }), path({ "d": "M14 15.4641a4 4 0 0 1-4 0L7.52786 19.74597 A 1 1 0 0 0 7.99303 21.16211 10 10 0 0 0 16.00697 21.16211 1 1 0 0 0 16.47214 19.74597z" }), path({ "d": "M16 12a4 4 0 0 0-2-3.464l2.472-4.282a1 1 0 0 1 1.46-.305 10 10 0 0 1 4.006 6.94A1 1 0 0 1 21 12z" }), path({ "d": "M8 12a4 4 0 0 1 2-3.464L7.528 4.254a1 1 0 0 0-1.46-.305 10 10 0 0 0-4.006 6.94A1 1 0 0 0 3 12z" }));
 };
 //#endregion
 //#region src/icons/Radical.ts
 const Radical = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M3 12h3.28a1 1 0 0 1 .948.684l2.298 7.934a.5.5 0 0 0 .96-.044L13.82 4.771A1 1 0 0 1 14.792 4H21" }));
+};
+//#endregion
+//#region src/icons/RadioOff.ts
+const RadioOff = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M13.414 13.414a2 2 0 1 1-2.828-2.828" }), path({ "d": "M16.247 7.761a6 6 0 0 1 1.744 4.572" }), path({ "d": "M19.075 4.933a10 10 0 0 1 2.234 10.72" }), path({ "d": "m2 2 20 20" }), path({ "d": "M4.925 19.067a10 10 0 0 1 0-14.134" }), path({ "d": "M7.753 16.239a6 6 0 0 1 0-8.478" }));
 };
 //#endregion
 //#region src/icons/RadioReceiver.ts
@@ -10541,11 +10850,11 @@ const RadioTower = (props = {}) => {
 //#region src/icons/Radio.ts
 const Radio = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4.9 19.1C1 15.2 1 8.8 4.9 4.9" }), path({ "d": "M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5" }), circle({
+	return LucideIcon(props, path({ "d": "M16.247 7.761a6 6 0 0 1 0 8.478" }), path({ "d": "M19.075 4.933a10 10 0 0 1 0 14.134" }), path({ "d": "M4.925 19.067a10 10 0 0 1 0-14.134" }), path({ "d": "M7.753 16.239a6 6 0 0 1 0-8.478" }), circle({
 		cx: "12",
 		cy: "12",
 		"r": "2"
-	}), path({ "d": "M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5" }), path({ "d": "M19.1 4.9C23 8.8 23 15.1 19.1 19" }));
+	}));
 };
 //#endregion
 //#region src/icons/Radius.ts
@@ -10560,12 +10869,6 @@ const Radius = (props = {}) => {
 		cy: "12",
 		"r": "2"
 	}));
-};
-//#endregion
-//#region src/icons/RailSymbol.ts
-const RailSymbol = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M5 15h14" }), path({ "d": "M5 9h14" }), path({ "d": "m14 20-5-5 6-6-5-5" }));
 };
 //#endregion
 //#region src/icons/Rainbow.ts
@@ -10601,55 +10904,71 @@ const Ratio = (props = {}) => {
 //#region src/icons/ReceiptCent.ts
 const ReceiptCent = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z" }), path({ "d": "M12 6.5v11" }), path({ "d": "M15 9.4a4 4 0 1 0 0 5.2" }));
+	return LucideIcon(props, path({ "d": "M12 7v10" }), path({ "d": "M14.828 14.829a4 4 0 0 1-5.656 0 4 4 0 0 1 0-5.657 4 4 0 0 1 5.656 0" }), path({ "d": "M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z" }));
 };
 //#endregion
 //#region src/icons/ReceiptEuro.ts
 const ReceiptEuro = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z" }), path({ "d": "M8 12h5" }), path({ "d": "M16 9.5a4 4 0 1 0 0 5.2" }));
+	return LucideIcon(props, path({ "d": "M15.828 14.829a4 4 0 0 1-5.656 0 4 4 0 0 1 0-5.657 4 4 0 0 1 5.656 0" }), path({ "d": "M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z" }), path({ "d": "M8 12h5" }));
 };
 //#endregion
 //#region src/icons/ReceiptIndianRupee.ts
 const ReceiptIndianRupee = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z" }), path({ "d": "M8 7h8" }), path({ "d": "M12 17.5 8 15h1a4 4 0 0 0 0-8" }), path({ "d": "M8 11h8" }));
+	return LucideIcon(props, path({ "d": "M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z" }), path({ "d": "M8 11h8" }), path({ "d": "M8 7h8" }), path({ "d": "M9 7a4 4 0 0 1 0 8H8l3 2" }));
 };
 //#endregion
 //#region src/icons/ReceiptJapaneseYen.ts
 const ReceiptJapaneseYen = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z" }), path({ "d": "m12 10 3-3" }), path({ "d": "m9 7 3 3v7.5" }), path({ "d": "M9 11h6" }), path({ "d": "M9 15h6" }));
+	return LucideIcon(props, path({ "d": "m12 10 3-3" }), path({ "d": "M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z" }), path({ "d": "M9 11h6" }), path({ "d": "M9 15h6" }), path({ "d": "m9 7 3 3v7" }));
 };
 //#endregion
 //#region src/icons/ReceiptPoundSterling.ts
 const ReceiptPoundSterling = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z" }), path({ "d": "M8 13h5" }), path({ "d": "M10 17V9.5a2.5 2.5 0 0 1 5 0" }), path({ "d": "M8 17h7" }));
+	return LucideIcon(props, path({ "d": "M10 17V9.5a1 1 0 0 1 5 0" }), path({ "d": "M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z" }), path({ "d": "M8 13h5" }), path({ "d": "M8 17h7" }));
 };
 //#endregion
 //#region src/icons/ReceiptRussianRuble.ts
 const ReceiptRussianRuble = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z" }), path({ "d": "M8 15h5" }), path({ "d": "M8 11h5a2 2 0 1 0 0-4h-3v10" }));
+	return LucideIcon(props, path({ "d": "M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z" }), path({ "d": "M8 11h5a2 2 0 0 0 0-4h-3v10" }), path({ "d": "M8 15h5" }));
 };
 //#endregion
 //#region src/icons/ReceiptSwissFranc.ts
 const ReceiptSwissFranc = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z" }), path({ "d": "M10 17V7h5" }), path({ "d": "M10 11h4" }), path({ "d": "M8 15h5" }));
+	return LucideIcon(props, path({ "d": "M10 11h4" }), path({ "d": "M10 17V7h5" }), path({ "d": "M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z" }), path({ "d": "M8 15h5" }));
 };
 //#endregion
 //#region src/icons/ReceiptText.ts
 const ReceiptText = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z" }), path({ "d": "M14 8H8" }), path({ "d": "M16 12H8" }), path({ "d": "M13 16H8" }));
+	return LucideIcon(props, path({ "d": "M13 16H8" }), path({ "d": "M14 8H8" }), path({ "d": "M16 12H8" }), path({ "d": "M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z" }));
+};
+//#endregion
+//#region src/icons/ReceiptTurkishLira.ts
+const ReceiptTurkishLira = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 7v10a5 5 0 0 0 5-5" }), path({ "d": "m14 8-6 3" }), path({ "d": "M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z" }));
 };
 //#endregion
 //#region src/icons/Receipt.ts
 const Receipt = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z" }), path({ "d": "M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" }), path({ "d": "M12 17.5v-11" }));
+	return LucideIcon(props, path({ "d": "M12 17V7" }), path({ "d": "M16 8h-6a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H8" }), path({ "d": "M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z" }));
+};
+//#endregion
+//#region src/icons/RectangleCircle.ts
+const RectangleCircle = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M14 4v16H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z" }), circle({
+		cx: "14",
+		cy: "12",
+		"r": "8"
+	}));
 };
 //#endregion
 //#region src/icons/RectangleEllipsis.ts
@@ -10662,6 +10981,12 @@ const RectangleEllipsis = (props = {}) => {
 		"y": "6",
 		rx: "2"
 	}), path({ "d": "M12 12h.01" }), path({ "d": "M17 12h.01" }), path({ "d": "M7 12h.01" }));
+};
+//#endregion
+//#region src/icons/RectangleGoggles.ts
+const RectangleGoggles = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M20 6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-4a2 2 0 0 1-1.6-.8l-1.6-2.13a1 1 0 0 0-1.6 0L9.6 17.2A2 2 0 0 1 8 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" }));
 };
 //#endregion
 //#region src/icons/RectangleHorizontal.ts
@@ -10719,7 +11044,7 @@ const Redo = (props = {}) => {
 //#region src/icons/RefreshCcwDot.ts
 const RefreshCcwDot = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M3 2v6h6" }), path({ "d": "M21 12A9 9 0 0 0 6 5.3L3 8" }), path({ "d": "M21 22v-6h-6" }), path({ "d": "M3 12a9 9 0 0 0 15 6.7l3-2.7" }), circle({
+	return LucideIcon(props, path({ "d": "M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" }), path({ "d": "M3 3v5h5" }), path({ "d": "M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16" }), path({ "d": "M16 16h5v5" }), circle({
 		cx: "12",
 		cy: "12",
 		"r": "1"
@@ -10783,43 +11108,43 @@ const Repeat = (props = {}) => {
 //#region src/icons/ReplaceAll.ts
 const ReplaceAll = (props = {}) => {
 	const { path, rect } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M14 14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2" }), path({ "d": "M14 4a2 2 0 0 1 2-2" }), path({ "d": "M16 10a2 2 0 0 1-2-2" }), path({ "d": "M20 14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2" }), path({ "d": "M20 2a2 2 0 0 1 2 2" }), path({ "d": "M22 8a2 2 0 0 1-2 2" }), path({ "d": "m3 7 3 3 3-3" }), path({ "d": "M6 10V5a 3 3 0 0 1 3-3h1" }), rect({
-		"x": "2",
+	return LucideIcon(props, path({ "d": "M14 14a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1" }), path({ "d": "M14 4a1 1 0 0 1 1-1" }), path({ "d": "M15 10a1 1 0 0 1-1-1" }), path({ "d": "M19 14a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1" }), path({ "d": "M21 4a1 1 0 0 0-1-1" }), path({ "d": "M21 9a1 1 0 0 1-1 1" }), path({ "d": "m3 7 3 3 3-3" }), path({ "d": "M6 10V5a2 2 0 0 1 2-2h2" }), rect({
+		"x": "3",
 		"y": "14",
-		width: "8",
-		height: "8",
-		rx: "2"
+		width: "7",
+		height: "7",
+		rx: "1"
 	}));
 };
 //#endregion
 //#region src/icons/Replace.ts
 const Replace = (props = {}) => {
 	const { path, rect } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M14 4a2 2 0 0 1 2-2" }), path({ "d": "M16 10a2 2 0 0 1-2-2" }), path({ "d": "M20 2a2 2 0 0 1 2 2" }), path({ "d": "M22 8a2 2 0 0 1-2 2" }), path({ "d": "m3 7 3 3 3-3" }), path({ "d": "M6 10V5a3 3 0 0 1 3-3h1" }), rect({
-		"x": "2",
+	return LucideIcon(props, path({ "d": "M14 4a1 1 0 0 1 1-1" }), path({ "d": "M15 10a1 1 0 0 1-1-1" }), path({ "d": "M21 4a1 1 0 0 0-1-1" }), path({ "d": "M21 9a1 1 0 0 1-1 1" }), path({ "d": "m3 7 3 3 3-3" }), path({ "d": "M6 10V5a2 2 0 0 1 2-2h2" }), rect({
+		"x": "3",
 		"y": "14",
-		width: "8",
-		height: "8",
-		rx: "2"
+		width: "7",
+		height: "7",
+		rx: "1"
 	}));
 };
 //#endregion
 //#region src/icons/ReplyAll.ts
 const ReplyAll = (props = {}) => {
-	const { polyline, path } = van.tags(svgNamespace);
-	return LucideIcon(props, polyline({ points: "7 17 2 12 7 7" }), polyline({ points: "12 17 7 12 12 7" }), path({ "d": "M22 18v-2a4 4 0 0 0-4-4H7" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m12 17-5-5 5-5" }), path({ "d": "M22 18v-2a4 4 0 0 0-4-4H7" }), path({ "d": "m7 17-5-5 5-5" }));
 };
 //#endregion
 //#region src/icons/Reply.ts
 const Reply = (props = {}) => {
-	const { polyline, path } = van.tags(svgNamespace);
-	return LucideIcon(props, polyline({ points: "9 17 4 12 9 7" }), path({ "d": "M20 18v-2a4 4 0 0 0-4-4H4" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M20 18v-2a4 4 0 0 0-4-4H4" }), path({ "d": "m9 17-5-5 5-5" }));
 };
 //#endregion
 //#region src/icons/Rewind.ts
 const Rewind = (props = {}) => {
-	const { polygon } = van.tags(svgNamespace);
-	return LucideIcon(props, polygon({ points: "11 19 2 12 11 5 11 19" }), polygon({ points: "22 19 13 12 22 5 22 19" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 6a2 2 0 0 0-3.414-1.414l-6 6a2 2 0 0 0 0 2.828l6 6A2 2 0 0 0 12 18z" }), path({ "d": "M22 6a2 2 0 0 0-3.414-1.414l-6 6a2 2 0 0 0 0 2.828l6 6A2 2 0 0 0 22 18z" }));
 };
 //#endregion
 //#region src/icons/Ribbon.ts
@@ -10828,26 +11153,22 @@ const Ribbon = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M12 11.22C11 9.997 10 9 10 8a2 2 0 0 1 4 0c0 1-.998 2.002-2.01 3.22" }), path({ "d": "m12 18 2.57-3.5" }), path({ "d": "M6.243 9.016a7 7 0 0 1 11.507-.009" }), path({ "d": "M9.35 14.53 12 11.22" }), path({ "d": "M9.35 14.53C7.728 12.246 6 10.221 6 7a6 5 0 0 1 12 0c-.005 3.22-1.778 5.235-3.43 7.5l3.557 4.527a1 1 0 0 1-.203 1.43l-1.894 1.36a1 1 0 0 1-1.384-.215L12 18l-2.679 3.593a1 1 0 0 1-1.39.213l-1.865-1.353a1 1 0 0 1-.203-1.422z" }));
 };
 //#endregion
+//#region src/icons/Road.ts
+const Road = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 17v4" }), path({ "d": "M12 5V3" }), path({ "d": "M12 9v3" }), path({ "d": "M2.077 18.449A2 2 0 0 0 4 21h16a2 2 0 0 0 1.924-2.55l-4-14A2 2 0 0 0 16 3H8a2 2 0 0 0-1.924 1.45z" }));
+};
+//#endregion
 //#region src/icons/Rocket.ts
 const Rocket = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" }), path({ "d": "m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" }), path({ "d": "M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" }), path({ "d": "M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" }));
+	return LucideIcon(props, path({ "d": "M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" }), path({ "d": "M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09" }), path({ "d": "M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z" }), path({ "d": "M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" }));
 };
 //#endregion
 //#region src/icons/RockingChair.ts
 const RockingChair = (props = {}) => {
-	const { polyline, line, path } = van.tags(svgNamespace);
-	return LucideIcon(props, polyline({ points: "3.5 2 6.5 12.5 18 12.5" }), line({
-		x1: "9.5",
-		x2: "5.5",
-		y1: "12.5",
-		y2: "20"
-	}), line({
-		x1: "15",
-		x2: "18.5",
-		y1: "12.5",
-		y2: "20"
-	}), path({ "d": "M2.75 18a13 13 0 0 0 18.5 0" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m15 13 3.708 7.416" }), path({ "d": "M3 19a15 15 0 0 0 18 0" }), path({ "d": "m3 2 3.21 9.633A2 2 0 0 0 8.109 13H18" }), path({ "d": "m9 13-3.708 7.416" }));
 };
 //#endregion
 //#region src/icons/RollerCoaster.ts
@@ -10856,10 +11177,30 @@ const RollerCoaster = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M6 19V5" }), path({ "d": "M10 19V6.8" }), path({ "d": "M14 19v-7.8" }), path({ "d": "M18 5v4" }), path({ "d": "M18 19v-6" }), path({ "d": "M22 19V9" }), path({ "d": "M2 19V9a4 4 0 0 1 4-4c2 0 4 1.33 6 4s4 4 6 4a4 4 0 1 0-3-6.65" }));
 };
 //#endregion
+//#region src/icons/Rose.ts
+const Rose = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M17 10h-1a4 4 0 1 1 4-4v.534" }), path({ "d": "M17 6h1a4 4 0 0 1 1.42 7.74l-2.29.87a6 6 0 0 1-5.339-10.68l2.069-1.31" }), path({ "d": "M4.5 17c2.8-.5 4.4 0 5.5.8s1.8 2.2 2.3 3.7c-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2" }), path({ "d": "M9.77 12C4 15 2 22 2 22" }), circle({
+		cx: "17",
+		cy: "8",
+		"r": "2"
+	}));
+};
+//#endregion
 //#region src/icons/Rotate3d.ts
 const Rotate3d = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2" }), path({ "d": "m15.194 13.707 3.814 1.86-1.86 3.814" }), path({ "d": "M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4" }));
+};
+//#endregion
+//#region src/icons/RotateCcwKey.ts
+const RotateCcwKey = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 7v6" }), path({ "d": "M12 9h2" }), path({ "d": "M3 12a9 9 0 1 0 9-9 9.74 9.74 0 0 0-6.74 2.74L3 8" }), path({ "d": "M3 3v5h5" }), circle({
+		cx: "12",
+		cy: "15",
+		"r": "2"
+	}));
 };
 //#endregion
 //#region src/icons/RotateCcwSquare.ts
@@ -10972,6 +11313,18 @@ const Rss = (props = {}) => {
 	}));
 };
 //#endregion
+//#region src/icons/RulerDimensionLine.ts
+const RulerDimensionLine = (props = {}) => {
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 15v-3" }), path({ "d": "M14 15v-3" }), path({ "d": "M18 15v-3" }), path({ "d": "M2 8V4" }), path({ "d": "M22 6H2" }), path({ "d": "M22 8V4" }), path({ "d": "M6 15v-3" }), rect({
+		"x": "2",
+		"y": "12",
+		width: "20",
+		height: "8",
+		rx: "2"
+	}));
+};
+//#endregion
 //#region src/icons/Ruler.ts
 const Ruler = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
@@ -10987,7 +11340,7 @@ const RussianRuble = (props = {}) => {
 //#region src/icons/Sailboat.ts
 const Sailboat = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M22 18H2a4 4 0 0 0 4 4h12a4 4 0 0 0 4-4Z" }), path({ "d": "M21 14 10 2 3 14h18Z" }), path({ "d": "M10 2v16" }));
+	return LucideIcon(props, path({ "d": "M10 2v15" }), path({ "d": "M7 22a4 4 0 0 1-4-4 1 1 0 0 1 1-1h16a1 1 0 0 1 1 1 4 4 0 0 1-4 4z" }), path({ "d": "M9.159 2.46a1 1 0 0 1 1.521-.193l9.977 8.98A1 1 0 0 1 20 13H4a1 1 0 0 1-.824-1.567z" }));
 };
 //#endregion
 //#region src/icons/Salad.ts
@@ -11017,7 +11370,13 @@ const SatelliteDish = (props = {}) => {
 //#region src/icons/Satellite.ts
 const Satellite = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M13 7 9 3 5 7l4 4" }), path({ "d": "m17 11 4 4-4 4-4-4" }), path({ "d": "m8 12 4 4 6-6-4-4Z" }), path({ "d": "m16 8 3-3" }), path({ "d": "M9 21a6 6 0 0 0-6-6" }));
+	return LucideIcon(props, path({ "d": "m13.5 6.5-3.148-3.148a1.205 1.205 0 0 0-1.704 0L6.352 5.648a1.205 1.205 0 0 0 0 1.704L9.5 10.5" }), path({ "d": "M16.5 7.5 19 5" }), path({ "d": "m17.5 10.5 3.148 3.148a1.205 1.205 0 0 1 0 1.704l-2.296 2.296a1.205 1.205 0 0 1-1.704 0L13.5 14.5" }), path({ "d": "M9 21a6 6 0 0 0-6-6" }), path({ "d": "M9.352 10.648a1.205 1.205 0 0 0 0 1.704l2.296 2.296a1.205 1.205 0 0 0 1.704 0l4.296-4.296a1.205 1.205 0 0 0 0-1.704l-2.296-2.296a1.205 1.205 0 0 0-1.704 0z" }));
+};
+//#endregion
+//#region src/icons/SaudiRiyal.ts
+const SaudiRiyal = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m20 19.5-5.5 1.2" }), path({ "d": "M14.5 4v11.22a1 1 0 0 0 1.242.97L20 15.2" }), path({ "d": "m2.978 19.351 5.549-1.363A2 2 0 0 0 10 16V2" }), path({ "d": "M20 10 4 13.5" }));
 };
 //#endregion
 //#region src/icons/SaveAll.ts
@@ -11055,7 +11414,7 @@ const Scale3d = (props = {}) => {
 //#region src/icons/Scale.ts
 const Scale = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" }), path({ "d": "m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" }), path({ "d": "M7 21h10" }), path({ "d": "M12 3v18" }), path({ "d": "M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" }));
+	return LucideIcon(props, path({ "d": "M12 3v18" }), path({ "d": "m19 8 3 8a5 5 0 0 1-6 0zV7" }), path({ "d": "M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1" }), path({ "d": "m5 8 3 8a5 5 0 0 1-6 0zV7" }), path({ "d": "M7 21h10" }));
 };
 //#endregion
 //#region src/icons/Scaling.ts
@@ -11089,7 +11448,7 @@ const ScanFace = (props = {}) => {
 //#region src/icons/ScanHeart.ts
 const ScanHeart = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M11.246 16.657a1 1 0 0 0 1.508 0l3.57-4.101A2.75 2.75 0 1 0 12 9.168a2.75 2.75 0 1 0-4.324 3.388z" }), path({ "d": "M17 3h2a2 2 0 0 1 2 2v2" }), path({ "d": "M21 17v2a2 2 0 0 1-2 2h-2" }), path({ "d": "M3 7V5a2 2 0 0 1 2-2h2" }), path({ "d": "M7 21H5a2 2 0 0 1-2-2v-2" }));
+	return LucideIcon(props, path({ "d": "M17 3h2a2 2 0 0 1 2 2v2" }), path({ "d": "M21 17v2a2 2 0 0 1-2 2h-2" }), path({ "d": "M3 7V5a2 2 0 0 1 2-2h2" }), path({ "d": "M7 21H5a2 2 0 0 1-2-2v-2" }), path({ "d": "M7.828 13.07A3 3 0 0 1 12 8.764a3 3 0 0 1 4.172 4.306l-3.447 3.62a1 1 0 0 1-1.449 0z" }));
 };
 //#endregion
 //#region src/icons/ScanLine.ts
@@ -11135,7 +11494,7 @@ const Scan = (props = {}) => {
 //#region src/icons/School.ts
 const School = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M14 22v-4a2 2 0 1 0-4 0v4" }), path({ "d": "m18 10 3.447 1.724a1 1 0 0 1 .553.894V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7.382a1 1 0 0 1 .553-.894L6 10" }), path({ "d": "M18 5v17" }), path({ "d": "m4 6 7.106-3.553a2 2 0 0 1 1.788 0L20 6" }), path({ "d": "M6 5v17" }), circle({
+	return LucideIcon(props, path({ "d": "M14 21v-3a2 2 0 0 0-4 0v3" }), path({ "d": "M18 4.933V21" }), path({ "d": "m4 6 7.106-3.79a2 2 0 0 1 1.788 0L20 6" }), path({ "d": "m6 11-3.52 2.147a1 1 0 0 0-.48.854V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a1 1 0 0 0-.48-.853L18 11" }), path({ "d": "M6 4.933V21" }), circle({
 		cx: "12",
 		cy: "9",
 		"r": "2"
@@ -11170,6 +11529,20 @@ const Scissors = (props = {}) => {
 	}), path({ "d": "M14.8 14.8 20 20" }));
 };
 //#endregion
+//#region src/icons/Scooter.ts
+const Scooter = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M21 4h-3.5l2 11.05" }), path({ "d": "M6.95 17h5.142c.523 0 .95-.406 1.063-.916a6.5 6.5 0 0 1 5.345-5.009" }), circle({
+		cx: "19.5",
+		cy: "17.5",
+		"r": "2.5"
+	}), circle({
+		cx: "4.5",
+		cy: "17.5",
+		"r": "2.5"
+	}));
+};
+//#endregion
 //#region src/icons/ScreenShareOff.ts
 const ScreenShareOff = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
@@ -11192,6 +11565,16 @@ const ScrollText = (props = {}) => {
 const Scroll = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M19 17V5a2 2 0 0 0-2-2H4" }), path({ "d": "M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3" }));
+};
+//#endregion
+//#region src/icons/SearchAlert.ts
+const SearchAlert = (props = {}) => {
+	const { circle, path } = van.tags(svgNamespace);
+	return LucideIcon(props, circle({
+		cx: "11",
+		cy: "11",
+		"r": "8"
+	}), path({ "d": "m21 21-4.3-4.3" }), path({ "d": "M11 7v4" }), path({ "d": "M11 15h.01" }));
 };
 //#endregion
 //#region src/icons/SearchCheck.ts
@@ -11236,12 +11619,12 @@ const SearchX = (props = {}) => {
 //#endregion
 //#region src/icons/Search.ts
 const Search = (props = {}) => {
-	const { circle, path } = van.tags(svgNamespace);
-	return LucideIcon(props, circle({
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m21 21-4.34-4.34" }), circle({
 		cx: "11",
 		cy: "11",
 		"r": "8"
-	}), path({ "d": "m21 21-4.3-4.3" }));
+	}));
 };
 //#endregion
 //#region src/icons/Section.ts
@@ -11282,34 +11665,20 @@ const Send = (props = {}) => {
 //#endregion
 //#region src/icons/SeparatorHorizontal.ts
 const SeparatorHorizontal = (props = {}) => {
-	const { line, polyline } = van.tags(svgNamespace);
-	return LucideIcon(props, line({
-		x1: "3",
-		x2: "21",
-		y1: "12",
-		y2: "12"
-	}), polyline({ points: "8 8 12 4 16 8" }), polyline({ points: "16 16 12 20 8 16" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m16 16-4 4-4-4" }), path({ "d": "M3 12h18" }), path({ "d": "m8 8 4-4 4 4" }));
 };
 //#endregion
 //#region src/icons/SeparatorVertical.ts
 const SeparatorVertical = (props = {}) => {
-	const { line, polyline } = van.tags(svgNamespace);
-	return LucideIcon(props, line({
-		x1: "12",
-		x2: "12",
-		y1: "3",
-		y2: "21"
-	}), polyline({ points: "8 8 4 12 8 16" }), polyline({ points: "16 16 20 12 16 8" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 3v18" }), path({ "d": "m16 16 4-4-4-4" }), path({ "d": "m8 8-4 4 4 4" }));
 };
 //#endregion
 //#region src/icons/ServerCog.ts
 const ServerCog = (props = {}) => {
-	const { circle, path } = van.tags(svgNamespace);
-	return LucideIcon(props, circle({
-		cx: "12",
-		cy: "12",
-		"r": "3"
-	}), path({ "d": "M4.5 10H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-.5" }), path({ "d": "M4.5 14H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-.5" }), path({ "d": "M6 6h.01" }), path({ "d": "M6 18h.01" }), path({ "d": "m15.7 13.4-.9-.3" }), path({ "d": "m9.2 10.9-.9-.3" }), path({ "d": "m10.6 15.7.3-.9" }), path({ "d": "m13.6 15.7-.4-1" }), path({ "d": "m10.8 9.3-.4-1" }), path({ "d": "m8.3 13.6 1-.4" }), path({ "d": "m14.7 10.8 1-.4" }), path({ "d": "m13.4 8.3-.3.9" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m10.852 14.772-.383.923" }), path({ "d": "M13.148 14.772a3 3 0 1 0-2.296-5.544l-.383-.923" }), path({ "d": "m13.148 9.228.383-.923" }), path({ "d": "m13.53 15.696-.382-.924a3 3 0 1 1-2.296-5.544" }), path({ "d": "m14.772 10.852.923-.383" }), path({ "d": "m14.772 13.148.923.383" }), path({ "d": "M4.5 10H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-.5" }), path({ "d": "M4.5 14H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-.5" }), path({ "d": "M6 18h.01" }), path({ "d": "M6 6h.01" }), path({ "d": "m9.228 10.852-.923-.383" }), path({ "d": "m9.228 13.148-.923.383" }));
 };
 //#endregion
 //#region src/icons/ServerCrash.ts
@@ -11357,7 +11726,7 @@ const Server = (props = {}) => {
 //#region src/icons/Settings2.ts
 const Settings2 = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M20 7h-9" }), path({ "d": "M14 17H5" }), circle({
+	return LucideIcon(props, path({ "d": "M14 17H5" }), path({ "d": "M19 7h-9" }), circle({
 		cx: "17",
 		cy: "17",
 		"r": "3"
@@ -11371,7 +11740,7 @@ const Settings2 = (props = {}) => {
 //#region src/icons/Settings.ts
 const Settings = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" }), circle({
+	return LucideIcon(props, path({ "d": "M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915" }), circle({
 		cx: "12",
 		cy: "12",
 		"r": "3"
@@ -11424,13 +11793,8 @@ const Share2 = (props = {}) => {
 //#endregion
 //#region src/icons/Share.ts
 const Share = (props = {}) => {
-	const { path, polyline, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" }), polyline({ points: "16 6 12 2 8 6" }), line({
-		x1: "12",
-		x2: "12",
-		y1: "2",
-		y2: "15"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 2v13" }), path({ "d": "m16 6-4-4-4 4" }), path({ "d": "M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" }));
 };
 //#endregion
 //#region src/icons/Sheet.ts
@@ -11472,6 +11836,12 @@ const Shell = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M14 11a2 2 0 1 1-4 0 4 4 0 0 1 8 0 6 6 0 0 1-12 0 8 8 0 0 1 16 0 10 10 0 1 1-20 0 11.93 11.93 0 0 1 2.42-7.22 2 2 0 1 1 3.16 2.44" }));
 };
 //#endregion
+//#region src/icons/ShelvingUnit.ts
+const ShelvingUnit = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 12V9a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3" }), path({ "d": "M16 20v-3a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3" }), path({ "d": "M20 22V2" }), path({ "d": "M4 12h16" }), path({ "d": "M4 20h16" }), path({ "d": "M4 2v20" }), path({ "d": "M4 4h16" }));
+};
+//#endregion
 //#region src/icons/ShieldAlert.ts
 const ShieldAlert = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
@@ -11488,6 +11858,26 @@ const ShieldBan = (props = {}) => {
 const ShieldCheck = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" }), path({ "d": "m9 12 2 2 4-4" }));
+};
+//#endregion
+//#region src/icons/ShieldCogCorner.ts
+const ShieldCogCorner = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M11 22c-3.806-1.45-7-3.966-7-9V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1v4" }), path({ "d": "M14.923 16.547 14 16.164" }), path({ "d": "m14.923 18.843-.923.383" }), path({ "d": "M16.547 14.923 16.164 14" }), path({ "d": "m16.547 20.467-.383.924" }), path({ "d": "m18.843 14.923.383-.923" }), path({ "d": "m19.225 21.391-.382-.924" }), path({ "d": "m20.467 16.547.923-.383" }), path({ "d": "m20.467 18.843.923.383" }), circle({
+		cx: "17.695",
+		cy: "17.695",
+		"r": "3"
+	}));
+};
+//#endregion
+//#region src/icons/ShieldCog.ts
+const ShieldCog = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m10.929 14.467-.383.924" }), path({ "d": "M10.929 8.923 10.546 8" }), path({ "d": "M13.225 8.923 13.608 8" }), path({ "d": "m13.607 15.391-.382-.924" }), path({ "d": "m14.849 10.547.923-.383" }), path({ "d": "m14.849 12.843.923.383" }), path({ "d": "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" }), path({ "d": "m9.305 10.547-.923-.383" }), path({ "d": "m9.305 12.843-.923.383" }), circle({
+		cx: "12.077",
+		cy: "11.695",
+		"r": "3"
+	}));
 };
 //#endregion
 //#region src/icons/ShieldEllipsis.ts
@@ -11520,8 +11910,8 @@ const ShieldPlus = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" }), path({ "d": "M9 12h6" }), path({ "d": "M12 9v6" }));
 };
 //#endregion
-//#region src/icons/ShieldQuestion.ts
-const ShieldQuestion = (props = {}) => {
+//#region src/icons/ShieldQuestionMark.ts
+const ShieldQuestionMark = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" }), path({ "d": "M9.1 9a3 3 0 0 1 5.82 1c0 2-3 3-3 3" }), path({ "d": "M12 17h.01" }));
 };
@@ -11577,7 +11967,7 @@ const Shirt = (props = {}) => {
 //#region src/icons/ShoppingBag.ts
 const ShoppingBag = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" }), path({ "d": "M3 6h18" }), path({ "d": "M16 10a4 4 0 0 1-8 0" }));
+	return LucideIcon(props, path({ "d": "M16 10a4 4 0 0 1-8 0" }), path({ "d": "M3.103 6.034h17.794" }), path({ "d": "M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" }));
 };
 //#endregion
 //#region src/icons/ShoppingBasket.ts
@@ -11603,13 +11993,25 @@ const ShoppingCart = (props = {}) => {
 //#region src/icons/Shovel.ts
 const Shovel = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M2 22v-5l5-5 5 5-5 5z" }), path({ "d": "M9.5 14.5 16 8" }), path({ "d": "m17 2 5 5-.5.5a3.53 3.53 0 0 1-5 0s0 0 0 0a3.53 3.53 0 0 1 0-5L17 2" }));
+	return LucideIcon(props, path({ "d": "M21.56 4.56a1.5 1.5 0 0 1 0 2.122l-.47.47a3 3 0 0 1-4.212-.03 3 3 0 0 1 0-4.243l.44-.44a1.5 1.5 0 0 1 2.121 0z" }), path({ "d": "M3 22a1 1 0 0 1-1-1v-3.586a1 1 0 0 1 .293-.707l3.355-3.355a1.205 1.205 0 0 1 1.704 0l3.296 3.296a1.205 1.205 0 0 1 0 1.704l-3.355 3.355a1 1 0 0 1-.707.293z" }), path({ "d": "m9 15 7.879-7.878" }));
 };
 //#endregion
 //#region src/icons/ShowerHead.ts
 const ShowerHead = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "m4 4 2.5 2.5" }), path({ "d": "M13.5 6.5a4.95 4.95 0 0 0-7 7" }), path({ "d": "M15 5 5 15" }), path({ "d": "M14 17v.01" }), path({ "d": "M10 16v.01" }), path({ "d": "M13 13v.01" }), path({ "d": "M16 10v.01" }), path({ "d": "M11 20v.01" }), path({ "d": "M17 14v.01" }), path({ "d": "M20 11v.01" }));
+};
+//#endregion
+//#region src/icons/Shredder.ts
+const Shredder = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M4 13V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v5" }), path({ "d": "M14 2v5a1 1 0 0 0 1 1h5" }), path({ "d": "M10 22v-5" }), path({ "d": "M14 19v-2" }), path({ "d": "M18 20v-3" }), path({ "d": "M2 13h20" }), path({ "d": "M6 20v-3" }));
+};
+//#endregion
+//#region src/icons/Shrimp.ts
+const Shrimp = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M11 12h.01" }), path({ "d": "M13 22c.5-.5 1.12-1 2.5-1-1.38 0-2-.5-2.5-1" }), path({ "d": "M14 2a3.28 3.28 0 0 1-3.227 1.798l-6.17-.561A2.387 2.387 0 1 0 4.387 8H15.5a1 1 0 0 1 0 13 1 1 0 0 0 0-5H12a7 7 0 0 1-7-7V8" }), path({ "d": "M14 8a8.5 8.5 0 0 1 0 8" }), path({ "d": "M16 16c2 0 4.5-4 4-6" }));
 };
 //#endregion
 //#region src/icons/Shrink.ts
@@ -11621,7 +12023,7 @@ const Shrink = (props = {}) => {
 //#region src/icons/Shrub.ts
 const Shrub = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 22v-7l-2-2" }), path({ "d": "M17 8v.8A6 6 0 0 1 13.8 20H10A6.5 6.5 0 0 1 7 8a5 5 0 0 1 10 0Z" }), path({ "d": "m14 14-2 2" }));
+	return LucideIcon(props, path({ "d": "M12 22v-5.172a2 2 0 0 0-.586-1.414L9.5 13.5" }), path({ "d": "M14.5 14.5 12 17" }), path({ "d": "M17 8.8A6 6 0 0 1 13.8 20H10A6.5 6.5 0 0 1 7 8a5 5 0 0 1 10 0z" }));
 };
 //#endregion
 //#region src/icons/Shuffle.ts
@@ -11681,7 +12083,7 @@ const SignpostBig = (props = {}) => {
 //#region src/icons/Signpost.ts
 const Signpost = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 13v8" }), path({ "d": "M12 3v3" }), path({ "d": "M18 6a2 2 0 0 1 1.387.56l2.307 2.22a1 1 0 0 1 0 1.44l-2.307 2.22A2 2 0 0 1 18 13H6a2 2 0 0 1-1.387-.56l-2.306-2.22a1 1 0 0 1 0-1.44l2.306-2.22A2 2 0 0 1 6 6z" }));
+	return LucideIcon(props, path({ "d": "M12 13v8" }), path({ "d": "M12 3v3" }), path({ "d": "M2.354 10.354a1.207 1.207 0 0 1 0-1.708l2.06-2.06A2 2 0 0 1 5.828 6h12.344a2 2 0 0 1 1.414.586l2.06 2.06a1.207 1.207 0 0 1 0 1.708l-2.06 2.06a2 2 0 0 1-1.414.586H5.828a2 2 0 0 1-1.414-.586z" }));
 };
 //#endregion
 //#region src/icons/Siren.ts
@@ -11692,24 +12094,14 @@ const Siren = (props = {}) => {
 //#endregion
 //#region src/icons/SkipBack.ts
 const SkipBack = (props = {}) => {
-	const { polygon, line } = van.tags(svgNamespace);
-	return LucideIcon(props, polygon({ points: "19 20 9 12 19 4 19 20" }), line({
-		x1: "5",
-		x2: "5",
-		y1: "19",
-		y2: "5"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M17.971 4.285A2 2 0 0 1 21 6v12a2 2 0 0 1-3.029 1.715l-9.997-5.998a2 2 0 0 1-.003-3.432z" }), path({ "d": "M3 20V4" }));
 };
 //#endregion
 //#region src/icons/SkipForward.ts
 const SkipForward = (props = {}) => {
-	const { polygon, line } = van.tags(svgNamespace);
-	return LucideIcon(props, polygon({ points: "5 4 15 12 5 20 5 4" }), line({
-		x1: "19",
-		x2: "19",
-		y1: "5",
-		y2: "19"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M21 4v16" }), path({ "d": "M6.029 4.285A2 2 0 0 0 3 6v12a2 2 0 0 0 3.029 1.715l9.997-5.998a2 2 0 0 0 .003-3.432z" }));
 };
 //#endregion
 //#region src/icons/Skull.ts
@@ -11726,36 +12118,6 @@ const Skull = (props = {}) => {
 	}));
 };
 //#endregion
-//#region src/icons/Slack.ts
-const Slack = (props = {}) => {
-	const { rect, path } = van.tags(svgNamespace);
-	return LucideIcon(props, rect({
-		width: "3",
-		height: "8",
-		"x": "13",
-		"y": "2",
-		rx: "1.5"
-	}), path({ "d": "M19 8.5V10h1.5A1.5 1.5 0 1 0 19 8.5" }), rect({
-		width: "3",
-		height: "8",
-		"x": "8",
-		"y": "14",
-		rx: "1.5"
-	}), path({ "d": "M5 15.5V14H3.5A1.5 1.5 0 1 0 5 15.5" }), rect({
-		width: "8",
-		height: "3",
-		"x": "14",
-		"y": "13",
-		rx: "1.5"
-	}), path({ "d": "M15.5 19H14v1.5a1.5 1.5 0 1 0 1.5-1.5" }), rect({
-		width: "8",
-		height: "3",
-		"x": "2",
-		"y": "8",
-		rx: "1.5"
-	}), path({ "d": "M8.5 5H10V3.5A1.5 1.5 0 1 0 8.5 5" }));
-};
-//#endregion
 //#region src/icons/Slash.ts
 const Slash = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
@@ -11770,104 +12132,14 @@ const Slice = (props = {}) => {
 //#endregion
 //#region src/icons/SlidersHorizontal.ts
 const SlidersHorizontal = (props = {}) => {
-	const { line } = van.tags(svgNamespace);
-	return LucideIcon(props, line({
-		x1: "21",
-		x2: "14",
-		y1: "4",
-		y2: "4"
-	}), line({
-		x1: "10",
-		x2: "3",
-		y1: "4",
-		y2: "4"
-	}), line({
-		x1: "21",
-		x2: "12",
-		y1: "12",
-		y2: "12"
-	}), line({
-		x1: "8",
-		x2: "3",
-		y1: "12",
-		y2: "12"
-	}), line({
-		x1: "21",
-		x2: "16",
-		y1: "20",
-		y2: "20"
-	}), line({
-		x1: "12",
-		x2: "3",
-		y1: "20",
-		y2: "20"
-	}), line({
-		x1: "14",
-		x2: "14",
-		y1: "2",
-		y2: "6"
-	}), line({
-		x1: "8",
-		x2: "8",
-		y1: "10",
-		y2: "14"
-	}), line({
-		x1: "16",
-		x2: "16",
-		y1: "18",
-		y2: "22"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 5H3" }), path({ "d": "M12 19H3" }), path({ "d": "M14 3v4" }), path({ "d": "M16 17v4" }), path({ "d": "M21 12h-9" }), path({ "d": "M21 19h-5" }), path({ "d": "M21 5h-7" }), path({ "d": "M8 10v4" }), path({ "d": "M8 12H3" }));
 };
 //#endregion
 //#region src/icons/SlidersVertical.ts
 const SlidersVertical = (props = {}) => {
-	const { line } = van.tags(svgNamespace);
-	return LucideIcon(props, line({
-		x1: "4",
-		x2: "4",
-		y1: "21",
-		y2: "14"
-	}), line({
-		x1: "4",
-		x2: "4",
-		y1: "10",
-		y2: "3"
-	}), line({
-		x1: "12",
-		x2: "12",
-		y1: "21",
-		y2: "12"
-	}), line({
-		x1: "12",
-		x2: "12",
-		y1: "8",
-		y2: "3"
-	}), line({
-		x1: "20",
-		x2: "20",
-		y1: "21",
-		y2: "16"
-	}), line({
-		x1: "20",
-		x2: "20",
-		y1: "12",
-		y2: "3"
-	}), line({
-		x1: "2",
-		x2: "6",
-		y1: "14",
-		y2: "14"
-	}), line({
-		x1: "10",
-		x2: "14",
-		y1: "8",
-		y2: "8"
-	}), line({
-		x1: "18",
-		x2: "22",
-		y1: "16",
-		y2: "16"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 8h4" }), path({ "d": "M12 21v-9" }), path({ "d": "M12 8V3" }), path({ "d": "M17 16h4" }), path({ "d": "M19 12V3" }), path({ "d": "M19 21v-5" }), path({ "d": "M3 14h4" }), path({ "d": "M5 10V3" }), path({ "d": "M5 21v-7" }));
 };
 //#endregion
 //#region src/icons/SmartphoneCharging.ts
@@ -11960,10 +12232,22 @@ const Snowflake = (props = {}) => {
 	return LucideIcon(props, path({ "d": "m10 20-1.25-2.5L6 18" }), path({ "d": "M10 4 8.75 6.5 6 6" }), path({ "d": "m14 20 1.25-2.5L18 18" }), path({ "d": "m14 4 1.25 2.5L18 6" }), path({ "d": "m17 21-3-6h-4" }), path({ "d": "m17 3-3 6 1.5 3" }), path({ "d": "M2 12h6.5L10 9" }), path({ "d": "m20 10-1.5 2 1.5 2" }), path({ "d": "M22 12h-6.5L14 15" }), path({ "d": "m4 10 1.5 2L4 14" }), path({ "d": "m7 21 3-6-1.5-3" }), path({ "d": "m7 3 3 6h4" }));
 };
 //#endregion
+//#region src/icons/SoapDispenserDroplet.ts
+const SoapDispenserDroplet = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10.5 2v4" }), path({ "d": "M14 2H7a2 2 0 0 0-2 2" }), path({ "d": "M19.29 14.76A6.67 6.67 0 0 1 17 11a6.6 6.6 0 0 1-2.29 3.76c-1.15.92-1.71 2.04-1.71 3.19 0 2.22 1.8 4.05 4 4.05s4-1.83 4-4.05c0-1.16-.57-2.26-1.71-3.19" }), path({ "d": "M9.607 21H6a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h7V7a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3" }));
+};
+//#endregion
 //#region src/icons/Sofa.ts
 const Sofa = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3" }), path({ "d": "M2 16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z" }), path({ "d": "M4 18v2" }), path({ "d": "M20 18v2" }), path({ "d": "M12 4v9" }));
+};
+//#endregion
+//#region src/icons/SolarPanel.ts
+const SolarPanel = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M11 2h2" }), path({ "d": "m14.28 14-4.56 8" }), path({ "d": "m21 22-1.558-4H4.558" }), path({ "d": "M3 10v2" }), path({ "d": "M6.245 15.04A2 2 0 0 1 8 14h12a1 1 0 0 1 .864 1.505l-3.11 5.457A2 2 0 0 1 16 22H4a1 1 0 0 1-.863-1.506z" }), path({ "d": "M7 2a4 4 0 0 1-4 4" }), path({ "d": "m8.66 7.66 1.41 1.41" }));
 };
 //#endregion
 //#region src/icons/Soup.ts
@@ -11981,19 +12265,23 @@ const Space = (props = {}) => {
 //#region src/icons/Spade.ts
 const Spade = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M5 9c-1.5 1.5-3 3.2-3 5.5A5.5 5.5 0 0 0 7.5 20c1.8 0 3-.5 4.5-2 1.5 1.5 2.7 2 4.5 2a5.5 5.5 0 0 0 5.5-5.5c0-2.3-1.5-4-3-5.5l-7-7-7 7Z" }), path({ "d": "M12 18v4" }));
+	return LucideIcon(props, path({ "d": "M12 18v4" }), path({ "d": "M2 14.499a5.5 5.5 0 0 0 9.591 3.675.6.6 0 0 1 .818.001A5.5 5.5 0 0 0 22 14.5c0-2.29-1.5-4-3-5.5l-5.492-5.312a2 2 0 0 0-3-.02L5 8.999c-1.5 1.5-3 3.2-3 5.5" }));
 };
 //#endregion
 //#region src/icons/Sparkle.ts
 const Sparkle = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" }));
+	return LucideIcon(props, path({ "d": "M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" }));
 };
 //#endregion
 //#region src/icons/Sparkles.ts
 const Sparkles = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" }), path({ "d": "M20 3v4" }), path({ "d": "M22 5h-4" }), path({ "d": "M4 17v2" }), path({ "d": "M5 18H3" }));
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" }), path({ "d": "M20 2v4" }), path({ "d": "M22 4h-4" }), circle({
+		cx: "4",
+		cy: "20",
+		"r": "2"
+	}));
 };
 //#endregion
 //#region src/icons/Speaker.ts
@@ -12030,6 +12318,20 @@ const SpellCheck = (props = {}) => {
 	return LucideIcon(props, path({ "d": "m6 16 6-12 6 12" }), path({ "d": "M8 12h8" }), path({ "d": "m16 20 2 2 4-4" }));
 };
 //#endregion
+//#region src/icons/SplinePointer.ts
+const SplinePointer = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12.034 12.681a.498.498 0 0 1 .647-.647l9 3.5a.5.5 0 0 1-.033.943l-3.444 1.068a1 1 0 0 0-.66.66l-1.067 3.443a.5.5 0 0 1-.943.033z" }), path({ "d": "M5 17A12 12 0 0 1 17 5" }), circle({
+		cx: "19",
+		cy: "5",
+		"r": "2"
+	}), circle({
+		cx: "5",
+		cy: "19",
+		"r": "2"
+	}));
+};
+//#endregion
 //#region src/icons/Spline.ts
 const Spline = (props = {}) => {
 	const { circle, path } = van.tags(svgNamespace);
@@ -12050,6 +12352,24 @@ const Split = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M16 3h5v5" }), path({ "d": "M8 3H3v5" }), path({ "d": "M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3" }), path({ "d": "m15 9 6-6" }));
 };
 //#endregion
+//#region src/icons/Spool.ts
+const Spool = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M17 13.44 4.442 17.082A2 2 0 0 0 4.982 21H19a2 2 0 0 0 .558-3.921l-1.115-.32A2 2 0 0 1 17 14.837V7.66" }), path({ "d": "m7 10.56 12.558-3.642A2 2 0 0 0 19.018 3H5a2 2 0 0 0-.558 3.921l1.115.32A2 2 0 0 1 7 9.163v7.178" }));
+};
+//#endregion
+//#region src/icons/SportShoe.ts
+const SportShoe = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m15 10.42 4.8-5.07" }), path({ "d": "M19 18h3" }), path({ "d": "M9.5 22 21.414 9.415A2 2 0 0 0 21.2 6.4l-5.61-4.208A1 1 0 0 0 14 3v2a2 2 0 0 1-1.394 1.906L8.677 8.053A1 1 0 0 0 8 9c-.155 6.393-2.082 9-4 9a2 2 0 0 0 0 4h14" }));
+};
+//#endregion
+//#region src/icons/Spotlight.ts
+const Spotlight = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M15.295 19.562 16 22" }), path({ "d": "m17 16 3.758 2.098" }), path({ "d": "m19 12.5 3.026-.598" }), path({ "d": "M7.61 6.3a3 3 0 0 0-3.92 1.3l-1.38 2.79a3 3 0 0 0 1.3 3.91l6.89 3.597a1 1 0 0 0 1.342-.447l3.106-6.211a1 1 0 0 0-.447-1.341z" }), path({ "d": "M8 9V2" }));
+};
+//#endregion
 //#region src/icons/SprayCan.ts
 const SprayCan = (props = {}) => {
 	const { path, rect } = van.tags(svgNamespace);
@@ -12064,7 +12384,7 @@ const SprayCan = (props = {}) => {
 //#region src/icons/Sprout.ts
 const Sprout = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M7 20h10" }), path({ "d": "M10 20c5.5-2.5.8-6.4 3-10" }), path({ "d": "M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z" }), path({ "d": "M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z" }));
+	return LucideIcon(props, path({ "d": "M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4 4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3" }), path({ "d": "M4 9a5 5 0 0 1 8 4 5 5 0 0 1-8-4" }), path({ "d": "M5 21h14" }));
 };
 //#endregion
 //#region src/icons/SquareActivity.ts
@@ -12151,6 +12471,18 @@ const SquareArrowOutUpRight = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6" }), path({ "d": "m21 3-9 9" }), path({ "d": "M15 3h6v6" }));
 };
 //#endregion
+//#region src/icons/SquareArrowRightEnter.ts
+const SquareArrowRightEnter = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m10 16 4-4-4-4" }), path({ "d": "M3 12h11" }), path({ "d": "M3 8V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3" }));
+};
+//#endregion
+//#region src/icons/SquareArrowRightExit.ts
+const SquareArrowRightExit = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 12h11" }), path({ "d": "m17 16 4-4-4-4" }), path({ "d": "M21 6.344V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-1.344" }));
+};
+//#endregion
 //#region src/icons/SquareArrowRight.ts
 const SquareArrowRight = (props = {}) => {
 	const { rect, path } = van.tags(svgNamespace);
@@ -12213,16 +12545,68 @@ const SquareAsterisk = (props = {}) => {
 //#endregion
 //#region src/icons/SquareBottomDashedScissors.ts
 const SquareBottomDashedScissors = (props = {}) => {
-	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2" }), path({ "d": "M10 22H8" }), path({ "d": "M16 22h-2" }), circle({
-		cx: "8",
-		cy: "8",
-		"r": "2"
-	}), path({ "d": "M9.414 9.414 12 12" }), path({ "d": "M14.8 14.8 18 18" }), circle({
-		cx: "8",
-		cy: "16",
-		"r": "2"
-	}), path({ "d": "m18 6-8.586 8.586" }));
+	const { line, path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, line({
+		x1: "5",
+		y1: "3",
+		x2: "19",
+		y2: "3"
+	}), line({
+		x1: "3",
+		y1: "5",
+		x2: "3",
+		y2: "19"
+	}), line({
+		x1: "21",
+		y1: "5",
+		x2: "21",
+		y2: "19"
+	}), line({
+		x1: "9",
+		y1: "21",
+		x2: "10",
+		y2: "21"
+	}), line({
+		x1: "14",
+		y1: "21",
+		x2: "15",
+		y2: "21"
+	}), path({ "d": "M 3 5 A2 2 0 0 1 5 3" }), path({ "d": "M 19 3 A2 2 0 0 1 21 5" }), path({ "d": "M 5 21 A2 2 0 0 1 3 19" }), path({ "d": "M 21 19 A2 2 0 0 1 19 21" }), circle({
+		cx: "8.5",
+		cy: "8.5",
+		"r": "1.5"
+	}), line({
+		x1: "9.56066",
+		y1: "9.56066",
+		x2: "12",
+		y2: "12"
+	}), line({
+		x1: "17",
+		y1: "17",
+		x2: "14.82",
+		y2: "14.82"
+	}), circle({
+		cx: "8.5",
+		cy: "15.5",
+		"r": "1.5"
+	}), line({
+		x1: "9.56066",
+		y1: "14.43934",
+		x2: "17",
+		y2: "7"
+	}));
+};
+//#endregion
+//#region src/icons/SquareCenterlineDashedHorizontal.ts
+const SquareCenterlineDashedHorizontal = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M8 3H5a2 2 0 0 0-2 2v14c0 1.1.9 2 2 2h3" }), path({ "d": "M16 3h3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-3" }), path({ "d": "M12 20v2" }), path({ "d": "M12 14v2" }), path({ "d": "M12 8v2" }), path({ "d": "M12 2v2" }));
+};
+//#endregion
+//#region src/icons/SquareCenterlineDashedVertical.ts
+const SquareCenterlineDashedVertical = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M21 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v3" }), path({ "d": "M21 16v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3" }), path({ "d": "M4 12H2" }), path({ "d": "M10 12H8" }), path({ "d": "M16 12h-2" }), path({ "d": "M22 12h-2" }));
 };
 //#endregion
 //#region src/icons/SquareChartGantt.ts
@@ -12240,7 +12624,7 @@ const SquareChartGantt = (props = {}) => {
 //#region src/icons/SquareCheckBig.ts
 const SquareCheckBig = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 10.5V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12.5" }), path({ "d": "m9 11 3 3L22 4" }));
+	return LucideIcon(props, path({ "d": "M21 10.656V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12.344" }), path({ "d": "m9 11 3 3L22 4" }));
 };
 //#endregion
 //#region src/icons/SquareCheck.ts
@@ -12306,11 +12690,11 @@ const SquareChevronUp = (props = {}) => {
 //#region src/icons/SquareCode.ts
 const SquareCode = (props = {}) => {
 	const { path, rect } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M10 9.5 8 12l2 2.5" }), path({ "d": "m14 9.5 2 2.5-2 2.5" }), rect({
-		width: "18",
-		height: "18",
+	return LucideIcon(props, path({ "d": "m10 9-3 3 3 3" }), path({ "d": "m14 15 3-3-3-3" }), rect({
 		"x": "3",
 		"y": "3",
+		width: "18",
+		height: "18",
 		rx: "2"
 	}));
 };
@@ -12337,6 +12721,12 @@ const SquareDashedKanban = (props = {}) => {
 const SquareDashedMousePointer = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M12.034 12.681a.498.498 0 0 1 .647-.647l9 3.5a.5.5 0 0 1-.033.943l-3.444 1.068a1 1 0 0 0-.66.66l-1.067 3.443a.5.5 0 0 1-.943.033z" }), path({ "d": "M5 3a2 2 0 0 0-2 2" }), path({ "d": "M19 3a2 2 0 0 1 2 2" }), path({ "d": "M5 21a2 2 0 0 1-2-2" }), path({ "d": "M9 3h1" }), path({ "d": "M9 21h2" }), path({ "d": "M14 3h1" }), path({ "d": "M3 9v1" }), path({ "d": "M21 9v2" }), path({ "d": "M3 14v1" }));
+};
+//#endregion
+//#region src/icons/SquareDashedTopSolid.ts
+const SquareDashedTopSolid = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M14 21h1" }), path({ "d": "M21 14v1" }), path({ "d": "M21 19a2 2 0 0 1-2 2" }), path({ "d": "M21 9v1" }), path({ "d": "M3 14v1" }), path({ "d": "M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2" }), path({ "d": "M3 9v1" }), path({ "d": "M5 21a2 2 0 0 1-2-2" }), path({ "d": "M9 21h1" }));
 };
 //#endregion
 //#region src/icons/SquareDashed.ts
@@ -12440,14 +12830,14 @@ const SquareLibrary = (props = {}) => {
 //#endregion
 //#region src/icons/SquareM.ts
 const SquareM = (props = {}) => {
-	const { rect, path } = van.tags(svgNamespace);
-	return LucideIcon(props, rect({
-		width: "18",
-		height: "18",
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M8 16V8.5a.5.5 0 0 1 .9-.3l2.7 3.599a.5.5 0 0 0 .8 0l2.7-3.6a.5.5 0 0 1 .9.3V16" }), rect({
 		"x": "3",
 		"y": "3",
+		width: "18",
+		height: "18",
 		rx: "2"
-	}), path({ "d": "M8 16V8l4 4 4-4v8" }));
+	}));
 };
 //#endregion
 //#region src/icons/SquareMenu.ts
@@ -12498,6 +12888,28 @@ const SquareParking = (props = {}) => {
 	}), path({ "d": "M9 17V7h4a3 3 0 0 1 0 6H9" }));
 };
 //#endregion
+//#region src/icons/SquarePause.ts
+const SquarePause = (props = {}) => {
+	const { rect, line } = van.tags(svgNamespace);
+	return LucideIcon(props, rect({
+		width: "18",
+		height: "18",
+		"x": "3",
+		"y": "3",
+		rx: "2"
+	}), line({
+		x1: "10",
+		x2: "10",
+		y1: "15",
+		y2: "9"
+	}), line({
+		x1: "14",
+		x2: "14",
+		y1: "15",
+		y2: "9"
+	}));
+};
+//#endregion
 //#region src/icons/SquarePen.ts
 const SquarePen = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
@@ -12544,12 +12956,12 @@ const SquarePilcrow = (props = {}) => {
 const SquarePlay = (props = {}) => {
 	const { rect, path } = van.tags(svgNamespace);
 	return LucideIcon(props, rect({
-		width: "18",
-		height: "18",
 		"x": "3",
 		"y": "3",
+		width: "18",
+		height: "18",
 		rx: "2"
-	}), path({ "d": "m9 8 6 4-6 4Z" }));
+	}), path({ "d": "M9 9.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997A1 1 0 0 1 9 14.996z" }));
 };
 //#endregion
 //#region src/icons/SquarePlus.ts
@@ -12588,24 +13000,45 @@ const SquareRadical = (props = {}) => {
 	}));
 };
 //#endregion
+//#region src/icons/SquareRoundCorner.ts
+const SquareRoundCorner = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M21 11a8 8 0 0 0-8-8" }), path({ "d": "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" }));
+};
+//#endregion
 //#region src/icons/SquareScissors.ts
 const SquareScissors = (props = {}) => {
-	const { rect, circle, path } = van.tags(svgNamespace);
+	const { rect, circle, line } = van.tags(svgNamespace);
 	return LucideIcon(props, rect({
-		width: "20",
-		height: "20",
-		"x": "2",
-		"y": "2",
+		width: "18",
+		height: "18",
+		"x": "3",
+		"y": "3",
 		rx: "2"
 	}), circle({
-		cx: "8",
-		cy: "8",
-		"r": "2"
-	}), path({ "d": "M9.414 9.414 12 12" }), path({ "d": "M14.8 14.8 18 18" }), circle({
-		cx: "8",
-		cy: "16",
-		"r": "2"
-	}), path({ "d": "m18 6-8.586 8.586" }));
+		cx: "8.5",
+		cy: "8.5",
+		"r": "1.5"
+	}), line({
+		x1: "9.56066",
+		y1: "9.56066",
+		x2: "12",
+		y2: "12"
+	}), line({
+		x1: "17",
+		y1: "17",
+		x2: "14.82",
+		y2: "14.82"
+	}), circle({
+		cx: "8.5",
+		cy: "15.5",
+		"r": "1.5"
+	}), line({
+		x1: "9.56066",
+		y1: "14.43934",
+		x2: "17",
+		y2: "7"
+	}));
 };
 //#endregion
 //#region src/icons/SquareSigma.ts
@@ -12689,6 +13122,36 @@ const SquareStack = (props = {}) => {
 	}));
 };
 //#endregion
+//#region src/icons/SquareStar.ts
+const SquareStar = (props = {}) => {
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M11.035 7.69a1 1 0 0 1 1.909.024l.737 1.452a1 1 0 0 0 .737.535l1.634.256a1 1 0 0 1 .588 1.806l-1.172 1.168a1 1 0 0 0-.282.866l.259 1.613a1 1 0 0 1-1.541 1.134l-1.465-.75a1 1 0 0 0-.912 0l-1.465.75a1 1 0 0 1-1.539-1.133l.258-1.613a1 1 0 0 0-.282-.866l-1.156-1.153a1 1 0 0 1 .572-1.822l1.633-.256a1 1 0 0 0 .737-.535z" }), rect({
+		"x": "3",
+		"y": "3",
+		width: "18",
+		height: "18",
+		rx: "2"
+	}));
+};
+//#endregion
+//#region src/icons/SquareStop.ts
+const SquareStop = (props = {}) => {
+	const { rect } = van.tags(svgNamespace);
+	return LucideIcon(props, rect({
+		width: "18",
+		height: "18",
+		"x": "3",
+		"y": "3",
+		rx: "2"
+	}), rect({
+		"x": "9",
+		"y": "9",
+		width: "6",
+		height: "6",
+		rx: "1"
+	}));
+};
+//#endregion
 //#region src/icons/SquareTerminal.ts
 const SquareTerminal = (props = {}) => {
 	const { path, rect } = van.tags(svgNamespace);
@@ -12759,6 +13222,36 @@ const Square = (props = {}) => {
 	}));
 };
 //#endregion
+//#region src/icons/SquaresExclude.ts
+const SquaresExclude = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M16 12v2a2 2 0 0 1-2 2H9a1 1 0 0 0-1 1v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h0" }), path({ "d": "M4 16a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3a1 1 0 0 1-1 1h-5a2 2 0 0 0-2 2v2" }));
+};
+//#endregion
+//#region src/icons/SquaresIntersect.ts
+const SquaresIntersect = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 22a2 2 0 0 1-2-2" }), path({ "d": "M14 2a2 2 0 0 1 2 2" }), path({ "d": "M16 22h-2" }), path({ "d": "M2 10V8" }), path({ "d": "M2 4a2 2 0 0 1 2-2" }), path({ "d": "M20 8a2 2 0 0 1 2 2" }), path({ "d": "M22 14v2" }), path({ "d": "M22 20a2 2 0 0 1-2 2" }), path({ "d": "M4 16a2 2 0 0 1-2-2" }), path({ "d": "M8 10a2 2 0 0 1 2-2h5a1 1 0 0 1 1 1v5a2 2 0 0 1-2 2H9a1 1 0 0 1-1-1z" }), path({ "d": "M8 2h2" }));
+};
+//#endregion
+//#region src/icons/SquaresSubtract.ts
+const SquaresSubtract = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 22a2 2 0 0 1-2-2" }), path({ "d": "M16 22h-2" }), path({ "d": "M16 4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-5a2 2 0 0 1 2-2h5a1 1 0 0 0 1-1z" }), path({ "d": "M20 8a2 2 0 0 1 2 2" }), path({ "d": "M22 14v2" }), path({ "d": "M22 20a2 2 0 0 1-2 2" }));
+};
+//#endregion
+//#region src/icons/SquaresUnite.ts
+const SquaresUnite = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M4 16a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3a1 1 0 0 0 1 1h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2v-3a1 1 0 0 0-1-1z" }));
+};
+//#endregion
+//#region src/icons/SquircleDashed.ts
+const SquircleDashed = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M13.77 3.043a34 34 0 0 0-3.54 0" }), path({ "d": "M13.771 20.956a33 33 0 0 1-3.541.001" }), path({ "d": "M20.18 17.74c-.51 1.15-1.29 1.93-2.439 2.44" }), path({ "d": "M20.18 6.259c-.51-1.148-1.291-1.929-2.44-2.438" }), path({ "d": "M20.957 10.23a33 33 0 0 1 0 3.54" }), path({ "d": "M3.043 10.23a34 34 0 0 0 .001 3.541" }), path({ "d": "M6.26 20.179c-1.15-.508-1.93-1.29-2.44-2.438" }), path({ "d": "M6.26 3.82c-1.149.51-1.93 1.291-2.44 2.44" }));
+};
+//#endregion
 //#region src/icons/Squircle.ts
 const Squircle = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
@@ -12774,7 +13267,7 @@ const Squirrel = (props = {}) => {
 //#region src/icons/Stamp.ts
 const Stamp = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M5 22h14" }), path({ "d": "M19.27 13.73A2.5 2.5 0 0 0 17.5 13h-11A2.5 2.5 0 0 0 4 15.5V17a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-1.5c0-.66-.26-1.3-.73-1.77Z" }), path({ "d": "M14 13V8.5C14 7 15 7 15 5a3 3 0 0 0-3-3c-1.66 0-3 1-3 3s1 2 1 3.5V13" }));
+	return LucideIcon(props, path({ "d": "M14 13V8.5C14 7 15 7 15 5a3 3 0 0 0-6 0c0 2 1 2 1 3.5V13" }), path({ "d": "M20 15.5a2.5 2.5 0 0 0-2.5-2.5h-11A2.5 2.5 0 0 0 4 15.5V17a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1z" }), path({ "d": "M5 22h14" }));
 };
 //#endregion
 //#region src/icons/StarHalf.ts
@@ -12785,13 +13278,8 @@ const StarHalf = (props = {}) => {
 //#endregion
 //#region src/icons/StarOff.ts
 const StarOff = (props = {}) => {
-	const { path, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M8.34 8.34 2 9.27l5 4.87L5.82 21 12 17.77 18.18 21l-.59-3.43" }), path({ "d": "M18.42 12.76 22 9.27l-6.91-1L12 2l-1.44 2.91" }), line({
-		x1: "2",
-		x2: "22",
-		y1: "2",
-		y2: "22"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m10.344 4.688 1.181-2.393a.53.53 0 0 1 .95 0l2.31 4.679a2.12 2.12 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.237 3.152" }), path({ "d": "m17.945 17.945.43 2.505a.53.53 0 0 1-.771.56l-4.618-2.428a2.12 2.12 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.12 2.12 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a8 8 0 0 0 .4-.099" }), path({ "d": "m2 2 20 20" }));
 };
 //#endregion
 //#region src/icons/Star.ts
@@ -12802,24 +13290,14 @@ const Star = (props = {}) => {
 //#endregion
 //#region src/icons/StepBack.ts
 const StepBack = (props = {}) => {
-	const { line, polygon } = van.tags(svgNamespace);
-	return LucideIcon(props, line({
-		x1: "18",
-		x2: "18",
-		y1: "20",
-		y2: "4"
-	}), polygon({ points: "14,20 4,12 14,4" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M13.971 4.285A2 2 0 0 1 17 6v12a2 2 0 0 1-3.029 1.715l-9.997-5.998a2 2 0 0 1-.003-3.432z" }), path({ "d": "M21 20V4" }));
 };
 //#endregion
 //#region src/icons/StepForward.ts
 const StepForward = (props = {}) => {
-	const { line, polygon } = van.tags(svgNamespace);
-	return LucideIcon(props, line({
-		x1: "6",
-		x2: "6",
-		y1: "4",
-		y2: "20"
-	}), polygon({ points: "10,4 20,12 10,20" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10.029 4.285A2 2 0 0 0 7 6v12a2 2 0 0 0 3.029 1.715l9.997-5.998a2 2 0 0 0 .003-3.432z" }), path({ "d": "M3 4v16" }));
 };
 //#endregion
 //#region src/icons/Stethoscope.ts
@@ -12835,19 +13313,25 @@ const Stethoscope = (props = {}) => {
 //#region src/icons/Sticker.ts
 const Sticker = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M15.5 3H5a2 2 0 0 0-2 2v14c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2V8.5L15.5 3Z" }), path({ "d": "M14 3v4a2 2 0 0 0 2 2h4" }), path({ "d": "M8 13h.01" }), path({ "d": "M16 13h.01" }), path({ "d": "M10 16s.8 1 2 1c1.3 0 2-1 2-1" }));
+	return LucideIcon(props, path({ "d": "M21 9a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 15 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z" }), path({ "d": "M15 3v5a1 1 0 0 0 1 1h5" }), path({ "d": "M8 13h.01" }), path({ "d": "M16 13h.01" }), path({ "d": "M10 16s.8 1 2 1c1.3 0 2-1 2-1" }));
 };
 //#endregion
 //#region src/icons/StickyNote.ts
 const StickyNote = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M16 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8Z" }), path({ "d": "M15 3v4a2 2 0 0 0 2 2h4" }));
+	return LucideIcon(props, path({ "d": "M21 9a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 15 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z" }), path({ "d": "M15 3v5a1 1 0 0 0 1 1h5" }));
+};
+//#endregion
+//#region src/icons/Stone.ts
+const Stone = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M11.264 2.205A4 4 0 0 0 6.42 4.211l-4 8a4 4 0 0 0 1.359 5.117l6 4a4 4 0 0 0 4.438 0l6-4a4 4 0 0 0 1.576-4.592l-2-6a4 4 0 0 0-2.53-2.53z" }), path({ "d": "M11.99 22 14 12l7.822 3.184" }), path({ "d": "M14 12 8.47 2.302" }));
 };
 //#endregion
 //#region src/icons/Store.ts
 const Store = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" }), path({ "d": "M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" }), path({ "d": "M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" }), path({ "d": "M2 7h20" }), path({ "d": "M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7" }));
+	return LucideIcon(props, path({ "d": "M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5" }), path({ "d": "M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244" }), path({ "d": "M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05" }));
 };
 //#endregion
 //#region src/icons/StretchHorizontal.ts
@@ -12926,7 +13410,7 @@ const SunMedium = (props = {}) => {
 //#region src/icons/SunMoon.ts
 const SunMoon = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 8a2.83 2.83 0 0 0 4 4 4 4 0 1 1-4-4" }), path({ "d": "M12 2v2" }), path({ "d": "M12 20v2" }), path({ "d": "m4.9 4.9 1.4 1.4" }), path({ "d": "m17.7 17.7 1.4 1.4" }), path({ "d": "M2 12h2" }), path({ "d": "M20 12h2" }), path({ "d": "m6.3 17.7-1.4 1.4" }), path({ "d": "m19.1 4.9-1.4 1.4" }));
+	return LucideIcon(props, path({ "d": "M12 2v2" }), path({ "d": "M14.837 16.385a6 6 0 1 1-7.223-7.222c.624-.147.97.66.715 1.248a4 4 0 0 0 5.26 5.259c.589-.255 1.396.09 1.248.715" }), path({ "d": "M16 12a4 4 0 0 0-4-4" }), path({ "d": "m19 5-1.256 1.256" }), path({ "d": "M20 12h2" }));
 };
 //#endregion
 //#region src/icons/SunSnow.ts
@@ -12987,23 +13471,8 @@ const SwitchCamera = (props = {}) => {
 //#endregion
 //#region src/icons/Sword.ts
 const Sword = (props = {}) => {
-	const { polyline, line } = van.tags(svgNamespace);
-	return LucideIcon(props, polyline({ points: "14.5 17.5 3 6 3 3 6 3 17.5 14.5" }), line({
-		x1: "13",
-		x2: "19",
-		y1: "19",
-		y2: "13"
-	}), line({
-		x1: "16",
-		x2: "20",
-		y1: "16",
-		y2: "20"
-	}), line({
-		x1: "19",
-		x2: "21",
-		y1: "21",
-		y2: "19"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m11 19-6-6" }), path({ "d": "m5 21-2-2" }), path({ "d": "m8 16-4 4" }), path({ "d": "M9.5 17.5 21 6V3h-3L6.5 14.5" }));
 };
 //#endregion
 //#region src/icons/Swords.ts
@@ -13087,7 +13556,7 @@ const TableColumnsSplit = (props = {}) => {
 //#region src/icons/TableOfContents.ts
 const TableOfContents = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M16 12H3" }), path({ "d": "M16 18H3" }), path({ "d": "M16 6H3" }), path({ "d": "M21 12h.01" }), path({ "d": "M21 18h.01" }), path({ "d": "M21 6h.01" }));
+	return LucideIcon(props, path({ "d": "M16 5H3" }), path({ "d": "M16 12H3" }), path({ "d": "M16 19H3" }), path({ "d": "M21 5h.01" }), path({ "d": "M21 12h.01" }), path({ "d": "M21 19h.01" }));
 };
 //#endregion
 //#region src/icons/TableProperties.ts
@@ -13178,9 +13647,9 @@ const Tag = (props = {}) => {
 //#region src/icons/Tags.ts
 const Tags = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m15 5 6.3 6.3a2.4 2.4 0 0 1 0 3.4L17 19" }), path({ "d": "M9.586 5.586A2 2 0 0 0 8.172 5H3a1 1 0 0 0-1 1v5.172a2 2 0 0 0 .586 1.414L8.29 18.29a2.426 2.426 0 0 0 3.42 0l3.58-3.58a2.426 2.426 0 0 0 0-3.42z" }), circle({
-		cx: "6.5",
-		cy: "9.5",
+	return LucideIcon(props, path({ "d": "M13.172 2a2 2 0 0 1 1.414.586l6.71 6.71a2.4 2.4 0 0 1 0 3.408l-4.592 4.592a2.4 2.4 0 0 1-3.408 0l-6.71-6.71A2 2 0 0 1 6 9.172V3a1 1 0 0 1 1-1z" }), path({ "d": "M2 7v6.172a2 2 0 0 0 .586 1.414l6.71 6.71a2.4 2.4 0 0 0 3.191.193" }), circle({
+		cx: "10.5",
+		cy: "6.5",
 		"r": ".5",
 		fill: "currentColor"
 	}));
@@ -13276,13 +13745,8 @@ const Tent = (props = {}) => {
 //#endregion
 //#region src/icons/Terminal.ts
 const Terminal = (props = {}) => {
-	const { polyline, line } = van.tags(svgNamespace);
-	return LucideIcon(props, polyline({ points: "4 17 10 11 4 5" }), line({
-		x1: "12",
-		x2: "20",
-		y1: "19",
-		y2: "19"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 19h8" }), path({ "d": "m4 17 6-6-6-6" }));
 };
 //#endregion
 //#region src/icons/TestTubeDiagonal.ts
@@ -13303,10 +13767,34 @@ const TestTubes = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M9 2v17.5A2.5 2.5 0 0 1 6.5 22A2.5 2.5 0 0 1 4 19.5V2" }), path({ "d": "M20 2v17.5a2.5 2.5 0 0 1-2.5 2.5a2.5 2.5 0 0 1-2.5-2.5V2" }), path({ "d": "M3 2h7" }), path({ "d": "M14 2h7" }), path({ "d": "M9 16H4" }), path({ "d": "M20 16h-5" }));
 };
 //#endregion
+//#region src/icons/TextAlignCenter.ts
+const TextAlignCenter = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M21 5H3" }), path({ "d": "M17 12H7" }), path({ "d": "M19 19H5" }));
+};
+//#endregion
+//#region src/icons/TextAlignEnd.ts
+const TextAlignEnd = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M21 5H3" }), path({ "d": "M21 12H9" }), path({ "d": "M21 19H7" }));
+};
+//#endregion
+//#region src/icons/TextAlignJustify.ts
+const TextAlignJustify = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M3 5h18" }), path({ "d": "M3 12h18" }), path({ "d": "M3 19h18" }));
+};
+//#endregion
+//#region src/icons/TextAlignStart.ts
+const TextAlignStart = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M21 5H3" }), path({ "d": "M15 12H3" }), path({ "d": "M17 19H3" }));
+};
+//#endregion
 //#region src/icons/TextCursorInput.ts
 const TextCursorInput = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M5 4h1a3 3 0 0 1 3 3 3 3 0 0 1 3-3h1" }), path({ "d": "M13 20h-1a3 3 0 0 1-3-3 3 3 0 0 1-3 3H5" }), path({ "d": "M5 16H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h1" }), path({ "d": "M13 8h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7" }), path({ "d": "M9 7v10" }));
+	return LucideIcon(props, path({ "d": "M12 20h-1a2 2 0 0 1-2-2 2 2 0 0 1-2 2H6" }), path({ "d": "M13 8h7a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-7" }), path({ "d": "M5 16H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h1" }), path({ "d": "M6 4h1a2 2 0 0 1 2 2 2 2 0 0 1 2-2h1" }), path({ "d": "M9 6v12" }));
 };
 //#endregion
 //#region src/icons/TextCursor.ts
@@ -13315,16 +13803,22 @@ const TextCursor = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M17 22h-1a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4h1" }), path({ "d": "M7 22h1a4 4 0 0 0 4-4v-1" }), path({ "d": "M7 2h1a4 4 0 0 1 4 4v1" }));
 };
 //#endregion
+//#region src/icons/TextInitial.ts
+const TextInitial = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M15 5h6" }), path({ "d": "M15 12h6" }), path({ "d": "M3 19h18" }), path({ "d": "m3 12 3.553-7.724a.5.5 0 0 1 .894 0L11 12" }), path({ "d": "M3.92 10h6.16" }));
+};
+//#endregion
 //#region src/icons/TextQuote.ts
 const TextQuote = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M17 6H3" }), path({ "d": "M21 12H8" }), path({ "d": "M21 18H8" }), path({ "d": "M3 12v6" }));
+	return LucideIcon(props, path({ "d": "M17 5H3" }), path({ "d": "M21 12H8" }), path({ "d": "M21 19H8" }), path({ "d": "M3 12v7" }));
 };
 //#endregion
 //#region src/icons/TextSearch.ts
 const TextSearch = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 6H3" }), path({ "d": "M10 12H3" }), path({ "d": "M10 18H3" }), circle({
+	return LucideIcon(props, path({ "d": "M21 5H3" }), path({ "d": "M10 12H3" }), path({ "d": "M10 19H3" }), circle({
 		cx: "17",
 		cy: "15",
 		"r": "3"
@@ -13333,29 +13827,14 @@ const TextSearch = (props = {}) => {
 //#endregion
 //#region src/icons/TextSelect.ts
 const TextSelect = (props = {}) => {
-	const { path, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M5 3a2 2 0 0 0-2 2" }), path({ "d": "M19 3a2 2 0 0 1 2 2" }), path({ "d": "M21 19a2 2 0 0 1-2 2" }), path({ "d": "M5 21a2 2 0 0 1-2-2" }), path({ "d": "M9 3h1" }), path({ "d": "M9 21h1" }), path({ "d": "M14 3h1" }), path({ "d": "M14 21h1" }), path({ "d": "M3 9v1" }), path({ "d": "M21 9v1" }), path({ "d": "M3 14v1" }), path({ "d": "M21 14v1" }), line({
-		x1: "7",
-		x2: "15",
-		y1: "8",
-		y2: "8"
-	}), line({
-		x1: "7",
-		x2: "17",
-		y1: "12",
-		y2: "12"
-	}), line({
-		x1: "7",
-		x2: "13",
-		y1: "16",
-		y2: "16"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M14 21h1" }), path({ "d": "M14 3h1" }), path({ "d": "M19 3a2 2 0 0 1 2 2" }), path({ "d": "M21 14v1" }), path({ "d": "M21 19a2 2 0 0 1-2 2" }), path({ "d": "M21 9v1" }), path({ "d": "M3 14v1" }), path({ "d": "M3 9v1" }), path({ "d": "M5 21a2 2 0 0 1-2-2" }), path({ "d": "M5 3a2 2 0 0 0-2 2" }), path({ "d": "M7 12h10" }), path({ "d": "M7 16h6" }), path({ "d": "M7 8h8" }), path({ "d": "M9 21h1" }), path({ "d": "M9 3h1" }));
 };
 //#endregion
-//#region src/icons/Text.ts
-const Text = (props = {}) => {
+//#region src/icons/TextWrap.ts
+const TextWrap = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M17 6.1H3" }), path({ "d": "M21 12.1H3" }), path({ "d": "M15.1 18H3" }));
+	return LucideIcon(props, path({ "d": "m16 16-3 3 3 3" }), path({ "d": "M3 12h14.5a1 1 0 0 1 0 7H13" }), path({ "d": "M3 19h6" }), path({ "d": "M3 5h18" }));
 };
 //#endregion
 //#region src/icons/Theater.ts
@@ -13373,7 +13852,7 @@ const ThermometerSnowflake = (props = {}) => {
 //#region src/icons/ThermometerSun.ts
 const ThermometerSun = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 9a4 4 0 0 0-2 7.5" }), path({ "d": "M12 3v2" }), path({ "d": "m6.6 18.4-1.4 1.4" }), path({ "d": "M20 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z" }), path({ "d": "M4 13H2" }), path({ "d": "M6.34 7.34 4.93 5.93" }));
+	return LucideIcon(props, path({ "d": "M12 2v2" }), path({ "d": "M12 8a4 4 0 0 0-1.645 7.647" }), path({ "d": "M2 12h2" }), path({ "d": "M20 14.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z" }), path({ "d": "m4.93 4.93 1.41 1.41" }), path({ "d": "m6.34 17.66-1.41 1.41" }));
 };
 //#endregion
 //#region src/icons/Thermometer.ts
@@ -13385,13 +13864,13 @@ const Thermometer = (props = {}) => {
 //#region src/icons/ThumbsDown.ts
 const ThumbsDown = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M17 14V2" }), path({ "d": "M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z" }));
+	return LucideIcon(props, path({ "d": "M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z" }), path({ "d": "M17 14V2" }));
 };
 //#endregion
 //#region src/icons/ThumbsUp.ts
 const ThumbsUp = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M7 10v12" }), path({ "d": "M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z" }));
+	return LucideIcon(props, path({ "d": "M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z" }), path({ "d": "M7 10v12" }));
 };
 //#endregion
 //#region src/icons/TicketCheck.ts
@@ -13439,7 +13918,7 @@ const Ticket = (props = {}) => {
 //#region src/icons/TicketsPlane.ts
 const TicketsPlane = (props = {}) => {
 	const { path, rect } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M10.5 17h1.227a2 2 0 0 0 1.345-.52L18 12" }), path({ "d": "m12 13.5 3.75.5" }), path({ "d": "m4.5 8 10.58-5.06a1 1 0 0 1 1.342.488L18.5 8" }), path({ "d": "M6 10V8" }), path({ "d": "M6 14v1" }), path({ "d": "M6 19v2" }), rect({
+	return LucideIcon(props, path({ "d": "M10.5 17h1.227a2 2 0 0 0 1.345-.52L18 12" }), path({ "d": "m12 13.5 3.794.506" }), path({ "d": "m3.173 8.18 11-5a2 2 0 0 1 2.647.993L18.56 8" }), path({ "d": "M6 10V8" }), path({ "d": "M6 14v1" }), path({ "d": "M6 19v2" }), rect({
 		"x": "2",
 		"y": "8",
 		width: "20",
@@ -13451,7 +13930,7 @@ const TicketsPlane = (props = {}) => {
 //#region src/icons/Tickets.ts
 const Tickets = (props = {}) => {
 	const { path, rect } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "m4.5 8 10.58-5.06a1 1 0 0 1 1.342.488L18.5 8" }), path({ "d": "M6 10V8" }), path({ "d": "M6 14v1" }), path({ "d": "M6 19v2" }), rect({
+	return LucideIcon(props, path({ "d": "m3.173 8.18 11-5a2 2 0 0 1 2.647.993L18.56 8" }), path({ "d": "M6 10V8" }), path({ "d": "M6 14v1" }), path({ "d": "M6 19v2" }), rect({
 		"x": "2",
 		"y": "8",
 		width: "20",
@@ -13494,35 +13973,33 @@ const Timer = (props = {}) => {
 //#endregion
 //#region src/icons/ToggleLeft.ts
 const ToggleLeft = (props = {}) => {
-	const { rect, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, rect({
-		width: "20",
-		height: "12",
-		"x": "2",
-		"y": "6",
-		rx: "6",
-		ry: "6"
-	}), circle({
-		cx: "8",
+	const { circle, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, circle({
+		cx: "9",
 		cy: "12",
-		"r": "2"
+		"r": "3"
+	}), rect({
+		width: "20",
+		height: "14",
+		"x": "2",
+		"y": "5",
+		rx: "7"
 	}));
 };
 //#endregion
 //#region src/icons/ToggleRight.ts
 const ToggleRight = (props = {}) => {
-	const { rect, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, rect({
-		width: "20",
-		height: "12",
-		"x": "2",
-		"y": "6",
-		rx: "6",
-		ry: "6"
-	}), circle({
-		cx: "16",
+	const { circle, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, circle({
+		cx: "15",
 		cy: "12",
-		"r": "2"
+		"r": "3"
+	}), rect({
+		width: "20",
+		height: "14",
+		"x": "2",
+		"y": "5",
+		rx: "7"
 	}));
 };
 //#endregion
@@ -13530,6 +14007,18 @@ const ToggleRight = (props = {}) => {
 const Toilet = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M7 12h13a1 1 0 0 1 1 1 5 5 0 0 1-5 5h-.598a.5.5 0 0 0-.424.765l1.544 2.47a.5.5 0 0 1-.424.765H5.402a.5.5 0 0 1-.424-.765L7 18" }), path({ "d": "M8 18a5 5 0 0 1-5-5V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8" }));
+};
+//#endregion
+//#region src/icons/ToolCase.ts
+const ToolCase = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 15h4" }), path({ "d": "m14.817 10.995-.971-1.45 1.034-1.232a2 2 0 0 0-2.025-3.238l-1.82.364L9.91 3.885a2 2 0 0 0-3.625.748L6.141 6.55l-1.725.426a2 2 0 0 0-.19 3.756l.657.27" }), path({ "d": "m18.822 10.995 2.26-5.38a1 1 0 0 0-.557-1.318L16.954 2.9a1 1 0 0 0-1.281.533l-.924 2.122" }), path({ "d": "M4 12.006A1 1 0 0 1 4.994 11H19a1 1 0 0 1 1 1v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" }));
+};
+//#endregion
+//#region src/icons/Toolbox.ts
+const Toolbox = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M16 12v4" }), path({ "d": "M16 6a2 2 0 0 1 1.414.586l4 4A2 2 0 0 1 22 12v7a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 .586-1.414l4-4A2 2 0 0 1 8 6z" }), path({ "d": "M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" }), path({ "d": "M2 14h20" }), path({ "d": "M8 12v4" }));
 };
 //#endregion
 //#region src/icons/Tornado.ts
@@ -13557,7 +14046,7 @@ const Torus = (props = {}) => {
 //#region src/icons/TouchpadOff.ts
 const TouchpadOff = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M4 4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16" }), path({ "d": "M2 14h12" }), path({ "d": "M22 14h-2" }), path({ "d": "M12 20v-6" }), path({ "d": "m2 2 20 20" }), path({ "d": "M22 16V6a2 2 0 0 0-2-2H10" }));
+	return LucideIcon(props, path({ "d": "M12 20v-6" }), path({ "d": "M19.656 14H22" }), path({ "d": "M2 14h12" }), path({ "d": "m2 2 20 20" }), path({ "d": "M20 20H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2" }), path({ "d": "M9.656 4H20a2 2 0 0 1 2 2v10.344" }));
 };
 //#endregion
 //#region src/icons/Touchpad.ts
@@ -13570,6 +14059,12 @@ const Touchpad = (props = {}) => {
 		"y": "4",
 		rx: "2"
 	}), path({ "d": "M2 14h20" }), path({ "d": "M12 20v-6" }));
+};
+//#endregion
+//#region src/icons/TowelRack.ts
+const TowelRack = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M22 7h-2" }), path({ "d": "M6.5 3h11A2.5 2.5 0 0 1 20 5.5V20a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1V5.5a1 1 0 0 0-5 0V17a1 1 0 0 0 1 1h4" }), path({ "d": "M9 7H2" }));
 };
 //#endregion
 //#region src/icons/TowerControl.ts
@@ -13607,7 +14102,7 @@ const Tractor = (props = {}) => {
 //#region src/icons/TrafficCone.ts
 const TrafficCone = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M9.3 6.2a4.55 4.55 0 0 0 5.4 0" }), path({ "d": "M7.9 10.7c.9.8 2.4 1.3 4.1 1.3s3.2-.5 4.1-1.3" }), path({ "d": "M13.9 3.5a1.93 1.93 0 0 0-3.8-.1l-3 10c-.1.2-.1.4-.1.6 0 1.7 2.2 3 5 3s5-1.3 5-3c0-.2 0-.4-.1-.5Z" }), path({ "d": "m7.5 12.2-4.7 2.7c-.5.3-.8.7-.8 1.1s.3.8.8 1.1l7.6 4.5c.9.5 2.1.5 3 0l7.6-4.5c.7-.3 1-.7 1-1.1s-.3-.8-.8-1.1l-4.7-2.8" }));
+	return LucideIcon(props, path({ "d": "M16.05 10.966a5 2.5 0 0 1-8.1 0" }), path({ "d": "m16.923 14.049 4.48 2.04a1 1 0 0 1 .001 1.831l-8.574 3.9a2 2 0 0 1-1.66 0l-8.574-3.91a1 1 0 0 1 0-1.83l4.484-2.04" }), path({ "d": "M16.949 14.14a5 2.5 0 1 1-9.9 0L10.063 3.5a2 2 0 0 1 3.874 0z" }), path({ "d": "M9.194 6.57a5 2.5 0 0 0 5.61 0" }));
 };
 //#endregion
 //#region src/icons/TrainFrontTunnel.ts
@@ -13652,24 +14147,14 @@ const Transgender = (props = {}) => {
 //#endregion
 //#region src/icons/Trash2.ts
 const Trash2 = (props = {}) => {
-	const { path, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M3 6h18" }), path({ "d": "M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" }), path({ "d": "M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" }), line({
-		x1: "10",
-		x2: "10",
-		y1: "11",
-		y2: "17"
-	}), line({
-		x1: "14",
-		x2: "14",
-		y1: "11",
-		y2: "17"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 11v6" }), path({ "d": "M14 11v6" }), path({ "d": "M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" }), path({ "d": "M3 6h18" }), path({ "d": "M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" }));
 };
 //#endregion
 //#region src/icons/Trash.ts
 const Trash = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M3 6h18" }), path({ "d": "M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" }), path({ "d": "M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" }));
+	return LucideIcon(props, path({ "d": "M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" }), path({ "d": "M3 6h18" }), path({ "d": "M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" }));
 };
 //#endregion
 //#region src/icons/TreeDeciduous.ts
@@ -13696,33 +14181,10 @@ const Trees = (props = {}) => {
 	return LucideIcon(props, path({ "d": "M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z" }), path({ "d": "M7 16v6" }), path({ "d": "M13 19v3" }), path({ "d": "M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5" }));
 };
 //#endregion
-//#region src/icons/Trello.ts
-const Trello = (props = {}) => {
-	const { rect } = van.tags(svgNamespace);
-	return LucideIcon(props, rect({
-		width: "18",
-		height: "18",
-		"x": "3",
-		"y": "3",
-		rx: "2",
-		ry: "2"
-	}), rect({
-		width: "3",
-		height: "9",
-		"x": "7",
-		"y": "7"
-	}), rect({
-		width: "3",
-		height: "5",
-		"x": "14",
-		"y": "7"
-	}));
-};
-//#endregion
 //#region src/icons/TrendingDown.ts
 const TrendingDown = (props = {}) => {
-	const { polyline } = van.tags(svgNamespace);
-	return LucideIcon(props, polyline({ points: "22 17 13.5 8.5 8.5 13.5 2 7" }), polyline({ points: "16 17 22 17 22 11" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M16 17h6v-6" }), path({ "d": "m22 17-8.5-8.5-5 5L2 7" }));
 };
 //#endregion
 //#region src/icons/TrendingUpDown.ts
@@ -13733,8 +14195,8 @@ const TrendingUpDown = (props = {}) => {
 //#endregion
 //#region src/icons/TrendingUp.ts
 const TrendingUp = (props = {}) => {
-	const { polyline } = van.tags(svgNamespace);
-	return LucideIcon(props, polyline({ points: "22 7 13.5 15.5 8.5 10.5 2 17" }), polyline({ points: "16 7 22 7 22 13" }));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M16 7h6v6" }), path({ "d": "m22 7-8.5 8.5-5-5L2 17" }));
 };
 //#endregion
 //#region src/icons/TriangleAlert.ts
@@ -13764,7 +14226,21 @@ const Triangle = (props = {}) => {
 //#region src/icons/Trophy.ts
 const Trophy = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M6 9H4.5a2.5 2.5 0 0 1 0-5H6" }), path({ "d": "M18 9h1.5a2.5 2.5 0 0 0 0-5H18" }), path({ "d": "M4 22h16" }), path({ "d": "M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" }), path({ "d": "M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" }), path({ "d": "M18 2H6v7a6 6 0 0 0 12 0V2Z" }));
+	return LucideIcon(props, path({ "d": "M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978" }), path({ "d": "M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978" }), path({ "d": "M18 9h1.5a1 1 0 0 0 0-5H18" }), path({ "d": "M4 22h16" }), path({ "d": "M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z" }), path({ "d": "M6 9H4.5a1 1 0 0 1 0-5H6" }));
+};
+//#endregion
+//#region src/icons/TruckElectric.ts
+const TruckElectric = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M14 19V7a2 2 0 0 0-2-2H9" }), path({ "d": "M15 19H9" }), path({ "d": "M19 19h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62L18.3 9.38a1 1 0 0 0-.78-.38H14" }), path({ "d": "M2 13v5a1 1 0 0 0 1 1h2" }), path({ "d": "M4 3 2.15 5.15a.495.495 0 0 0 .35.86h2.15a.47.47 0 0 1 .35.86L3 9.02" }), circle({
+		cx: "17",
+		cy: "19",
+		"r": "2"
+	}), circle({
+		cx: "7",
+		cy: "19",
+		"r": "2"
+	}));
 };
 //#endregion
 //#region src/icons/Truck.ts
@@ -13781,6 +14257,28 @@ const Truck = (props = {}) => {
 	}));
 };
 //#endregion
+//#region src/icons/TurkishLira.ts
+const TurkishLira = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M15 4 5 9" }), path({ "d": "m15 8.5-10 5" }), path({ "d": "M18 12a9 9 0 0 1-9 9V3" }));
+};
+//#endregion
+//#region src/icons/Turntable.ts
+const Turntable = (props = {}) => {
+	const { path, circle, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 12.01h.01" }), path({ "d": "M18 8v4a8 8 0 0 1-1.07 4" }), circle({
+		cx: "10",
+		cy: "12",
+		"r": "4"
+	}), rect({
+		"x": "2",
+		"y": "4",
+		width: "20",
+		height: "16",
+		rx: "2"
+	}));
+};
+//#endregion
 //#region src/icons/Turtle.ts
 const Turtle = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
@@ -13790,7 +14288,7 @@ const Turtle = (props = {}) => {
 //#region src/icons/TvMinimalPlay.ts
 const TvMinimalPlay = (props = {}) => {
 	const { path, rect } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M10 7.75a.75.75 0 0 1 1.142-.638l3.664 2.249a.75.75 0 0 1 0 1.278l-3.664 2.25a.75.75 0 0 1-1.142-.64z" }), path({ "d": "M7 21h10" }), rect({
+	return LucideIcon(props, path({ "d": "M15.033 9.44a.647.647 0 0 1 0 1.12l-4.065 2.352a.645.645 0 0 1-.968-.56V7.648a.645.645 0 0 1 .967-.56z" }), path({ "d": "M7 21h10" }), rect({
 		width: "20",
 		height: "14",
 		"x": "2",
@@ -13813,27 +14311,14 @@ const TvMinimal = (props = {}) => {
 //#endregion
 //#region src/icons/Tv.ts
 const Tv = (props = {}) => {
-	const { rect, polyline } = van.tags(svgNamespace);
-	return LucideIcon(props, rect({
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m17 2-5 5-5-5" }), rect({
 		width: "20",
 		height: "15",
 		"x": "2",
 		"y": "7",
-		rx: "2",
-		ry: "2"
-	}), polyline({ points: "17 2 12 7 7 2" }));
-};
-//#endregion
-//#region src/icons/Twitch.ts
-const Twitch = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 2H3v16h5v4l4-4h5l4-4V2zm-10 9V7m5 4V7" }));
-};
-//#endregion
-//#region src/icons/Twitter.ts
-const Twitter = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" }));
+		rx: "2"
+	}));
 };
 //#endregion
 //#region src/icons/TypeOutline.ts
@@ -13844,30 +14329,20 @@ const TypeOutline = (props = {}) => {
 //#endregion
 //#region src/icons/Type.ts
 const Type = (props = {}) => {
-	const { polyline, line } = van.tags(svgNamespace);
-	return LucideIcon(props, polyline({ points: "4 7 4 4 20 4 20 7" }), line({
-		x1: "9",
-		x2: "15",
-		y1: "20",
-		y2: "20"
-	}), line({
-		x1: "12",
-		x2: "12",
-		y1: "4",
-		y2: "20"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 4v16" }), path({ "d": "M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2" }), path({ "d": "M9 20h6" }));
 };
 //#endregion
 //#region src/icons/UmbrellaOff.ts
 const UmbrellaOff = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M12 2v1" }), path({ "d": "M15.5 21a1.85 1.85 0 0 1-3.5-1v-8H2a10 10 0 0 1 3.428-6.575" }), path({ "d": "M17.5 12H22A10 10 0 0 0 9.004 3.455" }), path({ "d": "m2 2 20 20" }));
+	return LucideIcon(props, path({ "d": "M12 13v7a2 2 0 0 0 4 0" }), path({ "d": "M12 2v2" }), path({ "d": "M18.656 13h2.336a1 1 0 0 0 .97-1.274 10.284 10.284 0 0 0-12.07-7.51" }), path({ "d": "m2 2 20 20" }), path({ "d": "M5.961 5.957a10.28 10.28 0 0 0-3.922 5.769A1 1 0 0 0 3 13h10" }));
 };
 //#endregion
 //#region src/icons/Umbrella.ts
 const Umbrella = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M22 12a10.06 10.06 1 0 0-20 0Z" }), path({ "d": "M12 12v8a2 2 0 0 0 4 0" }), path({ "d": "M12 2v1" }));
+	return LucideIcon(props, path({ "d": "M12 13v7a2 2 0 0 0 4 0" }), path({ "d": "M12 2v2" }), path({ "d": "M20.992 13a1 1 0 0 0 .97-1.274 10.284 10.284 0 0 0-19.923 0A1 1 0 0 0 3 13z" }));
 };
 //#endregion
 //#region src/icons/Underline.ts
@@ -13935,12 +14410,12 @@ const Ungroup = (props = {}) => {
 //#endregion
 //#region src/icons/University.ts
 const University = (props = {}) => {
-	const { circle, path } = van.tags(svgNamespace);
-	return LucideIcon(props, circle({
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M14 21v-3a2 2 0 0 0-4 0v3" }), path({ "d": "M18 12h.01" }), path({ "d": "M18 16h.01" }), path({ "d": "M22 7a1 1 0 0 0-1-1h-2a2 2 0 0 1-1.143-.359L13.143 2.36a2 2 0 0 0-2.286-.001L6.143 5.64A2 2 0 0 1 5 6H3a1 1 0 0 0-1 1v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2z" }), path({ "d": "M6 12h.01" }), path({ "d": "M6 16h.01" }), circle({
 		cx: "12",
 		cy: "10",
-		"r": "1"
-	}), path({ "d": "M22 20V8h-4l-6-4-6 4H2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2" }), path({ "d": "M6 17v.01" }), path({ "d": "M6 13v.01" }), path({ "d": "M18 17v.01" }), path({ "d": "M18 13v.01" }), path({ "d": "M14 22v-5a2 2 0 0 0-2-2a2 2 0 0 0-2 2v5" }));
+		"r": "2"
+	}));
 };
 //#endregion
 //#region src/icons/Unlink2.ts
@@ -13983,13 +14458,8 @@ const Unplug = (props = {}) => {
 //#endregion
 //#region src/icons/Upload.ts
 const Upload = (props = {}) => {
-	const { path, polyline, line } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" }), polyline({ points: "17 8 12 3 7 8" }), line({
-		x1: "12",
-		x2: "12",
-		y1: "3",
-		y2: "15"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 3v12" }), path({ "d": "m17 8-5-5-5 5" }), path({ "d": "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" }));
 };
 //#endregion
 //#region src/icons/Usb.ts
@@ -14008,18 +14478,18 @@ const Usb = (props = {}) => {
 //#endregion
 //#region src/icons/UserCheck.ts
 const UserCheck = (props = {}) => {
-	const { path, circle, polyline } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" }), circle({
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m16 11 2 2 4-4" }), path({ "d": "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" }), circle({
 		cx: "9",
 		cy: "7",
 		"r": "4"
-	}), polyline({ points: "16 11 18 13 22 9" }));
+	}));
 };
 //#endregion
 //#region src/icons/UserCog.ts
 const UserCog = (props = {}) => {
-	const { circle, path } = van.tags(svgNamespace);
-	return LucideIcon(props, circle({
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 15H6a4 4 0 0 0-4 4v2" }), path({ "d": "m14.305 16.53.923-.382" }), path({ "d": "m15.228 13.852-.923-.383" }), path({ "d": "m16.852 12.228-.383-.923" }), path({ "d": "m16.852 17.772-.383.924" }), path({ "d": "m19.148 12.228.383-.923" }), path({ "d": "m19.53 18.696-.382-.924" }), path({ "d": "m20.772 13.852.924-.383" }), path({ "d": "m20.772 16.148.924.383" }), circle({
 		cx: "18",
 		cy: "15",
 		"r": "3"
@@ -14027,7 +14497,37 @@ const UserCog = (props = {}) => {
 		cx: "9",
 		cy: "7",
 		"r": "4"
-	}), path({ "d": "M10 15H6a4 4 0 0 0-4 4v2" }), path({ "d": "m21.7 16.4-.9-.3" }), path({ "d": "m15.2 13.9-.9-.3" }), path({ "d": "m16.6 18.7.3-.9" }), path({ "d": "m19.1 12.2.3-.9" }), path({ "d": "m19.6 18.7-.4-1" }), path({ "d": "m16.8 12.3-.4-1" }), path({ "d": "m14.3 16.6 1-.4" }), path({ "d": "m20.7 13.8 1-.4" }));
+	}));
+};
+//#endregion
+//#region src/icons/UserKey.ts
+const UserKey = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M20 11v6" }), path({ "d": "M20 13h2" }), path({ "d": "M3 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 2.072.578" }), circle({
+		cx: "10",
+		cy: "7",
+		"r": "4"
+	}), circle({
+		cx: "20",
+		cy: "19",
+		"r": "2"
+	}));
+};
+//#endregion
+//#region src/icons/UserLock.ts
+const UserLock = (props = {}) => {
+	const { path, circle, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M19 16v-2a2 2 0 0 0-4 0v2" }), path({ "d": "M9.5 15H7a4 4 0 0 0-4 4v2" }), circle({
+		cx: "10",
+		cy: "7",
+		"r": "4"
+	}), rect({
+		"x": "13",
+		"y": "16",
+		width: "8",
+		height: "5",
+		rx: ".899"
+	}));
 };
 //#endregion
 //#region src/icons/UserMinus.ts
@@ -14088,7 +14588,7 @@ const UserRoundCheck = (props = {}) => {
 //#region src/icons/UserRoundCog.ts
 const UserRoundCog = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M2 21a8 8 0 0 1 10.434-7.62" }), circle({
+	return LucideIcon(props, path({ "d": "m14.305 19.53.923-.382" }), path({ "d": "m15.228 16.852-.923-.383" }), path({ "d": "m16.852 15.228-.383-.923" }), path({ "d": "m16.852 20.772-.383.924" }), path({ "d": "m19.148 15.228.383-.923" }), path({ "d": "m19.53 21.696-.382-.924" }), path({ "d": "M2 21a8 8 0 0 1 10.434-7.62" }), path({ "d": "m20.772 16.852.924-.383" }), path({ "d": "m20.772 19.148.924.383" }), circle({
 		cx: "10",
 		cy: "8",
 		"r": "5"
@@ -14096,7 +14596,21 @@ const UserRoundCog = (props = {}) => {
 		cx: "18",
 		cy: "18",
 		"r": "3"
-	}), path({ "d": "m19.5 14.3-.4.9" }), path({ "d": "m16.9 20.8-.4.9" }), path({ "d": "m21.7 19.5-.9-.4" }), path({ "d": "m15.2 16.9-.9-.4" }), path({ "d": "m21.7 16.5-.9.4" }), path({ "d": "m15.2 19.1-.9.4" }), path({ "d": "m19.5 21.7-.4-.9" }), path({ "d": "m16.9 15.2-.4-.9" }));
+	}));
+};
+//#endregion
+//#region src/icons/UserRoundKey.ts
+const UserRoundKey = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M19 11v6" }), path({ "d": "M19 13h2" }), path({ "d": "M2 21a8 8 0 0 1 12.868-6.349" }), circle({
+		cx: "10",
+		cy: "8",
+		"r": "5"
+	}), circle({
+		cx: "19",
+		cy: "19",
+		"r": "2"
+	}));
 };
 //#endregion
 //#region src/icons/UserRoundMinus.ts
@@ -14177,6 +14691,16 @@ const UserSearch = (props = {}) => {
 	}), path({ "d": "m21 21-1.9-1.9" }));
 };
 //#endregion
+//#region src/icons/UserStar.ts
+const UserStar = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M16.051 12.616a1 1 0 0 1 1.909.024l.737 1.452a1 1 0 0 0 .737.535l1.634.256a1 1 0 0 1 .588 1.806l-1.172 1.168a1 1 0 0 0-.282.866l.259 1.613a1 1 0 0 1-1.541 1.134l-1.465-.75a1 1 0 0 0-.912 0l-1.465.75a1 1 0 0 1-1.539-1.133l.258-1.613a1 1 0 0 0-.282-.866l-1.156-1.153a1 1 0 0 1 .572-1.822l1.633-.256a1 1 0 0 0 .737-.535z" }), path({ "d": "M8 15H7a4 4 0 0 0-4 4v2" }), circle({
+		cx: "10",
+		cy: "7",
+		"r": "4"
+	}));
+};
+//#endregion
 //#region src/icons/UserX.ts
 const UserX = (props = {}) => {
 	const { path, circle, line } = van.tags(svgNamespace);
@@ -14220,11 +14744,11 @@ const UsersRound = (props = {}) => {
 //#region src/icons/Users.ts
 const Users = (props = {}) => {
 	const { path, circle } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" }), circle({
+	return LucideIcon(props, path({ "d": "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" }), path({ "d": "M16 3.128a4 4 0 0 1 0 7.744" }), path({ "d": "M22 21v-2a4 4 0 0 0-3-3.87" }), circle({
 		cx: "9",
 		cy: "7",
 		"r": "4"
-	}), path({ "d": "M22 21v-2a4 4 0 0 0-3-3.87" }), path({ "d": "M16 3.13a4 4 0 0 1 0 7.75" }));
+	}));
 };
 //#endregion
 //#region src/icons/UtensilsCrossed.ts
@@ -14243,6 +14767,20 @@ const Utensils = (props = {}) => {
 const UtilityPole = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M12 2v20" }), path({ "d": "M2 5h20" }), path({ "d": "M3 3v2" }), path({ "d": "M7 3v2" }), path({ "d": "M17 3v2" }), path({ "d": "M21 3v2" }), path({ "d": "m19 5-7 7-7-7" }));
+};
+//#endregion
+//#region src/icons/Van.ts
+const Van = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M13 6v5a1 1 0 0 0 1 1h6.102a1 1 0 0 1 .712.298l.898.91a1 1 0 0 1 .288.702V17a1 1 0 0 1-1 1h-3" }), path({ "d": "M5 18H3a1 1 0 0 1-1-1V8a2 2 0 0 1 2-2h12c1.1 0 2.1.8 2.4 1.8l1.176 4.2" }), path({ "d": "M9 18h5" }), circle({
+		cx: "16",
+		cy: "18",
+		"r": "2"
+	}), circle({
+		cx: "7",
+		cy: "18",
+		"r": "2"
+	}));
 };
 //#endregion
 //#region src/icons/Variable.ts
@@ -14294,6 +14832,36 @@ const Vault = (props = {}) => {
 		cx: "12",
 		cy: "12",
 		"r": "2"
+	}));
+};
+//#endregion
+//#region src/icons/VectorSquare.ts
+const VectorSquare = (props = {}) => {
+	const { path, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M19.5 7a24 24 0 0 1 0 10" }), path({ "d": "M4.5 7a24 24 0 0 0 0 10" }), path({ "d": "M7 19.5a24 24 0 0 0 10 0" }), path({ "d": "M7 4.5a24 24 0 0 1 10 0" }), rect({
+		"x": "17",
+		"y": "17",
+		width: "5",
+		height: "5",
+		rx: "1"
+	}), rect({
+		"x": "17",
+		"y": "2",
+		width: "5",
+		height: "5",
+		rx: "1"
+	}), rect({
+		"x": "2",
+		"y": "17",
+		width: "5",
+		height: "5",
+		rx: "1"
+	}), rect({
+		"x": "2",
+		"y": "2",
+		width: "5",
+		height: "5",
+		rx: "1"
 	}));
 };
 //#endregion
@@ -14501,12 +15069,18 @@ const Wallet = (props = {}) => {
 //#endregion
 //#region src/icons/Wallpaper.ts
 const Wallpaper = (props = {}) => {
-	const { circle, path } = van.tags(svgNamespace);
-	return LucideIcon(props, circle({
+	const { path, circle, rect } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 17v4" }), path({ "d": "M8 21h8" }), path({ "d": "m9 17 6.1-6.1a2 2 0 0 1 2.81.01L22 15" }), circle({
 		cx: "8",
 		cy: "9",
 		"r": "2"
-	}), path({ "d": "m9 17 6.1-6.1a2 2 0 0 1 2.81.01L22 15V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2" }), path({ "d": "M8 21h8" }), path({ "d": "M12 17v4" }));
+	}), rect({
+		"x": "2",
+		"y": "3",
+		width: "20",
+		height: "14",
+		rx: "2"
+	}));
 };
 //#endregion
 //#region src/icons/WandSparkles.ts
@@ -14523,13 +15097,8 @@ const Wand = (props = {}) => {
 //#endregion
 //#region src/icons/Warehouse.ts
 const Warehouse = (props = {}) => {
-	const { path, rect } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35A2 2 0 0 1 3.26 6.5l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35Z" }), path({ "d": "M6 18h12" }), path({ "d": "M6 14h12" }), rect({
-		width: "12",
-		height: "12",
-		"x": "6",
-		"y": "10"
-	}));
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M18 21V10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v11" }), path({ "d": "M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 1.132-1.803l7.95-3.974a2 2 0 0 1 1.837 0l7.948 3.974A2 2 0 0 1 22 8z" }), path({ "d": "M6 13h12" }), path({ "d": "M6 17h12" }));
 };
 //#endregion
 //#region src/icons/WashingMachine.ts
@@ -14550,12 +15119,24 @@ const WashingMachine = (props = {}) => {
 //#endregion
 //#region src/icons/Watch.ts
 const Watch = (props = {}) => {
-	const { circle, polyline, path } = van.tags(svgNamespace);
-	return LucideIcon(props, circle({
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 10v2.2l1.6 1" }), path({ "d": "m16.13 7.66-.81-4.05a2 2 0 0 0-2-1.61h-2.68a2 2 0 0 0-2 1.61l-.78 4.05" }), path({ "d": "m7.88 16.36.8 4a2 2 0 0 0 2 1.61h2.72a2 2 0 0 0 2-1.61l.81-4.05" }), circle({
 		cx: "12",
 		cy: "12",
 		"r": "6"
-	}), polyline({ points: "12 10 12 12 13 13" }), path({ "d": "m16.13 7.66-.81-4.05a2 2 0 0 0-2-1.61h-2.68a2 2 0 0 0-2 1.61l-.78 4.05" }), path({ "d": "m7.88 16.36.8 4a2 2 0 0 0 2 1.61h2.72a2 2 0 0 0 2-1.61l.81-4.05" }));
+	}));
+};
+//#endregion
+//#region src/icons/WavesArrowDown.ts
+const WavesArrowDown = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 10L12 2" }), path({ "d": "M16 6L12 10L8 6" }), path({ "d": "M2 15C2.6 15.5 3.2 16 4.5 16C7 16 7 14 9.5 14C12.1 14 11.9 16 14.5 16C17 16 17 14 19.5 14C20.8 14 21.4 14.5 22 15" }), path({ "d": "M2 21C2.6 21.5 3.2 22 4.5 22C7 22 7 20 9.5 20C12.1 20 11.9 22 14.5 22C17 22 17 20 19.5 20C20.8 20 21.4 20.5 22 21" }));
+};
+//#endregion
+//#region src/icons/WavesArrowUp.ts
+const WavesArrowUp = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 2v8" }), path({ "d": "M2 15c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" }), path({ "d": "M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" }), path({ "d": "m8 6 4-4 4 4" }));
 };
 //#endregion
 //#region src/icons/WavesLadder.ts
@@ -14572,23 +15153,23 @@ const Waves = (props = {}) => {
 //#endregion
 //#region src/icons/Waypoints.ts
 const Waypoints = (props = {}) => {
-	const { circle, path } = van.tags(svgNamespace);
-	return LucideIcon(props, circle({
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m10.586 5.414-5.172 5.172" }), path({ "d": "m18.586 13.414-5.172 5.172" }), path({ "d": "M6 12h12" }), circle({
 		cx: "12",
-		cy: "4.5",
-		"r": "2.5"
-	}), path({ "d": "m10.2 6.3-3.9 3.9" }), circle({
-		cx: "4.5",
-		cy: "12",
-		"r": "2.5"
-	}), path({ "d": "M7 12h10" }), circle({
-		cx: "19.5",
-		cy: "12",
-		"r": "2.5"
-	}), path({ "d": "m13.8 17.7 3.9-3.9" }), circle({
+		cy: "20",
+		"r": "2"
+	}), circle({
 		cx: "12",
-		cy: "19.5",
-		"r": "2.5"
+		cy: "4",
+		"r": "2"
+	}), circle({
+		cx: "20",
+		cy: "12",
+		"r": "2"
+	}), circle({
+		cx: "4",
+		cy: "12",
+		"r": "2"
 	}));
 };
 //#endregion
@@ -14616,6 +15197,16 @@ const WebhookOff = (props = {}) => {
 const Webhook = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M18 16.98h-5.99c-1.1 0-1.95.94-2.48 1.9A4 4 0 0 1 2 17c.01-.7.2-1.4.57-2" }), path({ "d": "m6 17 3.13-5.78c.53-.97.1-2.18-.5-3.1a4 4 0 1 1 6.89-4.06" }), path({ "d": "m12 6 3.13 5.73C15.66 12.7 16.9 13 18 13a4 4 0 0 1 0 8" }));
+};
+//#endregion
+//#region src/icons/WeightTilde.ts
+const WeightTilde = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M6.5 8a2 2 0 0 0-1.906 1.46L2.1 18.5A2 2 0 0 0 4 21h16a2 2 0 0 0 1.925-2.54L19.4 9.5A2 2 0 0 0 17.48 8z" }), path({ "d": "M7.999 15a2.5 2.5 0 0 1 4 0 2.5 2.5 0 0 0 4 0" }), circle({
+		cx: "12",
+		cy: "5",
+		"r": "3"
+	}));
 };
 //#endregion
 //#region src/icons/Weight.ts
@@ -14659,6 +15250,16 @@ const WholeWord = (props = {}) => {
 	}), path({ "d": "M14 7v8" }), path({ "d": "M22 17v1c0 .5-.5 1-1 1H3c-.5 0-1-.5-1-1v-1" }));
 };
 //#endregion
+//#region src/icons/WifiCog.ts
+const WifiCog = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m14.305 19.53.923-.382" }), path({ "d": "m15.228 16.852-.923-.383" }), path({ "d": "m16.852 15.228-.383-.923" }), path({ "d": "m16.852 20.772-.383.924" }), path({ "d": "m19.148 15.228.383-.923" }), path({ "d": "m19.53 21.696-.382-.924" }), path({ "d": "M2 7.82a15 15 0 0 1 20 0" }), path({ "d": "m20.772 16.852.924-.383" }), path({ "d": "m20.772 19.148.924.383" }), path({ "d": "M5 11.858a10 10 0 0 1 11.5-1.785" }), path({ "d": "M8.5 15.429a5 5 0 0 1 2.413-1.31" }), circle({
+		cx: "18",
+		cy: "18",
+		"r": "3"
+	}));
+};
+//#endregion
 //#region src/icons/WifiHigh.ts
 const WifiHigh = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
@@ -14675,6 +15276,18 @@ const WifiLow = (props = {}) => {
 const WifiOff = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M12 20h.01" }), path({ "d": "M8.5 16.429a5 5 0 0 1 7 0" }), path({ "d": "M5 12.859a10 10 0 0 1 5.17-2.69" }), path({ "d": "M19 12.859a10 10 0 0 0-2.007-1.523" }), path({ "d": "M2 8.82a15 15 0 0 1 4.177-2.643" }), path({ "d": "M22 8.82a15 15 0 0 0-11.288-3.764" }), path({ "d": "m2 2 20 20" }));
+};
+//#endregion
+//#region src/icons/WifiPen.ts
+const WifiPen = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M2 8.82a15 15 0 0 1 20 0" }), path({ "d": "M21.378 16.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" }), path({ "d": "M5 12.859a10 10 0 0 1 10.5-2.222" }), path({ "d": "M8.5 16.429a5 5 0 0 1 3-1.406" }));
+};
+//#endregion
+//#region src/icons/WifiSync.ts
+const WifiSync = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M11.965 10.105v4L13.5 12.5a5 5 0 0 1 8 1.5" }), path({ "d": "M11.965 14.105h4" }), path({ "d": "M17.965 18.105h4L20.43 19.71a5 5 0 0 1-8-1.5" }), path({ "d": "M2 8.82a15 15 0 0 1 20 0" }), path({ "d": "M21.965 22.105v-4" }), path({ "d": "M5 12.86a10 10 0 0 1 3-2.032" }), path({ "d": "M8.5 16.429h.01" }));
 };
 //#endregion
 //#region src/icons/WifiZero.ts
@@ -14742,38 +15355,22 @@ const Worm = (props = {}) => {
 	return LucideIcon(props, path({ "d": "m19 12-1.5 3" }), path({ "d": "M19.63 18.81 22 20" }), path({ "d": "M6.47 8.23a1.68 1.68 0 0 1 2.44 1.93l-.64 2.08a6.76 6.76 0 0 0 10.16 7.67l.42-.27a1 1 0 1 0-2.73-4.21l-.42.27a1.76 1.76 0 0 1-2.63-1.99l.64-2.08A6.66 6.66 0 0 0 3.94 3.9l-.7.4a1 1 0 1 0 2.55 4.34z" }));
 };
 //#endregion
-//#region src/icons/WrapText.ts
-const WrapText = (props = {}) => {
-	const { line, path, polyline } = van.tags(svgNamespace);
-	return LucideIcon(props, line({
-		x1: "3",
-		x2: "21",
-		y1: "6",
-		y2: "6"
-	}), path({ "d": "M3 12h15a3 3 0 1 1 0 6h-4" }), polyline({ points: "16 16 14 18 16 20" }), line({
-		x1: "3",
-		x2: "10",
-		y1: "18",
-		y2: "18"
-	}));
-};
-//#endregion
 //#region src/icons/Wrench.ts
 const Wrench = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" }));
+	return LucideIcon(props, path({ "d": "M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" }));
+};
+//#endregion
+//#region src/icons/XLineTop.ts
+const XLineTop = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M18 4H6" }), path({ "d": "M18 8 6 20" }), path({ "d": "m6 8 12 12" }));
 };
 //#endregion
 //#region src/icons/X.ts
 const X = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M18 6 6 18" }), path({ "d": "m6 6 12 12" }));
-};
-//#endregion
-//#region src/icons/Youtube.ts
-const Youtube = (props = {}) => {
-	const { path } = van.tags(svgNamespace);
-	return LucideIcon(props, path({ "d": "M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" }), path({ "d": "m10 15 5-3-5-3z" }));
 };
 //#endregion
 //#region src/icons/ZapOff.ts
@@ -14786,6 +15383,104 @@ const ZapOff = (props = {}) => {
 const Zap = (props = {}) => {
 	const { path } = van.tags(svgNamespace);
 	return LucideIcon(props, path({ "d": "M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" }));
+};
+//#endregion
+//#region src/icons/ZodiacAquarius.ts
+const ZodiacAquarius = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "m2 10 2.456-3.684a.7.7 0 0 1 1.106-.013l2.39 3.413a.7.7 0 0 0 1.096-.001l2.402-3.432a.7.7 0 0 1 1.098 0l2.402 3.432a.7.7 0 0 0 1.098 0l2.389-3.413a.7.7 0 0 1 1.106.013L22 10" }), path({ "d": "m2 18.002 2.456-3.684a.7.7 0 0 1 1.106-.013l2.39 3.413a.7.7 0 0 0 1.097 0l2.402-3.432a.7.7 0 0 1 1.098 0l2.402 3.432a.7.7 0 0 0 1.098 0l2.389-3.413a.7.7 0 0 1 1.106.013L22 18.002" }));
+};
+//#endregion
+//#region src/icons/ZodiacAries.ts
+const ZodiacAries = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 7.5a4.5 4.5 0 1 1 5 4.5" }), path({ "d": "M7 12a4.5 4.5 0 1 1 5-4.5V21" }));
+};
+//#endregion
+//#region src/icons/ZodiacCancer.ts
+const ZodiacCancer = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M21 14.5A9 6.5 0 0 1 5.5 19" }), path({ "d": "M3 9.5A9 6.5 0 0 1 18.5 5" }), circle({
+		cx: "17.5",
+		cy: "14.5",
+		"r": "3.5"
+	}), circle({
+		cx: "6.5",
+		cy: "9.5",
+		"r": "3.5"
+	}));
+};
+//#endregion
+//#region src/icons/ZodiacCapricorn.ts
+const ZodiacCapricorn = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M11 21a3 3 0 0 0 3-3V6.5a1 1 0 0 0-7 0" }), path({ "d": "M7 19V6a3 3 0 0 0-3-3h0" }), circle({
+		cx: "17",
+		cy: "17",
+		"r": "3"
+	}));
+};
+//#endregion
+//#region src/icons/ZodiacGemini.ts
+const ZodiacGemini = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M16 4.525v14.948" }), path({ "d": "M20 3A17 17 0 0 1 4 3" }), path({ "d": "M4 21a17 17 0 0 1 16 0" }), path({ "d": "M8 4.525v14.948" }));
+};
+//#endregion
+//#region src/icons/ZodiacLeo.ts
+const ZodiacLeo = (props = {}) => {
+	const { path, circle } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 16c0-4-3-4.5-3-8a5 5 0 0 1 10 0c0 3.466-3 6.196-3 10a3 3 0 0 0 6 0" }), circle({
+		cx: "7",
+		cy: "16",
+		"r": "3"
+	}));
+};
+//#endregion
+//#region src/icons/ZodiacLibra.ts
+const ZodiacLibra = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M3 16h6.857c.162-.012.19-.323.038-.38a6 6 0 1 1 4.212 0c-.153.057-.125.368.038.38H21" }), path({ "d": "M3 20h18" }));
+};
+//#endregion
+//#region src/icons/ZodiacOphiuchus.ts
+const ZodiacOphiuchus = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M3 10A6.06 6.06 0 0 1 12 10 A6.06 6.06 0 0 0 21 10" }), path({ "d": "M6 3v12a6 6 0 0 0 12 0V3" }));
+};
+//#endregion
+//#region src/icons/ZodiacPisces.ts
+const ZodiacPisces = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M19 21a15 15 0 0 1 0-18" }), path({ "d": "M20 12H4" }), path({ "d": "M5 3a15 15 0 0 1 0 18" }));
+};
+//#endregion
+//#region src/icons/ZodiacSagittarius.ts
+const ZodiacSagittarius = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M15 3h6v6" }), path({ "d": "M21 3 3 21" }), path({ "d": "m9 9 6 6" }));
+};
+//#endregion
+//#region src/icons/ZodiacScorpio.ts
+const ZodiacScorpio = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M10 19V5.5a1 1 0 0 1 5 0V17a2 2 0 0 0 2 2h5l-3-3" }), path({ "d": "m22 19-3 3" }), path({ "d": "M5 19V5.5a1 1 0 0 1 5 0" }), path({ "d": "M5 5.5A2.5 2.5 0 0 0 2.5 3" }));
+};
+//#endregion
+//#region src/icons/ZodiacTaurus.ts
+const ZodiacTaurus = (props = {}) => {
+	const { circle, path } = van.tags(svgNamespace);
+	return LucideIcon(props, circle({
+		cx: "12",
+		cy: "15",
+		"r": "6"
+	}), path({ "d": "M18 3A6 6 0 0 1 6 3" }));
+};
+//#endregion
+//#region src/icons/ZodiacVirgo.ts
+const ZodiacVirgo = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M11 5.5a1 1 0 0 1 5 0V16a5 5 0 0 0 5 5" }), path({ "d": "M16 11.5a1 1 0 0 1 5 0V16a5 5 0 0 1-5 5" }), path({ "d": "M6 19V6a3 3 0 0 0-3-3h0" }), path({ "d": "M6 5.5a1 1 0 0 1 5 0V19" }));
 };
 //#endregion
 //#region src/icons/ZoomIn.ts
@@ -14833,6 +15528,6 @@ const ZoomOut = (props = {}) => {
 	}));
 };
 //#endregion
-export { AArrowDown, AArrowUp, ALargeSmall, Accessibility, Activity, AirVent, Airplay, AlarmClock, AlarmClockCheck, AlarmClockMinus, AlarmClockOff, AlarmClockPlus, AlarmSmoke, Album, AlignCenter, AlignCenterHorizontal, AlignCenterVertical, AlignEndHorizontal, AlignEndVertical, AlignHorizontalDistributeCenter, AlignHorizontalDistributeEnd, AlignHorizontalDistributeStart, AlignHorizontalJustifyCenter, AlignHorizontalJustifyEnd, AlignHorizontalJustifyStart, AlignHorizontalSpaceAround, AlignHorizontalSpaceBetween, AlignJustify, AlignLeft, AlignRight, AlignStartHorizontal, AlignStartVertical, AlignVerticalDistributeCenter, AlignVerticalDistributeEnd, AlignVerticalDistributeStart, AlignVerticalJustifyCenter, AlignVerticalJustifyEnd, AlignVerticalJustifyStart, AlignVerticalSpaceAround, AlignVerticalSpaceBetween, Ambulance, Ampersand, Ampersands, Amphora, Anchor, Angry, Annoyed, Antenna, Anvil, Aperture, AppWindow, AppWindowMac, Apple, Archive, ArchiveRestore, ArchiveX, Armchair, ArrowBigDown, ArrowBigDownDash, ArrowBigLeft, ArrowBigLeftDash, ArrowBigRight, ArrowBigRightDash, ArrowBigUp, ArrowBigUpDash, ArrowDown, ArrowDown01, ArrowDown10, ArrowDownAZ, ArrowDownFromLine, ArrowDownLeft, ArrowDownNarrowWide, ArrowDownRight, ArrowDownToDot, ArrowDownToLine, ArrowDownUp, ArrowDownWideNarrow, ArrowDownZA, ArrowLeft, ArrowLeftFromLine, ArrowLeftRight, ArrowLeftToLine, ArrowRight, ArrowRightFromLine, ArrowRightLeft, ArrowRightToLine, ArrowUp, ArrowUp01, ArrowUp10, ArrowUpAZ, ArrowUpDown, ArrowUpFromDot, ArrowUpFromLine, ArrowUpLeft, ArrowUpNarrowWide, ArrowUpRight, ArrowUpToLine, ArrowUpWideNarrow, ArrowUpZA, ArrowsUpFromLine, Asterisk, AtSign, Atom, AudioLines, AudioWaveform, Award, Axe, Axis3d, Baby, Backpack, Badge, BadgeAlert, BadgeCent, BadgeCheck, BadgeDollarSign, BadgeEuro, BadgeHelp, BadgeIndianRupee, BadgeInfo, BadgeJapaneseYen, BadgeMinus, BadgePercent, BadgePlus, BadgePoundSterling, BadgeRussianRuble, BadgeSwissFranc, BadgeX, BaggageClaim, Ban, Banana, Bandage, Banknote, Barcode, Baseline, Bath, Battery, BatteryCharging, BatteryFull, BatteryLow, BatteryMedium, BatteryPlus, BatteryWarning, Beaker, Bean, BeanOff, Bed, BedDouble, BedSingle, Beef, Beer, BeerOff, Bell, BellDot, BellElectric, BellMinus, BellOff, BellPlus, BellRing, BetweenHorizontalEnd, BetweenHorizontalStart, BetweenVerticalEnd, BetweenVerticalStart, BicepsFlexed, Bike, Binary, Binoculars, Biohazard, Bird, Bitcoin, Blend, Blinds, Blocks, Bluetooth, BluetoothConnected, BluetoothOff, BluetoothSearching, Bold, Bolt, Bomb, Bone, Book, BookA, BookAudio, BookCheck, BookCopy, BookDashed, BookDown, BookHeadphones, BookHeart, BookImage, BookKey, BookLock, BookMarked, BookMinus, BookOpen, BookOpenCheck, BookOpenText, BookPlus, BookText, BookType, BookUp, BookUp2, BookUser, BookX, Bookmark, BookmarkCheck, BookmarkMinus, BookmarkPlus, BookmarkX, BoomBox, Bot, BotMessageSquare, BotOff, Box, Boxes, Braces, Brackets, Brain, BrainCircuit, BrainCog, BrickWall, Briefcase, BriefcaseBusiness, BriefcaseConveyorBelt, BriefcaseMedical, BringToFront, Brush, Bug, BugOff, BugPlay, Building, Building2, Bus, BusFront, Cable, CableCar, Cake, CakeSlice, Calculator, Calendar, Calendar1, CalendarArrowDown, CalendarArrowUp, CalendarCheck, CalendarCheck2, CalendarClock, CalendarCog, CalendarDays, CalendarFold, CalendarHeart, CalendarMinus, CalendarMinus2, CalendarOff, CalendarPlus, CalendarPlus2, CalendarRange, CalendarSearch, CalendarSync, CalendarX, CalendarX2, Camera, CameraOff, Candy, CandyCane, CandyOff, Cannabis, Captions, CaptionsOff, Car, CarFront, CarTaxiFront, Caravan, Carrot, CaseLower, CaseSensitive, CaseUpper, CassetteTape, Cast, Castle, Cat, Cctv, ChartArea, ChartBar, ChartBarBig, ChartBarDecreasing, ChartBarIncreasing, ChartBarStacked, ChartCandlestick, ChartColumn, ChartColumnBig, ChartColumnDecreasing, ChartColumnIncreasing, ChartColumnStacked, ChartGantt, ChartLine, ChartNetwork, ChartNoAxesColumn, ChartNoAxesColumnDecreasing, ChartNoAxesColumnIncreasing, ChartNoAxesCombined, ChartNoAxesGantt, ChartPie, ChartScatter, ChartSpline, Check, CheckCheck, ChefHat, Cherry, ChevronDown, ChevronFirst, ChevronLast, ChevronLeft, ChevronRight, ChevronUp, ChevronsDown, ChevronsDownUp, ChevronsLeft, ChevronsLeftRight, ChevronsLeftRightEllipsis, ChevronsRight, ChevronsRightLeft, ChevronsUp, ChevronsUpDown, Chrome, Church, Cigarette, CigaretteOff, Circle, CircleAlert, CircleArrowDown, CircleArrowLeft, CircleArrowOutDownLeft, CircleArrowOutDownRight, CircleArrowOutUpLeft, CircleArrowOutUpRight, CircleArrowRight, CircleArrowUp, CircleCheck, CircleCheckBig, CircleChevronDown, CircleChevronLeft, CircleChevronRight, CircleChevronUp, CircleDashed, CircleDivide, CircleDollarSign, CircleDot, CircleDotDashed, CircleEllipsis, CircleEqual, CircleFadingArrowUp, CircleFadingPlus, CircleGauge, CircleHelp, CircleMinus, CircleOff, CircleParking, CircleParkingOff, CirclePause, CirclePercent, CirclePlay, CirclePlus, CirclePower, CircleSlash, CircleSlash2, CircleSmall, CircleStop, CircleUser, CircleUserRound, CircleX, CircuitBoard, Citrus, Clapperboard, Clipboard, ClipboardCheck, ClipboardCopy, ClipboardList, ClipboardMinus, ClipboardPaste, ClipboardPen, ClipboardPenLine, ClipboardPlus, ClipboardType, ClipboardX, Clock, Clock1, Clock10, Clock11, Clock12, Clock2, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, ClockAlert, ClockArrowDown, ClockArrowUp, Cloud, CloudAlert, CloudCog, CloudDownload, CloudDrizzle, CloudFog, CloudHail, CloudLightning, CloudMoon, CloudMoonRain, CloudOff, CloudRain, CloudRainWind, CloudSnow, CloudSun, CloudSunRain, CloudUpload, Cloudy, Clover, Club, Code, CodeXml, Codepen, Codesandbox, Coffee, Cog, Coins, Columns2, Columns3, Columns4, Combine, Command, Compass, Component, Computer, ConciergeBell, Cone, Construction, Contact, ContactRound, Container, Contrast, Cookie, CookingPot, Copy, CopyCheck, CopyMinus, CopyPlus, CopySlash, CopyX, Copyleft, Copyright, CornerDownLeft, CornerDownRight, CornerLeftDown, CornerLeftUp, CornerRightDown, CornerRightUp, CornerUpLeft, CornerUpRight, Cpu, CreativeCommons, CreditCard, Croissant, Crop, Cross, Crosshair, Crown, Cuboid, CupSoda, Currency, Cylinder, Dam, Database, DatabaseBackup, DatabaseZap, Delete, Dessert, Diameter, Diamond, DiamondMinus, DiamondPercent, DiamondPlus, Dice1, Dice2, Dice3, Dice4, Dice5, Dice6, Dices, Diff, Disc, Disc2, Disc3, DiscAlbum, Divide, Dna, DnaOff, Dock, Dog, DollarSign, Donut, DoorClosed, DoorOpen, Dot, Download, DraftingCompass, Drama, Dribbble, Drill, Droplet, DropletOff, Droplets, Drum, Drumstick, Dumbbell, Ear, EarOff, Earth, EarthLock, Eclipse, Egg, EggFried, EggOff, Ellipsis, EllipsisVertical, Equal, EqualApproximately, EqualNot, Eraser, EthernetPort, Euro, Expand, ExternalLink, Eye, EyeClosed, EyeOff, Facebook, Factory, Fan, FastForward, Feather, Fence, FerrisWheel, Figma, File, FileArchive, FileAudio, FileAudio2, FileAxis3d, FileBadge, FileBadge2, FileBox, FileChartColumn, FileChartColumnIncreasing, FileChartLine, FileChartPie, FileCheck, FileCheck2, FileClock, FileCode, FileCode2, FileCog, FileDiff, FileDigit, FileDown, FileHeart, FileImage, FileInput, FileJson, FileJson2, FileKey, FileKey2, FileLock, FileLock2, FileMinus, FileMinus2, FileMusic, FileOutput, FilePen, FilePenLine, FilePlus, FilePlus2, FileQuestion, FileScan, FileSearch, FileSearch2, FileSliders, FileSpreadsheet, FileStack, FileSymlink, FileTerminal, FileText, FileType, FileType2, FileUp, FileUser, FileVideo, FileVideo2, FileVolume, FileVolume2, FileWarning, FileX, FileX2, Files, Film, Filter, FilterX, Fingerprint, FireExtinguisher, Fish, FishOff, FishSymbol, Flag, FlagOff, FlagTriangleLeft, FlagTriangleRight, Flame, FlameKindling, Flashlight, FlashlightOff, FlaskConical, FlaskConicalOff, FlaskRound, FlipHorizontal, FlipHorizontal2, FlipVertical, FlipVertical2, Flower, Flower2, Focus, FoldHorizontal, FoldVertical, Folder, FolderArchive, FolderCheck, FolderClock, FolderClosed, FolderCode, FolderCog, FolderDot, FolderDown, FolderGit, FolderGit2, FolderHeart, FolderInput, FolderKanban, FolderKey, FolderLock, FolderMinus, FolderOpen, FolderOpenDot, FolderOutput, FolderPen, FolderPlus, FolderRoot, FolderSearch, FolderSearch2, FolderSymlink, FolderSync, FolderTree, FolderUp, FolderX, Folders, Footprints, Forklift, Forward, Frame, Framer, Frown, Fuel, Fullscreen, GalleryHorizontal, GalleryHorizontalEnd, GalleryThumbnails, GalleryVertical, GalleryVerticalEnd, Gamepad, Gamepad2, Gauge, Gavel, Gem, Ghost, Gift, GitBranch, GitBranchPlus, GitCommitHorizontal, GitCommitVertical, GitCompare, GitCompareArrows, GitFork, GitGraph, GitMerge, GitPullRequest, GitPullRequestArrow, GitPullRequestClosed, GitPullRequestCreate, GitPullRequestCreateArrow, GitPullRequestDraft, Github, Gitlab, GlassWater, Glasses, Globe, GlobeLock, Goal, Grab, GraduationCap, Grape, Grid2x2, Grid2x2Check, Grid2x2Plus, Grid2x2X, Grid3x3, Grip, GripHorizontal, GripVertical, Group, Guitar, Ham, Hammer, Hand, HandCoins, HandHeart, HandHelping, HandMetal, HandPlatter, Handshake, HardDrive, HardDriveDownload, HardDriveUpload, HardHat, Hash, Haze, HdmiPort, Heading, Heading1, Heading2, Heading3, Heading4, Heading5, Heading6, HeadphoneOff, Headphones, Headset, Heart, HeartCrack, HeartHandshake, HeartOff, HeartPulse, Heater, Hexagon, Highlighter, History, Hop, HopOff, Hospital, Hotel, Hourglass, House, HousePlug, HousePlus, HouseWifi, IceCreamBowl, IceCreamCone, IdCard, Image, ImageDown, ImageMinus, ImageOff, ImagePlay, ImagePlus, ImageUp, ImageUpscale, Images, Import, Inbox, IndentDecrease, IndentIncrease, IndianRupee, InfinityIcon, Info, InspectionPanel, Instagram, Italic, IterationCcw, IterationCw, JapaneseYen, Joystick, Kanban, Key, KeyRound, KeySquare, Keyboard, KeyboardMusic, KeyboardOff, Lamp, LampCeiling, LampDesk, LampFloor, LampWallDown, LampWallUp, LandPlot, Landmark, Languages, Laptop, LaptopMinimal, LaptopMinimalCheck, Lasso, LassoSelect, Laugh, Layers, Layers2, LayoutDashboard, LayoutGrid, LayoutList, LayoutPanelLeft, LayoutPanelTop, LayoutTemplate, Leaf, LeafyGreen, Lectern, LetterText, Library, LibraryBig, LifeBuoy, Ligature, Lightbulb, LightbulbOff, Link, Link2, Link2Off, Linkedin, List, ListCheck, ListChecks, ListCollapse, ListEnd, ListFilter, ListFilterPlus, ListMinus, ListMusic, ListOrdered, ListPlus, ListRestart, ListStart, ListTodo, ListTree, ListVideo, ListX, Loader, LoaderCircle, LoaderPinwheel, Locate, LocateFixed, LocateOff, Lock, LockKeyhole, LockKeyholeOpen, LockOpen, LogIn, LogOut, Logs, Lollipop, Luggage, Magnet, Mail, MailCheck, MailMinus, MailOpen, MailPlus, MailQuestion, MailSearch, MailWarning, MailX, Mailbox, Mails, Map, MapPin, MapPinCheck, MapPinCheckInside, MapPinHouse, MapPinMinus, MapPinMinusInside, MapPinOff, MapPinPlus, MapPinPlusInside, MapPinX, MapPinXInside, MapPinned, MapPlus, Mars, MarsStroke, Martini, Maximize, Maximize2, Medal, Megaphone, MegaphoneOff, Meh, MemoryStick, Menu, Merge, MessageCircle, MessageCircleCode, MessageCircleDashed, MessageCircleHeart, MessageCircleMore, MessageCircleOff, MessageCirclePlus, MessageCircleQuestion, MessageCircleReply, MessageCircleWarning, MessageCircleX, MessageSquare, MessageSquareCode, MessageSquareDashed, MessageSquareDiff, MessageSquareDot, MessageSquareHeart, MessageSquareLock, MessageSquareMore, MessageSquareOff, MessageSquarePlus, MessageSquareQuote, MessageSquareReply, MessageSquareShare, MessageSquareText, MessageSquareWarning, MessageSquareX, MessagesSquare, Mic, MicOff, MicVocal, Microchip, Microscope, Microwave, Milestone, Milk, MilkOff, Minimize, Minimize2, Minus, Monitor, MonitorCheck, MonitorCog, MonitorDot, MonitorDown, MonitorOff, MonitorPause, MonitorPlay, MonitorSmartphone, MonitorSpeaker, MonitorStop, MonitorUp, MonitorX, Moon, MoonStar, Mountain, MountainSnow, Mouse, MouseOff, MousePointer, MousePointer2, MousePointerBan, MousePointerClick, Move, Move3d, MoveDiagonal, MoveDiagonal2, MoveDown, MoveDownLeft, MoveDownRight, MoveHorizontal, MoveLeft, MoveRight, MoveUp, MoveUpLeft, MoveUpRight, MoveVertical, Music, Music2, Music3, Music4, Navigation, Navigation2, Navigation2Off, NavigationOff, Network, Newspaper, Nfc, NonBinary, Notebook, NotebookPen, NotebookTabs, NotebookText, NotepadText, NotepadTextDashed, Nut, NutOff, Octagon, OctagonAlert, OctagonMinus, OctagonPause, OctagonX, Omega, Option, Orbit, Origami, Package, Package2, PackageCheck, PackageMinus, PackageOpen, PackagePlus, PackageSearch, PackageX, PaintBucket, PaintRoller, Paintbrush, PaintbrushVertical, Palette, PanelBottom, PanelBottomClose, PanelBottomDashed, PanelBottomOpen, PanelLeft, PanelLeftClose, PanelLeftDashed, PanelLeftOpen, PanelRight, PanelRightClose, PanelRightDashed, PanelRightOpen, PanelTop, PanelTopClose, PanelTopDashed, PanelTopOpen, PanelsLeftBottom, PanelsRightBottom, PanelsTopLeft, Paperclip, Parentheses, ParkingMeter, PartyPopper, Pause, PawPrint, PcCase, Pen, PenLine, PenOff, PenTool, Pencil, PencilLine, PencilOff, PencilRuler, Pentagon, Percent, PersonStanding, PhilippinePeso, Phone, PhoneCall, PhoneForwarded, PhoneIncoming, PhoneMissed, PhoneOff, PhoneOutgoing, Pi, Piano, Pickaxe, PictureInPicture, PictureInPicture2, PiggyBank, Pilcrow, PilcrowLeft, PilcrowRight, Pill, PillBottle, Pin, PinOff, Pipette, Pizza, Plane, PlaneLanding, PlaneTakeoff, Play, Plug, Plug2, PlugZap, Plus, Pocket, PocketKnife, Podcast, Pointer, PointerOff, Popcorn, Popsicle, PoundSterling, Power, PowerOff, Presentation, Printer, PrinterCheck, Projector, Proportions, Puzzle, Pyramid, QrCode, Quote, Rabbit, Radar, Radiation, Radical, Radio, RadioReceiver, RadioTower, Radius, RailSymbol, Rainbow, Rat, Ratio, Receipt, ReceiptCent, ReceiptEuro, ReceiptIndianRupee, ReceiptJapaneseYen, ReceiptPoundSterling, ReceiptRussianRuble, ReceiptSwissFranc, ReceiptText, RectangleEllipsis, RectangleHorizontal, RectangleVertical, Recycle, Redo, Redo2, RedoDot, RefreshCcw, RefreshCcwDot, RefreshCw, RefreshCwOff, Refrigerator, Regex, RemoveFormatting, Repeat, Repeat1, Repeat2, Replace, ReplaceAll, Reply, ReplyAll, Rewind, Ribbon, Rocket, RockingChair, RollerCoaster, Rotate3d, RotateCcw, RotateCcwSquare, RotateCw, RotateCwSquare, Route, RouteOff, Router, Rows2, Rows3, Rows4, Rss, Ruler, RussianRuble, Sailboat, Salad, Sandwich, Satellite, SatelliteDish, Save, SaveAll, SaveOff, Scale, Scale3d, Scaling, Scan, ScanBarcode, ScanEye, ScanFace, ScanHeart, ScanLine, ScanQrCode, ScanSearch, ScanText, School, Scissors, ScissorsLineDashed, ScreenShare, ScreenShareOff, Scroll, ScrollText, Search, SearchCheck, SearchCode, SearchSlash, SearchX, Section, Send, SendHorizontal, SendToBack, SeparatorHorizontal, SeparatorVertical, Server, ServerCog, ServerCrash, ServerOff, Settings, Settings2, Shapes, Share, Share2, Sheet, Shell, Shield, ShieldAlert, ShieldBan, ShieldCheck, ShieldEllipsis, ShieldHalf, ShieldMinus, ShieldOff, ShieldPlus, ShieldQuestion, ShieldUser, ShieldX, Ship, ShipWheel, Shirt, ShoppingBag, ShoppingBasket, ShoppingCart, Shovel, ShowerHead, Shrink, Shrub, Shuffle, Sigma, Signal, SignalHigh, SignalLow, SignalMedium, SignalZero, Signature, Signpost, SignpostBig, Siren, SkipBack, SkipForward, Skull, Slack, Slash, Slice, SlidersHorizontal, SlidersVertical, Smartphone, SmartphoneCharging, SmartphoneNfc, Smile, SmilePlus, Snail, Snowflake, Sofa, Soup, Space, Spade, Sparkle, Sparkles, Speaker, Speech, SpellCheck, SpellCheck2, Spline, Split, SprayCan, Sprout, Square, SquareActivity, SquareArrowDown, SquareArrowDownLeft, SquareArrowDownRight, SquareArrowLeft, SquareArrowOutDownLeft, SquareArrowOutDownRight, SquareArrowOutUpLeft, SquareArrowOutUpRight, SquareArrowRight, SquareArrowUp, SquareArrowUpLeft, SquareArrowUpRight, SquareAsterisk, SquareBottomDashedScissors, SquareChartGantt, SquareCheck, SquareCheckBig, SquareChevronDown, SquareChevronLeft, SquareChevronRight, SquareChevronUp, SquareCode, SquareDashed, SquareDashedBottom, SquareDashedBottomCode, SquareDashedKanban, SquareDashedMousePointer, SquareDivide, SquareDot, SquareEqual, SquareFunction, SquareKanban, SquareLibrary, SquareM, SquareMenu, SquareMinus, SquareMousePointer, SquareParking, SquareParkingOff, SquarePen, SquarePercent, SquarePi, SquarePilcrow, SquarePlay, SquarePlus, SquarePower, SquareRadical, SquareScissors, SquareSigma, SquareSlash, SquareSplitHorizontal, SquareSplitVertical, SquareSquare, SquareStack, SquareTerminal, SquareUser, SquareUserRound, SquareX, Squircle, Squirrel, Stamp, Star, StarHalf, StarOff, StepBack, StepForward, Stethoscope, Sticker, StickyNote, Store, StretchHorizontal, StretchVertical, Strikethrough, Subscript, Sun, SunDim, SunMedium, SunMoon, SunSnow, Sunrise, Sunset, Superscript, SwatchBook, SwissFranc, SwitchCamera, Sword, Swords, Syringe, Table, Table2, TableCellsMerge, TableCellsSplit, TableColumnsSplit, TableOfContents, TableProperties, TableRowsSplit, Tablet, TabletSmartphone, Tablets, Tag, Tags, Tally1, Tally2, Tally3, Tally4, Tally5, Tangent, Target, Telescope, Tent, TentTree, Terminal, TestTube, TestTubeDiagonal, TestTubes, Text, TextCursor, TextCursorInput, TextQuote, TextSearch, TextSelect, Theater, Thermometer, ThermometerSnowflake, ThermometerSun, ThumbsDown, ThumbsUp, Ticket, TicketCheck, TicketMinus, TicketPercent, TicketPlus, TicketSlash, TicketX, Tickets, TicketsPlane, Timer, TimerOff, TimerReset, ToggleLeft, ToggleRight, Toilet, Tornado, Torus, Touchpad, TouchpadOff, TowerControl, ToyBrick, Tractor, TrafficCone, TrainFront, TrainFrontTunnel, TrainTrack, TramFront, Transgender, Trash, Trash2, TreeDeciduous, TreePalm, TreePine, Trees, Trello, TrendingDown, TrendingUp, TrendingUpDown, Triangle, TriangleAlert, TriangleDashed, TriangleRight, Trophy, Truck, Turtle, Tv, TvMinimal, TvMinimalPlay, Twitch, Twitter, Type, TypeOutline, Umbrella, UmbrellaOff, Underline, Undo, Undo2, UndoDot, UnfoldHorizontal, UnfoldVertical, Ungroup, University, Unlink, Unlink2, Unplug, Upload, Usb, User, UserCheck, UserCog, UserMinus, UserPen, UserPlus, UserRound, UserRoundCheck, UserRoundCog, UserRoundMinus, UserRoundPen, UserRoundPlus, UserRoundSearch, UserRoundX, UserSearch, UserX, Users, UsersRound, Utensils, UtensilsCrossed, UtilityPole, Variable, Vault, Vegan, VenetianMask, Venus, VenusAndMars, Vibrate, VibrateOff, Video, VideoOff, Videotape, View, Voicemail, Volleyball, Volume, Volume1, Volume2, VolumeOff, VolumeX, Vote, Wallet, WalletCards, WalletMinimal, Wallpaper, Wand, WandSparkles, Warehouse, WashingMachine, Watch, Waves, WavesLadder, Waypoints, Webcam, Webhook, WebhookOff, Weight, Wheat, WheatOff, WholeWord, Wifi, WifiHigh, WifiLow, WifiOff, WifiZero, Wind, WindArrowDown, Wine, WineOff, Workflow, Worm, WrapText, Wrench, X, Youtube, Zap, ZapOff, ZoomIn, ZoomOut };
+export { AArrowDown, AArrowUp, ALargeSmall, Accessibility, Activity, AirVent, Airplay, AlarmClock, AlarmClockCheck, AlarmClockMinus, AlarmClockOff, AlarmClockPlus, AlarmSmoke, Album, AlignCenterHorizontal, AlignCenterVertical, AlignEndHorizontal, AlignEndVertical, AlignHorizontalDistributeCenter, AlignHorizontalDistributeEnd, AlignHorizontalDistributeStart, AlignHorizontalJustifyCenter, AlignHorizontalJustifyEnd, AlignHorizontalJustifyStart, AlignHorizontalSpaceAround, AlignHorizontalSpaceBetween, AlignStartHorizontal, AlignStartVertical, AlignVerticalDistributeCenter, AlignVerticalDistributeEnd, AlignVerticalDistributeStart, AlignVerticalJustifyCenter, AlignVerticalJustifyEnd, AlignVerticalJustifyStart, AlignVerticalSpaceAround, AlignVerticalSpaceBetween, Ambulance, Ampersand, Ampersands, Amphora, Anchor, Angry, Annoyed, Antenna, Anvil, Aperture, AppWindow, AppWindowMac, Apple, Archive, ArchiveRestore, ArchiveX, Armchair, ArrowBigDown, ArrowBigDownDash, ArrowBigLeft, ArrowBigLeftDash, ArrowBigRight, ArrowBigRightDash, ArrowBigUp, ArrowBigUpDash, ArrowDown, ArrowDown01, ArrowDown10, ArrowDownAZ, ArrowDownFromLine, ArrowDownLeft, ArrowDownNarrowWide, ArrowDownRight, ArrowDownToDot, ArrowDownToLine, ArrowDownUp, ArrowDownWideNarrow, ArrowDownZA, ArrowLeft, ArrowLeftFromLine, ArrowLeftRight, ArrowLeftToLine, ArrowRight, ArrowRightFromLine, ArrowRightLeft, ArrowRightToLine, ArrowUp, ArrowUp01, ArrowUp10, ArrowUpAZ, ArrowUpDown, ArrowUpFromDot, ArrowUpFromLine, ArrowUpLeft, ArrowUpNarrowWide, ArrowUpRight, ArrowUpToLine, ArrowUpWideNarrow, ArrowUpZA, ArrowsUpFromLine, Asterisk, AtSign, Atom, AudioLines, AudioWaveform, Award, Axe, Axis3d, Baby, Backpack, Badge, BadgeAlert, BadgeCent, BadgeCheck, BadgeDollarSign, BadgeEuro, BadgeIndianRupee, BadgeInfo, BadgeJapaneseYen, BadgeMinus, BadgePercent, BadgePlus, BadgePoundSterling, BadgeQuestionMark, BadgeRussianRuble, BadgeSwissFranc, BadgeTurkishLira, BadgeX, BaggageClaim, Balloon, Ban, Banana, Bandage, Banknote, BanknoteArrowDown, BanknoteArrowUp, BanknoteX, Barcode, Barrel, Baseline, Bath, Battery, BatteryCharging, BatteryFull, BatteryLow, BatteryMedium, BatteryPlus, BatteryWarning, Beaker, Bean, BeanOff, Bed, BedDouble, BedSingle, Beef, BeefOff, Beer, BeerOff, Bell, BellDot, BellElectric, BellMinus, BellOff, BellPlus, BellRing, BetweenHorizontalEnd, BetweenHorizontalStart, BetweenVerticalEnd, BetweenVerticalStart, BicepsFlexed, Bike, Binary, Binoculars, Biohazard, Bird, Birdhouse, Bitcoin, Blend, Blinds, Blocks, Bluetooth, BluetoothConnected, BluetoothOff, BluetoothSearching, Bold, Bolt, Bomb, Bone, Book, BookA, BookAlert, BookAudio, BookCheck, BookCopy, BookDashed, BookDown, BookHeadphones, BookHeart, BookImage, BookKey, BookLock, BookMarked, BookMinus, BookOpen, BookOpenCheck, BookOpenText, BookPlus, BookSearch, BookText, BookType, BookUp, BookUp2, BookUser, BookX, Bookmark, BookmarkCheck, BookmarkMinus, BookmarkPlus, BookmarkX, BoomBox, Bot, BotMessageSquare, BotOff, BottleWine, BowArrow, Box, Boxes, Braces, Brackets, Brain, BrainCircuit, BrainCog, BrickWall, BrickWallFire, BrickWallShield, Briefcase, BriefcaseBusiness, BriefcaseConveyorBelt, BriefcaseMedical, BringToFront, Brush, BrushCleaning, Bubbles, Bug, BugOff, BugPlay, Building, Building2, Bus, BusFront, Cable, CableCar, Cake, CakeSlice, Calculator, Calendar, Calendar1, CalendarArrowDown, CalendarArrowUp, CalendarCheck, CalendarCheck2, CalendarClock, CalendarCog, CalendarDays, CalendarFold, CalendarHeart, CalendarMinus, CalendarMinus2, CalendarOff, CalendarPlus, CalendarPlus2, CalendarRange, CalendarSearch, CalendarSync, CalendarX, CalendarX2, Calendars, Camera, CameraOff, Candy, CandyCane, CandyOff, Cannabis, CannabisOff, Captions, CaptionsOff, Car, CarFront, CarTaxiFront, Caravan, CardSim, Carrot, CaseLower, CaseSensitive, CaseUpper, CassetteTape, Cast, Castle, Cat, Cctv, CctvOff, ChartArea, ChartBar, ChartBarBig, ChartBarDecreasing, ChartBarIncreasing, ChartBarStacked, ChartCandlestick, ChartColumn, ChartColumnBig, ChartColumnDecreasing, ChartColumnIncreasing, ChartColumnStacked, ChartGantt, ChartLine, ChartNetwork, ChartNoAxesColumn, ChartNoAxesColumnDecreasing, ChartNoAxesColumnIncreasing, ChartNoAxesCombined, ChartNoAxesGantt, ChartPie, ChartScatter, ChartSpline, Check, CheckCheck, CheckLine, ChefHat, Cherry, ChessBishop, ChessKing, ChessKnight, ChessPawn, ChessQueen, ChessRook, ChevronDown, ChevronFirst, ChevronLast, ChevronLeft, ChevronRight, ChevronUp, ChevronsDown, ChevronsDownUp, ChevronsLeft, ChevronsLeftRight, ChevronsLeftRightEllipsis, ChevronsRight, ChevronsRightLeft, ChevronsUp, ChevronsUpDown, Church, Cigarette, CigaretteOff, Circle, CircleAlert, CircleArrowDown, CircleArrowLeft, CircleArrowOutDownLeft, CircleArrowOutDownRight, CircleArrowOutUpLeft, CircleArrowOutUpRight, CircleArrowRight, CircleArrowUp, CircleCheck, CircleCheckBig, CircleChevronDown, CircleChevronLeft, CircleChevronRight, CircleChevronUp, CircleDashed, CircleDivide, CircleDollarSign, CircleDot, CircleDotDashed, CircleEllipsis, CircleEqual, CircleFadingArrowUp, CircleFadingPlus, CircleGauge, CircleMinus, CircleOff, CircleParking, CircleParkingOff, CirclePause, CirclePercent, CirclePile, CirclePlay, CirclePlus, CirclePoundSterling, CirclePower, CircleQuestionMark, CircleSlash, CircleSlash2, CircleSmall, CircleStar, CircleStop, CircleUser, CircleUserRound, CircleX, CircuitBoard, Citrus, Clapperboard, Clipboard, ClipboardCheck, ClipboardClock, ClipboardCopy, ClipboardList, ClipboardMinus, ClipboardPaste, ClipboardPen, ClipboardPenLine, ClipboardPlus, ClipboardType, ClipboardX, Clock, Clock1, Clock10, Clock11, Clock12, Clock2, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, ClockAlert, ClockArrowDown, ClockArrowUp, ClockCheck, ClockFading, ClockPlus, ClosedCaption, Cloud, CloudAlert, CloudBackup, CloudCheck, CloudCog, CloudDownload, CloudDrizzle, CloudFog, CloudHail, CloudLightning, CloudMoon, CloudMoonRain, CloudOff, CloudRain, CloudRainWind, CloudSnow, CloudSun, CloudSunRain, CloudSync, CloudUpload, Cloudy, Clover, Club, Code, CodeXml, Coffee, Cog, Coins, Columns2, Columns3, Columns3Cog, Columns4, Combine, Command, Compass, Component, Computer, ConciergeBell, Cone, Construction, Contact, ContactRound, Container, Contrast, Cookie, CookingPot, Copy, CopyCheck, CopyMinus, CopyPlus, CopySlash, CopyX, Copyleft, Copyright, CornerDownLeft, CornerDownRight, CornerLeftDown, CornerLeftUp, CornerRightDown, CornerRightUp, CornerUpLeft, CornerUpRight, Cpu, CreativeCommons, CreditCard, Croissant, Crop, Cross, Crosshair, Crown, Cuboid, CupSoda, Currency, Cylinder, Dam, Database, DatabaseBackup, DatabaseSearch, DatabaseZap, DecimalsArrowLeft, DecimalsArrowRight, Delete, Dessert, Diameter, Diamond, DiamondMinus, DiamondPercent, DiamondPlus, Dice1, Dice2, Dice3, Dice4, Dice5, Dice6, Dices, Diff, Disc, Disc2, Disc3, DiscAlbum, Divide, Dna, DnaOff, Dock, Dog, DollarSign, Donut, DoorClosed, DoorClosedLocked, DoorOpen, Dot, Download, DraftingCompass, Drama, Drill, Drone, Droplet, DropletOff, Droplets, Drum, Drumstick, Dumbbell, Ear, EarOff, Earth, EarthLock, Eclipse, Egg, EggFried, EggOff, Ellipse, Ellipsis, EllipsisVertical, Equal, EqualApproximately, EqualNot, Eraser, EthernetPort, Euro, EvCharger, Expand, ExternalLink, Eye, EyeClosed, EyeOff, Factory, Fan, FastForward, Feather, Fence, FerrisWheel, File, FileArchive, FileAxis3d, FileBadge, FileBox, FileBraces, FileBracesCorner, FileChartColumn, FileChartColumnIncreasing, FileChartLine, FileChartPie, FileCheck, FileCheckCorner, FileClock, FileCode, FileCodeCorner, FileCog, FileDiff, FileDigit, FileDown, FileExclamationPoint, FileHeadphone, FileHeart, FileImage, FileInput, FileKey, FileLock, FileMinus, FileMinusCorner, FileMusic, FileOutput, FilePen, FilePenLine, FilePlay, FilePlus, FilePlusCorner, FileQuestionMark, FileScan, FileSearch, FileSearchCorner, FileSignal, FileSliders, FileSpreadsheet, FileStack, FileSymlink, FileTerminal, FileText, FileType, FileTypeCorner, FileUp, FileUser, FileVideoCamera, FileVolume, FileX, FileXCorner, Files, Film, FingerprintPattern, FireExtinguisher, Fish, FishOff, FishSymbol, FishingHook, FishingRod, Flag, FlagOff, FlagTriangleLeft, FlagTriangleRight, Flame, FlameKindling, Flashlight, FlashlightOff, FlaskConical, FlaskConicalOff, FlaskRound, FlipHorizontal2, FlipVertical2, Flower, Flower2, Focus, FoldHorizontal, FoldVertical, Folder, FolderArchive, FolderCheck, FolderClock, FolderClosed, FolderCode, FolderCog, FolderDot, FolderDown, FolderGit, FolderGit2, FolderHeart, FolderInput, FolderKanban, FolderKey, FolderLock, FolderMinus, FolderOpen, FolderOpenDot, FolderOutput, FolderPen, FolderPlus, FolderRoot, FolderSearch, FolderSearch2, FolderSymlink, FolderSync, FolderTree, FolderUp, FolderX, Folders, Footprints, Forklift, Form, Forward, Frame, Frown, Fuel, Fullscreen, Funnel, FunnelPlus, FunnelX, GalleryHorizontal, GalleryHorizontalEnd, GalleryThumbnails, GalleryVertical, GalleryVerticalEnd, Gamepad, Gamepad2, GamepadDirectional, Gauge, Gavel, Gem, GeorgianLari, Ghost, Gift, GitBranch, GitBranchMinus, GitBranchPlus, GitCommitHorizontal, GitCommitVertical, GitCompare, GitCompareArrows, GitFork, GitGraph, GitMerge, GitMergeConflict, GitPullRequest, GitPullRequestArrow, GitPullRequestClosed, GitPullRequestCreate, GitPullRequestCreateArrow, GitPullRequestDraft, GlassWater, Glasses, Globe, GlobeLock, GlobeOff, GlobeX, Goal, Gpu, GraduationCap, Grape, Grid2x2, Grid2x2Check, Grid2x2Plus, Grid2x2X, Grid3x2, Grid3x3, Grip, GripHorizontal, GripVertical, Group, Guitar, Ham, Hamburger, Hammer, Hand, HandCoins, HandFist, HandGrab, HandHeart, HandHelping, HandMetal, HandPlatter, Handbag, Handshake, HardDrive, HardDriveDownload, HardDriveUpload, HardHat, Hash, HatGlasses, Haze, Hd, HdmiPort, Heading, Heading1, Heading2, Heading3, Heading4, Heading5, Heading6, HeadphoneOff, Headphones, Headset, Heart, HeartCrack, HeartHandshake, HeartMinus, HeartOff, HeartPlus, HeartPulse, Heater, Helicopter, Hexagon, Highlighter, History, Hop, HopOff, Hospital, Hotel, Hourglass, House, HouseHeart, HousePlug, HousePlus, HouseWifi, IceCreamBowl, IceCreamCone, IdCard, IdCardLanyard, Image, ImageDown, ImageMinus, ImageOff, ImagePlay, ImagePlus, ImageUp, ImageUpscale, Images, Import, Inbox, IndianRupee, InfinityIcon, Info, InspectionPanel, Italic, IterationCcw, IterationCw, JapaneseYen, Joystick, Kanban, Kayak, Key, KeyRound, KeySquare, Keyboard, KeyboardMusic, KeyboardOff, Lamp, LampCeiling, LampDesk, LampFloor, LampWallDown, LampWallUp, LandPlot, Landmark, Languages, Laptop, LaptopMinimal, LaptopMinimalCheck, Lasso, LassoSelect, Laugh, Layers, Layers2, LayersPlus, LayoutDashboard, LayoutGrid, LayoutList, LayoutPanelLeft, LayoutPanelTop, LayoutTemplate, Leaf, LeafyGreen, Lectern, LensConcave, LensConvex, Library, LibraryBig, LifeBuoy, Ligature, Lightbulb, LightbulbOff, LineDotRightHorizontal, LineSquiggle, LineStyle, Link, Link2, Link2Off, List, ListCheck, ListChecks, ListChevronsDownUp, ListChevronsUpDown, ListCollapse, ListEnd, ListFilter, ListFilterPlus, ListIndentDecrease, ListIndentIncrease, ListMinus, ListMusic, ListOrdered, ListPlus, ListRestart, ListStart, ListTodo, ListTree, ListVideo, ListX, Loader, LoaderCircle, LoaderPinwheel, Locate, LocateFixed, LocateOff, Lock, LockKeyhole, LockKeyholeOpen, LockOpen, LogIn, LogOut, Logs, Lollipop, Luggage, Magnet, Mail, MailCheck, MailMinus, MailOpen, MailPlus, MailQuestionMark, MailSearch, MailWarning, MailX, Mailbox, Mails, Map, MapMinus, MapPin, MapPinCheck, MapPinCheckInside, MapPinHouse, MapPinMinus, MapPinMinusInside, MapPinOff, MapPinPen, MapPinPlus, MapPinPlusInside, MapPinSearch, MapPinX, MapPinXInside, MapPinned, MapPlus, Mars, MarsStroke, Martini, Maximize, Maximize2, Medal, Megaphone, MegaphoneOff, Meh, MemoryStick, Menu, Merge, MessageCircle, MessageCircleCheck, MessageCircleCode, MessageCircleDashed, MessageCircleHeart, MessageCircleMore, MessageCircleOff, MessageCirclePlus, MessageCircleQuestionMark, MessageCircleReply, MessageCircleWarning, MessageCircleX, MessageSquare, MessageSquareCheck, MessageSquareCode, MessageSquareDashed, MessageSquareDiff, MessageSquareDot, MessageSquareHeart, MessageSquareLock, MessageSquareMore, MessageSquareOff, MessageSquarePlus, MessageSquareQuote, MessageSquareReply, MessageSquareShare, MessageSquareText, MessageSquareWarning, MessageSquareX, MessagesSquare, Metronome, Mic, MicOff, MicVocal, Microchip, Microscope, Microwave, Milestone, Milk, MilkOff, Minimize, Minimize2, Minus, MirrorRectangular, MirrorRound, Monitor, MonitorCheck, MonitorCloud, MonitorCog, MonitorDot, MonitorDown, MonitorOff, MonitorPause, MonitorPlay, MonitorSmartphone, MonitorSpeaker, MonitorStop, MonitorUp, MonitorX, Moon, MoonStar, Motorbike, Mountain, MountainSnow, Mouse, MouseLeft, MouseOff, MousePointer, MousePointer2, MousePointer2Off, MousePointerBan, MousePointerClick, MouseRight, Move, Move3d, MoveDiagonal, MoveDiagonal2, MoveDown, MoveDownLeft, MoveDownRight, MoveHorizontal, MoveLeft, MoveRight, MoveUp, MoveUpLeft, MoveUpRight, MoveVertical, Music, Music2, Music3, Music4, Navigation, Navigation2, Navigation2Off, NavigationOff, Network, Newspaper, Nfc, NonBinary, Notebook, NotebookPen, NotebookTabs, NotebookText, NotepadText, NotepadTextDashed, Nut, NutOff, Octagon, OctagonAlert, OctagonMinus, OctagonPause, OctagonX, Omega, Option, Orbit, Origami, Package, Package2, PackageCheck, PackageMinus, PackageOpen, PackagePlus, PackageSearch, PackageX, PaintBucket, PaintRoller, Paintbrush, PaintbrushVertical, Palette, Panda, PanelBottom, PanelBottomClose, PanelBottomDashed, PanelBottomOpen, PanelLeft, PanelLeftClose, PanelLeftDashed, PanelLeftOpen, PanelLeftRightDashed, PanelRight, PanelRightClose, PanelRightDashed, PanelRightOpen, PanelTop, PanelTopBottomDashed, PanelTopClose, PanelTopDashed, PanelTopOpen, PanelsLeftBottom, PanelsRightBottom, PanelsTopLeft, Paperclip, Parentheses, ParkingMeter, PartyPopper, Pause, PawPrint, PcCase, Pen, PenLine, PenOff, PenTool, Pencil, PencilLine, PencilOff, PencilRuler, Pentagon, Percent, PersonStanding, PhilippinePeso, Phone, PhoneCall, PhoneForwarded, PhoneIncoming, PhoneMissed, PhoneOff, PhoneOutgoing, Pi, Piano, Pickaxe, PictureInPicture, PictureInPicture2, PiggyBank, Pilcrow, PilcrowLeft, PilcrowRight, Pill, PillBottle, Pin, PinOff, Pipette, Pizza, Plane, PlaneLanding, PlaneTakeoff, Play, Plug, Plug2, PlugZap, Plus, PocketKnife, Podcast, Pointer, PointerOff, Popcorn, Popsicle, PoundSterling, Power, PowerOff, Presentation, Printer, PrinterCheck, PrinterX, Projector, Proportions, Puzzle, Pyramid, QrCode, Quote, Rabbit, Radar, Radiation, Radical, Radio, RadioOff, RadioReceiver, RadioTower, Radius, Rainbow, Rat, Ratio, Receipt, ReceiptCent, ReceiptEuro, ReceiptIndianRupee, ReceiptJapaneseYen, ReceiptPoundSterling, ReceiptRussianRuble, ReceiptSwissFranc, ReceiptText, ReceiptTurkishLira, RectangleCircle, RectangleEllipsis, RectangleGoggles, RectangleHorizontal, RectangleVertical, Recycle, Redo, Redo2, RedoDot, RefreshCcw, RefreshCcwDot, RefreshCw, RefreshCwOff, Refrigerator, Regex, RemoveFormatting, Repeat, Repeat1, Repeat2, Replace, ReplaceAll, Reply, ReplyAll, Rewind, Ribbon, Road, Rocket, RockingChair, RollerCoaster, Rose, Rotate3d, RotateCcw, RotateCcwKey, RotateCcwSquare, RotateCw, RotateCwSquare, Route, RouteOff, Router, Rows2, Rows3, Rows4, Rss, Ruler, RulerDimensionLine, RussianRuble, Sailboat, Salad, Sandwich, Satellite, SatelliteDish, SaudiRiyal, Save, SaveAll, SaveOff, Scale, Scale3d, Scaling, Scan, ScanBarcode, ScanEye, ScanFace, ScanHeart, ScanLine, ScanQrCode, ScanSearch, ScanText, School, Scissors, ScissorsLineDashed, Scooter, ScreenShare, ScreenShareOff, Scroll, ScrollText, Search, SearchAlert, SearchCheck, SearchCode, SearchSlash, SearchX, Section, Send, SendHorizontal, SendToBack, SeparatorHorizontal, SeparatorVertical, Server, ServerCog, ServerCrash, ServerOff, Settings, Settings2, Shapes, Share, Share2, Sheet, Shell, ShelvingUnit, Shield, ShieldAlert, ShieldBan, ShieldCheck, ShieldCog, ShieldCogCorner, ShieldEllipsis, ShieldHalf, ShieldMinus, ShieldOff, ShieldPlus, ShieldQuestionMark, ShieldUser, ShieldX, Ship, ShipWheel, Shirt, ShoppingBag, ShoppingBasket, ShoppingCart, Shovel, ShowerHead, Shredder, Shrimp, Shrink, Shrub, Shuffle, Sigma, Signal, SignalHigh, SignalLow, SignalMedium, SignalZero, Signature, Signpost, SignpostBig, Siren, SkipBack, SkipForward, Skull, Slash, Slice, SlidersHorizontal, SlidersVertical, Smartphone, SmartphoneCharging, SmartphoneNfc, Smile, SmilePlus, Snail, Snowflake, SoapDispenserDroplet, Sofa, SolarPanel, Soup, Space, Spade, Sparkle, Sparkles, Speaker, Speech, SpellCheck, SpellCheck2, Spline, SplinePointer, Split, Spool, SportShoe, Spotlight, SprayCan, Sprout, Square, SquareActivity, SquareArrowDown, SquareArrowDownLeft, SquareArrowDownRight, SquareArrowLeft, SquareArrowOutDownLeft, SquareArrowOutDownRight, SquareArrowOutUpLeft, SquareArrowOutUpRight, SquareArrowRight, SquareArrowRightEnter, SquareArrowRightExit, SquareArrowUp, SquareArrowUpLeft, SquareArrowUpRight, SquareAsterisk, SquareBottomDashedScissors, SquareCenterlineDashedHorizontal, SquareCenterlineDashedVertical, SquareChartGantt, SquareCheck, SquareCheckBig, SquareChevronDown, SquareChevronLeft, SquareChevronRight, SquareChevronUp, SquareCode, SquareDashed, SquareDashedBottom, SquareDashedBottomCode, SquareDashedKanban, SquareDashedMousePointer, SquareDashedTopSolid, SquareDivide, SquareDot, SquareEqual, SquareFunction, SquareKanban, SquareLibrary, SquareM, SquareMenu, SquareMinus, SquareMousePointer, SquareParking, SquareParkingOff, SquarePause, SquarePen, SquarePercent, SquarePi, SquarePilcrow, SquarePlay, SquarePlus, SquarePower, SquareRadical, SquareRoundCorner, SquareScissors, SquareSigma, SquareSlash, SquareSplitHorizontal, SquareSplitVertical, SquareSquare, SquareStack, SquareStar, SquareStop, SquareTerminal, SquareUser, SquareUserRound, SquareX, SquaresExclude, SquaresIntersect, SquaresSubtract, SquaresUnite, Squircle, SquircleDashed, Squirrel, Stamp, Star, StarHalf, StarOff, StepBack, StepForward, Stethoscope, Sticker, StickyNote, Stone, Store, StretchHorizontal, StretchVertical, Strikethrough, Subscript, Sun, SunDim, SunMedium, SunMoon, SunSnow, Sunrise, Sunset, Superscript, SwatchBook, SwissFranc, SwitchCamera, Sword, Swords, Syringe, Table, Table2, TableCellsMerge, TableCellsSplit, TableColumnsSplit, TableOfContents, TableProperties, TableRowsSplit, Tablet, TabletSmartphone, Tablets, Tag, Tags, Tally1, Tally2, Tally3, Tally4, Tally5, Tangent, Target, Telescope, Tent, TentTree, Terminal, TestTube, TestTubeDiagonal, TestTubes, TextAlignCenter, TextAlignEnd, TextAlignJustify, TextAlignStart, TextCursor, TextCursorInput, TextInitial, TextQuote, TextSearch, TextSelect, TextWrap, Theater, Thermometer, ThermometerSnowflake, ThermometerSun, ThumbsDown, ThumbsUp, Ticket, TicketCheck, TicketMinus, TicketPercent, TicketPlus, TicketSlash, TicketX, Tickets, TicketsPlane, Timer, TimerOff, TimerReset, ToggleLeft, ToggleRight, Toilet, ToolCase, Toolbox, Tornado, Torus, Touchpad, TouchpadOff, TowelRack, TowerControl, ToyBrick, Tractor, TrafficCone, TrainFront, TrainFrontTunnel, TrainTrack, TramFront, Transgender, Trash, Trash2, TreeDeciduous, TreePalm, TreePine, Trees, TrendingDown, TrendingUp, TrendingUpDown, Triangle, TriangleAlert, TriangleDashed, TriangleRight, Trophy, Truck, TruckElectric, TurkishLira, Turntable, Turtle, Tv, TvMinimal, TvMinimalPlay, Type, TypeOutline, Umbrella, UmbrellaOff, Underline, Undo, Undo2, UndoDot, UnfoldHorizontal, UnfoldVertical, Ungroup, University, Unlink, Unlink2, Unplug, Upload, Usb, User, UserCheck, UserCog, UserKey, UserLock, UserMinus, UserPen, UserPlus, UserRound, UserRoundCheck, UserRoundCog, UserRoundKey, UserRoundMinus, UserRoundPen, UserRoundPlus, UserRoundSearch, UserRoundX, UserSearch, UserStar, UserX, Users, UsersRound, Utensils, UtensilsCrossed, UtilityPole, Van, Variable, Vault, VectorSquare, Vegan, VenetianMask, Venus, VenusAndMars, Vibrate, VibrateOff, Video, VideoOff, Videotape, View, Voicemail, Volleyball, Volume, Volume1, Volume2, VolumeOff, VolumeX, Vote, Wallet, WalletCards, WalletMinimal, Wallpaper, Wand, WandSparkles, Warehouse, WashingMachine, Watch, Waves, WavesArrowDown, WavesArrowUp, WavesLadder, Waypoints, Webcam, Webhook, WebhookOff, Weight, WeightTilde, Wheat, WheatOff, WholeWord, Wifi, WifiCog, WifiHigh, WifiLow, WifiOff, WifiPen, WifiSync, WifiZero, Wind, WindArrowDown, Wine, WineOff, Workflow, Worm, Wrench, X, XLineTop, Zap, ZapOff, ZodiacAquarius, ZodiacAries, ZodiacCancer, ZodiacCapricorn, ZodiacGemini, ZodiacLeo, ZodiacLibra, ZodiacOphiuchus, ZodiacPisces, ZodiacSagittarius, ZodiacScorpio, ZodiacTaurus, ZodiacVirgo, ZoomIn, ZoomOut };
 
 //# sourceMappingURL=index.js.map

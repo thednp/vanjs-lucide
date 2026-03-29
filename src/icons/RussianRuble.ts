@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const RussianRuble = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M6 11h8a4 4 0 0 0 0-8H9v18" }),

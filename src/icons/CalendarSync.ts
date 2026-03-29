@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const CalendarSync = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M11 10v4h4" }),

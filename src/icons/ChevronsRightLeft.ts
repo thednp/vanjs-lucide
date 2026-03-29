@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const ChevronsRightLeft = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "m20 17-5-5 5-5" }),

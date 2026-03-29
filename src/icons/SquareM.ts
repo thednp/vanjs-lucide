@@ -4,10 +4,20 @@ import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
 import { type SVGProps } from "../types.ts";
 
 export const SquareM = (props: Partial<SVGProps> = {}) => {
-  const { rect, path } = van.tags(svgNamespace);
+  const { path, rect } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
-    path({ "d": "M8 16V8l4 4 4-4v8" }),
+    path({
+      "d":
+        "M8 16V8.5a.5.5 0 0 1 .9-.3l2.7 3.599a.5.5 0 0 0 .8 0l2.7-3.6a.5.5 0 0 1 .9.3V16",
+    }),
+    rect({
+      "x": "3",
+      "y": "3",
+      width: "18",
+      height: "18",
+      rx: "2",
+    }),
   );
 };

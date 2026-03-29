@@ -4,12 +4,20 @@ import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
 import { type SVGProps } from "../types.ts";
 
 export const GitBranch = (props: Partial<SVGProps> = {}) => {
-  const { line, circle, path } = van.tags(svgNamespace);
+  const { path, circle } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    line({ x1: "6", x2: "6", y1: "3", y2: "15" }),
-    circle({ cx: "18", cy: "6", "r": "3" }),
-    circle({ cx: "6", cy: "18", "r": "3" }),
-    path({ "d": "M18 9a9 9 0 0 1-9 9" }),
+    path({ "d": "M15 6a9 9 0 0 0-9 9V3" }),
+    circle({
+      cx: "18",
+      cy: "6",
+      "r": "3",
+    }),
+    circle({
+      cx: "6",
+      cy: "18",
+      "r": "3",
+    }),
   );
 };

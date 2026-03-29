@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const Nfc = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M6 8.32a7.43 7.43 0 0 1 0 7.36" }),

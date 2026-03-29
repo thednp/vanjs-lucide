@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const PartyPopper = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M5.8 11.3 2 22l10.7-3.79" }),

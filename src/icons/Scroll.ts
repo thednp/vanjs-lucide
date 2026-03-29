@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const Scroll = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M19 17V5a2 2 0 0 0-2-2H4" }),

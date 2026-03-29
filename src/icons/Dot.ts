@@ -5,8 +5,13 @@ import { type SVGProps } from "../types.ts";
 
 export const Dot = (props: Partial<SVGProps> = {}) => {
   const { circle } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    circle({ cx: "12.1", cy: "12.1", "r": "1" }),
+    circle({
+      cx: "12.1",
+      cy: "12.1",
+      "r": "1",
+    }),
   );
 };

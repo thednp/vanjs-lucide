@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const TrendingUpDown = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M14.828 14.828 21 21" }),

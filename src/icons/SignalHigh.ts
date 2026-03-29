@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const SignalHigh = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M2 20h.01" }),

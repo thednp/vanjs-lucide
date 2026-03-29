@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const RotateCcwSquare = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M20 9V7a2 2 0 0 0-2-2h-6" }),

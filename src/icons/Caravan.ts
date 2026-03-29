@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const Caravan = (props: Partial<SVGProps> = {}) => {
   const { path, circle } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M18 19V9a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v8a2 2 0 0 0 2 2h2" }),
@@ -12,6 +13,10 @@ export const Caravan = (props: Partial<SVGProps> = {}) => {
     path({
       "d": "M22 17v1a1 1 0 0 1-1 1H10v-9a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v9",
     }),
-    circle({ cx: "8", cy: "19", "r": "2" }),
+    circle({
+      cx: "8",
+      cy: "19",
+      "r": "2",
+    }),
   );
 };

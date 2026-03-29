@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const FlaskRound = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M10 2v6.292a7 7 0 1 0 4 0V2" }),

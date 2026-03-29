@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const LandPlot = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "m12 8 6-3-6-3v10" }),

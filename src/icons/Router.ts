@@ -5,9 +5,16 @@ import { type SVGProps } from "../types.ts";
 
 export const Router = (props: Partial<SVGProps> = {}) => {
   const { rect, path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    rect({ width: "20", height: "8", "x": "2", "y": "14", rx: "2" }),
+    rect({
+      width: "20",
+      height: "8",
+      "x": "2",
+      "y": "14",
+      rx: "2",
+    }),
     path({ "d": "M6.01 18H6" }),
     path({ "d": "M10.01 18H10" }),
     path({ "d": "M15 10v4" }),

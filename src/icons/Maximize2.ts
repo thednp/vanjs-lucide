@@ -4,12 +4,13 @@ import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
 import { type SVGProps } from "../types.ts";
 
 export const Maximize2 = (props: Partial<SVGProps> = {}) => {
-  const { polyline, line } = van.tags(svgNamespace);
+  const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    polyline({ points: "15 3 21 3 21 9" }),
-    polyline({ points: "9 21 3 21 3 15" }),
-    line({ x1: "21", x2: "14", y1: "3", y2: "10" }),
-    line({ x1: "3", x2: "10", y1: "21", y2: "14" }),
+    path({ "d": "M15 3h6v6" }),
+    path({ "d": "m21 3-7 7" }),
+    path({ "d": "m3 21 7-7" }),
+    path({ "d": "M9 21H3v-6" }),
   );
 };

@@ -5,9 +5,16 @@ import { type SVGProps } from "../types.ts";
 
 export const Construction = (props: Partial<SVGProps> = {}) => {
   const { rect, path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    rect({ "x": "2", "y": "6", width: "20", height: "8", rx: "1" }),
+    rect({
+      "x": "2",
+      "y": "6",
+      width: "20",
+      height: "8",
+      rx: "1",
+    }),
     path({ "d": "M17 14v7" }),
     path({ "d": "M7 14v7" }),
     path({ "d": "M17 3v3" }),

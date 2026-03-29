@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const MapPinOff = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M12.75 7.09a3 3 0 0 1 2.16 2.16" }),

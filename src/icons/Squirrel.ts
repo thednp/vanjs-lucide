@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const Squirrel = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M15.236 22a3 3 0 0 0-2.2-5" }),

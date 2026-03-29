@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const PowerOff = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M18.36 6.64A9 9 0 0 1 20.77 15" }),

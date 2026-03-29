@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const AlarmSmoke = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M11 21c0-2.5 2-2.5 2-5" }),

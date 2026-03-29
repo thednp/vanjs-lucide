@@ -5,9 +5,14 @@ import { type SVGProps } from "../types.ts";
 
 export const AlarmClockPlus = (props: Partial<SVGProps> = {}) => {
   const { circle, path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    circle({ cx: "12", cy: "13", "r": "8" }),
+    circle({
+      cx: "12",
+      cy: "13",
+      "r": "8",
+    }),
     path({ "d": "M5 3 2 6" }),
     path({ "d": "m22 6-3-3" }),
     path({ "d": "M6.38 18.7 4 21" }),

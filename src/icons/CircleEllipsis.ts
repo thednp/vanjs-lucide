@@ -5,9 +5,14 @@ import { type SVGProps } from "../types.ts";
 
 export const CircleEllipsis = (props: Partial<SVGProps> = {}) => {
   const { circle, path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    circle({ cx: "12", cy: "12", "r": "10" }),
+    circle({
+      cx: "12",
+      cy: "12",
+      "r": "10",
+    }),
     path({ "d": "M17 12h.01" }),
     path({ "d": "M12 12h.01" }),
     path({ "d": "M7 12h.01" }),

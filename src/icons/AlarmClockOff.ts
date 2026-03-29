@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const AlarmClockOff = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M6.87 6.87a8 8 0 1 0 11.26 11.26" }),

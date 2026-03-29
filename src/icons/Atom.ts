@@ -5,9 +5,14 @@ import { type SVGProps } from "../types.ts";
 
 export const Atom = (props: Partial<SVGProps> = {}) => {
   const { circle, path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    circle({ cx: "12", cy: "12", "r": "1" }),
+    circle({
+      cx: "12",
+      cy: "12",
+      "r": "1",
+    }),
     path({
       "d":
         "M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z",

@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const Shrink = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "m15 15 6 6m-6-6v4.8m0-4.8h4.8" }),

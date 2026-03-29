@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const ThermometerSnowflake = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "m10 20-1.25-2.5L6 18" }),

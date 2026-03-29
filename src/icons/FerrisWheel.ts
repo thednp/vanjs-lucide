@@ -5,9 +5,14 @@ import { type SVGProps } from "../types.ts";
 
 export const FerrisWheel = (props: Partial<SVGProps> = {}) => {
   const { circle, path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    circle({ cx: "12", cy: "12", "r": "2" }),
+    circle({
+      cx: "12",
+      cy: "12",
+      "r": "2",
+    }),
     path({ "d": "M12 2v4" }),
     path({ "d": "m6.8 15-3.5 2" }),
     path({ "d": "m20.7 7-3.5 2" }),

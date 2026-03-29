@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const Undo2 = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M9 14 4 9l5-5" }),

@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const TrainFront = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M8 3.1V7a4 4 0 0 0 8 0V3.1" }),

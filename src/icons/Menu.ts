@@ -4,11 +4,12 @@ import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
 import { type SVGProps } from "../types.ts";
 
 export const Menu = (props: Partial<SVGProps> = {}) => {
-  const { line } = van.tags(svgNamespace);
+  const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    line({ x1: "4", x2: "20", y1: "12", y2: "12" }),
-    line({ x1: "4", x2: "20", y1: "6", y2: "6" }),
-    line({ x1: "4", x2: "20", y1: "18", y2: "18" }),
+    path({ "d": "M4 5h16" }),
+    path({ "d": "M4 12h16" }),
+    path({ "d": "M4 19h16" }),
   );
 };

@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const Tractor = (props: Partial<SVGProps> = {}) => {
   const { path, circle } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({
@@ -16,7 +17,15 @@ export const Tractor = (props: Partial<SVGProps> = {}) => {
     path({ "d": "M4 11V4" }),
     path({ "d": "M7 15h.01" }),
     path({ "d": "M8 10.1V4" }),
-    circle({ cx: "18", cy: "18", "r": "2" }),
-    circle({ cx: "7", cy: "15", "r": "5" }),
+    circle({
+      cx: "18",
+      cy: "18",
+      "r": "2",
+    }),
+    circle({
+      cx: "7",
+      cy: "15",
+      "r": "5",
+    }),
   );
 };

@@ -4,10 +4,17 @@ import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
 import { type SVGProps } from "../types.ts";
 
 export const FastForward = (props: Partial<SVGProps> = {}) => {
-  const { polygon } = van.tags(svgNamespace);
+  const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    polygon({ points: "13 19 22 12 13 5 13 19" }),
-    polygon({ points: "2 19 11 12 2 5 2 19" }),
+    path({
+      "d":
+        "M12 6a2 2 0 0 1 3.414-1.414l6 6a2 2 0 0 1 0 2.828l-6 6A2 2 0 0 1 12 18z",
+    }),
+    path({
+      "d":
+        "M2 6a2 2 0 0 1 3.414-1.414l6 6a2 2 0 0 1 0 2.828l-6 6A2 2 0 0 1 2 18z",
+    }),
   );
 };

@@ -4,10 +4,11 @@ import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
 import { type SVGProps } from "../types.ts";
 
 export const TrendingDown = (props: Partial<SVGProps> = {}) => {
-  const { polyline } = van.tags(svgNamespace);
+  const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    polyline({ points: "22 17 13.5 8.5 8.5 13.5 2 7" }),
-    polyline({ points: "16 17 22 17 22 11" }),
+    path({ "d": "M16 17h6v-6" }),
+    path({ "d": "m22 17-8.5-8.5-5 5L2 7" }),
   );
 };

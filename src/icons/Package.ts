@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const Package = (props: Partial<SVGProps> = {}) => {
   const { path, polyline } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({

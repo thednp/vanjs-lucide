@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const Armchair = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3" }),

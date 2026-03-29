@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const Beef = (props: Partial<SVGProps> = {}) => {
   const { path, circle } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({
@@ -15,6 +16,10 @@ export const Beef = (props: Partial<SVGProps> = {}) => {
       "d":
         "m18.5 6 2.19 4.5a6.48 6.48 0 0 1-2.29 7.2C15.4 20.2 11 22 7 22a3 3 0 0 1-2.68-1.66L2.4 16.5",
     }),
-    circle({ cx: "12.5", cy: "8.5", "r": "2.5" }),
+    circle({
+      cx: "12.5",
+      cy: "8.5",
+      "r": "2.5",
+    }),
   );
 };

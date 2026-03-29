@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const Cake = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8" }),

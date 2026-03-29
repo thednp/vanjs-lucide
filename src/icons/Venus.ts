@@ -5,10 +5,15 @@ import { type SVGProps } from "../types.ts";
 
 export const Venus = (props: Partial<SVGProps> = {}) => {
   const { path, circle } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M12 15v7" }),
     path({ "d": "M9 19h6" }),
-    circle({ cx: "12", cy: "9", "r": "6" }),
+    circle({
+      cx: "12",
+      cy: "9",
+      "r": "6",
+    }),
   );
 };

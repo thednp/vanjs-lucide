@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const CircleDashed = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M10.1 2.182a10 10 0 0 1 3.8 0" }),

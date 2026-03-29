@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const GlobeLock = (props: Partial<SVGProps> = {}) => {
   const { path, rect } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({
@@ -13,6 +14,12 @@ export const GlobeLock = (props: Partial<SVGProps> = {}) => {
     }),
     path({ "d": "M2 12h8.5" }),
     path({ "d": "M20 6V4a2 2 0 1 0-4 0v2" }),
-    rect({ width: "8", height: "5", "x": "14", "y": "6", rx: "1" }),
+    rect({
+      width: "8",
+      height: "5",
+      "x": "14",
+      "y": "6",
+      rx: "1",
+    }),
   );
 };

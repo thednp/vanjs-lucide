@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const Transgender = (props: Partial<SVGProps> = {}) => {
   const { path, circle } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M12 16v6" }),
@@ -14,6 +15,10 @@ export const Transgender = (props: Partial<SVGProps> = {}) => {
     path({ "d": "M2 5.355V2h3.357" }),
     path({ "d": "m22 2-7.17 7.17" }),
     path({ "d": "M8 5 5 8" }),
-    circle({ cx: "12", cy: "12", "r": "4" }),
+    circle({
+      cx: "12",
+      cy: "12",
+      "r": "4",
+    }),
   );
 };

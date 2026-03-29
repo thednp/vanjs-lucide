@@ -5,12 +5,13 @@ import { type SVGProps } from "../types.ts";
 
 export const ListCollapse = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    path({ "d": "m3 10 2.5-2.5L3 5" }),
-    path({ "d": "m3 19 2.5-2.5L3 14" }),
-    path({ "d": "M10 6h11" }),
+    path({ "d": "M10 5h11" }),
     path({ "d": "M10 12h11" }),
-    path({ "d": "M10 18h11" }),
+    path({ "d": "M10 19h11" }),
+    path({ "d": "m3 10 3-3-3-3" }),
+    path({ "d": "m3 20 3-3-3-3" }),
   );
 };

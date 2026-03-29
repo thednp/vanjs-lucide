@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const CircleDotDashed = (props: Partial<SVGProps> = {}) => {
   const { path, circle } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M10.1 2.18a9.93 9.93 0 0 1 3.8 0" }),
@@ -15,6 +16,10 @@ export const CircleDotDashed = (props: Partial<SVGProps> = {}) => {
     path({ "d": "M6.4 20.29a9.95 9.95 0 0 1-2.69-2.7" }),
     path({ "d": "M2.18 13.9a9.93 9.93 0 0 1 0-3.8" }),
     path({ "d": "M3.71 6.4a9.95 9.95 0 0 1 2.7-2.69" }),
-    circle({ cx: "12", cy: "12", "r": "1" }),
+    circle({
+      cx: "12",
+      cy: "12",
+      "r": "1",
+    }),
   );
 };

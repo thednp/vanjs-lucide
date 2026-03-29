@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const CircleOff = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "m2 2 20 20" }),

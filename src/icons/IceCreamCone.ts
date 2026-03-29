@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const IceCreamCone = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "m7 11 4.08 10.35a1 1 0 0 0 1.84 0L17 11" }),

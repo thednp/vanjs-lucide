@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const TriangleDashed = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M10.17 4.193a2 2 0 0 1 3.666.013" }),

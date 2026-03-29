@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const SquareDashedBottomCode = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M10 9.5 8 12l2 2.5" }),

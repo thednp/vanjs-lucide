@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const BluetoothOff = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "m17 17-5 5V12l-5 5" }),

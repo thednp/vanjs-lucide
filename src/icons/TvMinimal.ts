@@ -5,9 +5,16 @@ import { type SVGProps } from "../types.ts";
 
 export const TvMinimal = (props: Partial<SVGProps> = {}) => {
   const { path, rect } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M7 21h10" }),
-    rect({ width: "20", height: "14", "x": "2", "y": "3", rx: "2" }),
+    rect({
+      width: "20",
+      height: "14",
+      "x": "2",
+      "y": "3",
+      rx: "2",
+    }),
   );
 };

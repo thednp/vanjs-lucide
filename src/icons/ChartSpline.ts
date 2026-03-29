@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const ChartSpline = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M3 3v16a2 2 0 0 0 2 2h16" }),

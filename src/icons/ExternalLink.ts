@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const ExternalLink = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M15 3h6v6" }),

@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const WalletMinimal = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M17 14h.01" }),

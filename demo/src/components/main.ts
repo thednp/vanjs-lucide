@@ -1,9 +1,9 @@
-import van from "vanjs-core";
+import van, { ChildDom } from "vanjs-core";
 import * as vanX from "vanjs-ext";
-import copyToClipboard from "../util/copyToClipboard";
 import { SVGTag } from "../../../src/types";
 import Tooltip from "./tooltip";
-import Tags from "../util/tags.json";
+import { Modal, showModal } from "./modal";
+import Tags from "./tags.json";
 
 const TagsEntries = Object.entries(Tags);
 const TagNames = () => TagsEntries.map(([name]) => name);
@@ -20,20 +20,23 @@ export default function Main() {
   const { circle, path, svg } = van.tags("http://www.w3.org/2000/svg");
   const { main, div, button, span, h2, img, p, pre, a, label, input } =
     van.tags;
-  const List = vanX.reactive<{ icons: Record<string, typeof SVGTag>[] }>({
+  const List = vanX.reactive<{ icons: Record<string, SVGTag>[] }>({
     icons: [],
   });
+  const modalId = "confirmModal";
   const size = van.state(32);
   const sWidth = van.state(1);
   const count = van.state(64);
   const query = van.state("");
+  const modalContent = van.state<{ code: ChildDom }>({ code: "" });
+  const ModalContentComponent = () => modalContent.val.code;
   const fetching = van.state(false);
   const fetchIcons = async (items: string[]) => {
     // const isFetching = fetching.oldVal;
     const len = items.length;
     return await import(`../../../src/index.ts`).then((module) => {
       // return await import(`vanjs-lucide`).then((module) => {
-      const newIcons: Record<string, typeof SVGTag>[] = [];
+      const newIcons: Record<string, SVGTag>[] = [];
       let icon;
       for (let i = 0; i < len; i += 1) {
         icon = module[items[i] as string & keyof typeof module];
@@ -105,7 +108,7 @@ export default function Main() {
       });
       if (searchResults.length) {
         const iconsList = searchResults.map(([val]) => val);
-        // console.log(iconsList)
+        console.log(iconsList);
         fetching.val === true;
 
         fetchIcons(iconsList).then((results) => {
@@ -228,10 +231,10 @@ export default function Main() {
       div(
         {
           class:
-            "container h-[100vh] lg:h-[75vh] px-5 mx-auto flex flex-row items-center",
+            "container h-screen lg:h-[75vh] px-5 mx-auto flex flex-row items-center",
         },
         div(
-          { class: "w-full flex flex-row gap-[5rem] flex-wrap" },
+          { class: "w-full flex flex-row gap-20 flex-wrap" },
           div(
             { id: "installation", class: "lg:w-[calc(50%-2.5rem)]" },
             h2(
@@ -321,7 +324,7 @@ export default function Main() {
         ),
         input({
           class:
-            "ml-auto min-w-20 w-48 px-3 py-2 border border-stone-500/30 rounded autofill:!bg-transparent",
+            "ml-auto min-w-20 w-48 px-3 py-2 border border-stone-500/30 rounded autofill:bg-transparent!",
           placeholder: "Find icon",
           name: "query",
           id: "query",
@@ -343,7 +346,20 @@ export default function Main() {
           const [name, icon] = Object.entries(item.val)[0];
           const lowerName = name.toLowerCase();
           const realName = lowerName === "not-found" ? "No icon found" : name;
-          // console.log({ name, icon, lowerName })
+          const iconProps =
+            `{\n  width: ${size.val},\n  height: ${size.val},\n  "stroke-width": ${sWidth.val},\n}`;
+          const clip = `${name}(${iconProps})`;
+
+          // const iconProps = van.derive(() => {
+          //   let clip = "";
+          //   if (size.val !== 32 || sWidth.val !== 1) {
+          //     clip += "{";
+          //     clip += size.val !== 32 ? `\n  width: ${size.val},\n  height: ${size.val},` : "";
+          //     clip += sWidth.val !== 1 ? `\n  "stroke-width": ${sWidth.val},` : "";
+          //     clip += "\n}";
+          //   }
+          //   return clip;
+          // });
 
           return Tooltip(
             {
@@ -352,10 +368,21 @@ export default function Main() {
             button(
               {
                 type: "button",
-                "data-clip":
-                  `${name}({ width: ${size.val}, height: ${size.val}, "stroke-width": ${sWidth.val} })`,
                 onclick: lowerName !== "not-found" as "Activity"
-                  ? copyToClipboard
+                  ? (e) => {
+                    e.preventDefault();
+
+                    if (clip?.length) {
+                      navigator.clipboard.writeText(clip);
+                      modalContent.val = {
+                        code: pre(
+                          { class: "p-3 bg-stone-900 rounded mt-3" },
+                          clip,
+                        ),
+                      };
+                    }
+                    showModal(modalId);
+                  }
                   : null,
                 class:
                   "w-full flex flex-col items-center cursor-pointer p-3 py-8 xl:py-12 rounded-[5px] bg-stone-50 hover:bg-stone-200 dark:bg-stone-950 dark:hover:bg-stone-800",
@@ -379,6 +406,11 @@ export default function Main() {
         },
       ),
       loader,
+      Modal(
+        { id: modalId },
+        p("Copied Icon Component to clipboard:"),
+        ModalContentComponent,
+      ),
     ),
   );
 }

@@ -5,9 +5,17 @@ import { type SVGProps } from "../types.ts";
 
 export const Dice1 = (props: Partial<SVGProps> = {}) => {
   const { rect, path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2", ry: "2" }),
+    rect({
+      width: "18",
+      height: "18",
+      "x": "3",
+      "y": "3",
+      rx: "2",
+      ry: "2",
+    }),
     path({ "d": "M12 12h.01" }),
   );
 };

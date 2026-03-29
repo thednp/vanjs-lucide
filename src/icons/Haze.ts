@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const Haze = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "m5.2 6.2 1.4 1.4" }),

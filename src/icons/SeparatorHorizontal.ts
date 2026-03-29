@@ -4,11 +4,12 @@ import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
 import { type SVGProps } from "../types.ts";
 
 export const SeparatorHorizontal = (props: Partial<SVGProps> = {}) => {
-  const { line, polyline } = van.tags(svgNamespace);
+  const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    line({ x1: "3", x2: "21", y1: "12", y2: "12" }),
-    polyline({ points: "8 8 12 4 16 8" }),
-    polyline({ points: "16 16 12 20 8 16" }),
+    path({ "d": "m16 16-4 4-4-4" }),
+    path({ "d": "M3 12h18" }),
+    path({ "d": "m8 8 4-4 4 4" }),
   );
 };

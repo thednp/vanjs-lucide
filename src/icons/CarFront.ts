@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const CarFront = (props: Partial<SVGProps> = {}) => {
   const { path, rect } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({
@@ -13,7 +14,13 @@ export const CarFront = (props: Partial<SVGProps> = {}) => {
     }),
     path({ "d": "M7 14h.01" }),
     path({ "d": "M17 14h.01" }),
-    rect({ width: "18", height: "8", "x": "3", "y": "10", rx: "2" }),
+    rect({
+      width: "18",
+      height: "8",
+      "x": "3",
+      "y": "10",
+      rx: "2",
+    }),
     path({ "d": "M5 18v2" }),
     path({ "d": "M19 18v2" }),
   );

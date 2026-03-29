@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const DnaOff = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M15 2c-1.35 1.5-2.092 3-2.5 4.5L14 8" }),

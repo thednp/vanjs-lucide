@@ -5,10 +5,17 @@ import { type SVGProps } from "../types.ts";
 
 export const Table = (props: Partial<SVGProps> = {}) => {
   const { path, rect } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M12 3v18" }),
-    rect({ width: "18", height: "18", "x": "3", "y": "3", rx: "2" }),
+    rect({
+      width: "18",
+      height: "18",
+      "x": "3",
+      "y": "3",
+      rx: "2",
+    }),
     path({ "d": "M3 9h18" }),
     path({ "d": "M3 15h18" }),
   );

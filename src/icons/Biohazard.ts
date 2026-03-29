@@ -5,9 +5,14 @@ import { type SVGProps } from "../types.ts";
 
 export const Biohazard = (props: Partial<SVGProps> = {}) => {
   const { circle, path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    circle({ cx: "12", cy: "11.9", "r": "2" }),
+    circle({
+      cx: "12",
+      cy: "11.9",
+      "r": "2",
+    }),
     path({ "d": "M6.7 3.4c-.9 2.5 0 5.2 2.2 6.7C6.5 9 3.7 9.6 2 11.6" }),
     path({ "d": "m8.9 10.1 1.4.8" }),
     path({ "d": "M17.3 3.4c.9 2.5 0 5.2-2.2 6.7 2.4-1.2 5.2-.6 6.9 1.5" }),

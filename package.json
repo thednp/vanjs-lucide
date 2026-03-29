@@ -1,6 +1,6 @@
 {
   "name": "vanjs-lucide",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "🌀 Lucide icons for VanJS",
   "author": "thednp",
   "license": "MIT",
@@ -50,7 +50,7 @@
     "upd": "pnpm run --parallel /^up:/",
     "up:root": "pnpm up --latest",
     "up:demo": "cd demo && pnpm up --latest",
-    "lint": "pnpm lint:types && pnpm lint:code",
+    "lint": "pnpm pnpm lint:code",
     "lint:code": "deno lint src",
     "lint:types": "tsc --noEmit",
     "fix:ts": "deno lint src --fix",
@@ -69,11 +69,11 @@
     "postcss-import": "^16.1.1",
     "postcss-nesting": "^14.0.0",
     "tailwindcss": "^4.2.2",
-    "tsdown": "^0.21.6",
+    "tsdown": "^0.21.7",
     "typescript": "^6.0.2",
     "vite": "^8.0.3",
     "vite-plugin-strip-comments": "^0.0.10",
-    "vite-vanjs-svg": "^0.0.9",
+    "vite-vanjs-svg": "^0.0.14",
     "vitest": "^4.1.2"
   },
   "peerDependencies": {
@@ -81,7 +81,7 @@
   },
   "dependencies": {
     "vanjs-core": "^1.6.0",
-    "vite-plugin-vanjs": "^0.1.12"
+    "vite-plugin-vanjs": "^0.1.14"
   },
   "packageManager": "pnpm@10.33.0"
 }

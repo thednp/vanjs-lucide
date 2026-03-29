@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const ArrowsUpFromLine = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "m4 6 3-3 3 3" }),

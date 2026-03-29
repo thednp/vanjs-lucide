@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const Mailbox = (props: Partial<SVGProps> = {}) => {
   const { path, polyline, line } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({
@@ -13,6 +14,11 @@ export const Mailbox = (props: Partial<SVGProps> = {}) => {
     }),
     polyline({ points: "15,9 18,9 18,11" }),
     path({ "d": "M6.5 5C9 5 11 7 11 9.5V17a2 2 0 0 1-2 2" }),
-    line({ x1: "6", x2: "7", y1: "10", y2: "10" }),
+    line({
+      x1: "6",
+      x2: "7",
+      y1: "10",
+      y2: "10",
+    }),
   );
 };

@@ -5,9 +5,16 @@ import { type SVGProps } from "../types.ts";
 
 export const LibraryBig = (props: Partial<SVGProps> = {}) => {
   const { rect, path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    rect({ width: "8", height: "18", "x": "3", "y": "3", rx: "1" }),
+    rect({
+      width: "8",
+      height: "18",
+      "x": "3",
+      "y": "3",
+      rx: "1",
+    }),
     path({ "d": "M7 3v18" }),
     path({
       "d":

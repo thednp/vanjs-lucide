@@ -4,10 +4,11 @@ import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
 import { type SVGProps } from "../types.ts";
 
 export const CornerRightUp = (props: Partial<SVGProps> = {}) => {
-  const { polyline, path } = van.tags(svgNamespace);
+  const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    polyline({ points: "10 9 15 4 20 9" }),
+    path({ "d": "m10 9 5-5 5 5" }),
     path({ "d": "M4 20h7a4 4 0 0 0 4-4V4" }),
   );
 };

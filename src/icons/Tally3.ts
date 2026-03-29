@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const Tally3 = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M4 4v16" }),

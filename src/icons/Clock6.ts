@@ -4,10 +4,15 @@ import { LucideIcon, svgNamespace } from "../LucideIcon.ts";
 import { type SVGProps } from "../types.ts";
 
 export const Clock6 = (props: Partial<SVGProps> = {}) => {
-  const { circle, polyline } = van.tags(svgNamespace);
+  const { circle, path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    circle({ cx: "12", cy: "12", "r": "10" }),
-    polyline({ points: "12 6 12 12 12 16.5" }),
+    circle({
+      cx: "12",
+      cy: "12",
+      "r": "10",
+    }),
+    path({ "d": "M12 6v10" }),
   );
 };

@@ -50,7 +50,7 @@ const { main } = van.tags;
 
 const App = () => {
    return main({},
-      Activity({ class:"icon", style:"color: turquoise" });
+      Activity({ class: "icon", style: "color: turquoise" });
    );
 };
 

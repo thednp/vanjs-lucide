@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const Hotel = (props: Partial<SVGProps> = {}) => {
   const { path, rect } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M10 22v-6.57" }),
@@ -16,6 +17,12 @@ export const Hotel = (props: Partial<SVGProps> = {}) => {
     path({ "d": "M16 7h.01" }),
     path({ "d": "M8 11h.01" }),
     path({ "d": "M8 7h.01" }),
-    rect({ "x": "4", "y": "2", width: "16", height: "20", rx: "2" }),
+    rect({
+      "x": "4",
+      "y": "2",
+      width: "16",
+      height: "20",
+      rx: "2",
+    }),
   );
 };

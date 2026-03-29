@@ -5,9 +5,15 @@ import { type SVGProps } from "../types.ts";
 
 export const Pi = (props: Partial<SVGProps> = {}) => {
   const { line, path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
-    line({ x1: "9", x2: "9", y1: "4", y2: "20" }),
+    line({
+      x1: "9",
+      x2: "9",
+      y1: "4",
+      y2: "20",
+    }),
     path({ "d": "M4 7c0-1.7 1.3-3 3-3h13" }),
     path({ "d": "M18 20c-1.7 0-3-1.3-3-3V4" }),
   );

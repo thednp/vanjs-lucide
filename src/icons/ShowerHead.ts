@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const ShowerHead = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "m4 4 2.5 2.5" }),

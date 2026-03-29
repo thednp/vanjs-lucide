@@ -5,6 +5,7 @@ import { type SVGProps } from "../types.ts";
 
 export const VenetianMask = (props: Partial<SVGProps> = {}) => {
   const { path } = van.tags(svgNamespace);
+
   return LucideIcon(
     props,
     path({ "d": "M18 11c-1.5 0-2.5.5-3 2" }),
