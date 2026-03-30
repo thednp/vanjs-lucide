@@ -4,7 +4,7 @@ import { cn } from "../util/cn";
 
 const { dialog, div, form, button, h3 } = van.tags;
 
-type ModalProps = PropsWithKnownKeys<HTMLDialogElement> & {
+export type ModalProps = PropsWithKnownKeys<HTMLDialogElement> & {
   id: string;
   title?: string;
   class?: string;
@@ -37,20 +37,20 @@ export const Modal = (
       form(
         { method: "dialog" },
         button({
-          class: "btn btn-sm btn-circle btn-ghost absolute right-2 top-2",
-          innerHTML: "✕",
-        }),
+          type: "submit",
+          class:
+            "btn btn-sm btn-circle btn-ghost cursor-pointer absolute right-2 top-2",
+        }, "✕"),
       ),
-      h3({ class: "font-bold text-lg mb-3" }, title ? title : "VanJS Lucide"),
+      h3({ class: "font-bold text-lg mb-3" }, title ? title : "Notification"),
       children as ChildDom,
     ),
     // backdrop close — second form covers screen [1]
     closeOnBackdrop
-      ? form({ method: "dialog", class: "modal-backdrop" }, button("close"))
+      ? form(
+        { method: "dialog", class: "modal-backdrop" },
+        button({ type: "submit" }, "close"),
+      )
       : null,
   );
 };
-
-// optional action bar slot
-export const ModalAction = (...children: ChildDom[]) =>
-  div({ class: "modal-action" }, ...children);

@@ -350,17 +350,6 @@ export default function Main() {
             `{\n  width: ${size.val},\n  height: ${size.val},\n  "stroke-width": ${sWidth.val},\n}`;
           const clip = `${name}(${iconProps})`;
 
-          // const iconProps = van.derive(() => {
-          //   let clip = "";
-          //   if (size.val !== 32 || sWidth.val !== 1) {
-          //     clip += "{";
-          //     clip += size.val !== 32 ? `\n  width: ${size.val},\n  height: ${size.val},` : "";
-          //     clip += sWidth.val !== 1 ? `\n  "stroke-width": ${sWidth.val},` : "";
-          //     clip += "\n}";
-          //   }
-          //   return clip;
-          // });
-
           return Tooltip(
             {
               tip: name,
