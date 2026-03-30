@@ -3,10 +3,8 @@ import * as vanX from "vanjs-ext";
 import { SVGTag } from "../../../src/types";
 import Tooltip from "./tooltip";
 import { Modal, showModal } from "./modal";
-import Tags from "./tags.json";
-
-const TagsEntries = Object.entries(Tags);
-const TagNames = () => TagsEntries.map(([name]) => name);
+import { fetchIcons, startIcons } from "./fetchIcons";
+import { TagNames, TagsEntries } from "./tags.ts";
 
 import { Activity } from "../../../src/icons/Activity.ts";
 import { Info } from "../../../src/icons/Info.ts";
@@ -16,12 +14,44 @@ type ChangeEvent<T extends EventTarget & Element = HTMLInputElement> =
   & InputEvent
   & { target: T };
 
+const { circle, path, svg } = van.tags("http://www.w3.org/2000/svg");
+const { main, div, button, span, h2, img, p, pre, a, label, input } = van.tags;
+
+const fetching = van.state(false);
+
+const Loader = div(
+  {
+    "data-fetching": fetching,
+    class:
+      "w-full flex flex-col items-center mt-4 py-4 rounded-lg bg-stone-50 dark:bg-stone-950 opacity-0 data-[fetching=true]:opacity-100",
+  },
+  svg(
+    {
+      class: "size-5 animate-spin text-current",
+      xmlns: "http://www.w3.org/2000/svg",
+      fill: "none",
+      viewBox: "0 0 24 24",
+    },
+    circle({
+      class: "opacity-25",
+      cx: "12",
+      cy: "12",
+      "r": "10",
+      stroke: "currentColor",
+      "stroke-width": "4",
+    }),
+    path({
+      class: "opacity-75",
+      fill: "currentColor",
+      "d":
+        "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z",
+    }),
+  ),
+);
+
 export default function Main() {
-  const { circle, path, svg } = van.tags("http://www.w3.org/2000/svg");
-  const { main, div, button, span, h2, img, p, pre, a, label, input } =
-    van.tags;
   const List = vanX.reactive<{ icons: Record<string, SVGTag>[] }>({
-    icons: [],
+    icons: startIcons,
   });
   const modalId = "confirmModal";
   const size = van.state(32);
@@ -30,73 +60,34 @@ export default function Main() {
   const query = van.state("");
   const modalContent = van.state<{ code: ChildDom }>({ code: "" });
   const ModalContentComponent = () => modalContent.val.code;
-  const fetching = van.state(false);
-  const fetchIcons = async (items: string[]) => {
-    // const isFetching = fetching.oldVal;
-    const len = items.length;
-    return await import(`../../../src/index.ts`).then((module) => {
-      // return await import(`vanjs-lucide`).then((module) => {
-      const newIcons: Record<string, SVGTag>[] = [];
-      let icon;
-      for (let i = 0; i < len; i += 1) {
-        icon = module[items[i] as string & keyof typeof module];
-        newIcons.push({ [items[i]]: icon });
-      }
-      // fetching.val = false;
-      return newIcons;
-    });
-  };
+  const isInitial = van.state(true);
 
-  const loader = div(
-    {
-      "data-fetching": fetching,
-      class:
-        "w-full flex flex-col items-center mt-4 py-4 rounded-lg bg-stone-50 dark:bg-stone-950 opacity-0 data-[fetching=true]:opacity-100",
-    },
-    svg(
-      {
-        class: "size-5 animate-spin text-current",
-        xmlns: "http://www.w3.org/2000/svg",
-        fill: "none",
-        viewBox: "0 0 24 24",
-      },
-      circle({
-        class: "opacity-25",
-        cx: "12",
-        cy: "12",
-        "r": "10",
-        stroke: "currentColor",
-        "stroke-width": "4",
-      }),
-      path({
-        class: "opacity-75",
-        fill: "currentColor",
-        "d":
-          "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z",
-      }),
-    ),
-  );
   const startObserver = () => {
     if (typeof window === "undefined") return;
     const observer = new IntersectionObserver(([entry] /*currentObserver*/) => {
-      if (entry.isIntersecting && count.oldVal < TagsEntries.length) {
-        const remaining = TagsEntries.length - count.oldVal;
-        count.val = count.oldVal + (remaining < 64 ? remaining : 64);
+      const oldCount = count.oldVal;
+      if (entry.isIntersecting && oldCount < TagNames.length) {
+        const remaining = TagNames.length - oldCount;
+        count.val = oldCount + (remaining < 64 ? remaining : 64);
       }
-      // if (count.val >= TagsEntries.length) {
-      //   currentObserver.disconnect();
-      //   // loader.remove();
-      // }
     }, { rootMargin: "100px" });
-    observer.observe(loader);
+    observer.observe(Loader);
   };
-
-  startObserver();
 
   van.derive(() => {
     const currentQuery = query.val;
     const currentQueryMulti = currentQuery.split(/\s|\-/);
     const currentCount = count.val;
+
+    const init = isInitial.val;
+
+    if (init) {
+      startObserver();
+      isInitial.val = false;
+
+      return;
+    }
+
     if (currentQuery.length && currentQuery.length) {
       const searchResults = TagsEntries.filter(([name, tags]) => {
         const lowerName = name.toLowerCase();
@@ -108,7 +99,7 @@ export default function Main() {
       });
       if (searchResults.length) {
         const iconsList = searchResults.map(([val]) => val);
-        console.log(iconsList);
+        // console.log(iconsList);
         fetching.val === true;
 
         fetchIcons(iconsList).then((results) => {
@@ -122,21 +113,15 @@ export default function Main() {
           "not-found": Info,
         }]);
       }
-
-      // loader.remove();
-      // count.val = Icons.length;
       count.val = 64;
-    } else if (currentCount < TagsEntries.length) {
-      const newList = TagNames().slice(0, currentCount);
+    } else if (currentCount <= TagNames.length) {
+      const newList = TagNames.slice(0, currentCount);
       fetching.val === true;
 
       fetchIcons(newList).then((results) => {
         vanX.replace(List.icons, results);
         fetching.val === false;
       });
-      // vanX.replace(List.icons, Icons.slice(0, currentCount));
-      // } else {
-      // vanX.replace(List.icons, Icons);
     }
   });
 
@@ -394,7 +379,7 @@ export default function Main() {
           );
         },
       ),
-      loader,
+      Loader,
       Modal(
         { id: modalId },
         p("Copied Icon Component to clipboard:"),
