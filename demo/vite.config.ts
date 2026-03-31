@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import { defineConfig, type Plugin } from "vite";
 import path from "path";
 import vanjs from "vite-plugin-vanjs";
 import tailwind from "@tailwindcss/vite";
