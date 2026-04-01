@@ -142,7 +142,7 @@ export const fetchIcons = async (items: string[]) => {
   for (let i = 0; i < len; i++) {
     const name = items[i];
     const icon = allIcons[name];
-    newIcons.push({ [name]: icon });
+    if (icon) newIcons.push({ [name]: icon });
   }
 
   return newIcons;
