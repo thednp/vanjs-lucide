@@ -101,14 +101,17 @@ export default function Main() {
       return;
     }
 
-    if (currentQuery.length) {
-      const searchResults = TagsEntries.filter(([name, tags]) => {
+    !isInitial.oldVal && await checkTags();
+    if (!TagsEntries.length) return;
+    
+    if (currentQuery.length > 2 && !fetching.oldVal) {
+      const searchResults =  TagsEntries.filter(([name, tags]) => {
         const lowerName = name.toLowerCase();
         return currentQueryMulti.some((q) => lowerName === q) ||
           currentQueryMulti.some((q) => lowerName.includes(q)) ||
-          tags.some((t) =>
+          (tags && tags.length && tags.some((t) =>
             currentQueryMulti.some((q) => q === t || t.includes(q))
-          );
+          ));
       });
       if (searchResults.length) {
         const iconsList = searchResults.map(([val]) => val);
