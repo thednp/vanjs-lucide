@@ -16,6 +16,7 @@
     "preview": "npm run generate && NODE_ENV=production STATIC=true node server --port 5173"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
     "@tailwindcss/forms": "^0.5.11",
     "@tailwindcss/postcss": "^4.3.3",
     "@tailwindcss/typography": "^0.5.20",
@@ -31,7 +32,6 @@
     "vite-plugin-vanjs": "^0.2.1"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.3.3",
     "@types/express": "^5.0.6",
     "@types/node": "^26.6.0",
     "cross-env": "^10.1.0",
