@@ -275,7 +275,7 @@ export default function Main() {
                   { class: "text-sky-800 dark:text-sky-300" },
                   "// import the icon(s)\n",
                 ),
-                'import { Activity } from "vanjs-lucide";\n\n',
+                'import { Activity } from "vanjs-lucide/icons/Activity";\n\n',
                 span(
                   { class: "text-sky-800 dark:text-sky-300" },
                   "// call anywhere within VanJS codespace\n",
