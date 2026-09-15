@@ -18,8 +18,8 @@ const { circle, path, svg } = van.tags("http://www.w3.org/2000/svg");
 const { main, div, button, span, h2, img, p, pre, a, label, input } = van.tags;
 
 const fetching = van.state(false);
-let TagNames: string[] = []
-let TagsEntries: TagEntries = []
+let TagNames: string[] = [];
+let TagsEntries: TagEntries = [];
 
 const Loader = div(
   {
@@ -58,7 +58,7 @@ const checkTags = async () => {
     TagNames = names;
     // console.log({ entries, names })
   }
-}
+};
 
 export default function Main() {
   const List = vanX.reactive<{ icons: Record<string, SVGTag>[] }>({
@@ -75,15 +75,18 @@ export default function Main() {
 
   const startObserver = () => {
     if (typeof window === "undefined") return;
-    const observer = new IntersectionObserver(async ([entry] /*currentObserver*/) => {
-      if (!entry.isIntersecting) return;
-      const oldCount = count.oldVal;
-      !isInitial.oldVal && await checkTags();
-      if (TagNames.length && oldCount < TagNames.length) {
-        const remaining = TagNames.length - oldCount;
-        count.val = oldCount + (remaining < 64 ? remaining : 64);
-      }
-    }, { rootMargin: "100px" });
+    const observer = new IntersectionObserver(
+      async ([entry] /*currentObserver*/) => {
+        if (!entry.isIntersecting) return;
+        const oldCount = count.oldVal;
+        !isInitial.oldVal && await checkTags();
+        if (TagNames.length && oldCount < TagNames.length) {
+          const remaining = TagNames.length - oldCount;
+          count.val = oldCount + (remaining < 64 ? remaining : 64);
+        }
+      },
+      { rootMargin: "100px" },
+    );
     observer.observe(Loader);
   };
 
@@ -103,15 +106,16 @@ export default function Main() {
 
     !isInitial.oldVal && await checkTags();
     if (!TagsEntries.length) return;
-    
+
     if (currentQuery.length > 2 && !fetching.oldVal) {
-      const searchResults =  TagsEntries.filter(([name, tags]) => {
+      const searchResults = TagsEntries.filter(([name, tags]) => {
         const lowerName = name.toLowerCase();
         return currentQueryMulti.some((q) => lowerName === q) ||
           currentQueryMulti.some((q) => lowerName.includes(q)) ||
-          (tags && tags.length && tags.some((t) =>
-            currentQueryMulti.some((q) => q === t || t.includes(q))
-          ));
+          (tags && tags.length &&
+            tags.some((t) =>
+              currentQueryMulti.some((q) => q === t || t.includes(q))
+            ));
       });
       if (searchResults.length) {
         const iconsList = searchResults.map(([val]) => val);
@@ -122,7 +126,6 @@ export default function Main() {
           vanX.replace(List.icons, results);
           fetching.val === false;
         });
-
       } else {
         vanX.replace(List.icons, [{
           "not-found": Info,
@@ -139,7 +142,6 @@ export default function Main() {
       });
     }
   });
-
 
   return main(
     { class: "main" },

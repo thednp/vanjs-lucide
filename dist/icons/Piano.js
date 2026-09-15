@@ -1,0 +1,16 @@
+/*!
+* vanjs-lucide ESM v0.1.0 (https://thednp.github.io/vanjs-lucide)
+* Copyright 2026 © thednp
+* Licensed under MIT (https://github.com/thednp/vanjs-lucide/blob/master/LICENSE)
+*/
+import { n as svgNamespace, t as LucideIcon } from "../LucideIcon-D1P4Jn_K.js";
+import van from "vanjs-core";
+//#region src/icons/Piano.ts
+const Piano = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M18.5 8c-1.4 0-2.6-.8-3.2-2A6.87 6.87 0 0 0 2 9v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-8.5C22 9.6 20.4 8 18.5 8" }), path({ "d": "M2 14h20" }), path({ "d": "M6 14v4" }), path({ "d": "M10 14v4" }), path({ "d": "M14 14v4" }), path({ "d": "M18 14v4" }));
+};
+//#endregion
+export { Piano };
+
+//# sourceMappingURL=Piano.js.map

@@ -1,0 +1,16 @@
+/*!
+* vanjs-lucide ESM v0.1.0 (https://thednp.github.io/vanjs-lucide)
+* Copyright 2026 © thednp
+* Licensed under MIT (https://github.com/thednp/vanjs-lucide/blob/master/LICENSE)
+*/
+import { n as svgNamespace, t as LucideIcon } from "../LucideIcon-D1P4Jn_K.js";
+import van from "vanjs-core";
+//#region src/icons/UmbrellaOff.ts
+const UmbrellaOff = (props = {}) => {
+	const { path } = van.tags(svgNamespace);
+	return LucideIcon(props, path({ "d": "M12 13v7a2 2 0 0 0 4 0" }), path({ "d": "M12 2v2" }), path({ "d": "M18.656 13h2.336a1 1 0 0 0 .97-1.274 10.284 10.284 0 0 0-12.07-7.51" }), path({ "d": "m2 2 20 20" }), path({ "d": "M5.961 5.957a10.28 10.28 0 0 0-3.922 5.769A1 1 0 0 0 3 13h10" }));
+};
+//#endregion
+export { UmbrellaOff };
+
+//# sourceMappingURL=UmbrellaOff.js.map

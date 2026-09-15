@@ -1,0 +1,22 @@
+/*!
+* vanjs-lucide ESM v0.1.0 (https://thednp.github.io/vanjs-lucide)
+* Copyright 2026 © thednp
+* Licensed under MIT (https://github.com/thednp/vanjs-lucide/blob/master/LICENSE)
+*/
+import { n as svgNamespace, t as LucideIcon } from "../LucideIcon-D1P4Jn_K.js";
+import van from "vanjs-core";
+//#region src/icons/Rows4.ts
+const Rows4 = (props = {}) => {
+	const { rect, path } = van.tags(svgNamespace);
+	return LucideIcon(props, rect({
+		width: "18",
+		height: "18",
+		"x": "3",
+		"y": "3",
+		rx: "2"
+	}), path({ "d": "M21 7.5H3" }), path({ "d": "M21 12H3" }), path({ "d": "M21 16.5H3" }));
+};
+//#endregion
+export { Rows4 };
+
+//# sourceMappingURL=Rows4.js.map

@@ -1,5480 +1,1700 @@
 /*!
-* vanjs-lucide ESM v0.0.7 (https://thednp.github.io/vanjs-lucide)
+* vanjs-lucide ESM v0.1.0 (https://thednp.github.io/vanjs-lucide)
 * Copyright 2026 © thednp
 * Licensed under MIT (https://github.com/thednp/vanjs-lucide/blob/master/LICENSE)
 */
-import { State } from "vanjs-core";
-
-//#region src/types.d.ts
-type PropValueOrDerived<T> = T | State<T>;
-interface EventHandler<T, E extends Event> {
-  (e: E & {
-    currentTarget: T;
-    target: EventTarget & Element;
-  }): void;
-}
-interface BoundEventHandler<T, E extends Event, EHandler extends EventHandler<T, E> = EventHandler<T, E>> {
-  0: (data: unknown, ...e: Parameters<EHandler>) => void;
-  1: unknown;
-}
-type EventHandlerUnion<T, E extends Event, EHandler extends EventHandler<T, E> = EventHandler<T, E>> = EHandler | BoundEventHandler<T, E, EHandler>;
-interface DOMAttributes<T> {
-  oncopy?: EventHandlerUnion<T, ClipboardEvent> | undefined;
-  oncut?: EventHandlerUnion<T, ClipboardEvent> | undefined;
-  onpaste?: EventHandlerUnion<T, ClipboardEvent> | undefined;
-  oncompositionend?: EventHandlerUnion<T, CompositionEvent> | undefined;
-  oncompositionstart?: EventHandlerUnion<T, CompositionEvent> | undefined;
-  oncompositionupdate?: EventHandlerUnion<T, CompositionEvent> | undefined;
-  onfocusout?: EventHandlerUnion<T, FocusEvent> | undefined;
-  onfocusin?: EventHandlerUnion<T, FocusEvent> | undefined;
-  onencrypted?: EventHandlerUnion<T, Event> | undefined;
-  ondragexit?: EventHandlerUnion<T, DragEvent> | undefined;
-}
-interface AriaAttributes {
-  /**
-   * Identifies the currently active element when DOM focus is on a composite widget, textbox,
-   * group, or application.
-   */
-  "aria-activedescendant"?: string | undefined;
-  /**
-   * Indicates whether assistive technologies will present all, or only parts of, the changed
-   * region based on the change notifications defined by the aria-relevant attribute.
-   */
-  "aria-atomic"?: boolean | "false" | "true" | undefined;
-  /**
-   * Indicates whether inputting text could trigger display of one or more predictions of the
-   * user's intended value for an input and specifies how predictions would be presented if they
-   * are made.
-   */
-  "aria-autocomplete"?: "none" | "inline" | "list" | "both" | undefined;
-  /**
-   * Indicates an element is being modified and that assistive technologies MAY want to wait until
-   * the modifications are complete before exposing them to the user.
-   */
-  "aria-busy"?: boolean | "false" | "true" | undefined;
-  /**
-   * Indicates the current "checked" state of checkboxes, radio buttons, and other widgets.
-   *
-   * @see aria-pressed @see aria-selected.
-   */
-  "aria-checked"?: boolean | "false" | "mixed" | "true" | undefined;
-  /**
-   * Defines the total number of columns in a table, grid, or treegrid.
-   *
-   * @see aria-colindex.
-   */
-  "aria-colcount"?: number | string | undefined;
-  /**
-   * Defines an element's column index or position with respect to the total number of columns
-   * within a table, grid, or treegrid.
-   *
-   * @see aria-colcount @see aria-colspan.
-   */
-  "aria-colindex"?: number | string | undefined;
-  /**
-   * Defines the number of columns spanned by a cell or gridcell within a table, grid, or
-   * treegrid.
-   *
-   * @see aria-colindex @see aria-rowspan.
-   */
-  "aria-colspan"?: number | string | undefined;
-  /**
-   * Identifies the element (or elements) whose contents or presence are controlled by the current
-   * element.
-   *
-   * @see aria-owns.
-   */
-  "aria-controls"?: string | undefined;
-  /**
-   * Indicates the element that represents the current item within a container or set of related
-   * elements.
-   */
-  "aria-current"?: boolean | "false" | "true" | "page" | "step" | "location" | "date" | "time" | undefined;
-  /**
-   * Identifies the element (or elements) that describes the object.
-   *
-   * @see aria-labelledby
-   */
-  "aria-describedby"?: string | undefined;
-  /**
-   * Identifies the element that provides a detailed, extended description for the object.
-   *
-   * @see aria-describedby.
-   */
-  "aria-details"?: string | undefined;
-  /**
-   * Indicates that the element is perceivable but disabled, so it is not editable or otherwise
-   * operable.
-   *
-   * @see aria-hidden @see aria-readonly.
-   */
-  "aria-disabled"?: boolean | "false" | "true" | undefined;
-  /**
-   * Indicates what functions can be performed when a dragged object is released on the drop
-   * target.
-   *
-   * @deprecated In ARIA 1.1
-   */
-  "aria-dropeffect"?: "none" | "copy" | "execute" | "link" | "move" | "popup" | undefined;
-  /**
-   * Identifies the element that provides an error message for the object.
-   *
-   * @see aria-invalid @see aria-describedby.
-   */
-  "aria-errormessage"?: string | undefined;
-  /**
-   * Indicates whether the element, or another grouping element it controls, is currently expanded
-   * or collapsed.
-   */
-  "aria-expanded"?: boolean | "false" | "true" | undefined;
-  /**
-   * Identifies the next element (or elements) in an alternate reading order of content which, at
-   * the user's discretion, allows assistive technology to override the general default of reading
-   * in document source order.
-   */
-  "aria-flowto"?: string | undefined;
-  /**
-   * Indicates an element's "grabbed" state in a drag-and-drop operation.
-   *
-   * @deprecated In ARIA 1.1
-   */
-  "aria-grabbed"?: boolean | "false" | "true" | undefined;
-  /**
-   * Indicates the availability and type of interactive popup element, such as menu or dialog,
-   * that can be triggered by an element.
-   */
-  "aria-haspopup"?: boolean | "false" | "true" | "menu" | "listbox" | "tree" | "grid" | "dialog" | undefined;
-  /**
-   * Indicates whether the element is exposed to an accessibility API.
-   *
-   * @see aria-disabled.
-   */
-  "aria-hidden"?: boolean | "false" | "true" | undefined;
-  /**
-   * Indicates the entered value does not conform to the format expected by the application.
-   *
-   * @see aria-errormessage.
-   */
-  "aria-invalid"?: boolean | "false" | "true" | "grammar" | "spelling" | undefined;
-  /**
-   * Indicates keyboard shortcuts that an author has implemented to activate or give focus to an
-   * element.
-   */
-  "aria-keyshortcuts"?: string | undefined;
-  /**
-   * Defines a string value that labels the current element.
-   *
-   * @see aria-labelledby.
-   */
-  "aria-label"?: string | undefined;
-  /**
-   * Identifies the element (or elements) that labels the current element.
-   *
-   * @see aria-describedby.
-   */
-  "aria-labelledby"?: string | undefined;
-  /** Defines the hierarchical level of an element within a structure. */
-  "aria-level"?: number | string | undefined;
-  /**
-   * Indicates that an element will be updated, and describes the types of updates the user
-   * agents, assistive technologies, and user can expect from the live region.
-   */
-  "aria-live"?: "off" | "assertive" | "polite" | undefined;
-  /** Indicates whether an element is modal when displayed. */
-  "aria-modal"?: boolean | "false" | "true" | undefined;
-  /** Indicates whether a text box accepts multiple lines of input or only a single line. */
-  "aria-multiline"?: boolean | "false" | "true" | undefined;
-  /**
-   * Indicates that the user may select more than one item from the current selectable
-   * descendants.
-   */
-  "aria-multiselectable"?: boolean | "false" | "true" | undefined;
-  /** Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous. */
-  "aria-orientation"?: "horizontal" | "vertical" | undefined;
-  /**
-   * Identifies an element (or elements) in order to define a visual, functional, or contextual
-   * parent/child relationship between DOM elements where the DOM hierarchy cannot be used to
-   * represent the relationship.
-   *
-   * @see aria-controls.
-   */
-  "aria-owns"?: string | undefined;
-  /**
-   * Defines a short hint (a word or short phrase) intended to aid the user with data entry when
-   * the control has no value. A hint could be a sample value or a brief description of the
-   * expected format.
-   */
-  "aria-placeholder"?: string | undefined;
-  /**
-   * Defines an element's number or position in the current set of listitems or treeitems. Not
-   * required if all elements in the set are present in the DOM.
-   *
-   * @see aria-setsize.
-   */
-  "aria-posinset"?: number | string | undefined;
-  /**
-   * Indicates the current "pressed" state of toggle buttons.
-   *
-   * @see aria-checked @see aria-selected.
-   */
-  "aria-pressed"?: boolean | "false" | "mixed" | "true" | undefined;
-  /**
-   * Indicates that the element is not editable, but is otherwise operable.
-   *
-   * @see aria-disabled.
-   */
-  "aria-readonly"?: boolean | "false" | "true" | undefined;
-  /**
-   * Indicates what notifications the user agent will trigger when the accessibility tree within a
-   * live region is modified.
-   *
-   * @see aria-atomic.
-   */
-  "aria-relevant"?: "additions" | "additions removals" | "additions text" | "all" | "removals" | "removals additions" | "removals text" | "text" | "text additions" | "text removals" | undefined;
-  /** Indicates that user input is required on the element before a form may be submitted. */
-  "aria-required"?: boolean | "false" | "true" | undefined;
-  /** Defines a human-readable, author-localized description for the role of an element. */
-  "aria-roledescription"?: string | undefined;
-  /**
-   * Defines the total number of rows in a table, grid, or treegrid.
-   *
-   * @see aria-rowindex.
-   */
-  "aria-rowcount"?: number | string | undefined;
-  /**
-   * Defines an element's row index or position with respect to the total number of rows within a
-   * table, grid, or treegrid.
-   *
-   * @see aria-rowcount @see aria-rowspan.
-   */
-  "aria-rowindex"?: number | string | undefined;
-  /**
-   * Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.
-   *
-   * @see aria-rowindex @see aria-colspan.
-   */
-  "aria-rowspan"?: number | string | undefined;
-  /**
-   * Indicates the current "selected" state of various widgets.
-   *
-   * @see aria-checked @see aria-pressed.
-   */
-  "aria-selected"?: boolean | "false" | "true" | undefined;
-  /**
-   * Defines the number of items in the current set of listitems or treeitems. Not required if all
-   * elements in the set are present in the DOM.
-   *
-   * @see aria-posinset.
-   */
-  "aria-setsize"?: number | string | undefined;
-  /** Indicates if items in a table or grid are sorted in ascending or descending order. */
-  "aria-sort"?: "none" | "ascending" | "descending" | "other" | undefined;
-  /** Defines the maximum allowed value for a range widget. */
-  "aria-valuemax"?: number | string | undefined;
-  /** Defines the minimum allowed value for a range widget. */
-  "aria-valuemin"?: number | string | undefined;
-  /**
-   * Defines the current value for a range widget.
-   *
-   * @see aria-valuetext.
-   */
-  "aria-valuenow"?: number | string | undefined;
-  /** Defines the human readable text alternative of aria-valuenow for a range widget. */
-  "aria-valuetext"?: string | undefined;
-  role?: "alert" | "alertdialog" | "application" | "article" | "banner" | "button" | "cell" | "checkbox" | "columnheader" | "combobox" | "complementary" | "contentinfo" | "definition" | "dialog" | "directory" | "document" | "feed" | "figure" | "form" | "grid" | "gridcell" | "group" | "heading" | "img" | "link" | "list" | "listbox" | "listitem" | "log" | "main" | "marquee" | "math" | "menu" | "menubar" | "menuitem" | "menuitemcheckbox" | "menuitemradio" | "meter" | "navigation" | "none" | "note" | "option" | "presentation" | "progressbar" | "radio" | "radiogroup" | "region" | "row" | "rowgroup" | "rowheader" | "scrollbar" | "search" | "searchbox" | "separator" | "slider" | "spinbutton" | "status" | "switch" | "tab" | "table" | "tablist" | "tabpanel" | "term" | "textbox" | "timer" | "toolbar" | "tooltip" | "tree" | "treegrid" | "treeitem" | undefined;
-}
-interface NewViewportSVGAttributes<T> extends CoreSVGAttributes<T>, Pick<PresentationSVGAttributes, "overflow" | "clip"> {
-  viewBox?: string | undefined;
-}
-interface TransformableSVGAttributes {
-  transform?: string | undefined;
-}
-interface ContainerElementSVGAttributes<T> extends CoreSVGAttributes<T>, Pick<PresentationSVGAttributes, "clip-path" | "mask" | "cursor" | "opacity" | "filter" | "enable-background" | "color-interpolation" | "color-rendering"> {}
-interface FilterPrimitiveElementSVGAttributes<T> extends CoreSVGAttributes<T>, Pick<PresentationSVGAttributes, "color-interpolation-filters"> {
-  x?: number | string | undefined;
-  y?: number | string | undefined;
-  width?: number | string | undefined;
-  height?: number | string | undefined;
-  result?: string | undefined;
-}
-interface StylableSVGAttributes {
-  class?: string | undefined;
-  style?: string | undefined;
-}
-interface FitToViewBoxSVGAttributes {
-  viewBox?: string | undefined;
-  preserveAspectRatio?: SVGPreserveAspectRatio | undefined;
-}
-interface CoreSVGAttributes<T> extends AriaAttributes, DOMAttributes<T> {
-  id?: string | undefined;
-  lang?: string | undefined;
-  tabIndex?: number | string | undefined;
-  tabindex?: number | string | undefined;
-}
-interface PresentationSVGAttributes {
-  "alignment-baseline"?: "auto" | "baseline" | "before-edge" | "text-before-edge" | "middle" | "central" | "after-edge" | "text-after-edge" | "ideographic" | "alphabetic" | "hanging" | "mathematical" | "inherit" | undefined;
-  "baseline-shift"?: number | string | undefined;
-  clip?: string | undefined;
-  "clip-path"?: string | undefined;
-  "clip-rule"?: "nonzero" | "evenodd" | "inherit" | undefined;
-  color?: string | undefined;
-  "color-interpolation"?: "auto" | "sRGB" | "linearRGB" | "inherit" | undefined;
-  "color-interpolation-filters"?: "auto" | "sRGB" | "linearRGB" | "inherit" | undefined;
-  "color-profile"?: string | undefined;
-  "color-rendering"?: "auto" | "optimizeSpeed" | "optimizeQuality" | "inherit" | undefined;
-  cursor?: string | undefined;
-  direction?: "ltr" | "rtl" | "inherit" | undefined;
-  display?: string | undefined;
-  "dominant-baseline"?: "auto" | "text-bottom" | "alphabetic" | "ideographic" | "middle" | "central" | "mathematical" | "hanging" | "text-top" | "inherit" | undefined;
-  "enable-background"?: string | undefined;
-  fill?: string | undefined;
-  "fill-opacity"?: number | string | "inherit" | undefined;
-  "fill-rule"?: "nonzero" | "evenodd" | "inherit" | undefined;
-  filter?: string | undefined;
-  "flood-color"?: string | undefined;
-  "flood-opacity"?: number | string | "inherit" | undefined;
-  "font-family"?: string | undefined;
-  "font-size"?: string | undefined;
-  "font-size-adjust"?: number | string | undefined;
-  "font-stretch"?: string | undefined;
-  "font-style"?: "normal" | "italic" | "oblique" | "inherit" | undefined;
-  "font-variant"?: string | undefined;
-  "font-weight"?: number | string | undefined;
-  "glyph-orientation-horizontal"?: string | undefined;
-  "glyph-orientation-vertical"?: string | undefined;
-  "image-rendering"?: "auto" | "optimizeQuality" | "optimizeSpeed" | "inherit" | undefined;
-  kerning?: string | undefined;
-  "letter-spacing"?: number | string | undefined;
-  "lighting-color"?: string | undefined;
-  "marker-end"?: string | undefined;
-  "marker-mid"?: string | undefined;
-  "marker-start"?: string | undefined;
-  mask?: string | undefined;
-  opacity?: number | string | "inherit" | undefined;
-  overflow?: "visible" | "hidden" | "scroll" | "auto" | "inherit" | undefined;
-  pathLength?: string | number | undefined;
-  "pointer-events"?: "bounding-box" | "visiblePainted" | "visibleFill" | "visibleStroke" | "visible" | "painted" | "color" | "fill" | "stroke" | "all" | "none" | "inherit" | undefined;
-  "shape-rendering"?: "auto" | "optimizeSpeed" | "crispEdges" | "geometricPrecision" | "inherit" | undefined;
-  "stop-color"?: string | undefined;
-  "stop-opacity"?: number | string | "inherit" | undefined;
-  stroke?: string | undefined;
-  "stroke-dasharray"?: string | undefined;
-  "stroke-dashoffset"?: number | string | undefined;
-  "stroke-linecap"?: "butt" | "round" | "square" | "inherit" | undefined;
-  "stroke-linejoin"?: "arcs" | "bevel" | "miter" | "miter-clip" | "round" | "inherit" | undefined;
-  "stroke-miterlimit"?: number | string | "inherit" | undefined;
-  "stroke-opacity"?: number | string | "inherit" | undefined;
-  "stroke-width"?: number | string | undefined;
-  "text-anchor"?: "start" | "middle" | "end" | "inherit" | undefined;
-  "text-decoration"?: "none" | "underline" | "overline" | "line-through" | "blink" | "inherit" | undefined;
-  "text-rendering"?: "auto" | "optimizeSpeed" | "optimizeLegibility" | "geometricPrecision" | "inherit" | undefined;
-  "unicode-bidi"?: string | undefined;
-  visibility?: "visible" | "hidden" | "collapse" | "inherit" | undefined;
-  "word-spacing"?: number | string | undefined;
-  "writing-mode"?: "lr-tb" | "rl-tb" | "tb-rl" | "lr" | "rl" | "tb" | "inherit" | undefined;
-}
-interface NewViewportSVGAttributes<T> extends CoreSVGAttributes<T>, Pick<PresentationSVGAttributes, "overflow" | "clip"> {
-  viewBox?: string | undefined;
-}
-interface ZoomAndPanSVGAttributes {
-  zoomAndPan?: "disable" | "magnify" | undefined;
-}
-interface SvgSVGAttributes<T> extends ContainerElementSVGAttributes<T>, NewViewportSVGAttributes<T>, FilterPrimitiveElementSVGAttributes<T>, StylableSVGAttributes, TransformableSVGAttributes, FitToViewBoxSVGAttributes, ZoomAndPanSVGAttributes, PresentationSVGAttributes {
-  /** @deprecated */
-  version?: string | undefined;
-  baseProfile?: string | undefined;
-  x?: number | string | undefined;
-  y?: number | string | undefined;
-  width?: number | string | undefined;
-  height?: number | string | undefined;
-  contentScriptType?: string | undefined;
-  contentStyleType?: string | undefined;
-  xmlns?: string | undefined;
-  "xmlns:xlink"?: string | undefined;
-}
-type SVGProps = { [K in keyof SvgSVGAttributes<SVGSVGElement>]: PropValueOrDerived<SvgSVGAttributes<SVGSVGElement>[K]> | undefined };
-//#endregion
-//#region src/icons/AArrowDown.d.ts
-declare const AArrowDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AArrowUp.d.ts
-declare const AArrowUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ALargeSmall.d.ts
-declare const ALargeSmall: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Accessibility.d.ts
-declare const Accessibility: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Activity.d.ts
-declare const Activity: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AirVent.d.ts
-declare const AirVent: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Airplay.d.ts
-declare const Airplay: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlarmClockCheck.d.ts
-declare const AlarmClockCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlarmClockMinus.d.ts
-declare const AlarmClockMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlarmClockOff.d.ts
-declare const AlarmClockOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlarmClockPlus.d.ts
-declare const AlarmClockPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlarmClock.d.ts
-declare const AlarmClock: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlarmSmoke.d.ts
-declare const AlarmSmoke: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Album.d.ts
-declare const Album: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlignCenterHorizontal.d.ts
-declare const AlignCenterHorizontal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlignCenterVertical.d.ts
-declare const AlignCenterVertical: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlignEndHorizontal.d.ts
-declare const AlignEndHorizontal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlignEndVertical.d.ts
-declare const AlignEndVertical: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlignHorizontalDistributeCenter.d.ts
-declare const AlignHorizontalDistributeCenter: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlignHorizontalDistributeEnd.d.ts
-declare const AlignHorizontalDistributeEnd: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlignHorizontalDistributeStart.d.ts
-declare const AlignHorizontalDistributeStart: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlignHorizontalJustifyCenter.d.ts
-declare const AlignHorizontalJustifyCenter: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlignHorizontalJustifyEnd.d.ts
-declare const AlignHorizontalJustifyEnd: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlignHorizontalJustifyStart.d.ts
-declare const AlignHorizontalJustifyStart: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlignHorizontalSpaceAround.d.ts
-declare const AlignHorizontalSpaceAround: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlignHorizontalSpaceBetween.d.ts
-declare const AlignHorizontalSpaceBetween: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlignStartHorizontal.d.ts
-declare const AlignStartHorizontal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlignStartVertical.d.ts
-declare const AlignStartVertical: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlignVerticalDistributeCenter.d.ts
-declare const AlignVerticalDistributeCenter: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlignVerticalDistributeEnd.d.ts
-declare const AlignVerticalDistributeEnd: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlignVerticalDistributeStart.d.ts
-declare const AlignVerticalDistributeStart: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlignVerticalJustifyCenter.d.ts
-declare const AlignVerticalJustifyCenter: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlignVerticalJustifyEnd.d.ts
-declare const AlignVerticalJustifyEnd: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlignVerticalJustifyStart.d.ts
-declare const AlignVerticalJustifyStart: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlignVerticalSpaceAround.d.ts
-declare const AlignVerticalSpaceAround: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AlignVerticalSpaceBetween.d.ts
-declare const AlignVerticalSpaceBetween: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Ambulance.d.ts
-declare const Ambulance: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Ampersand.d.ts
-declare const Ampersand: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Ampersands.d.ts
-declare const Ampersands: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Amphora.d.ts
-declare const Amphora: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Anchor.d.ts
-declare const Anchor: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Angry.d.ts
-declare const Angry: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Annoyed.d.ts
-declare const Annoyed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Antenna.d.ts
-declare const Antenna: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Anvil.d.ts
-declare const Anvil: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Aperture.d.ts
-declare const Aperture: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AppWindowMac.d.ts
-declare const AppWindowMac: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AppWindow.d.ts
-declare const AppWindow: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Apple.d.ts
-declare const Apple: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArchiveRestore.d.ts
-declare const ArchiveRestore: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArchiveX.d.ts
-declare const ArchiveX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Archive.d.ts
-declare const Archive: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Armchair.d.ts
-declare const Armchair: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowBigDownDash.d.ts
-declare const ArrowBigDownDash: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowBigDown.d.ts
-declare const ArrowBigDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowBigLeftDash.d.ts
-declare const ArrowBigLeftDash: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowBigLeft.d.ts
-declare const ArrowBigLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowBigRightDash.d.ts
-declare const ArrowBigRightDash: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowBigRight.d.ts
-declare const ArrowBigRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowBigUpDash.d.ts
-declare const ArrowBigUpDash: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowBigUp.d.ts
-declare const ArrowBigUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowDown01.d.ts
-declare const ArrowDown01: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowDown10.d.ts
-declare const ArrowDown10: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowDownAZ.d.ts
-declare const ArrowDownAZ: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowDownFromLine.d.ts
-declare const ArrowDownFromLine: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowDownLeft.d.ts
-declare const ArrowDownLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowDownNarrowWide.d.ts
-declare const ArrowDownNarrowWide: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowDownRight.d.ts
-declare const ArrowDownRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowDownToDot.d.ts
-declare const ArrowDownToDot: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowDownToLine.d.ts
-declare const ArrowDownToLine: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowDownUp.d.ts
-declare const ArrowDownUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowDownWideNarrow.d.ts
-declare const ArrowDownWideNarrow: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowDownZA.d.ts
-declare const ArrowDownZA: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowDown.d.ts
-declare const ArrowDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowLeftFromLine.d.ts
-declare const ArrowLeftFromLine: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowLeftRight.d.ts
-declare const ArrowLeftRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowLeftToLine.d.ts
-declare const ArrowLeftToLine: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowLeft.d.ts
-declare const ArrowLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowRightFromLine.d.ts
-declare const ArrowRightFromLine: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowRightLeft.d.ts
-declare const ArrowRightLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowRightToLine.d.ts
-declare const ArrowRightToLine: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowRight.d.ts
-declare const ArrowRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowUp01.d.ts
-declare const ArrowUp01: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowUp10.d.ts
-declare const ArrowUp10: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowUpAZ.d.ts
-declare const ArrowUpAZ: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowUpDown.d.ts
-declare const ArrowUpDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowUpFromDot.d.ts
-declare const ArrowUpFromDot: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowUpFromLine.d.ts
-declare const ArrowUpFromLine: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowUpLeft.d.ts
-declare const ArrowUpLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowUpNarrowWide.d.ts
-declare const ArrowUpNarrowWide: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowUpRight.d.ts
-declare const ArrowUpRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowUpToLine.d.ts
-declare const ArrowUpToLine: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowUpWideNarrow.d.ts
-declare const ArrowUpWideNarrow: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowUpZA.d.ts
-declare const ArrowUpZA: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowUp.d.ts
-declare const ArrowUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ArrowsUpFromLine.d.ts
-declare const ArrowsUpFromLine: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Asterisk.d.ts
-declare const Asterisk: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AtSign.d.ts
-declare const AtSign: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Atom.d.ts
-declare const Atom: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AudioLines.d.ts
-declare const AudioLines: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/AudioWaveform.d.ts
-declare const AudioWaveform: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Award.d.ts
-declare const Award: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Axe.d.ts
-declare const Axe: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Axis3d.d.ts
-declare const Axis3d: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Baby.d.ts
-declare const Baby: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Backpack.d.ts
-declare const Backpack: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BadgeAlert.d.ts
-declare const BadgeAlert: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BadgeCent.d.ts
-declare const BadgeCent: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BadgeCheck.d.ts
-declare const BadgeCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BadgeDollarSign.d.ts
-declare const BadgeDollarSign: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BadgeEuro.d.ts
-declare const BadgeEuro: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BadgeIndianRupee.d.ts
-declare const BadgeIndianRupee: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BadgeInfo.d.ts
-declare const BadgeInfo: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BadgeJapaneseYen.d.ts
-declare const BadgeJapaneseYen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BadgeMinus.d.ts
-declare const BadgeMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BadgePercent.d.ts
-declare const BadgePercent: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BadgePlus.d.ts
-declare const BadgePlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BadgePoundSterling.d.ts
-declare const BadgePoundSterling: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BadgeQuestionMark.d.ts
-declare const BadgeQuestionMark: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BadgeRussianRuble.d.ts
-declare const BadgeRussianRuble: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BadgeSwissFranc.d.ts
-declare const BadgeSwissFranc: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BadgeTurkishLira.d.ts
-declare const BadgeTurkishLira: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BadgeX.d.ts
-declare const BadgeX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Badge.d.ts
-declare const Badge: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BaggageClaim.d.ts
-declare const BaggageClaim: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Balloon.d.ts
-declare const Balloon: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Ban.d.ts
-declare const Ban: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Banana.d.ts
-declare const Banana: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Bandage.d.ts
-declare const Bandage: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BanknoteArrowDown.d.ts
-declare const BanknoteArrowDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BanknoteArrowUp.d.ts
-declare const BanknoteArrowUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BanknoteX.d.ts
-declare const BanknoteX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Banknote.d.ts
-declare const Banknote: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Barcode.d.ts
-declare const Barcode: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Barrel.d.ts
-declare const Barrel: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Baseline.d.ts
-declare const Baseline: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Bath.d.ts
-declare const Bath: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BatteryCharging.d.ts
-declare const BatteryCharging: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BatteryFull.d.ts
-declare const BatteryFull: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BatteryLow.d.ts
-declare const BatteryLow: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BatteryMedium.d.ts
-declare const BatteryMedium: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BatteryPlus.d.ts
-declare const BatteryPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BatteryWarning.d.ts
-declare const BatteryWarning: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Battery.d.ts
-declare const Battery: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Beaker.d.ts
-declare const Beaker: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BeanOff.d.ts
-declare const BeanOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Bean.d.ts
-declare const Bean: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BedDouble.d.ts
-declare const BedDouble: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BedSingle.d.ts
-declare const BedSingle: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Bed.d.ts
-declare const Bed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BeefOff.d.ts
-declare const BeefOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Beef.d.ts
-declare const Beef: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BeerOff.d.ts
-declare const BeerOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Beer.d.ts
-declare const Beer: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BellDot.d.ts
-declare const BellDot: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BellElectric.d.ts
-declare const BellElectric: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BellMinus.d.ts
-declare const BellMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BellOff.d.ts
-declare const BellOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BellPlus.d.ts
-declare const BellPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BellRing.d.ts
-declare const BellRing: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Bell.d.ts
-declare const Bell: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BetweenHorizontalEnd.d.ts
-declare const BetweenHorizontalEnd: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BetweenHorizontalStart.d.ts
-declare const BetweenHorizontalStart: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BetweenVerticalEnd.d.ts
-declare const BetweenVerticalEnd: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BetweenVerticalStart.d.ts
-declare const BetweenVerticalStart: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BicepsFlexed.d.ts
-declare const BicepsFlexed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Bike.d.ts
-declare const Bike: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Binary.d.ts
-declare const Binary: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Binoculars.d.ts
-declare const Binoculars: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Biohazard.d.ts
-declare const Biohazard: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Bird.d.ts
-declare const Bird: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Birdhouse.d.ts
-declare const Birdhouse: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Bitcoin.d.ts
-declare const Bitcoin: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Blend.d.ts
-declare const Blend: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Blinds.d.ts
-declare const Blinds: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Blocks.d.ts
-declare const Blocks: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BluetoothConnected.d.ts
-declare const BluetoothConnected: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BluetoothOff.d.ts
-declare const BluetoothOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BluetoothSearching.d.ts
-declare const BluetoothSearching: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Bluetooth.d.ts
-declare const Bluetooth: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Bold.d.ts
-declare const Bold: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Bolt.d.ts
-declare const Bolt: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Bomb.d.ts
-declare const Bomb: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Bone.d.ts
-declare const Bone: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookA.d.ts
-declare const BookA: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookAlert.d.ts
-declare const BookAlert: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookAudio.d.ts
-declare const BookAudio: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookCheck.d.ts
-declare const BookCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookCopy.d.ts
-declare const BookCopy: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookDashed.d.ts
-declare const BookDashed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookDown.d.ts
-declare const BookDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookHeadphones.d.ts
-declare const BookHeadphones: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookHeart.d.ts
-declare const BookHeart: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookImage.d.ts
-declare const BookImage: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookKey.d.ts
-declare const BookKey: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookLock.d.ts
-declare const BookLock: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookMarked.d.ts
-declare const BookMarked: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookMinus.d.ts
-declare const BookMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookOpenCheck.d.ts
-declare const BookOpenCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookOpenText.d.ts
-declare const BookOpenText: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookOpen.d.ts
-declare const BookOpen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookPlus.d.ts
-declare const BookPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookSearch.d.ts
-declare const BookSearch: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookText.d.ts
-declare const BookText: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookType.d.ts
-declare const BookType: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookUp2.d.ts
-declare const BookUp2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookUp.d.ts
-declare const BookUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookUser.d.ts
-declare const BookUser: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookX.d.ts
-declare const BookX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Book.d.ts
-declare const Book: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookmarkCheck.d.ts
-declare const BookmarkCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookmarkMinus.d.ts
-declare const BookmarkMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookmarkPlus.d.ts
-declare const BookmarkPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BookmarkX.d.ts
-declare const BookmarkX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Bookmark.d.ts
-declare const Bookmark: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BoomBox.d.ts
-declare const BoomBox: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BotMessageSquare.d.ts
-declare const BotMessageSquare: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BotOff.d.ts
-declare const BotOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Bot.d.ts
-declare const Bot: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BottleWine.d.ts
-declare const BottleWine: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BowArrow.d.ts
-declare const BowArrow: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Box.d.ts
-declare const Box: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Boxes.d.ts
-declare const Boxes: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Braces.d.ts
-declare const Braces: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Brackets.d.ts
-declare const Brackets: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BrainCircuit.d.ts
-declare const BrainCircuit: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BrainCog.d.ts
-declare const BrainCog: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Brain.d.ts
-declare const Brain: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BrickWallFire.d.ts
-declare const BrickWallFire: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BrickWallShield.d.ts
-declare const BrickWallShield: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BrickWall.d.ts
-declare const BrickWall: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BriefcaseBusiness.d.ts
-declare const BriefcaseBusiness: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BriefcaseConveyorBelt.d.ts
-declare const BriefcaseConveyorBelt: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BriefcaseMedical.d.ts
-declare const BriefcaseMedical: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Briefcase.d.ts
-declare const Briefcase: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BringToFront.d.ts
-declare const BringToFront: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BrushCleaning.d.ts
-declare const BrushCleaning: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Brush.d.ts
-declare const Brush: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Bubbles.d.ts
-declare const Bubbles: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BugOff.d.ts
-declare const BugOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BugPlay.d.ts
-declare const BugPlay: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Bug.d.ts
-declare const Bug: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Building2.d.ts
-declare const Building2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Building.d.ts
-declare const Building: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/BusFront.d.ts
-declare const BusFront: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Bus.d.ts
-declare const Bus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CableCar.d.ts
-declare const CableCar: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Cable.d.ts
-declare const Cable: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CakeSlice.d.ts
-declare const CakeSlice: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Cake.d.ts
-declare const Cake: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Calculator.d.ts
-declare const Calculator: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Calendar1.d.ts
-declare const Calendar1: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CalendarArrowDown.d.ts
-declare const CalendarArrowDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CalendarArrowUp.d.ts
-declare const CalendarArrowUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CalendarCheck2.d.ts
-declare const CalendarCheck2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CalendarCheck.d.ts
-declare const CalendarCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CalendarClock.d.ts
-declare const CalendarClock: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CalendarCog.d.ts
-declare const CalendarCog: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CalendarDays.d.ts
-declare const CalendarDays: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CalendarFold.d.ts
-declare const CalendarFold: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CalendarHeart.d.ts
-declare const CalendarHeart: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CalendarMinus2.d.ts
-declare const CalendarMinus2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CalendarMinus.d.ts
-declare const CalendarMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CalendarOff.d.ts
-declare const CalendarOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CalendarPlus2.d.ts
-declare const CalendarPlus2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CalendarPlus.d.ts
-declare const CalendarPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CalendarRange.d.ts
-declare const CalendarRange: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CalendarSearch.d.ts
-declare const CalendarSearch: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CalendarSync.d.ts
-declare const CalendarSync: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CalendarX2.d.ts
-declare const CalendarX2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CalendarX.d.ts
-declare const CalendarX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Calendar.d.ts
-declare const Calendar: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Calendars.d.ts
-declare const Calendars: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CameraOff.d.ts
-declare const CameraOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Camera.d.ts
-declare const Camera: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CandyCane.d.ts
-declare const CandyCane: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CandyOff.d.ts
-declare const CandyOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Candy.d.ts
-declare const Candy: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CannabisOff.d.ts
-declare const CannabisOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Cannabis.d.ts
-declare const Cannabis: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CaptionsOff.d.ts
-declare const CaptionsOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Captions.d.ts
-declare const Captions: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CarFront.d.ts
-declare const CarFront: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CarTaxiFront.d.ts
-declare const CarTaxiFront: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Car.d.ts
-declare const Car: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Caravan.d.ts
-declare const Caravan: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CardSim.d.ts
-declare const CardSim: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Carrot.d.ts
-declare const Carrot: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CaseLower.d.ts
-declare const CaseLower: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CaseSensitive.d.ts
-declare const CaseSensitive: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CaseUpper.d.ts
-declare const CaseUpper: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CassetteTape.d.ts
-declare const CassetteTape: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Cast.d.ts
-declare const Cast: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Castle.d.ts
-declare const Castle: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Cat.d.ts
-declare const Cat: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CctvOff.d.ts
-declare const CctvOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Cctv.d.ts
-declare const Cctv: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChartArea.d.ts
-declare const ChartArea: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChartBarBig.d.ts
-declare const ChartBarBig: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChartBarDecreasing.d.ts
-declare const ChartBarDecreasing: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChartBarIncreasing.d.ts
-declare const ChartBarIncreasing: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChartBarStacked.d.ts
-declare const ChartBarStacked: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChartBar.d.ts
-declare const ChartBar: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChartCandlestick.d.ts
-declare const ChartCandlestick: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChartColumnBig.d.ts
-declare const ChartColumnBig: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChartColumnDecreasing.d.ts
-declare const ChartColumnDecreasing: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChartColumnIncreasing.d.ts
-declare const ChartColumnIncreasing: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChartColumnStacked.d.ts
-declare const ChartColumnStacked: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChartColumn.d.ts
-declare const ChartColumn: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChartGantt.d.ts
-declare const ChartGantt: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChartLine.d.ts
-declare const ChartLine: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChartNetwork.d.ts
-declare const ChartNetwork: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChartNoAxesColumnDecreasing.d.ts
-declare const ChartNoAxesColumnDecreasing: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChartNoAxesColumnIncreasing.d.ts
-declare const ChartNoAxesColumnIncreasing: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChartNoAxesColumn.d.ts
-declare const ChartNoAxesColumn: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChartNoAxesCombined.d.ts
-declare const ChartNoAxesCombined: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChartNoAxesGantt.d.ts
-declare const ChartNoAxesGantt: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChartPie.d.ts
-declare const ChartPie: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChartScatter.d.ts
-declare const ChartScatter: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChartSpline.d.ts
-declare const ChartSpline: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CheckCheck.d.ts
-declare const CheckCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CheckLine.d.ts
-declare const CheckLine: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Check.d.ts
-declare const Check: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChefHat.d.ts
-declare const ChefHat: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Cherry.d.ts
-declare const Cherry: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChessBishop.d.ts
-declare const ChessBishop: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChessKing.d.ts
-declare const ChessKing: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChessKnight.d.ts
-declare const ChessKnight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChessPawn.d.ts
-declare const ChessPawn: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChessQueen.d.ts
-declare const ChessQueen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChessRook.d.ts
-declare const ChessRook: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChevronDown.d.ts
-declare const ChevronDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChevronFirst.d.ts
-declare const ChevronFirst: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChevronLast.d.ts
-declare const ChevronLast: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChevronLeft.d.ts
-declare const ChevronLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChevronRight.d.ts
-declare const ChevronRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChevronUp.d.ts
-declare const ChevronUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChevronsDownUp.d.ts
-declare const ChevronsDownUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChevronsDown.d.ts
-declare const ChevronsDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChevronsLeftRightEllipsis.d.ts
-declare const ChevronsLeftRightEllipsis: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChevronsLeftRight.d.ts
-declare const ChevronsLeftRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChevronsLeft.d.ts
-declare const ChevronsLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChevronsRightLeft.d.ts
-declare const ChevronsRightLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChevronsRight.d.ts
-declare const ChevronsRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChevronsUpDown.d.ts
-declare const ChevronsUpDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ChevronsUp.d.ts
-declare const ChevronsUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Church.d.ts
-declare const Church: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CigaretteOff.d.ts
-declare const CigaretteOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Cigarette.d.ts
-declare const Cigarette: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleAlert.d.ts
-declare const CircleAlert: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleArrowDown.d.ts
-declare const CircleArrowDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleArrowLeft.d.ts
-declare const CircleArrowLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleArrowOutDownLeft.d.ts
-declare const CircleArrowOutDownLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleArrowOutDownRight.d.ts
-declare const CircleArrowOutDownRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleArrowOutUpLeft.d.ts
-declare const CircleArrowOutUpLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleArrowOutUpRight.d.ts
-declare const CircleArrowOutUpRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleArrowRight.d.ts
-declare const CircleArrowRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleArrowUp.d.ts
-declare const CircleArrowUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleCheckBig.d.ts
-declare const CircleCheckBig: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleCheck.d.ts
-declare const CircleCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleChevronDown.d.ts
-declare const CircleChevronDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleChevronLeft.d.ts
-declare const CircleChevronLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleChevronRight.d.ts
-declare const CircleChevronRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleChevronUp.d.ts
-declare const CircleChevronUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleDashed.d.ts
-declare const CircleDashed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleDivide.d.ts
-declare const CircleDivide: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleDollarSign.d.ts
-declare const CircleDollarSign: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleDotDashed.d.ts
-declare const CircleDotDashed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleDot.d.ts
-declare const CircleDot: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleEllipsis.d.ts
-declare const CircleEllipsis: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleEqual.d.ts
-declare const CircleEqual: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleFadingArrowUp.d.ts
-declare const CircleFadingArrowUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleFadingPlus.d.ts
-declare const CircleFadingPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleGauge.d.ts
-declare const CircleGauge: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleMinus.d.ts
-declare const CircleMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleOff.d.ts
-declare const CircleOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleParkingOff.d.ts
-declare const CircleParkingOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleParking.d.ts
-declare const CircleParking: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CirclePause.d.ts
-declare const CirclePause: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CirclePercent.d.ts
-declare const CirclePercent: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CirclePile.d.ts
-declare const CirclePile: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CirclePlay.d.ts
-declare const CirclePlay: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CirclePlus.d.ts
-declare const CirclePlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CirclePoundSterling.d.ts
-declare const CirclePoundSterling: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CirclePower.d.ts
-declare const CirclePower: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleQuestionMark.d.ts
-declare const CircleQuestionMark: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleSlash2.d.ts
-declare const CircleSlash2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleSlash.d.ts
-declare const CircleSlash: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleSmall.d.ts
-declare const CircleSmall: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleStar.d.ts
-declare const CircleStar: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleStop.d.ts
-declare const CircleStop: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleUserRound.d.ts
-declare const CircleUserRound: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleUser.d.ts
-declare const CircleUser: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircleX.d.ts
-declare const CircleX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Circle.d.ts
-declare const Circle: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CircuitBoard.d.ts
-declare const CircuitBoard: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Citrus.d.ts
-declare const Citrus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Clapperboard.d.ts
-declare const Clapperboard: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ClipboardCheck.d.ts
-declare const ClipboardCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ClipboardClock.d.ts
-declare const ClipboardClock: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ClipboardCopy.d.ts
-declare const ClipboardCopy: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ClipboardList.d.ts
-declare const ClipboardList: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ClipboardMinus.d.ts
-declare const ClipboardMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ClipboardPaste.d.ts
-declare const ClipboardPaste: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ClipboardPenLine.d.ts
-declare const ClipboardPenLine: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ClipboardPen.d.ts
-declare const ClipboardPen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ClipboardPlus.d.ts
-declare const ClipboardPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ClipboardType.d.ts
-declare const ClipboardType: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ClipboardX.d.ts
-declare const ClipboardX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Clipboard.d.ts
-declare const Clipboard: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Clock1.d.ts
-declare const Clock1: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Clock10.d.ts
-declare const Clock10: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Clock11.d.ts
-declare const Clock11: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Clock12.d.ts
-declare const Clock12: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Clock2.d.ts
-declare const Clock2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Clock3.d.ts
-declare const Clock3: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Clock4.d.ts
-declare const Clock4: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Clock5.d.ts
-declare const Clock5: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Clock6.d.ts
-declare const Clock6: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Clock7.d.ts
-declare const Clock7: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Clock8.d.ts
-declare const Clock8: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Clock9.d.ts
-declare const Clock9: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ClockAlert.d.ts
-declare const ClockAlert: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ClockArrowDown.d.ts
-declare const ClockArrowDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ClockArrowUp.d.ts
-declare const ClockArrowUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ClockCheck.d.ts
-declare const ClockCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ClockFading.d.ts
-declare const ClockFading: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ClockPlus.d.ts
-declare const ClockPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Clock.d.ts
-declare const Clock: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ClosedCaption.d.ts
-declare const ClosedCaption: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CloudAlert.d.ts
-declare const CloudAlert: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CloudBackup.d.ts
-declare const CloudBackup: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CloudCheck.d.ts
-declare const CloudCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CloudCog.d.ts
-declare const CloudCog: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CloudDownload.d.ts
-declare const CloudDownload: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CloudDrizzle.d.ts
-declare const CloudDrizzle: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CloudFog.d.ts
-declare const CloudFog: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CloudHail.d.ts
-declare const CloudHail: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CloudLightning.d.ts
-declare const CloudLightning: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CloudMoonRain.d.ts
-declare const CloudMoonRain: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CloudMoon.d.ts
-declare const CloudMoon: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CloudOff.d.ts
-declare const CloudOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CloudRainWind.d.ts
-declare const CloudRainWind: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CloudRain.d.ts
-declare const CloudRain: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CloudSnow.d.ts
-declare const CloudSnow: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CloudSunRain.d.ts
-declare const CloudSunRain: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CloudSun.d.ts
-declare const CloudSun: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CloudSync.d.ts
-declare const CloudSync: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CloudUpload.d.ts
-declare const CloudUpload: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Cloud.d.ts
-declare const Cloud: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Cloudy.d.ts
-declare const Cloudy: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Clover.d.ts
-declare const Clover: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Club.d.ts
-declare const Club: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CodeXml.d.ts
-declare const CodeXml: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Code.d.ts
-declare const Code: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Coffee.d.ts
-declare const Coffee: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Cog.d.ts
-declare const Cog: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Coins.d.ts
-declare const Coins: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Columns2.d.ts
-declare const Columns2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Columns3Cog.d.ts
-declare const Columns3Cog: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Columns3.d.ts
-declare const Columns3: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Columns4.d.ts
-declare const Columns4: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Combine.d.ts
-declare const Combine: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Command.d.ts
-declare const Command: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Compass.d.ts
-declare const Compass: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Component.d.ts
-declare const Component: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Computer.d.ts
-declare const Computer: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ConciergeBell.d.ts
-declare const ConciergeBell: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Cone.d.ts
-declare const Cone: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Construction.d.ts
-declare const Construction: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ContactRound.d.ts
-declare const ContactRound: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Contact.d.ts
-declare const Contact: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Container.d.ts
-declare const Container: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Contrast.d.ts
-declare const Contrast: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Cookie.d.ts
-declare const Cookie: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CookingPot.d.ts
-declare const CookingPot: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CopyCheck.d.ts
-declare const CopyCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CopyMinus.d.ts
-declare const CopyMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CopyPlus.d.ts
-declare const CopyPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CopySlash.d.ts
-declare const CopySlash: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CopyX.d.ts
-declare const CopyX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Copy.d.ts
-declare const Copy: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Copyleft.d.ts
-declare const Copyleft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Copyright.d.ts
-declare const Copyright: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CornerDownLeft.d.ts
-declare const CornerDownLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CornerDownRight.d.ts
-declare const CornerDownRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CornerLeftDown.d.ts
-declare const CornerLeftDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CornerLeftUp.d.ts
-declare const CornerLeftUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CornerRightDown.d.ts
-declare const CornerRightDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CornerRightUp.d.ts
-declare const CornerRightUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CornerUpLeft.d.ts
-declare const CornerUpLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CornerUpRight.d.ts
-declare const CornerUpRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Cpu.d.ts
-declare const Cpu: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CreativeCommons.d.ts
-declare const CreativeCommons: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CreditCard.d.ts
-declare const CreditCard: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Croissant.d.ts
-declare const Croissant: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Crop.d.ts
-declare const Crop: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Cross.d.ts
-declare const Cross: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Crosshair.d.ts
-declare const Crosshair: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Crown.d.ts
-declare const Crown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Cuboid.d.ts
-declare const Cuboid: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/CupSoda.d.ts
-declare const CupSoda: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Currency.d.ts
-declare const Currency: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Cylinder.d.ts
-declare const Cylinder: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Dam.d.ts
-declare const Dam: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/DatabaseBackup.d.ts
-declare const DatabaseBackup: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/DatabaseSearch.d.ts
-declare const DatabaseSearch: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/DatabaseZap.d.ts
-declare const DatabaseZap: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Database.d.ts
-declare const Database: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/DecimalsArrowLeft.d.ts
-declare const DecimalsArrowLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/DecimalsArrowRight.d.ts
-declare const DecimalsArrowRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Delete.d.ts
-declare const Delete: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Dessert.d.ts
-declare const Dessert: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Diameter.d.ts
-declare const Diameter: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/DiamondMinus.d.ts
-declare const DiamondMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/DiamondPercent.d.ts
-declare const DiamondPercent: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/DiamondPlus.d.ts
-declare const DiamondPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Diamond.d.ts
-declare const Diamond: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Dice1.d.ts
-declare const Dice1: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Dice2.d.ts
-declare const Dice2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Dice3.d.ts
-declare const Dice3: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Dice4.d.ts
-declare const Dice4: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Dice5.d.ts
-declare const Dice5: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Dice6.d.ts
-declare const Dice6: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Dices.d.ts
-declare const Dices: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Diff.d.ts
-declare const Diff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Disc2.d.ts
-declare const Disc2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Disc3.d.ts
-declare const Disc3: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/DiscAlbum.d.ts
-declare const DiscAlbum: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Disc.d.ts
-declare const Disc: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Divide.d.ts
-declare const Divide: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/DnaOff.d.ts
-declare const DnaOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Dna.d.ts
-declare const Dna: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Dock.d.ts
-declare const Dock: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Dog.d.ts
-declare const Dog: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/DollarSign.d.ts
-declare const DollarSign: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Donut.d.ts
-declare const Donut: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/DoorClosedLocked.d.ts
-declare const DoorClosedLocked: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/DoorClosed.d.ts
-declare const DoorClosed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/DoorOpen.d.ts
-declare const DoorOpen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Dot.d.ts
-declare const Dot: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Download.d.ts
-declare const Download: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/DraftingCompass.d.ts
-declare const DraftingCompass: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Drama.d.ts
-declare const Drama: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Drill.d.ts
-declare const Drill: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Drone.d.ts
-declare const Drone: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/DropletOff.d.ts
-declare const DropletOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Droplet.d.ts
-declare const Droplet: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Droplets.d.ts
-declare const Droplets: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Drum.d.ts
-declare const Drum: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Drumstick.d.ts
-declare const Drumstick: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Dumbbell.d.ts
-declare const Dumbbell: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/EarOff.d.ts
-declare const EarOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Ear.d.ts
-declare const Ear: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/EarthLock.d.ts
-declare const EarthLock: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Earth.d.ts
-declare const Earth: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Eclipse.d.ts
-declare const Eclipse: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/EggFried.d.ts
-declare const EggFried: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/EggOff.d.ts
-declare const EggOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Egg.d.ts
-declare const Egg: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Ellipse.d.ts
-declare const Ellipse: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/EllipsisVertical.d.ts
-declare const EllipsisVertical: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Ellipsis.d.ts
-declare const Ellipsis: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/EqualApproximately.d.ts
-declare const EqualApproximately: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/EqualNot.d.ts
-declare const EqualNot: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Equal.d.ts
-declare const Equal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Eraser.d.ts
-declare const Eraser: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/EthernetPort.d.ts
-declare const EthernetPort: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Euro.d.ts
-declare const Euro: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/EvCharger.d.ts
-declare const EvCharger: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Expand.d.ts
-declare const Expand: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ExternalLink.d.ts
-declare const ExternalLink: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/EyeClosed.d.ts
-declare const EyeClosed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/EyeOff.d.ts
-declare const EyeOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Eye.d.ts
-declare const Eye: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Factory.d.ts
-declare const Factory: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Fan.d.ts
-declare const Fan: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FastForward.d.ts
-declare const FastForward: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Feather.d.ts
-declare const Feather: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Fence.d.ts
-declare const Fence: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FerrisWheel.d.ts
-declare const FerrisWheel: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileArchive.d.ts
-declare const FileArchive: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileAxis3d.d.ts
-declare const FileAxis3d: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileBadge.d.ts
-declare const FileBadge: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileBox.d.ts
-declare const FileBox: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileBracesCorner.d.ts
-declare const FileBracesCorner: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileBraces.d.ts
-declare const FileBraces: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileChartColumnIncreasing.d.ts
-declare const FileChartColumnIncreasing: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileChartColumn.d.ts
-declare const FileChartColumn: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileChartLine.d.ts
-declare const FileChartLine: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileChartPie.d.ts
-declare const FileChartPie: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileCheckCorner.d.ts
-declare const FileCheckCorner: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileCheck.d.ts
-declare const FileCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileClock.d.ts
-declare const FileClock: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileCodeCorner.d.ts
-declare const FileCodeCorner: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileCode.d.ts
-declare const FileCode: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileCog.d.ts
-declare const FileCog: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileDiff.d.ts
-declare const FileDiff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileDigit.d.ts
-declare const FileDigit: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileDown.d.ts
-declare const FileDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileExclamationPoint.d.ts
-declare const FileExclamationPoint: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileHeadphone.d.ts
-declare const FileHeadphone: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileHeart.d.ts
-declare const FileHeart: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileImage.d.ts
-declare const FileImage: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileInput.d.ts
-declare const FileInput: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileKey.d.ts
-declare const FileKey: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileLock.d.ts
-declare const FileLock: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileMinusCorner.d.ts
-declare const FileMinusCorner: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileMinus.d.ts
-declare const FileMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileMusic.d.ts
-declare const FileMusic: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileOutput.d.ts
-declare const FileOutput: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FilePenLine.d.ts
-declare const FilePenLine: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FilePen.d.ts
-declare const FilePen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FilePlay.d.ts
-declare const FilePlay: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FilePlusCorner.d.ts
-declare const FilePlusCorner: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FilePlus.d.ts
-declare const FilePlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileQuestionMark.d.ts
-declare const FileQuestionMark: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileScan.d.ts
-declare const FileScan: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileSearchCorner.d.ts
-declare const FileSearchCorner: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileSearch.d.ts
-declare const FileSearch: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileSignal.d.ts
-declare const FileSignal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileSliders.d.ts
-declare const FileSliders: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileSpreadsheet.d.ts
-declare const FileSpreadsheet: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileStack.d.ts
-declare const FileStack: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileSymlink.d.ts
-declare const FileSymlink: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileTerminal.d.ts
-declare const FileTerminal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileText.d.ts
-declare const FileText: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileTypeCorner.d.ts
-declare const FileTypeCorner: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileType.d.ts
-declare const FileType: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileUp.d.ts
-declare const FileUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileUser.d.ts
-declare const FileUser: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileVideoCamera.d.ts
-declare const FileVideoCamera: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileVolume.d.ts
-declare const FileVolume: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileXCorner.d.ts
-declare const FileXCorner: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FileX.d.ts
-declare const FileX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/File.d.ts
-declare const File: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Files.d.ts
-declare const Files: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Film.d.ts
-declare const Film: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FingerprintPattern.d.ts
-declare const FingerprintPattern: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FireExtinguisher.d.ts
-declare const FireExtinguisher: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FishOff.d.ts
-declare const FishOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FishSymbol.d.ts
-declare const FishSymbol: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Fish.d.ts
-declare const Fish: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FishingHook.d.ts
-declare const FishingHook: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FishingRod.d.ts
-declare const FishingRod: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FlagOff.d.ts
-declare const FlagOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FlagTriangleLeft.d.ts
-declare const FlagTriangleLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FlagTriangleRight.d.ts
-declare const FlagTriangleRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Flag.d.ts
-declare const Flag: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FlameKindling.d.ts
-declare const FlameKindling: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Flame.d.ts
-declare const Flame: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FlashlightOff.d.ts
-declare const FlashlightOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Flashlight.d.ts
-declare const Flashlight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FlaskConicalOff.d.ts
-declare const FlaskConicalOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FlaskConical.d.ts
-declare const FlaskConical: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FlaskRound.d.ts
-declare const FlaskRound: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FlipHorizontal2.d.ts
-declare const FlipHorizontal2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FlipVertical2.d.ts
-declare const FlipVertical2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Flower2.d.ts
-declare const Flower2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Flower.d.ts
-declare const Flower: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Focus.d.ts
-declare const Focus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FoldHorizontal.d.ts
-declare const FoldHorizontal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FoldVertical.d.ts
-declare const FoldVertical: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderArchive.d.ts
-declare const FolderArchive: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderCheck.d.ts
-declare const FolderCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderClock.d.ts
-declare const FolderClock: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderClosed.d.ts
-declare const FolderClosed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderCode.d.ts
-declare const FolderCode: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderCog.d.ts
-declare const FolderCog: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderDot.d.ts
-declare const FolderDot: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderDown.d.ts
-declare const FolderDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderGit2.d.ts
-declare const FolderGit2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderGit.d.ts
-declare const FolderGit: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderHeart.d.ts
-declare const FolderHeart: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderInput.d.ts
-declare const FolderInput: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderKanban.d.ts
-declare const FolderKanban: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderKey.d.ts
-declare const FolderKey: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderLock.d.ts
-declare const FolderLock: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderMinus.d.ts
-declare const FolderMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderOpenDot.d.ts
-declare const FolderOpenDot: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderOpen.d.ts
-declare const FolderOpen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderOutput.d.ts
-declare const FolderOutput: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderPen.d.ts
-declare const FolderPen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderPlus.d.ts
-declare const FolderPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderRoot.d.ts
-declare const FolderRoot: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderSearch2.d.ts
-declare const FolderSearch2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderSearch.d.ts
-declare const FolderSearch: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderSymlink.d.ts
-declare const FolderSymlink: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderSync.d.ts
-declare const FolderSync: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderTree.d.ts
-declare const FolderTree: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderUp.d.ts
-declare const FolderUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FolderX.d.ts
-declare const FolderX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Folder.d.ts
-declare const Folder: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Folders.d.ts
-declare const Folders: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Footprints.d.ts
-declare const Footprints: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Forklift.d.ts
-declare const Forklift: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Form.d.ts
-declare const Form: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Forward.d.ts
-declare const Forward: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Frame.d.ts
-declare const Frame: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Frown.d.ts
-declare const Frown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Fuel.d.ts
-declare const Fuel: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Fullscreen.d.ts
-declare const Fullscreen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FunnelPlus.d.ts
-declare const FunnelPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/FunnelX.d.ts
-declare const FunnelX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Funnel.d.ts
-declare const Funnel: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GalleryHorizontalEnd.d.ts
-declare const GalleryHorizontalEnd: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GalleryHorizontal.d.ts
-declare const GalleryHorizontal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GalleryThumbnails.d.ts
-declare const GalleryThumbnails: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GalleryVerticalEnd.d.ts
-declare const GalleryVerticalEnd: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GalleryVertical.d.ts
-declare const GalleryVertical: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Gamepad2.d.ts
-declare const Gamepad2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GamepadDirectional.d.ts
-declare const GamepadDirectional: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Gamepad.d.ts
-declare const Gamepad: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Gauge.d.ts
-declare const Gauge: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Gavel.d.ts
-declare const Gavel: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Gem.d.ts
-declare const Gem: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GeorgianLari.d.ts
-declare const GeorgianLari: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Ghost.d.ts
-declare const Ghost: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Gift.d.ts
-declare const Gift: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GitBranchMinus.d.ts
-declare const GitBranchMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GitBranchPlus.d.ts
-declare const GitBranchPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GitBranch.d.ts
-declare const GitBranch: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GitCommitHorizontal.d.ts
-declare const GitCommitHorizontal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GitCommitVertical.d.ts
-declare const GitCommitVertical: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GitCompareArrows.d.ts
-declare const GitCompareArrows: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GitCompare.d.ts
-declare const GitCompare: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GitFork.d.ts
-declare const GitFork: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GitGraph.d.ts
-declare const GitGraph: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GitMergeConflict.d.ts
-declare const GitMergeConflict: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GitMerge.d.ts
-declare const GitMerge: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GitPullRequestArrow.d.ts
-declare const GitPullRequestArrow: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GitPullRequestClosed.d.ts
-declare const GitPullRequestClosed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GitPullRequestCreateArrow.d.ts
-declare const GitPullRequestCreateArrow: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GitPullRequestCreate.d.ts
-declare const GitPullRequestCreate: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GitPullRequestDraft.d.ts
-declare const GitPullRequestDraft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GitPullRequest.d.ts
-declare const GitPullRequest: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GlassWater.d.ts
-declare const GlassWater: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Glasses.d.ts
-declare const Glasses: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GlobeLock.d.ts
-declare const GlobeLock: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GlobeOff.d.ts
-declare const GlobeOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GlobeX.d.ts
-declare const GlobeX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Globe.d.ts
-declare const Globe: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Goal.d.ts
-declare const Goal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Gpu.d.ts
-declare const Gpu: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GraduationCap.d.ts
-declare const GraduationCap: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Grape.d.ts
-declare const Grape: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Grid2x2Check.d.ts
-declare const Grid2x2Check: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Grid2x2Plus.d.ts
-declare const Grid2x2Plus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Grid2x2X.d.ts
-declare const Grid2x2X: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Grid2x2.d.ts
-declare const Grid2x2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Grid3x2.d.ts
-declare const Grid3x2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Grid3x3.d.ts
-declare const Grid3x3: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GripHorizontal.d.ts
-declare const GripHorizontal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/GripVertical.d.ts
-declare const GripVertical: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Grip.d.ts
-declare const Grip: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Group.d.ts
-declare const Group: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Guitar.d.ts
-declare const Guitar: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Ham.d.ts
-declare const Ham: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Hamburger.d.ts
-declare const Hamburger: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Hammer.d.ts
-declare const Hammer: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/HandCoins.d.ts
-declare const HandCoins: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/HandFist.d.ts
-declare const HandFist: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/HandGrab.d.ts
-declare const HandGrab: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/HandHeart.d.ts
-declare const HandHeart: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/HandHelping.d.ts
-declare const HandHelping: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/HandMetal.d.ts
-declare const HandMetal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/HandPlatter.d.ts
-declare const HandPlatter: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Hand.d.ts
-declare const Hand: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Handbag.d.ts
-declare const Handbag: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Handshake.d.ts
-declare const Handshake: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/HardDriveDownload.d.ts
-declare const HardDriveDownload: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/HardDriveUpload.d.ts
-declare const HardDriveUpload: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/HardDrive.d.ts
-declare const HardDrive: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/HardHat.d.ts
-declare const HardHat: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Hash.d.ts
-declare const Hash: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/HatGlasses.d.ts
-declare const HatGlasses: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Haze.d.ts
-declare const Haze: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Hd.d.ts
-declare const Hd: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/HdmiPort.d.ts
-declare const HdmiPort: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Heading1.d.ts
-declare const Heading1: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Heading2.d.ts
-declare const Heading2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Heading3.d.ts
-declare const Heading3: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Heading4.d.ts
-declare const Heading4: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Heading5.d.ts
-declare const Heading5: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Heading6.d.ts
-declare const Heading6: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Heading.d.ts
-declare const Heading: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/HeadphoneOff.d.ts
-declare const HeadphoneOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Headphones.d.ts
-declare const Headphones: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Headset.d.ts
-declare const Headset: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/HeartCrack.d.ts
-declare const HeartCrack: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/HeartHandshake.d.ts
-declare const HeartHandshake: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/HeartMinus.d.ts
-declare const HeartMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/HeartOff.d.ts
-declare const HeartOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/HeartPlus.d.ts
-declare const HeartPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/HeartPulse.d.ts
-declare const HeartPulse: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Heart.d.ts
-declare const Heart: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Heater.d.ts
-declare const Heater: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Helicopter.d.ts
-declare const Helicopter: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Hexagon.d.ts
-declare const Hexagon: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Highlighter.d.ts
-declare const Highlighter: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/History.d.ts
-declare const History: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/HopOff.d.ts
-declare const HopOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Hop.d.ts
-declare const Hop: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Hospital.d.ts
-declare const Hospital: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Hotel.d.ts
-declare const Hotel: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Hourglass.d.ts
-declare const Hourglass: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/HouseHeart.d.ts
-declare const HouseHeart: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/HousePlug.d.ts
-declare const HousePlug: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/HousePlus.d.ts
-declare const HousePlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/HouseWifi.d.ts
-declare const HouseWifi: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/House.d.ts
-declare const House: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/IceCreamBowl.d.ts
-declare const IceCreamBowl: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/IceCreamCone.d.ts
-declare const IceCreamCone: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/IdCardLanyard.d.ts
-declare const IdCardLanyard: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/IdCard.d.ts
-declare const IdCard: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ImageDown.d.ts
-declare const ImageDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ImageMinus.d.ts
-declare const ImageMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ImageOff.d.ts
-declare const ImageOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ImagePlay.d.ts
-declare const ImagePlay: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ImagePlus.d.ts
-declare const ImagePlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ImageUp.d.ts
-declare const ImageUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ImageUpscale.d.ts
-declare const ImageUpscale: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Image.d.ts
-declare const Image: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Images.d.ts
-declare const Images: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Import.d.ts
-declare const Import: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Inbox.d.ts
-declare const Inbox: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/IndianRupee.d.ts
-declare const IndianRupee: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/InfinityIcon.d.ts
-declare const InfinityIcon: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Info.d.ts
-declare const Info: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/InspectionPanel.d.ts
-declare const InspectionPanel: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Italic.d.ts
-declare const Italic: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/IterationCcw.d.ts
-declare const IterationCcw: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/IterationCw.d.ts
-declare const IterationCw: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/JapaneseYen.d.ts
-declare const JapaneseYen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Joystick.d.ts
-declare const Joystick: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Kanban.d.ts
-declare const Kanban: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Kayak.d.ts
-declare const Kayak: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/KeyRound.d.ts
-declare const KeyRound: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/KeySquare.d.ts
-declare const KeySquare: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Key.d.ts
-declare const Key: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/KeyboardMusic.d.ts
-declare const KeyboardMusic: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/KeyboardOff.d.ts
-declare const KeyboardOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Keyboard.d.ts
-declare const Keyboard: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LampCeiling.d.ts
-declare const LampCeiling: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LampDesk.d.ts
-declare const LampDesk: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LampFloor.d.ts
-declare const LampFloor: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LampWallDown.d.ts
-declare const LampWallDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LampWallUp.d.ts
-declare const LampWallUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Lamp.d.ts
-declare const Lamp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LandPlot.d.ts
-declare const LandPlot: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Landmark.d.ts
-declare const Landmark: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Languages.d.ts
-declare const Languages: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LaptopMinimalCheck.d.ts
-declare const LaptopMinimalCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LaptopMinimal.d.ts
-declare const LaptopMinimal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Laptop.d.ts
-declare const Laptop: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LassoSelect.d.ts
-declare const LassoSelect: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Lasso.d.ts
-declare const Lasso: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Laugh.d.ts
-declare const Laugh: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Layers2.d.ts
-declare const Layers2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LayersPlus.d.ts
-declare const LayersPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Layers.d.ts
-declare const Layers: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LayoutDashboard.d.ts
-declare const LayoutDashboard: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LayoutGrid.d.ts
-declare const LayoutGrid: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LayoutList.d.ts
-declare const LayoutList: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LayoutPanelLeft.d.ts
-declare const LayoutPanelLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LayoutPanelTop.d.ts
-declare const LayoutPanelTop: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LayoutTemplate.d.ts
-declare const LayoutTemplate: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Leaf.d.ts
-declare const Leaf: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LeafyGreen.d.ts
-declare const LeafyGreen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Lectern.d.ts
-declare const Lectern: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LensConcave.d.ts
-declare const LensConcave: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LensConvex.d.ts
-declare const LensConvex: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LibraryBig.d.ts
-declare const LibraryBig: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Library.d.ts
-declare const Library: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LifeBuoy.d.ts
-declare const LifeBuoy: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Ligature.d.ts
-declare const Ligature: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LightbulbOff.d.ts
-declare const LightbulbOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Lightbulb.d.ts
-declare const Lightbulb: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LineDotRightHorizontal.d.ts
-declare const LineDotRightHorizontal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LineSquiggle.d.ts
-declare const LineSquiggle: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LineStyle.d.ts
-declare const LineStyle: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Link2Off.d.ts
-declare const Link2Off: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Link2.d.ts
-declare const Link2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Link.d.ts
-declare const Link: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ListCheck.d.ts
-declare const ListCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ListChecks.d.ts
-declare const ListChecks: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ListChevronsDownUp.d.ts
-declare const ListChevronsDownUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ListChevronsUpDown.d.ts
-declare const ListChevronsUpDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ListCollapse.d.ts
-declare const ListCollapse: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ListEnd.d.ts
-declare const ListEnd: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ListFilterPlus.d.ts
-declare const ListFilterPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ListFilter.d.ts
-declare const ListFilter: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ListIndentDecrease.d.ts
-declare const ListIndentDecrease: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ListIndentIncrease.d.ts
-declare const ListIndentIncrease: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ListMinus.d.ts
-declare const ListMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ListMusic.d.ts
-declare const ListMusic: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ListOrdered.d.ts
-declare const ListOrdered: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ListPlus.d.ts
-declare const ListPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ListRestart.d.ts
-declare const ListRestart: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ListStart.d.ts
-declare const ListStart: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ListTodo.d.ts
-declare const ListTodo: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ListTree.d.ts
-declare const ListTree: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ListVideo.d.ts
-declare const ListVideo: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ListX.d.ts
-declare const ListX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/List.d.ts
-declare const List: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LoaderCircle.d.ts
-declare const LoaderCircle: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LoaderPinwheel.d.ts
-declare const LoaderPinwheel: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Loader.d.ts
-declare const Loader: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LocateFixed.d.ts
-declare const LocateFixed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LocateOff.d.ts
-declare const LocateOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Locate.d.ts
-declare const Locate: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LockKeyholeOpen.d.ts
-declare const LockKeyholeOpen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LockKeyhole.d.ts
-declare const LockKeyhole: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LockOpen.d.ts
-declare const LockOpen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Lock.d.ts
-declare const Lock: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LogIn.d.ts
-declare const LogIn: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/LogOut.d.ts
-declare const LogOut: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Logs.d.ts
-declare const Logs: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Lollipop.d.ts
-declare const Lollipop: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Luggage.d.ts
-declare const Luggage: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Magnet.d.ts
-declare const Magnet: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MailCheck.d.ts
-declare const MailCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MailMinus.d.ts
-declare const MailMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MailOpen.d.ts
-declare const MailOpen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MailPlus.d.ts
-declare const MailPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MailQuestionMark.d.ts
-declare const MailQuestionMark: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MailSearch.d.ts
-declare const MailSearch: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MailWarning.d.ts
-declare const MailWarning: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MailX.d.ts
-declare const MailX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Mail.d.ts
-declare const Mail: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Mailbox.d.ts
-declare const Mailbox: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Mails.d.ts
-declare const Mails: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MapMinus.d.ts
-declare const MapMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MapPinCheckInside.d.ts
-declare const MapPinCheckInside: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MapPinCheck.d.ts
-declare const MapPinCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MapPinHouse.d.ts
-declare const MapPinHouse: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MapPinMinusInside.d.ts
-declare const MapPinMinusInside: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MapPinMinus.d.ts
-declare const MapPinMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MapPinOff.d.ts
-declare const MapPinOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MapPinPen.d.ts
-declare const MapPinPen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MapPinPlusInside.d.ts
-declare const MapPinPlusInside: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MapPinPlus.d.ts
-declare const MapPinPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MapPinSearch.d.ts
-declare const MapPinSearch: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MapPinXInside.d.ts
-declare const MapPinXInside: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MapPinX.d.ts
-declare const MapPinX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MapPin.d.ts
-declare const MapPin: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MapPinned.d.ts
-declare const MapPinned: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MapPlus.d.ts
-declare const MapPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Map.d.ts
-declare const Map: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MarsStroke.d.ts
-declare const MarsStroke: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Mars.d.ts
-declare const Mars: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Martini.d.ts
-declare const Martini: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Maximize2.d.ts
-declare const Maximize2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Maximize.d.ts
-declare const Maximize: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Medal.d.ts
-declare const Medal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MegaphoneOff.d.ts
-declare const MegaphoneOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Megaphone.d.ts
-declare const Megaphone: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Meh.d.ts
-declare const Meh: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MemoryStick.d.ts
-declare const MemoryStick: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Menu.d.ts
-declare const Menu: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Merge.d.ts
-declare const Merge: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageCircleCheck.d.ts
-declare const MessageCircleCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageCircleCode.d.ts
-declare const MessageCircleCode: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageCircleDashed.d.ts
-declare const MessageCircleDashed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageCircleHeart.d.ts
-declare const MessageCircleHeart: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageCircleMore.d.ts
-declare const MessageCircleMore: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageCircleOff.d.ts
-declare const MessageCircleOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageCirclePlus.d.ts
-declare const MessageCirclePlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageCircleQuestionMark.d.ts
-declare const MessageCircleQuestionMark: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageCircleReply.d.ts
-declare const MessageCircleReply: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageCircleWarning.d.ts
-declare const MessageCircleWarning: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageCircleX.d.ts
-declare const MessageCircleX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageCircle.d.ts
-declare const MessageCircle: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageSquareCheck.d.ts
-declare const MessageSquareCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageSquareCode.d.ts
-declare const MessageSquareCode: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageSquareDashed.d.ts
-declare const MessageSquareDashed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageSquareDiff.d.ts
-declare const MessageSquareDiff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageSquareDot.d.ts
-declare const MessageSquareDot: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageSquareHeart.d.ts
-declare const MessageSquareHeart: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageSquareLock.d.ts
-declare const MessageSquareLock: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageSquareMore.d.ts
-declare const MessageSquareMore: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageSquareOff.d.ts
-declare const MessageSquareOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageSquarePlus.d.ts
-declare const MessageSquarePlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageSquareQuote.d.ts
-declare const MessageSquareQuote: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageSquareReply.d.ts
-declare const MessageSquareReply: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageSquareShare.d.ts
-declare const MessageSquareShare: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageSquareText.d.ts
-declare const MessageSquareText: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageSquareWarning.d.ts
-declare const MessageSquareWarning: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageSquareX.d.ts
-declare const MessageSquareX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessageSquare.d.ts
-declare const MessageSquare: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MessagesSquare.d.ts
-declare const MessagesSquare: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Metronome.d.ts
-declare const Metronome: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MicOff.d.ts
-declare const MicOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MicVocal.d.ts
-declare const MicVocal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Mic.d.ts
-declare const Mic: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Microchip.d.ts
-declare const Microchip: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Microscope.d.ts
-declare const Microscope: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Microwave.d.ts
-declare const Microwave: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Milestone.d.ts
-declare const Milestone: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MilkOff.d.ts
-declare const MilkOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Milk.d.ts
-declare const Milk: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Minimize2.d.ts
-declare const Minimize2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Minimize.d.ts
-declare const Minimize: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Minus.d.ts
-declare const Minus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MirrorRectangular.d.ts
-declare const MirrorRectangular: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MirrorRound.d.ts
-declare const MirrorRound: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MonitorCheck.d.ts
-declare const MonitorCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MonitorCloud.d.ts
-declare const MonitorCloud: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MonitorCog.d.ts
-declare const MonitorCog: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MonitorDot.d.ts
-declare const MonitorDot: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MonitorDown.d.ts
-declare const MonitorDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MonitorOff.d.ts
-declare const MonitorOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MonitorPause.d.ts
-declare const MonitorPause: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MonitorPlay.d.ts
-declare const MonitorPlay: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MonitorSmartphone.d.ts
-declare const MonitorSmartphone: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MonitorSpeaker.d.ts
-declare const MonitorSpeaker: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MonitorStop.d.ts
-declare const MonitorStop: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MonitorUp.d.ts
-declare const MonitorUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MonitorX.d.ts
-declare const MonitorX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Monitor.d.ts
-declare const Monitor: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MoonStar.d.ts
-declare const MoonStar: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Moon.d.ts
-declare const Moon: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Motorbike.d.ts
-declare const Motorbike: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MountainSnow.d.ts
-declare const MountainSnow: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Mountain.d.ts
-declare const Mountain: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MouseLeft.d.ts
-declare const MouseLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MouseOff.d.ts
-declare const MouseOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MousePointer2Off.d.ts
-declare const MousePointer2Off: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MousePointer2.d.ts
-declare const MousePointer2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MousePointerBan.d.ts
-declare const MousePointerBan: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MousePointerClick.d.ts
-declare const MousePointerClick: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MousePointer.d.ts
-declare const MousePointer: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MouseRight.d.ts
-declare const MouseRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Mouse.d.ts
-declare const Mouse: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Move3d.d.ts
-declare const Move3d: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MoveDiagonal2.d.ts
-declare const MoveDiagonal2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MoveDiagonal.d.ts
-declare const MoveDiagonal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MoveDownLeft.d.ts
-declare const MoveDownLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MoveDownRight.d.ts
-declare const MoveDownRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MoveDown.d.ts
-declare const MoveDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MoveHorizontal.d.ts
-declare const MoveHorizontal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MoveLeft.d.ts
-declare const MoveLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MoveRight.d.ts
-declare const MoveRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MoveUpLeft.d.ts
-declare const MoveUpLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MoveUpRight.d.ts
-declare const MoveUpRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MoveUp.d.ts
-declare const MoveUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/MoveVertical.d.ts
-declare const MoveVertical: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Move.d.ts
-declare const Move: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Music2.d.ts
-declare const Music2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Music3.d.ts
-declare const Music3: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Music4.d.ts
-declare const Music4: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Music.d.ts
-declare const Music: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Navigation2Off.d.ts
-declare const Navigation2Off: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Navigation2.d.ts
-declare const Navigation2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/NavigationOff.d.ts
-declare const NavigationOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Navigation.d.ts
-declare const Navigation: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Network.d.ts
-declare const Network: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Newspaper.d.ts
-declare const Newspaper: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Nfc.d.ts
-declare const Nfc: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/NonBinary.d.ts
-declare const NonBinary: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/NotebookPen.d.ts
-declare const NotebookPen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/NotebookTabs.d.ts
-declare const NotebookTabs: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/NotebookText.d.ts
-declare const NotebookText: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Notebook.d.ts
-declare const Notebook: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/NotepadTextDashed.d.ts
-declare const NotepadTextDashed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/NotepadText.d.ts
-declare const NotepadText: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/NutOff.d.ts
-declare const NutOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Nut.d.ts
-declare const Nut: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/OctagonAlert.d.ts
-declare const OctagonAlert: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/OctagonMinus.d.ts
-declare const OctagonMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/OctagonPause.d.ts
-declare const OctagonPause: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/OctagonX.d.ts
-declare const OctagonX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Octagon.d.ts
-declare const Octagon: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Omega.d.ts
-declare const Omega: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Option.d.ts
-declare const Option: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Orbit.d.ts
-declare const Orbit: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Origami.d.ts
-declare const Origami: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Package2.d.ts
-declare const Package2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PackageCheck.d.ts
-declare const PackageCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PackageMinus.d.ts
-declare const PackageMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PackageOpen.d.ts
-declare const PackageOpen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PackagePlus.d.ts
-declare const PackagePlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PackageSearch.d.ts
-declare const PackageSearch: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PackageX.d.ts
-declare const PackageX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Package.d.ts
-declare const Package: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PaintBucket.d.ts
-declare const PaintBucket: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PaintRoller.d.ts
-declare const PaintRoller: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PaintbrushVertical.d.ts
-declare const PaintbrushVertical: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Paintbrush.d.ts
-declare const Paintbrush: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Palette.d.ts
-declare const Palette: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Panda.d.ts
-declare const Panda: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PanelBottomClose.d.ts
-declare const PanelBottomClose: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PanelBottomDashed.d.ts
-declare const PanelBottomDashed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PanelBottomOpen.d.ts
-declare const PanelBottomOpen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PanelBottom.d.ts
-declare const PanelBottom: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PanelLeftClose.d.ts
-declare const PanelLeftClose: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PanelLeftDashed.d.ts
-declare const PanelLeftDashed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PanelLeftOpen.d.ts
-declare const PanelLeftOpen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PanelLeftRightDashed.d.ts
-declare const PanelLeftRightDashed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PanelLeft.d.ts
-declare const PanelLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PanelRightClose.d.ts
-declare const PanelRightClose: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PanelRightDashed.d.ts
-declare const PanelRightDashed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PanelRightOpen.d.ts
-declare const PanelRightOpen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PanelRight.d.ts
-declare const PanelRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PanelTopBottomDashed.d.ts
-declare const PanelTopBottomDashed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PanelTopClose.d.ts
-declare const PanelTopClose: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PanelTopDashed.d.ts
-declare const PanelTopDashed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PanelTopOpen.d.ts
-declare const PanelTopOpen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PanelTop.d.ts
-declare const PanelTop: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PanelsLeftBottom.d.ts
-declare const PanelsLeftBottom: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PanelsRightBottom.d.ts
-declare const PanelsRightBottom: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PanelsTopLeft.d.ts
-declare const PanelsTopLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Paperclip.d.ts
-declare const Paperclip: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Parentheses.d.ts
-declare const Parentheses: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ParkingMeter.d.ts
-declare const ParkingMeter: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PartyPopper.d.ts
-declare const PartyPopper: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Pause.d.ts
-declare const Pause: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PawPrint.d.ts
-declare const PawPrint: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PcCase.d.ts
-declare const PcCase: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PenLine.d.ts
-declare const PenLine: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PenOff.d.ts
-declare const PenOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PenTool.d.ts
-declare const PenTool: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Pen.d.ts
-declare const Pen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PencilLine.d.ts
-declare const PencilLine: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PencilOff.d.ts
-declare const PencilOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PencilRuler.d.ts
-declare const PencilRuler: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Pencil.d.ts
-declare const Pencil: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Pentagon.d.ts
-declare const Pentagon: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Percent.d.ts
-declare const Percent: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PersonStanding.d.ts
-declare const PersonStanding: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PhilippinePeso.d.ts
-declare const PhilippinePeso: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PhoneCall.d.ts
-declare const PhoneCall: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PhoneForwarded.d.ts
-declare const PhoneForwarded: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PhoneIncoming.d.ts
-declare const PhoneIncoming: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PhoneMissed.d.ts
-declare const PhoneMissed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PhoneOff.d.ts
-declare const PhoneOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PhoneOutgoing.d.ts
-declare const PhoneOutgoing: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Phone.d.ts
-declare const Phone: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Pi.d.ts
-declare const Pi: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Piano.d.ts
-declare const Piano: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Pickaxe.d.ts
-declare const Pickaxe: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PictureInPicture2.d.ts
-declare const PictureInPicture2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PictureInPicture.d.ts
-declare const PictureInPicture: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PiggyBank.d.ts
-declare const PiggyBank: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PilcrowLeft.d.ts
-declare const PilcrowLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PilcrowRight.d.ts
-declare const PilcrowRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Pilcrow.d.ts
-declare const Pilcrow: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PillBottle.d.ts
-declare const PillBottle: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Pill.d.ts
-declare const Pill: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PinOff.d.ts
-declare const PinOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Pin.d.ts
-declare const Pin: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Pipette.d.ts
-declare const Pipette: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Pizza.d.ts
-declare const Pizza: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PlaneLanding.d.ts
-declare const PlaneLanding: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PlaneTakeoff.d.ts
-declare const PlaneTakeoff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Plane.d.ts
-declare const Plane: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Play.d.ts
-declare const Play: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Plug2.d.ts
-declare const Plug2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PlugZap.d.ts
-declare const PlugZap: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Plug.d.ts
-declare const Plug: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Plus.d.ts
-declare const Plus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PocketKnife.d.ts
-declare const PocketKnife: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Podcast.d.ts
-declare const Podcast: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PointerOff.d.ts
-declare const PointerOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Pointer.d.ts
-declare const Pointer: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Popcorn.d.ts
-declare const Popcorn: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Popsicle.d.ts
-declare const Popsicle: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PoundSterling.d.ts
-declare const PoundSterling: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PowerOff.d.ts
-declare const PowerOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Power.d.ts
-declare const Power: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Presentation.d.ts
-declare const Presentation: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PrinterCheck.d.ts
-declare const PrinterCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/PrinterX.d.ts
-declare const PrinterX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Printer.d.ts
-declare const Printer: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Projector.d.ts
-declare const Projector: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Proportions.d.ts
-declare const Proportions: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Puzzle.d.ts
-declare const Puzzle: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Pyramid.d.ts
-declare const Pyramid: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/QrCode.d.ts
-declare const QrCode: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Quote.d.ts
-declare const Quote: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Rabbit.d.ts
-declare const Rabbit: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Radar.d.ts
-declare const Radar: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Radiation.d.ts
-declare const Radiation: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Radical.d.ts
-declare const Radical: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/RadioOff.d.ts
-declare const RadioOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/RadioReceiver.d.ts
-declare const RadioReceiver: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/RadioTower.d.ts
-declare const RadioTower: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Radio.d.ts
-declare const Radio: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Radius.d.ts
-declare const Radius: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Rainbow.d.ts
-declare const Rainbow: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Rat.d.ts
-declare const Rat: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Ratio.d.ts
-declare const Ratio: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ReceiptCent.d.ts
-declare const ReceiptCent: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ReceiptEuro.d.ts
-declare const ReceiptEuro: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ReceiptIndianRupee.d.ts
-declare const ReceiptIndianRupee: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ReceiptJapaneseYen.d.ts
-declare const ReceiptJapaneseYen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ReceiptPoundSterling.d.ts
-declare const ReceiptPoundSterling: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ReceiptRussianRuble.d.ts
-declare const ReceiptRussianRuble: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ReceiptSwissFranc.d.ts
-declare const ReceiptSwissFranc: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ReceiptText.d.ts
-declare const ReceiptText: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ReceiptTurkishLira.d.ts
-declare const ReceiptTurkishLira: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Receipt.d.ts
-declare const Receipt: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/RectangleCircle.d.ts
-declare const RectangleCircle: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/RectangleEllipsis.d.ts
-declare const RectangleEllipsis: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/RectangleGoggles.d.ts
-declare const RectangleGoggles: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/RectangleHorizontal.d.ts
-declare const RectangleHorizontal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/RectangleVertical.d.ts
-declare const RectangleVertical: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Recycle.d.ts
-declare const Recycle: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Redo2.d.ts
-declare const Redo2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/RedoDot.d.ts
-declare const RedoDot: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Redo.d.ts
-declare const Redo: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/RefreshCcwDot.d.ts
-declare const RefreshCcwDot: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/RefreshCcw.d.ts
-declare const RefreshCcw: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/RefreshCwOff.d.ts
-declare const RefreshCwOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/RefreshCw.d.ts
-declare const RefreshCw: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Refrigerator.d.ts
-declare const Refrigerator: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Regex.d.ts
-declare const Regex: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/RemoveFormatting.d.ts
-declare const RemoveFormatting: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Repeat1.d.ts
-declare const Repeat1: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Repeat2.d.ts
-declare const Repeat2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Repeat.d.ts
-declare const Repeat: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ReplaceAll.d.ts
-declare const ReplaceAll: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Replace.d.ts
-declare const Replace: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ReplyAll.d.ts
-declare const ReplyAll: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Reply.d.ts
-declare const Reply: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Rewind.d.ts
-declare const Rewind: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Ribbon.d.ts
-declare const Ribbon: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Road.d.ts
-declare const Road: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Rocket.d.ts
-declare const Rocket: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/RockingChair.d.ts
-declare const RockingChair: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/RollerCoaster.d.ts
-declare const RollerCoaster: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Rose.d.ts
-declare const Rose: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Rotate3d.d.ts
-declare const Rotate3d: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/RotateCcwKey.d.ts
-declare const RotateCcwKey: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/RotateCcwSquare.d.ts
-declare const RotateCcwSquare: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/RotateCcw.d.ts
-declare const RotateCcw: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/RotateCwSquare.d.ts
-declare const RotateCwSquare: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/RotateCw.d.ts
-declare const RotateCw: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/RouteOff.d.ts
-declare const RouteOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Route.d.ts
-declare const Route: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Router.d.ts
-declare const Router: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Rows2.d.ts
-declare const Rows2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Rows3.d.ts
-declare const Rows3: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Rows4.d.ts
-declare const Rows4: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Rss.d.ts
-declare const Rss: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/RulerDimensionLine.d.ts
-declare const RulerDimensionLine: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Ruler.d.ts
-declare const Ruler: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/RussianRuble.d.ts
-declare const RussianRuble: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Sailboat.d.ts
-declare const Sailboat: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Salad.d.ts
-declare const Salad: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Sandwich.d.ts
-declare const Sandwich: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SatelliteDish.d.ts
-declare const SatelliteDish: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Satellite.d.ts
-declare const Satellite: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SaudiRiyal.d.ts
-declare const SaudiRiyal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SaveAll.d.ts
-declare const SaveAll: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SaveOff.d.ts
-declare const SaveOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Save.d.ts
-declare const Save: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Scale3d.d.ts
-declare const Scale3d: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Scale.d.ts
-declare const Scale: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Scaling.d.ts
-declare const Scaling: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ScanBarcode.d.ts
-declare const ScanBarcode: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ScanEye.d.ts
-declare const ScanEye: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ScanFace.d.ts
-declare const ScanFace: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ScanHeart.d.ts
-declare const ScanHeart: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ScanLine.d.ts
-declare const ScanLine: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ScanQrCode.d.ts
-declare const ScanQrCode: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ScanSearch.d.ts
-declare const ScanSearch: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ScanText.d.ts
-declare const ScanText: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Scan.d.ts
-declare const Scan: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/School.d.ts
-declare const School: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ScissorsLineDashed.d.ts
-declare const ScissorsLineDashed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Scissors.d.ts
-declare const Scissors: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Scooter.d.ts
-declare const Scooter: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ScreenShareOff.d.ts
-declare const ScreenShareOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ScreenShare.d.ts
-declare const ScreenShare: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ScrollText.d.ts
-declare const ScrollText: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Scroll.d.ts
-declare const Scroll: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SearchAlert.d.ts
-declare const SearchAlert: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SearchCheck.d.ts
-declare const SearchCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SearchCode.d.ts
-declare const SearchCode: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SearchSlash.d.ts
-declare const SearchSlash: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SearchX.d.ts
-declare const SearchX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Search.d.ts
-declare const Search: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Section.d.ts
-declare const Section: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SendHorizontal.d.ts
-declare const SendHorizontal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SendToBack.d.ts
-declare const SendToBack: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Send.d.ts
-declare const Send: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SeparatorHorizontal.d.ts
-declare const SeparatorHorizontal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SeparatorVertical.d.ts
-declare const SeparatorVertical: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ServerCog.d.ts
-declare const ServerCog: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ServerCrash.d.ts
-declare const ServerCrash: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ServerOff.d.ts
-declare const ServerOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Server.d.ts
-declare const Server: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Settings2.d.ts
-declare const Settings2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Settings.d.ts
-declare const Settings: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Shapes.d.ts
-declare const Shapes: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Share2.d.ts
-declare const Share2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Share.d.ts
-declare const Share: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Sheet.d.ts
-declare const Sheet: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Shell.d.ts
-declare const Shell: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ShelvingUnit.d.ts
-declare const ShelvingUnit: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ShieldAlert.d.ts
-declare const ShieldAlert: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ShieldBan.d.ts
-declare const ShieldBan: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ShieldCheck.d.ts
-declare const ShieldCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ShieldCogCorner.d.ts
-declare const ShieldCogCorner: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ShieldCog.d.ts
-declare const ShieldCog: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ShieldEllipsis.d.ts
-declare const ShieldEllipsis: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ShieldHalf.d.ts
-declare const ShieldHalf: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ShieldMinus.d.ts
-declare const ShieldMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ShieldOff.d.ts
-declare const ShieldOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ShieldPlus.d.ts
-declare const ShieldPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ShieldQuestionMark.d.ts
-declare const ShieldQuestionMark: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ShieldUser.d.ts
-declare const ShieldUser: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ShieldX.d.ts
-declare const ShieldX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Shield.d.ts
-declare const Shield: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ShipWheel.d.ts
-declare const ShipWheel: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Ship.d.ts
-declare const Ship: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Shirt.d.ts
-declare const Shirt: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ShoppingBag.d.ts
-declare const ShoppingBag: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ShoppingBasket.d.ts
-declare const ShoppingBasket: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ShoppingCart.d.ts
-declare const ShoppingCart: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Shovel.d.ts
-declare const Shovel: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ShowerHead.d.ts
-declare const ShowerHead: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Shredder.d.ts
-declare const Shredder: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Shrimp.d.ts
-declare const Shrimp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Shrink.d.ts
-declare const Shrink: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Shrub.d.ts
-declare const Shrub: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Shuffle.d.ts
-declare const Shuffle: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Sigma.d.ts
-declare const Sigma: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SignalHigh.d.ts
-declare const SignalHigh: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SignalLow.d.ts
-declare const SignalLow: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SignalMedium.d.ts
-declare const SignalMedium: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SignalZero.d.ts
-declare const SignalZero: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Signal.d.ts
-declare const Signal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Signature.d.ts
-declare const Signature: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SignpostBig.d.ts
-declare const SignpostBig: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Signpost.d.ts
-declare const Signpost: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Siren.d.ts
-declare const Siren: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SkipBack.d.ts
-declare const SkipBack: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SkipForward.d.ts
-declare const SkipForward: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Skull.d.ts
-declare const Skull: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Slash.d.ts
-declare const Slash: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Slice.d.ts
-declare const Slice: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SlidersHorizontal.d.ts
-declare const SlidersHorizontal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SlidersVertical.d.ts
-declare const SlidersVertical: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SmartphoneCharging.d.ts
-declare const SmartphoneCharging: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SmartphoneNfc.d.ts
-declare const SmartphoneNfc: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Smartphone.d.ts
-declare const Smartphone: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SmilePlus.d.ts
-declare const SmilePlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Smile.d.ts
-declare const Smile: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Snail.d.ts
-declare const Snail: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Snowflake.d.ts
-declare const Snowflake: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SoapDispenserDroplet.d.ts
-declare const SoapDispenserDroplet: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Sofa.d.ts
-declare const Sofa: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SolarPanel.d.ts
-declare const SolarPanel: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Soup.d.ts
-declare const Soup: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Space.d.ts
-declare const Space: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Spade.d.ts
-declare const Spade: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Sparkle.d.ts
-declare const Sparkle: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Sparkles.d.ts
-declare const Sparkles: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Speaker.d.ts
-declare const Speaker: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Speech.d.ts
-declare const Speech: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SpellCheck2.d.ts
-declare const SpellCheck2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SpellCheck.d.ts
-declare const SpellCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SplinePointer.d.ts
-declare const SplinePointer: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Spline.d.ts
-declare const Spline: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Split.d.ts
-declare const Split: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Spool.d.ts
-declare const Spool: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SportShoe.d.ts
-declare const SportShoe: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Spotlight.d.ts
-declare const Spotlight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SprayCan.d.ts
-declare const SprayCan: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Sprout.d.ts
-declare const Sprout: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareActivity.d.ts
-declare const SquareActivity: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareArrowDownLeft.d.ts
-declare const SquareArrowDownLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareArrowDownRight.d.ts
-declare const SquareArrowDownRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareArrowDown.d.ts
-declare const SquareArrowDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareArrowLeft.d.ts
-declare const SquareArrowLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareArrowOutDownLeft.d.ts
-declare const SquareArrowOutDownLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareArrowOutDownRight.d.ts
-declare const SquareArrowOutDownRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareArrowOutUpLeft.d.ts
-declare const SquareArrowOutUpLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareArrowOutUpRight.d.ts
-declare const SquareArrowOutUpRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareArrowRightEnter.d.ts
-declare const SquareArrowRightEnter: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareArrowRightExit.d.ts
-declare const SquareArrowRightExit: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareArrowRight.d.ts
-declare const SquareArrowRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareArrowUpLeft.d.ts
-declare const SquareArrowUpLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareArrowUpRight.d.ts
-declare const SquareArrowUpRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareArrowUp.d.ts
-declare const SquareArrowUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareAsterisk.d.ts
-declare const SquareAsterisk: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareBottomDashedScissors.d.ts
-declare const SquareBottomDashedScissors: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareCenterlineDashedHorizontal.d.ts
-declare const SquareCenterlineDashedHorizontal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareCenterlineDashedVertical.d.ts
-declare const SquareCenterlineDashedVertical: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareChartGantt.d.ts
-declare const SquareChartGantt: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareCheckBig.d.ts
-declare const SquareCheckBig: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareCheck.d.ts
-declare const SquareCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareChevronDown.d.ts
-declare const SquareChevronDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareChevronLeft.d.ts
-declare const SquareChevronLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareChevronRight.d.ts
-declare const SquareChevronRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareChevronUp.d.ts
-declare const SquareChevronUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareCode.d.ts
-declare const SquareCode: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareDashedBottomCode.d.ts
-declare const SquareDashedBottomCode: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareDashedBottom.d.ts
-declare const SquareDashedBottom: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareDashedKanban.d.ts
-declare const SquareDashedKanban: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareDashedMousePointer.d.ts
-declare const SquareDashedMousePointer: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareDashedTopSolid.d.ts
-declare const SquareDashedTopSolid: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareDashed.d.ts
-declare const SquareDashed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareDivide.d.ts
-declare const SquareDivide: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareDot.d.ts
-declare const SquareDot: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareEqual.d.ts
-declare const SquareEqual: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareFunction.d.ts
-declare const SquareFunction: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareKanban.d.ts
-declare const SquareKanban: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareLibrary.d.ts
-declare const SquareLibrary: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareM.d.ts
-declare const SquareM: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareMenu.d.ts
-declare const SquareMenu: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareMinus.d.ts
-declare const SquareMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareMousePointer.d.ts
-declare const SquareMousePointer: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareParkingOff.d.ts
-declare const SquareParkingOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareParking.d.ts
-declare const SquareParking: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquarePause.d.ts
-declare const SquarePause: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquarePen.d.ts
-declare const SquarePen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquarePercent.d.ts
-declare const SquarePercent: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquarePi.d.ts
-declare const SquarePi: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquarePilcrow.d.ts
-declare const SquarePilcrow: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquarePlay.d.ts
-declare const SquarePlay: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquarePlus.d.ts
-declare const SquarePlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquarePower.d.ts
-declare const SquarePower: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareRadical.d.ts
-declare const SquareRadical: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareRoundCorner.d.ts
-declare const SquareRoundCorner: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareScissors.d.ts
-declare const SquareScissors: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareSigma.d.ts
-declare const SquareSigma: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareSlash.d.ts
-declare const SquareSlash: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareSplitHorizontal.d.ts
-declare const SquareSplitHorizontal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareSplitVertical.d.ts
-declare const SquareSplitVertical: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareSquare.d.ts
-declare const SquareSquare: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareStack.d.ts
-declare const SquareStack: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareStar.d.ts
-declare const SquareStar: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareStop.d.ts
-declare const SquareStop: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareTerminal.d.ts
-declare const SquareTerminal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareUserRound.d.ts
-declare const SquareUserRound: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareUser.d.ts
-declare const SquareUser: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquareX.d.ts
-declare const SquareX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Square.d.ts
-declare const Square: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquaresExclude.d.ts
-declare const SquaresExclude: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquaresIntersect.d.ts
-declare const SquaresIntersect: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquaresSubtract.d.ts
-declare const SquaresSubtract: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquaresUnite.d.ts
-declare const SquaresUnite: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SquircleDashed.d.ts
-declare const SquircleDashed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Squircle.d.ts
-declare const Squircle: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Squirrel.d.ts
-declare const Squirrel: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Stamp.d.ts
-declare const Stamp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/StarHalf.d.ts
-declare const StarHalf: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/StarOff.d.ts
-declare const StarOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Star.d.ts
-declare const Star: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/StepBack.d.ts
-declare const StepBack: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/StepForward.d.ts
-declare const StepForward: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Stethoscope.d.ts
-declare const Stethoscope: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Sticker.d.ts
-declare const Sticker: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/StickyNote.d.ts
-declare const StickyNote: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Stone.d.ts
-declare const Stone: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Store.d.ts
-declare const Store: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/StretchHorizontal.d.ts
-declare const StretchHorizontal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/StretchVertical.d.ts
-declare const StretchVertical: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Strikethrough.d.ts
-declare const Strikethrough: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Subscript.d.ts
-declare const Subscript: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SunDim.d.ts
-declare const SunDim: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SunMedium.d.ts
-declare const SunMedium: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SunMoon.d.ts
-declare const SunMoon: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SunSnow.d.ts
-declare const SunSnow: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Sun.d.ts
-declare const Sun: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Sunrise.d.ts
-declare const Sunrise: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Sunset.d.ts
-declare const Sunset: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Superscript.d.ts
-declare const Superscript: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SwatchBook.d.ts
-declare const SwatchBook: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SwissFranc.d.ts
-declare const SwissFranc: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/SwitchCamera.d.ts
-declare const SwitchCamera: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Sword.d.ts
-declare const Sword: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Swords.d.ts
-declare const Swords: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Syringe.d.ts
-declare const Syringe: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Table2.d.ts
-declare const Table2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TableCellsMerge.d.ts
-declare const TableCellsMerge: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TableCellsSplit.d.ts
-declare const TableCellsSplit: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TableColumnsSplit.d.ts
-declare const TableColumnsSplit: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TableOfContents.d.ts
-declare const TableOfContents: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TableProperties.d.ts
-declare const TableProperties: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TableRowsSplit.d.ts
-declare const TableRowsSplit: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Table.d.ts
-declare const Table: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TabletSmartphone.d.ts
-declare const TabletSmartphone: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Tablet.d.ts
-declare const Tablet: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Tablets.d.ts
-declare const Tablets: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Tag.d.ts
-declare const Tag: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Tags.d.ts
-declare const Tags: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Tally1.d.ts
-declare const Tally1: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Tally2.d.ts
-declare const Tally2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Tally3.d.ts
-declare const Tally3: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Tally4.d.ts
-declare const Tally4: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Tally5.d.ts
-declare const Tally5: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Tangent.d.ts
-declare const Tangent: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Target.d.ts
-declare const Target: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Telescope.d.ts
-declare const Telescope: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TentTree.d.ts
-declare const TentTree: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Tent.d.ts
-declare const Tent: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Terminal.d.ts
-declare const Terminal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TestTubeDiagonal.d.ts
-declare const TestTubeDiagonal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TestTube.d.ts
-declare const TestTube: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TestTubes.d.ts
-declare const TestTubes: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TextAlignCenter.d.ts
-declare const TextAlignCenter: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TextAlignEnd.d.ts
-declare const TextAlignEnd: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TextAlignJustify.d.ts
-declare const TextAlignJustify: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TextAlignStart.d.ts
-declare const TextAlignStart: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TextCursorInput.d.ts
-declare const TextCursorInput: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TextCursor.d.ts
-declare const TextCursor: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TextInitial.d.ts
-declare const TextInitial: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TextQuote.d.ts
-declare const TextQuote: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TextSearch.d.ts
-declare const TextSearch: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TextSelect.d.ts
-declare const TextSelect: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TextWrap.d.ts
-declare const TextWrap: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Theater.d.ts
-declare const Theater: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ThermometerSnowflake.d.ts
-declare const ThermometerSnowflake: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ThermometerSun.d.ts
-declare const ThermometerSun: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Thermometer.d.ts
-declare const Thermometer: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ThumbsDown.d.ts
-declare const ThumbsDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ThumbsUp.d.ts
-declare const ThumbsUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TicketCheck.d.ts
-declare const TicketCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TicketMinus.d.ts
-declare const TicketMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TicketPercent.d.ts
-declare const TicketPercent: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TicketPlus.d.ts
-declare const TicketPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TicketSlash.d.ts
-declare const TicketSlash: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TicketX.d.ts
-declare const TicketX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Ticket.d.ts
-declare const Ticket: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TicketsPlane.d.ts
-declare const TicketsPlane: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Tickets.d.ts
-declare const Tickets: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TimerOff.d.ts
-declare const TimerOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TimerReset.d.ts
-declare const TimerReset: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Timer.d.ts
-declare const Timer: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ToggleLeft.d.ts
-declare const ToggleLeft: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ToggleRight.d.ts
-declare const ToggleRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Toilet.d.ts
-declare const Toilet: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ToolCase.d.ts
-declare const ToolCase: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Toolbox.d.ts
-declare const Toolbox: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Tornado.d.ts
-declare const Tornado: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Torus.d.ts
-declare const Torus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TouchpadOff.d.ts
-declare const TouchpadOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Touchpad.d.ts
-declare const Touchpad: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TowelRack.d.ts
-declare const TowelRack: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TowerControl.d.ts
-declare const TowerControl: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ToyBrick.d.ts
-declare const ToyBrick: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Tractor.d.ts
-declare const Tractor: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TrafficCone.d.ts
-declare const TrafficCone: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TrainFrontTunnel.d.ts
-declare const TrainFrontTunnel: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TrainFront.d.ts
-declare const TrainFront: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TrainTrack.d.ts
-declare const TrainTrack: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TramFront.d.ts
-declare const TramFront: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Transgender.d.ts
-declare const Transgender: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Trash2.d.ts
-declare const Trash2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Trash.d.ts
-declare const Trash: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TreeDeciduous.d.ts
-declare const TreeDeciduous: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TreePalm.d.ts
-declare const TreePalm: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TreePine.d.ts
-declare const TreePine: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Trees.d.ts
-declare const Trees: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TrendingDown.d.ts
-declare const TrendingDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TrendingUpDown.d.ts
-declare const TrendingUpDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TrendingUp.d.ts
-declare const TrendingUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TriangleAlert.d.ts
-declare const TriangleAlert: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TriangleDashed.d.ts
-declare const TriangleDashed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TriangleRight.d.ts
-declare const TriangleRight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Triangle.d.ts
-declare const Triangle: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Trophy.d.ts
-declare const Trophy: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TruckElectric.d.ts
-declare const TruckElectric: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Truck.d.ts
-declare const Truck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TurkishLira.d.ts
-declare const TurkishLira: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Turntable.d.ts
-declare const Turntable: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Turtle.d.ts
-declare const Turtle: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TvMinimalPlay.d.ts
-declare const TvMinimalPlay: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TvMinimal.d.ts
-declare const TvMinimal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Tv.d.ts
-declare const Tv: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/TypeOutline.d.ts
-declare const TypeOutline: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Type.d.ts
-declare const Type: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UmbrellaOff.d.ts
-declare const UmbrellaOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Umbrella.d.ts
-declare const Umbrella: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Underline.d.ts
-declare const Underline: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Undo2.d.ts
-declare const Undo2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UndoDot.d.ts
-declare const UndoDot: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Undo.d.ts
-declare const Undo: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UnfoldHorizontal.d.ts
-declare const UnfoldHorizontal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UnfoldVertical.d.ts
-declare const UnfoldVertical: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Ungroup.d.ts
-declare const Ungroup: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/University.d.ts
-declare const University: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Unlink2.d.ts
-declare const Unlink2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Unlink.d.ts
-declare const Unlink: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Unplug.d.ts
-declare const Unplug: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Upload.d.ts
-declare const Upload: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Usb.d.ts
-declare const Usb: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UserCheck.d.ts
-declare const UserCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UserCog.d.ts
-declare const UserCog: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UserKey.d.ts
-declare const UserKey: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UserLock.d.ts
-declare const UserLock: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UserMinus.d.ts
-declare const UserMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UserPen.d.ts
-declare const UserPen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UserPlus.d.ts
-declare const UserPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UserRoundCheck.d.ts
-declare const UserRoundCheck: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UserRoundCog.d.ts
-declare const UserRoundCog: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UserRoundKey.d.ts
-declare const UserRoundKey: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UserRoundMinus.d.ts
-declare const UserRoundMinus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UserRoundPen.d.ts
-declare const UserRoundPen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UserRoundPlus.d.ts
-declare const UserRoundPlus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UserRoundSearch.d.ts
-declare const UserRoundSearch: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UserRoundX.d.ts
-declare const UserRoundX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UserRound.d.ts
-declare const UserRound: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UserSearch.d.ts
-declare const UserSearch: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UserStar.d.ts
-declare const UserStar: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UserX.d.ts
-declare const UserX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/User.d.ts
-declare const User: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UsersRound.d.ts
-declare const UsersRound: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Users.d.ts
-declare const Users: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UtensilsCrossed.d.ts
-declare const UtensilsCrossed: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Utensils.d.ts
-declare const Utensils: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/UtilityPole.d.ts
-declare const UtilityPole: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Van.d.ts
-declare const Van: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Variable.d.ts
-declare const Variable: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Vault.d.ts
-declare const Vault: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/VectorSquare.d.ts
-declare const VectorSquare: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Vegan.d.ts
-declare const Vegan: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/VenetianMask.d.ts
-declare const VenetianMask: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/VenusAndMars.d.ts
-declare const VenusAndMars: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Venus.d.ts
-declare const Venus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/VibrateOff.d.ts
-declare const VibrateOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Vibrate.d.ts
-declare const Vibrate: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/VideoOff.d.ts
-declare const VideoOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Video.d.ts
-declare const Video: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Videotape.d.ts
-declare const Videotape: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/View.d.ts
-declare const View: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Voicemail.d.ts
-declare const Voicemail: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Volleyball.d.ts
-declare const Volleyball: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Volume1.d.ts
-declare const Volume1: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Volume2.d.ts
-declare const Volume2: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/VolumeOff.d.ts
-declare const VolumeOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/VolumeX.d.ts
-declare const VolumeX: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Volume.d.ts
-declare const Volume: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Vote.d.ts
-declare const Vote: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/WalletCards.d.ts
-declare const WalletCards: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/WalletMinimal.d.ts
-declare const WalletMinimal: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Wallet.d.ts
-declare const Wallet: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Wallpaper.d.ts
-declare const Wallpaper: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/WandSparkles.d.ts
-declare const WandSparkles: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Wand.d.ts
-declare const Wand: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Warehouse.d.ts
-declare const Warehouse: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/WashingMachine.d.ts
-declare const WashingMachine: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Watch.d.ts
-declare const Watch: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/WavesArrowDown.d.ts
-declare const WavesArrowDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/WavesArrowUp.d.ts
-declare const WavesArrowUp: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/WavesLadder.d.ts
-declare const WavesLadder: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Waves.d.ts
-declare const Waves: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Waypoints.d.ts
-declare const Waypoints: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Webcam.d.ts
-declare const Webcam: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/WebhookOff.d.ts
-declare const WebhookOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Webhook.d.ts
-declare const Webhook: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/WeightTilde.d.ts
-declare const WeightTilde: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Weight.d.ts
-declare const Weight: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/WheatOff.d.ts
-declare const WheatOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Wheat.d.ts
-declare const Wheat: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/WholeWord.d.ts
-declare const WholeWord: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/WifiCog.d.ts
-declare const WifiCog: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/WifiHigh.d.ts
-declare const WifiHigh: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/WifiLow.d.ts
-declare const WifiLow: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/WifiOff.d.ts
-declare const WifiOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/WifiPen.d.ts
-declare const WifiPen: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/WifiSync.d.ts
-declare const WifiSync: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/WifiZero.d.ts
-declare const WifiZero: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Wifi.d.ts
-declare const Wifi: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/WindArrowDown.d.ts
-declare const WindArrowDown: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Wind.d.ts
-declare const Wind: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/WineOff.d.ts
-declare const WineOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Wine.d.ts
-declare const Wine: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Workflow.d.ts
-declare const Workflow: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Worm.d.ts
-declare const Worm: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Wrench.d.ts
-declare const Wrench: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/XLineTop.d.ts
-declare const XLineTop: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/X.d.ts
-declare const X: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ZapOff.d.ts
-declare const ZapOff: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/Zap.d.ts
-declare const Zap: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ZodiacAquarius.d.ts
-declare const ZodiacAquarius: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ZodiacAries.d.ts
-declare const ZodiacAries: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ZodiacCancer.d.ts
-declare const ZodiacCancer: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ZodiacCapricorn.d.ts
-declare const ZodiacCapricorn: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ZodiacGemini.d.ts
-declare const ZodiacGemini: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ZodiacLeo.d.ts
-declare const ZodiacLeo: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ZodiacLibra.d.ts
-declare const ZodiacLibra: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ZodiacOphiuchus.d.ts
-declare const ZodiacOphiuchus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ZodiacPisces.d.ts
-declare const ZodiacPisces: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ZodiacSagittarius.d.ts
-declare const ZodiacSagittarius: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ZodiacScorpio.d.ts
-declare const ZodiacScorpio: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ZodiacTaurus.d.ts
-declare const ZodiacTaurus: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ZodiacVirgo.d.ts
-declare const ZodiacVirgo: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ZoomIn.d.ts
-declare const ZoomIn: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
-//#region src/icons/ZoomOut.d.ts
-declare const ZoomOut: (props?: Partial<SVGProps>) => SVGSVGElement;
-//#endregion
+import { AArrowDown } from "./icons/AArrowDown.js";
+import { AArrowUp } from "./icons/AArrowUp.js";
+import { ALargeSmall } from "./icons/ALargeSmall.js";
+import { Accessibility } from "./icons/Accessibility.js";
+import { Activity } from "./icons/Activity.js";
+import { AirVent } from "./icons/AirVent.js";
+import { Airplay } from "./icons/Airplay.js";
+import { AlarmClock } from "./icons/AlarmClock.js";
+import { AlarmClockCheck } from "./icons/AlarmClockCheck.js";
+import { AlarmClockMinus } from "./icons/AlarmClockMinus.js";
+import { AlarmClockOff } from "./icons/AlarmClockOff.js";
+import { AlarmClockPlus } from "./icons/AlarmClockPlus.js";
+import { AlarmSmoke } from "./icons/AlarmSmoke.js";
+import { Album } from "./icons/Album.js";
+import { AlignCenterHorizontal } from "./icons/AlignCenterHorizontal.js";
+import { AlignCenterVertical } from "./icons/AlignCenterVertical.js";
+import { AlignEndHorizontal } from "./icons/AlignEndHorizontal.js";
+import { AlignEndVertical } from "./icons/AlignEndVertical.js";
+import { AlignHorizontalDistributeCenter } from "./icons/AlignHorizontalDistributeCenter.js";
+import { AlignHorizontalDistributeEnd } from "./icons/AlignHorizontalDistributeEnd.js";
+import { AlignHorizontalDistributeStart } from "./icons/AlignHorizontalDistributeStart.js";
+import { AlignHorizontalJustifyCenter } from "./icons/AlignHorizontalJustifyCenter.js";
+import { AlignHorizontalJustifyEnd } from "./icons/AlignHorizontalJustifyEnd.js";
+import { AlignHorizontalJustifyStart } from "./icons/AlignHorizontalJustifyStart.js";
+import { AlignHorizontalSpaceAround } from "./icons/AlignHorizontalSpaceAround.js";
+import { AlignHorizontalSpaceBetween } from "./icons/AlignHorizontalSpaceBetween.js";
+import { AlignStartHorizontal } from "./icons/AlignStartHorizontal.js";
+import { AlignStartVertical } from "./icons/AlignStartVertical.js";
+import { AlignVerticalDistributeCenter } from "./icons/AlignVerticalDistributeCenter.js";
+import { AlignVerticalDistributeEnd } from "./icons/AlignVerticalDistributeEnd.js";
+import { AlignVerticalDistributeStart } from "./icons/AlignVerticalDistributeStart.js";
+import { AlignVerticalJustifyCenter } from "./icons/AlignVerticalJustifyCenter.js";
+import { AlignVerticalJustifyEnd } from "./icons/AlignVerticalJustifyEnd.js";
+import { AlignVerticalJustifyStart } from "./icons/AlignVerticalJustifyStart.js";
+import { AlignVerticalSpaceAround } from "./icons/AlignVerticalSpaceAround.js";
+import { AlignVerticalSpaceBetween } from "./icons/AlignVerticalSpaceBetween.js";
+import { Ambulance } from "./icons/Ambulance.js";
+import { Ampersand } from "./icons/Ampersand.js";
+import { Ampersands } from "./icons/Ampersands.js";
+import { Amphora } from "./icons/Amphora.js";
+import { Anchor } from "./icons/Anchor.js";
+import { Angry } from "./icons/Angry.js";
+import { Annoyed } from "./icons/Annoyed.js";
+import { Antenna } from "./icons/Antenna.js";
+import { Anvil } from "./icons/Anvil.js";
+import { Aperture } from "./icons/Aperture.js";
+import { AppWindow } from "./icons/AppWindow.js";
+import { AppWindowMac } from "./icons/AppWindowMac.js";
+import { Apple } from "./icons/Apple.js";
+import { Archive } from "./icons/Archive.js";
+import { ArchiveRestore } from "./icons/ArchiveRestore.js";
+import { ArchiveX } from "./icons/ArchiveX.js";
+import { Armchair } from "./icons/Armchair.js";
+import { ArrowBigDown } from "./icons/ArrowBigDown.js";
+import { ArrowBigDownDash } from "./icons/ArrowBigDownDash.js";
+import { ArrowBigLeft } from "./icons/ArrowBigLeft.js";
+import { ArrowBigLeftDash } from "./icons/ArrowBigLeftDash.js";
+import { ArrowBigRight } from "./icons/ArrowBigRight.js";
+import { ArrowBigRightDash } from "./icons/ArrowBigRightDash.js";
+import { ArrowBigUp } from "./icons/ArrowBigUp.js";
+import { ArrowBigUpDash } from "./icons/ArrowBigUpDash.js";
+import { ArrowDown } from "./icons/ArrowDown.js";
+import { ArrowDown01 } from "./icons/ArrowDown01.js";
+import { ArrowDown10 } from "./icons/ArrowDown10.js";
+import { ArrowDownAZ } from "./icons/ArrowDownAZ.js";
+import { ArrowDownFromLine } from "./icons/ArrowDownFromLine.js";
+import { ArrowDownLeft } from "./icons/ArrowDownLeft.js";
+import { ArrowDownNarrowWide } from "./icons/ArrowDownNarrowWide.js";
+import { ArrowDownRight } from "./icons/ArrowDownRight.js";
+import { ArrowDownToDot } from "./icons/ArrowDownToDot.js";
+import { ArrowDownToLine } from "./icons/ArrowDownToLine.js";
+import { ArrowDownUp } from "./icons/ArrowDownUp.js";
+import { ArrowDownWideNarrow } from "./icons/ArrowDownWideNarrow.js";
+import { ArrowDownZA } from "./icons/ArrowDownZA.js";
+import { ArrowLeft } from "./icons/ArrowLeft.js";
+import { ArrowLeftFromLine } from "./icons/ArrowLeftFromLine.js";
+import { ArrowLeftRight } from "./icons/ArrowLeftRight.js";
+import { ArrowLeftToLine } from "./icons/ArrowLeftToLine.js";
+import { ArrowRight } from "./icons/ArrowRight.js";
+import { ArrowRightFromLine } from "./icons/ArrowRightFromLine.js";
+import { ArrowRightLeft } from "./icons/ArrowRightLeft.js";
+import { ArrowRightToLine } from "./icons/ArrowRightToLine.js";
+import { ArrowUp } from "./icons/ArrowUp.js";
+import { ArrowUp01 } from "./icons/ArrowUp01.js";
+import { ArrowUp10 } from "./icons/ArrowUp10.js";
+import { ArrowUpAZ } from "./icons/ArrowUpAZ.js";
+import { ArrowUpDown } from "./icons/ArrowUpDown.js";
+import { ArrowUpFromDot } from "./icons/ArrowUpFromDot.js";
+import { ArrowUpFromLine } from "./icons/ArrowUpFromLine.js";
+import { ArrowUpLeft } from "./icons/ArrowUpLeft.js";
+import { ArrowUpNarrowWide } from "./icons/ArrowUpNarrowWide.js";
+import { ArrowUpRight } from "./icons/ArrowUpRight.js";
+import { ArrowUpToLine } from "./icons/ArrowUpToLine.js";
+import { ArrowUpWideNarrow } from "./icons/ArrowUpWideNarrow.js";
+import { ArrowUpZA } from "./icons/ArrowUpZA.js";
+import { ArrowsUpFromLine } from "./icons/ArrowsUpFromLine.js";
+import { Asterisk } from "./icons/Asterisk.js";
+import { AtSign } from "./icons/AtSign.js";
+import { Atom } from "./icons/Atom.js";
+import { AudioLines } from "./icons/AudioLines.js";
+import { AudioWaveform } from "./icons/AudioWaveform.js";
+import { Award } from "./icons/Award.js";
+import { Axe } from "./icons/Axe.js";
+import { Axis3d } from "./icons/Axis3d.js";
+import { Baby } from "./icons/Baby.js";
+import { Backpack } from "./icons/Backpack.js";
+import { Badge } from "./icons/Badge.js";
+import { BadgeAlert } from "./icons/BadgeAlert.js";
+import { BadgeCent } from "./icons/BadgeCent.js";
+import { BadgeCheck } from "./icons/BadgeCheck.js";
+import { BadgeDollarSign } from "./icons/BadgeDollarSign.js";
+import { BadgeEuro } from "./icons/BadgeEuro.js";
+import { BadgeIndianRupee } from "./icons/BadgeIndianRupee.js";
+import { BadgeInfo } from "./icons/BadgeInfo.js";
+import { BadgeJapaneseYen } from "./icons/BadgeJapaneseYen.js";
+import { BadgeMinus } from "./icons/BadgeMinus.js";
+import { BadgePercent } from "./icons/BadgePercent.js";
+import { BadgePlus } from "./icons/BadgePlus.js";
+import { BadgePoundSterling } from "./icons/BadgePoundSterling.js";
+import { BadgeQuestionMark } from "./icons/BadgeQuestionMark.js";
+import { BadgeRussianRuble } from "./icons/BadgeRussianRuble.js";
+import { BadgeSwissFranc } from "./icons/BadgeSwissFranc.js";
+import { BadgeTurkishLira } from "./icons/BadgeTurkishLira.js";
+import { BadgeX } from "./icons/BadgeX.js";
+import { BaggageClaim } from "./icons/BaggageClaim.js";
+import { Balloon } from "./icons/Balloon.js";
+import { Ban } from "./icons/Ban.js";
+import { Banana } from "./icons/Banana.js";
+import { Bandage } from "./icons/Bandage.js";
+import { Banknote } from "./icons/Banknote.js";
+import { BanknoteArrowDown } from "./icons/BanknoteArrowDown.js";
+import { BanknoteArrowUp } from "./icons/BanknoteArrowUp.js";
+import { BanknoteX } from "./icons/BanknoteX.js";
+import { Barcode } from "./icons/Barcode.js";
+import { Barrel } from "./icons/Barrel.js";
+import { Baseline } from "./icons/Baseline.js";
+import { Bath } from "./icons/Bath.js";
+import { Battery } from "./icons/Battery.js";
+import { BatteryCharging } from "./icons/BatteryCharging.js";
+import { BatteryFull } from "./icons/BatteryFull.js";
+import { BatteryLow } from "./icons/BatteryLow.js";
+import { BatteryMedium } from "./icons/BatteryMedium.js";
+import { BatteryPlus } from "./icons/BatteryPlus.js";
+import { BatteryWarning } from "./icons/BatteryWarning.js";
+import { Beaker } from "./icons/Beaker.js";
+import { Bean } from "./icons/Bean.js";
+import { BeanOff } from "./icons/BeanOff.js";
+import { Bed } from "./icons/Bed.js";
+import { BedDouble } from "./icons/BedDouble.js";
+import { BedSingle } from "./icons/BedSingle.js";
+import { Beef } from "./icons/Beef.js";
+import { BeefOff } from "./icons/BeefOff.js";
+import { Beer } from "./icons/Beer.js";
+import { BeerOff } from "./icons/BeerOff.js";
+import { Bell } from "./icons/Bell.js";
+import { BellDot } from "./icons/BellDot.js";
+import { BellElectric } from "./icons/BellElectric.js";
+import { BellMinus } from "./icons/BellMinus.js";
+import { BellOff } from "./icons/BellOff.js";
+import { BellPlus } from "./icons/BellPlus.js";
+import { BellRing } from "./icons/BellRing.js";
+import { BetweenHorizontalEnd } from "./icons/BetweenHorizontalEnd.js";
+import { BetweenHorizontalStart } from "./icons/BetweenHorizontalStart.js";
+import { BetweenVerticalEnd } from "./icons/BetweenVerticalEnd.js";
+import { BetweenVerticalStart } from "./icons/BetweenVerticalStart.js";
+import { BicepsFlexed } from "./icons/BicepsFlexed.js";
+import { Bike } from "./icons/Bike.js";
+import { Binary } from "./icons/Binary.js";
+import { Binoculars } from "./icons/Binoculars.js";
+import { Biohazard } from "./icons/Biohazard.js";
+import { Bird } from "./icons/Bird.js";
+import { Birdhouse } from "./icons/Birdhouse.js";
+import { Bitcoin } from "./icons/Bitcoin.js";
+import { Blend } from "./icons/Blend.js";
+import { Blinds } from "./icons/Blinds.js";
+import { Blocks } from "./icons/Blocks.js";
+import { Bluetooth } from "./icons/Bluetooth.js";
+import { BluetoothConnected } from "./icons/BluetoothConnected.js";
+import { BluetoothOff } from "./icons/BluetoothOff.js";
+import { BluetoothSearching } from "./icons/BluetoothSearching.js";
+import { Bold } from "./icons/Bold.js";
+import { Bolt } from "./icons/Bolt.js";
+import { Bomb } from "./icons/Bomb.js";
+import { Bone } from "./icons/Bone.js";
+import { Book } from "./icons/Book.js";
+import { BookA } from "./icons/BookA.js";
+import { BookAlert } from "./icons/BookAlert.js";
+import { BookAudio } from "./icons/BookAudio.js";
+import { BookCheck } from "./icons/BookCheck.js";
+import { BookCopy } from "./icons/BookCopy.js";
+import { BookDashed } from "./icons/BookDashed.js";
+import { BookDown } from "./icons/BookDown.js";
+import { BookHeadphones } from "./icons/BookHeadphones.js";
+import { BookHeart } from "./icons/BookHeart.js";
+import { BookImage } from "./icons/BookImage.js";
+import { BookKey } from "./icons/BookKey.js";
+import { BookLock } from "./icons/BookLock.js";
+import { BookMarked } from "./icons/BookMarked.js";
+import { BookMinus } from "./icons/BookMinus.js";
+import { BookOpen } from "./icons/BookOpen.js";
+import { BookOpenCheck } from "./icons/BookOpenCheck.js";
+import { BookOpenText } from "./icons/BookOpenText.js";
+import { BookPlus } from "./icons/BookPlus.js";
+import { BookSearch } from "./icons/BookSearch.js";
+import { BookText } from "./icons/BookText.js";
+import { BookType } from "./icons/BookType.js";
+import { BookUp } from "./icons/BookUp.js";
+import { BookUp2 } from "./icons/BookUp2.js";
+import { BookUser } from "./icons/BookUser.js";
+import { BookX } from "./icons/BookX.js";
+import { Bookmark } from "./icons/Bookmark.js";
+import { BookmarkCheck } from "./icons/BookmarkCheck.js";
+import { BookmarkMinus } from "./icons/BookmarkMinus.js";
+import { BookmarkPlus } from "./icons/BookmarkPlus.js";
+import { BookmarkX } from "./icons/BookmarkX.js";
+import { BoomBox } from "./icons/BoomBox.js";
+import { Bot } from "./icons/Bot.js";
+import { BotMessageSquare } from "./icons/BotMessageSquare.js";
+import { BotOff } from "./icons/BotOff.js";
+import { BottleWine } from "./icons/BottleWine.js";
+import { BowArrow } from "./icons/BowArrow.js";
+import { Box } from "./icons/Box.js";
+import { Boxes } from "./icons/Boxes.js";
+import { Braces } from "./icons/Braces.js";
+import { Brackets } from "./icons/Brackets.js";
+import { Brain } from "./icons/Brain.js";
+import { BrainCircuit } from "./icons/BrainCircuit.js";
+import { BrainCog } from "./icons/BrainCog.js";
+import { BrickWall } from "./icons/BrickWall.js";
+import { BrickWallFire } from "./icons/BrickWallFire.js";
+import { BrickWallShield } from "./icons/BrickWallShield.js";
+import { Briefcase } from "./icons/Briefcase.js";
+import { BriefcaseBusiness } from "./icons/BriefcaseBusiness.js";
+import { BriefcaseConveyorBelt } from "./icons/BriefcaseConveyorBelt.js";
+import { BriefcaseMedical } from "./icons/BriefcaseMedical.js";
+import { BringToFront } from "./icons/BringToFront.js";
+import { Brush } from "./icons/Brush.js";
+import { BrushCleaning } from "./icons/BrushCleaning.js";
+import { Bubbles } from "./icons/Bubbles.js";
+import { Bug } from "./icons/Bug.js";
+import { BugOff } from "./icons/BugOff.js";
+import { BugPlay } from "./icons/BugPlay.js";
+import { Building } from "./icons/Building.js";
+import { Building2 } from "./icons/Building2.js";
+import { Bus } from "./icons/Bus.js";
+import { BusFront } from "./icons/BusFront.js";
+import { Cable } from "./icons/Cable.js";
+import { CableCar } from "./icons/CableCar.js";
+import { Cake } from "./icons/Cake.js";
+import { CakeSlice } from "./icons/CakeSlice.js";
+import { Calculator } from "./icons/Calculator.js";
+import { Calendar } from "./icons/Calendar.js";
+import { Calendar1 } from "./icons/Calendar1.js";
+import { CalendarArrowDown } from "./icons/CalendarArrowDown.js";
+import { CalendarArrowUp } from "./icons/CalendarArrowUp.js";
+import { CalendarCheck } from "./icons/CalendarCheck.js";
+import { CalendarCheck2 } from "./icons/CalendarCheck2.js";
+import { CalendarClock } from "./icons/CalendarClock.js";
+import { CalendarCog } from "./icons/CalendarCog.js";
+import { CalendarDays } from "./icons/CalendarDays.js";
+import { CalendarFold } from "./icons/CalendarFold.js";
+import { CalendarHeart } from "./icons/CalendarHeart.js";
+import { CalendarMinus } from "./icons/CalendarMinus.js";
+import { CalendarMinus2 } from "./icons/CalendarMinus2.js";
+import { CalendarOff } from "./icons/CalendarOff.js";
+import { CalendarPlus } from "./icons/CalendarPlus.js";
+import { CalendarPlus2 } from "./icons/CalendarPlus2.js";
+import { CalendarRange } from "./icons/CalendarRange.js";
+import { CalendarSearch } from "./icons/CalendarSearch.js";
+import { CalendarSync } from "./icons/CalendarSync.js";
+import { CalendarX } from "./icons/CalendarX.js";
+import { CalendarX2 } from "./icons/CalendarX2.js";
+import { Calendars } from "./icons/Calendars.js";
+import { Camera } from "./icons/Camera.js";
+import { CameraOff } from "./icons/CameraOff.js";
+import { Candy } from "./icons/Candy.js";
+import { CandyCane } from "./icons/CandyCane.js";
+import { CandyOff } from "./icons/CandyOff.js";
+import { Cannabis } from "./icons/Cannabis.js";
+import { CannabisOff } from "./icons/CannabisOff.js";
+import { Captions } from "./icons/Captions.js";
+import { CaptionsOff } from "./icons/CaptionsOff.js";
+import { Car } from "./icons/Car.js";
+import { CarFront } from "./icons/CarFront.js";
+import { CarTaxiFront } from "./icons/CarTaxiFront.js";
+import { Caravan } from "./icons/Caravan.js";
+import { CardSim } from "./icons/CardSim.js";
+import { Carrot } from "./icons/Carrot.js";
+import { CaseLower } from "./icons/CaseLower.js";
+import { CaseSensitive } from "./icons/CaseSensitive.js";
+import { CaseUpper } from "./icons/CaseUpper.js";
+import { CassetteTape } from "./icons/CassetteTape.js";
+import { Cast } from "./icons/Cast.js";
+import { Castle } from "./icons/Castle.js";
+import { Cat } from "./icons/Cat.js";
+import { Cctv } from "./icons/Cctv.js";
+import { CctvOff } from "./icons/CctvOff.js";
+import { ChartArea } from "./icons/ChartArea.js";
+import { ChartBar } from "./icons/ChartBar.js";
+import { ChartBarBig } from "./icons/ChartBarBig.js";
+import { ChartBarDecreasing } from "./icons/ChartBarDecreasing.js";
+import { ChartBarIncreasing } from "./icons/ChartBarIncreasing.js";
+import { ChartBarStacked } from "./icons/ChartBarStacked.js";
+import { ChartCandlestick } from "./icons/ChartCandlestick.js";
+import { ChartColumn } from "./icons/ChartColumn.js";
+import { ChartColumnBig } from "./icons/ChartColumnBig.js";
+import { ChartColumnDecreasing } from "./icons/ChartColumnDecreasing.js";
+import { ChartColumnIncreasing } from "./icons/ChartColumnIncreasing.js";
+import { ChartColumnStacked } from "./icons/ChartColumnStacked.js";
+import { ChartGantt } from "./icons/ChartGantt.js";
+import { ChartLine } from "./icons/ChartLine.js";
+import { ChartNetwork } from "./icons/ChartNetwork.js";
+import { ChartNoAxesColumn } from "./icons/ChartNoAxesColumn.js";
+import { ChartNoAxesColumnDecreasing } from "./icons/ChartNoAxesColumnDecreasing.js";
+import { ChartNoAxesColumnIncreasing } from "./icons/ChartNoAxesColumnIncreasing.js";
+import { ChartNoAxesCombined } from "./icons/ChartNoAxesCombined.js";
+import { ChartNoAxesGantt } from "./icons/ChartNoAxesGantt.js";
+import { ChartPie } from "./icons/ChartPie.js";
+import { ChartScatter } from "./icons/ChartScatter.js";
+import { ChartSpline } from "./icons/ChartSpline.js";
+import { Check } from "./icons/Check.js";
+import { CheckCheck } from "./icons/CheckCheck.js";
+import { CheckLine } from "./icons/CheckLine.js";
+import { ChefHat } from "./icons/ChefHat.js";
+import { Cherry } from "./icons/Cherry.js";
+import { ChessBishop } from "./icons/ChessBishop.js";
+import { ChessKing } from "./icons/ChessKing.js";
+import { ChessKnight } from "./icons/ChessKnight.js";
+import { ChessPawn } from "./icons/ChessPawn.js";
+import { ChessQueen } from "./icons/ChessQueen.js";
+import { ChessRook } from "./icons/ChessRook.js";
+import { ChevronDown } from "./icons/ChevronDown.js";
+import { ChevronFirst } from "./icons/ChevronFirst.js";
+import { ChevronLast } from "./icons/ChevronLast.js";
+import { ChevronLeft } from "./icons/ChevronLeft.js";
+import { ChevronRight } from "./icons/ChevronRight.js";
+import { ChevronUp } from "./icons/ChevronUp.js";
+import { ChevronsDown } from "./icons/ChevronsDown.js";
+import { ChevronsDownUp } from "./icons/ChevronsDownUp.js";
+import { ChevronsLeft } from "./icons/ChevronsLeft.js";
+import { ChevronsLeftRight } from "./icons/ChevronsLeftRight.js";
+import { ChevronsLeftRightEllipsis } from "./icons/ChevronsLeftRightEllipsis.js";
+import { ChevronsRight } from "./icons/ChevronsRight.js";
+import { ChevronsRightLeft } from "./icons/ChevronsRightLeft.js";
+import { ChevronsUp } from "./icons/ChevronsUp.js";
+import { ChevronsUpDown } from "./icons/ChevronsUpDown.js";
+import { Church } from "./icons/Church.js";
+import { Cigarette } from "./icons/Cigarette.js";
+import { CigaretteOff } from "./icons/CigaretteOff.js";
+import { Circle } from "./icons/Circle.js";
+import { CircleAlert } from "./icons/CircleAlert.js";
+import { CircleArrowDown } from "./icons/CircleArrowDown.js";
+import { CircleArrowLeft } from "./icons/CircleArrowLeft.js";
+import { CircleArrowOutDownLeft } from "./icons/CircleArrowOutDownLeft.js";
+import { CircleArrowOutDownRight } from "./icons/CircleArrowOutDownRight.js";
+import { CircleArrowOutUpLeft } from "./icons/CircleArrowOutUpLeft.js";
+import { CircleArrowOutUpRight } from "./icons/CircleArrowOutUpRight.js";
+import { CircleArrowRight } from "./icons/CircleArrowRight.js";
+import { CircleArrowUp } from "./icons/CircleArrowUp.js";
+import { CircleCheck } from "./icons/CircleCheck.js";
+import { CircleCheckBig } from "./icons/CircleCheckBig.js";
+import { CircleChevronDown } from "./icons/CircleChevronDown.js";
+import { CircleChevronLeft } from "./icons/CircleChevronLeft.js";
+import { CircleChevronRight } from "./icons/CircleChevronRight.js";
+import { CircleChevronUp } from "./icons/CircleChevronUp.js";
+import { CircleDashed } from "./icons/CircleDashed.js";
+import { CircleDivide } from "./icons/CircleDivide.js";
+import { CircleDollarSign } from "./icons/CircleDollarSign.js";
+import { CircleDot } from "./icons/CircleDot.js";
+import { CircleDotDashed } from "./icons/CircleDotDashed.js";
+import { CircleEllipsis } from "./icons/CircleEllipsis.js";
+import { CircleEqual } from "./icons/CircleEqual.js";
+import { CircleFadingArrowUp } from "./icons/CircleFadingArrowUp.js";
+import { CircleFadingPlus } from "./icons/CircleFadingPlus.js";
+import { CircleGauge } from "./icons/CircleGauge.js";
+import { CircleMinus } from "./icons/CircleMinus.js";
+import { CircleOff } from "./icons/CircleOff.js";
+import { CircleParking } from "./icons/CircleParking.js";
+import { CircleParkingOff } from "./icons/CircleParkingOff.js";
+import { CirclePause } from "./icons/CirclePause.js";
+import { CirclePercent } from "./icons/CirclePercent.js";
+import { CirclePile } from "./icons/CirclePile.js";
+import { CirclePlay } from "./icons/CirclePlay.js";
+import { CirclePlus } from "./icons/CirclePlus.js";
+import { CirclePoundSterling } from "./icons/CirclePoundSterling.js";
+import { CirclePower } from "./icons/CirclePower.js";
+import { CircleQuestionMark } from "./icons/CircleQuestionMark.js";
+import { CircleSlash } from "./icons/CircleSlash.js";
+import { CircleSlash2 } from "./icons/CircleSlash2.js";
+import { CircleSmall } from "./icons/CircleSmall.js";
+import { CircleStar } from "./icons/CircleStar.js";
+import { CircleStop } from "./icons/CircleStop.js";
+import { CircleUser } from "./icons/CircleUser.js";
+import { CircleUserRound } from "./icons/CircleUserRound.js";
+import { CircleX } from "./icons/CircleX.js";
+import { CircuitBoard } from "./icons/CircuitBoard.js";
+import { Citrus } from "./icons/Citrus.js";
+import { Clapperboard } from "./icons/Clapperboard.js";
+import { Clipboard } from "./icons/Clipboard.js";
+import { ClipboardCheck } from "./icons/ClipboardCheck.js";
+import { ClipboardClock } from "./icons/ClipboardClock.js";
+import { ClipboardCopy } from "./icons/ClipboardCopy.js";
+import { ClipboardList } from "./icons/ClipboardList.js";
+import { ClipboardMinus } from "./icons/ClipboardMinus.js";
+import { ClipboardPaste } from "./icons/ClipboardPaste.js";
+import { ClipboardPen } from "./icons/ClipboardPen.js";
+import { ClipboardPenLine } from "./icons/ClipboardPenLine.js";
+import { ClipboardPlus } from "./icons/ClipboardPlus.js";
+import { ClipboardType } from "./icons/ClipboardType.js";
+import { ClipboardX } from "./icons/ClipboardX.js";
+import { Clock } from "./icons/Clock.js";
+import { Clock1 } from "./icons/Clock1.js";
+import { Clock10 } from "./icons/Clock10.js";
+import { Clock11 } from "./icons/Clock11.js";
+import { Clock12 } from "./icons/Clock12.js";
+import { Clock2 } from "./icons/Clock2.js";
+import { Clock3 } from "./icons/Clock3.js";
+import { Clock4 } from "./icons/Clock4.js";
+import { Clock5 } from "./icons/Clock5.js";
+import { Clock6 } from "./icons/Clock6.js";
+import { Clock7 } from "./icons/Clock7.js";
+import { Clock8 } from "./icons/Clock8.js";
+import { Clock9 } from "./icons/Clock9.js";
+import { ClockAlert } from "./icons/ClockAlert.js";
+import { ClockArrowDown } from "./icons/ClockArrowDown.js";
+import { ClockArrowUp } from "./icons/ClockArrowUp.js";
+import { ClockCheck } from "./icons/ClockCheck.js";
+import { ClockFading } from "./icons/ClockFading.js";
+import { ClockPlus } from "./icons/ClockPlus.js";
+import { ClosedCaption } from "./icons/ClosedCaption.js";
+import { Cloud } from "./icons/Cloud.js";
+import { CloudAlert } from "./icons/CloudAlert.js";
+import { CloudBackup } from "./icons/CloudBackup.js";
+import { CloudCheck } from "./icons/CloudCheck.js";
+import { CloudCog } from "./icons/CloudCog.js";
+import { CloudDownload } from "./icons/CloudDownload.js";
+import { CloudDrizzle } from "./icons/CloudDrizzle.js";
+import { CloudFog } from "./icons/CloudFog.js";
+import { CloudHail } from "./icons/CloudHail.js";
+import { CloudLightning } from "./icons/CloudLightning.js";
+import { CloudMoon } from "./icons/CloudMoon.js";
+import { CloudMoonRain } from "./icons/CloudMoonRain.js";
+import { CloudOff } from "./icons/CloudOff.js";
+import { CloudRain } from "./icons/CloudRain.js";
+import { CloudRainWind } from "./icons/CloudRainWind.js";
+import { CloudSnow } from "./icons/CloudSnow.js";
+import { CloudSun } from "./icons/CloudSun.js";
+import { CloudSunRain } from "./icons/CloudSunRain.js";
+import { CloudSync } from "./icons/CloudSync.js";
+import { CloudUpload } from "./icons/CloudUpload.js";
+import { Cloudy } from "./icons/Cloudy.js";
+import { Clover } from "./icons/Clover.js";
+import { Club } from "./icons/Club.js";
+import { Code } from "./icons/Code.js";
+import { CodeXml } from "./icons/CodeXml.js";
+import { Coffee } from "./icons/Coffee.js";
+import { Cog } from "./icons/Cog.js";
+import { Coins } from "./icons/Coins.js";
+import { Columns2 } from "./icons/Columns2.js";
+import { Columns3 } from "./icons/Columns3.js";
+import { Columns3Cog } from "./icons/Columns3Cog.js";
+import { Columns4 } from "./icons/Columns4.js";
+import { Combine } from "./icons/Combine.js";
+import { Command } from "./icons/Command.js";
+import { Compass } from "./icons/Compass.js";
+import { Component } from "./icons/Component.js";
+import { Computer } from "./icons/Computer.js";
+import { ConciergeBell } from "./icons/ConciergeBell.js";
+import { Cone } from "./icons/Cone.js";
+import { Construction } from "./icons/Construction.js";
+import { Contact } from "./icons/Contact.js";
+import { ContactRound } from "./icons/ContactRound.js";
+import { Container } from "./icons/Container.js";
+import { Contrast } from "./icons/Contrast.js";
+import { Cookie } from "./icons/Cookie.js";
+import { CookingPot } from "./icons/CookingPot.js";
+import { Copy } from "./icons/Copy.js";
+import { CopyCheck } from "./icons/CopyCheck.js";
+import { CopyMinus } from "./icons/CopyMinus.js";
+import { CopyPlus } from "./icons/CopyPlus.js";
+import { CopySlash } from "./icons/CopySlash.js";
+import { CopyX } from "./icons/CopyX.js";
+import { Copyleft } from "./icons/Copyleft.js";
+import { Copyright } from "./icons/Copyright.js";
+import { CornerDownLeft } from "./icons/CornerDownLeft.js";
+import { CornerDownRight } from "./icons/CornerDownRight.js";
+import { CornerLeftDown } from "./icons/CornerLeftDown.js";
+import { CornerLeftUp } from "./icons/CornerLeftUp.js";
+import { CornerRightDown } from "./icons/CornerRightDown.js";
+import { CornerRightUp } from "./icons/CornerRightUp.js";
+import { CornerUpLeft } from "./icons/CornerUpLeft.js";
+import { CornerUpRight } from "./icons/CornerUpRight.js";
+import { Cpu } from "./icons/Cpu.js";
+import { CreativeCommons } from "./icons/CreativeCommons.js";
+import { CreditCard } from "./icons/CreditCard.js";
+import { Croissant } from "./icons/Croissant.js";
+import { Crop } from "./icons/Crop.js";
+import { Cross } from "./icons/Cross.js";
+import { Crosshair } from "./icons/Crosshair.js";
+import { Crown } from "./icons/Crown.js";
+import { Cuboid } from "./icons/Cuboid.js";
+import { CupSoda } from "./icons/CupSoda.js";
+import { Currency } from "./icons/Currency.js";
+import { Cylinder } from "./icons/Cylinder.js";
+import { Dam } from "./icons/Dam.js";
+import { Database } from "./icons/Database.js";
+import { DatabaseBackup } from "./icons/DatabaseBackup.js";
+import { DatabaseSearch } from "./icons/DatabaseSearch.js";
+import { DatabaseZap } from "./icons/DatabaseZap.js";
+import { DecimalsArrowLeft } from "./icons/DecimalsArrowLeft.js";
+import { DecimalsArrowRight } from "./icons/DecimalsArrowRight.js";
+import { Delete } from "./icons/Delete.js";
+import { Dessert } from "./icons/Dessert.js";
+import { Diameter } from "./icons/Diameter.js";
+import { Diamond } from "./icons/Diamond.js";
+import { DiamondMinus } from "./icons/DiamondMinus.js";
+import { DiamondPercent } from "./icons/DiamondPercent.js";
+import { DiamondPlus } from "./icons/DiamondPlus.js";
+import { Dice1 } from "./icons/Dice1.js";
+import { Dice2 } from "./icons/Dice2.js";
+import { Dice3 } from "./icons/Dice3.js";
+import { Dice4 } from "./icons/Dice4.js";
+import { Dice5 } from "./icons/Dice5.js";
+import { Dice6 } from "./icons/Dice6.js";
+import { Dices } from "./icons/Dices.js";
+import { Diff } from "./icons/Diff.js";
+import { Disc } from "./icons/Disc.js";
+import { Disc2 } from "./icons/Disc2.js";
+import { Disc3 } from "./icons/Disc3.js";
+import { DiscAlbum } from "./icons/DiscAlbum.js";
+import { Divide } from "./icons/Divide.js";
+import { Dna } from "./icons/Dna.js";
+import { DnaOff } from "./icons/DnaOff.js";
+import { Dock } from "./icons/Dock.js";
+import { Dog } from "./icons/Dog.js";
+import { DollarSign } from "./icons/DollarSign.js";
+import { Donut } from "./icons/Donut.js";
+import { DoorClosed } from "./icons/DoorClosed.js";
+import { DoorClosedLocked } from "./icons/DoorClosedLocked.js";
+import { DoorOpen } from "./icons/DoorOpen.js";
+import { Dot } from "./icons/Dot.js";
+import { Download } from "./icons/Download.js";
+import { DraftingCompass } from "./icons/DraftingCompass.js";
+import { Drama } from "./icons/Drama.js";
+import { Drill } from "./icons/Drill.js";
+import { Drone } from "./icons/Drone.js";
+import { Droplet } from "./icons/Droplet.js";
+import { DropletOff } from "./icons/DropletOff.js";
+import { Droplets } from "./icons/Droplets.js";
+import { Drum } from "./icons/Drum.js";
+import { Drumstick } from "./icons/Drumstick.js";
+import { Dumbbell } from "./icons/Dumbbell.js";
+import { Ear } from "./icons/Ear.js";
+import { EarOff } from "./icons/EarOff.js";
+import { Earth } from "./icons/Earth.js";
+import { EarthLock } from "./icons/EarthLock.js";
+import { Eclipse } from "./icons/Eclipse.js";
+import { Egg } from "./icons/Egg.js";
+import { EggFried } from "./icons/EggFried.js";
+import { EggOff } from "./icons/EggOff.js";
+import { Ellipse } from "./icons/Ellipse.js";
+import { Ellipsis } from "./icons/Ellipsis.js";
+import { EllipsisVertical } from "./icons/EllipsisVertical.js";
+import { Equal } from "./icons/Equal.js";
+import { EqualApproximately } from "./icons/EqualApproximately.js";
+import { EqualNot } from "./icons/EqualNot.js";
+import { Eraser } from "./icons/Eraser.js";
+import { EthernetPort } from "./icons/EthernetPort.js";
+import { Euro } from "./icons/Euro.js";
+import { EvCharger } from "./icons/EvCharger.js";
+import { Expand } from "./icons/Expand.js";
+import { ExternalLink } from "./icons/ExternalLink.js";
+import { Eye } from "./icons/Eye.js";
+import { EyeClosed } from "./icons/EyeClosed.js";
+import { EyeOff } from "./icons/EyeOff.js";
+import { Factory } from "./icons/Factory.js";
+import { Fan } from "./icons/Fan.js";
+import { FastForward } from "./icons/FastForward.js";
+import { Feather } from "./icons/Feather.js";
+import { Fence } from "./icons/Fence.js";
+import { FerrisWheel } from "./icons/FerrisWheel.js";
+import { File } from "./icons/File.js";
+import { FileArchive } from "./icons/FileArchive.js";
+import { FileAxis3d } from "./icons/FileAxis3d.js";
+import { FileBadge } from "./icons/FileBadge.js";
+import { FileBox } from "./icons/FileBox.js";
+import { FileBraces } from "./icons/FileBraces.js";
+import { FileBracesCorner } from "./icons/FileBracesCorner.js";
+import { FileChartColumn } from "./icons/FileChartColumn.js";
+import { FileChartColumnIncreasing } from "./icons/FileChartColumnIncreasing.js";
+import { FileChartLine } from "./icons/FileChartLine.js";
+import { FileChartPie } from "./icons/FileChartPie.js";
+import { FileCheck } from "./icons/FileCheck.js";
+import { FileCheckCorner } from "./icons/FileCheckCorner.js";
+import { FileClock } from "./icons/FileClock.js";
+import { FileCode } from "./icons/FileCode.js";
+import { FileCodeCorner } from "./icons/FileCodeCorner.js";
+import { FileCog } from "./icons/FileCog.js";
+import { FileDiff } from "./icons/FileDiff.js";
+import { FileDigit } from "./icons/FileDigit.js";
+import { FileDown } from "./icons/FileDown.js";
+import { FileExclamationPoint } from "./icons/FileExclamationPoint.js";
+import { FileHeadphone } from "./icons/FileHeadphone.js";
+import { FileHeart } from "./icons/FileHeart.js";
+import { FileImage } from "./icons/FileImage.js";
+import { FileInput } from "./icons/FileInput.js";
+import { FileKey } from "./icons/FileKey.js";
+import { FileLock } from "./icons/FileLock.js";
+import { FileMinus } from "./icons/FileMinus.js";
+import { FileMinusCorner } from "./icons/FileMinusCorner.js";
+import { FileMusic } from "./icons/FileMusic.js";
+import { FileOutput } from "./icons/FileOutput.js";
+import { FilePen } from "./icons/FilePen.js";
+import { FilePenLine } from "./icons/FilePenLine.js";
+import { FilePlay } from "./icons/FilePlay.js";
+import { FilePlus } from "./icons/FilePlus.js";
+import { FilePlusCorner } from "./icons/FilePlusCorner.js";
+import { FileQuestionMark } from "./icons/FileQuestionMark.js";
+import { FileScan } from "./icons/FileScan.js";
+import { FileSearch } from "./icons/FileSearch.js";
+import { FileSearchCorner } from "./icons/FileSearchCorner.js";
+import { FileSignal } from "./icons/FileSignal.js";
+import { FileSliders } from "./icons/FileSliders.js";
+import { FileSpreadsheet } from "./icons/FileSpreadsheet.js";
+import { FileStack } from "./icons/FileStack.js";
+import { FileSymlink } from "./icons/FileSymlink.js";
+import { FileTerminal } from "./icons/FileTerminal.js";
+import { FileText } from "./icons/FileText.js";
+import { FileType } from "./icons/FileType.js";
+import { FileTypeCorner } from "./icons/FileTypeCorner.js";
+import { FileUp } from "./icons/FileUp.js";
+import { FileUser } from "./icons/FileUser.js";
+import { FileVideoCamera } from "./icons/FileVideoCamera.js";
+import { FileVolume } from "./icons/FileVolume.js";
+import { FileX } from "./icons/FileX.js";
+import { FileXCorner } from "./icons/FileXCorner.js";
+import { Files } from "./icons/Files.js";
+import { Film } from "./icons/Film.js";
+import { FingerprintPattern } from "./icons/FingerprintPattern.js";
+import { FireExtinguisher } from "./icons/FireExtinguisher.js";
+import { Fish } from "./icons/Fish.js";
+import { FishOff } from "./icons/FishOff.js";
+import { FishSymbol } from "./icons/FishSymbol.js";
+import { FishingHook } from "./icons/FishingHook.js";
+import { FishingRod } from "./icons/FishingRod.js";
+import { Flag } from "./icons/Flag.js";
+import { FlagOff } from "./icons/FlagOff.js";
+import { FlagTriangleLeft } from "./icons/FlagTriangleLeft.js";
+import { FlagTriangleRight } from "./icons/FlagTriangleRight.js";
+import { Flame } from "./icons/Flame.js";
+import { FlameKindling } from "./icons/FlameKindling.js";
+import { Flashlight } from "./icons/Flashlight.js";
+import { FlashlightOff } from "./icons/FlashlightOff.js";
+import { FlaskConical } from "./icons/FlaskConical.js";
+import { FlaskConicalOff } from "./icons/FlaskConicalOff.js";
+import { FlaskRound } from "./icons/FlaskRound.js";
+import { FlipHorizontal2 } from "./icons/FlipHorizontal2.js";
+import { FlipVertical2 } from "./icons/FlipVertical2.js";
+import { Flower } from "./icons/Flower.js";
+import { Flower2 } from "./icons/Flower2.js";
+import { Focus } from "./icons/Focus.js";
+import { FoldHorizontal } from "./icons/FoldHorizontal.js";
+import { FoldVertical } from "./icons/FoldVertical.js";
+import { Folder } from "./icons/Folder.js";
+import { FolderArchive } from "./icons/FolderArchive.js";
+import { FolderCheck } from "./icons/FolderCheck.js";
+import { FolderClock } from "./icons/FolderClock.js";
+import { FolderClosed } from "./icons/FolderClosed.js";
+import { FolderCode } from "./icons/FolderCode.js";
+import { FolderCog } from "./icons/FolderCog.js";
+import { FolderDot } from "./icons/FolderDot.js";
+import { FolderDown } from "./icons/FolderDown.js";
+import { FolderGit } from "./icons/FolderGit.js";
+import { FolderGit2 } from "./icons/FolderGit2.js";
+import { FolderHeart } from "./icons/FolderHeart.js";
+import { FolderInput } from "./icons/FolderInput.js";
+import { FolderKanban } from "./icons/FolderKanban.js";
+import { FolderKey } from "./icons/FolderKey.js";
+import { FolderLock } from "./icons/FolderLock.js";
+import { FolderMinus } from "./icons/FolderMinus.js";
+import { FolderOpen } from "./icons/FolderOpen.js";
+import { FolderOpenDot } from "./icons/FolderOpenDot.js";
+import { FolderOutput } from "./icons/FolderOutput.js";
+import { FolderPen } from "./icons/FolderPen.js";
+import { FolderPlus } from "./icons/FolderPlus.js";
+import { FolderRoot } from "./icons/FolderRoot.js";
+import { FolderSearch } from "./icons/FolderSearch.js";
+import { FolderSearch2 } from "./icons/FolderSearch2.js";
+import { FolderSymlink } from "./icons/FolderSymlink.js";
+import { FolderSync } from "./icons/FolderSync.js";
+import { FolderTree } from "./icons/FolderTree.js";
+import { FolderUp } from "./icons/FolderUp.js";
+import { FolderX } from "./icons/FolderX.js";
+import { Folders } from "./icons/Folders.js";
+import { Footprints } from "./icons/Footprints.js";
+import { Forklift } from "./icons/Forklift.js";
+import { Form } from "./icons/Form.js";
+import { Forward } from "./icons/Forward.js";
+import { Frame } from "./icons/Frame.js";
+import { Frown } from "./icons/Frown.js";
+import { Fuel } from "./icons/Fuel.js";
+import { Fullscreen } from "./icons/Fullscreen.js";
+import { Funnel } from "./icons/Funnel.js";
+import { FunnelPlus } from "./icons/FunnelPlus.js";
+import { FunnelX } from "./icons/FunnelX.js";
+import { GalleryHorizontal } from "./icons/GalleryHorizontal.js";
+import { GalleryHorizontalEnd } from "./icons/GalleryHorizontalEnd.js";
+import { GalleryThumbnails } from "./icons/GalleryThumbnails.js";
+import { GalleryVertical } from "./icons/GalleryVertical.js";
+import { GalleryVerticalEnd } from "./icons/GalleryVerticalEnd.js";
+import { Gamepad } from "./icons/Gamepad.js";
+import { Gamepad2 } from "./icons/Gamepad2.js";
+import { GamepadDirectional } from "./icons/GamepadDirectional.js";
+import { Gauge } from "./icons/Gauge.js";
+import { Gavel } from "./icons/Gavel.js";
+import { Gem } from "./icons/Gem.js";
+import { GeorgianLari } from "./icons/GeorgianLari.js";
+import { Ghost } from "./icons/Ghost.js";
+import { Gift } from "./icons/Gift.js";
+import { GitBranch } from "./icons/GitBranch.js";
+import { GitBranchMinus } from "./icons/GitBranchMinus.js";
+import { GitBranchPlus } from "./icons/GitBranchPlus.js";
+import { GitCommitHorizontal } from "./icons/GitCommitHorizontal.js";
+import { GitCommitVertical } from "./icons/GitCommitVertical.js";
+import { GitCompare } from "./icons/GitCompare.js";
+import { GitCompareArrows } from "./icons/GitCompareArrows.js";
+import { GitFork } from "./icons/GitFork.js";
+import { GitGraph } from "./icons/GitGraph.js";
+import { GitMerge } from "./icons/GitMerge.js";
+import { GitMergeConflict } from "./icons/GitMergeConflict.js";
+import { GitPullRequest } from "./icons/GitPullRequest.js";
+import { GitPullRequestArrow } from "./icons/GitPullRequestArrow.js";
+import { GitPullRequestClosed } from "./icons/GitPullRequestClosed.js";
+import { GitPullRequestCreate } from "./icons/GitPullRequestCreate.js";
+import { GitPullRequestCreateArrow } from "./icons/GitPullRequestCreateArrow.js";
+import { GitPullRequestDraft } from "./icons/GitPullRequestDraft.js";
+import { GlassWater } from "./icons/GlassWater.js";
+import { Glasses } from "./icons/Glasses.js";
+import { Globe } from "./icons/Globe.js";
+import { GlobeLock } from "./icons/GlobeLock.js";
+import { GlobeOff } from "./icons/GlobeOff.js";
+import { GlobeX } from "./icons/GlobeX.js";
+import { Goal } from "./icons/Goal.js";
+import { Gpu } from "./icons/Gpu.js";
+import { GraduationCap } from "./icons/GraduationCap.js";
+import { Grape } from "./icons/Grape.js";
+import { Grid2x2 } from "./icons/Grid2x2.js";
+import { Grid2x2Check } from "./icons/Grid2x2Check.js";
+import { Grid2x2Plus } from "./icons/Grid2x2Plus.js";
+import { Grid2x2X } from "./icons/Grid2x2X.js";
+import { Grid3x2 } from "./icons/Grid3x2.js";
+import { Grid3x3 } from "./icons/Grid3x3.js";
+import { Grip } from "./icons/Grip.js";
+import { GripHorizontal } from "./icons/GripHorizontal.js";
+import { GripVertical } from "./icons/GripVertical.js";
+import { Group } from "./icons/Group.js";
+import { Guitar } from "./icons/Guitar.js";
+import { Ham } from "./icons/Ham.js";
+import { Hamburger } from "./icons/Hamburger.js";
+import { Hammer } from "./icons/Hammer.js";
+import { Hand } from "./icons/Hand.js";
+import { HandCoins } from "./icons/HandCoins.js";
+import { HandFist } from "./icons/HandFist.js";
+import { HandGrab } from "./icons/HandGrab.js";
+import { HandHeart } from "./icons/HandHeart.js";
+import { HandHelping } from "./icons/HandHelping.js";
+import { HandMetal } from "./icons/HandMetal.js";
+import { HandPlatter } from "./icons/HandPlatter.js";
+import { Handbag } from "./icons/Handbag.js";
+import { Handshake } from "./icons/Handshake.js";
+import { HardDrive } from "./icons/HardDrive.js";
+import { HardDriveDownload } from "./icons/HardDriveDownload.js";
+import { HardDriveUpload } from "./icons/HardDriveUpload.js";
+import { HardHat } from "./icons/HardHat.js";
+import { Hash } from "./icons/Hash.js";
+import { HatGlasses } from "./icons/HatGlasses.js";
+import { Haze } from "./icons/Haze.js";
+import { Hd } from "./icons/Hd.js";
+import { HdmiPort } from "./icons/HdmiPort.js";
+import { Heading } from "./icons/Heading.js";
+import { Heading1 } from "./icons/Heading1.js";
+import { Heading2 } from "./icons/Heading2.js";
+import { Heading3 } from "./icons/Heading3.js";
+import { Heading4 } from "./icons/Heading4.js";
+import { Heading5 } from "./icons/Heading5.js";
+import { Heading6 } from "./icons/Heading6.js";
+import { HeadphoneOff } from "./icons/HeadphoneOff.js";
+import { Headphones } from "./icons/Headphones.js";
+import { Headset } from "./icons/Headset.js";
+import { Heart } from "./icons/Heart.js";
+import { HeartCrack } from "./icons/HeartCrack.js";
+import { HeartHandshake } from "./icons/HeartHandshake.js";
+import { HeartMinus } from "./icons/HeartMinus.js";
+import { HeartOff } from "./icons/HeartOff.js";
+import { HeartPlus } from "./icons/HeartPlus.js";
+import { HeartPulse } from "./icons/HeartPulse.js";
+import { Heater } from "./icons/Heater.js";
+import { Helicopter } from "./icons/Helicopter.js";
+import { Hexagon } from "./icons/Hexagon.js";
+import { Highlighter } from "./icons/Highlighter.js";
+import { History } from "./icons/History.js";
+import { Hop } from "./icons/Hop.js";
+import { HopOff } from "./icons/HopOff.js";
+import { Hospital } from "./icons/Hospital.js";
+import { Hotel } from "./icons/Hotel.js";
+import { Hourglass } from "./icons/Hourglass.js";
+import { House } from "./icons/House.js";
+import { HouseHeart } from "./icons/HouseHeart.js";
+import { HousePlug } from "./icons/HousePlug.js";
+import { HousePlus } from "./icons/HousePlus.js";
+import { HouseWifi } from "./icons/HouseWifi.js";
+import { IceCreamBowl } from "./icons/IceCreamBowl.js";
+import { IceCreamCone } from "./icons/IceCreamCone.js";
+import { IdCard } from "./icons/IdCard.js";
+import { IdCardLanyard } from "./icons/IdCardLanyard.js";
+import { Image } from "./icons/Image.js";
+import { ImageDown } from "./icons/ImageDown.js";
+import { ImageMinus } from "./icons/ImageMinus.js";
+import { ImageOff } from "./icons/ImageOff.js";
+import { ImagePlay } from "./icons/ImagePlay.js";
+import { ImagePlus } from "./icons/ImagePlus.js";
+import { ImageUp } from "./icons/ImageUp.js";
+import { ImageUpscale } from "./icons/ImageUpscale.js";
+import { Images } from "./icons/Images.js";
+import { Import } from "./icons/Import.js";
+import { Inbox } from "./icons/Inbox.js";
+import { IndianRupee } from "./icons/IndianRupee.js";
+import { InfinityIcon } from "./icons/InfinityIcon.js";
+import { Info } from "./icons/Info.js";
+import { InspectionPanel } from "./icons/InspectionPanel.js";
+import { Italic } from "./icons/Italic.js";
+import { IterationCcw } from "./icons/IterationCcw.js";
+import { IterationCw } from "./icons/IterationCw.js";
+import { JapaneseYen } from "./icons/JapaneseYen.js";
+import { Joystick } from "./icons/Joystick.js";
+import { Kanban } from "./icons/Kanban.js";
+import { Kayak } from "./icons/Kayak.js";
+import { Key } from "./icons/Key.js";
+import { KeyRound } from "./icons/KeyRound.js";
+import { KeySquare } from "./icons/KeySquare.js";
+import { Keyboard } from "./icons/Keyboard.js";
+import { KeyboardMusic } from "./icons/KeyboardMusic.js";
+import { KeyboardOff } from "./icons/KeyboardOff.js";
+import { Lamp } from "./icons/Lamp.js";
+import { LampCeiling } from "./icons/LampCeiling.js";
+import { LampDesk } from "./icons/LampDesk.js";
+import { LampFloor } from "./icons/LampFloor.js";
+import { LampWallDown } from "./icons/LampWallDown.js";
+import { LampWallUp } from "./icons/LampWallUp.js";
+import { LandPlot } from "./icons/LandPlot.js";
+import { Landmark } from "./icons/Landmark.js";
+import { Languages } from "./icons/Languages.js";
+import { Laptop } from "./icons/Laptop.js";
+import { LaptopMinimal } from "./icons/LaptopMinimal.js";
+import { LaptopMinimalCheck } from "./icons/LaptopMinimalCheck.js";
+import { Lasso } from "./icons/Lasso.js";
+import { LassoSelect } from "./icons/LassoSelect.js";
+import { Laugh } from "./icons/Laugh.js";
+import { Layers } from "./icons/Layers.js";
+import { Layers2 } from "./icons/Layers2.js";
+import { LayersPlus } from "./icons/LayersPlus.js";
+import { LayoutDashboard } from "./icons/LayoutDashboard.js";
+import { LayoutGrid } from "./icons/LayoutGrid.js";
+import { LayoutList } from "./icons/LayoutList.js";
+import { LayoutPanelLeft } from "./icons/LayoutPanelLeft.js";
+import { LayoutPanelTop } from "./icons/LayoutPanelTop.js";
+import { LayoutTemplate } from "./icons/LayoutTemplate.js";
+import { Leaf } from "./icons/Leaf.js";
+import { LeafyGreen } from "./icons/LeafyGreen.js";
+import { Lectern } from "./icons/Lectern.js";
+import { LensConcave } from "./icons/LensConcave.js";
+import { LensConvex } from "./icons/LensConvex.js";
+import { Library } from "./icons/Library.js";
+import { LibraryBig } from "./icons/LibraryBig.js";
+import { LifeBuoy } from "./icons/LifeBuoy.js";
+import { Ligature } from "./icons/Ligature.js";
+import { Lightbulb } from "./icons/Lightbulb.js";
+import { LightbulbOff } from "./icons/LightbulbOff.js";
+import { LineDotRightHorizontal } from "./icons/LineDotRightHorizontal.js";
+import { LineSquiggle } from "./icons/LineSquiggle.js";
+import { LineStyle } from "./icons/LineStyle.js";
+import { Link } from "./icons/Link.js";
+import { Link2 } from "./icons/Link2.js";
+import { Link2Off } from "./icons/Link2Off.js";
+import { List } from "./icons/List.js";
+import { ListCheck } from "./icons/ListCheck.js";
+import { ListChecks } from "./icons/ListChecks.js";
+import { ListChevronsDownUp } from "./icons/ListChevronsDownUp.js";
+import { ListChevronsUpDown } from "./icons/ListChevronsUpDown.js";
+import { ListCollapse } from "./icons/ListCollapse.js";
+import { ListEnd } from "./icons/ListEnd.js";
+import { ListFilter } from "./icons/ListFilter.js";
+import { ListFilterPlus } from "./icons/ListFilterPlus.js";
+import { ListIndentDecrease } from "./icons/ListIndentDecrease.js";
+import { ListIndentIncrease } from "./icons/ListIndentIncrease.js";
+import { ListMinus } from "./icons/ListMinus.js";
+import { ListMusic } from "./icons/ListMusic.js";
+import { ListOrdered } from "./icons/ListOrdered.js";
+import { ListPlus } from "./icons/ListPlus.js";
+import { ListRestart } from "./icons/ListRestart.js";
+import { ListStart } from "./icons/ListStart.js";
+import { ListTodo } from "./icons/ListTodo.js";
+import { ListTree } from "./icons/ListTree.js";
+import { ListVideo } from "./icons/ListVideo.js";
+import { ListX } from "./icons/ListX.js";
+import { Loader } from "./icons/Loader.js";
+import { LoaderCircle } from "./icons/LoaderCircle.js";
+import { LoaderPinwheel } from "./icons/LoaderPinwheel.js";
+import { Locate } from "./icons/Locate.js";
+import { LocateFixed } from "./icons/LocateFixed.js";
+import { LocateOff } from "./icons/LocateOff.js";
+import { Lock } from "./icons/Lock.js";
+import { LockKeyhole } from "./icons/LockKeyhole.js";
+import { LockKeyholeOpen } from "./icons/LockKeyholeOpen.js";
+import { LockOpen } from "./icons/LockOpen.js";
+import { LogIn } from "./icons/LogIn.js";
+import { LogOut } from "./icons/LogOut.js";
+import { Logs } from "./icons/Logs.js";
+import { Lollipop } from "./icons/Lollipop.js";
+import { Luggage } from "./icons/Luggage.js";
+import { Magnet } from "./icons/Magnet.js";
+import { Mail } from "./icons/Mail.js";
+import { MailCheck } from "./icons/MailCheck.js";
+import { MailMinus } from "./icons/MailMinus.js";
+import { MailOpen } from "./icons/MailOpen.js";
+import { MailPlus } from "./icons/MailPlus.js";
+import { MailQuestionMark } from "./icons/MailQuestionMark.js";
+import { MailSearch } from "./icons/MailSearch.js";
+import { MailWarning } from "./icons/MailWarning.js";
+import { MailX } from "./icons/MailX.js";
+import { Mailbox } from "./icons/Mailbox.js";
+import { Mails } from "./icons/Mails.js";
+import { Map } from "./icons/Map.js";
+import { MapMinus } from "./icons/MapMinus.js";
+import { MapPin } from "./icons/MapPin.js";
+import { MapPinCheck } from "./icons/MapPinCheck.js";
+import { MapPinCheckInside } from "./icons/MapPinCheckInside.js";
+import { MapPinHouse } from "./icons/MapPinHouse.js";
+import { MapPinMinus } from "./icons/MapPinMinus.js";
+import { MapPinMinusInside } from "./icons/MapPinMinusInside.js";
+import { MapPinOff } from "./icons/MapPinOff.js";
+import { MapPinPen } from "./icons/MapPinPen.js";
+import { MapPinPlus } from "./icons/MapPinPlus.js";
+import { MapPinPlusInside } from "./icons/MapPinPlusInside.js";
+import { MapPinSearch } from "./icons/MapPinSearch.js";
+import { MapPinX } from "./icons/MapPinX.js";
+import { MapPinXInside } from "./icons/MapPinXInside.js";
+import { MapPinned } from "./icons/MapPinned.js";
+import { MapPlus } from "./icons/MapPlus.js";
+import { Mars } from "./icons/Mars.js";
+import { MarsStroke } from "./icons/MarsStroke.js";
+import { Martini } from "./icons/Martini.js";
+import { Maximize } from "./icons/Maximize.js";
+import { Maximize2 } from "./icons/Maximize2.js";
+import { Medal } from "./icons/Medal.js";
+import { Megaphone } from "./icons/Megaphone.js";
+import { MegaphoneOff } from "./icons/MegaphoneOff.js";
+import { Meh } from "./icons/Meh.js";
+import { MemoryStick } from "./icons/MemoryStick.js";
+import { Menu } from "./icons/Menu.js";
+import { Merge } from "./icons/Merge.js";
+import { MessageCircle } from "./icons/MessageCircle.js";
+import { MessageCircleCheck } from "./icons/MessageCircleCheck.js";
+import { MessageCircleCode } from "./icons/MessageCircleCode.js";
+import { MessageCircleDashed } from "./icons/MessageCircleDashed.js";
+import { MessageCircleHeart } from "./icons/MessageCircleHeart.js";
+import { MessageCircleMore } from "./icons/MessageCircleMore.js";
+import { MessageCircleOff } from "./icons/MessageCircleOff.js";
+import { MessageCirclePlus } from "./icons/MessageCirclePlus.js";
+import { MessageCircleQuestionMark } from "./icons/MessageCircleQuestionMark.js";
+import { MessageCircleReply } from "./icons/MessageCircleReply.js";
+import { MessageCircleWarning } from "./icons/MessageCircleWarning.js";
+import { MessageCircleX } from "./icons/MessageCircleX.js";
+import { MessageSquare } from "./icons/MessageSquare.js";
+import { MessageSquareCheck } from "./icons/MessageSquareCheck.js";
+import { MessageSquareCode } from "./icons/MessageSquareCode.js";
+import { MessageSquareDashed } from "./icons/MessageSquareDashed.js";
+import { MessageSquareDiff } from "./icons/MessageSquareDiff.js";
+import { MessageSquareDot } from "./icons/MessageSquareDot.js";
+import { MessageSquareHeart } from "./icons/MessageSquareHeart.js";
+import { MessageSquareLock } from "./icons/MessageSquareLock.js";
+import { MessageSquareMore } from "./icons/MessageSquareMore.js";
+import { MessageSquareOff } from "./icons/MessageSquareOff.js";
+import { MessageSquarePlus } from "./icons/MessageSquarePlus.js";
+import { MessageSquareQuote } from "./icons/MessageSquareQuote.js";
+import { MessageSquareReply } from "./icons/MessageSquareReply.js";
+import { MessageSquareShare } from "./icons/MessageSquareShare.js";
+import { MessageSquareText } from "./icons/MessageSquareText.js";
+import { MessageSquareWarning } from "./icons/MessageSquareWarning.js";
+import { MessageSquareX } from "./icons/MessageSquareX.js";
+import { MessagesSquare } from "./icons/MessagesSquare.js";
+import { Metronome } from "./icons/Metronome.js";
+import { Mic } from "./icons/Mic.js";
+import { MicOff } from "./icons/MicOff.js";
+import { MicVocal } from "./icons/MicVocal.js";
+import { Microchip } from "./icons/Microchip.js";
+import { Microscope } from "./icons/Microscope.js";
+import { Microwave } from "./icons/Microwave.js";
+import { Milestone } from "./icons/Milestone.js";
+import { Milk } from "./icons/Milk.js";
+import { MilkOff } from "./icons/MilkOff.js";
+import { Minimize } from "./icons/Minimize.js";
+import { Minimize2 } from "./icons/Minimize2.js";
+import { Minus } from "./icons/Minus.js";
+import { MirrorRectangular } from "./icons/MirrorRectangular.js";
+import { MirrorRound } from "./icons/MirrorRound.js";
+import { Monitor } from "./icons/Monitor.js";
+import { MonitorCheck } from "./icons/MonitorCheck.js";
+import { MonitorCloud } from "./icons/MonitorCloud.js";
+import { MonitorCog } from "./icons/MonitorCog.js";
+import { MonitorDot } from "./icons/MonitorDot.js";
+import { MonitorDown } from "./icons/MonitorDown.js";
+import { MonitorOff } from "./icons/MonitorOff.js";
+import { MonitorPause } from "./icons/MonitorPause.js";
+import { MonitorPlay } from "./icons/MonitorPlay.js";
+import { MonitorSmartphone } from "./icons/MonitorSmartphone.js";
+import { MonitorSpeaker } from "./icons/MonitorSpeaker.js";
+import { MonitorStop } from "./icons/MonitorStop.js";
+import { MonitorUp } from "./icons/MonitorUp.js";
+import { MonitorX } from "./icons/MonitorX.js";
+import { Moon } from "./icons/Moon.js";
+import { MoonStar } from "./icons/MoonStar.js";
+import { Motorbike } from "./icons/Motorbike.js";
+import { Mountain } from "./icons/Mountain.js";
+import { MountainSnow } from "./icons/MountainSnow.js";
+import { Mouse } from "./icons/Mouse.js";
+import { MouseLeft } from "./icons/MouseLeft.js";
+import { MouseOff } from "./icons/MouseOff.js";
+import { MousePointer } from "./icons/MousePointer.js";
+import { MousePointer2 } from "./icons/MousePointer2.js";
+import { MousePointer2Off } from "./icons/MousePointer2Off.js";
+import { MousePointerBan } from "./icons/MousePointerBan.js";
+import { MousePointerClick } from "./icons/MousePointerClick.js";
+import { MouseRight } from "./icons/MouseRight.js";
+import { Move } from "./icons/Move.js";
+import { Move3d } from "./icons/Move3d.js";
+import { MoveDiagonal } from "./icons/MoveDiagonal.js";
+import { MoveDiagonal2 } from "./icons/MoveDiagonal2.js";
+import { MoveDown } from "./icons/MoveDown.js";
+import { MoveDownLeft } from "./icons/MoveDownLeft.js";
+import { MoveDownRight } from "./icons/MoveDownRight.js";
+import { MoveHorizontal } from "./icons/MoveHorizontal.js";
+import { MoveLeft } from "./icons/MoveLeft.js";
+import { MoveRight } from "./icons/MoveRight.js";
+import { MoveUp } from "./icons/MoveUp.js";
+import { MoveUpLeft } from "./icons/MoveUpLeft.js";
+import { MoveUpRight } from "./icons/MoveUpRight.js";
+import { MoveVertical } from "./icons/MoveVertical.js";
+import { Music } from "./icons/Music.js";
+import { Music2 } from "./icons/Music2.js";
+import { Music3 } from "./icons/Music3.js";
+import { Music4 } from "./icons/Music4.js";
+import { Navigation } from "./icons/Navigation.js";
+import { Navigation2 } from "./icons/Navigation2.js";
+import { Navigation2Off } from "./icons/Navigation2Off.js";
+import { NavigationOff } from "./icons/NavigationOff.js";
+import { Network } from "./icons/Network.js";
+import { Newspaper } from "./icons/Newspaper.js";
+import { Nfc } from "./icons/Nfc.js";
+import { NonBinary } from "./icons/NonBinary.js";
+import { Notebook } from "./icons/Notebook.js";
+import { NotebookPen } from "./icons/NotebookPen.js";
+import { NotebookTabs } from "./icons/NotebookTabs.js";
+import { NotebookText } from "./icons/NotebookText.js";
+import { NotepadText } from "./icons/NotepadText.js";
+import { NotepadTextDashed } from "./icons/NotepadTextDashed.js";
+import { Nut } from "./icons/Nut.js";
+import { NutOff } from "./icons/NutOff.js";
+import { Octagon } from "./icons/Octagon.js";
+import { OctagonAlert } from "./icons/OctagonAlert.js";
+import { OctagonMinus } from "./icons/OctagonMinus.js";
+import { OctagonPause } from "./icons/OctagonPause.js";
+import { OctagonX } from "./icons/OctagonX.js";
+import { Omega } from "./icons/Omega.js";
+import { Option } from "./icons/Option.js";
+import { Orbit } from "./icons/Orbit.js";
+import { Origami } from "./icons/Origami.js";
+import { Package } from "./icons/Package.js";
+import { Package2 } from "./icons/Package2.js";
+import { PackageCheck } from "./icons/PackageCheck.js";
+import { PackageMinus } from "./icons/PackageMinus.js";
+import { PackageOpen } from "./icons/PackageOpen.js";
+import { PackagePlus } from "./icons/PackagePlus.js";
+import { PackageSearch } from "./icons/PackageSearch.js";
+import { PackageX } from "./icons/PackageX.js";
+import { PaintBucket } from "./icons/PaintBucket.js";
+import { PaintRoller } from "./icons/PaintRoller.js";
+import { Paintbrush } from "./icons/Paintbrush.js";
+import { PaintbrushVertical } from "./icons/PaintbrushVertical.js";
+import { Palette } from "./icons/Palette.js";
+import { Panda } from "./icons/Panda.js";
+import { PanelBottom } from "./icons/PanelBottom.js";
+import { PanelBottomClose } from "./icons/PanelBottomClose.js";
+import { PanelBottomDashed } from "./icons/PanelBottomDashed.js";
+import { PanelBottomOpen } from "./icons/PanelBottomOpen.js";
+import { PanelLeft } from "./icons/PanelLeft.js";
+import { PanelLeftClose } from "./icons/PanelLeftClose.js";
+import { PanelLeftDashed } from "./icons/PanelLeftDashed.js";
+import { PanelLeftOpen } from "./icons/PanelLeftOpen.js";
+import { PanelLeftRightDashed } from "./icons/PanelLeftRightDashed.js";
+import { PanelRight } from "./icons/PanelRight.js";
+import { PanelRightClose } from "./icons/PanelRightClose.js";
+import { PanelRightDashed } from "./icons/PanelRightDashed.js";
+import { PanelRightOpen } from "./icons/PanelRightOpen.js";
+import { PanelTop } from "./icons/PanelTop.js";
+import { PanelTopBottomDashed } from "./icons/PanelTopBottomDashed.js";
+import { PanelTopClose } from "./icons/PanelTopClose.js";
+import { PanelTopDashed } from "./icons/PanelTopDashed.js";
+import { PanelTopOpen } from "./icons/PanelTopOpen.js";
+import { PanelsLeftBottom } from "./icons/PanelsLeftBottom.js";
+import { PanelsRightBottom } from "./icons/PanelsRightBottom.js";
+import { PanelsTopLeft } from "./icons/PanelsTopLeft.js";
+import { Paperclip } from "./icons/Paperclip.js";
+import { Parentheses } from "./icons/Parentheses.js";
+import { ParkingMeter } from "./icons/ParkingMeter.js";
+import { PartyPopper } from "./icons/PartyPopper.js";
+import { Pause } from "./icons/Pause.js";
+import { PawPrint } from "./icons/PawPrint.js";
+import { PcCase } from "./icons/PcCase.js";
+import { Pen } from "./icons/Pen.js";
+import { PenLine } from "./icons/PenLine.js";
+import { PenOff } from "./icons/PenOff.js";
+import { PenTool } from "./icons/PenTool.js";
+import { Pencil } from "./icons/Pencil.js";
+import { PencilLine } from "./icons/PencilLine.js";
+import { PencilOff } from "./icons/PencilOff.js";
+import { PencilRuler } from "./icons/PencilRuler.js";
+import { Pentagon } from "./icons/Pentagon.js";
+import { Percent } from "./icons/Percent.js";
+import { PersonStanding } from "./icons/PersonStanding.js";
+import { PhilippinePeso } from "./icons/PhilippinePeso.js";
+import { Phone } from "./icons/Phone.js";
+import { PhoneCall } from "./icons/PhoneCall.js";
+import { PhoneForwarded } from "./icons/PhoneForwarded.js";
+import { PhoneIncoming } from "./icons/PhoneIncoming.js";
+import { PhoneMissed } from "./icons/PhoneMissed.js";
+import { PhoneOff } from "./icons/PhoneOff.js";
+import { PhoneOutgoing } from "./icons/PhoneOutgoing.js";
+import { Pi } from "./icons/Pi.js";
+import { Piano } from "./icons/Piano.js";
+import { Pickaxe } from "./icons/Pickaxe.js";
+import { PictureInPicture } from "./icons/PictureInPicture.js";
+import { PictureInPicture2 } from "./icons/PictureInPicture2.js";
+import { PiggyBank } from "./icons/PiggyBank.js";
+import { Pilcrow } from "./icons/Pilcrow.js";
+import { PilcrowLeft } from "./icons/PilcrowLeft.js";
+import { PilcrowRight } from "./icons/PilcrowRight.js";
+import { Pill } from "./icons/Pill.js";
+import { PillBottle } from "./icons/PillBottle.js";
+import { Pin } from "./icons/Pin.js";
+import { PinOff } from "./icons/PinOff.js";
+import { Pipette } from "./icons/Pipette.js";
+import { Pizza } from "./icons/Pizza.js";
+import { Plane } from "./icons/Plane.js";
+import { PlaneLanding } from "./icons/PlaneLanding.js";
+import { PlaneTakeoff } from "./icons/PlaneTakeoff.js";
+import { Play } from "./icons/Play.js";
+import { Plug } from "./icons/Plug.js";
+import { Plug2 } from "./icons/Plug2.js";
+import { PlugZap } from "./icons/PlugZap.js";
+import { Plus } from "./icons/Plus.js";
+import { PocketKnife } from "./icons/PocketKnife.js";
+import { Podcast } from "./icons/Podcast.js";
+import { Pointer } from "./icons/Pointer.js";
+import { PointerOff } from "./icons/PointerOff.js";
+import { Popcorn } from "./icons/Popcorn.js";
+import { Popsicle } from "./icons/Popsicle.js";
+import { PoundSterling } from "./icons/PoundSterling.js";
+import { Power } from "./icons/Power.js";
+import { PowerOff } from "./icons/PowerOff.js";
+import { Presentation } from "./icons/Presentation.js";
+import { Printer } from "./icons/Printer.js";
+import { PrinterCheck } from "./icons/PrinterCheck.js";
+import { PrinterX } from "./icons/PrinterX.js";
+import { Projector } from "./icons/Projector.js";
+import { Proportions } from "./icons/Proportions.js";
+import { Puzzle } from "./icons/Puzzle.js";
+import { Pyramid } from "./icons/Pyramid.js";
+import { QrCode } from "./icons/QrCode.js";
+import { Quote } from "./icons/Quote.js";
+import { Rabbit } from "./icons/Rabbit.js";
+import { Radar } from "./icons/Radar.js";
+import { Radiation } from "./icons/Radiation.js";
+import { Radical } from "./icons/Radical.js";
+import { Radio } from "./icons/Radio.js";
+import { RadioOff } from "./icons/RadioOff.js";
+import { RadioReceiver } from "./icons/RadioReceiver.js";
+import { RadioTower } from "./icons/RadioTower.js";
+import { Radius } from "./icons/Radius.js";
+import { Rainbow } from "./icons/Rainbow.js";
+import { Rat } from "./icons/Rat.js";
+import { Ratio } from "./icons/Ratio.js";
+import { Receipt } from "./icons/Receipt.js";
+import { ReceiptCent } from "./icons/ReceiptCent.js";
+import { ReceiptEuro } from "./icons/ReceiptEuro.js";
+import { ReceiptIndianRupee } from "./icons/ReceiptIndianRupee.js";
+import { ReceiptJapaneseYen } from "./icons/ReceiptJapaneseYen.js";
+import { ReceiptPoundSterling } from "./icons/ReceiptPoundSterling.js";
+import { ReceiptRussianRuble } from "./icons/ReceiptRussianRuble.js";
+import { ReceiptSwissFranc } from "./icons/ReceiptSwissFranc.js";
+import { ReceiptText } from "./icons/ReceiptText.js";
+import { ReceiptTurkishLira } from "./icons/ReceiptTurkishLira.js";
+import { RectangleCircle } from "./icons/RectangleCircle.js";
+import { RectangleEllipsis } from "./icons/RectangleEllipsis.js";
+import { RectangleGoggles } from "./icons/RectangleGoggles.js";
+import { RectangleHorizontal } from "./icons/RectangleHorizontal.js";
+import { RectangleVertical } from "./icons/RectangleVertical.js";
+import { Recycle } from "./icons/Recycle.js";
+import { Redo } from "./icons/Redo.js";
+import { Redo2 } from "./icons/Redo2.js";
+import { RedoDot } from "./icons/RedoDot.js";
+import { RefreshCcw } from "./icons/RefreshCcw.js";
+import { RefreshCcwDot } from "./icons/RefreshCcwDot.js";
+import { RefreshCw } from "./icons/RefreshCw.js";
+import { RefreshCwOff } from "./icons/RefreshCwOff.js";
+import { Refrigerator } from "./icons/Refrigerator.js";
+import { Regex } from "./icons/Regex.js";
+import { RemoveFormatting } from "./icons/RemoveFormatting.js";
+import { Repeat } from "./icons/Repeat.js";
+import { Repeat1 } from "./icons/Repeat1.js";
+import { Repeat2 } from "./icons/Repeat2.js";
+import { Replace } from "./icons/Replace.js";
+import { ReplaceAll } from "./icons/ReplaceAll.js";
+import { Reply } from "./icons/Reply.js";
+import { ReplyAll } from "./icons/ReplyAll.js";
+import { Rewind } from "./icons/Rewind.js";
+import { Ribbon } from "./icons/Ribbon.js";
+import { Road } from "./icons/Road.js";
+import { Rocket } from "./icons/Rocket.js";
+import { RockingChair } from "./icons/RockingChair.js";
+import { RollerCoaster } from "./icons/RollerCoaster.js";
+import { Rose } from "./icons/Rose.js";
+import { Rotate3d } from "./icons/Rotate3d.js";
+import { RotateCcw } from "./icons/RotateCcw.js";
+import { RotateCcwKey } from "./icons/RotateCcwKey.js";
+import { RotateCcwSquare } from "./icons/RotateCcwSquare.js";
+import { RotateCw } from "./icons/RotateCw.js";
+import { RotateCwSquare } from "./icons/RotateCwSquare.js";
+import { Route } from "./icons/Route.js";
+import { RouteOff } from "./icons/RouteOff.js";
+import { Router } from "./icons/Router.js";
+import { Rows2 } from "./icons/Rows2.js";
+import { Rows3 } from "./icons/Rows3.js";
+import { Rows4 } from "./icons/Rows4.js";
+import { Rss } from "./icons/Rss.js";
+import { Ruler } from "./icons/Ruler.js";
+import { RulerDimensionLine } from "./icons/RulerDimensionLine.js";
+import { RussianRuble } from "./icons/RussianRuble.js";
+import { Sailboat } from "./icons/Sailboat.js";
+import { Salad } from "./icons/Salad.js";
+import { Sandwich } from "./icons/Sandwich.js";
+import { Satellite } from "./icons/Satellite.js";
+import { SatelliteDish } from "./icons/SatelliteDish.js";
+import { SaudiRiyal } from "./icons/SaudiRiyal.js";
+import { Save } from "./icons/Save.js";
+import { SaveAll } from "./icons/SaveAll.js";
+import { SaveOff } from "./icons/SaveOff.js";
+import { Scale } from "./icons/Scale.js";
+import { Scale3d } from "./icons/Scale3d.js";
+import { Scaling } from "./icons/Scaling.js";
+import { Scan } from "./icons/Scan.js";
+import { ScanBarcode } from "./icons/ScanBarcode.js";
+import { ScanEye } from "./icons/ScanEye.js";
+import { ScanFace } from "./icons/ScanFace.js";
+import { ScanHeart } from "./icons/ScanHeart.js";
+import { ScanLine } from "./icons/ScanLine.js";
+import { ScanQrCode } from "./icons/ScanQrCode.js";
+import { ScanSearch } from "./icons/ScanSearch.js";
+import { ScanText } from "./icons/ScanText.js";
+import { School } from "./icons/School.js";
+import { Scissors } from "./icons/Scissors.js";
+import { ScissorsLineDashed } from "./icons/ScissorsLineDashed.js";
+import { Scooter } from "./icons/Scooter.js";
+import { ScreenShare } from "./icons/ScreenShare.js";
+import { ScreenShareOff } from "./icons/ScreenShareOff.js";
+import { Scroll } from "./icons/Scroll.js";
+import { ScrollText } from "./icons/ScrollText.js";
+import { Search } from "./icons/Search.js";
+import { SearchAlert } from "./icons/SearchAlert.js";
+import { SearchCheck } from "./icons/SearchCheck.js";
+import { SearchCode } from "./icons/SearchCode.js";
+import { SearchSlash } from "./icons/SearchSlash.js";
+import { SearchX } from "./icons/SearchX.js";
+import { Section } from "./icons/Section.js";
+import { Send } from "./icons/Send.js";
+import { SendHorizontal } from "./icons/SendHorizontal.js";
+import { SendToBack } from "./icons/SendToBack.js";
+import { SeparatorHorizontal } from "./icons/SeparatorHorizontal.js";
+import { SeparatorVertical } from "./icons/SeparatorVertical.js";
+import { Server } from "./icons/Server.js";
+import { ServerCog } from "./icons/ServerCog.js";
+import { ServerCrash } from "./icons/ServerCrash.js";
+import { ServerOff } from "./icons/ServerOff.js";
+import { Settings } from "./icons/Settings.js";
+import { Settings2 } from "./icons/Settings2.js";
+import { Shapes } from "./icons/Shapes.js";
+import { Share } from "./icons/Share.js";
+import { Share2 } from "./icons/Share2.js";
+import { Sheet } from "./icons/Sheet.js";
+import { Shell } from "./icons/Shell.js";
+import { ShelvingUnit } from "./icons/ShelvingUnit.js";
+import { Shield } from "./icons/Shield.js";
+import { ShieldAlert } from "./icons/ShieldAlert.js";
+import { ShieldBan } from "./icons/ShieldBan.js";
+import { ShieldCheck } from "./icons/ShieldCheck.js";
+import { ShieldCog } from "./icons/ShieldCog.js";
+import { ShieldCogCorner } from "./icons/ShieldCogCorner.js";
+import { ShieldEllipsis } from "./icons/ShieldEllipsis.js";
+import { ShieldHalf } from "./icons/ShieldHalf.js";
+import { ShieldMinus } from "./icons/ShieldMinus.js";
+import { ShieldOff } from "./icons/ShieldOff.js";
+import { ShieldPlus } from "./icons/ShieldPlus.js";
+import { ShieldQuestionMark } from "./icons/ShieldQuestionMark.js";
+import { ShieldUser } from "./icons/ShieldUser.js";
+import { ShieldX } from "./icons/ShieldX.js";
+import { Ship } from "./icons/Ship.js";
+import { ShipWheel } from "./icons/ShipWheel.js";
+import { Shirt } from "./icons/Shirt.js";
+import { ShoppingBag } from "./icons/ShoppingBag.js";
+import { ShoppingBasket } from "./icons/ShoppingBasket.js";
+import { ShoppingCart } from "./icons/ShoppingCart.js";
+import { Shovel } from "./icons/Shovel.js";
+import { ShowerHead } from "./icons/ShowerHead.js";
+import { Shredder } from "./icons/Shredder.js";
+import { Shrimp } from "./icons/Shrimp.js";
+import { Shrink } from "./icons/Shrink.js";
+import { Shrub } from "./icons/Shrub.js";
+import { Shuffle } from "./icons/Shuffle.js";
+import { Sigma } from "./icons/Sigma.js";
+import { Signal } from "./icons/Signal.js";
+import { SignalHigh } from "./icons/SignalHigh.js";
+import { SignalLow } from "./icons/SignalLow.js";
+import { SignalMedium } from "./icons/SignalMedium.js";
+import { SignalZero } from "./icons/SignalZero.js";
+import { Signature } from "./icons/Signature.js";
+import { Signpost } from "./icons/Signpost.js";
+import { SignpostBig } from "./icons/SignpostBig.js";
+import { Siren } from "./icons/Siren.js";
+import { SkipBack } from "./icons/SkipBack.js";
+import { SkipForward } from "./icons/SkipForward.js";
+import { Skull } from "./icons/Skull.js";
+import { Slash } from "./icons/Slash.js";
+import { Slice } from "./icons/Slice.js";
+import { SlidersHorizontal } from "./icons/SlidersHorizontal.js";
+import { SlidersVertical } from "./icons/SlidersVertical.js";
+import { Smartphone } from "./icons/Smartphone.js";
+import { SmartphoneCharging } from "./icons/SmartphoneCharging.js";
+import { SmartphoneNfc } from "./icons/SmartphoneNfc.js";
+import { Smile } from "./icons/Smile.js";
+import { SmilePlus } from "./icons/SmilePlus.js";
+import { Snail } from "./icons/Snail.js";
+import { Snowflake } from "./icons/Snowflake.js";
+import { SoapDispenserDroplet } from "./icons/SoapDispenserDroplet.js";
+import { Sofa } from "./icons/Sofa.js";
+import { SolarPanel } from "./icons/SolarPanel.js";
+import { Soup } from "./icons/Soup.js";
+import { Space } from "./icons/Space.js";
+import { Spade } from "./icons/Spade.js";
+import { Sparkle } from "./icons/Sparkle.js";
+import { Sparkles } from "./icons/Sparkles.js";
+import { Speaker } from "./icons/Speaker.js";
+import { Speech } from "./icons/Speech.js";
+import { SpellCheck } from "./icons/SpellCheck.js";
+import { SpellCheck2 } from "./icons/SpellCheck2.js";
+import { Spline } from "./icons/Spline.js";
+import { SplinePointer } from "./icons/SplinePointer.js";
+import { Split } from "./icons/Split.js";
+import { Spool } from "./icons/Spool.js";
+import { SportShoe } from "./icons/SportShoe.js";
+import { Spotlight } from "./icons/Spotlight.js";
+import { SprayCan } from "./icons/SprayCan.js";
+import { Sprout } from "./icons/Sprout.js";
+import { Square } from "./icons/Square.js";
+import { SquareActivity } from "./icons/SquareActivity.js";
+import { SquareArrowDown } from "./icons/SquareArrowDown.js";
+import { SquareArrowDownLeft } from "./icons/SquareArrowDownLeft.js";
+import { SquareArrowDownRight } from "./icons/SquareArrowDownRight.js";
+import { SquareArrowLeft } from "./icons/SquareArrowLeft.js";
+import { SquareArrowOutDownLeft } from "./icons/SquareArrowOutDownLeft.js";
+import { SquareArrowOutDownRight } from "./icons/SquareArrowOutDownRight.js";
+import { SquareArrowOutUpLeft } from "./icons/SquareArrowOutUpLeft.js";
+import { SquareArrowOutUpRight } from "./icons/SquareArrowOutUpRight.js";
+import { SquareArrowRight } from "./icons/SquareArrowRight.js";
+import { SquareArrowRightEnter } from "./icons/SquareArrowRightEnter.js";
+import { SquareArrowRightExit } from "./icons/SquareArrowRightExit.js";
+import { SquareArrowUp } from "./icons/SquareArrowUp.js";
+import { SquareArrowUpLeft } from "./icons/SquareArrowUpLeft.js";
+import { SquareArrowUpRight } from "./icons/SquareArrowUpRight.js";
+import { SquareAsterisk } from "./icons/SquareAsterisk.js";
+import { SquareBottomDashedScissors } from "./icons/SquareBottomDashedScissors.js";
+import { SquareCenterlineDashedHorizontal } from "./icons/SquareCenterlineDashedHorizontal.js";
+import { SquareCenterlineDashedVertical } from "./icons/SquareCenterlineDashedVertical.js";
+import { SquareChartGantt } from "./icons/SquareChartGantt.js";
+import { SquareCheck } from "./icons/SquareCheck.js";
+import { SquareCheckBig } from "./icons/SquareCheckBig.js";
+import { SquareChevronDown } from "./icons/SquareChevronDown.js";
+import { SquareChevronLeft } from "./icons/SquareChevronLeft.js";
+import { SquareChevronRight } from "./icons/SquareChevronRight.js";
+import { SquareChevronUp } from "./icons/SquareChevronUp.js";
+import { SquareCode } from "./icons/SquareCode.js";
+import { SquareDashed } from "./icons/SquareDashed.js";
+import { SquareDashedBottom } from "./icons/SquareDashedBottom.js";
+import { SquareDashedBottomCode } from "./icons/SquareDashedBottomCode.js";
+import { SquareDashedKanban } from "./icons/SquareDashedKanban.js";
+import { SquareDashedMousePointer } from "./icons/SquareDashedMousePointer.js";
+import { SquareDashedTopSolid } from "./icons/SquareDashedTopSolid.js";
+import { SquareDivide } from "./icons/SquareDivide.js";
+import { SquareDot } from "./icons/SquareDot.js";
+import { SquareEqual } from "./icons/SquareEqual.js";
+import { SquareFunction } from "./icons/SquareFunction.js";
+import { SquareKanban } from "./icons/SquareKanban.js";
+import { SquareLibrary } from "./icons/SquareLibrary.js";
+import { SquareM } from "./icons/SquareM.js";
+import { SquareMenu } from "./icons/SquareMenu.js";
+import { SquareMinus } from "./icons/SquareMinus.js";
+import { SquareMousePointer } from "./icons/SquareMousePointer.js";
+import { SquareParking } from "./icons/SquareParking.js";
+import { SquareParkingOff } from "./icons/SquareParkingOff.js";
+import { SquarePause } from "./icons/SquarePause.js";
+import { SquarePen } from "./icons/SquarePen.js";
+import { SquarePercent } from "./icons/SquarePercent.js";
+import { SquarePi } from "./icons/SquarePi.js";
+import { SquarePilcrow } from "./icons/SquarePilcrow.js";
+import { SquarePlay } from "./icons/SquarePlay.js";
+import { SquarePlus } from "./icons/SquarePlus.js";
+import { SquarePower } from "./icons/SquarePower.js";
+import { SquareRadical } from "./icons/SquareRadical.js";
+import { SquareRoundCorner } from "./icons/SquareRoundCorner.js";
+import { SquareScissors } from "./icons/SquareScissors.js";
+import { SquareSigma } from "./icons/SquareSigma.js";
+import { SquareSlash } from "./icons/SquareSlash.js";
+import { SquareSplitHorizontal } from "./icons/SquareSplitHorizontal.js";
+import { SquareSplitVertical } from "./icons/SquareSplitVertical.js";
+import { SquareSquare } from "./icons/SquareSquare.js";
+import { SquareStack } from "./icons/SquareStack.js";
+import { SquareStar } from "./icons/SquareStar.js";
+import { SquareStop } from "./icons/SquareStop.js";
+import { SquareTerminal } from "./icons/SquareTerminal.js";
+import { SquareUser } from "./icons/SquareUser.js";
+import { SquareUserRound } from "./icons/SquareUserRound.js";
+import { SquareX } from "./icons/SquareX.js";
+import { SquaresExclude } from "./icons/SquaresExclude.js";
+import { SquaresIntersect } from "./icons/SquaresIntersect.js";
+import { SquaresSubtract } from "./icons/SquaresSubtract.js";
+import { SquaresUnite } from "./icons/SquaresUnite.js";
+import { Squircle } from "./icons/Squircle.js";
+import { SquircleDashed } from "./icons/SquircleDashed.js";
+import { Squirrel } from "./icons/Squirrel.js";
+import { Stamp } from "./icons/Stamp.js";
+import { Star } from "./icons/Star.js";
+import { StarHalf } from "./icons/StarHalf.js";
+import { StarOff } from "./icons/StarOff.js";
+import { StepBack } from "./icons/StepBack.js";
+import { StepForward } from "./icons/StepForward.js";
+import { Stethoscope } from "./icons/Stethoscope.js";
+import { Sticker } from "./icons/Sticker.js";
+import { StickyNote } from "./icons/StickyNote.js";
+import { Stone } from "./icons/Stone.js";
+import { Store } from "./icons/Store.js";
+import { StretchHorizontal } from "./icons/StretchHorizontal.js";
+import { StretchVertical } from "./icons/StretchVertical.js";
+import { Strikethrough } from "./icons/Strikethrough.js";
+import { Subscript } from "./icons/Subscript.js";
+import { Sun } from "./icons/Sun.js";
+import { SunDim } from "./icons/SunDim.js";
+import { SunMedium } from "./icons/SunMedium.js";
+import { SunMoon } from "./icons/SunMoon.js";
+import { SunSnow } from "./icons/SunSnow.js";
+import { Sunrise } from "./icons/Sunrise.js";
+import { Sunset } from "./icons/Sunset.js";
+import { Superscript } from "./icons/Superscript.js";
+import { SwatchBook } from "./icons/SwatchBook.js";
+import { SwissFranc } from "./icons/SwissFranc.js";
+import { SwitchCamera } from "./icons/SwitchCamera.js";
+import { Sword } from "./icons/Sword.js";
+import { Swords } from "./icons/Swords.js";
+import { Syringe } from "./icons/Syringe.js";
+import { Table } from "./icons/Table.js";
+import { Table2 } from "./icons/Table2.js";
+import { TableCellsMerge } from "./icons/TableCellsMerge.js";
+import { TableCellsSplit } from "./icons/TableCellsSplit.js";
+import { TableColumnsSplit } from "./icons/TableColumnsSplit.js";
+import { TableOfContents } from "./icons/TableOfContents.js";
+import { TableProperties } from "./icons/TableProperties.js";
+import { TableRowsSplit } from "./icons/TableRowsSplit.js";
+import { Tablet } from "./icons/Tablet.js";
+import { TabletSmartphone } from "./icons/TabletSmartphone.js";
+import { Tablets } from "./icons/Tablets.js";
+import { Tag } from "./icons/Tag.js";
+import { Tags } from "./icons/Tags.js";
+import { Tally1 } from "./icons/Tally1.js";
+import { Tally2 } from "./icons/Tally2.js";
+import { Tally3 } from "./icons/Tally3.js";
+import { Tally4 } from "./icons/Tally4.js";
+import { Tally5 } from "./icons/Tally5.js";
+import { Tangent } from "./icons/Tangent.js";
+import { Target } from "./icons/Target.js";
+import { Telescope } from "./icons/Telescope.js";
+import { Tent } from "./icons/Tent.js";
+import { TentTree } from "./icons/TentTree.js";
+import { Terminal } from "./icons/Terminal.js";
+import { TestTube } from "./icons/TestTube.js";
+import { TestTubeDiagonal } from "./icons/TestTubeDiagonal.js";
+import { TestTubes } from "./icons/TestTubes.js";
+import { TextAlignCenter } from "./icons/TextAlignCenter.js";
+import { TextAlignEnd } from "./icons/TextAlignEnd.js";
+import { TextAlignJustify } from "./icons/TextAlignJustify.js";
+import { TextAlignStart } from "./icons/TextAlignStart.js";
+import { TextCursor } from "./icons/TextCursor.js";
+import { TextCursorInput } from "./icons/TextCursorInput.js";
+import { TextInitial } from "./icons/TextInitial.js";
+import { TextQuote } from "./icons/TextQuote.js";
+import { TextSearch } from "./icons/TextSearch.js";
+import { TextSelect } from "./icons/TextSelect.js";
+import { TextWrap } from "./icons/TextWrap.js";
+import { Theater } from "./icons/Theater.js";
+import { Thermometer } from "./icons/Thermometer.js";
+import { ThermometerSnowflake } from "./icons/ThermometerSnowflake.js";
+import { ThermometerSun } from "./icons/ThermometerSun.js";
+import { ThumbsDown } from "./icons/ThumbsDown.js";
+import { ThumbsUp } from "./icons/ThumbsUp.js";
+import { Ticket } from "./icons/Ticket.js";
+import { TicketCheck } from "./icons/TicketCheck.js";
+import { TicketMinus } from "./icons/TicketMinus.js";
+import { TicketPercent } from "./icons/TicketPercent.js";
+import { TicketPlus } from "./icons/TicketPlus.js";
+import { TicketSlash } from "./icons/TicketSlash.js";
+import { TicketX } from "./icons/TicketX.js";
+import { Tickets } from "./icons/Tickets.js";
+import { TicketsPlane } from "./icons/TicketsPlane.js";
+import { Timer } from "./icons/Timer.js";
+import { TimerOff } from "./icons/TimerOff.js";
+import { TimerReset } from "./icons/TimerReset.js";
+import { ToggleLeft } from "./icons/ToggleLeft.js";
+import { ToggleRight } from "./icons/ToggleRight.js";
+import { Toilet } from "./icons/Toilet.js";
+import { ToolCase } from "./icons/ToolCase.js";
+import { Toolbox } from "./icons/Toolbox.js";
+import { Tornado } from "./icons/Tornado.js";
+import { Torus } from "./icons/Torus.js";
+import { Touchpad } from "./icons/Touchpad.js";
+import { TouchpadOff } from "./icons/TouchpadOff.js";
+import { TowelRack } from "./icons/TowelRack.js";
+import { TowerControl } from "./icons/TowerControl.js";
+import { ToyBrick } from "./icons/ToyBrick.js";
+import { Tractor } from "./icons/Tractor.js";
+import { TrafficCone } from "./icons/TrafficCone.js";
+import { TrainFront } from "./icons/TrainFront.js";
+import { TrainFrontTunnel } from "./icons/TrainFrontTunnel.js";
+import { TrainTrack } from "./icons/TrainTrack.js";
+import { TramFront } from "./icons/TramFront.js";
+import { Transgender } from "./icons/Transgender.js";
+import { Trash } from "./icons/Trash.js";
+import { Trash2 } from "./icons/Trash2.js";
+import { TreeDeciduous } from "./icons/TreeDeciduous.js";
+import { TreePalm } from "./icons/TreePalm.js";
+import { TreePine } from "./icons/TreePine.js";
+import { Trees } from "./icons/Trees.js";
+import { TrendingDown } from "./icons/TrendingDown.js";
+import { TrendingUp } from "./icons/TrendingUp.js";
+import { TrendingUpDown } from "./icons/TrendingUpDown.js";
+import { Triangle } from "./icons/Triangle.js";
+import { TriangleAlert } from "./icons/TriangleAlert.js";
+import { TriangleDashed } from "./icons/TriangleDashed.js";
+import { TriangleRight } from "./icons/TriangleRight.js";
+import { Trophy } from "./icons/Trophy.js";
+import { Truck } from "./icons/Truck.js";
+import { TruckElectric } from "./icons/TruckElectric.js";
+import { TurkishLira } from "./icons/TurkishLira.js";
+import { Turntable } from "./icons/Turntable.js";
+import { Turtle } from "./icons/Turtle.js";
+import { Tv } from "./icons/Tv.js";
+import { TvMinimal } from "./icons/TvMinimal.js";
+import { TvMinimalPlay } from "./icons/TvMinimalPlay.js";
+import { Type } from "./icons/Type.js";
+import { TypeOutline } from "./icons/TypeOutline.js";
+import { Umbrella } from "./icons/Umbrella.js";
+import { UmbrellaOff } from "./icons/UmbrellaOff.js";
+import { Underline } from "./icons/Underline.js";
+import { Undo } from "./icons/Undo.js";
+import { Undo2 } from "./icons/Undo2.js";
+import { UndoDot } from "./icons/UndoDot.js";
+import { UnfoldHorizontal } from "./icons/UnfoldHorizontal.js";
+import { UnfoldVertical } from "./icons/UnfoldVertical.js";
+import { Ungroup } from "./icons/Ungroup.js";
+import { University } from "./icons/University.js";
+import { Unlink } from "./icons/Unlink.js";
+import { Unlink2 } from "./icons/Unlink2.js";
+import { Unplug } from "./icons/Unplug.js";
+import { Upload } from "./icons/Upload.js";
+import { Usb } from "./icons/Usb.js";
+import { User } from "./icons/User.js";
+import { UserCheck } from "./icons/UserCheck.js";
+import { UserCog } from "./icons/UserCog.js";
+import { UserKey } from "./icons/UserKey.js";
+import { UserLock } from "./icons/UserLock.js";
+import { UserMinus } from "./icons/UserMinus.js";
+import { UserPen } from "./icons/UserPen.js";
+import { UserPlus } from "./icons/UserPlus.js";
+import { UserRound } from "./icons/UserRound.js";
+import { UserRoundCheck } from "./icons/UserRoundCheck.js";
+import { UserRoundCog } from "./icons/UserRoundCog.js";
+import { UserRoundKey } from "./icons/UserRoundKey.js";
+import { UserRoundMinus } from "./icons/UserRoundMinus.js";
+import { UserRoundPen } from "./icons/UserRoundPen.js";
+import { UserRoundPlus } from "./icons/UserRoundPlus.js";
+import { UserRoundSearch } from "./icons/UserRoundSearch.js";
+import { UserRoundX } from "./icons/UserRoundX.js";
+import { UserSearch } from "./icons/UserSearch.js";
+import { UserStar } from "./icons/UserStar.js";
+import { UserX } from "./icons/UserX.js";
+import { Users } from "./icons/Users.js";
+import { UsersRound } from "./icons/UsersRound.js";
+import { Utensils } from "./icons/Utensils.js";
+import { UtensilsCrossed } from "./icons/UtensilsCrossed.js";
+import { UtilityPole } from "./icons/UtilityPole.js";
+import { Van } from "./icons/Van.js";
+import { Variable } from "./icons/Variable.js";
+import { Vault } from "./icons/Vault.js";
+import { VectorSquare } from "./icons/VectorSquare.js";
+import { Vegan } from "./icons/Vegan.js";
+import { VenetianMask } from "./icons/VenetianMask.js";
+import { Venus } from "./icons/Venus.js";
+import { VenusAndMars } from "./icons/VenusAndMars.js";
+import { Vibrate } from "./icons/Vibrate.js";
+import { VibrateOff } from "./icons/VibrateOff.js";
+import { Video } from "./icons/Video.js";
+import { VideoOff } from "./icons/VideoOff.js";
+import { Videotape } from "./icons/Videotape.js";
+import { View } from "./icons/View.js";
+import { Voicemail } from "./icons/Voicemail.js";
+import { Volleyball } from "./icons/Volleyball.js";
+import { Volume } from "./icons/Volume.js";
+import { Volume1 } from "./icons/Volume1.js";
+import { Volume2 } from "./icons/Volume2.js";
+import { VolumeOff } from "./icons/VolumeOff.js";
+import { VolumeX } from "./icons/VolumeX.js";
+import { Vote } from "./icons/Vote.js";
+import { Wallet } from "./icons/Wallet.js";
+import { WalletCards } from "./icons/WalletCards.js";
+import { WalletMinimal } from "./icons/WalletMinimal.js";
+import { Wallpaper } from "./icons/Wallpaper.js";
+import { Wand } from "./icons/Wand.js";
+import { WandSparkles } from "./icons/WandSparkles.js";
+import { Warehouse } from "./icons/Warehouse.js";
+import { WashingMachine } from "./icons/WashingMachine.js";
+import { Watch } from "./icons/Watch.js";
+import { Waves } from "./icons/Waves.js";
+import { WavesArrowDown } from "./icons/WavesArrowDown.js";
+import { WavesArrowUp } from "./icons/WavesArrowUp.js";
+import { WavesLadder } from "./icons/WavesLadder.js";
+import { Waypoints } from "./icons/Waypoints.js";
+import { Webcam } from "./icons/Webcam.js";
+import { Webhook } from "./icons/Webhook.js";
+import { WebhookOff } from "./icons/WebhookOff.js";
+import { Weight } from "./icons/Weight.js";
+import { WeightTilde } from "./icons/WeightTilde.js";
+import { Wheat } from "./icons/Wheat.js";
+import { WheatOff } from "./icons/WheatOff.js";
+import { WholeWord } from "./icons/WholeWord.js";
+import { Wifi } from "./icons/Wifi.js";
+import { WifiCog } from "./icons/WifiCog.js";
+import { WifiHigh } from "./icons/WifiHigh.js";
+import { WifiLow } from "./icons/WifiLow.js";
+import { WifiOff } from "./icons/WifiOff.js";
+import { WifiPen } from "./icons/WifiPen.js";
+import { WifiSync } from "./icons/WifiSync.js";
+import { WifiZero } from "./icons/WifiZero.js";
+import { Wind } from "./icons/Wind.js";
+import { WindArrowDown } from "./icons/WindArrowDown.js";
+import { Wine } from "./icons/Wine.js";
+import { WineOff } from "./icons/WineOff.js";
+import { Workflow } from "./icons/Workflow.js";
+import { Worm } from "./icons/Worm.js";
+import { Wrench } from "./icons/Wrench.js";
+import { X } from "./icons/X.js";
+import { XLineTop } from "./icons/XLineTop.js";
+import { Zap } from "./icons/Zap.js";
+import { ZapOff } from "./icons/ZapOff.js";
+import { ZodiacAquarius } from "./icons/ZodiacAquarius.js";
+import { ZodiacAries } from "./icons/ZodiacAries.js";
+import { ZodiacCancer } from "./icons/ZodiacCancer.js";
+import { ZodiacCapricorn } from "./icons/ZodiacCapricorn.js";
+import { ZodiacGemini } from "./icons/ZodiacGemini.js";
+import { ZodiacLeo } from "./icons/ZodiacLeo.js";
+import { ZodiacLibra } from "./icons/ZodiacLibra.js";
+import { ZodiacOphiuchus } from "./icons/ZodiacOphiuchus.js";
+import { ZodiacPisces } from "./icons/ZodiacPisces.js";
+import { ZodiacSagittarius } from "./icons/ZodiacSagittarius.js";
+import { ZodiacScorpio } from "./icons/ZodiacScorpio.js";
+import { ZodiacTaurus } from "./icons/ZodiacTaurus.js";
+import { ZodiacVirgo } from "./icons/ZodiacVirgo.js";
+import { ZoomIn } from "./icons/ZoomIn.js";
+import { ZoomOut } from "./icons/ZoomOut.js";
 export { AArrowDown, AArrowUp, ALargeSmall, Accessibility, Activity, AirVent, Airplay, AlarmClock, AlarmClockCheck, AlarmClockMinus, AlarmClockOff, AlarmClockPlus, AlarmSmoke, Album, AlignCenterHorizontal, AlignCenterVertical, AlignEndHorizontal, AlignEndVertical, AlignHorizontalDistributeCenter, AlignHorizontalDistributeEnd, AlignHorizontalDistributeStart, AlignHorizontalJustifyCenter, AlignHorizontalJustifyEnd, AlignHorizontalJustifyStart, AlignHorizontalSpaceAround, AlignHorizontalSpaceBetween, AlignStartHorizontal, AlignStartVertical, AlignVerticalDistributeCenter, AlignVerticalDistributeEnd, AlignVerticalDistributeStart, AlignVerticalJustifyCenter, AlignVerticalJustifyEnd, AlignVerticalJustifyStart, AlignVerticalSpaceAround, AlignVerticalSpaceBetween, Ambulance, Ampersand, Ampersands, Amphora, Anchor, Angry, Annoyed, Antenna, Anvil, Aperture, AppWindow, AppWindowMac, Apple, Archive, ArchiveRestore, ArchiveX, Armchair, ArrowBigDown, ArrowBigDownDash, ArrowBigLeft, ArrowBigLeftDash, ArrowBigRight, ArrowBigRightDash, ArrowBigUp, ArrowBigUpDash, ArrowDown, ArrowDown01, ArrowDown10, ArrowDownAZ, ArrowDownFromLine, ArrowDownLeft, ArrowDownNarrowWide, ArrowDownRight, ArrowDownToDot, ArrowDownToLine, ArrowDownUp, ArrowDownWideNarrow, ArrowDownZA, ArrowLeft, ArrowLeftFromLine, ArrowLeftRight, ArrowLeftToLine, ArrowRight, ArrowRightFromLine, ArrowRightLeft, ArrowRightToLine, ArrowUp, ArrowUp01, ArrowUp10, ArrowUpAZ, ArrowUpDown, ArrowUpFromDot, ArrowUpFromLine, ArrowUpLeft, ArrowUpNarrowWide, ArrowUpRight, ArrowUpToLine, ArrowUpWideNarrow, ArrowUpZA, ArrowsUpFromLine, Asterisk, AtSign, Atom, AudioLines, AudioWaveform, Award, Axe, Axis3d, Baby, Backpack, Badge, BadgeAlert, BadgeCent, BadgeCheck, BadgeDollarSign, BadgeEuro, BadgeIndianRupee, BadgeInfo, BadgeJapaneseYen, BadgeMinus, BadgePercent, BadgePlus, BadgePoundSterling, BadgeQuestionMark, BadgeRussianRuble, BadgeSwissFranc, BadgeTurkishLira, BadgeX, BaggageClaim, Balloon, Ban, Banana, Bandage, Banknote, BanknoteArrowDown, BanknoteArrowUp, BanknoteX, Barcode, Barrel, Baseline, Bath, Battery, BatteryCharging, BatteryFull, BatteryLow, BatteryMedium, BatteryPlus, BatteryWarning, Beaker, Bean, BeanOff, Bed, BedDouble, BedSingle, Beef, BeefOff, Beer, BeerOff, Bell, BellDot, BellElectric, BellMinus, BellOff, BellPlus, BellRing, BetweenHorizontalEnd, BetweenHorizontalStart, BetweenVerticalEnd, BetweenVerticalStart, BicepsFlexed, Bike, Binary, Binoculars, Biohazard, Bird, Birdhouse, Bitcoin, Blend, Blinds, Blocks, Bluetooth, BluetoothConnected, BluetoothOff, BluetoothSearching, Bold, Bolt, Bomb, Bone, Book, BookA, BookAlert, BookAudio, BookCheck, BookCopy, BookDashed, BookDown, BookHeadphones, BookHeart, BookImage, BookKey, BookLock, BookMarked, BookMinus, BookOpen, BookOpenCheck, BookOpenText, BookPlus, BookSearch, BookText, BookType, BookUp, BookUp2, BookUser, BookX, Bookmark, BookmarkCheck, BookmarkMinus, BookmarkPlus, BookmarkX, BoomBox, Bot, BotMessageSquare, BotOff, BottleWine, BowArrow, Box, Boxes, Braces, Brackets, Brain, BrainCircuit, BrainCog, BrickWall, BrickWallFire, BrickWallShield, Briefcase, BriefcaseBusiness, BriefcaseConveyorBelt, BriefcaseMedical, BringToFront, Brush, BrushCleaning, Bubbles, Bug, BugOff, BugPlay, Building, Building2, Bus, BusFront, Cable, CableCar, Cake, CakeSlice, Calculator, Calendar, Calendar1, CalendarArrowDown, CalendarArrowUp, CalendarCheck, CalendarCheck2, CalendarClock, CalendarCog, CalendarDays, CalendarFold, CalendarHeart, CalendarMinus, CalendarMinus2, CalendarOff, CalendarPlus, CalendarPlus2, CalendarRange, CalendarSearch, CalendarSync, CalendarX, CalendarX2, Calendars, Camera, CameraOff, Candy, CandyCane, CandyOff, Cannabis, CannabisOff, Captions, CaptionsOff, Car, CarFront, CarTaxiFront, Caravan, CardSim, Carrot, CaseLower, CaseSensitive, CaseUpper, CassetteTape, Cast, Castle, Cat, Cctv, CctvOff, ChartArea, ChartBar, ChartBarBig, ChartBarDecreasing, ChartBarIncreasing, ChartBarStacked, ChartCandlestick, ChartColumn, ChartColumnBig, ChartColumnDecreasing, ChartColumnIncreasing, ChartColumnStacked, ChartGantt, ChartLine, ChartNetwork, ChartNoAxesColumn, ChartNoAxesColumnDecreasing, ChartNoAxesColumnIncreasing, ChartNoAxesCombined, ChartNoAxesGantt, ChartPie, ChartScatter, ChartSpline, Check, CheckCheck, CheckLine, ChefHat, Cherry, ChessBishop, ChessKing, ChessKnight, ChessPawn, ChessQueen, ChessRook, ChevronDown, ChevronFirst, ChevronLast, ChevronLeft, ChevronRight, ChevronUp, ChevronsDown, ChevronsDownUp, ChevronsLeft, ChevronsLeftRight, ChevronsLeftRightEllipsis, ChevronsRight, ChevronsRightLeft, ChevronsUp, ChevronsUpDown, Church, Cigarette, CigaretteOff, Circle, CircleAlert, CircleArrowDown, CircleArrowLeft, CircleArrowOutDownLeft, CircleArrowOutDownRight, CircleArrowOutUpLeft, CircleArrowOutUpRight, CircleArrowRight, CircleArrowUp, CircleCheck, CircleCheckBig, CircleChevronDown, CircleChevronLeft, CircleChevronRight, CircleChevronUp, CircleDashed, CircleDivide, CircleDollarSign, CircleDot, CircleDotDashed, CircleEllipsis, CircleEqual, CircleFadingArrowUp, CircleFadingPlus, CircleGauge, CircleMinus, CircleOff, CircleParking, CircleParkingOff, CirclePause, CirclePercent, CirclePile, CirclePlay, CirclePlus, CirclePoundSterling, CirclePower, CircleQuestionMark, CircleSlash, CircleSlash2, CircleSmall, CircleStar, CircleStop, CircleUser, CircleUserRound, CircleX, CircuitBoard, Citrus, Clapperboard, Clipboard, ClipboardCheck, ClipboardClock, ClipboardCopy, ClipboardList, ClipboardMinus, ClipboardPaste, ClipboardPen, ClipboardPenLine, ClipboardPlus, ClipboardType, ClipboardX, Clock, Clock1, Clock10, Clock11, Clock12, Clock2, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, ClockAlert, ClockArrowDown, ClockArrowUp, ClockCheck, ClockFading, ClockPlus, ClosedCaption, Cloud, CloudAlert, CloudBackup, CloudCheck, CloudCog, CloudDownload, CloudDrizzle, CloudFog, CloudHail, CloudLightning, CloudMoon, CloudMoonRain, CloudOff, CloudRain, CloudRainWind, CloudSnow, CloudSun, CloudSunRain, CloudSync, CloudUpload, Cloudy, Clover, Club, Code, CodeXml, Coffee, Cog, Coins, Columns2, Columns3, Columns3Cog, Columns4, Combine, Command, Compass, Component, Computer, ConciergeBell, Cone, Construction, Contact, ContactRound, Container, Contrast, Cookie, CookingPot, Copy, CopyCheck, CopyMinus, CopyPlus, CopySlash, CopyX, Copyleft, Copyright, CornerDownLeft, CornerDownRight, CornerLeftDown, CornerLeftUp, CornerRightDown, CornerRightUp, CornerUpLeft, CornerUpRight, Cpu, CreativeCommons, CreditCard, Croissant, Crop, Cross, Crosshair, Crown, Cuboid, CupSoda, Currency, Cylinder, Dam, Database, DatabaseBackup, DatabaseSearch, DatabaseZap, DecimalsArrowLeft, DecimalsArrowRight, Delete, Dessert, Diameter, Diamond, DiamondMinus, DiamondPercent, DiamondPlus, Dice1, Dice2, Dice3, Dice4, Dice5, Dice6, Dices, Diff, Disc, Disc2, Disc3, DiscAlbum, Divide, Dna, DnaOff, Dock, Dog, DollarSign, Donut, DoorClosed, DoorClosedLocked, DoorOpen, Dot, Download, DraftingCompass, Drama, Drill, Drone, Droplet, DropletOff, Droplets, Drum, Drumstick, Dumbbell, Ear, EarOff, Earth, EarthLock, Eclipse, Egg, EggFried, EggOff, Ellipse, Ellipsis, EllipsisVertical, Equal, EqualApproximately, EqualNot, Eraser, EthernetPort, Euro, EvCharger, Expand, ExternalLink, Eye, EyeClosed, EyeOff, Factory, Fan, FastForward, Feather, Fence, FerrisWheel, File, FileArchive, FileAxis3d, FileBadge, FileBox, FileBraces, FileBracesCorner, FileChartColumn, FileChartColumnIncreasing, FileChartLine, FileChartPie, FileCheck, FileCheckCorner, FileClock, FileCode, FileCodeCorner, FileCog, FileDiff, FileDigit, FileDown, FileExclamationPoint, FileHeadphone, FileHeart, FileImage, FileInput, FileKey, FileLock, FileMinus, FileMinusCorner, FileMusic, FileOutput, FilePen, FilePenLine, FilePlay, FilePlus, FilePlusCorner, FileQuestionMark, FileScan, FileSearch, FileSearchCorner, FileSignal, FileSliders, FileSpreadsheet, FileStack, FileSymlink, FileTerminal, FileText, FileType, FileTypeCorner, FileUp, FileUser, FileVideoCamera, FileVolume, FileX, FileXCorner, Files, Film, FingerprintPattern, FireExtinguisher, Fish, FishOff, FishSymbol, FishingHook, FishingRod, Flag, FlagOff, FlagTriangleLeft, FlagTriangleRight, Flame, FlameKindling, Flashlight, FlashlightOff, FlaskConical, FlaskConicalOff, FlaskRound, FlipHorizontal2, FlipVertical2, Flower, Flower2, Focus, FoldHorizontal, FoldVertical, Folder, FolderArchive, FolderCheck, FolderClock, FolderClosed, FolderCode, FolderCog, FolderDot, FolderDown, FolderGit, FolderGit2, FolderHeart, FolderInput, FolderKanban, FolderKey, FolderLock, FolderMinus, FolderOpen, FolderOpenDot, FolderOutput, FolderPen, FolderPlus, FolderRoot, FolderSearch, FolderSearch2, FolderSymlink, FolderSync, FolderTree, FolderUp, FolderX, Folders, Footprints, Forklift, Form, Forward, Frame, Frown, Fuel, Fullscreen, Funnel, FunnelPlus, FunnelX, GalleryHorizontal, GalleryHorizontalEnd, GalleryThumbnails, GalleryVertical, GalleryVerticalEnd, Gamepad, Gamepad2, GamepadDirectional, Gauge, Gavel, Gem, GeorgianLari, Ghost, Gift, GitBranch, GitBranchMinus, GitBranchPlus, GitCommitHorizontal, GitCommitVertical, GitCompare, GitCompareArrows, GitFork, GitGraph, GitMerge, GitMergeConflict, GitPullRequest, GitPullRequestArrow, GitPullRequestClosed, GitPullRequestCreate, GitPullRequestCreateArrow, GitPullRequestDraft, GlassWater, Glasses, Globe, GlobeLock, GlobeOff, GlobeX, Goal, Gpu, GraduationCap, Grape, Grid2x2, Grid2x2Check, Grid2x2Plus, Grid2x2X, Grid3x2, Grid3x3, Grip, GripHorizontal, GripVertical, Group, Guitar, Ham, Hamburger, Hammer, Hand, HandCoins, HandFist, HandGrab, HandHeart, HandHelping, HandMetal, HandPlatter, Handbag, Handshake, HardDrive, HardDriveDownload, HardDriveUpload, HardHat, Hash, HatGlasses, Haze, Hd, HdmiPort, Heading, Heading1, Heading2, Heading3, Heading4, Heading5, Heading6, HeadphoneOff, Headphones, Headset, Heart, HeartCrack, HeartHandshake, HeartMinus, HeartOff, HeartPlus, HeartPulse, Heater, Helicopter, Hexagon, Highlighter, History, Hop, HopOff, Hospital, Hotel, Hourglass, House, HouseHeart, HousePlug, HousePlus, HouseWifi, IceCreamBowl, IceCreamCone, IdCard, IdCardLanyard, Image, ImageDown, ImageMinus, ImageOff, ImagePlay, ImagePlus, ImageUp, ImageUpscale, Images, Import, Inbox, IndianRupee, InfinityIcon, Info, InspectionPanel, Italic, IterationCcw, IterationCw, JapaneseYen, Joystick, Kanban, Kayak, Key, KeyRound, KeySquare, Keyboard, KeyboardMusic, KeyboardOff, Lamp, LampCeiling, LampDesk, LampFloor, LampWallDown, LampWallUp, LandPlot, Landmark, Languages, Laptop, LaptopMinimal, LaptopMinimalCheck, Lasso, LassoSelect, Laugh, Layers, Layers2, LayersPlus, LayoutDashboard, LayoutGrid, LayoutList, LayoutPanelLeft, LayoutPanelTop, LayoutTemplate, Leaf, LeafyGreen, Lectern, LensConcave, LensConvex, Library, LibraryBig, LifeBuoy, Ligature, Lightbulb, LightbulbOff, LineDotRightHorizontal, LineSquiggle, LineStyle, Link, Link2, Link2Off, List, ListCheck, ListChecks, ListChevronsDownUp, ListChevronsUpDown, ListCollapse, ListEnd, ListFilter, ListFilterPlus, ListIndentDecrease, ListIndentIncrease, ListMinus, ListMusic, ListOrdered, ListPlus, ListRestart, ListStart, ListTodo, ListTree, ListVideo, ListX, Loader, LoaderCircle, LoaderPinwheel, Locate, LocateFixed, LocateOff, Lock, LockKeyhole, LockKeyholeOpen, LockOpen, LogIn, LogOut, Logs, Lollipop, Luggage, Magnet, Mail, MailCheck, MailMinus, MailOpen, MailPlus, MailQuestionMark, MailSearch, MailWarning, MailX, Mailbox, Mails, Map, MapMinus, MapPin, MapPinCheck, MapPinCheckInside, MapPinHouse, MapPinMinus, MapPinMinusInside, MapPinOff, MapPinPen, MapPinPlus, MapPinPlusInside, MapPinSearch, MapPinX, MapPinXInside, MapPinned, MapPlus, Mars, MarsStroke, Martini, Maximize, Maximize2, Medal, Megaphone, MegaphoneOff, Meh, MemoryStick, Menu, Merge, MessageCircle, MessageCircleCheck, MessageCircleCode, MessageCircleDashed, MessageCircleHeart, MessageCircleMore, MessageCircleOff, MessageCirclePlus, MessageCircleQuestionMark, MessageCircleReply, MessageCircleWarning, MessageCircleX, MessageSquare, MessageSquareCheck, MessageSquareCode, MessageSquareDashed, MessageSquareDiff, MessageSquareDot, MessageSquareHeart, MessageSquareLock, MessageSquareMore, MessageSquareOff, MessageSquarePlus, MessageSquareQuote, MessageSquareReply, MessageSquareShare, MessageSquareText, MessageSquareWarning, MessageSquareX, MessagesSquare, Metronome, Mic, MicOff, MicVocal, Microchip, Microscope, Microwave, Milestone, Milk, MilkOff, Minimize, Minimize2, Minus, MirrorRectangular, MirrorRound, Monitor, MonitorCheck, MonitorCloud, MonitorCog, MonitorDot, MonitorDown, MonitorOff, MonitorPause, MonitorPlay, MonitorSmartphone, MonitorSpeaker, MonitorStop, MonitorUp, MonitorX, Moon, MoonStar, Motorbike, Mountain, MountainSnow, Mouse, MouseLeft, MouseOff, MousePointer, MousePointer2, MousePointer2Off, MousePointerBan, MousePointerClick, MouseRight, Move, Move3d, MoveDiagonal, MoveDiagonal2, MoveDown, MoveDownLeft, MoveDownRight, MoveHorizontal, MoveLeft, MoveRight, MoveUp, MoveUpLeft, MoveUpRight, MoveVertical, Music, Music2, Music3, Music4, Navigation, Navigation2, Navigation2Off, NavigationOff, Network, Newspaper, Nfc, NonBinary, Notebook, NotebookPen, NotebookTabs, NotebookText, NotepadText, NotepadTextDashed, Nut, NutOff, Octagon, OctagonAlert, OctagonMinus, OctagonPause, OctagonX, Omega, Option, Orbit, Origami, Package, Package2, PackageCheck, PackageMinus, PackageOpen, PackagePlus, PackageSearch, PackageX, PaintBucket, PaintRoller, Paintbrush, PaintbrushVertical, Palette, Panda, PanelBottom, PanelBottomClose, PanelBottomDashed, PanelBottomOpen, PanelLeft, PanelLeftClose, PanelLeftDashed, PanelLeftOpen, PanelLeftRightDashed, PanelRight, PanelRightClose, PanelRightDashed, PanelRightOpen, PanelTop, PanelTopBottomDashed, PanelTopClose, PanelTopDashed, PanelTopOpen, PanelsLeftBottom, PanelsRightBottom, PanelsTopLeft, Paperclip, Parentheses, ParkingMeter, PartyPopper, Pause, PawPrint, PcCase, Pen, PenLine, PenOff, PenTool, Pencil, PencilLine, PencilOff, PencilRuler, Pentagon, Percent, PersonStanding, PhilippinePeso, Phone, PhoneCall, PhoneForwarded, PhoneIncoming, PhoneMissed, PhoneOff, PhoneOutgoing, Pi, Piano, Pickaxe, PictureInPicture, PictureInPicture2, PiggyBank, Pilcrow, PilcrowLeft, PilcrowRight, Pill, PillBottle, Pin, PinOff, Pipette, Pizza, Plane, PlaneLanding, PlaneTakeoff, Play, Plug, Plug2, PlugZap, Plus, PocketKnife, Podcast, Pointer, PointerOff, Popcorn, Popsicle, PoundSterling, Power, PowerOff, Presentation, Printer, PrinterCheck, PrinterX, Projector, Proportions, Puzzle, Pyramid, QrCode, Quote, Rabbit, Radar, Radiation, Radical, Radio, RadioOff, RadioReceiver, RadioTower, Radius, Rainbow, Rat, Ratio, Receipt, ReceiptCent, ReceiptEuro, ReceiptIndianRupee, ReceiptJapaneseYen, ReceiptPoundSterling, ReceiptRussianRuble, ReceiptSwissFranc, ReceiptText, ReceiptTurkishLira, RectangleCircle, RectangleEllipsis, RectangleGoggles, RectangleHorizontal, RectangleVertical, Recycle, Redo, Redo2, RedoDot, RefreshCcw, RefreshCcwDot, RefreshCw, RefreshCwOff, Refrigerator, Regex, RemoveFormatting, Repeat, Repeat1, Repeat2, Replace, ReplaceAll, Reply, ReplyAll, Rewind, Ribbon, Road, Rocket, RockingChair, RollerCoaster, Rose, Rotate3d, RotateCcw, RotateCcwKey, RotateCcwSquare, RotateCw, RotateCwSquare, Route, RouteOff, Router, Rows2, Rows3, Rows4, Rss, Ruler, RulerDimensionLine, RussianRuble, Sailboat, Salad, Sandwich, Satellite, SatelliteDish, SaudiRiyal, Save, SaveAll, SaveOff, Scale, Scale3d, Scaling, Scan, ScanBarcode, ScanEye, ScanFace, ScanHeart, ScanLine, ScanQrCode, ScanSearch, ScanText, School, Scissors, ScissorsLineDashed, Scooter, ScreenShare, ScreenShareOff, Scroll, ScrollText, Search, SearchAlert, SearchCheck, SearchCode, SearchSlash, SearchX, Section, Send, SendHorizontal, SendToBack, SeparatorHorizontal, SeparatorVertical, Server, ServerCog, ServerCrash, ServerOff, Settings, Settings2, Shapes, Share, Share2, Sheet, Shell, ShelvingUnit, Shield, ShieldAlert, ShieldBan, ShieldCheck, ShieldCog, ShieldCogCorner, ShieldEllipsis, ShieldHalf, ShieldMinus, ShieldOff, ShieldPlus, ShieldQuestionMark, ShieldUser, ShieldX, Ship, ShipWheel, Shirt, ShoppingBag, ShoppingBasket, ShoppingCart, Shovel, ShowerHead, Shredder, Shrimp, Shrink, Shrub, Shuffle, Sigma, Signal, SignalHigh, SignalLow, SignalMedium, SignalZero, Signature, Signpost, SignpostBig, Siren, SkipBack, SkipForward, Skull, Slash, Slice, SlidersHorizontal, SlidersVertical, Smartphone, SmartphoneCharging, SmartphoneNfc, Smile, SmilePlus, Snail, Snowflake, SoapDispenserDroplet, Sofa, SolarPanel, Soup, Space, Spade, Sparkle, Sparkles, Speaker, Speech, SpellCheck, SpellCheck2, Spline, SplinePointer, Split, Spool, SportShoe, Spotlight, SprayCan, Sprout, Square, SquareActivity, SquareArrowDown, SquareArrowDownLeft, SquareArrowDownRight, SquareArrowLeft, SquareArrowOutDownLeft, SquareArrowOutDownRight, SquareArrowOutUpLeft, SquareArrowOutUpRight, SquareArrowRight, SquareArrowRightEnter, SquareArrowRightExit, SquareArrowUp, SquareArrowUpLeft, SquareArrowUpRight, SquareAsterisk, SquareBottomDashedScissors, SquareCenterlineDashedHorizontal, SquareCenterlineDashedVertical, SquareChartGantt, SquareCheck, SquareCheckBig, SquareChevronDown, SquareChevronLeft, SquareChevronRight, SquareChevronUp, SquareCode, SquareDashed, SquareDashedBottom, SquareDashedBottomCode, SquareDashedKanban, SquareDashedMousePointer, SquareDashedTopSolid, SquareDivide, SquareDot, SquareEqual, SquareFunction, SquareKanban, SquareLibrary, SquareM, SquareMenu, SquareMinus, SquareMousePointer, SquareParking, SquareParkingOff, SquarePause, SquarePen, SquarePercent, SquarePi, SquarePilcrow, SquarePlay, SquarePlus, SquarePower, SquareRadical, SquareRoundCorner, SquareScissors, SquareSigma, SquareSlash, SquareSplitHorizontal, SquareSplitVertical, SquareSquare, SquareStack, SquareStar, SquareStop, SquareTerminal, SquareUser, SquareUserRound, SquareX, SquaresExclude, SquaresIntersect, SquaresSubtract, SquaresUnite, Squircle, SquircleDashed, Squirrel, Stamp, Star, StarHalf, StarOff, StepBack, StepForward, Stethoscope, Sticker, StickyNote, Stone, Store, StretchHorizontal, StretchVertical, Strikethrough, Subscript, Sun, SunDim, SunMedium, SunMoon, SunSnow, Sunrise, Sunset, Superscript, SwatchBook, SwissFranc, SwitchCamera, Sword, Swords, Syringe, Table, Table2, TableCellsMerge, TableCellsSplit, TableColumnsSplit, TableOfContents, TableProperties, TableRowsSplit, Tablet, TabletSmartphone, Tablets, Tag, Tags, Tally1, Tally2, Tally3, Tally4, Tally5, Tangent, Target, Telescope, Tent, TentTree, Terminal, TestTube, TestTubeDiagonal, TestTubes, TextAlignCenter, TextAlignEnd, TextAlignJustify, TextAlignStart, TextCursor, TextCursorInput, TextInitial, TextQuote, TextSearch, TextSelect, TextWrap, Theater, Thermometer, ThermometerSnowflake, ThermometerSun, ThumbsDown, ThumbsUp, Ticket, TicketCheck, TicketMinus, TicketPercent, TicketPlus, TicketSlash, TicketX, Tickets, TicketsPlane, Timer, TimerOff, TimerReset, ToggleLeft, ToggleRight, Toilet, ToolCase, Toolbox, Tornado, Torus, Touchpad, TouchpadOff, TowelRack, TowerControl, ToyBrick, Tractor, TrafficCone, TrainFront, TrainFrontTunnel, TrainTrack, TramFront, Transgender, Trash, Trash2, TreeDeciduous, TreePalm, TreePine, Trees, TrendingDown, TrendingUp, TrendingUpDown, Triangle, TriangleAlert, TriangleDashed, TriangleRight, Trophy, Truck, TruckElectric, TurkishLira, Turntable, Turtle, Tv, TvMinimal, TvMinimalPlay, Type, TypeOutline, Umbrella, UmbrellaOff, Underline, Undo, Undo2, UndoDot, UnfoldHorizontal, UnfoldVertical, Ungroup, University, Unlink, Unlink2, Unplug, Upload, Usb, User, UserCheck, UserCog, UserKey, UserLock, UserMinus, UserPen, UserPlus, UserRound, UserRoundCheck, UserRoundCog, UserRoundKey, UserRoundMinus, UserRoundPen, UserRoundPlus, UserRoundSearch, UserRoundX, UserSearch, UserStar, UserX, Users, UsersRound, Utensils, UtensilsCrossed, UtilityPole, Van, Variable, Vault, VectorSquare, Vegan, VenetianMask, Venus, VenusAndMars, Vibrate, VibrateOff, Video, VideoOff, Videotape, View, Voicemail, Volleyball, Volume, Volume1, Volume2, VolumeOff, VolumeX, Vote, Wallet, WalletCards, WalletMinimal, Wallpaper, Wand, WandSparkles, Warehouse, WashingMachine, Watch, Waves, WavesArrowDown, WavesArrowUp, WavesLadder, Waypoints, Webcam, Webhook, WebhookOff, Weight, WeightTilde, Wheat, WheatOff, WholeWord, Wifi, WifiCog, WifiHigh, WifiLow, WifiOff, WifiPen, WifiSync, WifiZero, Wind, WindArrowDown, Wine, WineOff, Workflow, Worm, Wrench, X, XLineTop, Zap, ZapOff, ZodiacAquarius, ZodiacAries, ZodiacCancer, ZodiacCapricorn, ZodiacGemini, ZodiacLeo, ZodiacLibra, ZodiacOphiuchus, ZodiacPisces, ZodiacSagittarius, ZodiacScorpio, ZodiacTaurus, ZodiacVirgo, ZoomIn, ZoomOut };
-//# sourceMappingURL=index.d.ts.map
